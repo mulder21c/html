@@ -17,7 +17,7 @@
 
 <h3 id="sec-browsing-contexts">Browsing contexts</h3>
 
-  A <dfn lt="browsing context|browsing contexts">browsing context</dfn> is an environment in which
+  A <dfn lt="browsing context|browsing contexts">브라우징 컨텍스트</dfn> is an environment in which
   {{Document}} objects are presented to the user.
 
   <p class="note">A tab or window in a Web browser typically contains a <a>browsing context</a>, as
