@@ -314,19 +314,19 @@
 
     <pre class="css" highlight="css">/* 이것은 CSS 코드 조각입니다. */</pre>
 
-    용어를 정의하는 것은 <dfn noexport>this</dfn>과 같이 마크업 됩니다. 그 용어의 사용은 <a>this</a>나
-    <a><i>this</i></a>과 같이 마크업 됩니다. 
+    용어를 정의하는 것은 <dfn noexport>this</dfn>와 같이 마크업 됩니다. 그 용어의 사용은 <a>this</a>나
+    <a><i>this</i></a>와 같이 마크업 됩니다. 
 
-    요소(element), 속성(attribute), API를 정의하는 것은 <dfn element noexport><code>this</code></dfn>과
-    같이 마크업됩니다. 그 요소(element), 속성(attribute), API를 참조하는 것은 <{this}>과 같이 마크업
+    요소(element), 속성(attribute), API를 정의하는 것은 <dfn element noexport><code>this</code></dfn>와
+    같이 마크업됩니다. 그 요소(element), 속성(attribute), API를 참조하는 것은 <{this}>와 같이 마크업
     됩니다.
 
-    다른 코드 조각들은 <code>like this</code>와 같이 마크업 됩니다..
+    다른 코드 조각들은 <code>이렇게</code> 마크업 됩니다..
 
-    0x00 부터 0x7F까지 폭넓은 범위 내 바이트를 가진 바이트 시퀀스는 `<code>this</code>`과 같이 마크업
+    0x00 부터 0x7F까지 폭넓은 범위 내 바이트를 가진 바이트 시퀀스는 `<code>this</code>`와 같이 마크업
     됩니다.
 
-    변수는 <var>this</var>과 같이 마크업 됩니다.
+    변수는 <var>this</var>와 같이 마크업 됩니다.
 
     알고리즘에서, <a lt="synchronous sections">동기 섹션</a> 내 단계들은 &#x231B;과 함께 마크업 됩니다.
 
@@ -400,7 +400,7 @@
 
   * 유저 에이전트가 지원하는 기능의 정확한 목록.
   * 스크립트에서 재귀에 대한 최대 허용 스택 깊이.
-  * 미디어 쿼리와 {{Screen}} 객체 같이, 사용자의 환경을 설명하는 기능.[[!MEDIAQ]] [[!CSSOM-VIEW]]
+  * 미디어 쿼리와 {{Screen}} 객체 같이, 사용자의 환경을 설명하는 기능. [[!MEDIAQ]] [[!CSSOM-VIEW]]
   * 사용자의 표준 시간대.
 
 <h3 id="a-quick-introduction-to-html">HTML 간단한 소개</h3>
@@ -423,8 +423,8 @@
     &lt;/html>
   </pre>
 
-  HTML 문서는 요소(element)와 텍스트의 트리로 구성됩니다. 각 요소(element)는 "<{body|&lt;body>}>"와 
-  같은 <a lt="start tag">시작 태그</a>와 "<{body|&lt;/body>}>"과 같은 <a lt="end tag">종료 태그</a>로 
+  HTML 문서는 요소(element)와 텍스트의 트리로 구성됩니다. 각 요소(element)는 "<{body}>"와 
+  같은 <a lt="start tag">시작 태그</a>와 "<{body|/body>}>"과 같은 <a lt="end tag">종료 태그</a>로 
   소스에 표시됩니다. (특정 시작 태그와 종료 태그는 어떤 경우에 <a lt="omitted">생략</a>될 수 있고 
   다른 태그들에 함축될 수 있습니다.)
 
