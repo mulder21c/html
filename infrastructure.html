@@ -2,7 +2,7 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <meta content="ED" name="w3c-status">
-  <title>HTML: 2. Common infrastructure</title>
+  <title>HTML: 2. 공통 인프라</title>
   <link href="styles/styles-html.css" rel="stylesheet" type="text/css">
   <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED" rel="stylesheet" type="text/css">
 <style data-fill-with="stylesheet">/******************************************************************************
@@ -1439,12 +1439,12 @@ pre.idl.highlight { color: #708090; }
   <nav data-fill-with="table-of-contents" id="toc"><p class="prev_next">← <a href="introduction.html#introduction"><span class="secno">1</span> <span class="content">소개</span></a> — <a href="index.html#contents">Table of contents</a> — <a href="dom.html#dom"><span class="secno">3</span> <span class="content">Semantics, structure, and APIs of HTML documents</span></a> →</p>
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory"><li>
-     <a href="infrastructure.html#infrastructure"><span class="secno">2</span> <span class="content">Common infrastructure</span></a>
+     <a href="infrastructure.html#infrastructure"><span class="secno">2</span> <span class="content">공통 인프라</span></a>
      <ol class="toc">
       <li>
-       <a href="infrastructure.html#infrastructure-terminology"><span class="secno">2.1</span> <span class="content">Terminology</span></a>
+       <a href="infrastructure.html#infrastructure-terminology"><span class="secno">2.1</span> <span class="content">전문 용어</span></a>
        <ol class="toc">
-        <li><a href="infrastructure.html#resources"><span class="secno">2.1.1</span> <span class="content">Resources</span></a>
+        <li><a href="infrastructure.html#resources"><span class="secno">2.1.1</span> <span class="content">리소스</span></a>
         </li><li><a href="infrastructure.html#xml"><span class="secno">2.1.2</span> <span class="content">XML</span></a>
         </li><li><a href="infrastructure.html#dom-trees"><span class="secno">2.1.3</span> <span class="content">DOM trees</span></a>
         </li><li><a href="infrastructure.html#scripting"><span class="secno">2.1.4</span> <span class="content">Scripting</span></a>
@@ -1543,66 +1543,64 @@ pre.idl.highlight { color: #708090; }
      </li></ol>
     </li></ol>
   </nav><main><section>
-    <h2 class="heading settled" data-level="2" id="infrastructure"><span class="secno">2. </span><span class="content">Common infrastructure</span><a class="self-link" href="infrastructure.html#infrastructure"></a></h2>
-    <h3 class="heading settled" data-level="2.1" id="infrastructure-terminology"><span class="secno">2.1. </span><span class="content">Terminology</span><a class="self-link" href="infrastructure.html#infrastructure-terminology"></a></h3>
-    <p>This specification refers to both HTML and XML attributes and IDL attributes, often in the same
-  context. When it is not clear which is being referred to, they are referred to as <a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-1">content attributes</a> for HTML and XML attributes, and <dfn data-dfn-type="dfn" data-lt="IDL attribute|IDL attributes" data-noexport="" id="idl-attribute">IDL attributes<a class="self-link" href="infrastructure.html#idl-attribute"></a></dfn> for those
-  defined on IDL interfaces. Similarly, the term "properties" is used for both JavaScript object
-  properties and CSS properties. When these are ambiguous they are qualified as <dfn data-dfn-type="dfn" data-lt="object property|object properties" data-noexport="" id="object-property">object properties<a class="self-link" href="infrastructure.html#object-property"></a></dfn> and <dfn data-dfn-type="dfn" data-lt="CSS property|CSS properties" data-noexport="" id="css-property">CSS properties<a class="self-link" href="infrastructure.html#css-property"></a></dfn> respectively.</p>
-    <p>Generally, when the specification states that a feature applies to <a href="syntax.html#syntax">the HTML syntax</a> or <a href="xhtml.html#xhtml">the XHTML syntax</a>, it also includes the other. When a feature specifically only applies to
-  one of the two languages, it is called out by explicitly stating that it does not apply to the
-  other format, as in "for HTML, ... (this does not apply to XHTML)".</p>
-    <p>This specification uses the term <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="document|documents" data-noexport="" id="document">document</dfn> to refer to any use of HTML, ranging from
-  short static documents to long essays or reports with rich multimedia, as well as to fully-fledged
-  interactive applications. The term is used to refer both to <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> objects and
-  their descendant DOM trees, and to serialized byte streams using the <a href="syntax.html#syntax">HTML syntax</a> or <a href="xhtml.html#xhtml">XHTML syntax</a>, depending on context.</p>
-    <p>In the context of the DOM structures, the terms <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="html-document">HTML document</dfn> and <a data-link-type="dfn" href="infrastructure.html#xml-document" id="ref-for-xml-document-1">XML document</a> are
-  used as defined in the DOM specification, and refer specifically to two different modes that <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> objects can find themselves in. <a data-link-type="biblio" href="references.html#biblio-dom">[DOM]</a> (Such uses are always hyperlinked
-  to their definition.)</p>
-    <p>In the context of byte streams, the term <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-1">HTML document</a> refers to resources labeled as <a href="iana.html#text-html"><code>text/html</code></a>, and the term <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="xml-document">XML document</dfn> refers to resources labeled with an <a data-link-type="dfn" href="infrastructure.html#xml-mime-type" id="ref-for-xml-mime-type-2">XML MIME type</a>.</p>
-    <p>The term <dfn data-dfn-type="dfn" data-lt="XHTML document|XHTML documents" data-noexport="" id="xhtml-document">XHTML document<a class="self-link" href="infrastructure.html#xhtml-document"></a></dfn> is used to refer to both <a data-link-type="dfn" href="infrastructure.html#document" id="ref-for-document-1">documents</a> in the <a data-link-type="dfn" href="infrastructure.html#xml-document" id="ref-for-xml-document-2">XML document</a> mode that contain element nodes in the <a data-link-type="dfn" href="infrastructure.html#html-namespace" id="ref-for-html-namespace-1">HTML namespace</a>, and byte
-  streams labeled with an <a data-link-type="dfn" href="infrastructure.html#xml-mime-type" id="ref-for-xml-mime-type-3">XML MIME type</a> that contain elements from the <a data-link-type="dfn" href="infrastructure.html#html-namespace" id="ref-for-html-namespace-2">HTML namespace</a>,
-  depending on context.</p>
+    <h2 class="heading settled" data-level="2" id="infrastructure"><span class="secno">2. </span><span class="content">공통 인프라</span><a class="self-link" href="infrastructure.html#infrastructure"></a></h2>
+    <h3 class="heading settled" data-level="2.1" id="infrastructure-terminology"><span class="secno">2.1. </span><span class="content">전문 용어</span><a class="self-link" href="infrastructure.html#infrastructure-terminology"></a></h3>
+    <p>이 명세는 종종 동일한 상황에서 HTML과 XML 속성(attribute)와 IDL 속성(attribute) 양쪽 모두를
+  지칭합니다. 어떤 것을 지칭하고 있는지 분명하지 않을 경우, 그것들은 HTML과 XML 속성(attribute)에 
+  대해서는 <a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-1">콘텐트 속성(attribute)</a>으로, IDL 인터페이스에서 명시된 것에 
+  대해서는 <dfn data-dfn-type="dfn" data-lt="IDL attribute|IDL attributes" data-noexport="" id="idl-attribute">IDL 속성(attribute)<a class="self-link" href="infrastructure.html#idl-attribute"></a></dfn>으로 지칭합니다. 유사하게, 
+  "속성(property)"이라는 용어는 자바스크립트 객체 속성(property)와 CSS 속성(property) 모두에 대해 
+  사용됩니다. 이것들이 모호한 경우 각각 <dfn data-dfn-type="dfn" data-lt="object property|object properties" data-noexport="" id="object-property">객체 속성(property)<a class="self-link" href="infrastructure.html#object-property"></a></dfn>과 <dfn data-dfn-type="dfn" data-lt="CSS property|CSS properties" data-noexport="" id="css-property">CSS 속성(property)<a class="self-link" href="infrastructure.html#css-property"></a></dfn>으로서 자격이 주어집니다 .</p>
+    <p>일반적으로, 명세가 기능이 <a href="syntax.html#syntax">HTML 구문</a> 혹은 <a href="xhtml.html#xhtml">XHTML 구문</a>에
+  적용된다고 서술하는 경우, 둘 다 포함하는 것입니다. 기능이 명확하게 두 언어 중 하나에만 적용하는 경우 
+  "HTML에 대해, ... (이것은 XHTML에 적용하지 않습니다)" 처럼, 다른 형식에 적용하지 않는다고 명시적으로 
+  서술하여 불립니다.</p>
+    <p>이 명세는 짧은 정적 문서로부터 긴 에세이나 리치 멀티미디어가 있는 리포트, 뿐만아니라 훌륭한 인터랙티브
+  어플리케이션에 이르기까지 모든 HTML의 사용에 지칭하는데 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="document|documents" data-noexport="" id="document">document</dfn>이라는 
+  용어를 사용합니다. 이 용어는 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 객체와 그 객체의 후손 DOM 트리 둘 모두를 지칭하는데, 그리고  
+  상황에 따라 <a href="syntax.html#syntax">HTML 구문</a>이나 <a href="xhtml.html#xhtml">XHTML 구문</a>을 사용하여 직렬화된  
+  바이트 스트림을 지칭하는데 사용됩니다.</p>
+    <p>DOM 구조의 경우, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="HTML document" data-noexport="" id="html-document">HTML 문서</dfn>와 <a data-link-type="dfn" href="infrastructure.html#xml-document" id="ref-for-xml-document-1">XML 문서</a>라는
+  용어는 DOM 명세에서 정의된 대로 사용되고, <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 객체가 찾아질 수 있는 두 다른 모드를 명확하게 
+  지칭합니다. <a data-link-type="biblio" href="references.html#biblio-dom">[DOM]</a> (그런 사용법은 항상 그들의 정의에 하이퍼링크 되어 있습니다.)</p>
+    <p>바이트 스트림의 경우, <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-1">HTML 문서</a>라는 용어는 <a href="iana.html#text-html"><code>text/html</code></a>로
+  라벨링 된 리소스를 지칭하고, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="XML document" data-noexport="" id="xml-document">XML 문서</dfn>라는 용어는 <a data-link-type="dfn" href="infrastructure.html#xml-mime-type" id="ref-for-xml-mime-type-2">XML MIME 타입</a>으로 
+  라벨링 된 리소스를 지칭합니다.</p>
+    <p><dfn data-dfn-type="dfn" data-lt="XHTML document|XHTML documents" data-noexport="" id="xhtml-document">XHTML 문서<a class="self-link" href="infrastructure.html#xhtml-document"></a></dfn>라는 용어는 상황에 따라, <a data-link-type="dfn" href="infrastructure.html#html-namespace" id="ref-for-html-namespace-1">HTML 네임스페이스</a> 내 요소(element) 노드를 포함하는 <a data-link-type="dfn" href="infrastructure.html#xml-document" id="ref-for-xml-document-2">XML 문서</a> 모드인 <a data-link-type="dfn" href="infrastructure.html#document" id="ref-for-document-1">문서</a>와 <a data-link-type="dfn" href="infrastructure.html#html-namespace" id="ref-for-html-namespace-2">HTML 네임스페이스</a>의 요소를 포함하는 <a data-link-type="dfn" href="infrastructure.html#xml-mime-type" id="ref-for-xml-mime-type-3">XML MIME 타입</a>으로 
+  라벨링 된 바이트 스트림을 지칭하는데 사용됩니다.</p>
     <hr>
-    <p>For simplicity, terms such as <dfn data-dfn-type="dfn" data-noexport="" id="shown">shown<a class="self-link" href="infrastructure.html#shown"></a></dfn>, <dfn data-dfn-type="dfn" data-noexport="" id="displayed">displayed<a class="self-link" href="infrastructure.html#displayed"></a></dfn>, and <dfn data-dfn-type="dfn" data-noexport="" id="visible">visible<a class="self-link" href="infrastructure.html#visible"></a></dfn> are
-  used (sometimes) when referring to the way a document is rendered to the user. These terms are
-  not meant to imply a visual medium; they must be considered to apply to other media in equivalent
-  ways.</p>
-    <p>When an algorithm B says to return to another algorithm A, it implies that A called B. Upon
-  returning to A, the implementation must continue from where it left off in calling B. Some
-  algorithms run <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="in-parallel">in parallel</dfn>; this means that the algorithm’s subsequent steps are to be
-  run, one after another, at the same time as other logic in the specification (e.g., at the same
-  time as the <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-1">event loop</a>). This specification does not define the precise mechanism by which
-  this is achieved, be it time-sharing cooperative multitasking, fibers, threads, processes, using
-  different hyperthreads, cores, CPUs, machines, etc. By contrast, an operation that is to run <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="immediately">immediately</dfn> must interrupt the currently running task, run itself, and then resume the
-  previously running task.</p>
-    <p>The term "transparent black" refers to the color with red, green, blue, and alpha channels all set
-  to zero.</p>
-    <h4 class="heading settled" data-level="2.1.1" id="resources"><span class="secno">2.1.1. </span><span class="content">Resources</span><a class="self-link" href="infrastructure.html#resources"></a></h4>
-    <p>The specification uses the term <dfn data-dfn-type="dfn" data-noexport="" id="supported">supported<a class="self-link" href="infrastructure.html#supported"></a></dfn> when referring to whether a user agent has an
-  implementation capable of decoding the semantics of an external resource. A format or type is said
-  to be <i>supported</i> if the implementation can process an external resource of that format or
-  type without critical aspects of the resource being ignored. Whether a specific resource is <i>supported</i> can depend on what features of the resource’s format are in use.</p>
-    <p class="example" id="example-edb32f0b"><a class="self-link" href="infrastructure.html#example-edb32f0b"></a> For example, a PNG image would be considered to be in a supported format if its pixel data could
-    be decoded and rendered, even if, unbeknownst to the implementation, the image also contained
-    animation data. </p>
-    <p class="example" id="example-fda82d15"><a class="self-link" href="infrastructure.html#example-fda82d15"></a> An MPEG-4 video file would not be considered to be in a supported format if the compression
-    format used was not supported, even if the implementation could determine the dimensions of the
-    movie from the file’s metadata. </p>
-    <p>What some specifications, in particular the HTTP specification, refer to as a <i>representation</i> is referred to in this specification as a <dfn class="dfn-paneled" data-dfn-for="http" data-dfn-type="dfn" data-noexport="" id="http-resource">resource</dfn>. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
-    <p>The term <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="mime type|mime types" data-noexport="" id="mime-type">MIME type</dfn> is used to refer to what is sometimes called an <i>Internet media
-  type</i> in protocol literature. The term <dfn data-dfn-for="media type|media-type" data-dfn-type="dfn" data-noexport="" id="media-typemedia-type-media-type">media type<a class="self-link" href="infrastructure.html#media-typemedia-type-media-type"></a></dfn> in this specification is used to refer
-  to the type of media intended for presentation, as used by the CSS specifications. <a data-link-type="biblio" href="references.html#biblio-rfc2046">[RFC2046]</a> <a data-link-type="biblio" href="references.html#biblio-mediaq">[MEDIAQ]</a></p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-mime-type">valid MIME type</dfn> if it matches the <a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.1"><code>media-type</code></a> rule. In particular, a <a data-link-type="dfn" href="infrastructure.html#valid-mime-type" id="ref-for-valid-mime-type-1">valid mime type</a> may include
-  MIME type parameters. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-for="mime type" data-dfn-type="dfn" data-lt="valid MIME type with no parameters|valid MIME types with no parameters" data-noexport="" id="mime-type-valid-mime-type-with-no-parameters">valid MIME type with no parameters</dfn> if it matches the <a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.1"><code>media-type</code></a> rule, but does not
-  contain any U+003B SEMICOLON characters (;). In other words, if it consists only of a type and
-  subtype, with no MIME Type parameters. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
-    <p>The term <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="html-mime-type">HTML MIME type</dfn> is used to refer to the <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-2">MIME type</a> <a href="iana.html#text-html"><code>text/html</code></a>.</p>
-    <p>A resource’s <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="critical subresource|critical subresources" data-noexport="" id="critical-subresource">critical subresources</dfn> are those that the resource needs to have available
-  to be correctly processed. Which resources are considered critical or not is defined by the
-  specification that defines the resource’s format.</p>
-    <p>The term <a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-1"><code>data:</code> URL</a> refers to <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URLs</a> that use the <a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-2"><code>data:</code></a> scheme. <a data-link-type="biblio" href="references.html#biblio-rfc2397">[RFC2397]</a></p>
+    <p>간결성을 위해, <dfn data-dfn-type="dfn" data-noexport="" id="shown">shown<a class="self-link" href="infrastructure.html#shown"></a></dfn>, <dfn data-dfn-type="dfn" data-noexport="" id="displayed">displayed<a class="self-link" href="infrastructure.html#displayed"></a></dfn>, <dfn data-dfn-type="dfn" data-noexport="" id="visible">visible<a class="self-link" href="infrastructure.html#visible"></a></dfn>와 같은 용어들은 (종종)
+  문서가 사용자에게 렌더링되는 방법을 지칭할 경우 사용됩니다. 이 용어들은 시각적 매체를 의미하는 것이 
+  아닙니다; 동등한 방법으로 다른 매체에도 적용될 수 있도록 고려되어야 합니다.</p>
+    <p>알고리즘 B가 다른 알고리즘 A로 돌아간다 말하는 경우, A가 B를 호출했음을 의미합니다. A로 돌아가면,
+  구현은 B의 호출에서 멈춘 곳에서부터 계속 진행해야 합니다. 일부 알고리즘은 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="in parallel" data-noexport="" id="in-parallel">병렬로</dfn> 수행합니다; 이것은 알고리즘의 다음 단계가 명세 내 다른 로직과 동시에 (예를 들어, <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-1">이벤트 루프</a>가 
+  동시에) 잇따라서 수행됨을 의미합니다. 이 명세는 다른 하이퍼쓰레드, 코어, CPU, 기계 등을 사용하여 
+  시분할 다중 작업, fibers, 프로세스가 달성되는 정밀한 메커니즘을 정의하지 않습니다. 그와 대조적으로, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="immediately" data-noexport="" id="immediately">즉시</dfn> 수행하기 위한 작업은 현재 수행 중인 작업을 중단하고 수행해야 하며, 그후 이전에 
+  수행 작업을 재개해야 합니다.</p>
+    <p>"투명한 검정"이라는 용어는 빨강, 초록, 파랑, 알파 채널이 모두 0으로 설정된 색상을 지칭합니다.</p>
+    <h4 class="heading settled" data-level="2.1.1" id="resources"><span class="secno">2.1.1. </span><span class="content">리소스</span><a class="self-link" href="infrastructure.html#resources"></a></h4>
+    <p>유저 에이전트가 외부 리소스의 의미를 디코딩할 수 있는 구현을 가지는지를 지칭하는 경우 명세는 <dfn data-dfn-type="dfn" data-lt="supported" data-noexport="" id="supported">지원된다<a class="self-link" href="infrastructure.html#supported"></a></dfn>라는
+  용어를 사용합니다. 형식(format)이나 유형(type)은 구현이 외부 리소스의 중요한 측면이 무시되지 않고  
+  그 형식(foramt)이나 유형(type)의 리소스를 처리할 수 있다면 <i>지원된다</i>고 불립니다. 특정 리소스가 <i>지원되는</i>지 여부는 리소스의 형식이 사용되는 기능에 따라 달라질 수 있습니다.</p>
+    <p class="example" id="example-cfe05ab2"><a class="self-link" href="infrastructure.html#example-cfe05ab2"></a> 예를 들어, PNG 이미지는 구현에 알려지지 않은 이미지가 애니메이션 데이터를 포함하고 있다 하더라도 
+    픽셀 데이터가 디코드되고 렌더링 될 수 있다면 구현 지원되는 형식(format)으로 간주될 것입니다. </p>
+    <p class="example" id="example-1b152a9d"><a class="self-link" href="infrastructure.html#example-1b152a9d"></a> MPEG-4 비디오 파일은 사용된 압축 형식(format)이 지원되지 않았다면, 구현이 파일의 메타데이터로부터 
+    영상의 크기를 결정할 수 있다하더라도 지원되는 형식(format)으로 간주되지 않을 것입니다. </p>
+    <p>일부 명세가, 특히 HTTP 명세에서, <i>표현(representation)</i>으로 지칭된 것은 이 명세에서 <dfn class="dfn-paneled" data-dfn-for="http" data-dfn-type="dfn" data-lt="resource" data-noexport="" id="http-resource">리소스</dfn>로
+  지칭됩니다. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="mime type|mime types" data-noexport="" id="mime-type">MIME 타입</dfn> 이라는 용어는 프로토콜 문서에서 종종 <i>인터넷 미디어 타입</i>으로
+  불리는 것을 지칭하는데 사용됩니다. 이 명세에서 <dfn data-dfn-for="media type|media-type" data-dfn-type="dfn" data-noexport="" id="media-typemedia-type-media">media 타입<a class="self-link" href="infrastructure.html#media-typemedia-type-media"></a></dfn> 이라는 용어는 CSS 명세에 의해 사용된 것 처럼, 표현을 위해 의도된 미디어의 유형을 지칭하는데 사용됩니다. <a data-link-type="biblio" href="references.html#biblio-rfc2046">[RFC2046]</a> <a data-link-type="biblio" href="references.html#biblio-mediaq">[MEDIAQ]</a></p>
+    <p>문자열이 <a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.1"><code>media-type</code></a> 규칙과 일치한다면 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid MIME type" data-noexport="" id="valid-mime-type">유효한 MIME 타입</dfn>입니다.
+  특히 <a data-link-type="dfn" href="infrastructure.html#valid-mime-type" id="ref-for-valid-mime-type-1">유효한 MIME 타입</a>은 MIME 타입 파라미터들을 포함할 수 있습니다. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
+    <p>문자열이 <a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.1"><code>media-type</code></a> 규칙과 일치하지만, 어떤 U+003B 세미콜론 문자 (;)도 포함하지
+  않는다면 <dfn class="dfn-paneled" data-dfn-for="mime type" data-dfn-type="dfn" data-lt="valid MIME type with no parameters|valid MIME types with no parameters" data-noexport="" id="mime-type-valid-mime-type-with-no-parameters">파라미터를 가지지 않는 유효한 MIME 타입</dfn>입니다.
+  다시 말해, 그것이 MIME 타입 파라미터 없이 오로지 타입과 서브타입으로만 구성된다면. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="HTML MIME type" data-noexport="" id="html-mime-type">HTML MIME 타입</dfn> 이라는 용어는 <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-2">MIME 타입</a> <a href="iana.html#text-html"><code>text/html</code></a>를
+  지칭하는데 사용됩니다.</p>
+    <p>리소스의 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="critical subresource|critical subresources" data-noexport="" id="critical-subresource">중요한 하위 리소스</dfn>들은 완전히
+  처리되기 위해 사용 가능(available)해야 하는 것이 필요한 리소스 입니다. 어떤 자원이 중요한 것으로 
+  간주되거나 그렇지 않은 지는 리소스의 형식(format)을 정의하는 명세에 의해 정의됩니다.</p>
+    <p><a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-1"><code>data:</code> URL</a>이라는 용어는 <a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-2"><code>data:</code></a> 스킴을 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URLs</a> 사용하는 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>들을 지칭합니다. <a data-link-type="biblio" href="references.html#biblio-rfc2397">[RFC2397]</a></p>
     <h4 class="heading settled" data-level="2.1.2" id="xml"><span class="secno">2.1.2. </span><span class="content">XML</span><a class="self-link" href="infrastructure.html#xml"></a></h4>
     <p>To ease migration from HTML to XHTML, user agents conforming to this specification will place elements in
   HTML in the <code>https://www.w3.org/1999/xhtml</code> namespace, at least for the purposes of the
@@ -6254,13 +6252,13 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="document">
    <b><a href="infrastructure.html#document">#document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-document-1">2.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-document-1">2.1. 전문 용어</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="html-document">
    <b><a href="infrastructure.html#html-document">#html-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-document-1">2.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-html-document-1">2.1. 전문 용어</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-2">2.2.2. Dependencies</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. Interactions with XPath and XSLT</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-4">2.5.1. Terminology</a>
@@ -6296,7 +6294,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="xml-document">
    <b><a href="infrastructure.html#xml-document">#xml-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-xml-document-1">2.1. Terminology</a> <a href="infrastructure.html#ref-for-xml-document-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-xml-document-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-xml-document-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-xml-document-3">2.2.2. Dependencies</a>
     </li><li><a href="dom.html#ref-for-xml-document-4">3.2.2. Elements in the DOM</a>
     </li><li><a href="dom.html#ref-for-xml-document-5">3.2.5. Global attributes</a> <a href="dom.html#ref-for-xml-document-6">(2)</a>
@@ -6369,7 +6367,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#mime-type">#mime-type</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-mime-type-1">1.6. HTML vs XHTML</a>
-    </li><li><a href="infrastructure.html#ref-for-mime-type-2">2.1.1. Resources</a>
+    </li><li><a href="infrastructure.html#ref-for-mime-type-2">2.1.1. 리소스</a>
     </li><li><a href="infrastructure.html#ref-for-mime-type-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-mime-type-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-mime-type-5">2.2.2. Dependencies</a>
     </li><li><a href="infrastructure.html#ref-for-mime-type-6">2.6.4. Determining the type of a resource</a>
@@ -6397,7 +6395,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="valid-mime-type">
    <b><a href="infrastructure.html#valid-mime-type">#valid-mime-type</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-valid-mime-type-1">2.1.1. Resources</a>
+    <li><a href="infrastructure.html#ref-for-valid-mime-type-1">2.1.1. 리소스</a>
     </li><li><a href="document-metadata.html#ref-for-valid-mime-type-2">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-valid-mime-type-3">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-valid-mime-type-4">4.2.6. The style element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-valid-mime-type-5">4.7.4. The source element when used with the picture element</a>
@@ -6496,7 +6494,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#xml-mime-type">#xml-mime-type</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-xml-mime-type-1">1.6. HTML vs XHTML</a>
-    </li><li><a href="infrastructure.html#ref-for-xml-mime-type-2">2.1. Terminology</a> <a href="infrastructure.html#ref-for-xml-mime-type-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-xml-mime-type-2">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-xml-mime-type-3">(2)</a>
     </li><li><a href="dom.html#ref-for-xml-mime-type-4">3.1.4. Loading XML documents</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-xml-mime-type-5">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-xml-mime-type-6">(2)</a>
     </li><li><a href="browsers.html#ref-for-xml-mime-type-7">6.7.1. Navigating across documents</a>
@@ -6991,7 +6989,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="schemedef-data-url">
    <b><a href="infrastructure.html#schemedef-data-url">#schemedef-data-url</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-schemedef-data-url-1">2.1.1. Resources</a> <a href="infrastructure.html#ref-for-schemedef-data-url-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-schemedef-data-url-1">2.1.1. 리소스</a> <a href="infrastructure.html#ref-for-schemedef-data-url-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-schemedef-data-url-3">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-schemedef-data-url-4">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-schemedef-data-url-5">4.10.22.3. Form submission algorithm</a>
     </li><li><a href="semantics-scripting.html#ref-for-schemedef-data-url-6">4.12.4. The canvas element</a> <a href="semantics-scripting.html#ref-for-schemedef-data-url-7">(2)</a> <a href="semantics-scripting.html#ref-for-schemedef-data-url-8">(3)</a>
@@ -8780,7 +8778,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="html-namespace">
    <b><a href="infrastructure.html#html-namespace">#html-namespace</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-namespace-1">2.1. Terminology</a> <a href="infrastructure.html#ref-for-html-namespace-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-html-namespace-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-html-namespace-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-html-namespace-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. Conformance classes</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. Interactions with XPath and XSLT</a>
@@ -9901,7 +9899,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="content-attribute">
    <b><a href="dom.html#content-attribute">#content-attribute</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-content-attribute-1">2.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-content-attribute-1">2.1. 전문 용어</a>
     </li><li><a href="semantics.html#ref-for-content-attribute-2">4.1.1. The html element</a>
     </li><li><a href="document-metadata.html#ref-for-content-attribute-3">4.2.1. The head element</a>
     </li><li><a href="document-metadata.html#ref-for-content-attribute-4">4.2.2. The title element</a>
@@ -27224,7 +27222,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="event-loop">
    <b><a href="webappapis.html#event-loop">#event-loop</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-event-loop-1">2.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-event-loop-1">2.1. 전문 용어</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. Interactions with XPath and XSLT</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-3">2.9.1. Cloneable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-4">2.9.2. Transferable objects</a>
