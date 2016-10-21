@@ -91,7 +91,7 @@
 
   문자열이 <a><code>media-type</code></a> 규칙과 일치하지만, 어떤 U+003B 세미콜론 문자 (;)도 포함하지 
   않는다면 <dfn for="mime type" lt="valid MIME type with no parameters|valid MIME types with no parameters">파라미터를 가지지 않는 유효한 MIME 타입</dfn>입니다.
-  다시 말해, 그것이 MIME 타입 파라미터 없이 오로지 타입과 서브타입으로만 구성된다면. [[!HTTP]]
+  다시 말해, 그것이 MIME 타입 파라미터 없이 오로지 타입과 서브 타입으로만 구성된다면. [[!HTTP]]
 
   <dfn lt="HTML MIME type">HTML MIME 타입</dfn> 이라는 용어는 <a lt="MIME type">MIME 타입</a> <a href="#text-html"><code>text/html</code></a>를 
   지칭하는데 사용됩니다.
@@ -105,27 +105,26 @@
 
 <h4 id="xml">XML</h4>
 
-  To ease migration from HTML to XHTML, user agents conforming to this specification will place elements in
-  HTML in the <code>https://www.w3.org/1999/xhtml</code> namespace, at least for the purposes of the
-  DOM and CSS. The term "<dfn lt="html element|html elements">HTML elements</dfn>", when used in this specification, refers to any
-  element in that namespace, and thus refers to both HTML and XHTML elements.
+  HTML에서 XHTML로 쉽게 마이그레이션 하기 위해, 이 명세를 따르는 유저 에이전트는 적어도 DOM과 CSS의 
+  용도를 위해 <code>https://www.w3.org/1999/xhtml</code> 네임스페이스의 HTML에 요소(element)들을 위치시킬 
+  것입니다. "<dfn lt="html element|html elements">HTML 요소</dfn>"라는 용어는 이 명세에서 사용될 경우, 
+  그 네임스페이스의 요소를 지칭하고, 따라서 HTML과 XHTML 요소들 모두를 지칭합니다.
 
-  Except where otherwise stated, all elements defined or mentioned in this specification are in the
-  <a>HTML namespace</a> ("<code>https://www.w3.org/1999/xhtml</code>"), and all attributes defined or
-  mentioned in this specification have no namespace.
+  달리 명시된 것을 제외하고, 이 명세에 정의되거나 언급된 모든 요소(element)들은 <a lt="HTML namespace">HTML 네임스페이스</a> 
+  ("<code>https://www.w3.org/1999/xhtml</code>")에 있고, 이 명세에 정의되거나 언급된 모든 속성(attribute)들은 
+  네임스페이스를 가지지 않습니다.
 
-  The term <dfn>element type</dfn> is used to refer to the set of elements that have a given local
-  name and namespace. For example, <{button}> elements are elements with the element type
-  <{button}>, meaning they have the local name "<{button}>" and (implicitly as
-  defined above) the <a>HTML namespace</a>.
+  <dfn lt="element type">요소(element) 유형</dfn>은 주어진 로컬 이름과 네임스페이스를 가진 요소들의 
+  세트를 지칭하는데 사용됩니다. 예를 들어, <{button}> 요소(element)는 로컬 이름 "<{button}>"과 (위에 
+  정의된 대로 암묵적으로) <a lt="HTML namespace">HTML 네임스페이스</a>를 가지는 것을 의미하는, 요소 
+  유형을 가진 요소(element)입니다. 
 
-  Attribute names are said to be <dfn for="xml-compatible">XML-compatible</dfn> if they match the
-  <a for="XML"><code>Name</code></a> production defined in XML and they contain no U+003A COLON characters
-  (:). [[!XML]]
+  속성(attirbute) 이름은 XML에 정의된 <a for="XML"><code>Name</code></a> 생성과 일치하고 U+003A 콜론 
+  문자(:)를 포함하지 않는다면 <dfn for="xml-compatible">XML 호환 가능</dfn>하다 불립니다. [[!XML]]
 
-  The term <dfn>XML MIME type</dfn> is used to refer to the <a>MIME types</a> <code>text/xml</code>,
-  <code>application/xml</code>, and any <a>MIME type</a> whose subtype ends with the four characters
-  "<code>+xml</code>". [[!RFC7303]]
+  <dfn>XML MIME 타입</dfn>이라는 용어는 <a lt="MIME types">MIME 타입</a> <code>text/xml</code>, <code>application/xml</code>, 
+  서브 타입이 4개 문자 "<code>+xml</code>"로 끝나는 <a lt="MIME type">MIME 타입</a>을 지칭하는데 
+  사용됩니다. [[!RFC7303]]
 
 <h4 id="dom-trees">DOM trees</h4>
 
