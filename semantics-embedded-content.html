@@ -2871,7 +2871,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
   function, labels an interactive element, enhances aesthetics or is purely decorative. Therefore, knowing what the image
   is for, makes writing an appropriate text alternative easier.</p>
      <h6 class="heading settled" data-level="4.7.5.1.3" id="a-link-or-button-containing-nothing-but-an-image"><span class="secno">4.7.5.1.3. </span><span class="content">A link or button containing nothing but an image</span><a class="self-link" href="semantics-embedded-content.html#a-link-or-button-containing-nothing-but-an-image"></a></h6>
-     <p>When an <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-38">a</a></code> element that is a <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-15">hyperlink</a>, or a <code><a data-link-type="element" href="sec-forms.html#elementdef-button" id="ref-for-elementdef-button-11">button</a></code> element, has no text content
+     <p>When an <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-38">a</a></code> element that is a <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-15">hyperlink</a>, or a <code><a data-link-type="element" href="sec-forms.html#elementdef-button" id="ref-for-elementdef-button-10">button</a></code> element, has no text content
   but contains one or more images, include text in the <code>alt</code> attribute(s) that together convey the purpose of the link or button.</p>
      <div class="example" id="example-0b34a3e3">
       <a class="self-link" href="semantics-embedded-content.html#example-0b34a3e3"></a> In this example, a portion of an editor interface is displayed. Each button has an icon representing an action a user can take on content they are editing. For users who cannot view the images, the action names are included within the <code>alt</code> attributes of the images: 
@@ -4014,7 +4014,7 @@ inevitable result of using a markup generator.)</p>
      <p>The <dfn class="dfn-paneled" data-dfn-for="embed" data-dfn-type="element-attr" data-export="" id="element-attrdef-embed-type"><code>type</code></dfn> attribute, if present, gives the <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-13">MIME type</a> by which the plugin to instantiate is selected. The value must be a <a data-link-type="dfn" href="infrastructure.html#valid-mime-type" id="ref-for-valid-mime-type-6">valid mime type</a>. If both the <code>type</code> attribute and
   the <code>src</code> attribute are present, then the <code>type</code> attribute must specify the same type as the <a data-link-type="dfn" href="infrastructure.html#content-type-metadata" id="ref-for-content-type-metadata-11">explicit Content-Type metadata</a> of the resource given by the <code>src</code> attribute.</p>
      <div class="impl">
-      <p>While any of the following conditions are occurring, any <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-9">plugin</a> instantiated for
+      <p>While any of the following conditions are occurring, any <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-10">plugin</a> instantiated for
   the element must be removed, and the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-14">embed</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-86">represents</a> nothing:</p>
       <ul class="brief">
        <li>The element has neither a <code>src</code> attribute nor a <code>type</code> attribute.
@@ -4061,16 +4061,16 @@ inevitable result of using a markup generator.)</p>
         follows (stopping at the first substep that determines the type):</p>
             <ol>
              <li>If the element has a <code>type</code> attribute, and that
-attribute’s value is a type that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-10">plugin</a> supports, then the value of the <code>type</code> attribute is the content’s type.
+attribute’s value is a type that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-11">plugin</a> supports, then the value of the <code>type</code> attribute is the content’s type.
              </li><li>
               <p>Otherwise, if applying the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL parser</a> algorithm to the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> of
-          the specified resource (after any redirects) results in a <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL record</a> whose <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a> component matches a pattern that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-11">plugin</a> supports, then the content’s type is the type that the plugin can handle.</p>
+          the specified resource (after any redirects) results in a <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL record</a> whose <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a> component matches a pattern that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-12">plugin</a> supports, then the content’s type is the type that the plugin can handle.</p>
               <p class="example" id="example-82ded775"><a class="self-link" href="semantics-embedded-content.html#example-82ded775"></a>For example, a plugin might say that it can handle resources with <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a> components that end with the four character string
           "<code>.swf</code>".</p>
              </li><li>Otherwise, if the specified resource has <a data-link-type="dfn" href="infrastructure.html#content-type-metadata" id="ref-for-content-type-metadata-12">explicit
           Content-Type metadata</a>, then that is the content’s type.
              </li><li>Otherwise, the content has no <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-type">type</a> and there
-          can be no appropriate <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-12">plugin</a> for it.
+          can be no appropriate <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-13">plugin</a> for it.
             </li></ol>
            </li><li>
             <p>If the previous step determined that the content’s type is <code>image/svg+xml</code>, then run the following substeps:</p>
@@ -4083,8 +4083,8 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
              </li><li>The <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-22">embed</a></code> element now <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-87">represents</a> its associated <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-26">nested browsing context</a>.
             </li></ol>
            </li><li>
-            <p>Otherwise, find and instantiate an appropriate <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-13">plugin</a> based on the content’s type, and hand that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-14">plugin</a> the
-        content of the resource, replacing any previously instantiated plugin for the element. The <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-23">embed</a></code> element now represents this <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-15">plugin</a> instance.</p>
+            <p>Otherwise, find and instantiate an appropriate <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-14">plugin</a> based on the content’s type, and hand that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-15">plugin</a> the
+        content of the resource, replacing any previously instantiated plugin for the element. The <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-23">embed</a></code> element now represents this <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-16">plugin</a> instance.</p>
            </li><li>Once the resource or plugin has completely loaded, <a data-link-type="dfn" href="webappapis.html#queuing" id="ref-for-queuing-16">queue a task</a> to <a data-link-type="dfn" href="infrastructure.html#fire" id="ref-for-fire-21">fire a simple event</a> named <code>load</code> at the
         element.
           </li></ol>
@@ -4096,8 +4096,8 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
           <p>Fetching the resource must <a data-link-type="dfn" href="syntax.html#delay-the-load-event" id="ref-for-delay-the-load-event-8">delay the load event</a> of the element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>.</p>
          </dd><dt>If the element has no <code>src</code> attribute set
          </dt><dd>
-          <p>The user agent should find and instantiate an appropriate <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-16">plugin</a> based on the
-      value of the <code>type</code> attribute. The <code>embed</code> element now represents this <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-17">plugin</a> instance.</p>
+          <p>The user agent should find and instantiate an appropriate <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-17">plugin</a> based on the
+      value of the <code>type</code> attribute. The <code>embed</code> element now represents this <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-18">plugin</a> instance.</p>
           <p>Once the plugin is completely loaded, <a data-link-type="dfn" href="webappapis.html#queuing" id="ref-for-queuing-17">queue a task</a> to <a data-link-type="dfn" href="infrastructure.html#fire" id="ref-for-fire-22">fire a simple
       event</a> named <code>load</code> at the element.</p>
         </dd></dl>
@@ -4107,12 +4107,12 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
   the user agent must use a default plugin. This default could be as simple as saying "Unsupported
   Format".</p>
       <p>Whenever an <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-25">embed</a></code> element that was <a data-link-type="dfn" href="semantics-embedded-content.html#potentially-active" id="ref-for-potentially-active-5">potentially
-  active</a> stops being <a data-link-type="dfn" href="semantics-embedded-content.html#potentially-active" id="ref-for-potentially-active-6">potentially active</a>, any <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-18">plugin</a> that had been instantiated for that element must be unloaded.</p>
-      <p>When a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-19">plugin</a> is to be instantiated but it cannot be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-1">secured</a> and the <a data-link-type="dfn" href="browsers.html#sandboxed-plugins-browsing-context-flag" id="ref-for-sandboxed-plugins-browsing-context-flag-1">sandboxed plugins browsing context
+  active</a> stops being <a data-link-type="dfn" href="semantics-embedded-content.html#potentially-active" id="ref-for-potentially-active-6">potentially active</a>, any <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-19">plugin</a> that had been instantiated for that element must be unloaded.</p>
+      <p>When a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-20">plugin</a> is to be instantiated but it cannot be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-1">secured</a> and the <a data-link-type="dfn" href="browsers.html#sandboxed-plugins-browsing-context-flag" id="ref-for-sandboxed-plugins-browsing-context-flag-1">sandboxed plugins browsing context
   flag</a> is set on the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-26">embed</a></code> element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>’s <a data-link-type="dfn" href="browsers.html#active-sandboxing-flag-set" id="ref-for-active-sandboxing-flag-set-2">active
-  sandboxing flag set</a>, then the user agent must not instantiate the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-20">plugin</a>, and
-  must instead render the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-27">embed</a></code> element in a manner that conveys that the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-21">plugin</a> was disabled. The user agent may offer the user the option to override the
-  sandbox and instantiate the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-22">plugin</a> anyway; if the user invokes such an option, the
+  sandboxing flag set</a>, then the user agent must not instantiate the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-21">plugin</a>, and
+  must instead render the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-27">embed</a></code> element in a manner that conveys that the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-22">plugin</a> was disabled. The user agent may offer the user the option to override the
+  sandbox and instantiate the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-23">plugin</a> anyway; if the user invokes such an option, the
   user agent must act as if the conditions above did not apply for the purposes of this element.</p>
       <p class="warning">Plugins that cannot be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-2">secured</a> are
   disabled in sandboxed browsing contexts because they might not honor the restrictions imposed by
@@ -4126,15 +4126,15 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
      </div>
      <p>Any namespace-less attribute other than <code>name</code>, <code>align</code>, <code>hspace</code>, and <code>vspace</code> may be
   specified on the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-32">embed</a></code> element, so long as its name is <a data-link-type="dfn" href="infrastructure.html#xml-compatible-xml-compatible" id="ref-for-xml-compatible-xml-compatible-2">XML-compatible</a> and contains no <a data-link-type="dfn" href="infrastructure.html#uppercase-ascii-letters" id="ref-for-uppercase-ascii-letters-6">uppercase ASCII letters</a>. These attributes are then passed as
-  parameters to the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-23">plugin</a>.</p>
+  parameters to the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-24">plugin</a>.</p>
      <p class="note" role="note"> All attributes in <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-15">HTML documents</a> get lowercased automatically, so the
   restriction on uppercase letters doesn’t affect such documents. </p>
      <p class="note" role="note"> The four exceptions are to exclude legacy attributes that have side-effects beyond
-  just sending parameters to the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-24">plugin</a>. </p>
+  just sending parameters to the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-25">plugin</a>. </p>
      <div class="impl">
-      <p>The user agent should pass the names and values of all the attributes of the <code>embed</code> element that have no namespace to the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-25">plugin</a> used, when one is instantiated.</p>
+      <p>The user agent should pass the names and values of all the attributes of the <code>embed</code> element that have no namespace to the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-26">plugin</a> used, when one is instantiated.</p>
       <p>The <code>HTMLEmbedElement</code> object representing the element must expose the scriptable
-  interface of the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-26">plugin</a> instantiated for the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-33">embed</a></code> element, if any. At a
+  interface of the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-27">plugin</a> instantiated for the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-33">embed</a></code> element, if any. At a
   minimum, this interface must implement the <dfn data-dfn-for="embed" data-dfn-type="dfn" data-lt="legacy caller operation" data-noexport="" id="embed-legacy-caller-operation">legacy caller
   operation<a class="self-link" href="semantics-embedded-content.html#embed-legacy-caller-operation"></a></dfn>. (It is suggested that the default behavior of this legacy caller operation, e.g.,
   the behavior of the default plugin’s legacy caller operation, be to throw a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#notsupportederror">NotSupportedError</a></code> exception.)</p>
@@ -4216,7 +4216,7 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
         supports other interfaces. </div>
      </dd></dl>
      <p>The <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-20">object</a></code> element can represent an external resource, which, depending on the
-  type of the resource, will either be treated as an image, as a <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-30">nested browsing context</a>, or as an external resource to be processed by a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-27">plugin</a>.</p>
+  type of the resource, will either be treated as an image, as a <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-30">nested browsing context</a>, or as an external resource to be processed by a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-28">plugin</a>.</p>
      <p>The <dfn class="dfn-paneled" data-dfn-for="object" data-dfn-type="element-attr" data-export="" id="element-attrdef-object-data"><code>data</code></dfn> attribute, if present, specifies the
   address of the resource. If present, the attribute must be a <a data-link-type="dfn" href="infrastructure.html#valid-non-empty-url-potentially-surrounded-by-spaces" id="ref-for-valid-non-empty-url-potentially-surrounded-by-spaces-5">valid non-empty URL potentially
   surrounded by spaces</a>.</p>
@@ -4265,13 +4265,13 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
     rendered</a>, then jump to the step below labeled <i>fallback</i>.</p>
        </li><li>
         <p>If the <code>classid</code> attribute is present, and has a
-    value that isn’t the empty string, then: if the user agent can find a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-28">plugin</a> suitable according to the value of the <code>classid</code> attribute, and either plugins aren’t being sandboxed or that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-29">plugin</a> can be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-3">secured</a>, then that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-30">plugin</a> <a data-link-type="dfn" href="semantics-embedded-content.html#should-be-used" id="ref-for-should-be-used-1">should be used</a>, and the value of the <code>data</code> attribute, if any, should be passed to the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-31">plugin</a>. If no suitable <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-32">plugin</a> can be found, or if the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-33">plugin</a> reports an error, jump to the step below labeled <i>fallback</i>.</p>
+    value that isn’t the empty string, then: if the user agent can find a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-29">plugin</a> suitable according to the value of the <code>classid</code> attribute, and either plugins aren’t being sandboxed or that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-30">plugin</a> can be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-3">secured</a>, then that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-31">plugin</a> <a data-link-type="dfn" href="semantics-embedded-content.html#should-be-used" id="ref-for-should-be-used-1">should be used</a>, and the value of the <code>data</code> attribute, if any, should be passed to the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-32">plugin</a>. If no suitable <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-33">plugin</a> can be found, or if the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-34">plugin</a> reports an error, jump to the step below labeled <i>fallback</i>.</p>
        </li><li>
         If the <code>data</code> attribute is present and its value is
     not the empty string, then: 
         <ol>
          <li>If the <code>type</code> attribute is present and its value is
-      not a type that the user agent supports, and is not a type that the user agent can find a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-34">plugin</a> for, then the user agent may jump to the step below labeled <i>fallback</i> without fetching the content to examine its real type.
+      not a type that the user agent supports, and is not a type that the user agent can find a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-35">plugin</a> for, then the user agent may jump to the step below labeled <i>fallback</i> without fetching the content to examine its real type.
          </li><li><a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-18">Parse</a> the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> specified by the <code>data</code> attribute, relative to the element.
          </li><li>If that failed, <a data-link-type="dfn" href="infrastructure.html#fire" id="ref-for-fire-23">fire a simple event</a> named <code>error</code> at the element, then jump to the step below labeled <i>fallback</i>.
          </li><li>Let <var>request</var> be a new <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request">request</a> whose <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> is the <a data-link-type="dfn" href="infrastructure.html#resulting-url-string" id="ref-for-resulting-url-string-6">resulting URL string</a>, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-client">client</a> is the element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node
@@ -4315,7 +4315,7 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
         security characteristics. </p>
            </li><li>
             <p>If there is a <code>type</code> attribute present on the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-27">object</a></code> element, and that attribute’s value is not a type that the user agent
-        supports, but it <em>is</em> a type that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-35">plugin</a> supports, then let the <var>resource type</var> be the type specified in that <code>type</code> attribute, and jump to the step below labeled <i>handler</i>.</p>
+        supports, but it <em>is</em> a type that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-36">plugin</a> supports, then let the <var>resource type</var> be the type specified in that <code>type</code> attribute, and jump to the step below labeled <i>handler</i>.</p>
            </li><li>
             <p>Run the appropriate set of steps from the following
         list:</p>
@@ -4342,7 +4342,7 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
             then run the following steps:</p>
                 <ol>
                  <li>
-                  <p>If the attribute’s value is a type that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-36">plugin</a> supports, or the</p>
+                  <p>If the attribute’s value is a type that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-37">plugin</a> supports, or the</p>
                    attribute’s value is a type that starts with "<code>image/</code>" that is
               not also an <a data-link-type="dfn" href="infrastructure.html#xml-mime-type" id="ref-for-xml-mime-type-5">XML MIME type</a>, then let the <var>resource type</var> be the
               type specified in that <code>type</code> attribute. 
@@ -4364,7 +4364,7 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
             </dd></dl>
            </li><li>
             <p>If applying the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL parser</a> algorithm to the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> of the
-        specified resource (after any redirects) results in a <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL record</a> whose <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a> component matches a pattern that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-37">plugin</a> supports, then let <var>resource type</var> be the type that the plugin can
+        specified resource (after any redirects) results in a <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL record</a> whose <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a> component matches a pattern that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-38">plugin</a> supports, then let <var>resource type</var> be the type that the plugin can
         handle.</p>
             <p class="example" id="example-aa4edec4"><a class="self-link" href="semantics-embedded-content.html#example-aa4edec4"></a>For example, a plugin might say that it can handle resources with <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a> components that end with the four character string
         "<code>.swf</code>".</p>
@@ -4377,11 +4377,11 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
       matches: 
           <dl class="switch">
            <dt>If the <var>resource type</var> is not a type that the user agent supports, but
-        it <em>is</em> a type that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-38">plugin</a> supports
+        it <em>is</em> a type that a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-39">plugin</a> supports
            </dt><dd>
             <p>If plugins are being sandboxed and the plugin that
         supports <var>resource type</var> cannot be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-4">secured</a>, jump to the step below labeled <i>fallback</i>.</p>
-            <p>Otherwise, the user agent should use the plugin that supports <var>resource type</var> and pass the content of the resource to that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-39">plugin</a>. If the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-40">plugin</a> reports an error, then jump to the step
+            <p>Otherwise, the user agent should use the plugin that supports <var>resource type</var> and pass the content of the resource to that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-40">plugin</a>. If the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-41">plugin</a> reports an error, then jump to the step
         below labeled <i>fallback</i>.</p>
            </dd><dt>If the <var>resource type</var> is an <a data-link-type="dfn" href="infrastructure.html#xml-mime-type" id="ref-for-xml-mime-type-6">XML MIME type</a>, or  if the <var>resource type</var> does not start with "<code>image/</code>"
            </dt><dd>
@@ -4416,19 +4416,19 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
           <p>Abort these steps. Once the resource is completely loaded, <a data-link-type="dfn" href="webappapis.html#queuing" id="ref-for-queuing-20">queue a task</a> to <a data-link-type="dfn" href="infrastructure.html#fire" id="ref-for-fire-26">fire a simple event</a> named <code>load</code> at the
       element.</p>
         </li></ol>
-       </li><li>If the <code>data</code> attribute is absent but the <code>type</code> attribute is present, and the user agent can find a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-41">plugin</a> suitable according to the value of the <code>type</code> attribute, and either plugins aren’t being sandboxed or the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-42">plugin</a> can be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-5">secured</a>, then that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-43">plugin</a> <a data-link-type="dfn" href="semantics-embedded-content.html#should-be-used" id="ref-for-should-be-used-2">should be used</a>. If these conditions cannot be met, or if the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-44">plugin</a> reports an error, jump to the step below labeled <i>fallback</i>. Otherwise
+       </li><li>If the <code>data</code> attribute is absent but the <code>type</code> attribute is present, and the user agent can find a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-42">plugin</a> suitable according to the value of the <code>type</code> attribute, and either plugins aren’t being sandboxed or the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-43">plugin</a> can be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-5">secured</a>, then that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-44">plugin</a> <a data-link-type="dfn" href="semantics-embedded-content.html#should-be-used" id="ref-for-should-be-used-2">should be used</a>. If these conditions cannot be met, or if the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-45">plugin</a> reports an error, jump to the step below labeled <i>fallback</i>. Otherwise
     abort these steps; once the plugin is completely loaded, <a data-link-type="dfn" href="webappapis.html#queuing" id="ref-for-queuing-21">queue a task</a> to <a data-link-type="dfn" href="infrastructure.html#fire" id="ref-for-fire-27">fire
     a simple event</a> named <code>load</code> at the element.
        </li><li><i>Fallback</i>: The <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-37">object</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-90">represents</a> the element’s
-    children, ignoring any leading <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-param" id="ref-for-elementdef-param-2">param</a></code> element children. This is the element’s <a data-link-type="dfn" href="dom.html#fallback-content" id="ref-for-fallback-content-12">fallback content</a>. If the element has an instantiated <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-45">plugin</a>, then
+    children, ignoring any leading <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-param" id="ref-for-elementdef-param-2">param</a></code> element children. This is the element’s <a data-link-type="dfn" href="dom.html#fallback-content" id="ref-for-fallback-content-12">fallback content</a>. If the element has an instantiated <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-46">plugin</a>, then
     unload it.
       </li></ol>
-      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="should be used" data-noexport="" id="should-be-used"></dfn>When the algorithm above instantiates a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-46">plugin</a>, the user agent
-  should pass to the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-47">plugin</a> used the names and values of all the attributes on the
+      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="should be used" data-noexport="" id="should-be-used"></dfn>When the algorithm above instantiates a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-47">plugin</a>, the user agent
+  should pass to the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-48">plugin</a> used the names and values of all the attributes on the
   element, in the order they were added to the element, with the attributes added by the parser
   being ordered in source order, followed by a parameter named "PARAM" whose value is null, followed
   by all the names and values of <a data-link-type="dfn" href="semantics-embedded-content.html#parameter" id="ref-for-parameter-1">parameters</a> given by <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-param" id="ref-for-elementdef-param-3">param</a></code> elements that are children of the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-38">object</a></code> element, in <a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-28">tree
-  order</a>. If the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-48">plugin</a> supports a scriptable interface, the <code>HTMLObjectElement</code> object representing the element should expose that interface. The <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-39">object</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-91">represents</a> the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-49">plugin</a>. The <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-50">plugin</a> is not a nested <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-41">browsing context</a>.</p>
+  order</a>. If the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-49">plugin</a> supports a scriptable interface, the <code>HTMLObjectElement</code> object representing the element should expose that interface. The <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-39">object</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-91">represents</a> the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-50">plugin</a>. The <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-51">plugin</a> is not a nested <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-41">browsing context</a>.</p>
       <p>Plugins are considered sandboxed for the purpose of an <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-40">object</a></code> element if the <a data-link-type="dfn" href="browsers.html#sandboxed-plugins-browsing-context-flag" id="ref-for-sandboxed-plugins-browsing-context-flag-2">sandboxed plugins browsing context flag</a> is set on
   the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-41">object</a></code> element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>’s <a data-link-type="dfn" href="browsers.html#active-sandboxing-flag-set" id="ref-for-active-sandboxing-flag-set-3">active sandboxing flag
   set</a>.</p>
@@ -4460,7 +4460,7 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
       <p>The <code>willValidate</code>, <code>validity</code>, and <code>validationMessage</code> attributes, and the <code>checkValidity()</code>, <code>reportValidity()</code>, and <code>setCustomValidity()</code> methods, are part of the <a data-link-type="dfn" href="sec-forms.html#constraint-validation-api" id="ref-for-constraint-validation-api-1">constraint validation API</a>. The <code>form</code> IDL attribute
   is part of the element’s forms API.</p>
       <p>All <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-55">object</a></code> elements have a <dfn data-dfn-for="object" data-dfn-type="dfn" data-lt="legacy caller operation" data-noexport="" id="object-legacy-caller-operation">legacy caller
-  operation<a class="self-link" href="semantics-embedded-content.html#object-legacy-caller-operation"></a></dfn>. If the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-56">object</a></code> element has an instantiated <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-51">plugin</a> that
+  operation<a class="self-link" href="semantics-embedded-content.html#object-legacy-caller-operation"></a></dfn>. If the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-56">object</a></code> element has an instantiated <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-52">plugin</a> that
   supports a scriptable interface that defines a legacy caller operation, then that must be the
   behavior of the object’s legacy caller operation. Otherwise, the object’s legacy caller operation
   must be to throw a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#notsupportederror">NotSupportedError</a></code> exception.</p>
@@ -4539,9 +4539,9 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
      <div class="impl">
       <p>If both attributes are present, and if the parent element of the <code>param</code> is an <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-58">object</a></code> element, then the element defines a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="parameter">parameter</dfn> with the given name-value pair.</p>
       <p>If either the name or value of a <a data-link-type="dfn" href="semantics-embedded-content.html#parameter" id="ref-for-parameter-2">parameter</a> defined
-  by a <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-param" id="ref-for-elementdef-param-5">param</a></code> element that is the child of an <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-59">object</a></code> element that <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-93">represents</a> an instantiated <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-52">plugin</a> changes, and if that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-53">plugin</a> is communicating with the user agent using an API that features the ability to
-  update the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-54">plugin</a> when the name or value of a <a data-link-type="dfn" href="semantics-embedded-content.html#parameter" id="ref-for-parameter-3">parameter</a> so changes, then the user agent must
-  appropriately exercise that ability to notify the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-55">plugin</a> of the change.</p>
+  by a <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-param" id="ref-for-elementdef-param-5">param</a></code> element that is the child of an <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-59">object</a></code> element that <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-93">represents</a> an instantiated <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-53">plugin</a> changes, and if that <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-54">plugin</a> is communicating with the user agent using an API that features the ability to
+  update the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-55">plugin</a> when the name or value of a <a data-link-type="dfn" href="semantics-embedded-content.html#parameter" id="ref-for-parameter-3">parameter</a> so changes, then the user agent must
+  appropriately exercise that ability to notify the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-56">plugin</a> of the change.</p>
       <p>The IDL attributes <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLParamElement" data-dfn-type="attribute" data-export="" id="dom-htmlparamelement-name"><code>name</code></dfn> and <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLParamElement" data-dfn-type="attribute" data-export="" id="dom-htmlparamelement-value"><code>value</code></dfn> must both <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-35">reflect</a> the respective
   content attributes of the same name.</p>
      </div>
@@ -9019,7 +9019,7 @@ red:89
    <b><a href="introduction.html#fingerprinting-vector">#fingerprinting-vector</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-fingerprinting-vector-1">1.8. 개인 정보 보호</a>
-    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-2">2.1.5. Plugin Content Handlers</a>
+    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-2">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-3">2.2.1. Conformance classes</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-4">2.6.2. Processing model</a>
     </li><li><a href="dom.html#ref-for-fingerprinting-vector-5">3.1.2. Resource metadata management</a>
@@ -9285,14 +9285,14 @@ red:89
   <aside class="dfn-panel" data-for="document-root-element-of-a-document-object">
    <b><a href="infrastructure.html#document-root-element-of-a-document-object">#document-root-element-of-a-document-object</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-document-root-element-of-a-document-object-1">2.1.3. DOM trees</a>
+    <li><a href="infrastructure.html#ref-for-document-root-element-of-a-document-object-1">2.1.3. DOM 트리</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="root-element">
    <b><a href="infrastructure.html#root-element">#root-element</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-root-element-1">1.9. HTML 간단한 소개</a>
-    </li><li><a href="infrastructure.html#ref-for-root-element-2">2.1.3. DOM trees</a> <a href="infrastructure.html#ref-for-root-element-3">(2)</a> <a href="infrastructure.html#ref-for-root-element-4">(3)</a> <a href="infrastructure.html#ref-for-root-element-5">(4)</a> <a href="infrastructure.html#ref-for-root-element-6">(5)</a> <a href="infrastructure.html#ref-for-root-element-7">(6)</a> <a href="infrastructure.html#ref-for-root-element-8">(7)</a>
+    </li><li><a href="infrastructure.html#ref-for-root-element-2">2.1.3. DOM 트리</a> <a href="infrastructure.html#ref-for-root-element-3">(2)</a> <a href="infrastructure.html#ref-for-root-element-4">(3)</a> <a href="infrastructure.html#ref-for-root-element-5">(4)</a> <a href="infrastructure.html#ref-for-root-element-6">(5)</a> <a href="infrastructure.html#ref-for-root-element-7">(6)</a> <a href="infrastructure.html#ref-for-root-element-8">(7)</a>
     </li><li><a href="dom.html#ref-for-root-element-9">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-root-element-10">(2)</a> <a href="dom.html#ref-for-root-element-11">(3)</a> <a href="dom.html#ref-for-root-element-12">(4)</a> <a href="dom.html#ref-for-root-element-13">(5)</a> <a href="dom.html#ref-for-root-element-14">(6)</a>
     </li><li><a href="dom.html#ref-for-root-element-15">3.2.5.3. 
   The lang and xml:lang attributes </a>
@@ -9309,7 +9309,7 @@ red:89
   <aside class="dfn-panel" data-for="in-the-document">
    <b><a href="infrastructure.html#in-the-document">#in-the-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-in-the-document-1">2.1.3. DOM trees</a> <a href="infrastructure.html#ref-for-in-the-document-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-in-the-document-1">2.1.3. DOM 트리</a> <a href="infrastructure.html#ref-for-in-the-document-2">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-in-the-document-3">4.2.6. The style element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-in-the-document-4">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-in-the-document-5">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-in-the-document-6">4.7.8. The object element</a>
@@ -9361,7 +9361,7 @@ red:89
   <aside class="dfn-panel" data-for="home-subtree">
    <b><a href="infrastructure.html#home-subtree">#home-subtree</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-home-subtree-1">2.1.3. DOM trees</a>
+    <li><a href="infrastructure.html#ref-for-home-subtree-1">2.1.3. DOM 트리</a>
     </li><li><a href="infrastructure.html#ref-for-home-subtree-2">2.7.1. Reflecting content attributes in IDL attributes</a> <a href="infrastructure.html#ref-for-home-subtree-3">(2)</a>
     </li><li><a href="dom.html#ref-for-home-subtree-4">3.2.5.1. The id attribute</a>
     </li><li><a href="sec-forms.html#ref-for-home-subtree-5">4.10.3. The form element</a>
@@ -9377,7 +9377,7 @@ red:89
   <aside class="dfn-panel" data-for="tree-order">
    <b><a href="infrastructure.html#tree-order">#tree-order</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-tree-order-1">2.1.3. DOM trees</a>
+    <li><a href="infrastructure.html#ref-for-tree-order-1">2.1.3. DOM 트리</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-2">2.4.9. References</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-3">2.5.1. Terminology</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-4">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-tree-order-5">(2)</a>
@@ -9532,7 +9532,7 @@ red:89
   <aside class="dfn-panel" data-for="dispatch">
    <b><a href="infrastructure.html#dispatch">#dispatch</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-dispatch-1">2.1.4. Scripting</a>
+    <li><a href="infrastructure.html#ref-for-dispatch-1">2.1.4. 스크립팅</a>
     </li><li><a href="editing.html#ref-for-dispatch-2">5.3. Activation</a>
     </li><li><a href="editing.html#ref-for-dispatch-3">5.4.4. Processing model</a>
     </li><li><a href="editing.html#ref-for-dispatch-4">5.7.4. The DragEvent interface</a>
@@ -9576,19 +9576,19 @@ red:89
    <b><a href="infrastructure.html#plugin">#plugin</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-plugin-1">1.5.3. 확장성</a>
-    </li><li><a href="infrastructure.html#ref-for-plugin-2">2.1.5. Plugin Content Handlers</a> <a href="infrastructure.html#ref-for-plugin-3">(2)</a> <a href="infrastructure.html#ref-for-plugin-4">(3)</a> <a href="infrastructure.html#ref-for-plugin-5">(4)</a> <a href="infrastructure.html#ref-for-plugin-6">(5)</a> <a href="infrastructure.html#ref-for-plugin-7">(6)</a> <a href="infrastructure.html#ref-for-plugin-8">(7)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-9">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-plugin-10">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-11">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-12">(4)</a> <a href="semantics-embedded-content.html#ref-for-plugin-13">(5)</a> <a href="semantics-embedded-content.html#ref-for-plugin-14">(6)</a> <a href="semantics-embedded-content.html#ref-for-plugin-15">(7)</a> <a href="semantics-embedded-content.html#ref-for-plugin-16">(8)</a> <a href="semantics-embedded-content.html#ref-for-plugin-17">(9)</a> <a href="semantics-embedded-content.html#ref-for-plugin-18">(10)</a> <a href="semantics-embedded-content.html#ref-for-plugin-19">(11)</a> <a href="semantics-embedded-content.html#ref-for-plugin-20">(12)</a> <a href="semantics-embedded-content.html#ref-for-plugin-21">(13)</a> <a href="semantics-embedded-content.html#ref-for-plugin-22">(14)</a> <a href="semantics-embedded-content.html#ref-for-plugin-23">(15)</a> <a href="semantics-embedded-content.html#ref-for-plugin-24">(16)</a> <a href="semantics-embedded-content.html#ref-for-plugin-25">(17)</a> <a href="semantics-embedded-content.html#ref-for-plugin-26">(18)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-27">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-plugin-28">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-29">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-30">(4)</a> <a href="semantics-embedded-content.html#ref-for-plugin-31">(5)</a> <a href="semantics-embedded-content.html#ref-for-plugin-32">(6)</a> <a href="semantics-embedded-content.html#ref-for-plugin-33">(7)</a> <a href="semantics-embedded-content.html#ref-for-plugin-34">(8)</a> <a href="semantics-embedded-content.html#ref-for-plugin-35">(9)</a> <a href="semantics-embedded-content.html#ref-for-plugin-36">(10)</a> <a href="semantics-embedded-content.html#ref-for-plugin-37">(11)</a> <a href="semantics-embedded-content.html#ref-for-plugin-38">(12)</a> <a href="semantics-embedded-content.html#ref-for-plugin-39">(13)</a> <a href="semantics-embedded-content.html#ref-for-plugin-40">(14)</a> <a href="semantics-embedded-content.html#ref-for-plugin-41">(15)</a> <a href="semantics-embedded-content.html#ref-for-plugin-42">(16)</a> <a href="semantics-embedded-content.html#ref-for-plugin-43">(17)</a> <a href="semantics-embedded-content.html#ref-for-plugin-44">(18)</a> <a href="semantics-embedded-content.html#ref-for-plugin-45">(19)</a> <a href="semantics-embedded-content.html#ref-for-plugin-46">(20)</a> <a href="semantics-embedded-content.html#ref-for-plugin-47">(21)</a> <a href="semantics-embedded-content.html#ref-for-plugin-48">(22)</a> <a href="semantics-embedded-content.html#ref-for-plugin-49">(23)</a> <a href="semantics-embedded-content.html#ref-for-plugin-50">(24)</a> <a href="semantics-embedded-content.html#ref-for-plugin-51">(25)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-52">4.7.9. The param element</a> <a href="semantics-embedded-content.html#ref-for-plugin-53">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-54">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-55">(4)</a>
-    </li><li><a href="sec-forms.html#ref-for-plugin-56">4.10.22.4. Constructing the form data set</a> <a href="sec-forms.html#ref-for-plugin-57">(2)</a>
-    </li><li><a href="browsers.html#ref-for-plugin-58">6.5. Sandboxing</a> <a href="browsers.html#ref-for-plugin-59">(2)</a>
-    </li><li><a href="browsers.html#ref-for-plugin-60">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-plugin-61">(2)</a> <a href="browsers.html#ref-for-plugin-62">(3)</a>
-    </li><li><a href="browsers.html#ref-for-plugin-63">6.7.7. Page load processing model for content that uses plugins</a>
-    </li><li><a href="webappapis.html#ref-for-plugin-64">7.6.1.5. Plugins</a> <a href="webappapis.html#ref-for-plugin-65">(2)</a> <a href="webappapis.html#ref-for-plugin-66">(3)</a> <a href="webappapis.html#ref-for-plugin-67">(4)</a> <a href="webappapis.html#ref-for-plugin-68">(5)</a> <a href="webappapis.html#ref-for-plugin-69">(6)</a> <a href="webappapis.html#ref-for-plugin-70">(7)</a> <a href="webappapis.html#ref-for-plugin-71">(8)</a> <a href="webappapis.html#ref-for-plugin-72">(9)</a> <a href="webappapis.html#ref-for-plugin-73">(10)</a> <a href="webappapis.html#ref-for-plugin-74">(11)</a> <a href="webappapis.html#ref-for-plugin-75">(12)</a> <a href="webappapis.html#ref-for-plugin-76">(13)</a> <a href="webappapis.html#ref-for-plugin-77">(14)</a> <a href="webappapis.html#ref-for-plugin-78">(15)</a> <a href="webappapis.html#ref-for-plugin-79">(16)</a> <a href="webappapis.html#ref-for-plugin-80">(17)</a> <a href="webappapis.html#ref-for-plugin-81">(18)</a> <a href="webappapis.html#ref-for-plugin-82">(19)</a> <a href="webappapis.html#ref-for-plugin-83">(20)</a> <a href="webappapis.html#ref-for-plugin-84">(21)</a> <a href="webappapis.html#ref-for-plugin-85">(22)</a> <a href="webappapis.html#ref-for-plugin-86">(23)</a> <a href="webappapis.html#ref-for-plugin-87">(24)</a> <a href="webappapis.html#ref-for-plugin-88">(25)</a> <a href="webappapis.html#ref-for-plugin-89">(26)</a> <a href="webappapis.html#ref-for-plugin-90">(27)</a>
-    </li><li><a href="rendering.html#ref-for-plugin-91">10.4.1. Embedded content</a>
-    </li><li><a href="obsolete.html#ref-for-plugin-92">11.2. Non-conforming features</a>
-    </li><li><a href="obsolete.html#ref-for-plugin-93">11.3.1. The applet element</a> <a href="obsolete.html#ref-for-plugin-94">(2)</a> <a href="obsolete.html#ref-for-plugin-95">(3)</a> <a href="obsolete.html#ref-for-plugin-96">(4)</a> <a href="obsolete.html#ref-for-plugin-97">(5)</a> <a href="obsolete.html#ref-for-plugin-98">(6)</a>
-    </li><li><a href="fullindex.html#ref-for-plugin-99">Elements</a> <a href="fullindex.html#ref-for-plugin-100">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-plugin-2">2.1.5. Plugin 콘텐트 처리기</a> <a href="infrastructure.html#ref-for-plugin-3">(2)</a> <a href="infrastructure.html#ref-for-plugin-4">(3)</a> <a href="infrastructure.html#ref-for-plugin-5">(4)</a> <a href="infrastructure.html#ref-for-plugin-6">(5)</a> <a href="infrastructure.html#ref-for-plugin-7">(6)</a> <a href="infrastructure.html#ref-for-plugin-8">(7)</a> <a href="infrastructure.html#ref-for-plugin-9">(8)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-10">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-plugin-11">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-12">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-13">(4)</a> <a href="semantics-embedded-content.html#ref-for-plugin-14">(5)</a> <a href="semantics-embedded-content.html#ref-for-plugin-15">(6)</a> <a href="semantics-embedded-content.html#ref-for-plugin-16">(7)</a> <a href="semantics-embedded-content.html#ref-for-plugin-17">(8)</a> <a href="semantics-embedded-content.html#ref-for-plugin-18">(9)</a> <a href="semantics-embedded-content.html#ref-for-plugin-19">(10)</a> <a href="semantics-embedded-content.html#ref-for-plugin-20">(11)</a> <a href="semantics-embedded-content.html#ref-for-plugin-21">(12)</a> <a href="semantics-embedded-content.html#ref-for-plugin-22">(13)</a> <a href="semantics-embedded-content.html#ref-for-plugin-23">(14)</a> <a href="semantics-embedded-content.html#ref-for-plugin-24">(15)</a> <a href="semantics-embedded-content.html#ref-for-plugin-25">(16)</a> <a href="semantics-embedded-content.html#ref-for-plugin-26">(17)</a> <a href="semantics-embedded-content.html#ref-for-plugin-27">(18)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-28">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-plugin-29">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-30">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-31">(4)</a> <a href="semantics-embedded-content.html#ref-for-plugin-32">(5)</a> <a href="semantics-embedded-content.html#ref-for-plugin-33">(6)</a> <a href="semantics-embedded-content.html#ref-for-plugin-34">(7)</a> <a href="semantics-embedded-content.html#ref-for-plugin-35">(8)</a> <a href="semantics-embedded-content.html#ref-for-plugin-36">(9)</a> <a href="semantics-embedded-content.html#ref-for-plugin-37">(10)</a> <a href="semantics-embedded-content.html#ref-for-plugin-38">(11)</a> <a href="semantics-embedded-content.html#ref-for-plugin-39">(12)</a> <a href="semantics-embedded-content.html#ref-for-plugin-40">(13)</a> <a href="semantics-embedded-content.html#ref-for-plugin-41">(14)</a> <a href="semantics-embedded-content.html#ref-for-plugin-42">(15)</a> <a href="semantics-embedded-content.html#ref-for-plugin-43">(16)</a> <a href="semantics-embedded-content.html#ref-for-plugin-44">(17)</a> <a href="semantics-embedded-content.html#ref-for-plugin-45">(18)</a> <a href="semantics-embedded-content.html#ref-for-plugin-46">(19)</a> <a href="semantics-embedded-content.html#ref-for-plugin-47">(20)</a> <a href="semantics-embedded-content.html#ref-for-plugin-48">(21)</a> <a href="semantics-embedded-content.html#ref-for-plugin-49">(22)</a> <a href="semantics-embedded-content.html#ref-for-plugin-50">(23)</a> <a href="semantics-embedded-content.html#ref-for-plugin-51">(24)</a> <a href="semantics-embedded-content.html#ref-for-plugin-52">(25)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-53">4.7.9. The param element</a> <a href="semantics-embedded-content.html#ref-for-plugin-54">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-55">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-56">(4)</a>
+    </li><li><a href="sec-forms.html#ref-for-plugin-57">4.10.22.4. Constructing the form data set</a> <a href="sec-forms.html#ref-for-plugin-58">(2)</a>
+    </li><li><a href="browsers.html#ref-for-plugin-59">6.5. Sandboxing</a> <a href="browsers.html#ref-for-plugin-60">(2)</a>
+    </li><li><a href="browsers.html#ref-for-plugin-61">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-plugin-62">(2)</a> <a href="browsers.html#ref-for-plugin-63">(3)</a>
+    </li><li><a href="browsers.html#ref-for-plugin-64">6.7.7. Page load processing model for content that uses plugins</a>
+    </li><li><a href="webappapis.html#ref-for-plugin-65">7.6.1.5. Plugins</a> <a href="webappapis.html#ref-for-plugin-66">(2)</a> <a href="webappapis.html#ref-for-plugin-67">(3)</a> <a href="webappapis.html#ref-for-plugin-68">(4)</a> <a href="webappapis.html#ref-for-plugin-69">(5)</a> <a href="webappapis.html#ref-for-plugin-70">(6)</a> <a href="webappapis.html#ref-for-plugin-71">(7)</a> <a href="webappapis.html#ref-for-plugin-72">(8)</a> <a href="webappapis.html#ref-for-plugin-73">(9)</a> <a href="webappapis.html#ref-for-plugin-74">(10)</a> <a href="webappapis.html#ref-for-plugin-75">(11)</a> <a href="webappapis.html#ref-for-plugin-76">(12)</a> <a href="webappapis.html#ref-for-plugin-77">(13)</a> <a href="webappapis.html#ref-for-plugin-78">(14)</a> <a href="webappapis.html#ref-for-plugin-79">(15)</a> <a href="webappapis.html#ref-for-plugin-80">(16)</a> <a href="webappapis.html#ref-for-plugin-81">(17)</a> <a href="webappapis.html#ref-for-plugin-82">(18)</a> <a href="webappapis.html#ref-for-plugin-83">(19)</a> <a href="webappapis.html#ref-for-plugin-84">(20)</a> <a href="webappapis.html#ref-for-plugin-85">(21)</a> <a href="webappapis.html#ref-for-plugin-86">(22)</a> <a href="webappapis.html#ref-for-plugin-87">(23)</a> <a href="webappapis.html#ref-for-plugin-88">(24)</a> <a href="webappapis.html#ref-for-plugin-89">(25)</a> <a href="webappapis.html#ref-for-plugin-90">(26)</a> <a href="webappapis.html#ref-for-plugin-91">(27)</a>
+    </li><li><a href="rendering.html#ref-for-plugin-92">10.4.1. Embedded content</a>
+    </li><li><a href="obsolete.html#ref-for-plugin-93">11.2. Non-conforming features</a>
+    </li><li><a href="obsolete.html#ref-for-plugin-94">11.3.1. The applet element</a> <a href="obsolete.html#ref-for-plugin-95">(2)</a> <a href="obsolete.html#ref-for-plugin-96">(3)</a> <a href="obsolete.html#ref-for-plugin-97">(4)</a> <a href="obsolete.html#ref-for-plugin-98">(5)</a> <a href="obsolete.html#ref-for-plugin-99">(6)</a>
+    </li><li><a href="fullindex.html#ref-for-plugin-100">Elements</a> <a href="fullindex.html#ref-for-plugin-101">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="secured">
@@ -10197,7 +10197,7 @@ red:89
   <aside class="dfn-panel" data-for="control-characters">
    <b><a href="infrastructure.html#control-characters">#control-characters</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-control-characters-1">2.1.3. DOM trees</a>
+    <li><a href="infrastructure.html#ref-for-control-characters-1">2.1.3. DOM 트리</a>
     </li><li><a href="dom.html#ref-for-control-characters-2">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="syntax.html#ref-for-control-characters-3">8.1.2.3. Attributes</a>
     </li><li><a href="syntax.html#ref-for-control-characters-4">8.1.4. Character references</a>
@@ -16851,7 +16851,7 @@ red:89
    <b><a href="semantics-embedded-content.html#elementdef-iframe">#elementdef-iframe</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-iframe-1">1.9.1. HTML로 안전한 어플리케이션 작성</a> <a href="introduction.html#ref-for-elementdef-iframe-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-iframe-3">2.1.5. Plugin Content Handlers</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-iframe-3">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-iframe-4">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-elementdef-iframe-5">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-iframe-6">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-iframe-7">(2)</a> <a href="dom.html#ref-for-elementdef-iframe-8">(3)</a>
     </li><li><a href="dom.html#ref-for-elementdef-iframe-9">3.2.4.2.2. Flow content</a>
@@ -16962,7 +16962,7 @@ red:89
   <aside class="dfn-panel" data-for="element-attrdef-iframe-sandbox">
    <b><a href="semantics-embedded-content.html#element-attrdef-iframe-sandbox">#element-attrdef-iframe-sandbox</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-element-attrdef-iframe-sandbox-1">2.1.5. Plugin Content Handlers</a>
+    <li><a href="infrastructure.html#ref-for-element-attrdef-iframe-sandbox-1">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-iframe-sandbox-2">3.1.2. Resource metadata management</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-3">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-4">(2)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-5">(3)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-6">(4)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-7">(5)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-8">(6)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-9">(7)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-10">(8)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-11">(9)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-12">(10)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-13">(11)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-14">(12)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-15">(13)</a>
     </li><li><a href="browsers.html#ref-for-element-attrdef-iframe-sandbox-16">6.1.5. Browsing context names</a>
@@ -22624,29 +22624,29 @@ red:89
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-button-1">1.10.3. 
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-button-2">2.1.2. XML</a> <a href="infrastructure.html#ref-for-elementdef-button-3">(2)</a> <a href="infrastructure.html#ref-for-elementdef-button-4">(3)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-button-5">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-elementdef-button-6">(2)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-button-7">3.2.4.2.2. Flow content</a>
-    </li><li><a href="dom.html#ref-for-elementdef-button-8">3.2.4.2.5. Phrasing content</a>
-    </li><li><a href="dom.html#ref-for-elementdef-button-9">3.2.4.2.7. Interactive content</a>
-    </li><li><a href="dom.html#ref-for-elementdef-button-10">3.2.4.2.8. Palpable content</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-button-11">4.7.5.1.3. A link or button containing nothing but an image</a>
-    </li><li><a href="sec-forms.html#ref-for-elementdef-button-12">4.10.1.1. Writing a form’s user interface</a>
-    </li><li><a href="sec-forms.html#ref-for-elementdef-button-13">4.10.2. Categories</a> <a href="sec-forms.html#ref-for-elementdef-button-14">(2)</a> <a href="sec-forms.html#ref-for-elementdef-button-15">(3)</a> <a href="sec-forms.html#ref-for-elementdef-button-16">(4)</a> <a href="sec-forms.html#ref-for-elementdef-button-17">(5)</a> <a href="sec-forms.html#ref-for-elementdef-button-18">(6)</a>
-    </li><li><a href="sec-forms.html#ref-for-elementdef-button-19">4.10.6. The button element</a> <a href="sec-forms.html#ref-for-elementdef-button-20">(2)</a> <a href="sec-forms.html#ref-for-elementdef-button-21">(3)</a> <a href="sec-forms.html#ref-for-elementdef-button-22">(4)</a> <a href="sec-forms.html#ref-for-elementdef-button-23">(5)</a> <a href="sec-forms.html#ref-for-elementdef-button-24">(6)</a> <a href="sec-forms.html#ref-for-elementdef-button-25">(7)</a> <a href="sec-forms.html#ref-for-elementdef-button-26">(8)</a> <a href="sec-forms.html#ref-for-elementdef-button-27">(9)</a> <a href="sec-forms.html#ref-for-elementdef-button-28">(10)</a> <a href="sec-forms.html#ref-for-elementdef-button-29">(11)</a>
-    </li><li><a href="sec-forms.html#ref-for-elementdef-button-30">4.10.19.5. Enabling and disabling form controls: the disabled attribute</a>
-    </li><li><a href="interactive-elements.html#ref-for-elementdef-button-31">4.11.3. The menu element</a>
-    </li><li><a href="interactive-elements.html#ref-for-elementdef-button-32">4.11.6.3. Using the button element to define a command</a> <a href="interactive-elements.html#ref-for-elementdef-button-33">(2)</a>
-    </li><li><a href="disabled-elements.html#ref-for-elementdef-button-34">4.14. Disabled elements</a>
-    </li><li><a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-35">4.15.2. Pseudo-classes</a> <a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-36">(2)</a> <a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-37">(3)</a>
-    </li><li><a href="editing.html#ref-for-elementdef-button-38">5.4.3. The tabindex attribute</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-button-39">8.2.3.2. The stack of open elements</a> <a href="syntax.html#ref-for-elementdef-button-40">(2)</a>
-    </li><li><a href="rendering.html#ref-for-elementdef-button-41">10.5.2. The button element</a> <a href="rendering.html#ref-for-elementdef-button-42">(2)</a> <a href="rendering.html#ref-for-elementdef-button-43">(3)</a>
-    </li><li><a href="obsolete.html#ref-for-elementdef-button-44">11.2. Non-conforming features</a> <a href="obsolete.html#ref-for-elementdef-button-45">(2)</a> <a href="obsolete.html#ref-for-elementdef-button-46">(3)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-button-47">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-button-48">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-button-49">(2)</a> <a href="fullindex.html#ref-for-elementdef-button-50">(3)</a> <a href="fullindex.html#ref-for-elementdef-button-51">(4)</a> <a href="fullindex.html#ref-for-elementdef-button-52">(5)</a> <a href="fullindex.html#ref-for-elementdef-button-53">(6)</a> <a href="fullindex.html#ref-for-elementdef-button-54">(7)</a> <a href="fullindex.html#ref-for-elementdef-button-55">(8)</a> <a href="fullindex.html#ref-for-elementdef-button-56">(9)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-button-57">Attributes</a> <a href="fullindex.html#ref-for-elementdef-button-58">(2)</a> <a href="fullindex.html#ref-for-elementdef-button-59">(3)</a> <a href="fullindex.html#ref-for-elementdef-button-60">(4)</a> <a href="fullindex.html#ref-for-elementdef-button-61">(5)</a> <a href="fullindex.html#ref-for-elementdef-button-62">(6)</a> <a href="fullindex.html#ref-for-elementdef-button-63">(7)</a> <a href="fullindex.html#ref-for-elementdef-button-64">(8)</a> <a href="fullindex.html#ref-for-elementdef-button-65">(9)</a> <a href="fullindex.html#ref-for-elementdef-button-66">(10)</a> <a href="fullindex.html#ref-for-elementdef-button-67">(11)</a> <a href="fullindex.html#ref-for-elementdef-button-68">(12)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-button-69">Element Interfaces</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-button-2">2.1.2. XML</a> <a href="infrastructure.html#ref-for-elementdef-button-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-button-4">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-elementdef-button-5">(2)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-button-6">3.2.4.2.2. Flow content</a>
+    </li><li><a href="dom.html#ref-for-elementdef-button-7">3.2.4.2.5. Phrasing content</a>
+    </li><li><a href="dom.html#ref-for-elementdef-button-8">3.2.4.2.7. Interactive content</a>
+    </li><li><a href="dom.html#ref-for-elementdef-button-9">3.2.4.2.8. Palpable content</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-button-10">4.7.5.1.3. A link or button containing nothing but an image</a>
+    </li><li><a href="sec-forms.html#ref-for-elementdef-button-11">4.10.1.1. Writing a form’s user interface</a>
+    </li><li><a href="sec-forms.html#ref-for-elementdef-button-12">4.10.2. Categories</a> <a href="sec-forms.html#ref-for-elementdef-button-13">(2)</a> <a href="sec-forms.html#ref-for-elementdef-button-14">(3)</a> <a href="sec-forms.html#ref-for-elementdef-button-15">(4)</a> <a href="sec-forms.html#ref-for-elementdef-button-16">(5)</a> <a href="sec-forms.html#ref-for-elementdef-button-17">(6)</a>
+    </li><li><a href="sec-forms.html#ref-for-elementdef-button-18">4.10.6. The button element</a> <a href="sec-forms.html#ref-for-elementdef-button-19">(2)</a> <a href="sec-forms.html#ref-for-elementdef-button-20">(3)</a> <a href="sec-forms.html#ref-for-elementdef-button-21">(4)</a> <a href="sec-forms.html#ref-for-elementdef-button-22">(5)</a> <a href="sec-forms.html#ref-for-elementdef-button-23">(6)</a> <a href="sec-forms.html#ref-for-elementdef-button-24">(7)</a> <a href="sec-forms.html#ref-for-elementdef-button-25">(8)</a> <a href="sec-forms.html#ref-for-elementdef-button-26">(9)</a> <a href="sec-forms.html#ref-for-elementdef-button-27">(10)</a> <a href="sec-forms.html#ref-for-elementdef-button-28">(11)</a>
+    </li><li><a href="sec-forms.html#ref-for-elementdef-button-29">4.10.19.5. Enabling and disabling form controls: the disabled attribute</a>
+    </li><li><a href="interactive-elements.html#ref-for-elementdef-button-30">4.11.3. The menu element</a>
+    </li><li><a href="interactive-elements.html#ref-for-elementdef-button-31">4.11.6.3. Using the button element to define a command</a> <a href="interactive-elements.html#ref-for-elementdef-button-32">(2)</a>
+    </li><li><a href="disabled-elements.html#ref-for-elementdef-button-33">4.14. Disabled elements</a>
+    </li><li><a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-34">4.15.2. Pseudo-classes</a> <a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-35">(2)</a> <a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-36">(3)</a>
+    </li><li><a href="editing.html#ref-for-elementdef-button-37">5.4.3. The tabindex attribute</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-button-38">8.2.3.2. The stack of open elements</a> <a href="syntax.html#ref-for-elementdef-button-39">(2)</a>
+    </li><li><a href="rendering.html#ref-for-elementdef-button-40">10.5.2. The button element</a> <a href="rendering.html#ref-for-elementdef-button-41">(2)</a> <a href="rendering.html#ref-for-elementdef-button-42">(3)</a>
+    </li><li><a href="obsolete.html#ref-for-elementdef-button-43">11.2. Non-conforming features</a> <a href="obsolete.html#ref-for-elementdef-button-44">(2)</a> <a href="obsolete.html#ref-for-elementdef-button-45">(3)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-button-46">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-button-47">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-button-48">(2)</a> <a href="fullindex.html#ref-for-elementdef-button-49">(3)</a> <a href="fullindex.html#ref-for-elementdef-button-50">(4)</a> <a href="fullindex.html#ref-for-elementdef-button-51">(5)</a> <a href="fullindex.html#ref-for-elementdef-button-52">(6)</a> <a href="fullindex.html#ref-for-elementdef-button-53">(7)</a> <a href="fullindex.html#ref-for-elementdef-button-54">(8)</a> <a href="fullindex.html#ref-for-elementdef-button-55">(9)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-button-56">Attributes</a> <a href="fullindex.html#ref-for-elementdef-button-57">(2)</a> <a href="fullindex.html#ref-for-elementdef-button-58">(3)</a> <a href="fullindex.html#ref-for-elementdef-button-59">(4)</a> <a href="fullindex.html#ref-for-elementdef-button-60">(5)</a> <a href="fullindex.html#ref-for-elementdef-button-61">(6)</a> <a href="fullindex.html#ref-for-elementdef-button-62">(7)</a> <a href="fullindex.html#ref-for-elementdef-button-63">(8)</a> <a href="fullindex.html#ref-for-elementdef-button-64">(9)</a> <a href="fullindex.html#ref-for-elementdef-button-65">(10)</a> <a href="fullindex.html#ref-for-elementdef-button-66">(11)</a> <a href="fullindex.html#ref-for-elementdef-button-67">(12)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-button-68">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlbuttonelement-htmlbuttonelement">
@@ -27442,7 +27442,7 @@ red:89
    <b><a href="browsers.html#browsing-context">#browsing-context</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-browsing-context-1">1.5.1. 스크립트 실행의 직렬화</a>
-    </li><li><a href="infrastructure.html#ref-for-browsing-context-2">2.1.5. Plugin Content Handlers</a>
+    </li><li><a href="infrastructure.html#ref-for-browsing-context-2">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-3">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-browsing-context-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-5">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-browsing-context-6">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-7">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-browsing-context-8">(2)</a>
@@ -27709,7 +27709,7 @@ red:89
   <aside class="dfn-panel" data-for="child-browsing-context">
    <b><a href="browsers.html#child-browsing-context">#child-browsing-context</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-child-browsing-context-1">2.1.5. Plugin Content Handlers</a>
+    <li><a href="infrastructure.html#ref-for-child-browsing-context-1">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-child-browsing-context-2">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-child-browsing-context-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-child-browsing-context-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-child-browsing-context-5">(4)</a> <a href="semantics-embedded-content.html#ref-for-child-browsing-context-6">(5)</a>
     </li><li><a href="editing.html#ref-for-child-browsing-context-7">5.4.6. Focus management APIs</a>
     </li><li><a href="browsers.html#ref-for-child-browsing-context-8">6.1.1. Nested browsing contexts</a> <a href="browsers.html#ref-for-child-browsing-context-9">(2)</a> <a href="browsers.html#ref-for-child-browsing-context-10">(3)</a> <a href="browsers.html#ref-for-child-browsing-context-11">(4)</a> <a href="browsers.html#ref-for-child-browsing-context-12">(5)</a> <a href="browsers.html#ref-for-child-browsing-context-13">(6)</a>
