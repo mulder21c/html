@@ -196,24 +196,25 @@
   <a lt="removing steps">제거 단계</a>가 작동되는 경우 노드 <var>B</var>로부터 
   <dfn for="Node" lt="node A is removed">노드 <var>A</var>가 제거</dfn> 됩니다.
 
-<h4 id="scripting">Scripting</h4>
+<h4 id="scripting">스크립팅</h4>
 
-  The construction "a <code>Foo</code> object", where <code>Foo</code> is actually an interface,
-  is sometimes used instead of the more accurate "an object implementing the interface
-  <code>Foo</code>".
+  <code>Foo</code>가 실제로 인터페이스인 경우, 구조 "<code>Foo</code> 객체"는 때때로 좀 더 정확한
+  "<code>Foo</code> 인터페이스를 구현하는 객체" 대신 사용됩니다.
 
-  An IDL attribute is said to be <dfn for="values">getting</dfn> when its value is being retrieved
-  (e.g., by author script), and is said to be <dfn for="values">setting</dfn> when a new value is
-  assigned to it.
+  IDL 속성(attribute)는 그것의 값이 검색 되는(예를 들어, 작성자 스크립트에 의해) 경우 
+  <dfn for="values" lt="getting">가져온다</dfn>라고 불리고 새로운 값이 할당되는 경우 
+  <dfn for="values" lt="setting">설정한다</dfn>라고 불립니다.
 
-  If a DOM object is said to be <dfn>live</dfn>, then the attributes and methods on that object
-  must operate on the actual underlying data, not a snapshot of the data.
+  DOM 객체가 <dfn lt="live">존속된다</dfn>라고 불리는 경우, 그 객체의 속성(attribute)과 메서드(method)는 
+  데이터의 스냅샷이 아닌, 실제 내부 데이터로 운용되어야 합니다.
 
-  In the contexts of events, the terms <i>fire</i> and <i>dispatch</i> are used as defined in the
-  DOM specification: <dfn lt="fire|firing|fired|fires|fire a simple event|fires a simple event">firing</dfn> an event means to create and <a>dispatch</a> it, and
-  <dfn lt="dispatch|dispatching|dispatched|dom event dispatch logic|event dispatching">dispatching</dfn> an event means to follow the steps that propagate the event through the
-  tree. The term <dfn lt="trusted|trusted event">trusted event</dfn> is used to refer to events whose {{Event/isTrusted}}
-  attribute is initialized to true. [[!DOM]]
+  이벤트의 측면에서, <i>발생</i>과 <i>발송</i>이라는 용어는 DOM 명세에서 정의된 대로 사용됩니다:
+  이벤트가 <dfn lt="fire|firing|fired|fires|fire a simple event|fires a simple event">발생</dfn>한다는 
+  것은 생성하고 <a lt="dispatch">발송</a> 한다는 것을 의미하고, 
+  이벤트를 <dfn lt="dispatch|dispatching|dispatched|dom event dispatch logic|event dispatching">발송</dfn>한다는
+  것은 트리를 통해 이벤트를 전파하는 단계를 따른다는 것을 의미합니다. 
+  <dfn lt="trusted|trusted event">신뢰할 수 있는 이벤트</dfn>는 {{Event/isTrusted}} 속성(attribute)가 
+  true로 초기화 된 이벤트를 지칭하는데 사용됩니다. [[!DOM]]
 
 <h4 id="plugin-content-handlers"><code>Plugin</code> Content Handlers</h4>
 
