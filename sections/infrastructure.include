@@ -216,55 +216,54 @@
   <dfn lt="trusted|trusted event">신뢰할 수 있는 이벤트</dfn>는 {{Event/isTrusted}} 속성(attribute)가 
   true로 초기화 된 이벤트를 지칭하는데 사용됩니다. [[!DOM]]
 
-<h4 id="plugin-content-handlers"><code>Plugin</code> Content Handlers</h4>
+<h4 id="plugin-content-handlers"><code>Plugin</code> 콘텐트 처리기</h4>
 
-  The term <dfn lt="plugin|plugins">plugin</dfn> refers to a user-agent defined set of content
-  handlers that can be used by the user agent. The content handlers can take part in the user
-  agent's rendering of a {{Document}} object, but that neither act as <a>child browsing contexts</a>
-  of the {{Document}} nor introduce any {{Node}} objects to the {{Document}}'s DOM.
+  <dfn lt="plugin|plugins">plugin</dfn>이라는 용어는 유저 에이전트에 의해 사용될 수 있는 콘텐츠 
+  처리기의 유저 에이전트 정의 세트를 지칭합니다. 콘텐트 처리기는 유저 에이전트의 {{Document}} 객체의 
+  렌더링에 참여할 수 있지만, {{Document}}의 <a lt="child browsing contexts">자식 브라우징 컨텍스트</a>로
+  행동하거나 {{Document}}의 DOM에 임의의 {{Node}} 객체를 도입하지 않습니다.
 
-  Typically such content handlers are provided by third parties, though a user agent can also
-  designate built-in content handlers as <a>plugins</a>.
+  일반적으로 그러한 콘텐트 처리기들은 서드 파티로 제공되기는 하지만, 유저 에이전트는 내장 콘텐트
+  처리기도 <a lt="plugins">플러그인</a>으로 지정할 수 있습니다.
 
-  A user agent must not consider the types <code>text/plain</code> and
-  <code>application/octet-stream</code> as having a registered <a>plugin</a>.
+  유저 에이전트는 <code>text/plain</code>과 <code>application/octet-stream</code> 유형을 등록된 
+  <a lt="plugin">플러그인</a>을 가지는 것으로 간주해서는 안됩니다.
 
   <p class="example">
-    One example of a plugin would be a PDF viewer that is instantiated in a
-    <a>browsing context</a> when the user navigates to a PDF file. This would count as a
-    plugin regardless of whether the party that implemented the PDF viewer component was the same as
-    that which implemented the user agent itself. However, a PDF viewer application that launches
-    separate from the user agent (as opposed to using the same interface) is not a plugin by this
-    definition.
+    플러그인의 한 가지 예는 사용자가 PDF 파일을 탐색할 때 <a lt="browsing context">브라우징 
+    컨텍스트</a>에 인스턴스화 된 PDF 뷰어일 것입니다. 이것은 PDF 뷰어 컴포넌트를 구현한 단체가 유저 
+    에이전트를 구현한 단체와 동일한지 여부와 상관 없이 플러그인으로 인정할 것입니다. 하지만, 유저 
+    에이전트와 분리되어 시작하는 (동일한 인터페이스를 사용하는 것이 아닌) PDF뷰어 어플리케이션은 
+    이 정의에 의해 플러그인이 아닙니다.
   </p>
 
   <p class="note">
-    This specification does not define a mechanism for interacting with <a>plugins</a>, as it is expected
-    to be user-agent- and platform-specific. Some user agents might opt to support a plugin mechanism such
-    as the Netscape Plugin API; others might use remote content converters or have built-in support
-    for certain types. Indeed, this specification doesn't require user agents to support <a>plugins</a> at
-    all. [[NPAPI]]
+    이 명세는 <a lt="plugins">플러그인</a>이 유저 에이전트와 플랫폼 종속인 것으로 예상되기 때문에 
+    <a lt="plugins">플러그인</a>과 상호작용에 대한 메커니즘을 정의하지 않습니다. 일부 유저 에이전트는
+    넷스케이프 플러그인 API와 같은 플러그인 메커니즘을 지원하는 것을 선택할 수 있습니다; 또 어떤 것들은
+    원격 콘텐트 변환기를 사용하거나 특정 유형에 대한 내장 지원을 가질 수도 있습니다. 실제로, 이 명세는
+    <a lt="plugins">플러그인</a>을 지원하는 유저 에이전트가 전혀 필요하지 않습니다. [[NPAPI]]
   </p>
 
-  A plugin can be <dfn>secured</dfn> if it honors the semantics of the <{iframe/sandbox}>
-  attribute.
+  플러그인은 <{iframe/sandbox}> 속성(attribute)의 의미를 만족하면 <dfn lt="secured">보호</dfn> 될 수
+  있습니다.
 
   <p class="example">
-    For example, a secured plugin would prevent its contents from creating pop-up windows when the
-    plugin is instantiated inside a sandboxed <{iframe}>.
+    예를 들어, 보호된 플러그인은 플러그인이 샌드박스 된 <{iframe}> 안에서 인스턴스화 된 경우 콘텐트가 
+    팝업 윈도우를 생성하는 것을 차단할 것입니다.
   </p>
 
   <p class="warning">
-    Browsers should take extreme care when interacting with external content intended for
-    <a>plugins</a>. When third-party software is run with the same privileges as the user agent
-    itself, vulnerabilities in the third-party software become as dangerous as if they were
-    vulnerabilities of the user agent itself.
+    브라우저는 <a lt="plugins">플러그인</a>을 위해 의도된 외부 콘텐트와 상호작용을 할 경우 극도의 
+    주의를 기울여야(should) 합니다. 서드 파티 소프트웨어가 유저 에이전트처럼 동일한 특권을 가지고 
+    수행되는 경우, 서드 파티 소프트웨어의 취약성은 유저 에이전트의 취약성이 있는 것만큼 위험하게 
+    됩니다.
   </p>
 
-  Since different users having different sets of <a>plugins</a> provides a fingerprinting vector
-  that increases the chances of users being uniquely identified, user agents are encouraged to
-  support the exact same set of <a>plugins</a> for each user.
-  <a class="fingerprint" href="#fingerprinting-vector"><img height="21" src="images/fingerprint.png" width="15" alt="(This is a fingerprinting vector.)" /></a>
+  다른 <a lt="plugins">plugins</a> 세트를 가지는 다른 사용자는 사용자를 유일하게 식별되게 하는 기회를 
+  증가시키는 지문 그림을 제공하기 때문에, 유저 에이전트는 각 사용자에 대해 정확히 동일한 
+  <a lt="plugins">플러그인</a> 세트를 지원하도록 권장 됩니다.
+  <a class="fingerprint" href="#fingerprinting-vector"><img height="21" src="images/fingerprint.png" width="15" alt="(이것은 지문 그림입니다.)" /></a>
 
 <h4 id="encoding-terminology">Character encodings</h4>
 
