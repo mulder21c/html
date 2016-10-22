@@ -18,55 +18,62 @@
   대해서는 <a lt="content attributes">콘텐트 속성(attribute)</a>으로, IDL 인터페이스에서 명시된 것에 
   대해서는 <dfn lt="IDL attribute|IDL attributes">IDL 속성(attribute)</dfn>으로 지칭합니다. 유사하게, 
   "속성(property)"이라는 용어는 자바스크립트 객체 속성(property)와 CSS 속성(property) 모두에 대해 
-  사용됩니다. 이것들이 모호한 경우 각각 <dfn lt="object property|object properties">객체 속성(property)</dfn>과
-  <dfn lt="CSS property|CSS properties">CSS 속성(property)</dfn>으로서 자격이 주어집니다 .
+  사용됩니다. 이것들이 모호한 경우 각각 <dfn lt="object property|object properties">객체 
+  속성(property)</dfn>과 <dfn lt="CSS property|CSS properties">CSS 속성(property)</dfn>으로서 자격이 
+  주어집니다 .
 
   일반적으로, 명세가 기능이 <a href="#syntax">HTML 구문</a> 혹은 <a href="#xhtml">XHTML 구문</a>에 
-  적용된다고 서술하는 경우, 둘 다 포함하는 것입니다. 기능이 명확하게 두 언어 중 하나에만 적용하는 경우 
-  "HTML에 대해, ... (이것은 XHTML에 적용하지 않습니다)" 처럼, 다른 형식에 적용하지 않는다고 명시적으로 
-  서술하여 불립니다.
+  적용된다고 서술하는 경우, 둘 다 포함하는 것입니다. 기능이 명확하게 두 언어 중 하나에만 적용하는  
+  경우 "HTML에 대해, ... (이것은 XHTML에 적용하지 않습니다)" 처럼, 다른 형식에 적용하지 않는다고  
+  명시적으로 서술하여 불립니다.
 
-  이 명세는 짧은 정적 문서로부터 긴 에세이나 리치 멀티미디어가 있는 리포트, 뿐만아니라 훌륭한 인터랙티브 
-  어플리케이션에 이르기까지 모든 HTML의 사용에 지칭하는데 <dfn lt="document|documents">document</dfn>이라는 
-  용어를 사용합니다. 이 용어는 {{Document}} 객체와 그 객체의 후손 DOM 트리 둘 모두를 지칭하는데, 그리고  
-  상황에 따라 <a href="#syntax">HTML 구문</a>이나 <a href="#xhtml">XHTML 구문</a>을 사용하여 직렬화된  
-  바이트 스트림을 지칭하는데 사용됩니다.
+  이 명세는 짧은 정적 문서로부터 긴 에세이나 리치 멀티미디어가 있는 리포트, 뿐만아니라 훌륭한 
+  인터랙티브 어플리케이션에 이르기까지 모든 HTML의 사용에 지칭하는데  
+  <dfn lt="document|documents">document</dfn>이라는 용어를 사용합니다. 이 용어는 {{Document}} 객체와   
+  그 객체의 후손 DOM 트리 둘 모두를 지칭하는데, 그리고 상황에 따라 
+  <a href="#syntax">HTML 구문</a>이나 <a href="#xhtml">XHTML 구문</a>을 사용하여 직렬화된 바이트 
+  스트림을 지칭하는데 사용됩니다.
 
   DOM 구조의 경우, <dfn lt="HTML document">HTML 문서</dfn>와 <a lt="XML document">XML 문서</a>라는 
-  용어는 DOM 명세에서 정의된 대로 사용되고, {{Document}} 객체가 찾아질 수 있는 두 다른 모드를 명확하게 
-  지칭합니다. [[!DOM]] (그런 사용법은 항상 그들의 정의에 하이퍼링크 되어 있습니다.)
+  용어는 DOM 명세에서 정의된 대로 사용되고, {{Document}} 객체가 찾아질 수 있는 두 다른 모드를 
+  명확하게 지칭합니다. [[!DOM]] (그런 사용법은 항상 그들의 정의에 하이퍼링크 되어 있습니다.)
 
-  바이트 스트림의 경우, <a lt="HTML document">HTML 문서</a>라는 용어는 <a href="#text-html"><code>text/html</code></a>로 
-  라벨링 된 리소스를 지칭하고, <dfn lt="XML document">XML 문서</dfn>라는 용어는 <a lt="XML MIME type">XML MIME 타입</a>으로 
+  바이트 스트림의 경우, <a lt="HTML document">HTML 문서</a>라는 용어는 
+  <a href="#text-html"><code>text/html</code></a>로 라벨링 된 리소스를 지칭하고, 
+  <dfn lt="XML document">XML 문서</dfn>라는 용어는 <a lt="XML MIME type">XML MIME 타입</a>으로 
   라벨링 된 리소스를 지칭합니다.
 
-  <dfn lt="XHTML document|XHTML documents">XHTML 문서</dfn>라는 용어는 상황에 따라, <a lt="HTML namespace">HTML 네임스페이스</a> 
-  내 요소(element) 노드를 포함하는 <a lt="XML document">XML 문서</a> 모드인 <a lt="documents">문서</a>와   
-  <a lt="HTML namespace">HTML 네임스페이스</a>의 요소를 포함하는 <a lt="XML MIME type">XML MIME 타입</a>으로 
-  라벨링 된 바이트 스트림을 지칭하는데 사용됩니다.
+  <dfn lt="XHTML document|XHTML documents">XHTML 문서</dfn>라는 용어는 상황에 따라, 
+  <a lt="HTML namespace">HTML 네임스페이스</a> 내 요소(element) 노드를 포함하는 
+  <a lt="XML document">XML 문서</a> 모드인 <a lt="documents">문서</a>와 <a lt="HTML namespace">HTML 
+  네임스페이스</a>의 요소를 포함하는 <a lt="XML MIME type">XML MIME 타입</a>으로 라벨링 된 바이트 
+  스트림을 지칭하는데 사용됩니다.
 
   <hr />
 
-  간결성을 위해, <dfn>shown</dfn>, <dfn>displayed</dfn>, <dfn>visible</dfn>와 같은 용어들은 (종종) 
-  문서가 사용자에게 렌더링되는 방법을 지칭할 경우 사용됩니다. 이 용어들은 시각적 매체를 의미하는 것이 
-  아닙니다; 동등한 방법으로 다른 매체에도 적용될 수 있도록 고려되어야 합니다.
+  간결성을 위해, <dfn lt="shown">shown</dfn>, <dfn lt="displayed">displayed</dfn>, 
+  <dfn lt="visible">visible</dfn>와 같은 용어들은 (종종) 문서가 사용자에게 렌더링되는 방법을 지칭할 
+  경우 사용됩니다. 이 용어들은 시각적 매체를 의미하는 것이 아닙니다; 동등한 방법으로 다른 매체에도 
+  적용될 수 있도록 고려되어야 합니다.
 
   알고리즘 B가 다른 알고리즘 A로 돌아간다 말하는 경우, A가 B를 호출했음을 의미합니다. A로 돌아가면,
-  구현은 B의 호출에서 멈춘 곳에서부터 계속 진행해야 합니다. 일부 알고리즘은 <dfn lt="in parallel">병렬로</dfn> 
-  수행합니다; 이것은 알고리즘의 다음 단계가 명세 내 다른 로직과 동시에 (예를 들어, <a lt="event loop">이벤트 루프</a>가 
-  동시에) 잇따라서 수행됨을 의미합니다. 이 명세는 다른 하이퍼쓰레드, 코어, CPU, 기계 등을 사용하여 
-  시분할 다중 작업, fibers, 프로세스가 달성되는 정밀한 메커니즘을 정의하지 않습니다. 그와 대조적으로,
-  <dfn lt="immediately">즉시</dfn> 수행하기 위한 작업은 현재 수행 중인 작업을 중단하고 수행해야 하며, 그후 이전에 
-  수행 작업을 재개해야 합니다.
+  구현은 B의 호출에서 멈춘 곳에서부터 계속 진행해야 합니다. 일부 알고리즘은 
+  <dfn lt="in parallel">병렬로</dfn> 수행합니다; 이것은 알고리즘의 다음 단계가 명세 내 다른 로직과 
+  동시에 (예를 들어, <a lt="event loop">이벤트 루프</a>가 동시에) 잇따라서 수행됨을 의미합니다. 이 
+  명세는 다른 하이퍼쓰레드, 코어, CPU, 기계 등을 사용하여 시분할 다중 작업, fibers, 프로세스가 
+  달성되는 정밀한 메커니즘을 정의하지 않습니다. 그와 대조적으로, <dfn lt="immediately">즉시</dfn> 
+  수행하기 위한 작업은 현재 수행 중인 작업을 중단하고 수행해야 하며, 그후 이전에 수행 작업을 
+  재개해야 합니다.
 
   "투명한 검정"이라는 용어는 빨강, 초록, 파랑, 알파 채널이 모두 0으로 설정된 색상을 지칭합니다.
 
 <h4 id="resources">리소스</h4>
 
-  유저 에이전트가 외부 리소스의 의미를 디코딩할 수 있는 구현을 가지는지를 지칭하는 경우 명세는 <dfn lt="supported">지원된다</dfn>라는
-  용어를 사용합니다. 형식(format)이나 유형(type)은 구현이 외부 리소스의 중요한 측면이 무시되지 않고  
-  그 형식(foramt)이나 유형(type)의 리소스를 처리할 수 있다면 <i>지원된다</i>고 불립니다. 특정 리소스가
-  <i>지원되는</i>지 여부는 리소스의 형식이 사용되는 기능에 따라 달라질 수 있습니다.
+  유저 에이전트가 외부 리소스의 의미를 디코딩할 수 있는 구현을 가지는지를 지칭하는 경우 명세는 
+  <dfn lt="supported">지원된다</dfn>라는 용어를 사용합니다. 형식(format)이나 유형(type)은 구현이 
+  외부 리소스의 중요한 측면이 무시되지 않고 그 형식(foramt)이나 유형(type)의 리소스를 처리할 수 
+  있다면 <i>지원된다</i>고 불립니다. 특정 리소스가 <i>지원되는</i>지 여부는 리소스의 형식이 사용되는 
+  기능에 따라 달라질 수 있습니다.
 
   <p class="example">
     예를 들어, PNG 이미지는 구현에 알려지지 않은 이미지가 애니메이션 데이터를 포함하고 있다 하더라도 
@@ -78,108 +85,116 @@
     영상의 크기를 결정할 수 있다하더라도 지원되는 형식(format)으로 간주되지 않을 것입니다.
   </p>
 
-  일부 명세가, 특히 HTTP 명세에서, <i>표현(representation)</i>으로 지칭된 것은 이 명세에서 <dfn for="http" lt="resource">리소스</dfn>로 
-  지칭됩니다. [[!HTTP]]
+  일부 명세가, 특히 HTTP 명세에서, <i>표현(representation)</i>으로 지칭된 것은 이 명세에서 
+  <dfn for="http" lt="resource">리소스</dfn>로 지칭됩니다. [[!HTTP]]
 
-  <dfn lt="mime type|mime types">MIME 타입</dfn> 이라는 용어는 프로토콜 문서에서 종종 <i>인터넷 미디어 타입</i>으로 
-  불리는 것을 지칭하는데 사용됩니다. 이 명세에서 <dfn for="media type|media-type">media 타입</dfn> 
-  이라는 용어는 CSS 명세에 의해 사용된 것 처럼, 표현을 위해 의도된 미디어의 유형을 지칭하는데 사용됩니다.  [[!RFC2046]]
-  [[!MEDIAQ]]
+  <dfn lt="mime type|mime types">MIME 타입</dfn> 이라는 용어는 프로토콜 문서에서 종종 <i>인터넷 
+  미디어 타입</i>으로 불리는 것을 지칭하는데 사용됩니다. 이 명세에서 
+  <dfn for="media type|media-type">media 타입</dfn> 이라는 용어는 CSS 명세에 의해 사용된 것 처럼, 
+  표현을 위해 의도된 미디어의 유형을 지칭하는데 사용됩니다. [[!RFC2046]] [[!MEDIAQ]]
 
-  문자열이 <a><code>media-type</code></a> 규칙과 일치한다면 <dfn lt="valid MIME type">유효한 MIME 타입</dfn>입니다. 
-  특히 <a lt="valid mime type">유효한 MIME 타입</a>은 MIME 타입 파라미터들을 포함할 수 있습니다. [[!HTTP]]
+  문자열이 <a lt="media-type"><code>media-type</code></a> 규칙과 일치한다면 
+  <dfn lt="valid MIME type">유효한 MIME 타입</dfn>입니다. 특히 <a lt="valid mime type">유효한 MIME 
+  타입</a>은 MIME 타입 파라미터들을 포함할 수 있습니다. [[!HTTP]]
 
-  문자열이 <a><code>media-type</code></a> 규칙과 일치하지만, 어떤 U+003B 세미콜론 문자 (;)도 포함하지 
-  않는다면 <dfn for="mime type" lt="valid MIME type with no parameters|valid MIME types with no parameters">파라미터를 가지지 않는 유효한 MIME 타입</dfn>입니다.
+  문자열이 <a lt="media-type"><code>media-type</code></a> 규칙과 일치하지만, 어떤 U+003B 세미콜론 
+  문자 (;)도 포함하지 않는다면 <dfn for="mime type" lt="valid MIME type with no parameters|valid MIME types with no parameters">파라미터를 가지지 않는 유효한 MIME 타입</dfn>입니다.
   다시 말해, 그것이 MIME 타입 파라미터 없이 오로지 타입과 서브 타입으로만 구성된다면. [[!HTTP]]
 
-  <dfn lt="HTML MIME type">HTML MIME 타입</dfn> 이라는 용어는 <a lt="MIME type">MIME 타입</a> <a href="#text-html"><code>text/html</code></a>를 
-  지칭하는데 사용됩니다.
+  <dfn lt="HTML MIME type">HTML MIME 타입</dfn> 이라는 용어는 <a lt="MIME type">MIME 타입</a> 
+  <a href="#text-html"><code>text/html</code></a>를 지칭하는데 사용됩니다.
 
   리소스의 <dfn lt="critical subresource|critical subresources">중요한 하위 리소스</dfn>들은 완전히 
   처리되기 위해 사용 가능(available)해야 하는 것이 필요한 리소스 입니다. 어떤 자원이 중요한 것으로 
   간주되거나 그렇지 않은 지는 리소스의 형식(format)을 정의하는 명세에 의해 정의됩니다. 
 
-  <a scheme lt="data:"><code>data:</code> URL</a>이라는 용어는 <a scheme><code>data:</code></a> 스킴을  <a for="url">URLs</a> 
-  사용하는 <a for="url">URL</a>들을 지칭합니다. [[!RFC2397]]
+  <a scheme lt="data:"><code>data:</code> URL</a>이라는 용어는 <a scheme lt="data:"><code>data:</code></a> 
+  스킴을  <a for="url">URLs</a> 사용하는 <a for="url">URL</a>들을 지칭합니다. [[!RFC2397]]
 
 <h4 id="xml">XML</h4>
 
   HTML에서 XHTML로 쉽게 마이그레이션 하기 위해, 이 명세를 따르는 유저 에이전트는 적어도 DOM과 CSS의 
-  용도를 위해 <code>https://www.w3.org/1999/xhtml</code> 네임스페이스의 HTML에 요소(element)들을 위치시킬 
-  것입니다. "<dfn lt="html element|html elements">HTML 요소</dfn>"라는 용어는 이 명세에서 사용될 경우, 
-  그 네임스페이스의 요소를 지칭하고, 따라서 HTML과 XHTML 요소들 모두를 지칭합니다.
+  용도를 위해 <code>https://www.w3.org/1999/xhtml</code> 네임스페이스의 HTML에 요소(element)들을 
+  위치시킬 것입니다. "<dfn lt="html element|html elements">HTML 요소</dfn>"라는 용어는 이 명세에서 
+  사용될 경우, 그 네임스페이스의 요소를 지칭하고, 따라서 HTML과 XHTML 요소들 모두를 지칭합니다.
 
-  달리 명시된 것을 제외하고, 이 명세에 정의되거나 언급된 모든 요소(element)들은 <a lt="HTML namespace">HTML 네임스페이스</a> 
-  ("<code>https://www.w3.org/1999/xhtml</code>")에 있고, 이 명세에 정의되거나 언급된 모든 속성(attribute)들은 
-  네임스페이스를 가지지 않습니다.
+  달리 명시된 것을 제외하고, 이 명세에 정의되거나 언급된 모든 요소(element)들은 
+  <a lt="HTML namespace">HTML 네임스페이스</a> ("<code>https://www.w3.org/1999/xhtml</code>")에 있고, 
+  이 명세에 정의되거나 언급된 모든 속성(attribute)들은 네임스페이스를 가지지 않습니다.
 
   <dfn lt="element type">요소(element) 유형</dfn>은 주어진 로컬 이름과 네임스페이스를 가진 요소들의 
   세트를 지칭하는데 사용됩니다. 예를 들어, <{button}> 요소(element)는 로컬 이름 "<{button}>"과 (위에 
   정의된 대로 암묵적으로) <a lt="HTML namespace">HTML 네임스페이스</a>를 가지는 것을 의미하는, 요소 
   유형을 가진 요소(element)입니다. 
 
-  속성(attirbute) 이름은 XML에 정의된 <a for="XML"><code>Name</code></a> 생성과 일치하고 U+003A 콜론 
-  문자(:)를 포함하지 않는다면 <dfn for="xml-compatible">XML 호환 가능</dfn>하다 불립니다. [[!XML]]
+  속성(attirbute) 이름은 XML에 정의된 <a for="XML" lt="Name"><code>Name</code></a> 생성과 일치하고 
+  U+003A 콜론 문자(:)를 포함하지 않는다면 <dfn for="xml-compatible" lt="xml-compatible">XML 호환 
+  가능</dfn>하다 불립니다. [[!XML]]
 
-  <dfn>XML MIME 타입</dfn>이라는 용어는 <a lt="MIME types">MIME 타입</a> <code>text/xml</code>, <code>application/xml</code>, 
-  서브 타입이 4개 문자 "<code>+xml</code>"로 끝나는 <a lt="MIME type">MIME 타입</a>을 지칭하는데 
-  사용됩니다. [[!RFC7303]]
+  <dfn lt="XML MIME type">XML MIME 타입</dfn>이라는 용어는 <a lt="MIME types">MIME 타입</a> 
+  <code>text/xml</code>, <code>application/xml</code>, 서브 타입이 4개 문자 "<code>+xml</code>"로 
+  끝나는 <a lt="MIME type">MIME 타입</a>을 지칭하는데 사용됩니다. [[!RFC7303]]
 
-<h4 id="dom-trees">DOM trees</h4>
+<h4 id="dom-trees">DOM 트리</h4>
 
-  The <dfn for="document">root element of a {{Document}} object</dfn> is that {{Document}}'s
-  first element child, if any. If it does not have one then the {{Document}} has no root
-  element.
+  <dfn for="document" lt="root element of a document object">{{Document}} 객체의 루트 
+  요소(element)</dfn>는 그 {{Document}}의 첫 번째 자식이 있다면 그것입니다. 첫 번째 자식이 없다면 
+  {{Document}}는 루트 요소(element)가 없습니다.
 
-  The term <dfn lt="root element|root elements">root element</dfn>, when not referring to a {{Document}} object's root
-  element, means the furthest ancestor element node of whatever node is being discussed, or the node
-  itself if it has no ancestors. When the node is a part of the document, then the node's
-  <a>root element</a> is indeed the document's root element; however, if the node is not currently
-  part of the document tree, the root element will be an orphaned node.
+  <dfn lt="root element|root elements">루트 요소(element)</dfn>라는 용어는, {{Document}} 객체의 루트 
+  요소(element)를 지칭하지 않는 경우, 검토되는 노드의 가장 먼 조상 요소(element) 노드나 조상 노드가 
+  없다면 자기 자신을 의미합니다.노드가 문서의 일부인 경우, 노드의 
+  <a lt="root element">요소(element)</a>는 확실히 문서의 루트 요소(element)입니다; 하지만, 노드가 
+  현재 문서 트리의 일부가 아니라면, 루트 요소(element)는 부모가 없는 노드일 것입니다.
 
-  When an element's <a>root element</a> is the <a>root element of a <code>Document</code> object</a>,
-  it is said to be <dfn lt="in the document|in a document">in a {{Document}}</dfn>. An element is said to have been
-  <dfn for="document" lt="inserted into the document|inserted into a document|inserted into">inserted into a document</dfn> when its <a>root element</a> changes and is now the document's
-  <a>root element</a>. Analogously, an element is said to have been
-  <dfn for="document" lt="removed from a document|removed from">removed from a document</dfn> when its <a>root element</a> changes from being the document's
-  <a>root element</a> to being another element.
+  요소(element)의 <a lt="root element">루트 요소(element)</a>가 
+  <a lt="root element of a document object"><code>Document</code> 객체의 루트 요소(element)</a>인 
+  경우, 이 요소(element)는 <dfn lt="in the document|in a document">{{Document}} 안에</dfn> 있다고 
+  불립니다. 요소(element)는 그것의 <a lt="root element">루트 요소(element)</a>가 변경되고 그 
+  요소(element)가 이제 문서의 <a lt="root element">루트 요소(element)</a>인 경우, 
+  <dfn for="document" lt="inserted into the document|inserted into a document|inserted into">문서에 
+  삽입</dfn> 되었다고 불립니다. 비슷하게, 요소(element)는 그것의 <a lt="root element">루트 
+  요소(element)</a>가 문서의  <a lt="root element">루트 요소(element)</a>에서 다른 요소(element)로 
+  변경되는 경우 <dfn for="document" lt="removed from a document|removed from">문서에서 제거</dfn> 
+  되었다고 불립니다.
 
-  A node's <dfn lt="home subtree|home subtrees">home subtree</dfn> is the subtree rooted at that node's <a>root element</a>. When a
-  node is <a>in a <code>Document</code></a>, its <a>home subtree</a> is that {{Document}}'s tree.
+  노드의 <dfn lt="home subtree|home subtrees">홈 서브트리</dfn>가 그 노드의 
+  <a lt="root element">루트 요소(element)</a>에 루트를 둔 서브트리입니다. 노드가 
+  <a lt="in a Document"><code>Document</code>안에</a> 있는 경우, 그것의 <a lt="home subtree">홈 
+  서브트리</a>는 그 {{Document}}의 트리입니다.
 
-  The {{Document}} of a {{Node}} (such as an element) is the {{Document}}
-  that the {{Node}}'s {{Node/ownerDocument}} IDL attribute returns. When a
-  {{Node}} is <a>in a <code>Document</code></a> then that {{Document}} is
-  always the {{Node}}'s {{Document}}, and the {{Node}}'s
-  {{Node/ownerDocument}} IDL attribute thus always returns that {{Document}}.
+  {{Node}}(요소(element) 같은)의 {{Document}}는 {{Node}}의 {{Node/ownerDocument}} IDL 
+  속성(attribute)이 반환하는 {{Document}} 입니다. {{Node}}가 
+  <a lt="in a Document"><code>Document</code> 안에</a> 있는 경우 그 {{Document}}는 항상 {{Node}}의 
+  {{Document}}이고, {{Node}}의 {{Node/ownerDocument}} IDL 속성(attribute)은 따라서 
+  항상 {{Document}}를 반환합니다.
 
-  The {{Document}} of a content attribute is the {{Document}} of the attribute's
-  element.
+  콘텐트 속성(attribute)의 {{Document}}는 속성(attirbute)의 요소(element)의 {{Document}}입니다.
 
-  The term <dfn>tree order</dfn> means a pre-order, depth-first traversal of DOM nodes involved
-  (through the {{Node/parentNode}}/{{Node/childNodes}} relationship).
+  <dfn lt="tree order">트리 순서</dfn>라는 용어는 ({{Node/parentNode}}/{{Node/childNodes}} 관계를 
+  통해) 수반된 DOM 노드의 전위 순회, 깊이 우선 탐색을 의미합니다.
 
-  When it is stated that some element or attribute is <dfn>ignored</dfn>, or treated as some other
-  value, or handled as if it was something else, this refers only to the processing of the node
-  after it is in the DOM. A user agent must not mutate the DOM in such situations.
+  어떤 요소(element)나 속성(attribute)이 <dfn lt="ignored">무시</dfn>되거나, 어떤 다른 값으로 
+  취급되거나, 마치 또 다른 것처럼 처리되는 것으로 명시되는 경우, 이것은 노드가 DOM 안에 위치된 이후 
+  처리되는 것을 지칭합니다.
 
-  A content attribute is said to <dfn>change</dfn> value only if its new value is different than its
-  previous value; setting an attribute to a value it already has does not change it.
+  콘텐트 속성(attribute)는 그것의 새로운 값이 이전 값과 다를 경우에 한해 값을 
+  <dfn lt="change">바꾼다</dfn>라고 불립니다; 이미 가지고 있던 값으로 속성을 설정하는 것은 바꾸는 
+  것이 아닙니다.
 
-  When an attribute value, {{Text}} node, or string is described as <dfn>empty</dfn>, it means that the length of the text is zero (i.e., not even containing spaces or
-  <a>control characters</a>).
+  {{Text}} 노드, 문자열 속성 값이 <dfn lt="empty">비어있음</dfn>으로 기술되는 경우, 그것은 텍스트의 
+  길이가 0임을 의미합니다. (즉, 공백이나 <a lt="control characters">제어 문자</a>조차도 아닙니다).
 
-  An element's <dfn>child text content</dfn> is the concatenation of the <a>data</a> of all the
-  {{Text}} nodes that are children of the element (ignoring any other nodes such as comments or
-  elements), in <a>tree order</a>.
+  요소(element)의 <dfn lt="child text content">자식 텍스트 콘텐트</dfn>는 <a lt="tree order">tree 
+  order</a>에서 요소(element)의 자식(주석이나 요소(element)같은 다른 노드는 제외하고)인 모든 
+  {{Text}} 노드의 <a lt="data">data</a>의 연결입니다.
 
-  A <a for="Node" lt="insert">node <var>A</var> is
-  inserted</a> into a node <var>B</var> when the
-  <a>insertion steps</a> are invoked with <var>A</var> as the argument and <var>A</var>'s new parent
-  is <var>B</var>. Similarly, a <dfn>node <var>A</var> is removed</dfn> from a node <var>B</var>
-  when the <a>removing steps</a> are invoked with <var>A</var> as the <var>removedNode</var>
-  argument and <var>B</var> as the <var>oldParent</var> argument.
+  <a lt="insertion steps">삽입 단계</a>가 인자로 <var>A</var>를 가지고 작동되고 
+  <var>A</var>의 새로운 부모가 <var>B</var>인 경우 노드 <var>B</var>에 
+  <a for="Node" lt="insert">노드 <var>A</var>가 삽입</a>됩니다. 비슷하게, <var>removedNode</var> 
+  인자로 <var>A</var>와 <var>oldParent</var> 인자로 <var>B</var>를 가지고 
+  <a lt="removing steps">제거 단계</a>가 작동되는 경우 노드 <var>B</var>로부터 
+  <dfn for="Node" lt="node A is removed">노드 <var>A</var>가 제거</dfn> 됩니다.
 
 <h4 id="scripting">Scripting</h4>
 
