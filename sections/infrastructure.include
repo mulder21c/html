@@ -265,67 +265,74 @@
   <a lt="plugins">플러그인</a> 세트를 지원하도록 권장 됩니다.
   <a class="fingerprint" href="#fingerprinting-vector"><img height="21" src="images/fingerprint.png" width="15" alt="(이것은 지문 그림입니다.)" /></a>
 
-<h4 id="encoding-terminology">Character encodings</h4>
+<h4 id="encoding-terminology">문자 인코딩</h4>
 
-  A <dfn>character encoding</dfn>, or just
-  <i>encoding</i> where that is not ambiguous, is a defined way to convert between byte streams and
-  Unicode strings, as defined in the WHATWG Encoding standard. An <a>encoding</a> has an
-  <dfn>encoding name</dfn> and one or more <dfn>encoding labels</dfn>, referred to as the
-  encoding's <i>name</i> and <i>labels</i> in the Encoding standard. [[!ENCODING]]
+  <dfn lt="character encoding">문자 인코딩</dfn>, 혹은 애매모호하지 않은 <i>인코딩</i>은 WHATWG 
+  인코딩 표준에 정의된 대로, 바이트 스트림과 유니코드 문자열 사이를 전환하기 위한 정의된 방법입니다.
+  <a lt="encoding">인코딩</a>은, 인코딩 표준에 인코딩의 <i>이름</i>과 <i>라벨</i>로 지칭된, 
+  <dfn lt="encoding name">인코딩 이름</dfn>이나 하나 이상의 
+  <dfn lt="encoding labels">인코딩 라벨</dfn>을 가집니다. [[!ENCODING]]
 
-  A <dfn>UTF-16 encoding</dfn> is <a>UTF-16BE</a> or <a>UTF-16LE</a>. [[!ENCODING]]
+  <dfn lt="UTF-16 encoding">UTF-16 인코딩</dfn>은 <a lt="UTF-16BE">UTF-16BE</a>나 <a lt="UTF-16LE">UTF-16LE</a>입니다. [[!ENCODING]]
 
-  An <dfn>ASCII-compatible encoding</dfn> is any <a>encoding</a> that is not a
-  <a>UTF-16 encoding</a>. [[!ENCODING]]
-
-  <p class="note">
-    Since support for encodings that are not defined in the WHATWG Encoding standard is prohibited,
-    <a>UTF-16 encodings</a> are the only encodings that this specification needs to treat as not
-    being <a>ASCII-compatible encodings</a>.
-  </p>
-
-  The term <dfn>code unit</dfn> is used as defined in the Web IDL specification: a 16 bit unsigned
-  integer, the smallest atomic component of a <code>DOMString</code>. (This is a narrower definition
-  than the one used in Unicode, and is not the same as a <i>code point</i>.) [[!WEBIDL]]
-
-  The term <dfn>Unicode code point</dfn> means a <i>Unicode scalar value</i> where possible, and an
-  isolated surrogate code point when not. When a conformance requirement is defined in terms of
-  characters or Unicode code points, a pair of <a>code units</a> consisting of a high surrogate
-  followed by a low surrogate must be treated as the single code point represented by the surrogate
-  pair, but isolated surrogates must each be treated as the single code point with the value of the
-  surrogate. [[!UNICODE]]
-
-  In this specification, the term <dfn>character</dfn>, when not qualified as <em>Unicode</em>
-  character, is synonymous with the term <a>Unicode code point</a>.
-
-  The term <dfn>Unicode character</dfn> is used to mean a <i>Unicode scalar value</i> (i.e. any
-  Unicode code point that is not a surrogate code point). [[!UNICODE]]
-
-  The <dfn>code-unit length</dfn> of a string is the number of <a>code units</a> in that string.
+  <dfn lt="ASCII-compatible encoding">ASCII 호환 인코딩</dfn>은 <a lt="UTF-16 encoding">UTF-16 인코딩</a>이 
+  아닌 모든 <a lt="encoding">인코딩</a>입니다. [[!ENCODING]]
 
   <p class="note">
-    This complexity results from the historical decision to define the DOM API in terms of 16 bit
-    (UTF-16) <a>code units</a>, rather than in terms of <a>Unicode characters</a>.
+    WHATWG 인코딩 표준에 정의되지 않은 인코딩에 대한 지원은 금지되어 있기 때문에, 
+    <a lt="UTF-16 encodings">UTF-16 인코딩</a>은 이 명세가 <a lt="ASCII-compatible encoding">ASCII 
+    호환 인코딩</a>이 되지 않는 것으로 처리할 필요가 있는 유일한 인코딩입니다.
   </p>
 
-<h3 id="conformance-requirements">Conformance requirements</h3>
+  <dfn>코드 단위</dfn>이라는 용어는웹 IDL 명세에 정의된 대로 사용됩니다: <code>DOMString</code>의 
+  가장 작은 최소 구성 요소인 16비트 무부호 정수입니다. (이것은 유니코드에 사용된 것 보다 좁은 정의이고
+  <i>code point</i>와 동일하지 않습니다.) [[!WEBIDL]]
 
-  All diagrams, examples, and notes in this specification are non-normative, as are all sections
-  explicitly marked non-normative. Everything else in this specification is normative.
+  <dfn lt="code unit|code units">유니코드 코드 포인트</dfn>라는 용어는 그것이 가능한 경우 <i>유니코드 스칼라 값</i>을 의미하고,
+  불가능한 경우 독자적인 대용 코드 포인트(isolated surrogate code point)를 의미합니다. 적합성
+  요구사항이 이 문자나 유니코드 코드 포인트 용어로 정의되는 경우, 낮은 대용 코드가 뒤따르는 높은 대용 
+  코드로 구성되는 한 쌍의 <a lt="code units">코드 단위</a>는 대용 코드쌍으로 나타나는 단일 코드 
+  포인트로 취급되어야 하지만, 독자적인 대용 코드는 각각 대용 코드의 값을 가지고 단일 코드로 취급
+  되어야 합니다. [[!UNICODE]]
 
-  The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT",
-  "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in the normative parts of this document
-  are to be interpreted as described in RFC2119. The key word "OPTIONALLY" in the normative parts of
-  this document is to be interpreted with the same normative meaning as "MAY" and "OPTIONAL". For
-  readability, these words do not appear in all uppercase letters in this specification.
-  [[!RFC2119]]
+  이 명세에서, <dfn lt="character|characters">문자</dfn>라는 용어는, <em>유니코드</em> 문자로서 자격이 없는 경우, 
+  <a lt="Unicode code point">유니코드 코드 포인트</a> 용어와 같은 것을 의미합니다.
 
-  Requirements phrased in the imperative as part of algorithms (such as "strip any leading space
-  characters" or "return false and abort these steps") are to be interpreted with the meaning of
-  the key word ("must", "should", "may", etc) used in introducing the algorithm.
+  <dfn lt="Unicode character|Unicode characters">유니코드 문자</dfn>는 <i>유니코드 스칼라 값</i>을 
+  의미하는데 사용됩니다.(즉, 독자적인 코드 포인트가 아닌 모든 유니코드 코드 포인트) [[!UNICODE]]
+
+  문자열의 <dfn lt="code-unit length">코드 단위 길이</dfn>는 그 문자열의 <a lt="code units">코드 
+  단위</a>들의 갯수입니다.
+
+  <p class="note">
+    이 복잡성은 <a lt="Unicode characters">유니코드 문자</a>의 용어에서 보다 16비트(UTF-8) 
+    <a lt="code units">코드 단위</a>(UTF-16)의 용어에서 DOM API를 정의하기 위한 역사적인 결정이 
+    원인입니다. 
+  </p>
+
+<h3 id="conformance-requirements">적합성 요구사항</h3>
+
+  이 명세의 모든 다이어그램, 예제, 주석은 모든 섹션에 비범적이라고 명시적으로 표시된 것 처럼 
+  비규범적입니다. 이 명세에서 다른 모든 것들은 규범적입니다.
+
+  이 문서의 규범적 부분에 있는 "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", 
+  "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", "OPTIONAL" 키워드들은 RFC2119에 설명된 대로
+  해석되어야 합니다. 이 문서의 규범적인 부분에 있는 "OPTIONALLY" 키워드는 "MAY"와 "OPTIONAL"처럼 
+  동일한 규범적 의미로 해석되어야 합니다. 가독성을 위해, 이 단어들은 이 섹션에서 모두 대문자로
+  나타내지는 않습니다. [[!RFC2119]]
+  
+  <p class="author-note">
+    본 번역본에서는 가급적 위 표기들을 한글과 함께 영문을 괄호 안에 표기하려 하고 있으나, 깜박하고
+    놓치고 지나갈 수 있기 때문에 가급적 위 키워드와 관련된 한글 표현에 대해서는 영문으로 된 원문과
+    비교하여 보시기를 권합니다.
+  </p>
+
+  알고리즘의 일부분으로 명령조로 표현된 요구사항들은("선두의 모든 공백 문자를 제거"나 "false를 
+  반환하고 이 단계들을 중단" 같은) 알고리즘 도입에 사용되는 키워드("must", "should", "may", 등등)의 
+  의미로 해석되어야 합니다.
 
   <div class="example">
-    For example, were the spec to say:
+    예를 들어, 다음과 같은 명세가 있었다면:
 
     <pre>
       To eat an orange, the user must:
@@ -334,7 +341,7 @@
       3. Eat the orange slices.
     </pre>
 
-    ...it would be equivalent to the following:
+    ...이것은 다음과 동등할 것입니다:
 
     <pre>
       To eat an orange:
@@ -343,15 +350,14 @@
       3. The user must eat the orange slices.
     </pre>
 
-    Here the key word is "must".
+    여기서 키워드는 "must"입니다.
 
-    The former (imperative) style is generally preferred in this specification for stylistic
-    reasons.
+    전자의(명령조) 방식은 일반적으로 문제상의 이유로 이 명세에서 선호됩니다.
   </div>
 
-  Conformance requirements phrased as algorithms or specific steps may be implemented in any
-  manner, so long as the end result is equivalent. (In particular, the algorithms defined in this
-  specification are intended to be easy to follow, and not intended to be performant.)
+  알고리즘이나 구체적인 단계들로 표현된 적합성 요구사항은 최종 결과가 동등한 것이기만 하면 임의의 
+  방법으로 구현될 수 있습니다. (특히, 이 명세에 정의된 알고리즘은 쉽게 따라할 수 있도록 의도된 것이고,
+  고성능이 되도록 의도된 것이 아닙니다.)
 
 <h4 id="conformance-classes">Conformance classes</h4>
 
