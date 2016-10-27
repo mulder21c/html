@@ -334,3 +334,22 @@ table.definition-table td.footnote::before {
   width: 4em;
   border-top: thin solid;
 }
+
+.translator-note{
+	position:relative;
+	background-color:#fafafa;
+	margin-left:1em;
+	padding:1.5em 1em 1em;
+	border:1px dashed #ddd;
+	color:#607080
+}
+.translator-note:before{
+	position:absolute;
+	content:'역자의 주';
+	display:block;
+	top:-1px;
+	left:-1px;
+	border:1px solid #888;
+	background-color:#fff;
+	padding:0 .5em;
+}

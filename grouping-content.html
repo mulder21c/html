@@ -2609,7 +2609,7 @@ included with Exhibit B.
       </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-56">Flow content</a>.
       </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-17">Palpable content</a>.
       </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-29">Contexts in which this element can be used</a>:
-      </dt><dd>Where <a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-57">flow content</a> is expected.
+      </dt><dd>Where <a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-57">flow content</a> is expected, but with no <code><a data-link-type="element" href="sections.html#elementdef-article" id="ref-for-elementdef-article-34">article</a></code>, <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-16">aside</a></code>, <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-24">footer</a></code>, <code><a data-link-type="element" href="sections.html#elementdef-header" id="ref-for-elementdef-header-23">header</a></code> or <code><a data-link-type="element" href="sections.html#elementdef-nav" id="ref-for-elementdef-nav-18">nav</a></code> element ancestors.
       </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-32">Content model</a>:
       </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-58">Flow content</a>.
       </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-29">Tag omission in text/html</a>:
@@ -2624,13 +2624,13 @@ included with Exhibit B.
       </dd><dt><a data-link-type="dfn" href="dom.html#dom-interface" id="ref-for-dom-interface-29">DOM interface</a>:
       </dt><dd>Uses <code>HTMLElement</code>
      </dd></dl>
-     <p>The <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-11">main</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-34">represents</a> the main content of the body of a document or application.</p>
+     <p>The <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-11">main</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-34">represents</a> the main content of the &lt;{body]&gt; of a document or application.</p>
      <p class="note" role="note"> The <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-12">main</a></code> element is not <a data-link-type="dfn" href="dom.html#sectioning-content" id="ref-for-sectioning-content-39">sectioning content</a> and has no effect on the document <a data-link-type="dfn" href="sections.html#outline" id="ref-for-outline-23">outline</a> </p>
       The main content area of a document includes content that is unique to that document and excludes
   content that is repeated  across a set of documents such as site navigation links, copyright
   information, site logos and banners and search forms (unless the document or application’s main
   function is that of a search form). 
-     <p>Authors must not include the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-13">main</a></code> element as a descendant of an <code><a data-link-type="element" href="sections.html#elementdef-article" id="ref-for-elementdef-article-34">article</a></code>, <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-16">aside</a></code>, <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-24">footer</a></code>, <code>header</code> or <code><a data-link-type="element" href="sections.html#elementdef-nav" id="ref-for-elementdef-nav-18">nav</a></code> element.</p>
+     <p>Authors must not include the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-13">main</a></code> element as a descendant of an <code><a data-link-type="element" href="sections.html#elementdef-article" id="ref-for-elementdef-article-35">article</a></code>, <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-17">aside</a></code>, <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-25">footer</a></code>, <code>header</code> or <code><a data-link-type="element" href="sections.html#elementdef-nav" id="ref-for-elementdef-nav-19">nav</a></code> element.</p>
      <p class="note" role="note"> The <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-14">main</a></code> element is not suitable for use to identify the main content areas of sub
     sections of a document or application. The simplest solution is to not mark up the main content
     of a sub section at all, and just leave it as implicit, but an author could use a <a href="grouping-content.html#grouping-content">§4.4 Grouping content</a> or <a data-link-type="dfn" href="dom.html#sectioning-content" id="ref-for-sectioning-content-40">sectioning content</a> element as appropriate. </p>
@@ -2667,7 +2667,7 @@ included with Exhibit B.
 <span class="c">&lt;!--</span><span class="c"> other content </span><span class="c">--&gt;</span>
 </pre>
      </div>
-     <p>Here is a graduation programme the main content section is defined by the use of the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-16">main</a></code> element. Note in this example the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-17">main</a></code> element contains a <code><a data-link-type="element" href="sections.html#elementdef-nav" id="ref-for-elementdef-nav-19">nav</a></code> element consisting of links to sub sections of the main content.</p>
+     <p>Here is a graduation programme the main content section is defined by the use of the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-16">main</a></code> element. Note in this example the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-17">main</a></code> element contains a <code><a data-link-type="element" href="sections.html#elementdef-nav" id="ref-for-elementdef-nav-20">nav</a></code> element consisting of links to sub sections of the main content.</p>
      <div class="example" id="example-d638f6dc">
       <a class="self-link" href="grouping-content.html#example-d638f6dc"></a> 
 <pre class="highlight"><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -2732,7 +2732,7 @@ included with Exhibit B.
 </pre>
      </div>
      <p></p>
-     <p>In the next example, both the <code><a data-link-type="element" href="sections.html#elementdef-header" id="ref-for-elementdef-header-23">header</a></code> and the <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-25">footer</a></code> are outside the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-18">main</a></code> element
+     <p>In the next example, both the <code><a data-link-type="element" href="sections.html#elementdef-header" id="ref-for-elementdef-header-24">header</a></code> and the <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-26">footer</a></code> are outside the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-18">main</a></code> element
   because they are generic to the website and not specific to <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-19">main</a></code>'s content.</p>
      <div class="example" id="example-ea065aaa">
       <a class="self-link" href="grouping-content.html#example-ea065aaa"></a> 
@@ -2766,10 +2766,10 @@ included with Exhibit B.
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <p>Here, the same generic <code><a data-link-type="element" href="sections.html#elementdef-header" id="ref-for-elementdef-header-24">header</a></code> and <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-26">footer</a></code> elements remain outside <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-20">main</a></code>, but there
-  is an additional <code><a data-link-type="element" href="sections.html#elementdef-header" id="ref-for-elementdef-header-25">header</a></code> element within the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-21">main</a></code> element as its content is relevant to
+     <p>Here, the same generic <code><a data-link-type="element" href="sections.html#elementdef-header" id="ref-for-elementdef-header-25">header</a></code> and <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-27">footer</a></code> elements remain outside <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-20">main</a></code>, but there
+  is an additional <code><a data-link-type="element" href="sections.html#elementdef-header" id="ref-for-elementdef-header-26">header</a></code> element within the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-21">main</a></code> element as its content is relevant to
   the content within <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-22">main</a></code> because it contains a relevant heading and in-page navigation.
-  The in-page navigation is repeated within a <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-27">footer</a></code> which is again within the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-23">main</a></code> element.</p>
+  The in-page navigation is repeated within a <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-28">footer</a></code> which is again within the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-23">main</a></code> element.</p>
      <div class="example" id="example-6d680107">
       <a class="self-link" href="grouping-content.html#example-6d680107"></a> 
 <pre class="highlight"><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -2834,8 +2834,8 @@ included with Exhibit B.
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <p>This example is largely the same as the previous one except that it includes an <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-17">aside</a></code>.
-  The content of the <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-18">aside</a></code> is considered to be relevant to the content within the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-24">main</a></code> element, which is all about the Border Terrier, so the <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-19">aside</a></code> is placed within the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-25">main</a></code> element.</p>
+     <p>This example is largely the same as the previous one except that it includes an <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-18">aside</a></code>.
+  The content of the <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-19">aside</a></code> is considered to be relevant to the content within the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-24">main</a></code> element, which is all about the Border Terrier, so the <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-20">aside</a></code> is placed within the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-25">main</a></code> element.</p>
      <div class="example" id="example-4badd704">
       <a class="self-link" href="grouping-content.html#example-4badd704"></a> 
 <pre class="highlight"><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -2905,8 +2905,8 @@ included with Exhibit B.
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <p>In the following example, two <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-20">aside</a></code> elements containg adverts have been placed outside
-  the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-26">main</a></code> element as their content is not specific to the content within <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-27">main</a></code>. These <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-21">aside</a></code>s could be on any page, as they are as generic as the <code><a data-link-type="element" href="sections.html#elementdef-header" id="ref-for-elementdef-header-26">header</a></code> and <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-28">footer</a></code> shown.</p>
+     <p>In the following example, two <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-21">aside</a></code> elements containg adverts have been placed outside
+  the <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-26">main</a></code> element as their content is not specific to the content within <code><a data-link-type="element" href="grouping-content.html#elementdef-main" id="ref-for-elementdef-main-27">main</a></code>. These <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-22">aside</a></code>s could be on any page, as they are as generic as the <code><a data-link-type="element" href="sections.html#elementdef-header" id="ref-for-elementdef-header-27">header</a></code> and <code><a data-link-type="element" href="sections.html#elementdef-footer" id="ref-for-elementdef-footer-29">footer</a></code> shown.</p>
      <div class="example" id="example-e0603ea0">
       <a class="self-link" href="grouping-content.html#example-e0603ea0"></a> 
 <pre class="highlight"><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -2978,7 +2978,7 @@ included with Exhibit B.
     resort, for when no other element is suitable. Use of more appropriate elements instead of the <code><a data-link-type="element" href="grouping-content.html#elementdef-div" id="ref-for-elementdef-div-16">div</a></code> element leads to better accessibility for readers and easier maintainability
     for authors. </p>
      <div class="example" id="example-eceec2a4">
-      <a class="self-link" href="grouping-content.html#example-eceec2a4"></a> For example, a blog post would be marked up using <code><a data-link-type="element" href="sections.html#elementdef-article" id="ref-for-elementdef-article-35">article</a></code>, a chapter using <code><a data-link-type="element" href="sections.html#elementdef-section" id="ref-for-elementdef-section-21">section</a></code>, a page’s navigation aids using <code><a data-link-type="element" href="sections.html#elementdef-nav" id="ref-for-elementdef-nav-20">nav</a></code>, and a group of form
+      <a class="self-link" href="grouping-content.html#example-eceec2a4"></a> For example, a blog post would be marked up using <code><a data-link-type="element" href="sections.html#elementdef-article" id="ref-for-elementdef-article-36">article</a></code>, a chapter using <code><a data-link-type="element" href="sections.html#elementdef-section" id="ref-for-elementdef-section-21">section</a></code>, a page’s navigation aids using <code><a data-link-type="element" href="sections.html#elementdef-nav" id="ref-for-elementdef-nav-21">nav</a></code>, and a group of form
     controls using <code><a data-link-type="element" href="sec-forms.html#elementdef-fieldset" id="ref-for-elementdef-fieldset-5">fieldset</a></code>. 
       <p>On the other hand, <code><a data-link-type="element" href="grouping-content.html#elementdef-div" id="ref-for-elementdef-div-17">div</a></code> elements can be useful for stylistic purposes or to wrap
     multiple paragraphs within a section that are all to be annotated in a similar way. In the
@@ -3033,7 +3033,7 @@ included with Exhibit B.
    <ul>
     <li><a href="introduction.html#ref-for-fingerprinting-vector-1">1.8. 개인 정보 보호</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-2">2.1.5. Plugin 콘텐트 처리기</a>
-    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-3">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-3">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-4">2.6.2. Processing model</a>
     </li><li><a href="dom.html#ref-for-fingerprinting-vector-5">3.1.2. Resource metadata management</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fingerprinting-vector-6">4.7.14.6. Offsets into the media resource</a>
@@ -3211,7 +3211,7 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="html-mime-type">
    <b><a href="infrastructure.html#html-mime-type">#html-mime-type</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-mime-type-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-html-mime-type-1">2.2.1. 적합성 종류</a>
     </li><li><a href="browsers.html#ref-for-html-mime-type-2">6.7.1. Navigating across documents</a>
     </li><li><a href="browsers.html#ref-for-html-mime-type-3">6.7.9. Navigating to a fragment identifier</a>
     </li><li><a href="syntax.html#ref-for-html-mime-type-4">8. The HTML syntax</a>
@@ -3640,7 +3640,7 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="utf-16-encoding">
    <b><a href="infrastructure.html#utf-16-encoding">#utf-16-encoding</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-16-encoding-1">2.1.6. Character encodings</a> <a href="infrastructure.html#ref-for-utf-16-encoding-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-utf-16-encoding-1">2.1.6. 문자 인코딩</a> <a href="infrastructure.html#ref-for-utf-16-encoding-2">(2)</a>
     </li><li><a href="syntax.html#ref-for-utf-16-encoding-3">8.2.2.2. Determining the character encoding</a>
     </li><li><a href="syntax.html#ref-for-utf-16-encoding-4">8.2.2.4. Changing the encoding while parsing</a> <a href="syntax.html#ref-for-utf-16-encoding-5">(2)</a>
    </li></ul>
@@ -3648,7 +3648,7 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="ascii-compatible-encoding">
    <b><a href="infrastructure.html#ascii-compatible-encoding">#ascii-compatible-encoding</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-ascii-compatible-encoding-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-ascii-compatible-encoding-1">2.1.6. 문자 인코딩</a>
     </li><li><a href="document-metadata.html#ref-for-ascii-compatible-encoding-2">4.2.5.5. Specifying the document’s character encoding</a> <a href="document-metadata.html#ref-for-ascii-compatible-encoding-3">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-ascii-compatible-encoding-4">4.10.3. The form element</a>
     </li><li><a href="sec-forms.html#ref-for-ascii-compatible-encoding-5">4.10.22.7. Multipart form data</a>
@@ -3659,13 +3659,13 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="code-unit">
    <b><a href="infrastructure.html#code-unit">#code-unit</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-code-unit-1">2.1.6. Character encodings</a> <a href="infrastructure.html#ref-for-code-unit-2">(2)</a> <a href="infrastructure.html#ref-for-code-unit-3">(3)</a>
+    <li><a href="infrastructure.html#ref-for-code-unit-1">2.1.6. 문자 인코딩</a> <a href="infrastructure.html#ref-for-code-unit-2">(2)</a> <a href="infrastructure.html#ref-for-code-unit-3">(3)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="unicode-code-point">
    <b><a href="infrastructure.html#unicode-code-point">#unicode-code-point</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-unicode-code-point-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-unicode-code-point-1">2.1.6. 문자 인코딩</a>
     </li><li><a href="syntax.html#ref-for-unicode-code-point-2">8.2.1. Overview of the parsing model</a>
    </li></ul>
   </aside>
@@ -3678,7 +3678,7 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="unicode-character">
    <b><a href="infrastructure.html#unicode-character">#unicode-character</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-unicode-character-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-unicode-character-1">2.1.6. 문자 인코딩</a>
     </li><li><a href="dom.html#ref-for-unicode-character-2">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="syntax.html#ref-for-unicode-character-3">8.2.2.5. Preprocessing the input stream</a>
    </li></ul>
@@ -3696,7 +3696,7 @@ included with Exhibit B.
    <b><a href="infrastructure.html#conforming-document">#conforming-document</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-conforming-document-1">1.10. 작성자를 위한 적합성 요구사항</a>
-    </li><li><a href="infrastructure.html#ref-for-conforming-document-2">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-conforming-document-2">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-conforming-document-3">2.2.3. Extensibility</a> <a href="infrastructure.html#ref-for-conforming-document-4">(2)</a> <a href="infrastructure.html#ref-for-conforming-document-5">(3)</a> <a href="infrastructure.html#ref-for-conforming-document-6">(4)</a> <a href="infrastructure.html#ref-for-conforming-document-7">(5)</a> <a href="infrastructure.html#ref-for-conforming-document-8">(6)</a>
     </li><li><a href="sections.html#ref-for-conforming-document-9">4.3.1. The body element</a>
     </li><li><a href="semantics-scripting.html#ref-for-conforming-document-10">4.12.2. The noscript element</a>
@@ -3705,7 +3705,7 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="rendering-support-the-suggested-default-rendering">
    <b><a href="infrastructure.html#rendering-support-the-suggested-default-rendering">#rendering-support-the-suggested-default-rendering</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-1">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-2">(2)</a>
     </li><li><a href="dom.html#ref-for-rendering-support-the-suggested-default-rendering-3">3.2.6.2. User agent conformance criteria</a>
     </li><li><a href="rendering.html#ref-for-rendering-support-the-suggested-default-rendering-4">10. Rendering</a>
    </li></ul>
@@ -3713,7 +3713,7 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="lack-scripting-support">
    <b><a href="infrastructure.html#lack-scripting-support">#lack-scripting-support</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-lack-scripting-support-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-lack-scripting-support-1">2.2.1. 적합성 종류</a>
     </li><li><a href="syntax.html#ref-for-lack-scripting-support-2">8.2.1. Overview of the parsing model</a>
    </li></ul>
   </aside>
@@ -5573,7 +5573,7 @@ included with Exhibit B.
    <ul>
     <li><a href="infrastructure.html#ref-for-html-namespace-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-html-namespace-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-html-namespace-4">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. Interactions with XPath and XSLT</a>
     </li><li><a href="dom.html#ref-for-html-namespace-7">3.1.3. DOM tree accessors</a>
     </li><li><a href="dom.html#ref-for-html-namespace-8">3.2.4.2.6. Embedded content</a>
@@ -7750,7 +7750,7 @@ included with Exhibit B.
    <b><a href="dom.html#element-attrdef-global-style">#element-attrdef-global-style</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-global-style-1">1.10.1. 표현 마크업</a> <a href="introduction.html#ref-for-element-attrdef-global-style-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-element-attrdef-global-style-3">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-element-attrdef-global-style-3">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-global-style-4">3.2.5.8. The style attribute</a> <a href="dom.html#ref-for-element-attrdef-global-style-5">(2)</a> <a href="dom.html#ref-for-element-attrdef-global-style-6">(3)</a>
     </li><li><a href="rendering.html#ref-for-element-attrdef-global-style-7">10.4.4. Image maps</a>
    </li></ul>
@@ -8699,16 +8699,16 @@ included with Exhibit B.
     </li><li><a href="grouping-content.html#ref-for-elementdef-article-31">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-article-32">4.4.4. The blockquote element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-article-33">4.4.11. The figure element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-article-34">4.4.13. The main element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-article-35">4.4.14. The div element</a>
-    </li><li><a href="links.html#ref-for-elementdef-article-36">4.8.6.2. Link type "author"</a>
-    </li><li><a href="links.html#ref-for-elementdef-article-37">4.8.6.3. Link type "bookmark"</a> <a href="links.html#ref-for-elementdef-article-38">(2)</a>
-    </li><li><a href="links.html#ref-for-elementdef-article-39">4.8.6.11. Link type "tag"</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-article-40">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-article-41">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-article-42">Elements</a> <a href="fullindex.html#ref-for-elementdef-article-43">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-article-44">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-article-45">(2)</a> <a href="fullindex.html#ref-for-elementdef-article-46">(3)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-article-47">Element Interfaces</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-article-34">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-article-35">(2)</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-article-36">4.4.14. The div element</a>
+    </li><li><a href="links.html#ref-for-elementdef-article-37">4.8.6.2. Link type "author"</a>
+    </li><li><a href="links.html#ref-for-elementdef-article-38">4.8.6.3. Link type "bookmark"</a> <a href="links.html#ref-for-elementdef-article-39">(2)</a>
+    </li><li><a href="links.html#ref-for-elementdef-article-40">4.8.6.11. Link type "tag"</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-article-41">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-article-42">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-article-43">Elements</a> <a href="fullindex.html#ref-for-elementdef-article-44">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-article-45">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-article-46">(2)</a> <a href="fullindex.html#ref-for-elementdef-article-47">(3)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-article-48">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-section">
@@ -8750,14 +8750,14 @@ included with Exhibit B.
     </li><li><a href="sections.html#ref-for-elementdef-nav-15">4.3.10.1. Creating an outline</a>
     </li><li><a href="sections.html#ref-for-elementdef-nav-16">4.3.11. Usage summary</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-nav-17">4.4.1. The p element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-nav-18">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-nav-19">(2)</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-nav-20">4.4.14. The div element</a>
-    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-nav-21">4.13.2. Bread crumb navigation</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-nav-22">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-nav-23">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-nav-24">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-nav-25">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-nav-26">(2)</a> <a href="fullindex.html#ref-for-elementdef-nav-27">(3)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-nav-28">Element Interfaces</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-nav-18">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-nav-19">(2)</a> <a href="grouping-content.html#ref-for-elementdef-nav-20">(3)</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-nav-21">4.4.14. The div element</a>
+    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-nav-22">4.13.2. Bread crumb navigation</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-nav-23">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-nav-24">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-nav-25">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-nav-26">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-nav-27">(2)</a> <a href="fullindex.html#ref-for-elementdef-nav-28">(3)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-nav-29">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-aside">
@@ -8772,14 +8772,14 @@ included with Exhibit B.
     </li><li><a href="sections.html#ref-for-elementdef-aside-12">4.3.11. Usage summary</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-aside-13">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-aside-14">4.4.11. The figure element</a> <a href="grouping-content.html#ref-for-elementdef-aside-15">(2)</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-aside-16">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-aside-17">(2)</a> <a href="grouping-content.html#ref-for-elementdef-aside-18">(3)</a> <a href="grouping-content.html#ref-for-elementdef-aside-19">(4)</a> <a href="grouping-content.html#ref-for-elementdef-aside-20">(5)</a> <a href="grouping-content.html#ref-for-elementdef-aside-21">(6)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-aside-22">4.6.1. The ins element</a>
-    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-23">4.13.5. Footnotes</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-24">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-25">(3)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-aside-26">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-aside-27">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-aside-28">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-aside-29">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-aside-30">(2)</a> <a href="fullindex.html#ref-for-elementdef-aside-31">(3)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-aside-32">Element Interfaces</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-aside-16">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-aside-17">(2)</a> <a href="grouping-content.html#ref-for-elementdef-aside-18">(3)</a> <a href="grouping-content.html#ref-for-elementdef-aside-19">(4)</a> <a href="grouping-content.html#ref-for-elementdef-aside-20">(5)</a> <a href="grouping-content.html#ref-for-elementdef-aside-21">(6)</a> <a href="grouping-content.html#ref-for-elementdef-aside-22">(7)</a>
+    </li><li><a href="edits.html#ref-for-elementdef-aside-23">4.6.1. The ins element</a>
+    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-24">4.13.5. Footnotes</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-25">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-26">(3)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-aside-27">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-aside-28">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-aside-29">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-aside-30">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-aside-31">(2)</a> <a href="fullindex.html#ref-for-elementdef-aside-32">(3)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-aside-33">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-h1">
@@ -8915,14 +8915,14 @@ included with Exhibit B.
     </li><li><a href="sections.html#ref-for-elementdef-header-20">4.3.11. Usage summary</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-header-21">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-header-22">4.4.9. The dt element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-header-23">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-header-24">(2)</a> <a href="grouping-content.html#ref-for-elementdef-header-25">(3)</a> <a href="grouping-content.html#ref-for-elementdef-header-26">(4)</a>
-    </li><li><a href="tabular-data.html#ref-for-elementdef-header-27">4.9.10. The th element</a>
-    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-28">4.13.1. Subheadings, subtitles, alternative titles and taglines</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-29">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-30">(3)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-header-31">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-header-32">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-header-33">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-header-34">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-header-35">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-header-36">Element Interfaces</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-header-23">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-header-24">(2)</a> <a href="grouping-content.html#ref-for-elementdef-header-25">(3)</a> <a href="grouping-content.html#ref-for-elementdef-header-26">(4)</a> <a href="grouping-content.html#ref-for-elementdef-header-27">(5)</a>
+    </li><li><a href="tabular-data.html#ref-for-elementdef-header-28">4.9.10. The th element</a>
+    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-29">4.13.1. Subheadings, subtitles, alternative titles and taglines</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-30">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-31">(3)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-header-32">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-header-33">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-header-34">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-header-35">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-header-36">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-header-37">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-footer">
@@ -8939,19 +8939,19 @@ included with Exhibit B.
     </li><li><a href="grouping-content.html#ref-for-elementdef-footer-20">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-footer-21">4.4.4. The blockquote element</a> <a href="grouping-content.html#ref-for-elementdef-footer-22">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-footer-23">4.4.9. The dt element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-24">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-footer-25">(2)</a> <a href="grouping-content.html#ref-for-elementdef-footer-26">(3)</a> <a href="grouping-content.html#ref-for-elementdef-footer-27">(4)</a> <a href="grouping-content.html#ref-for-elementdef-footer-28">(5)</a>
-    </li><li><a href="tabular-data.html#ref-for-elementdef-footer-29">4.9.10. The th element</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-footer-30">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-footer-31">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-footer-32">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-footer-33">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-footer-34">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-footer-35">Element Interfaces</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-24">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-footer-25">(2)</a> <a href="grouping-content.html#ref-for-elementdef-footer-26">(3)</a> <a href="grouping-content.html#ref-for-elementdef-footer-27">(4)</a> <a href="grouping-content.html#ref-for-elementdef-footer-28">(5)</a> <a href="grouping-content.html#ref-for-elementdef-footer-29">(6)</a>
+    </li><li><a href="tabular-data.html#ref-for-elementdef-footer-30">4.9.10. The th element</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-footer-31">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-footer-32">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-footer-33">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-footer-34">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-footer-35">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-footer-36">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-address">
    <b><a href="sections.html#elementdef-address">#elementdef-address</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-elementdef-address-1">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-elementdef-address-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-elementdef-address-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-address-2">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-address-3">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-address-4">3.2.4.2.8. Palpable content</a>
     </li><li><a href="sections.html#ref-for-elementdef-address-5">4.3.9. The address element</a> <a href="sections.html#ref-for-elementdef-address-6">(2)</a> <a href="sections.html#ref-for-elementdef-address-7">(3)</a> <a href="sections.html#ref-for-elementdef-address-8">(4)</a> <a href="sections.html#ref-for-elementdef-address-9">(5)</a> <a href="sections.html#ref-for-elementdef-address-10">(6)</a> <a href="sections.html#ref-for-elementdef-address-11">(7)</a>
@@ -8985,7 +8985,7 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="outline">
    <b><a href="sections.html#outline">#outline</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-outline-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-outline-1">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-outline-2">3.2.4.2.3. Sectioning content</a> <a href="dom.html#ref-for-outline-3">(2)</a>
     </li><li><a href="sections.html#ref-for-outline-4">4.3.3. The section element</a>
     </li><li><a href="sections.html#ref-for-outline-5">4.3.7. The header element</a>
@@ -9117,7 +9117,7 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="elementdef-blockquote">
    <b><a href="grouping-content.html#elementdef-blockquote">#elementdef-blockquote</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-elementdef-blockquote-1">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-elementdef-blockquote-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-elementdef-blockquote-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-blockquote-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-blockquote-3">2.5.3. Dynamic changes to base URLs</a>
     </li><li><a href="dom.html#ref-for-elementdef-blockquote-4">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-blockquote-5">3.2.4.2.8. Palpable content</a>
@@ -9440,7 +9440,7 @@ included with Exhibit B.
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-div-1">1.10.3. 
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-div-2">(2)</a> <a href="introduction.html#ref-for-elementdef-div-3">(3)</a> <a href="introduction.html#ref-for-elementdef-div-4">(4)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-div-5">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-div-5">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-6">3.2.4. Content models</a> <a href="dom.html#ref-for-elementdef-div-7">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-8">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-9">3.2.4.2.8. Palpable content</a>
@@ -10081,7 +10081,7 @@ included with Exhibit B.
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-i-1">1.10.1. 표현 마크업</a>
     </li><li><a href="introduction.html#ref-for-elementdef-i-2">1.10.2. 구문 오류</a> <a href="introduction.html#ref-for-elementdef-i-3">(2)</a> <a href="introduction.html#ref-for-elementdef-i-4">(3)</a> <a href="introduction.html#ref-for-elementdef-i-5">(4)</a> <a href="introduction.html#ref-for-elementdef-i-6">(5)</a> <a href="introduction.html#ref-for-elementdef-i-7">(6)</a> <a href="introduction.html#ref-for-elementdef-i-8">(7)</a> <a href="introduction.html#ref-for-elementdef-i-9">(8)</a> <a href="introduction.html#ref-for-elementdef-i-10">(9)</a> <a href="introduction.html#ref-for-elementdef-i-11">(10)</a> <a href="introduction.html#ref-for-elementdef-i-12">(11)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-i-13">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-i-13">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-14">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-15">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-16">3.2.4.2.8. Palpable content</a>
@@ -10101,7 +10101,7 @@ included with Exhibit B.
    <b><a href="textlevel-semantics.html#elementdef-b">#elementdef-b</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-b-1">1.10.1. 표현 마크업</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-b-2">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-b-2">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-b-3">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-b-4">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-b-5">3.2.4.2.8. Palpable content</a>
@@ -10190,7 +10190,7 @@ included with Exhibit B.
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-span-1">1.10.3. 
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-span-2">(2)</a> <a href="introduction.html#ref-for-elementdef-span-3">(3)</a> <a href="introduction.html#ref-for-elementdef-span-4">(4)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-span-5">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-span-5">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-span-6">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-span-7">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-span-8">3.2.4.2.8. Palpable content</a>
@@ -19975,7 +19975,7 @@ included with Exhibit B.
     </li><li><a href="introduction.html#ref-for-elementdef-script-3">1.9.1. HTML로 안전한 어플리케이션 작성</a>
     </li><li><a href="introduction.html#ref-for-elementdef-script-4">1.10.3. 
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-script-5">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-script-6">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-elementdef-script-7">(2)</a> <a href="infrastructure.html#ref-for-elementdef-script-8">(3)</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-script-6">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-script-7">(2)</a> <a href="infrastructure.html#ref-for-elementdef-script-8">(3)</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-9">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-script-10">(2)</a> <a href="dom.html#ref-for-elementdef-script-11">(3)</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-12">3.2.4.2.1. Metadata content</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-13">3.2.4.2.2. Flow content</a>
@@ -20024,7 +20024,7 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="htmlscriptelement-htmlscriptelement">
    <b><a href="semantics-scripting.html#htmlscriptelement-htmlscriptelement">#htmlscriptelement-htmlscriptelement</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-htmlscriptelement-htmlscriptelement-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-htmlscriptelement-htmlscriptelement-1">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-htmlscriptelement-htmlscriptelement-2">3.1.1. The Document object</a>
     </li><li><a href="obsolete.html#ref-for-htmlscriptelement-htmlscriptelement-3">11.3.5. Other elements, attributes and APIs</a>
     </li><li><a href="fullindex.html#ref-for-htmlscriptelement-htmlscriptelement-4">Elements</a>
@@ -21456,7 +21456,7 @@ included with Exhibit B.
    <ul>
     <li><a href="introduction.html#ref-for-browsing-context-1">1.5.1. 스크립트 실행의 직렬화</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-2">2.1.5. Plugin 콘텐트 처리기</a>
-    </li><li><a href="infrastructure.html#ref-for-browsing-context-3">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-browsing-context-4">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-browsing-context-3">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-browsing-context-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-5">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-browsing-context-6">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-7">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-browsing-context-8">(2)</a>
     </li><li><a href="dom.html#ref-for-browsing-context-9">3.1. Documents</a> <a href="dom.html#ref-for-browsing-context-10">(2)</a> <a href="dom.html#ref-for-browsing-context-11">(3)</a> <a href="dom.html#ref-for-browsing-context-12">(4)</a> <a href="dom.html#ref-for-browsing-context-13">(5)</a>
@@ -26167,13 +26167,13 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="utf-16be">
    <b><a href="syntax.html#utf-16be">#utf-16be</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-16be-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-utf-16be-1">2.1.6. 문자 인코딩</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="utf-16le">
    <b><a href="syntax.html#utf-16le">#utf-16le</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-16le-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-utf-16le-1">2.1.6. 문자 인코딩</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="x-user-defined">
@@ -26648,7 +26648,7 @@ included with Exhibit B.
   <aside class="dfn-panel" data-for="scripting-flag">
    <b><a href="syntax.html#scripting-flag">#scripting-flag</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-scripting-flag-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-scripting-flag-1">2.2.1. 적합성 종류</a>
     </li><li><a href="semantics-scripting.html#ref-for-scripting-flag-2">4.12.2. The noscript element</a>
     </li><li><a href="syntax.html#ref-for-scripting-flag-3">8.2.3.5. Other parsing state flags</a>
     </li><li><a href="syntax.html#ref-for-scripting-flag-4">8.2.5.4.4. The "in head" insertion mode</a> <a href="syntax.html#ref-for-scripting-flag-5">(2)</a>

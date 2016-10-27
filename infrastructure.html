@@ -1449,12 +1449,12 @@ pre.idl.highlight { color: #708090; }
         </li><li><a href="infrastructure.html#dom-trees"><span class="secno">2.1.3</span> <span class="content">DOM 트리</span></a>
         </li><li><a href="infrastructure.html#scripting"><span class="secno">2.1.4</span> <span class="content">스크립팅</span></a>
         </li><li><a href="infrastructure.html#plugin-content-handlers"><span class="secno">2.1.5</span> <span class="content"><code>Plugin</code> 콘텐트 처리기</span></a>
-        </li><li><a href="infrastructure.html#encoding-terminology"><span class="secno">2.1.6</span> <span class="content">Character encodings</span></a>
+        </li><li><a href="infrastructure.html#encoding-terminology"><span class="secno">2.1.6</span> <span class="content">문자 인코딩</span></a>
        </li></ol>
       </li><li>
-       <a href="infrastructure.html#conformance-requirements"><span class="secno">2.2</span> <span class="content">Conformance requirements</span></a>
+       <a href="infrastructure.html#conformance-requirements"><span class="secno">2.2</span> <span class="content">적합성 요구사항</span></a>
        <ol class="toc">
-        <li><a href="infrastructure.html#conformance-classes"><span class="secno">2.2.1</span> <span class="content">Conformance classes</span></a>
+        <li><a href="infrastructure.html#conformance-classes"><span class="secno">2.2.1</span> <span class="content">적합성 종류</span></a>
         </li><li><a href="infrastructure.html#conformance-requirements-dependencies"><span class="secno">2.2.2</span> <span class="content">Dependencies</span></a>
         </li><li><a href="infrastructure.html#conformance-requirements-extensibility"><span class="secno">2.2.3</span> <span class="content">Extensibility</span></a>
         </li><li><a href="infrastructure.html#interactions-with-xpath-and-xslt"><span class="secno">2.2.4</span> <span class="content">Interactions with XPath and XSLT</span></a>
@@ -1689,218 +1689,211 @@ pre.idl.highlight { color: #708090; }
     됩니다. </p>
     <p>다른 <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-8">plugins</a> 세트를 가지는 다른 사용자는 사용자를 유일하게 식별되게 하는 기회를
   증가시키는 지문 그림을 제공하기 때문에, 유저 에이전트는 각 사용자에 대해 정확히 동일한 <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-9">플러그인</a> 세트를 지원하도록 권장 됩니다. <a class="fingerprint" href="introduction.html#fingerprinting-vector" id="ref-for-fingerprinting-vector-2"><img alt="(이것은 지문 그림입니다.)" height="21" src="images/fingerprint.png" width="15"></a></p>
-    <h4 class="heading settled" data-level="2.1.6" id="encoding-terminology"><span class="secno">2.1.6. </span><span class="content">Character encodings</span><a class="self-link" href="infrastructure.html#encoding-terminology"></a></h4>
-    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="character-encoding">character encoding</dfn>, or just <i>encoding</i> where that is not ambiguous, is a defined way to convert between byte streams and
-  Unicode strings, as defined in the WHATWG Encoding standard. An <a data-link-type="dfn" href="https://www.w3.org/TR/encoding/#encoding">encoding</a> has an <dfn data-dfn-type="dfn" data-noexport="" id="encoding-name">encoding name<a class="self-link" href="infrastructure.html#encoding-name"></a></dfn> and one or more <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="encoding-labels">encoding labels</dfn>, referred to as the
-  encoding’s <i>name</i> and <i>labels</i> in the Encoding standard. <a data-link-type="biblio" href="references.html#biblio-encoding">[ENCODING]</a></p>
-    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="utf-16-encoding">UTF-16 encoding</dfn> is <a data-link-type="dfn" href="syntax.html#utf-16be" id="ref-for-utf-16be-1">UTF-16BE</a> or <a data-link-type="dfn" href="syntax.html#utf-16le" id="ref-for-utf-16le-1">UTF-16LE</a>. <a data-link-type="biblio" href="references.html#biblio-encoding">[ENCODING]</a></p>
-    <p>An <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="ascii-compatible-encoding">ASCII-compatible encoding</dfn> is any <a data-link-type="dfn" href="https://www.w3.org/TR/encoding/#encoding">encoding</a> that is not a <a data-link-type="dfn" href="infrastructure.html#utf-16-encoding" id="ref-for-utf-16-encoding-1">UTF-16 encoding</a>. <a data-link-type="biblio" href="references.html#biblio-encoding">[ENCODING]</a></p>
-    <p class="note" role="note"> Since support for encodings that are not defined in the WHATWG Encoding standard is prohibited, <a data-link-type="dfn" href="infrastructure.html#utf-16-encoding" id="ref-for-utf-16-encoding-2">UTF-16 encodings</a> are the only encodings that this specification needs to treat as not
-    being <a data-link-type="dfn" href="infrastructure.html#ascii-compatible-encoding" id="ref-for-ascii-compatible-encoding-1">ASCII-compatible encodings</a>. </p>
-    <p>The term <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="code-unit">code unit</dfn> is used as defined in the Web IDL specification: a 16 bit unsigned
-  integer, the smallest atomic component of a <code>DOMString</code>. (This is a narrower definition
-  than the one used in Unicode, and is not the same as a <i>code point</i>.) <a data-link-type="biblio" href="references.html#biblio-webidl">[WEBIDL]</a></p>
-    <p>The term <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="unicode-code-point">Unicode code point</dfn> means a <i>Unicode scalar value</i> where possible, and an
-  isolated surrogate code point when not. When a conformance requirement is defined in terms of
-  characters or Unicode code points, a pair of <a data-link-type="dfn" href="infrastructure.html#code-unit" id="ref-for-code-unit-1">code units</a> consisting of a high surrogate
-  followed by a low surrogate must be treated as the single code point represented by the surrogate
-  pair, but isolated surrogates must each be treated as the single code point with the value of the
-  surrogate. <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
-    <p>In this specification, the term <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="character">character</dfn>, when not qualified as <em>Unicode</em> character, is synonymous with the term <a data-link-type="dfn" href="infrastructure.html#unicode-code-point" id="ref-for-unicode-code-point-1">Unicode code point</a>.</p>
-    <p>The term <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="unicode-character">Unicode character</dfn> is used to mean a <i>Unicode scalar value</i> (i.e. any
-  Unicode code point that is not a surrogate code point). <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="code-unit-length">code-unit length</dfn> of a string is the number of <a data-link-type="dfn" href="infrastructure.html#code-unit" id="ref-for-code-unit-2">code units</a> in that string.</p>
-    <p class="note" role="note"> This complexity results from the historical decision to define the DOM API in terms of 16 bit
-    (UTF-16) <a data-link-type="dfn" href="infrastructure.html#code-unit" id="ref-for-code-unit-3">code units</a>, rather than in terms of <a data-link-type="dfn" href="infrastructure.html#unicode-character" id="ref-for-unicode-character-1">Unicode characters</a>. </p>
-    <h3 class="heading settled" data-level="2.2" id="conformance-requirements"><span class="secno">2.2. </span><span class="content">Conformance requirements</span><a class="self-link" href="infrastructure.html#conformance-requirements"></a></h3>
-    <p>All diagrams, examples, and notes in this specification are non-normative, as are all sections
-  explicitly marked non-normative. Everything else in this specification is normative.</p>
-    <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT",
-  "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in the normative parts of this document
-  are to be interpreted as described in RFC2119. The key word "OPTIONALLY" in the normative parts of
-  this document is to be interpreted with the same normative meaning as "MAY" and "OPTIONAL". For
-  readability, these words do not appear in all uppercase letters in this specification. <a data-link-type="biblio" href="references.html#biblio-rfc2119">[RFC2119]</a></p>
-    <p>Requirements phrased in the imperative as part of algorithms (such as "strip any leading space
-  characters" or "return false and abort these steps") are to be interpreted with the meaning of
-  the key word ("must", "should", "may", etc) used in introducing the algorithm.</p>
-    <div class="example" id="example-d0f0c06d">
-     <a class="self-link" href="infrastructure.html#example-d0f0c06d"></a> For example, were the spec to say: 
+    <h4 class="heading settled" data-level="2.1.6" id="encoding-terminology"><span class="secno">2.1.6. </span><span class="content">문자 인코딩</span><a class="self-link" href="infrastructure.html#encoding-terminology"></a></h4>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="character encoding" data-noexport="" id="character-encoding">문자 인코딩</dfn>, 혹은 애매모호하지 않은 <i>인코딩</i>은 WHATWG
+  인코딩 표준에 정의된 대로, 바이트 스트림과 유니코드 문자열 사이를 전환하기 위한 정의된 방법입니다. <a data-link-type="dfn" href="https://www.w3.org/TR/encoding/#encoding">인코딩</a>은, 인코딩 표준에 인코딩의 <i>이름</i>과 <i>라벨</i>로 지칭된, <dfn data-dfn-type="dfn" data-lt="encoding name" data-noexport="" id="encoding-name">인코딩 이름<a class="self-link" href="infrastructure.html#encoding-name"></a></dfn>이나 하나 이상의 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="encoding labels" data-noexport="" id="encoding-labels">인코딩 라벨</dfn>을 가집니다. <a data-link-type="biblio" href="references.html#biblio-encoding">[ENCODING]</a></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="UTF-16 encoding" data-noexport="" id="utf-16-encoding">UTF-16 인코딩</dfn>은 <a data-link-type="dfn" href="syntax.html#utf-16be" id="ref-for-utf-16be-1">UTF-16BE</a>나 <a data-link-type="dfn" href="syntax.html#utf-16le" id="ref-for-utf-16le-1">UTF-16LE</a>입니다. <a data-link-type="biblio" href="references.html#biblio-encoding">[ENCODING]</a></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ASCII-compatible encoding" data-noexport="" id="ascii-compatible-encoding">ASCII 호환 인코딩</dfn>은 <a data-link-type="dfn" href="infrastructure.html#utf-16-encoding" id="ref-for-utf-16-encoding-1">UTF-16 인코딩</a>이
+  아닌 모든 <a data-link-type="dfn" href="https://www.w3.org/TR/encoding/#encoding">인코딩</a>입니다. <a data-link-type="biblio" href="references.html#biblio-encoding">[ENCODING]</a></p>
+    <p class="note" role="note"> WHATWG 인코딩 표준에 정의되지 않은 인코딩에 대한 지원은 금지되어 있기 때문에, <a data-link-type="dfn" href="infrastructure.html#utf-16-encoding" id="ref-for-utf-16-encoding-2">UTF-16 인코딩</a>은 이 명세가 <a data-link-type="dfn" href="infrastructure.html#ascii-compatible-encoding" id="ref-for-ascii-compatible-encoding-1">ASCII 
+    호환 인코딩</a>이 되지 않는 것으로 처리할 필요가 있는 유일한 인코딩입니다. </p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="code unit|code units" data-noexport="" id="code-unit">코드 단위</dfn>이라는 용어는웹 IDL 명세에 정의된 대로 사용됩니다: <code>DOMString</code>의
+  가장 작은 최소 구성 요소인 16비트 무부호 정수입니다. (이것은 유니코드에 사용된 것 보다 좁은 정의이고 <i>code point</i>와 동일하지 않습니다.) <a data-link-type="biblio" href="references.html#biblio-webidl">[WEBIDL]</a></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="Unicode code point" data-noexport="" id="unicode-code-point">유니코드 코드 포인트</dfn>라는 용어는 그것이 가능한 경우 <i>유니코드 스칼라 값</i>을 의미하고,
+  불가능한 경우 독자적인 대용 코드 포인트(isolated surrogate code point)를 의미합니다. 적합성
+  요구사항이 이 문자나 유니코드 코드 포인트 용어로 정의되는 경우, 낮은 대용 코드가 뒤따르는 높은 대용 
+  코드로 구성되는 한 쌍의 <a data-link-type="dfn" href="infrastructure.html#code-unit" id="ref-for-code-unit-1">코드 단위</a>는 대용 코드쌍으로 나타나는 단일 코드 
+  포인트로 취급되어야 하지만, 독자적인 대용 코드는 각각 대용 코드의 값을 가지고 단일 코드로 취급
+  되어야 합니다. <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
+    <p>이 명세에서, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="character|characters" data-noexport="" id="character">문자</dfn>라는 용어는, <em>유니코드</em> 문자로서 자격이 없는 경우, <a data-link-type="dfn" href="infrastructure.html#unicode-code-point" id="ref-for-unicode-code-point-1">유니코드 코드 포인트</a> 용어와 같은 것을 의미합니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="Unicode character|Unicode characters" data-noexport="" id="unicode-character">유니코드 문자</dfn>는 <i>유니코드 스칼라 값</i>을
+  의미하는데 사용됩니다.(즉, 독자적인 코드 포인트가 아닌 모든 유니코드 코드 포인트) <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
+    <p>문자열의 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="code-unit length" data-noexport="" id="code-unit-length">코드 단위 길이</dfn>는 그 문자열의 <a data-link-type="dfn" href="infrastructure.html#code-unit" id="ref-for-code-unit-2">코드
+  단위</a>들의 갯수입니다.</p>
+    <p class="note" role="note"> 이 복잡성은 <a data-link-type="dfn" href="infrastructure.html#unicode-character" id="ref-for-unicode-character-1">유니코드 문자</a>의 용어에서 보다 16비트(UTF-8) <a data-link-type="dfn" href="infrastructure.html#code-unit" id="ref-for-code-unit-3">코드 단위</a>(UTF-16)의 용어에서 DOM API를 정의하기 위한 역사적인 결정이 
+    원인입니다. </p>
+    <h3 class="heading settled" data-level="2.2" id="conformance-requirements"><span class="secno">2.2. </span><span class="content">적합성 요구사항</span><a class="self-link" href="infrastructure.html#conformance-requirements"></a></h3>
+    <p>이 명세의 모든 다이어그램, 예제, 주석은 모든 섹션에 비범적이라고 명시적으로 표시된 것 처럼
+  비규범적입니다. 이 명세에서 다른 모든 것들은 규범적입니다.</p>
+    <p>이 문서의 규범적 부분에 있는 "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
+  "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", "OPTIONAL" 키워드들은 RFC2119에 설명된 대로
+  해석되어야 합니다. 이 문서의 규범적인 부분에 있는 "OPTIONALLY" 키워드는 "MAY"와 "OPTIONAL"처럼 
+  동일한 규범적 의미로 해석되어야 합니다. 가독성을 위해, 이 단어들은 이 섹션에서 모두 대문자로
+  나타내지는 않습니다. <a data-link-type="biblio" href="references.html#biblio-rfc2119">[RFC2119]</a></p>
+    <p class="translator-note"> 본 번역본에서는 가급적 위 표기들을 한글과 함께 영문을 괄호 안에 표기하려 하고 있으나, 깜박하고
+    놓치고 지나갈 수 있기 때문에 가급적 위 키워드와 관련된 한글 표현에 대해서는 영문으로 된 원문과
+    비교하여 보시기를 권합니다. </p>
+    <p>알고리즘의 일부분으로 명령조로 표현된 요구사항들은("선두의 모든 공백 문자를 제거"나 "false를
+  반환하고 이 단계들을 중단" 같은) 알고리즘 도입에 사용되는 키워드("must", "should", "may", 등등)의 
+  의미로 해석되어야 합니다.</p>
+    <div class="example" id="example-6b19744d">
+     <a class="self-link" href="infrastructure.html#example-6b19744d"></a> 예를 들어, 다음과 같은 명세가 있었다면: 
 <pre>To eat an orange, the user must:
 1. Peel the orange.
 2. Separate each slice of the orange.
 3. Eat the orange slices.
 </pre>
-     <p>...it would be equivalent to the following:</p>
+     <p>...이것은 다음과 동등할 것입니다:</p>
 <pre>To eat an orange:
 1. The user must peel the orange.
 2. The user must separate each slice of the orange.
 3. The user must eat the orange slices.
 </pre>
-     <p>Here the key word is "must".</p>
-     <p>The former (imperative) style is generally preferred in this specification for stylistic
-    reasons.</p>
+     <p>여기서 키워드는 "must"입니다.</p>
+     <p>전자의(명령조) 방식은 일반적으로 문제상의 이유로 이 명세에서 선호됩니다.</p>
     </div>
-    <p>Conformance requirements phrased as algorithms or specific steps may be implemented in any
-  manner, so long as the end result is equivalent. (In particular, the algorithms defined in this
-  specification are intended to be easy to follow, and not intended to be performant.)</p>
-    <h4 class="heading settled" data-level="2.2.1" id="conformance-classes"><span class="secno">2.2.1. </span><span class="content">Conformance classes</span><a class="self-link" href="infrastructure.html#conformance-classes"></a></h4>
-    <p>This specification describes the conformance criteria for user agents (relevant
-  to implementors) and documents (relevant to authors and authoring tool
-  implementors).</p>
-    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="conforming document|conforming documents" data-noexport="" id="conforming-document">Conforming documents</dfn> are those that comply with all the conformance criteria for
-  documents. For readability, some of these conformance requirements are phrased as conformance
-  requirements on authors; such requirements are implicitly requirements on documents: by
-  definition, all documents are assumed to have had an author. (In some cases, that author may
-  itself be a user agent — such user agents are subject to additional rules, as explained
-  below.)</p>
-    <p class="example" id="example-cf97d5a1"><a class="self-link" href="infrastructure.html#example-cf97d5a1"></a> For example, if a requirement states that "authors must not use the <code>foobar</code> element", it would imply that documents are not allowed to contain elements named <code>foobar</code>. </p>
-    <p class="note impl" role="note"> There is no implied relationship between document conformance requirements and implementation
-    conformance requirements. User agents are not free to handle non-conformant documents as they
-    please; the processing model described in this specification applies to implementations
-    regardless of the conformity of the input documents. </p>
-    <p>User agents fall into several (overlapping) categories with different conformance requirements.</p>
+    <p>알고리즘이나 구체적인 단계들로 표현된 적합성 요구사항은 최종 결과가 동등한 것이기만 하면 임의의
+  방법으로 구현될 수 있습니다. (특히, 이 명세에 정의된 알고리즘은 쉽게 따라할 수 있도록 의도된 것이고,
+  고성능이 되도록 의도된 것이 아닙니다.)</p>
+    <h4 class="heading settled" data-level="2.2.1" id="conformance-classes"><span class="secno">2.2.1. </span><span class="content">적합성 종류</span><a class="self-link" href="infrastructure.html#conformance-classes"></a></h4>
+    <p>이 명세는 유저 에이전트(구현자에 관련된)와 문서(작성자와 작성 도구 구현자에 관련된) 대한 적합성
+  기준을 설명합니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="conforming document|conforming documents" data-noexport="" id="conforming-document">적합한 문서</dfn>는 문서에 대한 모든 적합성
+  기준을 따르는 문서입니다. 가독성을 위해, 이 적합성 요구사항의 일부는 작성자에 대한 적합성 
+  요구사항으로 표현됩니다; 그 요구사항들은 암묵적으로 문서에 대한 요구사항입니다: 정의에 의해, 모든
+  문서들은 작성자가 있었다고 가정됩니다. (어떤 경우, 그 작성자는 유저 에이전트 자체가 될 수 있습니다.
+  — 그러한 유저 에이전트는 아래 설명된 대로, 추가적인 규칙의 적용을 받습니다.)</p>
+    <p class="example" id="example-b6972c47"><a class="self-link" href="infrastructure.html#example-b6972c47"></a> 예를 들어, 요구사항이 "작성자는 <code>foobar</code> 요소(element)를 사용하지 않아야(must not) 
+    합니다" 라고 명시한다면, 이는 문서가 <code>foobar</code>라고 명명된 요소(element)를 포함하는 
+    것을 허용하지 않는다는 것을 암시합니다. </p>
+    <p class="note impl" role="note"> 문서 적합성 요구사항과 구현 적합성 요구사항 사이의 암묵적인 관계는 없습니다. 유저 에이전트는 
+    원하는 대로 부적합한 문서를 처리하는데 자유롭지 않습니다; 이 명세에 설명된 처리 모델은 입력 
+    문서의 적합성에 상관없이 구현에 적용됩니다. </p>
+    <p>유저 에이전트는 서로 다른 적합성 요구사항을 가진 몇 가지 범주에 (중복하여) 속합니다.</p>
     <dl>
      <dt data-md="">
-      <p>Web browsers and other interactive user agents</p>
+      <p>웹 브라우저와 다른 인터랙티브 유저 에이전트</p>
      </dt><dd data-md="">
-      <p>Web browsers that support <a href="xhtml.html#xhtml">the XHTML syntax</a> must process elements and attributes from the <a data-link-type="dfn" href="infrastructure.html#html-namespace" id="ref-for-html-namespace-5">HTML namespace</a> found in XML documents as described in this specification, so that users
-  can interact with them, unless the semantics of those elements have been overridden by other
-  specifications.</p>
-      <p class="example" id="example-0023f092"><a class="self-link" href="infrastructure.html#example-0023f092"></a> A conforming XHTML processor would, upon finding an XHTML <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-6">script</a></code> element in an
-    XML document, execute the script contained in that element. However, if the element is found
-    within a transformation expressed in XSLT (assuming the user agent also supports XSLT), then
-    the processor would instead treat the <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-7">script</a></code> element as an opaque element that
-    forms part of the transform. </p>
-      <p>Web browsers that support <a href="syntax.html#syntax">the HTML syntax</a> must process documents labeled with an <a data-link-type="dfn" href="infrastructure.html#html-mime-type" id="ref-for-html-mime-type-1">HTML MIME type</a> as described in this specification, so that users can interact with
-  them.</p>
-      <p>User agents that support scripting must also be conforming implementations of the IDL
-  fragments in this specification, as described in the Web IDL specification. <a data-link-type="biblio" href="references.html#biblio-webidl">[WEBIDL]</a></p>
-      <p class="note" role="note"> Unless explicitly stated, specifications that override the semantics of HTML elements do not
-    override the requirements on DOM objects representing those elements. For example, the <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-8">script</a></code> element in the example above would still implement the <code class="idl"><a data-link-type="idl" href="semantics-scripting.html#htmlscriptelement-htmlscriptelement" id="ref-for-htmlscriptelement-htmlscriptelement-1">HTMLScriptElement</a></code> interface. </p>
+      <p><a href="xhtml.html#xhtml">XHTML 구문</a>을 지원하는 웹 브라우저는 이 명세에 설명된 대로 XML 문서에서
+  찾아지는 <a data-link-type="dfn" href="infrastructure.html#html-namespace" id="ref-for-html-namespace-5">HTML 네임스페이스</a>의 요소(element)와 속성(attribute)을 처리 
+  해야(must)하기 때문에, 그 요소의 의미가 다른 명세에 의해 재정의되지 않는 한 사용자는 그것들을 
+  가지고 상호작용 할 수 있습니다.</p>
+      <p class="example" id="example-2e38c0fc"><a class="self-link" href="infrastructure.html#example-2e38c0fc"></a> 적합한 HTML 처리기는, XHTML 문서에서 XHTML <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-6">script</a></code> 요소(element)를 찾자마자, 그 요소에  
+    포함된 스크립트를 실행합니다. 하지만, 요소가 XSLT에서 표현된 변형 내에서 찾아진다면 (유저 
+    에이전트가 XSLT도 지원한다고 가정하여), 처리기는 대신 변형의 일부를 형성하는 불분명한
+    요소(element)로서 <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-7">script</a></code> 요소(element)를 대신 다룰 것입니다. </p>
+      <p><a href="syntax.html#syntax">HTML 구문</a>을 지원하는 웹 브라우저는 이 명세에 설명된 대로 <a data-link-type="dfn" href="infrastructure.html#html-mime-type" id="ref-for-html-mime-type-1">HTML MIME 타입</a>으로 라벨링 된 문서를 처리해야(must) 하기 때문에, 
+  사용자는 그 문서와 상호작용 할 수 있습니다.</p>
+      <p>스크립팅을 지원하는 유저 에이전트는 또한 웹 IDL 명세에 정의된 대로, 이 명세의 IDL 코드 조각의
+  구현이 준수되어야(must) 합니다. <a data-link-type="biblio" href="references.html#biblio-webidl">[WEBIDL]</a></p>
+      <p class="note" role="note"> 명시적으로 명시되지 않은 한, HTML 요소(element)의 의미를 재정의 하는 명세는 그 요소(element)를
+    나타내는 DOM 객체에서의 요구사항을 재정의 하지 않습니다. 예를 들어, 위 예제에서 <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-8">script</a></code> 요소(element)는 여전히 <code class="idl"><a data-link-type="idl" href="semantics-scripting.html#htmlscriptelement-htmlscriptelement" id="ref-for-htmlscriptelement-htmlscriptelement-1">HTMLScriptElement</a></code> 인터페이스를 구현합니다. </p>
      </dd><dt data-md="">
-      <p>Non-interactive presentation user agents</p>
+      <p>비상호작용 프리젠테이션 유저 에이전트</p>
      </dt><dd data-md="">
-      <p>User agents that process HTML and XHTML documents purely to render non-interactive versions
-  of them must comply to the same conformance criteria as Web browsers, except that they are
-  exempt from requirements regarding user interaction.</p>
-      <p class="note" role="note"> Typical examples of non-interactive presentation user agents are printers (static user agents) and
-    overhead displays (dynamic user agents). It is expected that most static non-interactive
-    presentation user agents will also opt to <a data-link-type="dfn" href="infrastructure.html#lack-scripting-support" id="ref-for-lack-scripting-support-1">lack scripting support</a>. </p>
-      <p class="example" id="example-84f7a997"><a class="self-link" href="infrastructure.html#example-84f7a997"></a> A non-interactive but dynamic presentation user agent would still execute scripts, allowing forms
-    to be dynamically submitted, and so forth. However, since the concept of "focus" is
-    irrelevant when the user cannot interact with the document, the user agent would not need to support
-    any of the focus-related DOM APIs. </p>
+      <p>순수하게 HTML과 XHTML 문서의 비상호작용 버전을 렌더링하기 위해 문서를 처리하는 유저 에이전트는,
+  사용자 인터랙션에 관하여 요구사항이 면제되는 것을 제외하고, 웹 브라우저 같이 동일한 적합성 
+  기준을 따라야(must) 합니다.</p>
+      <p class="note" role="note"> 비상호작용 유저 에이전트의 전형적인 예는 프린터(정적 유저 에이전트)와 오버헤드 디스플레이(동적
+    유저 에이전트)입니다. 대부분의 정적 비상호작용 프리젠테이션 유저 에이전트도 <a data-link-type="dfn" href="infrastructure.html#lack-scripting-support" id="ref-for-lack-scripting-support-1">스크립팅 지원을 필요로</a> 하기로 선택할 것이 예상됩니다. </p>
+      <p class="example" id="example-dd4de59a"><a class="self-link" href="infrastructure.html#example-dd4de59a"></a> 비상호작용이지만 동적 프리젠테이션 유저 에이전트는, 동적으로 전송되는 양식을 허용 하는등으로, 
+    여전히 스크립트를 실행합니다. 그러나, 사용자가 문서와 상호작용 할 수 없는 경우 "focus"의 
+    개념이 상관없기 때문에, 유저 에이전트는 포커스 관련 DOM API를 지원할 필요가 없습니다. </p>
      </dd><dt data-md="">
-      <p><dfn class="dfn-paneled" data-dfn-for="rendering" data-dfn-type="dfn" data-lt="support the suggested default rendering|supporting the suggested default rendering|Visual user agents that support the suggested default rendering" data-noexport="" id="rendering-support-the-suggested-default-rendering">Visual user agents that support the suggested default rendering</dfn></p>
+      <p><dfn class="dfn-paneled" data-dfn-for="rendering" data-dfn-type="dfn" data-lt="support the suggested default rendering|supporting the suggested default rendering|Visual user agents that support the suggested default rendering" data-noexport="" id="rendering-support-the-suggested-default-rendering">제안된 기본 렌더링을 지원하는 시각적 유저 에이전트</dfn></p>
      </dt><dd data-md="">
-      <p>User agents, whether interactive or not, may be designated (possibly as a user option) as <a data-link-type="dfn" href="infrastructure.html#rendering-support-the-suggested-default-rendering" id="ref-for-rendering-support-the-suggested-default-rendering-1">supporting the suggested default rendering</a> defined by this specification.</p>
-      <p>This is not required. In particular, even user agents that do implement the suggested default
-  rendering are encouraged to offer settings that override this default to improve the
-  experience for the user, e.g., changing the color contrast, using different focus styles, or
-  otherwise making the experience more accessible and usable to the user.</p>
-      <p>User agents that are designated as <a data-link-type="dfn" href="infrastructure.html#rendering-support-the-suggested-default-rendering" id="ref-for-rendering-support-the-suggested-default-rendering-2">supporting the suggested default rendering</a> must, while so
-  designated, implement the rules in <a href="rendering.html#rendering">§10 Rendering</a>. That section defines
-  the behavior that user agents are <em>expected</em> to implement.</p>
+      <p>유저 에이전트는, 상호작용이든 아니든, 이 명세에 정의된 <a data-link-type="dfn" href="infrastructure.html#rendering-support-the-suggested-default-rendering" id="ref-for-rendering-support-the-suggested-default-rendering-1">제안된 기본 렌더링을 지원하는 것</a>으로 
+  (아마도 사용자 옵션으로) 지정됩니다.</p>
+      <p>이것은 필요하지 않습니다. 특히, 제안된 기본 렌더링을 구현하는 유저 에이전트도 사용자에 대한
+  경험을 개선하기 위해, 예를 들어 색상 대비를 바꾸거나, 다른 포커스 스타일을 사용하거나, 그렇지 
+  않으면 사용자에게 더 접근 가능하고 사용 가능한 경험을 만들기 위해, 이 기본 값을 재정의 하는 
+  설정을 제공하도록 권장됩니다.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#rendering-support-the-suggested-default-rendering" id="ref-for-rendering-support-the-suggested-default-rendering-2">제안된 기본 렌더링을 지원하는 것</a>으로
+  지정된 유저 에이전트는, 그렇게 지정된 동안, <a href="rendering.html#rendering">§10 Rendering</a> 섹션 내 규칙을 구현해야(must) 합니다. 
+  그 섹션은 유저에이전트가 구현할 것으로 <em>기대되는</em> 행동을 정의합니다.</p>
      </dd><dt data-md="">
-      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="lack scripting support|User agents with no scripting support|do not support scripting" data-noexport="" id="lack-scripting-support">User agents with no scripting support</dfn></p>
+      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="lack scripting support|User agents with no scripting support|do not support scripting" data-noexport="" id="lack-scripting-support">스크립트를 지원하지 않는 유저 에이전트</dfn></p>
      </dt><dd data-md="">
-      <p>Implementations that do not support scripting (or which have their scripting features disabled
-  entirely) are exempt from supporting the events and DOM interfaces mentioned in this
-  specification. For the parts of this specification that are defined in terms of an events
-  model or in terms of the DOM, such user agents must still act as if events and the DOM were
-  supported.</p>
-      <p class="note" role="note"> Scripting can form an integral part of an application. Web browsers that do not support
-      scripting, or that have scripting disabled, might be unable to fully convey the author’s
-      intent. </p>
+      <p>스크립팅을 지원하지 않는(혹은 스크립트 기능이 완전히 비활성화 된) 구현은 이벤트와 이 명세에서
+  언급된 DOM 인터페이스 지원이 면제됩니다. 이벤트 모델의 측면이나 DOM의 측면에서 정의된 이 명세의 
+  일부에 대해, 그런 유저 에이전트는 여전히 이벤트와 DOM이 지원된 것처럼 수행해야 합니다.</p>
+      <p class="note" role="note"> 스크립팅은 어플리케이션의 필수적인 부분을 형성할 수 있습니다. 스크립팅을 지원하지 않거나 
+      스크립트가 비활성화 된 웹 브라우저는 작성작의 의도를 완전히 전달 할 수 없을 수도 있습니다. </p>
      </dd><dt data-md="">
-      <p>Conformance checkers</p>
+      <p>적합성 검사기</p>
      </dt><dd data-md="">
-      <p>Conformance checkers must verify that a document conforms to the applicable conformance
-  criteria described in this specification. Automated conformance checkers are exempt from
-  detecting errors that require interpretation of the author’s intent (for example, while a
-  document is non-conforming if the content of a <code><a data-link-type="element" href="grouping-content.html#elementdef-blockquote" id="ref-for-elementdef-blockquote-1">blockquote</a></code> element is not a quote,
-  conformance checkers running without the input of human judgement do not have to check that <code><a data-link-type="element" href="grouping-content.html#elementdef-blockquote" id="ref-for-elementdef-blockquote-2">blockquote</a></code> elements only contain quoted material).</p>
-      <p>Conformance checkers must check that the input document conforms when parsed without a <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-3">browsing context</a> (meaning that no scripts are run, and that the parser’s <a data-link-type="dfn" href="syntax.html#scripting-flag" id="ref-for-scripting-flag-1">scripting flag</a> is disabled), and should also check that the input document conforms
-  when parsed with a <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-4">browsing context</a> in which scripts execute, and that the scripts
-  never cause non-conforming states to occur other than transiently during script execution
-  itself. (This is only a "SHOULD" and not a "MUST" requirement because it has been proven to be
-  impossible. <a data-link-type="biblio" href="references.html#biblio-computable">[COMPUTABLE]</a>)</p>
-      <p>The term "HTML validator" can be used to refer to a conformance checker that itself conforms
-  to the applicable requirements of this specification.</p>
+      <p>적합성 검사기는 이 명세에 정의된 적절한 적합성 기준을 따르는 문서를 검증해야(must) 합니다.
+  자동화 된 적합성 검사기는 작성자 의도의 해석을 요구하는 오류를 발견하는 것은 적용되지 않습니다. 
+  (예를 들어, <code><a data-link-type="element" href="grouping-content.html#elementdef-blockquote" id="ref-for-elementdef-blockquote-1">blockquote</a></code> 요소(element)의 콘텐트가 따옴표로 묶여있지 않다면 문서는 비적합 
+  함에도 불구하고, 사람의 판단의 입력 없이 수행하는 적합성 검사기는 <code><a data-link-type="element" href="grouping-content.html#elementdef-blockquote" id="ref-for-elementdef-blockquote-2">blockquote</a></code> 요소(element)가 인용된 문장만을 포함함을 검사할 필요가 없습니다.)</p>
+      <p>적합성 검사기는 입력 문서가 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-3">브라우징 컨텍스트</a> 없이 해석되는 경우
+  (스크립가 수행되지 않고, 해석기의 <a data-link-type="dfn" href="syntax.html#scripting-flag" id="ref-for-scripting-flag-1">스크립팅 플래그</a>가 비활성화 된 
+  것을 의미) 적합한지 검사해야(must) 하고, 또한 입력 문서가 스크립트를 수행하는 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-4">브라우징 컨텍스트</a>를 가지고 해석되는 경우 적합한지, 그리고 
+  스크립트는 스크립트가 자신을 수행하는 동안 비적합 상태가 다른 것을 발생시키는 것을 야기하지 
+  않음을 검사해야(should) 합니다. (이것은 불가능한 것으로 증명되었기 때문에 "SHOULD"일 뿐 
+  "MUST" 요구사항이 아닙니다. <a data-link-type="biblio" href="references.html#biblio-computable">[COMPUTABLE]</a>)</p>
+      <p>"HTML 유효성 검사기"라는 용어는 이 명세의 적절한 요구사항을 준수하는 적합성 검사기를 지칭하는데
+  사용될 수 있습니다.</p>
       <div class="note" role="note">
-        XML DTDs cannot express all the conformance requirements of this specification. Therefore, a
-    validating XML processor and a DTD cannot constitute a conformance checker. Also, since
-    neither of the two authoring formats defined in this specification are applications of SGML,
-    a validating SGML system cannot constitute a conformance checker either. 
-       <p>To put it another way, there are three types of conformance criteria:</p>
+        XML DTD는 이 명세의 모든 적합성 요구사항들을 나타낼 수 없습니다. 그러므로, 검증 XML 처리기와
+    DTD는 적합성 검사기가 될 수 없습니다. 또한, 이 명세에 정의된 두 가지 작성 형식(format) 어느 
+    것도 SGML 어플리케이션이 아니기 때문에 검증 SGML 시스템 역시 적합성 검사기가 될 수 없습니다. 
+       <p>바꿔 말하면, 3가지 유형의 적합성 기준이 있습니다:</p>
        <ol>
         <li data-md="">
-         <p>Criteria that can be expressed in a DTD.</p>
+         <p>DTD에 표현될 수 있는 기준.</p>
         </li><li data-md="">
-         <p>Criteria that cannot be expressed by a DTD, but can still be checked by a machine.</p>
+         <p>DTD에 표현될 수 없지만, 여전히 기계(machine)에 의해 검사 될 수 있는 기준.</p>
         </li><li data-md="">
-         <p>Criteria that can only be checked by a human.</p>
+         <p>사람에 의해서만 검사 될 수 있는 기준.</p>
        </li></ol>
-       <p>A conformance checker must check for the first two. A simple DTD-based validator only checks
-    for the first class of errors and is therefore not a conforming conformance checker
-    according to this specification.</p>
+       <p>적합성 검사기는 처음 두 가지에 대해 검사해야(must) 합니다. 간단한 DTD 기반 유효성 검사기는
+    첫 번째 등급의 오류에 대해서만 검사하고 그렇기 때문에 이 명세를 따르는 적합한 적합성 검사기가 
+    아닙니다.</p>
       </div>
      </dd><dt data-md="">
-      <p>Data mining tools</p>
+      <p>데이터 마이닝 도구</p>
      </dt><dd data-md="">
-      <p>Applications and tools that process HTML and XHTML documents for reasons other than to either
-  render the documents or check them for conformance should act in accordance with the semantics
-  of the documents that they process.</p>
-      <p class="example" id="example-7be76795"><a class="self-link" href="infrastructure.html#example-7be76795"></a> A tool that generates <a data-link-type="dfn" href="sections.html#outline" id="ref-for-outline-1">document outlines</a> but increases the nesting level for each
-    paragraph and does not increase the nesting level for each section would not be conforming. </p>
+      <p>문서를 렌더링 하거나 적합성에 대해 검사를 하는 것 외에 다른 이유로 HTML과 XHTML 문서를 처리하는
+  어플리케이션과 도구들은 그들이 처리하는 문서의 의미에 부합하게 수행해야(should) 합니다.</p>
+      <p class="example" id="example-718e77b7"><a class="self-link" href="infrastructure.html#example-718e77b7"></a> <a data-link-type="dfn" href="sections.html#outline" id="ref-for-outline-1">문서 아웃라인</a>을 생성하지만 각 문단에 대한 중첩 레벨을 증가시키고 각 
+    섹션에 대한 중첩 레벨을 증가시키지 않는 도구는 부적합 할 것입니다. </p>
      </dd><dt data-md="">
-      <p>Authoring tools and markup generators</p>
+      <p>작성 도구와 마크업 생성기</p>
      </dt><dd data-md="">
-      <p>Authoring tools and markup generators must generate <a data-link-type="dfn" href="infrastructure.html#conforming-document" id="ref-for-conforming-document-2">conforming documents</a>. Conformance
-  criteria that apply to authors also apply to authoring tools, where appropriate.</p>
-      <p>Authoring tools are exempt from the strict requirements of using elements only for their
-  specified purpose, but only to the extent that authoring tools are not yet able to determine
-  author intent. However, authoring tools must not automatically misuse elements or encourage
-  their users to do so.</p>
-      <p class="example" id="example-aed9a104"><a class="self-link" href="infrastructure.html#example-aed9a104"></a> For example, it is not conforming to use an <code><a data-link-type="element" href="sections.html#elementdef-address" id="ref-for-elementdef-address-1">address</a></code> element for arbitrary
-    contact information; that element can only be used for marking up contact information for
-    the author of the document or section. However, since an authoring tool is likely unable to
-    determine the difference, an authoring tool is exempt from that requirement. This does not
-    mean, though, that authoring tools can use <code><a data-link-type="element" href="sections.html#elementdef-address" id="ref-for-elementdef-address-2">address</a></code> elements for any block of
-    italics text (for instance); it just means that the authoring tool doesn’t have to verify,
-    if a user inserts contact information for a section or something else. </p>
-      <p class="note" role="note"> In terms of conformance checking, an editor has to output documents that conform to the same
-    extent that a conformance checker will verify. </p>
-      <p>When an authoring tool is used to edit a non-conforming document, it may preserve the
-  conformance errors in sections of the document that were not edited during the editing session
-  (i.e., an editing tool is allowed to round-trip erroneous content). However, an authoring tool
-  must not claim that the output is conformant if errors have been so preserved.</p>
-      <p>Authoring tools are expected to come in two broad varieties: tools that work from structure
-  or semantic data, and tools that work on a What-You-See-Is-What-You-Get media-specific editing
-  basis (WYSIWYG).</p>
-      <p>The former is the preferred mechanism for tools that author HTML, since the structure in the
-  source information can be used to make informed choices regarding which HTML elements and
-  attributes are most appropriate.</p>
-      <p>However, WYSIWYG tools are legitimate. WYSIWYG tools should use elements they know are
-  appropriate, and should not use elements that they do not know to be appropriate. This might
-  in certain extreme cases mean limiting the use of flow elements to just a few elements, like <code><a data-link-type="element" href="grouping-content.html#elementdef-div" id="ref-for-elementdef-div-5">div</a></code>, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-b" id="ref-for-elementdef-b-2">b</a></code>, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-i" id="ref-for-elementdef-i-13">i</a></code>, and <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-span" id="ref-for-elementdef-span-5">span</a></code> and making liberal use of the <code><a data-link-type="element-sub" href="dom.html#element-attrdef-global-style" id="ref-for-element-attrdef-global-style-3">style</a></code> attribute.</p>
-      <p>All authoring tools, whether WYSIWYG or not, should make a best effort attempt at enabling
-  users to create well-structured, semantically rich, media-independent content.</p>
+      <p>작성 도구와 마크업 생성기는 <a data-link-type="dfn" href="infrastructure.html#conforming-document" id="ref-for-conforming-document-2">적합한 문서</a>를 생성해야(must) 합니다.
+  작성자에게 적용되는 적합성 기준은 또한 작성 도구에 적용합니다.</p>
+      <p>작성 도구는 오직 작성 도구가 아직 작성자 의도를 결정할 수 없는 정도에만, 명시된 목적에 대한
+  요소(element) 사용의 요구사항이 적용되지 않습니다. 하지만, 저작 도구는 자동으로 요소(element)를 
+  오용하거나 사용자가 그렇게 하는 것을 권장해서는(must) 안됩니다.</p>
+      <p class="example" id="example-881a9277"><a class="self-link" href="infrastructure.html#example-881a9277"></a> 예를 들어, 임의의 연락 정보를 위해 <code><a data-link-type="element" href="sections.html#elementdef-address" id="ref-for-elementdef-address-1">address</a></code> 요소(element)를 사용하는 것은 비적합합니다;
+    그 요소(element)는 문서나 섹션의 작성자에 대한 연락 정보를 마크업 하는 용도로만 사용 
+    가능합니다. 하지만, 작성 도구는 차이를 결정하는 것이 불가능 할 것이기 때문에, 작성 도구는 
+    그 요구사항이 적용 되지 않습니다. 그러나 이것은 작성 도구가 임의의 이탤릭체 본문(예를 들어)을 
+    위해 <code><a data-link-type="element" href="sections.html#elementdef-address" id="ref-for-elementdef-address-2">address</a></code> 요소(element)를 사용할 수 있다는 것을 의미하지 않습니다; 사용자가 섹션이나
+    다른 무언가에 대한 연락 정보를 삽입한다면, 그것은 단지 작성 도구가 검증할 필요가 없다는 것을 
+    의미합니다. </p>
+      <p class="note" role="note"> 적합성 검사의 측면에서, 편집기는 접근성 검사기가 검증하는 동일한 범위를 준수하는 문서를 
+    출력해야 합니다. </p>
+      <p>작성 도구가 비적합한 문서를 편집하는데 사용되는 경우, 편집 세션 동안 편집되지 않은 문서의 섹션
+  내의 적합성 오류를 보존할 수 있습니다.(즉, 편집 도구는 잘못된 콘텐트 왕복을 허용합니다.) 그러나,
+  저작 도구는 오류가 그렇게 보존된다면 출력이 준수하다고 주장해서는(must) 안됩니다.</p>
+      <p>저작 도구는 두 개의 광범위한 종류로 제공 될 것으로 예상됩니다: 구조적 혹은 의미론적 데이터에서
+  동작하는 도구와, What-You-See-Is-What-You-Get 매체 특정 편집 기준에서 동작하는 도구(WYSIWYG)
+  입니다.</p>
+      <p>소스 정보의 구조는 어떤 HTML 요소(element)와 속성(attribute)가 가장 적절한지에 관하여 선택을
+  하는데 사용될 수 있기 때문에, 전자는 HTML을 작성하는 도구에 대한 선호된 메커니즘입니다.</p>
+      <p>하지만, WYSIWYG 도구는 타당합니다. WYSIWYG 도구는 그것이 적절하다고 알고 있는 요소(element)들을
+  사용해야(should) 하고, 그것이 적절하다고 알지 못하는 요소(element)들을 사용해서는 안됩니다(should).
+  이것은 어떤 극단적인 경우에 플로우 요소(flow element)의 사용을 <code><a data-link-type="element" href="grouping-content.html#elementdef-div" id="ref-for-elementdef-div-5">div</a></code>, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-b" id="ref-for-elementdef-b-2">b</a></code>, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-i" id="ref-for-elementdef-i-13">i</a></code>, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-span" id="ref-for-elementdef-span-5">span</a></code>과 
+  같은 단지 몇 가지 요소(element)로 제한하는 것과 <code><a data-link-type="element-sub" href="dom.html#element-attrdef-global-style" id="ref-for-element-attrdef-global-style-3">style</a></code>를 자유롭게 사용하는 것을 
+  의미할 수 있습니다.</p>
+      <p>WYSIWYG 이든 아니든 모든 작성 도구는 사용자들이 잘 구조화 되고, 의미론적으로 풍부하며, 미디어
+  독립적인 콘텐트를 만드는 것이 가능하도록 최선의 노력을 기울여야(should) 합니다.</p>
     </dd></dl>
-    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="hardware limitations|practical concerns" data-noexport="" id="hardware-limitations"></dfn>User agents may impose implementation-specific limits on otherwise unconstrained inputs, e.g., to
-  prevent denial of service attacks, to guard against running out of memory, or to work around
-  platform-specific limitations. <a class="fingerprint" href="introduction.html#fingerprinting-vector" id="ref-for-fingerprinting-vector-3"><img alt="(This is a fingerprinting vector.)" height="21" src="images/fingerprint.png" width="15"></a></p>
-    <p>For compatibility with existing content and prior specifications, this specification describes
-  two authoring formats: one based on XML (referred to as <a href="xhtml.html#xhtml">the XHTML syntax</a>), and one using a <a href="syntax.html#writing-html-documents">custom format</a> inspired by SGML (referred to as <a href="syntax.html#syntax">the HTML syntax</a>). Implementations
-  must support at least one of these two formats, although supporting both is encouraged.</p>
-    <p>Some conformance requirements are phrased as requirements on elements, attributes, methods or
-  objects. Such requirements fall into two categories: those describing content model restrictions,
-  and those describing implementation behavior. Those in the former category are requirements on
-  documents and authoring tools. Those in the second category are requirements on user agents.
-  Similarly, some conformance requirements are phrased as requirements on authors; such requirements
-  are to be interpreted as conformance requirements on the documents that authors produce. (In other
-  words, this specification does not distinguish between conformance criteria on authors and
-  conformance criteria on documents.)</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="hardware limitations|practical concerns" data-noexport="" id="hardware-limitations"></dfn>유저 에이전트는 그 외 자유로운 입력에 구현
+  특정(implementation-specific) 제한, 예를 들어 서비스 거부 공격을 막기 위한 제한, 또는 메모리 부족이 
+  생기지 않도록 하기 위한 제한, 또는 플랫폼 특정 한계를 피하기 위한 제한을 부과할 수 있습니다. <a class="fingerprint" href="introduction.html#fingerprinting-vector" id="ref-for-fingerprinting-vector-3"><img alt="(이것은 지문 그림입니다.)" height="21" src="images/fingerprint.png" width="15"></a></p>
+    <p>기존 콘텐트와 이전 명세와의 호환성을 위해, 이 명세는 두 가지 작성 형식을 설명합니다: 하나는
+  XML(<a href="xhtml.html#xhtml">XHTML 구문</a>으로 언급되는) 기반, 그리고 하나는 SGML 
+  (<a href="syntax.html#syntax">HTML 구문</a>으로 언급되는)에 영감을 받은 <a href="syntax.html#writing-html-documents">사용자 정의 형식</a>입니다. 
+  구현은 이 두가지 형식 중 적어도 하나를 지원해야(must) 하지만, 둘 모두를 지원하는 것이 권장됩니다.</p>
+    <p>일부 적합성 요구사항은 요소(element), 속성(attribute), 메서드(method), 객체(object)의 요구사항으로
+  표현됩니다. 그러한 요구사항은 두 가지 범주로 나뉩니다: 콘텐츠 모델 제약사항을 기술하는 것과 구현
+  동작을 기술하는 것. 전자의 범주의 것은 문서와 작성 도구의 요구사항입니다. 두 번째 범주의 것은 유저
+  에이전트의 요구사항입니다. 비슷하게, 일부 적합성 요구사항은 저자에 대한 요구사항으로 표현됩니다;
+  그러한 요구사항은 작성자가 생산한 문서에 대한 적합성 요구사항으로 해석되어야 합니다. (다시 말해, 
+  이 명세는 저자에 대한 적합성 기준과 문서에 대한 적합성 기준을 구분하지 않습니다.)</p>
     <h4 class="heading settled" data-level="2.2.2" id="conformance-requirements-dependencies"><span class="secno">2.2.2. </span><span class="content">Dependencies</span><a class="self-link" href="infrastructure.html#conformance-requirements-dependencies"></a></h4>
     <p>This specification relies on several other underlying specifications.</p>
     <dl>
@@ -6248,7 +6241,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="introduction.html#ref-for-fingerprinting-vector-1">1.8. 개인 정보 보호</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-2">2.1.5. Plugin 콘텐트 처리기</a>
-    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-3">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-3">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-4">2.6.2. Processing model</a>
     </li><li><a href="dom.html#ref-for-fingerprinting-vector-5">3.1.2. Resource metadata management</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fingerprinting-vector-6">4.7.14.6. Offsets into the media resource</a>
@@ -6426,7 +6419,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="html-mime-type">
    <b><a href="infrastructure.html#html-mime-type">#html-mime-type</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-mime-type-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-html-mime-type-1">2.2.1. 적합성 종류</a>
     </li><li><a href="browsers.html#ref-for-html-mime-type-2">6.7.1. Navigating across documents</a>
     </li><li><a href="browsers.html#ref-for-html-mime-type-3">6.7.9. Navigating to a fragment identifier</a>
     </li><li><a href="syntax.html#ref-for-html-mime-type-4">8. The HTML syntax</a>
@@ -6855,7 +6848,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="utf-16-encoding">
    <b><a href="infrastructure.html#utf-16-encoding">#utf-16-encoding</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-16-encoding-1">2.1.6. Character encodings</a> <a href="infrastructure.html#ref-for-utf-16-encoding-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-utf-16-encoding-1">2.1.6. 문자 인코딩</a> <a href="infrastructure.html#ref-for-utf-16-encoding-2">(2)</a>
     </li><li><a href="syntax.html#ref-for-utf-16-encoding-3">8.2.2.2. Determining the character encoding</a>
     </li><li><a href="syntax.html#ref-for-utf-16-encoding-4">8.2.2.4. Changing the encoding while parsing</a> <a href="syntax.html#ref-for-utf-16-encoding-5">(2)</a>
    </li></ul>
@@ -6863,7 +6856,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="ascii-compatible-encoding">
    <b><a href="infrastructure.html#ascii-compatible-encoding">#ascii-compatible-encoding</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-ascii-compatible-encoding-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-ascii-compatible-encoding-1">2.1.6. 문자 인코딩</a>
     </li><li><a href="document-metadata.html#ref-for-ascii-compatible-encoding-2">4.2.5.5. Specifying the document’s character encoding</a> <a href="document-metadata.html#ref-for-ascii-compatible-encoding-3">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-ascii-compatible-encoding-4">4.10.3. The form element</a>
     </li><li><a href="sec-forms.html#ref-for-ascii-compatible-encoding-5">4.10.22.7. Multipart form data</a>
@@ -6874,13 +6867,13 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="code-unit">
    <b><a href="infrastructure.html#code-unit">#code-unit</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-code-unit-1">2.1.6. Character encodings</a> <a href="infrastructure.html#ref-for-code-unit-2">(2)</a> <a href="infrastructure.html#ref-for-code-unit-3">(3)</a>
+    <li><a href="infrastructure.html#ref-for-code-unit-1">2.1.6. 문자 인코딩</a> <a href="infrastructure.html#ref-for-code-unit-2">(2)</a> <a href="infrastructure.html#ref-for-code-unit-3">(3)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="unicode-code-point">
    <b><a href="infrastructure.html#unicode-code-point">#unicode-code-point</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-unicode-code-point-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-unicode-code-point-1">2.1.6. 문자 인코딩</a>
     </li><li><a href="syntax.html#ref-for-unicode-code-point-2">8.2.1. Overview of the parsing model</a>
    </li></ul>
   </aside>
@@ -6893,7 +6886,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="unicode-character">
    <b><a href="infrastructure.html#unicode-character">#unicode-character</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-unicode-character-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-unicode-character-1">2.1.6. 문자 인코딩</a>
     </li><li><a href="dom.html#ref-for-unicode-character-2">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="syntax.html#ref-for-unicode-character-3">8.2.2.5. Preprocessing the input stream</a>
    </li></ul>
@@ -6911,7 +6904,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#conforming-document">#conforming-document</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-conforming-document-1">1.10. 작성자를 위한 적합성 요구사항</a>
-    </li><li><a href="infrastructure.html#ref-for-conforming-document-2">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-conforming-document-2">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-conforming-document-3">2.2.3. Extensibility</a> <a href="infrastructure.html#ref-for-conforming-document-4">(2)</a> <a href="infrastructure.html#ref-for-conforming-document-5">(3)</a> <a href="infrastructure.html#ref-for-conforming-document-6">(4)</a> <a href="infrastructure.html#ref-for-conforming-document-7">(5)</a> <a href="infrastructure.html#ref-for-conforming-document-8">(6)</a>
     </li><li><a href="sections.html#ref-for-conforming-document-9">4.3.1. The body element</a>
     </li><li><a href="semantics-scripting.html#ref-for-conforming-document-10">4.12.2. The noscript element</a>
@@ -6920,7 +6913,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="rendering-support-the-suggested-default-rendering">
    <b><a href="infrastructure.html#rendering-support-the-suggested-default-rendering">#rendering-support-the-suggested-default-rendering</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-1">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-2">(2)</a>
     </li><li><a href="dom.html#ref-for-rendering-support-the-suggested-default-rendering-3">3.2.6.2. User agent conformance criteria</a>
     </li><li><a href="rendering.html#ref-for-rendering-support-the-suggested-default-rendering-4">10. Rendering</a>
    </li></ul>
@@ -6928,7 +6921,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="lack-scripting-support">
    <b><a href="infrastructure.html#lack-scripting-support">#lack-scripting-support</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-lack-scripting-support-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-lack-scripting-support-1">2.2.1. 적합성 종류</a>
     </li><li><a href="syntax.html#ref-for-lack-scripting-support-2">8.2.1. Overview of the parsing model</a>
    </li></ul>
   </aside>
@@ -8788,7 +8781,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="infrastructure.html#ref-for-html-namespace-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-html-namespace-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-html-namespace-4">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. Interactions with XPath and XSLT</a>
     </li><li><a href="dom.html#ref-for-html-namespace-7">3.1.3. DOM tree accessors</a>
     </li><li><a href="dom.html#ref-for-html-namespace-8">3.2.4.2.6. Embedded content</a>
@@ -10965,7 +10958,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="dom.html#element-attrdef-global-style">#element-attrdef-global-style</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-global-style-1">1.10.1. 표현 마크업</a> <a href="introduction.html#ref-for-element-attrdef-global-style-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-element-attrdef-global-style-3">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-element-attrdef-global-style-3">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-global-style-4">3.2.5.8. The style attribute</a> <a href="dom.html#ref-for-element-attrdef-global-style-5">(2)</a> <a href="dom.html#ref-for-element-attrdef-global-style-6">(3)</a>
     </li><li><a href="rendering.html#ref-for-element-attrdef-global-style-7">10.4.4. Image maps</a>
    </li></ul>
@@ -11914,16 +11907,16 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="grouping-content.html#ref-for-elementdef-article-31">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-article-32">4.4.4. The blockquote element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-article-33">4.4.11. The figure element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-article-34">4.4.13. The main element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-article-35">4.4.14. The div element</a>
-    </li><li><a href="links.html#ref-for-elementdef-article-36">4.8.6.2. Link type "author"</a>
-    </li><li><a href="links.html#ref-for-elementdef-article-37">4.8.6.3. Link type "bookmark"</a> <a href="links.html#ref-for-elementdef-article-38">(2)</a>
-    </li><li><a href="links.html#ref-for-elementdef-article-39">4.8.6.11. Link type "tag"</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-article-40">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-article-41">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-article-42">Elements</a> <a href="fullindex.html#ref-for-elementdef-article-43">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-article-44">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-article-45">(2)</a> <a href="fullindex.html#ref-for-elementdef-article-46">(3)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-article-47">Element Interfaces</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-article-34">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-article-35">(2)</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-article-36">4.4.14. The div element</a>
+    </li><li><a href="links.html#ref-for-elementdef-article-37">4.8.6.2. Link type "author"</a>
+    </li><li><a href="links.html#ref-for-elementdef-article-38">4.8.6.3. Link type "bookmark"</a> <a href="links.html#ref-for-elementdef-article-39">(2)</a>
+    </li><li><a href="links.html#ref-for-elementdef-article-40">4.8.6.11. Link type "tag"</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-article-41">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-article-42">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-article-43">Elements</a> <a href="fullindex.html#ref-for-elementdef-article-44">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-article-45">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-article-46">(2)</a> <a href="fullindex.html#ref-for-elementdef-article-47">(3)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-article-48">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-section">
@@ -11965,14 +11958,14 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="sections.html#ref-for-elementdef-nav-15">4.3.10.1. Creating an outline</a>
     </li><li><a href="sections.html#ref-for-elementdef-nav-16">4.3.11. Usage summary</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-nav-17">4.4.1. The p element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-nav-18">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-nav-19">(2)</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-nav-20">4.4.14. The div element</a>
-    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-nav-21">4.13.2. Bread crumb navigation</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-nav-22">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-nav-23">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-nav-24">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-nav-25">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-nav-26">(2)</a> <a href="fullindex.html#ref-for-elementdef-nav-27">(3)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-nav-28">Element Interfaces</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-nav-18">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-nav-19">(2)</a> <a href="grouping-content.html#ref-for-elementdef-nav-20">(3)</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-nav-21">4.4.14. The div element</a>
+    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-nav-22">4.13.2. Bread crumb navigation</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-nav-23">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-nav-24">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-nav-25">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-nav-26">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-nav-27">(2)</a> <a href="fullindex.html#ref-for-elementdef-nav-28">(3)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-nav-29">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-aside">
@@ -11987,14 +11980,14 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="sections.html#ref-for-elementdef-aside-12">4.3.11. Usage summary</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-aside-13">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-aside-14">4.4.11. The figure element</a> <a href="grouping-content.html#ref-for-elementdef-aside-15">(2)</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-aside-16">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-aside-17">(2)</a> <a href="grouping-content.html#ref-for-elementdef-aside-18">(3)</a> <a href="grouping-content.html#ref-for-elementdef-aside-19">(4)</a> <a href="grouping-content.html#ref-for-elementdef-aside-20">(5)</a> <a href="grouping-content.html#ref-for-elementdef-aside-21">(6)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-aside-22">4.6.1. The ins element</a>
-    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-23">4.13.5. Footnotes</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-24">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-25">(3)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-aside-26">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-aside-27">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-aside-28">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-aside-29">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-aside-30">(2)</a> <a href="fullindex.html#ref-for-elementdef-aside-31">(3)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-aside-32">Element Interfaces</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-aside-16">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-aside-17">(2)</a> <a href="grouping-content.html#ref-for-elementdef-aside-18">(3)</a> <a href="grouping-content.html#ref-for-elementdef-aside-19">(4)</a> <a href="grouping-content.html#ref-for-elementdef-aside-20">(5)</a> <a href="grouping-content.html#ref-for-elementdef-aside-21">(6)</a> <a href="grouping-content.html#ref-for-elementdef-aside-22">(7)</a>
+    </li><li><a href="edits.html#ref-for-elementdef-aside-23">4.6.1. The ins element</a>
+    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-24">4.13.5. Footnotes</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-25">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-26">(3)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-aside-27">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-aside-28">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-aside-29">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-aside-30">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-aside-31">(2)</a> <a href="fullindex.html#ref-for-elementdef-aside-32">(3)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-aside-33">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-h1">
@@ -12130,14 +12123,14 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="sections.html#ref-for-elementdef-header-20">4.3.11. Usage summary</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-header-21">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-header-22">4.4.9. The dt element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-header-23">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-header-24">(2)</a> <a href="grouping-content.html#ref-for-elementdef-header-25">(3)</a> <a href="grouping-content.html#ref-for-elementdef-header-26">(4)</a>
-    </li><li><a href="tabular-data.html#ref-for-elementdef-header-27">4.9.10. The th element</a>
-    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-28">4.13.1. Subheadings, subtitles, alternative titles and taglines</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-29">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-30">(3)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-header-31">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-header-32">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-header-33">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-header-34">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-header-35">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-header-36">Element Interfaces</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-header-23">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-header-24">(2)</a> <a href="grouping-content.html#ref-for-elementdef-header-25">(3)</a> <a href="grouping-content.html#ref-for-elementdef-header-26">(4)</a> <a href="grouping-content.html#ref-for-elementdef-header-27">(5)</a>
+    </li><li><a href="tabular-data.html#ref-for-elementdef-header-28">4.9.10. The th element</a>
+    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-29">4.13.1. Subheadings, subtitles, alternative titles and taglines</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-30">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-31">(3)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-header-32">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-header-33">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-header-34">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-header-35">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-header-36">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-header-37">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-footer">
@@ -12154,19 +12147,19 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="grouping-content.html#ref-for-elementdef-footer-20">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-footer-21">4.4.4. The blockquote element</a> <a href="grouping-content.html#ref-for-elementdef-footer-22">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-footer-23">4.4.9. The dt element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-24">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-footer-25">(2)</a> <a href="grouping-content.html#ref-for-elementdef-footer-26">(3)</a> <a href="grouping-content.html#ref-for-elementdef-footer-27">(4)</a> <a href="grouping-content.html#ref-for-elementdef-footer-28">(5)</a>
-    </li><li><a href="tabular-data.html#ref-for-elementdef-footer-29">4.9.10. The th element</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-footer-30">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-footer-31">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-footer-32">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-footer-33">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-footer-34">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-footer-35">Element Interfaces</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-24">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-footer-25">(2)</a> <a href="grouping-content.html#ref-for-elementdef-footer-26">(3)</a> <a href="grouping-content.html#ref-for-elementdef-footer-27">(4)</a> <a href="grouping-content.html#ref-for-elementdef-footer-28">(5)</a> <a href="grouping-content.html#ref-for-elementdef-footer-29">(6)</a>
+    </li><li><a href="tabular-data.html#ref-for-elementdef-footer-30">4.9.10. The th element</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-footer-31">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-footer-32">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-footer-33">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-footer-34">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-footer-35">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-footer-36">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-address">
    <b><a href="sections.html#elementdef-address">#elementdef-address</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-elementdef-address-1">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-elementdef-address-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-elementdef-address-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-address-2">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-address-3">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-address-4">3.2.4.2.8. Palpable content</a>
     </li><li><a href="sections.html#ref-for-elementdef-address-5">4.3.9. The address element</a> <a href="sections.html#ref-for-elementdef-address-6">(2)</a> <a href="sections.html#ref-for-elementdef-address-7">(3)</a> <a href="sections.html#ref-for-elementdef-address-8">(4)</a> <a href="sections.html#ref-for-elementdef-address-9">(5)</a> <a href="sections.html#ref-for-elementdef-address-10">(6)</a> <a href="sections.html#ref-for-elementdef-address-11">(7)</a>
@@ -12200,7 +12193,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="outline">
    <b><a href="sections.html#outline">#outline</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-outline-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-outline-1">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-outline-2">3.2.4.2.3. Sectioning content</a> <a href="dom.html#ref-for-outline-3">(2)</a>
     </li><li><a href="sections.html#ref-for-outline-4">4.3.3. The section element</a>
     </li><li><a href="sections.html#ref-for-outline-5">4.3.7. The header element</a>
@@ -12332,7 +12325,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="elementdef-blockquote">
    <b><a href="grouping-content.html#elementdef-blockquote">#elementdef-blockquote</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-elementdef-blockquote-1">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-elementdef-blockquote-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-elementdef-blockquote-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-blockquote-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-blockquote-3">2.5.3. Dynamic changes to base URLs</a>
     </li><li><a href="dom.html#ref-for-elementdef-blockquote-4">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-blockquote-5">3.2.4.2.8. Palpable content</a>
@@ -12655,7 +12648,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-div-1">1.10.3. 
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-div-2">(2)</a> <a href="introduction.html#ref-for-elementdef-div-3">(3)</a> <a href="introduction.html#ref-for-elementdef-div-4">(4)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-div-5">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-div-5">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-6">3.2.4. Content models</a> <a href="dom.html#ref-for-elementdef-div-7">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-8">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-9">3.2.4.2.8. Palpable content</a>
@@ -13296,7 +13289,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-i-1">1.10.1. 표현 마크업</a>
     </li><li><a href="introduction.html#ref-for-elementdef-i-2">1.10.2. 구문 오류</a> <a href="introduction.html#ref-for-elementdef-i-3">(2)</a> <a href="introduction.html#ref-for-elementdef-i-4">(3)</a> <a href="introduction.html#ref-for-elementdef-i-5">(4)</a> <a href="introduction.html#ref-for-elementdef-i-6">(5)</a> <a href="introduction.html#ref-for-elementdef-i-7">(6)</a> <a href="introduction.html#ref-for-elementdef-i-8">(7)</a> <a href="introduction.html#ref-for-elementdef-i-9">(8)</a> <a href="introduction.html#ref-for-elementdef-i-10">(9)</a> <a href="introduction.html#ref-for-elementdef-i-11">(10)</a> <a href="introduction.html#ref-for-elementdef-i-12">(11)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-i-13">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-i-13">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-14">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-15">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-16">3.2.4.2.8. Palpable content</a>
@@ -13316,7 +13309,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="textlevel-semantics.html#elementdef-b">#elementdef-b</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-b-1">1.10.1. 표현 마크업</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-b-2">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-b-2">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-b-3">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-b-4">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-b-5">3.2.4.2.8. Palpable content</a>
@@ -13405,7 +13398,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-span-1">1.10.3. 
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-span-2">(2)</a> <a href="introduction.html#ref-for-elementdef-span-3">(3)</a> <a href="introduction.html#ref-for-elementdef-span-4">(4)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-span-5">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-span-5">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-span-6">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-span-7">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-span-8">3.2.4.2.8. Palpable content</a>
@@ -23190,7 +23183,7 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="introduction.html#ref-for-elementdef-script-3">1.9.1. HTML로 안전한 어플리케이션 작성</a>
     </li><li><a href="introduction.html#ref-for-elementdef-script-4">1.10.3. 
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-script-5">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-script-6">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-elementdef-script-7">(2)</a> <a href="infrastructure.html#ref-for-elementdef-script-8">(3)</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-script-6">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-script-7">(2)</a> <a href="infrastructure.html#ref-for-elementdef-script-8">(3)</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-9">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-script-10">(2)</a> <a href="dom.html#ref-for-elementdef-script-11">(3)</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-12">3.2.4.2.1. Metadata content</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-13">3.2.4.2.2. Flow content</a>
@@ -23239,7 +23232,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="htmlscriptelement-htmlscriptelement">
    <b><a href="semantics-scripting.html#htmlscriptelement-htmlscriptelement">#htmlscriptelement-htmlscriptelement</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-htmlscriptelement-htmlscriptelement-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-htmlscriptelement-htmlscriptelement-1">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-htmlscriptelement-htmlscriptelement-2">3.1.1. The Document object</a>
     </li><li><a href="obsolete.html#ref-for-htmlscriptelement-htmlscriptelement-3">11.3.5. Other elements, attributes and APIs</a>
     </li><li><a href="fullindex.html#ref-for-htmlscriptelement-htmlscriptelement-4">Elements</a>
@@ -24671,7 +24664,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="introduction.html#ref-for-browsing-context-1">1.5.1. 스크립트 실행의 직렬화</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-2">2.1.5. Plugin 콘텐트 처리기</a>
-    </li><li><a href="infrastructure.html#ref-for-browsing-context-3">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-browsing-context-4">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-browsing-context-3">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-browsing-context-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-5">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-browsing-context-6">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-7">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-browsing-context-8">(2)</a>
     </li><li><a href="dom.html#ref-for-browsing-context-9">3.1. Documents</a> <a href="dom.html#ref-for-browsing-context-10">(2)</a> <a href="dom.html#ref-for-browsing-context-11">(3)</a> <a href="dom.html#ref-for-browsing-context-12">(4)</a> <a href="dom.html#ref-for-browsing-context-13">(5)</a>
@@ -29382,13 +29375,13 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="utf-16be">
    <b><a href="syntax.html#utf-16be">#utf-16be</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-16be-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-utf-16be-1">2.1.6. 문자 인코딩</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="utf-16le">
    <b><a href="syntax.html#utf-16le">#utf-16le</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-16le-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-utf-16le-1">2.1.6. 문자 인코딩</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="x-user-defined">
@@ -29863,7 +29856,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="scripting-flag">
    <b><a href="syntax.html#scripting-flag">#scripting-flag</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-scripting-flag-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-scripting-flag-1">2.2.1. 적합성 종류</a>
     </li><li><a href="semantics-scripting.html#ref-for-scripting-flag-2">4.12.2. The noscript element</a>
     </li><li><a href="syntax.html#ref-for-scripting-flag-3">8.2.3.5. Other parsing state flags</a>
     </li><li><a href="syntax.html#ref-for-scripting-flag-4">8.2.5.4.4. The "in head" insertion mode</a> <a href="syntax.html#ref-for-scripting-flag-5">(2)</a>
