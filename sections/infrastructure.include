@@ -284,11 +284,11 @@
     호환 인코딩</a>이 되지 않는 것으로 처리할 필요가 있는 유일한 인코딩입니다.
   </p>
 
-  <dfn>코드 단위</dfn>이라는 용어는웹 IDL 명세에 정의된 대로 사용됩니다: <code>DOMString</code>의 
+  <dfn lt="code unit|code units">코드 단위</dfn>이라는 용어는웹 IDL 명세에 정의된 대로 사용됩니다: <code>DOMString</code>의 
   가장 작은 최소 구성 요소인 16비트 무부호 정수입니다. (이것은 유니코드에 사용된 것 보다 좁은 정의이고
   <i>code point</i>와 동일하지 않습니다.) [[!WEBIDL]]
 
-  <dfn lt="code unit|code units">유니코드 코드 포인트</dfn>라는 용어는 그것이 가능한 경우 <i>유니코드 스칼라 값</i>을 의미하고,
+  <dfn lt="Unicode code point">유니코드 코드 포인트</dfn>라는 용어는 그것이 가능한 경우 <i>유니코드 스칼라 값</i>을 의미하고,
   불가능한 경우 독자적인 대용 코드 포인트(isolated surrogate code point)를 의미합니다. 적합성
   요구사항이 이 문자나 유니코드 코드 포인트 용어로 정의되는 경우, 낮은 대용 코드가 뒤따르는 높은 대용 
   코드로 구성되는 한 쌍의 <a lt="code units">코드 단위</a>는 대용 코드쌍으로 나타나는 단일 코드 
@@ -321,7 +321,7 @@
   동일한 규범적 의미로 해석되어야 합니다. 가독성을 위해, 이 단어들은 이 섹션에서 모두 대문자로
   나타내지는 않습니다. [[!RFC2119]]
   
-  <p class="author-note">
+  <p class="translator-note">
     본 번역본에서는 가급적 위 표기들을 한글과 함께 영문을 괄호 안에 표기하려 하고 있으나, 깜박하고
     놓치고 지나갈 수 있기 때문에 가급적 위 키워드와 관련된 한글 표현에 대해서는 영문으로 된 원문과
     비교하여 보시기를 권합니다.
@@ -359,216 +359,200 @@
   방법으로 구현될 수 있습니다. (특히, 이 명세에 정의된 알고리즘은 쉽게 따라할 수 있도록 의도된 것이고,
   고성능이 되도록 의도된 것이 아닙니다.)
 
-<h4 id="conformance-classes">Conformance classes</h4>
+<h4 id="conformance-classes">적합성 종류</h4>
 
-  This specification describes the conformance criteria for user agents (relevant
-  to implementors) and documents (relevant to authors and authoring tool
-  implementors).
+  이 명세는 유저 에이전트(구현자에 관련된)와 문서(작성자와 작성 도구 구현자에 관련된) 대한 적합성 
+  기준을 설명합니다.
 
-  <dfn lt="conforming document|conforming documents">Conforming documents</dfn> are those that comply with all the conformance criteria for
-  documents. For readability, some of these conformance requirements are phrased as conformance
-  requirements on authors; such requirements are implicitly requirements on documents: by
-  definition, all documents are assumed to have had an author. (In some cases, that author may
-  itself be a user agent &mdash; such user agents are subject to additional rules, as explained
-  below.)
+  <dfn lt="conforming document|conforming documents">적합한 문서</dfn>는 문서에 대한 모든 적합성 
+  기준을 따르는 문서입니다. 가독성을 위해, 이 적합성 요구사항의 일부는 작성자에 대한 적합성 
+  요구사항으로 표현됩니다; 그 요구사항들은 암묵적으로 문서에 대한 요구사항입니다: 정의에 의해, 모든
+  문서들은 작성자가 있었다고 가정됩니다. (어떤 경우, 그 작성자는 유저 에이전트 자체가 될 수 있습니다.
+  &mdash; 그러한 유저 에이전트는 아래 설명된 대로, 추가적인 규칙의 적용을 받습니다.)
 
   <p class="example">
-    For example, if a requirement states that "authors must not use the <code>foobar</code>
-    element", it would imply that documents are not allowed to contain elements named
-    <code>foobar</code>.
+    예를 들어, 요구사항이 "작성자는 <code>foobar</code> 요소(element)를 사용하지 않아야(must not) 
+    합니다" 라고 명시한다면, 이는 문서가 <code>foobar</code>라고 명명된 요소(element)를 포함하는 
+    것을 허용하지 않는다는 것을 암시합니다.
   </p>
 
   <p class="note impl">
-    There is no implied relationship between document conformance requirements and implementation
-    conformance requirements. User agents are not free to handle non-conformant documents as they
-    please; the processing model described in this specification applies to implementations
-    regardless of the conformity of the input documents.
+    문서 적합성 요구사항과 구현 적합성 요구사항 사이의 암묵적인 관계는 없습니다. 유저 에이전트는 
+    원하는 대로 부적합한 문서를 처리하는데 자유롭지 않습니다; 이 명세에 설명된 처리 모델은 입력 
+    문서의 적합성에 상관없이 구현에 적용됩니다.
   </p>
 
-  User agents fall into several (overlapping) categories with different conformance requirements.
+  유저 에이전트는 서로 다른 적합성 요구사항을 가진 몇 가지 범주에 (중복하여) 속합니다. 
 
-  : Web browsers and other interactive user agents
-  :: Web browsers that support <a href="#xhtml">the XHTML syntax</a> must process elements and attributes from the
-      <a>HTML namespace</a> found in XML documents as described in this specification, so that users
-      can interact with them, unless the semantics of those elements have been overridden by other
-      specifications.
+  : 웹 브라우저와 다른 인터랙티브 유저 에이전트
+  :: <a href="#xhtml">XHTML 구문</a>을 지원하는 웹 브라우저는 이 명세에 설명된 대로 XML 문서에서 
+      찾아지는 <a lt="HTML namespace">HTML 네임스페이스</a>의 요소(element)와 속성(attribute)을 처리 
+      해야(must)하기 때문에, 그 요소의 의미가 다른 명세에 의해 재정의되지 않는 한 사용자는 그것들을 
+      가지고 상호작용 할 수 있습니다.
 
       <p class="example">
-        A conforming XHTML processor would, upon finding an XHTML <{script}> element in an
-        XML document, execute the script contained in that element. However, if the element is found
-        within a transformation expressed in XSLT (assuming the user agent also supports XSLT), then
-        the processor would instead treat the <{script}> element as an opaque element that
-        forms part of the transform.
+        적합한 HTML 처리기는, XHTML 문서에서 XHTML <{script}> 요소(element)를 찾자마자, 그 요소에  
+        포함된 스크립트를 실행합니다. 하지만, 요소가 XSLT에서 표현된 변형 내에서 찾아진다면 (유저 
+        에이전트가 XSLT도 지원한다고 가정하여), 처리기는 대신 변형의 일부를 형성하는 불분명한
+        요소(element)로서 <{script}> 요소(element)를 대신 다룰 것입니다.
       </p>
 
-      Web browsers that support <a href="#syntax">the HTML syntax</a> must process documents labeled with an
-      <a>HTML MIME type</a> as described in this specification, so that users can interact with
-      them.
+      <a href="#syntax">HTML 구문</a>을 지원하는 웹 브라우저는 이 명세에 설명된 대로 
+      <a lt="HTML MIME type">HTML MIME 타입</a>으로 라벨링 된 문서를 처리해야(must) 하기 때문에, 
+      사용자는 그 문서와 상호작용 할 수 있습니다.
 
-      User agents that support scripting must also be conforming implementations of the IDL
-      fragments in this specification, as described in the Web IDL specification. [[!WEBIDL]]
+      스크립팅을 지원하는 유저 에이전트는 또한 웹 IDL 명세에 정의된 대로, 이 명세의 IDL 코드 조각의 
+      구현이 준수되어야(must) 합니다. [[!WEBIDL]]
 
       <p class="note">
-        Unless explicitly stated, specifications that override the semantics of HTML elements do not
-        override the requirements on DOM objects representing those elements. For example, the
-        <{script}> element in the example above would still implement the
-        {{HTMLScriptElement}} interface.
+        명시적으로 명시되지 않은 한, HTML 요소(element)의 의미를 재정의 하는 명세는 그 요소(element)를
+        나타내는 DOM 객체에서의 요구사항을 재정의 하지 않습니다. 예를 들어, 위 예제에서  <{script}> 
+        요소(element)는 여전히 {{HTMLScriptElement}} 인터페이스를 구현합니다.
       </p>
 
-  : Non-interactive presentation user agents
-  :: User agents that process HTML and XHTML documents purely to render non-interactive versions
-      of them must comply to the same conformance criteria as Web browsers, except that they are
-      exempt from requirements regarding user interaction.
+  : 비상호작용 프리젠테이션 유저 에이전트
+  :: 순수하게 HTML과 XHTML 문서의 비상호작용 버전을 렌더링하기 위해 문서를 처리하는 유저 에이전트는,
+      사용자 인터랙션에 관하여 요구사항이 면제되는 것을 제외하고, 웹 브라우저 같이 동일한 적합성 
+      기준을 따라야(must) 합니다. 
 
       <p class="note">
-        Typical examples of non-interactive presentation user agents are printers (static user agents) and
-        overhead displays (dynamic user agents). It is expected that most static non-interactive
-        presentation user agents will also opt to <a>lack scripting support</a>.
+        비상호작용 유저 에이전트의 전형적인 예는 프린터(정적 유저 에이전트)와 오버헤드 디스플레이(동적
+        유저 에이전트)입니다. 대부분의 정적 비상호작용 프리젠테이션 유저 에이전트도 
+        <a lt="lack scripting support">스크립팅 지원을 필요로</a> 하기로 선택할 것이 예상됩니다. 
       </p>
 
       <p class="example">
-        A non-interactive but dynamic presentation user agent would still execute scripts, allowing forms
-        to be dynamically submitted, and so forth. However, since the concept of "focus" is
-        irrelevant when the user cannot interact with the document, the user agent would not need to support
-        any of the focus-related DOM APIs.
+        비상호작용이지만 동적 프리젠테이션 유저 에이전트는, 동적으로 전송되는 양식을 허용 하는등으로, 
+        여전히 스크립트를 실행합니다. 그러나, 사용자가 문서와 상호작용 할 수 없는 경우 "focus"의 
+        개념이 상관없기 때문에, 유저 에이전트는 포커스 관련 DOM API를 지원할 필요가 없습니다.
       </p>
 
-  : <dfn for="rendering" lt="support the suggested default rendering|supporting the suggested default rendering|Visual user agents that support the suggested default rendering">Visual user agents that support the suggested default rendering</dfn>
-  :: User agents, whether interactive or not, may be designated (possibly as a user option) as
-      <a>supporting the suggested default rendering</a> defined by this specification.
+  : <dfn for="rendering" lt="support the suggested default rendering|supporting the suggested default rendering|Visual user agents that support the suggested default rendering">제안된 기본 렌더링을 지원하는 시각적 유저 에이전트</dfn>
+  :: 유저 에이전트는, 상호작용이든 아니든, 이 명세에 정의된  
+      <a lt="supporting the suggested default rendering">제안된 기본 렌더링을 지원하는 것</a>으로 
+      (아마도 사용자 옵션으로) 지정됩니다.
 
-      This is not required. In particular, even user agents that do implement the suggested default
-      rendering are encouraged to offer settings that override this default to improve the
-      experience for the user, e.g., changing the color contrast, using different focus styles, or
-      otherwise making the experience more accessible and usable to the user.
+      이것은 필요하지 않습니다. 특히, 제안된 기본 렌더링을 구현하는 유저 에이전트도 사용자에 대한 
+      경험을 개선하기 위해, 예를 들어 색상 대비를 바꾸거나, 다른 포커스 스타일을 사용하거나, 그렇지 
+      않으면 사용자에게 더 접근 가능하고 사용 가능한 경험을 만들기 위해, 이 기본 값을 재정의 하는 
+      설정을 제공하도록 권장됩니다.
 
-      User agents that are designated as <a>supporting the suggested default rendering</a> must, while so
-      designated, implement the rules in [[#rendering]]. That section defines
-      the behavior that user agents are <em>expected</em> to implement.
+      <a lt="supporting the suggested default rendering">제안된 기본 렌더링을 지원하는 것</a>으로 
+      지정된 유저 에이전트는, 그렇게 지정된 동안, [[#rendering]] 섹션 내 규칙을 구현해야(must) 합니다. 
+      그 섹션은 유저에이전트가 구현할 것으로 <em>기대되는</em> 행동을 정의합니다.
 
-  : <dfn lt="lack scripting support|User agents with no scripting support|do not support scripting">User agents with no scripting support</dfn>
-  :: Implementations that do not support scripting (or which have their scripting features disabled
-      entirely) are exempt from supporting the events and DOM interfaces mentioned in this
-      specification. For the parts of this specification that are defined in terms of an events
-      model or in terms of the DOM, such user agents must still act as if events and the DOM were
-      supported.
+  : <dfn lt="lack scripting support|User agents with no scripting support|do not support scripting">스크립트를 지원하지 않는 유저 에이전트</dfn>
+  :: 스크립팅을 지원하지 않는(혹은 스크립트 기능이 완전히 비활성화 된) 구현은 이벤트와 이 명세에서 
+      언급된 DOM 인터페이스 지원이 면제됩니다. 이벤트 모델의 측면이나 DOM의 측면에서 정의된 이 명세의 
+      일부에 대해, 그런 유저 에이전트는 여전히 이벤트와 DOM이 지원된 것처럼 수행해야 합니다.
 
         <p class="note">
-          Scripting can form an integral part of an application. Web browsers that do not support
-          scripting, or that have scripting disabled, might be unable to fully convey the author's
-          intent.
+          스크립팅은 어플리케이션의 필수적인 부분을 형성할 수 있습니다. 스크립팅을 지원하지 않거나 
+          스크립트가 비활성화 된 웹 브라우저는 작성작의 의도를 완전히 전달 할 수 없을 수도 있습니다.
         </p>
 
-  : Conformance checkers
-  :: Conformance checkers must verify that a document conforms to the applicable conformance
-      criteria described in this specification. Automated conformance checkers are exempt from
-      detecting errors that require interpretation of the author's intent (for example, while a
-      document is non-conforming if the content of a <{blockquote}> element is not a quote,
-      conformance checkers running without the input of human judgement do not have to check that
-      <{blockquote}> elements only contain quoted material).
+  : 적합성 검사기
+  :: 적합성 검사기는 이 명세에 정의된 적절한 적합성 기준을 따르는 문서를 검증해야(must) 합니다. 
+      자동화 된 적합성 검사기는 작성자 의도의 해석을 요구하는 오류를 발견하는 것은 적용되지 않습니다. 
+      (예를 들어, <{blockquote}> 요소(element)의 콘텐트가 따옴표로 묶여있지 않다면 문서는 비적합 
+      함에도 불구하고, 사람의 판단의 입력 없이 수행하는 적합성 검사기는 <{blockquote}> 
+      요소(element)가 인용된 문장만을 포함함을 검사할 필요가 없습니다.)
 
-      Conformance checkers must check that the input document conforms when parsed without a
-      <a>browsing context</a> (meaning that no scripts are run, and that the parser's
-      <a>scripting flag</a> is disabled), and should also check that the input document conforms
-      when parsed with a <a>browsing context</a> in which scripts execute, and that the scripts
-      never cause non-conforming states to occur other than transiently during script execution
-      itself. (This is only a "SHOULD" and not a "MUST" requirement because it has been proven to be
-      impossible. [[COMPUTABLE]])
+      적합성 검사기는 입력 문서가 <a lt="browsing context">브라우징 컨텍스트</a> 없이 해석되는 경우
+      (스크립가 수행되지 않고, 해석기의 <a lt="scripting flag">스크립팅 플래그</a>가 비활성화 된 
+      것을 의미) 적합한지 검사해야(must) 하고, 또한 입력 문서가 스크립트를 수행하는 
+      <a lt="browsing context">브라우징 컨텍스트</a>를 가지고 해석되는 경우 적합한지, 그리고 
+      스크립트는 스크립트가 자신을 수행하는 동안 비적합 상태가 다른 것을 발생시키는 것을 야기하지 
+      않음을 검사해야(should) 합니다. (이것은 불가능한 것으로 증명되었기 때문에 "SHOULD"일 뿐 
+      "MUST" 요구사항이 아닙니다. [[COMPUTABLE]])
 
-      The term "HTML validator" can be used to refer to a conformance checker that itself conforms
-      to the applicable requirements of this specification.
+      "HTML 유효성 검사기"라는 용어는 이 명세의 적절한 요구사항을 준수하는 적합성 검사기를 지칭하는데 
+      사용될 수 있습니다.
 
       <div class="note">
-        XML DTDs cannot express all the conformance requirements of this specification. Therefore, a
-        validating XML processor and a DTD cannot constitute a conformance checker. Also, since
-        neither of the two authoring formats defined in this specification are applications of SGML,
-        a validating SGML system cannot constitute a conformance checker either.
+        XML DTD는 이 명세의 모든 적합성 요구사항들을 나타낼 수 없습니다. 그러므로, 검증 XML 처리기와
+        DTD는 적합성 검사기가 될 수 없습니다. 또한, 이 명세에 정의된 두 가지 작성 형식(format) 어느 
+        것도 SGML 어플리케이션이 아니기 때문에 검증 SGML 시스템 역시 적합성 검사기가 될 수 없습니다.
 
-        To put it another way, there are three types of conformance criteria:
+        바꿔 말하면, 3가지 유형의 적합성 기준이 있습니다:
 
-        1. Criteria that can be expressed in a DTD.
-        2. Criteria that cannot be expressed by a DTD, but can still be checked by a machine.
-        3. Criteria that can only be checked by a human.
+        1. DTD에 표현될 수 있는 기준.
+        2. DTD에 표현될 수 없지만, 여전히 기계(machine)에 의해 검사 될 수 있는 기준.
+        3. 사람에 의해서만 검사 될 수 있는 기준.
 
-        A conformance checker must check for the first two. A simple DTD-based validator only checks
-        for the first class of errors and is therefore not a conforming conformance checker
-        according to this specification.
+        적합성 검사기는 처음 두 가지에 대해 검사해야(must) 합니다. 간단한 DTD 기반 유효성 검사기는 
+        첫 번째 등급의 오류에 대해서만 검사하고 그렇기 때문에 이 명세를 따르는 적합한 적합성 검사기가 
+        아닙니다.
       </div>
 
-  : Data mining tools
-  :: Applications and tools that process HTML and XHTML documents for reasons other than to either
-      render the documents or check them for conformance should act in accordance with the semantics
-      of the documents that they process.
+  : 데이터 마이닝 도구
+  :: 문서를 렌더링 하거나 적합성에 대해 검사를 하는 것 외에 다른 이유로 HTML과 XHTML 문서를 처리하는 
+      어플리케이션과 도구들은 그들이 처리하는 문서의 의미에 부합하게 수행해야(should) 합니다.
 
       <p class="example">
-        A tool that generates <a lt="outline">document outlines</a> but increases the nesting level for each
-        paragraph and does not increase the nesting level for each section would not be conforming.
+        <a lt="outline">문서 아웃라인</a>을 생성하지만 각 문단에 대한 중첩 레벨을 증가시키고 각 
+        섹션에 대한 중첩 레벨을 증가시키지 않는 도구는 부적합 할 것입니다.
       </p>
 
-  : Authoring tools and markup generators
-  :: Authoring tools and markup generators must generate <a lt="conforming document">conforming documents</a>. Conformance
-      criteria that apply to authors also apply to authoring tools, where appropriate.
+  : 작성 도구와 마크업 생성기
+  :: 작성 도구와 마크업 생성기는 <a lt="conforming document">적합한 문서</a>를 생성해야(must) 합니다.
+      작성자에게 적용되는 적합성 기준은 또한 작성 도구에 적용합니다.
 
-      Authoring tools are exempt from the strict requirements of using elements only for their
-      specified purpose, but only to the extent that authoring tools are not yet able to determine
-      author intent. However, authoring tools must not automatically misuse elements or encourage
-      their users to do so.
+      작성 도구는 오직 작성 도구가 아직 작성자 의도를 결정할 수 없는 정도에만, 명시된 목적에 대한 
+      요소(element) 사용의 요구사항이 적용되지 않습니다. 하지만, 저작 도구는 자동으로 요소(element)를 
+      오용하거나 사용자가 그렇게 하는 것을 권장해서는(must) 안됩니다.
 
       <p class="example">
-        For example, it is not conforming to use an <{address}> element for arbitrary
-        contact information; that element can only be used for marking up contact information for
-        the author of the document or section. However, since an authoring tool is likely unable to
-        determine the difference, an authoring tool is exempt from that requirement. This does not
-        mean, though, that authoring tools can use <{address}> elements for any block of
-        italics text (for instance); it just means that the authoring tool doesn't have to verify,
-        if a user inserts contact information for a section or something else.
+        예를 들어, 임의의 연락 정보를 위해 <{address}> 요소(element)를 사용하는 것은 비적합합니다;
+        그 요소(element)는 문서나 섹션의 작성자에 대한 연락 정보를 마크업 하는 용도로만 사용 
+        가능합니다. 하지만, 작성 도구는 차이를 결정하는 것이 불가능 할 것이기 때문에, 작성 도구는 
+        그 요구사항이 적용 되지 않습니다. 그러나 이것은 작성 도구가 임의의 이탤릭체 본문(예를 들어)을 
+        위해 <{address}> 요소(element)를 사용할 수 있다는 것을 의미하지 않습니다; 사용자가 섹션이나
+        다른 무언가에 대한 연락 정보를 삽입한다면, 그것은 단지 작성 도구가 검증할 필요가 없다는 것을 
+        의미합니다.
       </p>
 
       <p class="note">
-        In terms of conformance checking, an editor has to output documents that conform to the same
-        extent that a conformance checker will verify.
+        적합성 검사의 측면에서, 편집기는 접근성 검사기가 검증하는 동일한 범위를 준수하는 문서를 
+        출력해야 합니다.
       </p>
 
-      When an authoring tool is used to edit a non-conforming document, it may preserve the
-      conformance errors in sections of the document that were not edited during the editing session
-      (i.e., an editing tool is allowed to round-trip erroneous content). However, an authoring tool
-      must not claim that the output is conformant if errors have been so preserved.
+      작성 도구가 비적합한 문서를 편집하는데 사용되는 경우, 편집 세션 동안 편집되지 않은 문서의 섹션 
+      내의 적합성 오류를 보존할 수 있습니다.(즉, 편집 도구는 잘못된 콘텐트 왕복을 허용합니다.) 그러나,
+      저작 도구는 오류가 그렇게 보존된다면 출력이 준수하다고 주장해서는(must) 안됩니다.
 
-      Authoring tools are expected to come in two broad varieties: tools that work from structure
-      or semantic data, and tools that work on a What-You-See-Is-What-You-Get media-specific editing
-      basis (WYSIWYG).
+      저작 도구는 두 개의 광범위한 종류로 제공 될 것으로 예상됩니다: 구조적 혹은 의미론적 데이터에서 
+      동작하는 도구와, What-You-See-Is-What-You-Get 매체 특정 편집 기준에서 동작하는 도구(WYSIWYG)
+      입니다.
 
-      The former is the preferred mechanism for tools that author HTML, since the structure in the
-      source information can be used to make informed choices regarding which HTML elements and
-      attributes are most appropriate.
+      소스 정보의 구조는 어떤 HTML 요소(element)와 속성(attribute)가 가장 적절한지에 관하여 선택을 
+      하는데 사용될 수 있기 때문에, 전자는 HTML을 작성하는 도구에 대한 선호된 메커니즘입니다.
 
-      However, WYSIWYG tools are legitimate. WYSIWYG tools should use elements they know are
-      appropriate, and should not use elements that they do not know to be appropriate. This might
-      in certain extreme cases mean limiting the use of flow elements to just a few elements, like
-      <{div}>, <{b}>, <{i}>, and <{span}> and making liberal use of the <{global/style}>
-      attribute.
+      하지만, WYSIWYG 도구는 타당합니다. WYSIWYG 도구는 그것이 적절하다고 알고 있는 요소(element)들을 
+      사용해야(should) 하고, 그것이 적절하다고 알지 못하는 요소(element)들을 사용해서는 안됩니다(should).
+      이것은 어떤 극단적인 경우에 플로우 요소(flow element)의 사용을 <{div}>, <{b}>, <{i}>, <{span}>과 
+      같은 단지 몇 가지 요소(element)로 제한하는 것과 <{global/style}>를 자유롭게 사용하는 것을 
+      의미할 수 있습니다.
 
-      All authoring tools, whether WYSIWYG or not, should make a best effort attempt at enabling
-      users to create well-structured, semantically rich, media-independent content.
+      WYSIWYG 이든 아니든 모든 작성 도구는 사용자들이 잘 구조화 되고, 의미론적으로 풍부하며, 미디어 
+      독립적인 콘텐트를 만드는 것이 가능하도록 최선의 노력을 기울여야(should) 합니다.
 
-  <dfn lt="hardware limitations|practical concerns"></dfn>User agents may impose implementation-specific limits on otherwise unconstrained inputs, e.g., to
-  prevent denial of service attacks, to guard against running out of memory, or to work around
-  platform-specific limitations.
-  <a class="fingerprint" href="#fingerprinting-vector"><img height="21" src="images/fingerprint.png" width="15" alt="(This is a fingerprinting vector.)" /></a>
+  <dfn lt="hardware limitations|practical concerns"></dfn>유저 에이전트는 그 외 자유로운 입력에 구현 
+  특정(implementation-specific) 제한, 예를 들어 서비스 거부 공격을 막기 위한 제한, 또는 메모리 부족이 
+  생기지 않도록 하기 위한 제한, 또는 플랫폼 특정 한계를 피하기 위한 제한을 부과할 수 있습니다.
+  <a class="fingerprint" href="#fingerprinting-vector"><img height="21" src="images/fingerprint.png" width="15" alt="(이것은 지문 그림입니다.)" /></a>
 
-  For compatibility with existing content and prior specifications, this specification describes
-  two authoring formats: one based on XML (referred to as <a href="#xhtml">the XHTML syntax</a>), and one using a
-  <a href="#writing-html-documents">custom format</a> inspired by SGML (referred to as <a href="#syntax">the HTML syntax</a>). Implementations
-  must support at least one of these two formats, although supporting both is encouraged.
+  기존 콘텐트와 이전 명세와의 호환성을 위해, 이 명세는 두 가지 작성 형식을 설명합니다: 하나는 
+  XML(<a href="#xhtml">XHTML 구문</a>으로 언급되는) 기반, 그리고 하나는 SGML 
+  (<a href="#syntax">HTML 구문</a>으로 언급되는)에 영감을 받은 <a href="#writing-html-documents">사용자 정의 형식</a>입니다. 
+  구현은 이 두가지 형식 중 적어도 하나를 지원해야(must) 하지만, 둘 모두를 지원하는 것이 권장됩니다.
 
-  Some conformance requirements are phrased as requirements on elements, attributes, methods or
-  objects. Such requirements fall into two categories: those describing content model restrictions,
-  and those describing implementation behavior. Those in the former category are requirements on
-  documents and authoring tools. Those in the second category are requirements on user agents.
-  Similarly, some conformance requirements are phrased as requirements on authors; such requirements
-  are to be interpreted as conformance requirements on the documents that authors produce. (In other
-  words, this specification does not distinguish between conformance criteria on authors and
-  conformance criteria on documents.)
+  일부 적합성 요구사항은 요소(element), 속성(attribute), 메서드(method), 객체(object)의 요구사항으로 
+  표현됩니다. 그러한 요구사항은 두 가지 범주로 나뉩니다: 콘텐츠 모델 제약사항을 기술하는 것과 구현
+  동작을 기술하는 것. 전자의 범주의 것은 문서와 작성 도구의 요구사항입니다. 두 번째 범주의 것은 유저
+  에이전트의 요구사항입니다. 비슷하게, 일부 적합성 요구사항은 저자에 대한 요구사항으로 표현됩니다;
+  그러한 요구사항은 작성자가 생산한 문서에 대한 적합성 요구사항으로 해석되어야 합니다. (다시 말해, 
+  이 명세는 저자에 대한 적합성 기준과 문서에 대한 적합성 기준을 구분하지 않습니다.)
 
 <h4 id="conformance-requirements-dependencies">Dependencies</h4>
 
