@@ -106,7 +106,7 @@
 
   리소스의 <dfn lt="critical subresource|critical subresources">중요한 하위 리소스</dfn>들은 완전히 
   처리되기 위해 사용 가능(available)해야 하는 것이 필요한 리소스 입니다. 어떤 자원이 중요한 것으로 
-  간주되거나 그렇지 않은 지는 리소스의 형식(format)을 정의하는 명세에 의해 정의됩니다. 
+  간주되거나 그렇지 않은 지는 리소스의 형식(format)을 정의하는 명세에 의해 정의되어 있습니다. 
 
   <a scheme lt="data:"><code>data:</code> URL</a>이라는 용어는 <a scheme lt="data:"><code>data:</code></a> 
   스킴을  <a for="url">URLs</a> 사용하는 <a for="url">URL</a>들을 지칭합니다. [[!RFC2397]]
@@ -459,7 +459,7 @@
       요소(element)가 인용된 문장만을 포함함을 검사할 필요가 없습니다.)
 
       적합성 검사기는 입력 문서가 <a lt="browsing context">브라우징 컨텍스트</a> 없이 해석되는 경우
-      (스크립가 수행되지 않고, 해석기의 <a lt="scripting flag">스크립팅 플래그</a>가 비활성화 된 
+      (스크립가 수행되지 않고, 해석기의 <a lt="scripting flag">scripting 플래그</a>가 비활성화 된 
       것을 의미) 적합한지 검사해야(must) 하고, 또한 입력 문서가 스크립트를 수행하는 
       <a lt="browsing context">브라우징 컨텍스트</a>를 가지고 해석되는 경우 적합한지, 그리고 
       스크립트는 스크립트가 자신을 수행하는 동안 비적합 상태가 다른 것을 발생시키는 것을 야기하지 
@@ -529,7 +529,7 @@
       하는데 사용될 수 있기 때문에, 전자는 HTML을 작성하는 도구에 대한 선호된 메커니즘입니다.
 
       하지만, WYSIWYG 도구는 타당합니다. WYSIWYG 도구는 그것이 적절하다고 알고 있는 요소(element)들을 
-      사용해야(should) 하고, 그것이 적절하다고 알지 못하는 요소(element)들을 사용해서는 안됩니다(should).
+      사용해야(should) 하고, 그것이 적절하다고 알지 못하는 요소(element)들을 사용해서는(should) 안됩니다.
       이것은 어떤 극단적인 경우에 플로우 요소(flow element)의 사용을 <{div}>, <{b}>, <{i}>, <{span}>과 
       같은 단지 몇 가지 요소(element)로 제한하는 것과 <{global/style}>를 자유롭게 사용하는 것을 
       의미할 수 있습니다.
@@ -554,198 +554,197 @@
   그러한 요구사항은 작성자가 생산한 문서에 대한 적합성 요구사항으로 해석되어야 합니다. (다시 말해, 
   이 명세는 저자에 대한 적합성 기준과 문서에 대한 적합성 기준을 구분하지 않습니다.)
 
-<h4 id="conformance-requirements-dependencies">Dependencies</h4>
+<h4 id="conformance-requirements-dependencies">의존성</h4>
 
-  This specification relies on several other underlying specifications.
+  이 명세는 몇 다른 기초적인 명세에 의존합니다.
 
-  : Unicode and Encoding
-  :: The Unicode character set is used to represent textual data, and the Encoding standard defines
-      requirements around <a>character encodings</a>. [[!UNICODE]]
+  : 유니코드와 인코딩
+  :: 유니코드 문자 집합은 텍스트 데이터를 나타내는데 사용되고, 인코딩 표준은 
+      <a lt="character encodings">문자 인코딩</a> 요구사항을 정의합니다. [[!UNICODE]]
       <p class="note">
-        This specification <a lt="character encoding">introduces terminology</a> based on the terms defined in those
-        specifications, as described earlier.
+        이 명세는 앞서 설명된 대로, 그 명세에 정의된 용어에 기초하여 
+        <a lt="character encoding">전문용어를 소개</a>합니다.
       </p>
 
-      The following terms are used as defined in the Encoding standard: [[!ENCODING]]
+      다음 용어들은 인코딩 표준에 정의된 대로 사용됩니다: [[!ENCODING]]
 
-      * <dfn>Getting an encoding</dfn>
-      * <dfn lt="getting an output encoding">Get an output encoding</dfn>
-      * The generic <a>decode</a> algorithm which takes a byte stream and an encoding and
-        returns a character stream
-      * The <dfn>UTF-8 decode</dfn> algorithm which takes a byte stream and returns a character
-        stream, additionally stripping one leading UTF-8 Byte Order Mark (BOM), if any
-      * The <dfn>UTF-8 decode without BOM</dfn> algorithm which is identical to <a>UTF-8 decode</a>
-        except that it does not strip one leading UTF-8 Byte Order Mark (BOM)
-      * The <dfn>UTF-8 decode without BOM or fail</dfn> algorithm which is identical to
-        <a>UTF-8 decode without BOM</a> except that it returns failure upon encountering an error
-      * The <a lt="encode code point">encode</a> algorithm which takes a character stream and an
-        encoding and returns a byte stream
-      * The <dfn>UTF-8 encode</dfn> algorithm which takes a character stream and returns a byte stream.
+      * <dfn lt="Getting an encoding">인코딩 가져오기</dfn>
+      * <dfn lt="getting an output encoding">출력 인코딩 가져오기</dfn>
+      * 바이트 스트림과 인코딩을 가져오고 문자 스트림을 반환하는 일반 <a lt="decode">디코드</a> 
+        알고리즘
+      * 선두의 UTF-8 바이트 순서 표식(BOM)이 있다면 제거하여, 바이트 스트림을 가져오고 문자 스트림을 
+        반환하는 <dfn lt="UTF-8 decode">UTF-8 디코드</dfn> 알고리즘
+      * 선두의 UTF-8 바이트 순서 표식(BOM)을 제거하지 않는 것을 제외하고 
+        <a lt="UTF-8 decode">UTF-8 디코드</a>와 동일한 <dfn lt="UTF-8 decode without BOM">BOM 없는 UTF-8 디코드</dfn> 알고리즘
+      * 오류를 만날 때 실패가 반환되는 <a lt="UTF-8 decode without BOM">BOM 없는 UTF-8 디코드</a>와 동일한 
+        <dfn lt="UTF-8 decode without BOM or fail">BOM 없는 UTF-8 디코드나 실패</dfn> 알고리즘
+      * 문자 스트림과 인코딩을 가져오고 바이트 스트림을 반환하는 
+        <a lt="encode code point">인코드</a> 알고리즘
+      * 문자 스트림을 가져오고 바이트 스트림을 반환하는 <dfn lt="UTF-8 encode">UTF-8 인코드</dfn> 알고리즘
 
-  : XML and related specifications
-  :: Implementations that support <a href="#xhtml">the XHTML syntax</a> must support some version of XML, as
-      well as its corresponding namespaces specification, because that syntax uses an XML
-      serialization with namespaces. [[!XML]] [[!XML-NAMES]]
+  : XML 그리고 관련된 명세
+  :: <a href="#xhtml">XHTML 구문</a>을 지원하는 구현은 XML의 여러 버전뿐 아니라, 그 구문이 
+      네임스페이스를 가진 XML 직렬화를 사용하기 때문에, 해당하는 네임스페이스 명세를 지원해야(must) 
+      합니다. [[!XML]] [[!XML-NAMES]]
 
-      The attribute with the tag name <a><code>xml:space</code></a> in the <a>XML namespace</a>
-      is defined by the XML specification. [[!XML]]
+      <a lt="XML namespace">XML 네임스페이스</a>에서 <a lt="xml:space"><code>xml:space</code></a> 
+      태그 이름을 가진 속성(attribute)은 XML 명세에 의해 정의되어 있습니다. [[!XML]]
 
-      This specification also references the <a><code>&lt;?xml-stylesheet?></code></a>
-      processing instruction, defined in the
-      <cite>Associating Style Sheets with XML documents</cite> specification. [[!XML-STYLESHEET]]
+      이 명세는 또한, <cite lt="Associating Style Sheets with XML documents">스타일 시트와 XML 문서를 연관짓기</cite> 
+      명세에 정의된, <a><code>&lt;?xml-stylesheet?></code></a> 처리 명령을 
+      참조합니다. [[!XML-STYLESHEET]]
 
-      This specification also non-normatively mentions the <dfn interface><code>XSLTProcessor</code></dfn>
-      interface and its <dfn method for="XSLTProcessor"><code>transformToFragment()</code></dfn> and
-      <dfn method for="XSLTProcessor"><code>transformToDocument()</code></dfn> methods.
+      이 명세는 또한 비규범적으로 <dfn interface lt="XSLTProcessor"><code>XSLTProcessor</code></dfn> 
+      인터페이스와 그것의 <dfn method for="XSLTProcessor" lt="transformToFragment()"><code>transformToFragment()</code></dfn>와 
+      <dfn method for="XSLTProcessor" lt="transformToDocument()"><code>transformToDocument()</code></dfn> 메서드를 언급합니다.
   : URLs
-  :: The following terms are defined in the WHATWG URL standard: [[!URL]]
+  :: 다음 용어들은 WHATWG URL 표준에 정의되어 있습니다: [[!URL]]
 
-      * <a for="host-concept">host</a>
-      * <a for="url">domain</a>
-      * <a for="url">URL</a>
-      * <a for="url">Origin</a> of URLs
-      * <a>Absolute URL</a>
-      * <a>Relative URL</a>
-      * <a>Relative schemes</a>
-      * The <a>URL parser</a> and <a>basic URL parser</a> as well as these parser states:
-         * <a>scheme start state</a>
-         * <a>host state</a>
-         * <a>hostname state</a>
-         * <a>port state</a>
-         * <a>path start state</a>
-         * <a>query state</a>
-         * <a>fragment state</a>
-      * <a>URL record</a>, as well as its individual components:
-         * <a for="url">scheme</a>
-         * <a>username</a>
-         * <a>password</a>
-         * <a for="url">host</a>
-         * <a for="url">port</a>
-         * <a>path</a>
-         * <a for="url">query</a>
-         * <a for="url">fragment</a>
-      * A <a>network scheme</a>
-      * The <a>URL serializer</a>
-      * The <a>host parser</a>
-      * The <a>host serializer</a>
-      * <a>Host equals</a>
-      * <a>serialize an integer</a>
-      * <a>Default encode set</a>
-      * <a>Percent encode</a>
-      * <a>UTF-8 percent encode</a>
-      * <a>Percent decode</a>
-      * <a>set the username</a>
-      * <a>set the password</a>
-      * The <a>domain to ASCII</a> algorithm
-      * The <a>domain to Unicode</a> algorithm
-      * <a>non-relative flag</a>
-      * <a for="url">Parse errors</a> from the <a>URL parser</a>
+      * <a for="host-concept" lt="host">host</a>
+      * <a for="url" lt="domain">domain</a>
+      * <a for="url" lt="URL">URL</a>
+      * URL의 <a for="url" lt="Origin">Origin</a>
+      * <a lt="absolute URL">절대 URL</a>
+      * <a lt="relative URL">상대 URL</a>
+      * <a lt="relative schemes">상대 스키마</a>
+      * <a lt="URL parser">URL 해석기</a>와 <a lt="basic URL parser">기본 URL 해석기</a>, 그리고 이 해석기 단계:
+         * <a lt="scheme start state">스키마 시작 단계</a>
+         * <a lt="host state">host 단계</a>
+         * <a lt="hostname state">hostname 단계</a>
+         * <a lt="port state">port 단계</a>
+         * <a lt="path start state">path 시작 단계</a>
+         * <a lt="query state">query 단계</a>
+         * <a lt="fragment state">fragment 단계</a>
+      * <a lt="URL record">URL 레코드</a>, 그리고 그것의 각 구성 요소:
+         * <a for="url" lt="scheme">스키마(scheme)</a>
+         * <a lt="username">사용자 이름</a>
+         * <a lt="password">비밀번호</a>
+         * <a for="url" lt="host">호스트</a>
+         * <a for="url" lt="port">포트</a>
+         * <a lt="path">경로</a>
+         * <a for="url" lt="query">쿼리</a>
+         * <a for="url" lt="fragment">프래그먼트(fragment)</a>
+      * <a lt="network scheme">네트워크 스키마</a>
+      * <a lt="URL serializer">URL 직렬 변환기</a>
+      * <a lt="host parser">호스트 해석기</a>
+      * <a lt="host serializer">호스트 직렬 변환기</a>
+      * <a lt="Host equals">호스트 동등성</a>
+      * <a lt="serialize an integer">정수 직렬화</a>
+      * <a lt="Default encode set">기본 인코드 세트</a>
+      * <a lt="Percent encode">퍼센트 인코드</a>
+      * <a lt="UTF-8 percent encode">UTF-8 퍼센트 인코드</a>
+      * <a lt="Percent decode">퍼센트 디코드</a>
+      * <a lt="set the username">사용자 이름 설정</a>
+      * <a lt="set the password">비밀번호 설정</a>
+      * <a lt="domain to ASCII">도메인을 ASCII로 변환</a> 알고리즘
+      * <a lt="domain to Unicode">도메인을 유니코드로 변환</a> 알고리즘
+      * <a lt="non-relative flag">non-relative 플래그</a>
+      * <a lt="URL parser">URL 해석기</a>에서 <a for="url" lt="Parse errors">해석 오류</a>
 
-      A number of schemes and protocols are referenced by this specification also:
+      몇 가지 스키마와 프로토콜들은 또한 이 명세에 의해 참조됩니다:
 
-      * The <dfn scheme lt="about:|about:blank"><a scheme><code>about:</code></a></dfn> scheme [[!RFC6694]]
-      * The <dfn scheme><a scheme><code>blob:</code></a></dfn> scheme [[!FILEAPI]]
-      * The <dfn scheme lt="data: url|data:|data url"><code>data:</code></dfn> scheme [[!RFC2397]]
-      * The <dfn scheme><code>http:</code></dfn> scheme [[!HTTP]]
-      * The <dfn scheme><code>https:</code></dfn> scheme [[!HTTP]]
-      * The <dfn scheme><code>mailto:</code></dfn> scheme [[!RFC6068]]
-      * The <dfn scheme><code>sms:</code></dfn> scheme [[!RFC5724]]
-      * The <dfn scheme><code>urn:</code></dfn> scheme [[!URN]]
+      * <dfn scheme lt="about:|about:blank"><a scheme><code>about:</code></a></dfn> 스키마 [[!RFC6694]]
+      * <dfn scheme><a scheme><code>blob:</code></a></dfn> 스키마 [[!FILEAPI]]
+      * <dfn scheme lt="data: url|data:|data url"><code>data:</code></dfn> 스키마 [[!RFC2397]]
+      * <dfn scheme><code>http:</code></dfn> 스키마 [[!HTTP]]
+      * <dfn scheme><code>https:</code></dfn> 스키마 [[!HTTP]]
+      * <dfn scheme><code>mailto:</code></dfn> 스키마 [[!RFC6068]]
+      * <dfn scheme><code>sms:</code></dfn> 스키마 [[!RFC5724]]
+      * <dfn scheme><code>urn:</code></dfn> 스키마 [[!URN]]
 
-  : HTTP and related specifications
-  :: The following terms are defined in the HTTP specifications: [[!HTTP]]
+  : HTTP 그리고 관련된 명세
+  :: 다음 용어들은 HTTP 명세에 정의되어 있습니다: [[!HTTP]]
 
-      * <a><code>Accept</code></a> header
-      * <a><code>Accept-Language</code></a> header
-      * <a><code>Cache-Control</code></a> header
-      * <a><code>Content-Disposition</code></a> header
-      * <a><code>Content-Language</code></a> header
-      * <a><code>Content-Length</code></a> header
-      * <a><code>Last-Modified</code></a> header
-      * <a><code>Referer</code></a> header
+      * <a><code>Accept</code></a> 헤더
+      * <a><code>Accept-Language</code></a> 헤더
+      * <a><code>Cache-Control</code></a> 헤더
+      * <a><code>Content-Disposition</code></a> 헤더
+      * <a><code>Content-Language</code></a> 헤더
+      * <a><code>Content-Length</code></a> 헤더
+      * <a><code>Last-Modified</code></a> 헤더
+      * <a><code>Referer</code></a> 헤더
 
-      The following terms are defined in the Cookie specification: [[!COOKIES]]
+      다음 용어들은 쿠키(Cookie) 명세에 정의되어 있습니다: [[!COOKIES]]
 
-      * <dfn>cookie-string</dfn>
-      * <a>receives a set-cookie-string</a>
-      * <a><code>Cookie</code> header</a>
+      * <dfn lt="cookie-string">쿠키 문자열</dfn>
+      * <a lt="receives a set-cookie-string">쿠키 설정 문자열 수신</a>
+      * <a lt="Cookie header"><code>Cookie</code> 헤더</a>
 
-      The following term is defined in the Web Linking specification: [[!RFC5988]]
+      다음 용어들은 웹 링크하기(Web Linking) 명세에 정의되어 있습니다: [[!RFC5988]]
 
-      * <a><code>Link</code> header</a>
+      * <a lt="Link header"><code>Link</code> 헤더</a>
 
-  : Fetch
-  :: The following terms are defined in the WHATWG Fetch standard: [[!FETCH]]
+  : 가져오기(Fetch)
+  :: 다음 용어들은 WHATWG Fetch 표준에 정의되어 있습니다: [[!FETCH]]
 
       * <a scheme><code>about:blank</code></a>
-      * <a>HTTPS state value</a>
-      * <a>referrer policy</a>
-      * <a>CORS protocol</a>
-      * <a>default <code>User-Agent</code> value</a>
-      * <a>extract a MIME type</a>
-      * <a>fetch</a>
-      * <a>ok status</a>
-      * <a><code>Origin</code> header</a>
-      * <a>process response</a>
-      * <a for="header list">set</a>
-      * <a>terminate</a>
-      * the <a><code>RequestCredentials</code></a> enumeration
-      * <a>response</a> and its associated:
-        * <a for="response">type</a>
+      * <a lt="HTTPS state value">HTTPS 상태 값</a>
+      * <a lt="referrer policy">리퍼러(referrer) 정책</a>
+      * <a lt="CORS protocol">CORS 프로토콜</a>
+      * <a lt="default User-Agent value">기본 <code>User-Agent</code> 값</a>
+      * <a lt="extract a MIME type">MIME 타입 추출</a>
+      * <a lt="fetch">가져오기(fetch)</a>
+      * <a lt="ok status">ok 상태</a>
+      * <a lt="Origin header"><code>Origin</code> 헤더</a>
+      * <a lt="process response">응답 처리</a>
+      * <a for="header list" lt="set">설정</a>
+      * <a lt="terminate">종료</a>
+      * <a><code>RequestCredentials</code></a> 열거
+      * <a lt="response">응답</a>과 그와 연관된:
+        * <a for="response" lt="type">유형</a>
         * <a for="response">url</a>
-        * <a for="response">url list</a>
-        * <a>status</a>
-        * <a for="response">header list</a>
-        * <a for="response">body</a>
-        * <a>internal response</a>
-        * <a for="response">CSP list</a>
-        * <a for="response">HTTPS state</a>
-      * <a>request</a> and its associated:
+        * <a for="response" lt="url list">url 목록</a>
+        * <a lt="status">상태</a>
+        * <a for="response" lt="header list">헤더 목록</a>
+        * <a for="response" lt="body">몸체</a>
+        * <a lt="internal response">내부 응답</a>
+        * <a for="response" lt="CSP list">CSP 목록</a>
+        * <a for="response" lt="HTTPS state">HTTPS 상태</a>
+      * <a lt="request">요청</a>과 그와 연관된:
         * <a for="request">url</a>
-        * <a for="request">method</a>
-        * <a for="request">header list</a>
-        * <a for="request">body</a>
-        * <a for="request">client</a>
-        * <a for="request">target browsing context</a>
-        * <a for="request">initiator</a>
-        * <a for="request">type</a>
-        * <a for="request">destination</a>
-        * <a for="request">origin</a>
-        * <a>omit-<code>Origin</code>-header flag</a>
-        * <a>same-origin data-URL flag</a>
-        * <a for="request">referrer</a>
-        * <a>synchronous flag</a>
-        * <a for="request">mode</a>
-        * <a for="request">credentials mode</a>
-        * <a for="request">use-URL-credentials flag</a>
-        * <a>unsafe-request flag</a>
-        * <a for="request">cache mode</a>
-        * <a for="request">redirect mode</a>
-        * <a>cryptographic nonce metadata</a>
-        * <a>parser metadata</a>
+        * <a for="request" lt="method">메서드</a>
+        * <a for="request" lt="header list">헤더 목록</a>
+        * <a for="request" lt="body">몸체</a>
+        * <a for="request" lt="client">클라이언트(client)</a>
+        * <a for="request" lt="target browsing context">타겟 브라우징 컨텍스트</a>
+        * <a for="request" lt="initiator">개시자</a>
+        * <a for="request" lt="type">유형</a>
+        * <a for="request" lt="destination">목적지</a>
+        * <a for="request" lt="Origin">origin</a>
+        * <a lt="omit-Origin-header flag">omit-<code>Origin</code>-header 플래그</a>
+        * <a lt="same-origin data-URL flag">same-origin data-URL 플래그</a>
+        * <a for="request" lt="referrer">리퍼러(referrer)</a>
+        * <a lt="synchronous flag">synchronous 플래그</a>
+        * <a for="request" lt="mode">모드(mode)</a>
+        * <a for="request" lt="credentials mode">자격 증명 모드</a>
+        * <a for="request" lt="use-URL-credentials flag">use-URL-credentials 플래그</a>
+        * <a lt="unsafe-request flag">unsafe-request 플래그</a>
+        * <a for="request" lt="cache mode">캐시 모드</a>
+        * <a for="request" lt="redirect mode">리다이렉트(redirect) 모드</a>
+        * <a lt="cryptographic nonce metadata">암호용 넌스 메타데이터</a>
+        * <a lt="parser metadata">해석기 메타 데이터</a>
 
-  : Web IDL
-  :: The IDL fragments in this specification must be interpreted as required for conforming IDL
-      fragments, as described in the Web IDL specification. [[!WEBIDL]]
+  : 웹 IDL
+  :: 이 명세에서 IDL 코드 조각은 웹 IDL 명세에 정의된 대로, IDL 코드 조각에 적합하도록 요구된 대로 
+      해석되어야(must) 합니다. [[!WEBIDL]]
 
-      The following terms are defined in the Web IDL specification:
+      다음 용어들은 Web IDL 명세에 정의되어 있습니다:
 
-      * <a>array index property name</a>
-      * <a>supported property indices</a>
-      * <a>Determine the value of an indexed property</a>
-      * <a>Support named properties</a>
-      * <a>Supported property names</a>
-      * <a>Determine the value of a named property</a>
-      * <a>perform a security check</a>
-      * <a>Platform object</a>
-      * <a>Global environment associated with</a> a platform object
-      * <a>Read only</a> (when applied to arrays)
-      * <a>Callback this value</a>
-      * <a>Converting</a> between WebIDL types and JS types
-      * <a>invoke the Web IDL callback function</a>
+      * <a lt="array index property name">배열 인덱스 속성(property) 이름</a>
+      * <a lt="supported property indices">지원되는 속성(property) 인덱스</a>
+      * <a lt="Determine the value of an indexed property">인덱싱 된 속성(property)의 값 측정</a>
+      * <a lt="Support named properties">명명된 속성(property) 지원</a>
+      * <a lt="Supported property names">지원되는 속성(property) 이름</a>
+      * <a lt="Determine the value of a named property">명명된 속성(property)의 값 측정</a>
+      * <a lt="perform a security check">보안 검사 수행</a>
+      * <a lt="Platform object">플랫폼 객체</a>
+      * 플랫폼 객체와 <a lt="Global environment associated with">연관된 전역 환경</a>
+      * <a lt="Read only">읽기 전용</a> (배열에 적용될 경우)
+      * <a lt="Callback this value">이 값을 콜백</a>
+      * 웹 IDL과 JS 유형 사이 <a lt="Converting">전환하기</a>
+      * <a lt="invoke the Web IDL callback function">웹 IDL 콜백 함수 호출</a>
 
-      The Web IDL specification also defines the following types that are used in Web IDL fragments
-      in this specification:
+      웹 IDL 명세는 또한 이 명세의 웹 IDL 코드 조각에 사용된 다음 유형들을 정의합니다:
 
       * <a><code>ArrayBufferView</code></a>
       * <a type><code>boolean</code></a>
@@ -759,9 +758,8 @@
       * <a type><code>unrestricted double</code></a>
       * <a type><code>unsigned long</code></a>
 
-      The term <dfn>throw</dfn> in this specification is used as defined in the WebIDL
-      specification. The following exception names are defined by WebIDL and used by this
-      specification:
+      이 명세에서 <dfn lt="throw">던지다(throw)</dfn>라는 용어는 WebIDL 명세에 정의된 대로 사용됩니다. 
+      다음 예외 이름들은 WebIDL에서 정의되고 이 명세에서 사용됩니다:
 
       * <a><code>IndexSizeError</code></a>
       * <a><code>HierarchyRequestError</code></a>
@@ -777,194 +775,187 @@
       * <a><code>TimeoutError</code></a>
       * <a><code>DataCloneError</code></a>
 
-      When this specification requires a user agent to <dfn lt="date object|a new date object">create a {{Date}} object</dfn>
-      representing a particular time (which could be the special value Not-a-Number), the
-      milliseconds component of that time, if any, must be truncated to an integer, and the time
-      value of the newly created {{Date}} object must represent the resulting truncated
-      time.
+      이 명세가 유저 에이전트가 특정 시간(특별한 값 Not-a-Number이 될 수 있는)을 나타내는 
+      <dfn lt="date object|a new date object">{{Date}} 객체 생성</dfn>을 요구하는 경우, 그 시간의
+      밀리초 요소가 있다면 이는 정수로 잘라내져야(must) 하고, 새롭게 생성된 {{Date}} 객체의 시간 값은 
+      결과적으로 잘라낸 시간을 나타내야(must) 합니다.
 
       <p class="example">
-        For instance, given the time 23045 millionths of a second after 01:00 UTC on
-        January 1st 2000, i.e., the time 2000-01-01T00:00:00.023045Z, then the {{Date}} object
-        created representing that time would represent the same time as that created representing the
-        time 2000-01-01T00:00:00.023Z, 45 millionths earlier. If the given time is NaN, then the result
-        is a {{Date}} object that represents a time value NaN (indicating that the object does
-        not represent a specific instant of time).
+        예를 들어, 2000년 1월 1일 01:00 UTC 이후 100만분의 23045초, 즉 2000-01-01T00:00:00.023045Z가 
+        주어진 경우, 100만분의 45초 빠른, 2000-01-01T00:00:00.023Z를 나타내도록 생성된 {{Date}} 객체와 
+        동일한 시간을 나타내는 {{Date}} 객체가 생성됩니다. 주어진 시간이 NaN이라면, 결과는 시간 값 
+        NaN을 나타내는 (객체가 특정 시간을 나타내지 않는 것을 보여주는) {{Date}} 객체입니다. 
       </p>
 
-  : JavaScript
-  :: Some parts of the language described by this specification only support JavaScript as the
-      underlying scripting language. [[!ECMA-262]]
+  : 자바스크립트
+  :: 이 명세에 의해 설명되는 언어의 일부분은 오직 기본 스크립팅 언어로 자바스크립트를 지원합니다.
+      [[!ECMA-262]]
 
       <p class="note">
-        The term "JavaScript" is used to refer to ECMA262, rather than the official term ECMAScript,
-        since the term JavaScript is more widely known. Similarly, the <a>MIME type</a> used to
-        refer to JavaScript in this specification is <code>text/javascript</code>, since that is the
-        most commonly used type, <a lt="willful violation">despite it being an officially obsoleted type</a> according to
-        RFC 4329. [[RFC4329]]
+        "자바스크립트"라는 용어는 공식적인 ECMAScript라는 용어보다 자바스크립트라는 용어가 좀 더 
+        널리 알려져있기 때문에 ECMA262를 지칭하는데 사용됩니다. 비슷하게, 이 명세에서 자바스크립트를 
+        지칭하는데 사용된 <a lt="MIME type">MIME 타입</a>은 <code>text/javascript</code>이 거의 보통 
+        사용되는 유형이기 때문에, RFC 4329에 따라 <a lt="willful violation">공식적으로 폐기된
+        유형임에도 불구하고</a> <code>text/javascript</code>입니다. [[RFC4329]]
       </p>
 
-      The following terms are defined in the JavaScript specification and used in this
-      specification [[!ECMA-262]]:
+      다음 용어들은 자바스크립트 명세에 정의 되고 이 명세에서 사용됩니다 [[!ECMA-262]]:
 
-       * <a>automatic semicolon insertion</a>
-       * <a>early error</a>
-       * <a>Directive Prologue</a>
-       * <a>JavaScript execution context</a>
-       * <a>JavaScript execution context stack</a>
-       * <a>running JavaScript execution context</a>
-       * <a>JavaScript realm</a>
-       * The <a>current Realm Record</a>
-       * <a>Use Strict Directive</a>
-       * <a>Well-Known Symbols</a>, including:
+       * <a lt="automatic semicolon insertion">자동 세미콜론 삽입</a>
+       * <a lt="early error">조기 오류</a>
+       * <a lt="Directive Prologue">지시어 프롤로그</a>
+       * <a lt="JavaScript execution context">자바스크립트 실행 컨텍스트</a>
+       * <a lt="JavaScript execution context stack">자바스크립트 실행 컨텍스트 스택</a>
+       * <a lt="running JavaScript execution context">자바스크립트 실행 컨텍스트 수행</a>
+       * <a lt="JavaScript realm">자바스크립트 범위</a>
+       * <a lt="current Realm Record">현재 범위 레코드</a>
+       * <a lt="Use Strict Directive">엄격한 규칙 사용(use strict) 지시어</a>
+       * 다음을 포함하는 <a lt="Well-Known Symbols">잘 알려진 기호</a>:
           * <dfn dfn>@@hasInstance</dfn>
           * <dfn dfn>@@isConcatSpreadable</dfn>
           * <dfn dfn>@@toPrimitive</dfn>
           * <dfn dfn>@@toStringTag</dfn>
-       * <a>Well-Known Intrinsic Objects</a>, including:
+       * 다음을 포함하는 <a lt="Well-Known Intrinsic Objects">잘 알려진 고유한 객체들</a>:
           * <a>%ArrayBuffer%</a>
           * <a>%ArrayPrototype%</a>
           * <a>%ObjProto_toString%</a>
           * <a>%ObjProto_valueOf%</a>
-       * The <a>FunctionBody</a> production
-       * The <a>Pattern</a> production
-       * The <a for="ecma">Script</a> production
-       * The <a for="ecma">Type</a> notation
-       * The <a for="ecma">List</a> and <a>Record</a> specification types
-       * The <a>Property Descriptor</a> specification type
-       * The <a>ArrayCreate</a> abstract operation
-       * The <a>Call</a> abstract operation
-       * The <a>CloneArrayBuffer</a> abstract operation
-       * The <a>Construct</a> abstract operation
-       * The <a>CreateDataProperty</a> abstract operation
-       * The <a>DetachArrayBuffer</a> abstract operation
-       * The <a>EnqueueJob</a> abstract operation
-       * The <a>FunctionCreate</a> abstract operation
-       * The <a for="ecma">Get</a> abstract operation
-       * The <a>GetActiveScriptOrModule</a> abstract operation
-       * The <a>GetFunctionRealm</a> abstract operation
-       * The <a>HasOwnProperty</a> abstract operation
-       * The <a>HostEnsureCanCompileStrings</a> abstract operation
-       * The <a>HostPromiseRejectionTracker</a> abstract operation
-       * The <a>InitializeHostDefinedRealm</a> abstract operation
-       * The <a>IsAccessorDescriptor</a> abstract operation
-       * The <a>IsCallable</a> abstract operation
-       * The <a>IsConstructor</a> abstract operation
-       * The <a>IsDataDescriptor</a> abstract operation
-       * The <a>IsDetachedBuffer</a> abstract operation
-       * The <a>NewObjectEnvironment</a> abstract operation
-       * The <a>OrdinaryGetPrototypeOf</a> abstract operation
-       * The <a>OrdinarySetPrototypeOf</a> abstract operation
-       * The <a>OrdinaryIsExtensible</a> abstract operation
-       * The <a>OrdinaryPreventExtensions</a> abstract operation
-       * The <a>OrdinaryGetOwnProperty</a> abstract operation
-       * The <a>OrdinaryDefineOwnProperty</a> abstract operation
-       * The <a>OrdinaryGet</a> abstract operation
-       * The <a>OrdinarySet</a> abstract operation
-       * The <a>OrdinaryDelete</a> abstract operation
-       * The <a>OrdinaryOwnPropertyKeys</a> abstract operation
-       * The <a>ParseScript</a> abstract operation
-       * The <a>RunJobs</a> abstract operation
-       * The <a>SameValue</a> abstract operation
-       * The <a>ScriptEvaluation</a> abstract operation
-       * The <a>ToBoolean</a> abstract operation
-       * The <a>ToString</a> abstract operation
-       * The <a>ToUint32</a> abstract operation
-       * The <a>TypedArrayCreate</a> abstract operation
-       * The <a>Abstract Equality Comparison</a> algorithm
-       * The <a>Strict Equality Comparison</a> algorithm
-       * The {{ArrayBuffer}} object
-       * The {{Date}} object
-       * The {{SyntaxError}} object
-       * The {{TypeError}} object
-       * The {{RangeError}} object
-       * The {{RegExp}} object
-       * The <a>typeof</a> operator
-       * <a>The TypedArray Constructors</a> table
+       * <a lt="FunctionBody">함수 몸체</a> 산출물
+       * <a lt="Pattern">패턴</a> 산출물
+       * <a for="ecma" lt="Script">스크립트</a> 산출물
+       * <a for="ecma" lt="Type">형(type)</a> 표기법
+       * <a for="ecma" lt="List">리스트</a>와 <a lt="Record">레코드</a> 명세 유형
+       * <a lt="Property Descriptor">속성(property) 서술자</a> 명세 유형
+       * <a>ArrayCreate</a> 추상적 연산
+       * <a>Call</a> 추상적 연산
+       * <a>CloneArrayBuffer</a> 추상적 연산
+       * <a>Construct</a> 추상적 연산
+       * <a>CreateDataProperty</a> 추상적 연산
+       * <a>DetachArrayBuffer</a> 추상적 연산
+       * <a>EnqueueJob</a> 추상적 연산
+       * <a>FunctionCreate</a> 추상적 연산
+       * <a for="ecma">Get</a> 추상적 연산
+       * <a>GetActiveScriptOrModule</a> 추상적 연산
+       * <a>GetFunctionRealm</a> 추상적 연산
+       * <a>HasOwnProperty</a> 추상적 연산
+       * <a>HostEnsureCanCompileStrings</a> 추상적 연산
+       * <a>HostPromiseRejectionTracker</a> 추상적 연산
+       * <a>InitializeHostDefinedRealm</a> 추상적 연산
+       * <a>IsAccessorDescriptor</a> 추상적 연산
+       * <a>IsCallable</a> 추상적 연산
+       * <a>IsConstructor</a> 추상적 연산
+       * <a>IsDataDescriptor</a> 추상적 연산
+       * <a>IsDetachedBuffer</a> 추상적 연산
+       * <a>NewObjectEnvironment</a> 추상적 연산
+       * <a>OrdinaryGetPrototypeOf</a> 추상적 연산
+       * <a>OrdinarySetPrototypeOf</a> 추상적 연산
+       * <a>OrdinaryIsExtensible</a> 추상적 연산
+       * <a>OrdinaryPreventExtensions</a> 추상적 연산
+       * <a>OrdinaryGetOwnProperty</a> 추상적 연산
+       * <a>OrdinaryDefineOwnProperty</a> 추상적 연산
+       * <a>OrdinaryGet</a> 추상적 연산
+       * <a>OrdinarySet</a> 추상적 연산
+       * <a>OrdinaryDelete</a> 추상적 연산
+       * <a>OrdinaryOwnPropertyKeys</a> 추상적 연산
+       * <a>ParseScript</a> 추상적 연산
+       * <a>RunJobs</a> 추상적 연산
+       * <a>SameValue</a> 추상적 연산
+       * <a>ScriptEvaluation</a> 추상적 연산
+       * <a>ToBoolean</a> 추상적 연산
+       * <a>ToString</a> 추상적 연산
+       * <a>ToUint32</a> 추상적 연산
+       * <a>TypedArrayCreate</a> 추상적 연산
+       * <a lt="Abstract Equality Comparison">관념적 동일 비교</a> 알고리즘
+       * <a lt="Strict Equality Comparison">엄격한 동일 비교</a> 알고리즘
+       * {{ArrayBuffer}} 객체
+       * {{Date}} 객체
+       * {{SyntaxError}} 객체
+       * {{TypeError}} 객체
+       * {{RangeError}} 객체
+       * {{RegExp}} 객체
+       * <a lt="typeof">typeof</a> 연산자
+       * <a lt="The TypedArray Constructors">형색화 배열 생성자</a> 표
 
   : DOM
-  :: The Document Object Model (DOM) is a representation &mdash; a model &mdash; of a document and
-      its content. The DOM is not just an API; the conformance criteria of HTML implementations are
-      defined, in this specification, in terms of operations on the DOM. [[!DOM]]
+  :: 문서 객체 모델(DOM)은 문서와 그것의 콘텐트의 표현 &mdash; 모델 &mdash;입니다.
+      DOM은 단지 API가 아닙니다; HTML 구현의 적합성 기준은 DOM에서의 작업의 관점에서 이 명세에 
+      정의되어 있습니다. [[!DOM]]
 
-      Implementations must support DOM and the events defined in UI Events, because this
-      specification is defined in terms of the DOM, and some of the features are defined as
-      extensions to the DOM interfaces. [[!DOM]] [[!UIEVENTS]]
+      구현은 이 명세가 DOM과 DOM 인터페이스로의 확장으로 정의되는 몇 가지 기능의 관점에서 정의되기 
+      때문에 DOM과 UI 이벤트에 정의된 이벤트를 지원해야(must) 합니다. [[!DOM]] [[!UIEVENTS]]
 
-      In particular, the following features are defined in the DOM specification: [[!DOM]]
+      특히, 다음 기능들은 DOM 명세에 정의되어 있습니다: [[!DOM]]
 
-      * {{Attr}} interface
-      * {{Comment}} interface
-      * {{DOMImplementation}} interface
-      * {{Document}} interface
-      * {{XMLDocument}} interface
-      * {{DocumentFragment}} interface
-      * {{DocumentType}} interface
-      * {{DOMException}} interface
-      * {{ChildNode}} interface
-      * {{Element}} interface
-      * {{Node}} interface
-      * {{NodeList}} interface
-      * {{ProcessingInstruction}} interface
-      * {{Text}} interface
-      * {{HTMLCollection}} interface
-      * {{NodeList/item()}} method
-      * The terms <a lt="collection">collections</a> and <a>represented by the collection</a>
-      * {{DOMTokenList}} interface
-      * {{createDocument()}} method
-      * {{createHTMLDocument()}} method
-      * {{createElement()}} method
-      * {{createElementNS()}} method
-      * {{getElementById()}} method
-      * {{Element/getElementsByClassName()}} method
-      * {{insertBefore()}} method
-      * {{appendChild()}} method
-      * {{cloneNode()}} method
-      * {{importNode()}} method
-      * {{childNodes}} attribute
-      * {{Element/localName}} attribute
-      * {{parentNode}} attribute
-      * {{Element/namespaceURI}} attribute
-      * {{tagName}} attribute
-      * {{Element/id}} attribute
-      * {{Node/textContent}} attribute
-      * The <a for="Node">insert</a>, <a for="Node">append</a>, <a for="Node">remove</a>, <a for="Node">replace</a>, and
-        <a for="Node">adopt</a> algorithms for nodes
-      * The <a for="Node" lt="insert">insertion steps</a>, <a for="Node" lt="remove">removing steps</a>, and <a for="Node" lt="adopt">adopting steps</a>
-        hooks
-      * The <a lt="element attribute">attribute list</a> concept.
-      * The <a lt="cd data">data</a> of a text node.
-      * {{Event}} interface
-      * {{EventTarget}} interface
-      * {{EventInit}} dictionary type
-      * {{Event/target}} attribute
-      * {{currentTarget}} attribute
-      * {{isTrusted}} attribute
-      * {{initEvent()}} method
-      * {{addEventListener()}} method
-      * The {{Event/type}} of an event
-      * The concept of an <a>event listener</a> and the <a lt="event listener">event listeners</a> associated with
-        an <code>EventTarget</code>
-      * The concept of a <dfn>target override</dfn>
-      * The concept of a regular <dfn>event parent</dfn> and a <dfn>cross-boundary event parent</dfn>
-      * The <a>encoding</a> (herein the <i>character encoding</i>) and <a>content type</a>
-        of a {{Document}}
-      * The distinction between <a>XML documents</a> and <a>HTML documents</a>
-      * The terms <dfn>quirks mode</dfn>, <dfn>limited-quirks mode</dfn>, and
-        <dfn>no-quirks mode</dfn>
-      * The algorithm to <a for="Node">clone</a> a {{Node}}, and the concept of
-        <a for="Node" lt="clone">cloning steps</a> used by that algorithm
-      * The concept of <dfn>base URL change steps</dfn> and the definition of what happens when an
-        element is <dfn>affected by a base URL change</dfn>
-      * The concept of an element's <a lt="id">unique identifier (ID)</a>
-      * The term <dfn lt="supported tokens|supported token">supported tokens</dfn>
-      * The concept of a DOM <a>range</a>, and the terms <a lt="range start">start</a>, <a lt="range end">end</a>, and
-        <a lt="range bp">boundary point</a> as applied to ranges.
-      * {{MutationObserver}} interface and <dfn>mutation observers</dfn> in
-        general
+      * {{Attr}} 인터페이스
+      * {{Comment}} 인터페이스
+      * {{DOMImplementation}} 인터페이스
+      * {{Document}} 인터페이스
+      * {{XMLDocument}} 인터페이스
+      * {{DocumentFragment}} 인터페이스
+      * {{DocumentType}} 인터페이스
+      * {{DOMException}} 인터페이스
+      * {{ChildNode}} 인터페이스
+      * {{Element}} 인터페이스
+      * {{Node}} 인터페이스
+      * {{NodeList}} 인터페이스
+      * {{ProcessingInstruction}} 인터페이스
+      * {{Text}} 인터페이스
+      * {{HTMLCollection}} 인터페이스
+      * {{NodeList/item()}} 메서드
+      * <a lt="collection">컬렉션</a>과 <a lt="represented by the collection">컬렉션에 의해 표현되는</a>이라는 용어
+      * {{DOMTokenList}} 인터페이스
+      * {{createDocument()}} 메서드
+      * {{createHTMLDocument()}} 메서드
+      * {{createElement()}} 메서드
+      * {{createElementNS()}} 메서드
+      * {{getElementById()}} 메서드
+      * {{Element/getElementsByClassName()}} 메서드
+      * {{insertBefore()}} 메서드
+      * {{appendChild()}} 메서드
+      * {{cloneNode()}} 메서드
+      * {{importNode()}} 메서드
+      * {{childNodes}} 속성(attribute)
+      * {{Element/localName}} 속성(attribute)
+      * {{parentNode}} 속성(attribute)
+      * {{Element/namespaceURI}} 속성(attribute)
+      * {{tagName}} 속성(attribute)
+      * {{Element/id}} 속성(attribute)
+      * {{Node/textContent}} 속성(attribute)
+      * 노드에 대한 <a for="Node">insert</a>, <a for="Node">append</a>, <a for="Node">remove</a>, 
+        <a for="Node">replace</a>, <a for="Node">adopt</a> 알고리즘
+      * <a for="Node" lt="insert">insertion 단계</a>, <a for="Node" lt="remove">removing 단계</a>, 
+        <a for="Node" lt="adopt">adopting 단계</a> 훅(hook)
+      * <a lt="element attribute">속성(attirbute) 목록</a> 개념.
+      * 텍스트 노드의 <a lt="cd data">data</a>.
+      * {{Event}} 인터페이스
+      * {{EventTarget}} 인터페이스
+      * {{EventInit}} 사전형
+      * {{Event/target}} 속성(attribute)
+      * {{currentTarget}} 속성(attribute)
+      * {{isTrusted}} 속성(attribute)
+      * {{initEvent()}} 메서드
+      * {{addEventListener()}} 메서드
+      * 이벤트의 {{Event/type}} 
+      * <a lt="event listener">이벤트 리스너</a>의 개념과 <code>EventTarget</code>과 연관된 
+        <a lt="event listener">이벤트 리스너</a>.
+      * <dfn lt="target override">타겟 재정의</dfn>의 개념
+      * 일반 <dfn lt="event parent">이벤트 부모</dfn>의 개념과 <dfn lt="cross-boundary event parent">교차방식의 이벤트 부모</dfn>
+      * <a lt="encoding">인코딩</a> (여기에서 <i>문자 인코딩</i>)과 {{Document}}dml <a lt="content type">콘텐트 유형</a>
+      * <a lt="XML documents">XML 문서</a>와 <a lt="HTML documents">HTML 문서</a> 사이의 차이
+      * <dfn lt="quirks mode">쿽크 모드</dfn>, <dfn lt="limited-quirks mode">제한된 쿼크 모드</dfn>, 
+        <dfn>비쿼크 모드</dfn>라는 용어
+      * {{Node}}를 <a for="Node" lt="clone">복제</a>하기 위한 알고리즘과, 그 알고리즘에 의해 사용되는 
+        <a for="Node" lt="clone">복제 단계</a>의 개념
+      * <dfn lt="base URL change steps">기본 URL 변경 단계</dfn>의 개념과 요소(element)가 
+        <dfn lt="affected by a base URL change">기본 URL 변경에 의해 영향을 받는</dfn> 경우 발생하는 것의 정의
+      * 요소의 <a lt="id">고유 식별자 (ID)</a>의 개념
+      * <dfn lt="supported tokens|supported token">지원되는 토큰</dfn>이라는 용어
+      * DOM <a lt="range">범위</a>의 개념과, 범위에 적용되는 <a lt="range start">시작</a>, 
+        <a lt="range end">끝</a>, <a lt="range bp">경계점</a>이라는 용어.
+      * {{MutationObserver}} 인터페이스와 일반 <dfn lt="mutation observers">변경 관찰자</dfn>
 
-      The term <a>throw</a> in this specification is used as defined in the DOM specification.
-      The following <a>DOMException</a> types are defined in the DOM specification: [[!DOM]]
+      이 명세에서 <a lt="throw">던지다</a>라는 용어는 DOM 명세에 정의된 대로 사용됩니다. 다음 
+      <a>DOMException</a> 유형들은 DOM 명세에 정의되어 있습니다: [[!DOM]]
 
       * {{IndexSizeError}}
       * {{HierarchyRequestError}}
@@ -988,272 +979,264 @@
       * {{DataCloneError}}
 
       <p class="example">
-        For example, to <i>throw a {{TimeoutError}} exception</i>, a user agent would
-        construct a <a>DOMException</a> object whose type was the string
-        "<code>TimeoutError</code>" (and whose code was the number 23, for legacy reasons) and
-        actually throw that object as an exception.
+        예를 들어, <i>throw a {{TimeoutError}} 예외를 던지기</i> 위해, 유저 에이전트는 유형이 문자열 
+        "<code>TimeoutError</code>"이고(그리고 레거시 이유로, 코드가 23번인) 실제로 예외로 그 객체를 
+        던지는 <a>DOMException</a> 객체를 구성할 것입니다.
       </p>
 
-      The following features are defined in the UI Events specification: [[!UIEVENTS]]
+      다음 기능들은 UI 이벤트 명세에 정의되어 있습니다: [[!UIEVENTS]]
 
-      * {{MouseEvent}} interface and the following interface members:
-         * The {{MouseEvent/relatedTarget}} attribute
-         * The {{MouseEvent/button}} attribute
-         * The {{MouseEvent/ctrlKey}} attribute
-         * The {{MouseEvent/shiftKey}} attribute
-         * The {{MouseEvent/altKey}} attribute
-         * The {{MouseEvent/metaKey}} attribute
-         * The {{MouseEvent/getModifierState()}} method
-      * {{MouseEventInit}} dictionary type
-      * The {{FocusEvent}} interface and its
-        {{FocusEvent/relatedTarget}} attribute
-      * The {{UIEvent}} interface's {{UIEvent/view}} and {{UIEvent/detail}} attributes
-      * <a event>click</a> event
-      * <a event>dblclick</a> event
-      * <a event>mousedown</a> event
-      * <a event>mouseenter</a> event
-      * <a event>mouseleave</a> event
-      * <a event>mousemove</a> event
-      * <a event>mouseout</a> event
-      * <a event>mouseover</a> event
-      * <a event>mouseup</a> event
-      * <a event>wheel</a> event
-      * <a event>keydown</a> event
-      * <a event>keyup</a> event
-      * <a event>keypress</a> event
+      * {{MouseEvent}} 인터페이스와 다음 인터페이스 멤버:
+         * {{MouseEvent/relatedTarget}} 속성(attribute)
+         * {{MouseEvent/button}} 속성(attribute)
+         * {{MouseEvent/ctrlKey}} 속성(attribute)
+         * {{MouseEvent/shiftKey}} 속성(attribute)
+         * {{MouseEvent/altKey}} 속성(attribute)
+         * {{MouseEvent/metaKey}} 속성(attribute)
+         * {{MouseEvent/getModifierState()}} 메서드
+      * {{MouseEventInit}} 사전형
+      * {{FocusEvent}} 인터페이스와 그것의 {{FocusEvent/relatedTarget}} 속성(attribute)
+      * {{UIEvent}} 인터페이스의 {{UIEvent/view}}와 {{UIEvent/detail}} 속성(attribute)
+      * <a event>click</a> 이벤트
+      * <a event>dblclick</a> 이벤트
+      * <a event>mousedown</a> 이벤트
+      * <a event>mouseenter</a> 이벤트
+      * <a event>mouseleave</a> 이벤트
+      * <a event>mousemove</a> 이벤트
+      * <a event>mouseout</a> 이벤트
+      * <a event>mouseover</a> 이벤트
+      * <a event>mouseup</a> 이벤트
+      * <a event>wheel</a> 이벤트
+      * <a event>keydown</a> 이벤트
+      * <a event>keyup</a> 이벤트
+      * <a event>keypress</a> 이벤트
 
-      The following features are defined in the Touch Events specification: [[!TOUCH-EVENTS]]
+      다음 기능들은 터치 이벤트 명세에 정의되어 있습니다: [[!TOUCH-EVENTS]]
 
-      * {{Touch}} interface
-      * <a>Touch point</a> concept
+      * {{Touch}} 인터페이스
+      * <a lt="Touch point">터치 포인트</a> 개념
 
-      This specification sometimes uses the term <dfn event for="global">name</dfn> to refer to the event's
-      <code>type</code>; as in, "an event named <code>click</code>" or "if the event name is
-      <code>keypress</code>". The terms "name" and "type" for events are synonymous.
+      이 명세는 때때로 이벤트의 <code>type</code>을 지칭하기 위해, "<code>click</code>이라고 명명된 
+      이벤트"나 "이벤트 이름이 <code>keypress</code>라면"의 경우와 같이,  
+      <dfn event for="global" lt="name">이름</dfn>이라는 용어를 사용합니다. 이벤트에 대한 "이름"과
+      "타입"이라는 용어는 동의어입니다.
 
-      The following features are defined in the DOM Parsing and Serialization specification:
+      다음 기능들은 DOM 해석과 직렬화 명세에 정의되어 있습니다:
       [[!DOM-Parsing]]
 
       * {{Element/innerHTML}}
       * {{Element/outerHTML}}
 
-      The {{Selection}} interface is defined in the <cite>Selection API</cite> specification. [[SELECTION-API]]
+      {{Selection}} 인터페이스는 <cite>선택 API</cite> 명세에 정의되어 있습니다. [[SELECTION-API]]
 
       <p class="note">
-        User agents are also encouraged to implement the features described in the
-        <cite>HTML Editing APIs</cite> and <cite><code>UndoManager</code> and DOM Transaction</cite>
-        specifications. [[EDITING]] [[UNDO]]
+        유저 에이전트는 또한 <cite>HTML 편집 API들</cite>과 <cite><code>UndoManager</code>와 DOM 처리</cite> 
+        명세에 설명된 기능들을 구현하도록 권장됩니다. [[EDITING]] [[UNDO]]
       </p>
 
-      The following parts of the Fullscreen specification are referenced from this specification, in
-      part to define how the
-      Fullscreen API interacts with the sandboxing features in HTML: [[!FULLSCREEN]]
+      풀스크린 명세의 다음 부분들은, 풀스크린 API가 HTML에서 샌드박싱 기능과 상호작용하는 방법을 
+      정의하기 위한 부분에서, 이 명세에서 참조됩니다: [[!FULLSCREEN]]
 
-      * The <a>top layer</a> concept
+      * <a lt="top layer">최상위 레이어</a> 개념
       * {{Element/requestFullscreen()}}
-      * The <a>fullscreen enabled flag</a>
-      * The <a>fully exit fullscreen</a> algorithm
+      * <a lt="fullscreen enabled flag">fullscreen enabled 플래그</a>
+      * <a lt="fully exit fullscreen">풀스크린을 완전히 나가는</a> 알고리즘
 
-      The <cite>High Resolution Time</cite> specification provides the {{DOMHighResTimeStamp}}
-      typedef and the {{Performance}} object's {{Performance/now()}} method. [[!HR-TIME-2]]
+      <cite>고분해능 시간</cite> 명세는 {{DOMHighResTimeStamp}} 형식 정의와 {{Performance}} 객체의 
+      {{Performance/now()}} 메서드를 제공합니다. [[!HR-TIME-2]]
 
-  : File API
-  :: This specification uses the following features defined in the File API specification:
+  : 파일 API
+  :: 이 명세는 파일 API 명세에 정의된 다음 기능들을 사용합니다:
       [[!FILEAPI]]
 
-      * {{Blob}} interface
-      * {{File}} interface
-      * {{FileList}} interface
-      * The concept of a <a for="Blob">closed</a> {{Blob}}
+      * {{Blob}} 인터페이스
+      * {{File}} 인터페이스
+      * {{FileList}} 인터페이스
+      * <a for="Blob" lt="closed">closed</a>의 개념 {{Blob}}
       * <a attribute for="Blob" lt="type"><code>Blob.type</code></a>
-      * The concept of <dfn lt="error occurs during reading of the object|read errors">read errors</dfn>
+      * <dfn lt="error occurs during reading of the object|read errors">읽기 오류</dfn>의 개념
 
-  : Media Source Extensions
-  :: The following terms are defined in the Media Source Extensions specification: [[!MEDIA-SOURCE]]
+  : 미디어 소스 확장
+  :: 다음 용어들은 미디어 소스 확장 명세에 정의되어 있습니다: [[!MEDIA-SOURCE]]
 
-      * <dfn lt="detach from a media element">Detaching from a media element</dfn>
+      * <dfn lt="detach from a media element">미디어 요소(element)로부터 분리</dfn>
       * {{MediaSource}} [[!MEDIA-SOURCE]]
 
-  : Media Capture and Streams
-  :: The following term is defined in the Media Capture and Streams specification: [[!MEDIACAPTURE-STREAMS]]
+  : 미디어 캡쳐와 스트림
+  :: 다음 용어는 미디어 캡쳐와 스트림 명세에 정의되어 있습니다: [[!MEDIACAPTURE-STREAMS]]
 
       * {{MediaStream}} [[!MEDIACAPTURE-STREAMS]]
 
   : XMLHttpRequest
-  :: This specification references the XMLHttpRequest specification to describe how the two
-      specifications interact. The following
-      features and terms are defined in the XMLHttpRequest specification: [[XHR]]
+  :: 이 명세는 두 명세가 상호 작용하는 방법을 설명하기 위해 XMLHttpRequest 명세를 참조합니다. 다음 
+      기능들과 용어들은 XMLHttpRequest 명세에 정의되어 있습니다: [[XHR]]
 
-      * {{XMLHttpRequest}} interface
-      * {{XMLHttpRequest/responseXML|XMLHttpRequest.responseXML}} attribute
+      * {{XMLHttpRequest}} 인터페이스
+      * {{XMLHttpRequest/responseXML|XMLHttpRequest.responseXML}} 속성(attribute)
 
   : {{ProgressEvent}}
-  :: This specification references the Progress Events specification to describe how the two
-      specifications interact and to use its {{ProgressEvent}} feature. The following
-      feature are defined in the Progress Events specification: [[PROGRESS-EVENTS]]
+  :: 이 명세는 두 명세가 상호작용하는 방법과 그것의 {{ProgressEvent}} 기능을 사용하는 방법을 설명하기 
+      위해 프로그레스 이벤트(Progress Events) 명세를 참조합니다. 다음 기능은 프로그레스 이벤트 명세에 
+      정의되어 있습니다: [[PROGRESS-EVENTS]]
 
-      * {{ProgressEvent}} interface
-      * <a attribute lt="lengthcomputable"><code>ProgressEvent.lengthComputable</code></a> attribute
-      * <a attribute lt="loaded"><code>ProgressEvent.loaded</code></a> attribute
-      * <a attribute lt="total"><code>ProgressEvent.total</code></a> attribute
-      * <a>Fire a progress event named <var>e</var></a>
+      * {{ProgressEvent}} 인터페이스
+      * <a attribute lt="lengthcomputable"><code>ProgressEvent.lengthComputable</code></a> 속성(attribute)
+      * <a attribute lt="loaded"><code>ProgressEvent.loaded</code></a> 속성(attribute)
+      * <a attribute lt="total"><code>ProgressEvent.total</code></a> 속성(attribute)
+      * <a lt="Fire a progress event named e"><var>e</var>로 명명된 프로그레스 이벤트를 발생</a>
 
-  : Server-Sent Events
-  :: This specification references {{EventSource}} which is specified in the
-      Server-Sent Events specification [[!EVENTSOURCE]]
+  : 서버 발송 이벤트(Server-Sent Events)
+  :: 이 명세는 서버 발송 이벤트 명세에 명시된 {{EventSource}}를 참조합니다. [[!EVENTSOURCE]]
 
-  : Media Queries
-  :: Implementations must support the Media Queries language. [[!MEDIAQ]]
+  : 미디어 쿼리(Media Queries)
+  :: 구현은 미디어 쿼리 언어를 지원해야(must) 합니다. [[!MEDIAQ]]
 
-  : CSS modules
-  :: While support for CSS as a whole is not required of implementations of this specification
-      (though it is encouraged, at least for Web browsers), some features are defined in terms of
-      specific CSS requirements.
+  : CSS 모듈(modules)
+  :: CSS를 전체적으로 지원하는 것은 이 명세의 구현에 필요하지 않지만(권장되기는 하지만, 웹 브라우저에
+      대해 최소한), 일부 기능들은 CSS 특정 요구사항의 관점에서 정의되어 있습니다. 
 
-      In particular, some features require that a string be
-      <dfn>parsed as a CSS &lt;color&gt; value</dfn>. When parsing a CSS value, user agents are
-      required by the CSS specifications to apply some error handling rules. These apply to this
-      specification also. [[!CSS3COLOR]] [[!CSS-2015]]
+      특히, 일부 기능은 문자열이 <dfn lt="parsed as a CSS &lt;color&gt; value">CSS &lt;color&gt; 값으로 해석</dfn>
+      되는 것을 요구합니다. CSS 값을 해석하는 경우, 유저 에이전트는 CSS 명세에 의해 일부 오류 처리 
+      규칙이 적용되도록 요구됩니다. 이것들은 이 명세에도 적용됩니다. [[!CSS3COLOR]] [[!CSS-2015]]
 
       <p class="example">
-        For example, user agents are required to close all open constructs upon finding the end of a
-        style sheet unexpectedly. Thus, when parsing the string "<code>rgb(0,0,0</code>" (with a
-        missing close-parenthesis) for a color value, the close parenthesis is implied by this error
-        handling rule, and a value is obtained (the color ''black''). However, the similar construct
-        "<code>rgb(0,0,</code>" (with both a missing parenthesis and a missing "blue" value) cannot
-        be parsed, as closing the open construct does not result in a viable value.
+        예를 들어, 유저 에이전트는 스타일 시트의 끝을 찾자마자 모든 열려진 구성을 닫도록 요구됩니다.
+        따라서, 색상 값에 대한 문자열 "<code>rgb(0,0,0</code>" (닫는 괄호가 누락된)을 해석하는 경우,
+        이 오류 처리 규칙에 의해 닫는 괄호가 암묵적이 되고, 값이 얻어집니다 (색상 ''검정''). 하지만,
+        비슷한 구성 "<code>rgb(0,0,</code>"는 (괄호와 "blue" 값이 모두 누락된) 열려진 구성을 닫는 
+        것이 실행 가능한 값이 되지 않기 때문에 해석될 수 없습니다.
       </p>
 
-      The following terms and features are defined in the CSS specification: [[!CSS-2015]]
+      다음 용어들과 기능들은 CSS 명세에 정의되어 있습니다: [[!CSS-2015]]
 
-      * <dfn>viewport</dfn>
-      * <dfn>replaced element</dfn>
-      * <dfn>intrinsic dimensions</dfn>
+      * <dfn lt="viewport">뷰포트(viewport)</dfn>
+      * <dfn lt="replaced element">대체 요소(element)</dfn>
+      * <dfn lt="intrinsic dimensions">고유 치수</dfn>
 
-      The term <dfn lt="named color|named colors">named color</dfn> is defined in the CSS Color specification. [[!CSS3COLOR]]
+      <dfn lt="named color|named colors">명명된 색상</dfn>이라는 용어는 CSS 색상 명세에 정의되어 
+      있습니다. [[!CSS3COLOR]]
 
-      The terms <dfn for="css">intrinsic width</dfn> and <dfn for="css">intrinsic height</dfn> refer to the width
-      dimension and the height dimension, respectively, of <a>intrinsic dimensions</a>.
+      <dfn for="css" lt="intrinsic width">고유 너비</dfn>와 <dfn for="css" lt="intrinsic height">고유 높이</dfn>라는 
+      용어는 각각 <a lt="intrinsic dimensions">고유 치수</a>의 너비 치수와 높이 치수를 지칭합니다.
 
-      The term <dfn>provides a paint source</dfn> is used as defined in the
-      <cite>CSS Image Values and Replaced Content</cite> specification to define the interaction of
-      certain HTML elements with the CSS 'element()' function. [[!CSS3-IMAGES]]
+      <dfn lt="provides a paint source">페인트 소스를 제공한다</dfn>는 용어는 CSS 'element()' 함수와 
+      특정 HTML 요소(element)의 상호작용을 정의하기 위해 <cite>CSS 이미지 값과 대체 콘텐트</cite> 
+      명세에 정의된 대로 사용됩니다. [[!CSS3-IMAGES]]
 
-      The term <dfn>default object size</dfn> is also defined in the
-      <cite>CSS Image Values and Replaced Content</cite> specification. [[!CSS3-IMAGES]]
+      <dfn lt="default object size">기본 객체 사이즈</dfn>라는 용어 역시 
+      <cite>CSS 이미지 값과 대체 콘텐트</cite> 명세에 정의되어 있습니다. [[!CSS3-IMAGES]]
 
-      Implementations that support scripting must support the CSS Object Model. The following
-      features and terms are defined in the CSSOM specifications: [[!CSSOM]] [[!CSSOM-VIEW]]
+      스크립팅을 지원하는 구현은 CSS 객체 모델을 지원해야 합니다. 다음 기능들과 용어들은 CSSOM 명세에
+      정의되어 있습니다: [[!CSSOM]] [[!CSSOM-VIEW]]
 
       * <a interface><code>Screen</code></a>
       * <a interface><code>LinkStyle</code></a>
       * <a interface><code>CSSStyleDeclaration</code></a>
-      * <a attribute for="CSSStyleDeclaration"><code>cssText</code></a> attribute of <a interface><code>CSSStyleDeclaration</code></a>
+      * <a interface><code>CSSStyleDeclaration</code></a>의 <a attribute for="CSSStyleDeclaration"><code>cssText</code></a> 속성(attribute)
       * <a interface><code>StyleSheet</code></a>
-      * <a spec="cssom">create a CSS style sheet</a>
-      * <a spec="cssom">remove a CSS style sheet</a>
-      * <a spec="cssom">associated CSS style sheet</a>
-      * <a>CSS style sheets</a> and their properties:
-            <a for="stylesheet">type</a>,
+      * <a spec="cssom" lt="create a CSS style sheet">CSS 스타일 시트 생성</a>
+      * <a spec="cssom" lt="remove a CSS style sheet">CSS 스타일 시트 제거</a>
+      * <a spec="cssom" lt="associated CSS style sheet">연관된 CSS 스타일 시트</a>
+      * <a lt="CSS style sheets">CSS 스타일 시트</a>와 프로퍼티(propetry)들:
+            <a for="stylesheet" lt="type">type</a>,
             <a spec="cssom">location</a>,
-            <a>parent CSS style sheet</a>,
-            <a>owner node</a>,
-            <a>owner CSS rule</a>,
+            <a lt="parent CSS style sheet">부모 CSS 스타일 시트</a>,
+            <a lt="owner node">소유자 노드</a>,
+            <a lt="owner CSS rule">소유자 CSS 규칙</a>,
             <a>media</a>,
             <a>title</a>,
-            <a>alternate flag</a>,
-            <a>disabled flag</a>,
-            <a>CSS rules</a>,
-            <a>origin-clean flag</a>
-      * <a>Alternative style sheet sets</a> and the <a>preferred style sheet set</a>
-      * <a>Serializing a CSS value</a>
-      * <a>run the resize steps</a>
-      * <a>run the scroll steps</a>
-      * <a>evaluate media queries and report changes</a>
-      * <a spec="cssom-view">Scroll an element into view</a>
-      * <a spec="cssom-view">Scroll to the beginning of the document</a>
-      * The <a event><code>resize</code></a> event
-      * The <a event><code>scroll</code></a> event
-      * <a>The <em>features</em> argument of <code>window.open</code></a>
+            <a lt="alternate flag">alternate 플래그</a>,
+            <a lt="disabled flag">disabled 플래그</a>,
+            <a lt="CSS rules">CSS 규칙</a>,
+            <a lt="origin-clean flag">origin-clean 플래그</a>
+      * <a lt="Alternative style sheet sets">대체 스타일 시트 세트</a>와 <a lt="preferred style sheet set">우선되는 스타일 시트 세트</a>
+      * <a lt="Serializing a CSS value">CSS 값 직렬화</a>
+      * <a lt="run the resize steps">크기 조정 단계 수행</a>
+      * <a lt="run the scroll steps">스크롤 단계 수행</a>
+      * <a lt="evaluate media queries and report changes">미디어쿼리 평가와 변경 보고</a>
+      * <a spec="cssom-view" lt="Scroll an element into view">뷰(view) 안으로 요소(element)를 스크롤</a>
+      * <a spec="cssom-view" lt="Scroll to the beginning of the document">문서의 시작 부분으로 스크롤</a>
+      * <a event><code>resize</code></a> 이벤트
+      * <a event><code>scroll</code></a> 이벤트
+      * <a lt="The features argument of window.open"><code>window.open</code>의 <em>특징</em> 인자(argument)</a>
 
-      The following features and terms are defined in the <cite>CSS Syntax</cite> specifications:
+      다음 기능들과 용어들은 <cite>CSS 구문</cite> 명세에 정의되어 있습니다:
       [[!CSS-SYNTAX-3]]
 
-      * <a lt="consume a component value">Parse a comma-separated list of component values</a>
-      * <a>component value</a>
-      * <a>environment encoding</a>
+      * <a lt="consume a component value">구성 값들의 콤마로 구분된 목록 해석</a>
+      * <a lt="component value">구성 값</a>
+      * <a lt="environment encoding">환경 인코딩</a>
       * <a type lt="whitespace">&lt;whitespace-token></a>
 
-      The feature <a>&lt;length></a> is defined in the <cite>CSS Values and Units</cite>
-      specification. [[!CSS-VALUES]]
+      <a>&lt;length></a> 특성은 <cite>CSS 값과 단위</cite> 명세에 정의되어 있습니다. [[!CSS-VALUES]]
 
-      The term <a>CSS styling attribute</a> is defined in the <cite>CSS Style Attributes</cite>
-      specification. [[!CSS-STYLE-ATTR]]
+      <a lt="CSS styling attribute">CSS 스타일링 속성(attribute)</a>라는 용어는 
+      <cite>CSS Style 속성(attribute)</cite> 명세에 정의되어 있습니다. [[!CSS-STYLE-ATTR]]
 
-      The <code>CanvasRenderingContext2D</code> object's use of fonts depends on the features
-      described in the CSS <cite>Fonts</cite> and <cite>Font Loading</cite> specifications,
-      including in particular <a interface><code>FontFace</code></a> objects and the
-      <a spec="css-font-loading-3">font source</a> concept. [[!CSS-FONTS-3]] [[CSS-FONT-LOADING-3]]
+      <code>CanvasRenderingContext2D</code> 객체의 폰트 사용은 CSS <cite>폰트</cite>와 
+      <cite>폰트 로딩</cite> 명세에 설명된 기능에 따라, 특히 <a interface><code>FontFace</code></a> 
+      객체와 <a spec="css-font-loading-3" lt="font source">폰트 소스</a> 개념을 포함하여, 달라집니다. 
+      [[!CSS-FONTS-3]] [[CSS-FONT-LOADING-3]]
 
-      The following interface is defined in the Geometry Interfaces Module specification:
+      다음 인터페이스는 외형 인터페이스 모듈(Geometry Interfaces Module) 명세에 정의되어 있습니다:
       [[!GEOMETRY-1]]
 
-      * {{DOMMatrix}} interface
+      * {{DOMMatrix}} 인터페이스
 
   : SVG
-  :: The <code>CanvasRenderingContext2D</code> object's use of fonts depends on the features
-      described in the CSS <cite>Fonts</cite> and <cite>Font Loading</cite> specifications,
-      including in particular <a interface><code>FontFace</code></a> objects and the
-      <a spec="css-font-loading-3">font source</a> concept. [[!CSS-FONTS-3]] [[CSS-FONT-LOADING-3]]
+  :: <code>CanvasRenderingContext2D</code> 객체의 폰트 사용은 CSS <cite>폰트</cite>와
+      <cite>폰트 로딩</cite> 명세에 설명된 기능에 따라, 특히 <a interface><code>FontFace</code></a> 
+      객체와 <a spec="css-font-loading-3" lt="font source">폰트 소스</a> 개념을 포함하여, 달라집니다. 
+      [[!CSS-FONTS-3]] [[CSS-FONT-LOADING-3]]
 
-      The following interface is defined in the SVG specification: [[!SVG11]]
+      다음 인터페이스는 SVG 명세에 정의되어 있습니다: [[!SVG11]]
 
       * {{SVGMatrix}}
 
   : WebGL
-  :: The following interface is defined in the WebGL specification: [[!WEBGL]]
+  :: 다음 인터페이스는 WebGL 명세에 정의되어 있습니다: [[!WEBGL]]
 
       * {{WebGLRenderingContext}}
 
   : WebVTT
-  :: Implementations may support <dfn>WebVTT</dfn> as a text track format for subtitles, captions,
-      chapter titles, metadata, etc, for media resources. [[WEBVTT]]
+  :: 구현은 미디어 리소스에 대한 자막(subtitle), 캡션(caption), 챕터 제목, 메타데이터 등으로서 
+      <dfn>WebVTT</dfn>를 지원할 수 있습니다. [[WEBVTT]]
 
-      The following terms, used in this specification, are defined in the WebVTT specification:
+      이 명세에 사용된 다음 용어들은 WebVTT 명세에 정의되어 있습니다:
 
-      * <dfn>WebVTT file</dfn>
-      * <dfn>WebVTT file using cue text</dfn>
-      * <dfn>WebVTT file using chapter title text</dfn>
-      * <dfn>WebVTT file using only nested cues</dfn>
-      * <dfn>WebVTT parser</dfn>
-      * The <dfn>rules for updating the display of WebVTT text tracks</dfn>
-      * The <dfn>rules for interpreting WebVTT cue text</dfn>
-      * The WebVTT <dfn>text track cue writing direction</dfn>
+      * <dfn lt="WebVTT file">WebVTT 파일</dfn>
+      * <dfn lt="WebVTT file using cue text">큐 텍스트를 사용하는 WebVTT 파일</dfn>
+      * <dfn lt="WebVTT file using chapter title text">챕터 제목 텍스트를 사용하는 WebVTT 파일</dfn>
+      * <dfn lt="WebVTT file using only nested cues">중첩된 큐만을 사용하는 WebVTT 파일</dfn>
+      * <dfn lt="WebVTT parser">WebVTT 해석기</dfn>
+      * <dfn lt="rules for updating the display of WebVTT text tracks">WebVTT 텍스트 트랙의 표시 갱신을 위한 규칙</dfn>
+      * <dfn lt="rules for interpreting WebVTT cue text">WebVTT 큐 텍스트 해석을 위한 규칙</dfn>
+      * WebVTT <dfn lt="text track cue writing direction">텍스트 트랙 큐 쓰기 방향</dfn>
 
-  : The WebSocket protocol
-  :: The following terms are defined in the WebSocket protocol specification: [[!RFC6455]]
+  : 웹소켓 프로토콜
+  :: 다음 용어들은 웹소켓 프로토콜 명세에 정의되어 있습니다: [[!RFC6455]]
 
-      * <dfn>establish a WebSocket connection</dfn>
-      * <dfn>the WebSocket connection is established</dfn>
-      * <dfn>validate the server's response</dfn>
-      * <dfn>extensions in use</dfn>
-      * <dfn>subprotocol in use</dfn>
-      * <dfn>headers to send appropriate cookies</dfn>
-      * <dfn>cookies set during the server's opening handshake</dfn>
-      * <dfn>a WebSocket message has been received</dfn>
-      * <dfn>send a WebSocket Message</dfn>
-      * <dfn>fail the WebSocket connection</dfn>
-      * <dfn>close the WebSocket connection</dfn>
-      * <dfn>start the WebSocket closing handshake</dfn>
-      * <dfn>the WebSocket closing handshake is started</dfn>
-      * <dfn>the WebSocket connection is closed</dfn> (possibly <i>cleanly</i>)
-      * <dfn>the WebSocket connection close code</dfn>
-      * <dfn>the WebSocket connection close reason</dfn>
-      * <dfn><code>Sec-WebSocket-Protocol</code></dfn> field
+      * <dfn lt="establish a WebSocket connection">웹 소켓 연결 수립</dfn>
+      * <dfn lt="the WebSocket connection is established">웹 소켓 연결 수립됨</dfn>
+      * <dfn lt="validate the server's response">서버 응답 검증</dfn>
+      * <dfn lt="extensions in use">쓰이고 있는 확장</dfn>
+      * <dfn lt="subprotocol in use">쓰이고 있는 서브프로토콜</dfn>
+      * <dfn lt="headers to send appropriate cookies">적절한 쿠키를 보내기 위한 헤더</dfn>
+      * <dfn lt="cookies set during the server's opening handshake">서버의 여는 핸드쉐이크(opening handshake) 동안 쿠키 설정</dfn>
+      * <dfn lt="a WebSocket message has been received">웹소켓 메세지가 수신되었습니다</dfn>
+      * <dfn lt="send a WebSocket Message">웹소켓 메시지 전송</dfn>
+      * <dfn lt="fail the WebSocket connection">웹소켓 연결 실패</dfn>
+      * <dfn lt="close the WebSocket connection">웹소켓 연결 종료</dfn>
+      * <dfn lt="start the WebSocket closing handshake">웹소켓 닫는 핸드쉐이크(closing handshake) 시작</dfn>
+      * <dfn lt="the WebSocket closing handshake is started">웹소켓 닫는 핸드쉐이크(closing handshake)가 시작되었습니다</dfn>
+      * <dfn lt="the WebSocket connection is closed">웹소켓 연결이 종료되었습니다</dfn> (아마도 <i>완전히</i>)
+      * <dfn lt="the WebSocket connection close code">웹소켓 연결 종료 코드</dfn>
+      * <dfn lt="the WebSocket connection close reason">웹소켓 연결 종료 사유</dfn>
+      * <dfn><code>Sec-WebSocket-Protocol</code></dfn> 필드
 
   : ARIA
-  :: The <dfn element-attr for="global"><code>role</code></dfn> attribute is defined in the ARIA specification, as are the
-      following roles: [[!WAI-ARIA]]
+  :: <dfn element-attr for="global"><code>role</code></dfn> 속성(attirbute)는 다음 역할(role)들과 
+      같이 ARIA 명세에 정의되어 있습니다: [[!WAI-ARIA]]
 
       * <a value for="role"><code>alert</code></a>
       * <a value for="role"><code>alertdialog</code></a>
@@ -1308,8 +1291,8 @@
       * <a value for="role"><code>tree</code></a>
       * <a value for="role"><code>treeitem</code></a>
 
-      In addition, the following <dfn element-attr for="global"><code>aria-*</code></dfn> content attributes are defined in
-      the ARIA specification: [[!WAI-ARIA]]
+      게다가, 다음 <dfn element-attr for="global"><code>aria-*</code></dfn> 콘텐트 속성(attribute)는 
+      ARIA 명세에 정의되어 있습니다: [[!WAI-ARIA]]
 
       * <dfn element-attr for="global"><code>aria-checked</code></dfn>
       * <dfn element-attr for="global"><code>aria-describedby</code></dfn>
@@ -1330,44 +1313,42 @@
       * <dfn element-attr for="global"><code>aria-valuemin</code></dfn>
       * <dfn element-attr for="global"><code>aria-valuenow</code></dfn>
 
-  : Content Security Policy
-  :: The following terms are defined in <cite>Content Security Policy</cite>: [[!CSP3]]
+  : 콘텐트 보안 정책
+  :: 다음 용어들은 <cite>콘텐트 보안 정책</cite>에 정의되어 있습니다: [[!CSP3]]
 
-      * <a>Content Security Policy</a>
-      * <a>Content Security Policy directive</a>
-      * The <a>Content Security Policy syntax</a>
-      * <a>enforce the policy</a>
-      * The <a>parse a serialized Content Security Policy</a> algorithm
-      * The <a>Initialize a global object's CSP list</a> algorithm
-      * The <a>Initialize a Document's CSP list</a> algorithm
-      * The <a>Should element's inline behavior be blocked by Content Security Policy?</a> algorithm
-      * The <a><code>report-uri</code></a>, <a><code>frame-ancestors</code></a>, and
-         <a><code>sandbox</code></a> <a>directives</a>
-      * The <a>EnsureCSPDoesNotBlockStringCompilation</a> abstract algorithm
-      * The <a>Is base allowed for Document?</a> algorithm
-  :: The following terms are defined in <cite>Content Security Policy: Document Features</code> <!-- [[!CSPDOCUMENT]] when published -->
+      * <a lt="Content Security Policy">콘텐트 보안 정책</a>
+      * <a lt="Content Security Policy directive">콘텐트 보안 정책 지시어</a>
+      * <a lt="Content Security Policy syntax">콘텐트 보안 정책 구문</a>
+      * <a lt="enforce the policy">정책 시행</a>
+      * <a lt="parse a serialized Content Security Policy">직렬화된 콘텐트 보안 정책 해석</a> 알고리즘
+      * <a lt="Initialize a global object's CSP list">전역 객체의 CSP 목록 초기화</a> 알고리즘
+      * <a lt="Initialize a Document's CSP list">문서의 CSP 목록 초기화</a> 알고리즘
+      * <a lt="Should element's inline behavior be blocked by Content Security Policy?">요소(element)의 인라인 동작은 콘텐트 보안 정책에 의해 차단되어야(should) 하는가?</a> 알고리즘
+      * <a><code>report-uri</code></a>, <a><code>frame-ancestors</code></a>,
+         <a><code>sandbox</code></a> <a lt="directives">지시어</a>
+      * <a lt="EnsureCSPDoesNotBlockStringCompilation">EnsureCSPDoesNotBlockStringCompilation</a> 추상화 알고리즘
+      * <a lt="Is base allowed for Document?">문서에 대해 허용된 base인가?</a> 알고리즘
+  :: 다음 용어들은 <cite>콘텐트 보안 정책: 문서 특징</cite>에 정의되어 있습니다. <!-- [[!CSPDOCUMENT]] when published -->
 
-      * The <a><code>frame-ancestors</code> directive</a>
-      * The <a><code>sandbox</code> directive</a>
+      * <a lt="frame-ancestors directive"><code>frame-ancestors</code> 지시어</a>
+      * <a lt="sandbox directive"><code>sandbox</code> 지시어</a>
 
-  : Service Workers
-  :: The following terms are defined in <cite>Service Workers</cite>: [[!SERVICE-WORKERS]]
+  : 서비스 워커
+  :: 다음 용어들은 <cite>서비스 워커</cite>에 정의되어 있습니다: [[!SERVICE-WORKERS]]
 
-      * <dfn>match service worker registration</dfn>
+      * <dfn lt="match service worker registration">서비스 워커 등록 매칭</dfn>
 
-  This specification does not <em>require</em> support of any particular network protocol, style
-  sheet language, scripting language, or any of the DOM specifications beyond those required in the
-  list above. However, the language described by this specification is biased towards CSS as the
-  styling language, JavaScript as the scripting language, and HTTP as the network protocol, and
-  several features assume that those languages and protocols are in use.
+  이 명세는 임의의 특정 네트워크 프로토콜, 스타일 시트 언어, 스크립팅 언어, 위 목록에 요구된 것들을 
+  넘어선 임의의 DOM 명세의 지원을 <em>요구</em>하지 않습니다. 하지만, 이 명세에 설명된 언어는 
+  스타일 언어로 CSS에, 스크립트 언어로 자바스크립트에, 네트워크 프로토콜에 HTTP에 관심을 두고 있고,
+  몇가지 기능들은 그 언어와 프로토콜들이 사용되고 있는 것으로 추정됩니다.
 
-  A user agent that implements the HTTP protocol must implement the Web Origin Concept
-  specification and the HTTP State Management Mechanism specification (Cookies) as well. [[!HTTP]]
-  [[!ORIGIN]] [[!COOKIES]]
+  HTTP 프로토콜을 구현하는 유저 에이전트는 웹 출처 개념(Web Origin Concept) 명세와 HTTP 상태 관리 
+  메커니즘 명세(쿠키) 역시 구현해야(must) 합니다.  [[!HTTP]] [[!ORIGIN]] [[!COOKIES]]
 
   <p class="note">
-    This specification might have certain additional requirements on character encodings, image
-    formats, audio formats, and video formats in the respective sections.
+    이 명세는 각각의 섹션에서 문자 인코딩, 이미지 형식, 오디오 형식, 비디오 형식에 대한 추가적인 
+    요구사항을 가질 수 있습니다.
   </p>
 
 <h4 id="conformance-requirements-extensibility">Extensibility</h4>
