@@ -1455,7 +1455,7 @@ pre.idl.highlight { color: #708090; }
        <a href="infrastructure.html#conformance-requirements"><span class="secno">2.2</span> <span class="content">적합성 요구사항</span></a>
        <ol class="toc">
         <li><a href="infrastructure.html#conformance-classes"><span class="secno">2.2.1</span> <span class="content">적합성 종류</span></a>
-        </li><li><a href="infrastructure.html#conformance-requirements-dependencies"><span class="secno">2.2.2</span> <span class="content">Dependencies</span></a>
+        </li><li><a href="infrastructure.html#conformance-requirements-dependencies"><span class="secno">2.2.2</span> <span class="content">의존성</span></a>
         </li><li><a href="infrastructure.html#conformance-requirements-extensibility"><span class="secno">2.2.3</span> <span class="content">Extensibility</span></a>
         </li><li><a href="infrastructure.html#interactions-with-xpath-and-xslt"><span class="secno">2.2.4</span> <span class="content">Interactions with XPath and XSLT</span></a>
        </li></ol>
@@ -1601,7 +1601,7 @@ pre.idl.highlight { color: #708090; }
     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="HTML MIME type" data-noexport="" id="html-mime-type">HTML MIME 타입</dfn> 이라는 용어는 <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-2">MIME 타입</a> <a href="iana.html#text-html"><code>text/html</code></a>를 지칭하는데 사용됩니다.</p>
     <p>리소스의 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="critical subresource|critical subresources" data-noexport="" id="critical-subresource">중요한 하위 리소스</dfn>들은 완전히
   처리되기 위해 사용 가능(available)해야 하는 것이 필요한 리소스 입니다. 어떤 자원이 중요한 것으로 
-  간주되거나 그렇지 않은 지는 리소스의 형식(format)을 정의하는 명세에 의해 정의됩니다.</p>
+  간주되거나 그렇지 않은 지는 리소스의 형식(format)을 정의하는 명세에 의해 정의되어 있습니다.</p>
     <p><a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-1"><code>data:</code> URL</a>이라는 용어는 <a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-2"><code>data:</code></a> 스킴을 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URLs</a> 사용하는 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>들을 지칭합니다. <a data-link-type="biblio" href="references.html#biblio-rfc2397">[RFC2397]</a></p>
     <h4 class="heading settled" data-level="2.1.2" id="xml"><span class="secno">2.1.2. </span><span class="content">XML</span><a class="self-link" href="infrastructure.html#xml"></a></h4>
     <p>HTML에서 XHTML로 쉽게 마이그레이션 하기 위해, 이 명세를 따르는 유저 에이전트는 적어도 DOM과 CSS의
@@ -1817,7 +1817,7 @@ pre.idl.highlight { color: #708090; }
   (예를 들어, <code><a data-link-type="element" href="grouping-content.html#elementdef-blockquote" id="ref-for-elementdef-blockquote-1">blockquote</a></code> 요소(element)의 콘텐트가 따옴표로 묶여있지 않다면 문서는 비적합 
   함에도 불구하고, 사람의 판단의 입력 없이 수행하는 적합성 검사기는 <code><a data-link-type="element" href="grouping-content.html#elementdef-blockquote" id="ref-for-elementdef-blockquote-2">blockquote</a></code> 요소(element)가 인용된 문장만을 포함함을 검사할 필요가 없습니다.)</p>
       <p>적합성 검사기는 입력 문서가 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-3">브라우징 컨텍스트</a> 없이 해석되는 경우
-  (스크립가 수행되지 않고, 해석기의 <a data-link-type="dfn" href="syntax.html#scripting-flag" id="ref-for-scripting-flag-1">스크립팅 플래그</a>가 비활성화 된 
+  (스크립가 수행되지 않고, 해석기의 <a data-link-type="dfn" href="syntax.html#scripting-flag" id="ref-for-scripting-flag-1">scripting 플래그</a>가 비활성화 된 
   것을 의미) 적합한지 검사해야(must) 하고, 또한 입력 문서가 스크립트를 수행하는 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-4">브라우징 컨텍스트</a>를 가지고 해석되는 경우 적합한지, 그리고 
   스크립트는 스크립트가 자신을 수행하는 동안 비적합 상태가 다른 것을 발생시키는 것을 야기하지 
   않음을 검사해야(should) 합니다. (이것은 불가능한 것으로 증명되었기 때문에 "SHOULD"일 뿐 
@@ -1874,7 +1874,7 @@ pre.idl.highlight { color: #708090; }
       <p>소스 정보의 구조는 어떤 HTML 요소(element)와 속성(attribute)가 가장 적절한지에 관하여 선택을
   하는데 사용될 수 있기 때문에, 전자는 HTML을 작성하는 도구에 대한 선호된 메커니즘입니다.</p>
       <p>하지만, WYSIWYG 도구는 타당합니다. WYSIWYG 도구는 그것이 적절하다고 알고 있는 요소(element)들을
-  사용해야(should) 하고, 그것이 적절하다고 알지 못하는 요소(element)들을 사용해서는 안됩니다(should).
+  사용해야(should) 하고, 그것이 적절하다고 알지 못하는 요소(element)들을 사용해서는(should) 안됩니다.
   이것은 어떤 극단적인 경우에 플로우 요소(flow element)의 사용을 <code><a data-link-type="element" href="grouping-content.html#elementdef-div" id="ref-for-elementdef-div-5">div</a></code>, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-b" id="ref-for-elementdef-b-2">b</a></code>, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-i" id="ref-for-elementdef-i-13">i</a></code>, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-span" id="ref-for-elementdef-span-5">span</a></code>과 
   같은 단지 몇 가지 요소(element)로 제한하는 것과 <code><a data-link-type="element-sub" href="dom.html#element-attrdef-global-style" id="ref-for-element-attrdef-global-style-3">style</a></code>를 자유롭게 사용하는 것을 
   의미할 수 있습니다.</p>
@@ -1894,51 +1894,48 @@ pre.idl.highlight { color: #708090; }
   에이전트의 요구사항입니다. 비슷하게, 일부 적합성 요구사항은 저자에 대한 요구사항으로 표현됩니다;
   그러한 요구사항은 작성자가 생산한 문서에 대한 적합성 요구사항으로 해석되어야 합니다. (다시 말해, 
   이 명세는 저자에 대한 적합성 기준과 문서에 대한 적합성 기준을 구분하지 않습니다.)</p>
-    <h4 class="heading settled" data-level="2.2.2" id="conformance-requirements-dependencies"><span class="secno">2.2.2. </span><span class="content">Dependencies</span><a class="self-link" href="infrastructure.html#conformance-requirements-dependencies"></a></h4>
-    <p>This specification relies on several other underlying specifications.</p>
+    <h4 class="heading settled" data-level="2.2.2" id="conformance-requirements-dependencies"><span class="secno">2.2.2. </span><span class="content">의존성</span><a class="self-link" href="infrastructure.html#conformance-requirements-dependencies"></a></h4>
+    <p>이 명세는 몇 다른 기초적인 명세에 의존합니다.</p>
     <dl>
      <dt data-md="">
-      <p>Unicode and Encoding</p>
+      <p>유니코드와 인코딩</p>
      </dt><dd data-md="">
-      <p>The Unicode character set is used to represent textual data, and the Encoding standard defines
-  requirements around <a data-link-type="dfn" href="infrastructure.html#character-encoding" id="ref-for-character-encoding-1">character encodings</a>. <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
-      <p class="note" role="note"> This specification <a data-link-type="dfn" href="infrastructure.html#character-encoding" id="ref-for-character-encoding-2">introduces terminology</a> based on the terms defined in those
-    specifications, as described earlier. </p>
-      <p>The following terms are used as defined in the Encoding standard: <a data-link-type="biblio" href="references.html#biblio-encoding">[ENCODING]</a></p>
+      <p>유니코드 문자 집합은 텍스트 데이터를 나타내는데 사용되고, 인코딩 표준은 <a data-link-type="dfn" href="infrastructure.html#character-encoding" id="ref-for-character-encoding-1">문자 인코딩</a> 요구사항을 정의합니다. <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
+      <p class="note" role="note"> 이 명세는 앞서 설명된 대로, 그 명세에 정의된 용어에 기초하여 <a data-link-type="dfn" href="infrastructure.html#character-encoding" id="ref-for-character-encoding-2">전문용어를 소개</a>합니다. </p>
+      <p>다음 용어들은 인코딩 표준에 정의된 대로 사용됩니다: <a data-link-type="biblio" href="references.html#biblio-encoding">[ENCODING]</a></p>
       <ul>
        <li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="getting-an-encoding">Getting an encoding</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="Getting an encoding" data-noexport="" id="getting-an-encoding">인코딩 가져오기</dfn></p>
        </li><li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="getting an output encoding" data-noexport="" id="getting-an-output-encoding">Get an output encoding</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="getting an output encoding" data-noexport="" id="getting-an-output-encoding">출력 인코딩 가져오기</dfn></p>
        </li><li data-md="">
-        <p>The generic <a data-link-type="dfn" href="https://www.w3.org/TR/encoding/#decode">decode</a> algorithm which takes a byte stream and an encoding and
-returns a character stream</p>
+        <p>바이트 스트림과 인코딩을 가져오고 문자 스트림을 반환하는 일반 <a data-link-type="dfn" href="https://www.w3.org/TR/encoding/#decode">디코드</a> 알고리즘</p>
        </li><li data-md="">
-        <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="utf-8-decode">UTF-8 decode</dfn> algorithm which takes a byte stream and returns a character
-stream, additionally stripping one leading UTF-8 Byte Order Mark (BOM), if any</p>
+        <p>선두의 UTF-8 바이트 순서 표식(BOM)이 있다면 제거하여, 바이트 스트림을 가져오고 문자 스트림을
+반환하는 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="UTF-8 decode" data-noexport="" id="utf-8-decode">UTF-8 디코드</dfn> 알고리즘</p>
        </li><li data-md="">
-        <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="utf-8-decode-without-bom">UTF-8 decode without BOM</dfn> algorithm which is identical to <a data-link-type="dfn" href="infrastructure.html#utf-8-decode" id="ref-for-utf-8-decode-1">UTF-8 decode</a> except that it does not strip one leading UTF-8 Byte Order Mark (BOM)</p>
+        <p>선두의 UTF-8 바이트 순서 표식(BOM)을 제거하지 않는 것을 제외하고 <a data-link-type="dfn" href="infrastructure.html#utf-8-decode" id="ref-for-utf-8-decode-1">UTF-8 디코드</a>와 동일한 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="UTF-8 decode without BOM" data-noexport="" id="utf-8-decode-without-bom">BOM 없는 UTF-8 디코드</dfn> 알고리즘</p>
        </li><li data-md="">
-        <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="utf-8-decode-without-bom-or-fail">UTF-8 decode without BOM or fail</dfn> algorithm which is identical to <a data-link-type="dfn" href="infrastructure.html#utf-8-decode-without-bom" id="ref-for-utf-8-decode-without-bom-1">UTF-8 decode without BOM</a> except that it returns failure upon encountering an error</p>
+        <p>오류를 만날 때 실패가 반환되는 <a data-link-type="dfn" href="infrastructure.html#utf-8-decode-without-bom" id="ref-for-utf-8-decode-without-bom-1">BOM 없는 UTF-8 디코드</a>와 동일한 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="UTF-8 decode without BOM or fail" data-noexport="" id="utf-8-decode-without-bom-or-fail">BOM 없는 UTF-8 디코드나 실패</dfn> 알고리즘</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/encoding/#encode">encode</a> algorithm which takes a character stream and an
-encoding and returns a byte stream</p>
+        <p>문자 스트림과 인코딩을 가져오고 바이트 스트림을 반환하는 <a data-link-type="dfn" href="https://www.w3.org/TR/encoding/#encode">인코드</a> 알고리즘</p>
        </li><li data-md="">
-        <p>The <dfn data-dfn-type="dfn" data-noexport="" id="utf-8-encode">UTF-8 encode<a class="self-link" href="infrastructure.html#utf-8-encode"></a></dfn> algorithm which takes a character stream and returns a byte stream.</p>
+        <p>문자 스트림을 가져오고 바이트 스트림을 반환하는 <dfn data-dfn-type="dfn" data-lt="UTF-8 encode" data-noexport="" id="utf-8-encode">UTF-8 인코드<a class="self-link" href="infrastructure.html#utf-8-encode"></a></dfn> 알고리즘</p>
       </li></ul>
      </dd><dt data-md="">
-      <p>XML and related specifications</p>
+      <p>XML 그리고 관련된 명세</p>
      </dt><dd data-md="">
-      <p>Implementations that support <a href="xhtml.html#xhtml">the XHTML syntax</a> must support some version of XML, as
-  well as its corresponding namespaces specification, because that syntax uses an XML
-  serialization with namespaces. <a data-link-type="biblio" href="references.html#biblio-xml">[XML]</a> <a data-link-type="biblio" href="references.html#biblio-xml-names">[XML-NAMES]</a></p>
-      <p>The attribute with the tag name <a data-link-type="dfn" href="https://www.w3.org/TR/xml/#sec-white-space"><code>xml:space</code></a> in the <a data-link-type="dfn" href="infrastructure.html#xml-namespace" id="ref-for-xml-namespace-1">XML namespace</a> is defined by the XML specification. <a data-link-type="biblio" href="references.html#biblio-xml">[XML]</a></p>
-      <p>This specification also references the <a data-link-type="dfn" href="https://www.w3.org/TR/xml-stylesheet/#the-xml-stylesheet-processing-instruction"><code>&lt;?xml-stylesheet?&gt;</code></a> processing instruction, defined in the <cite>Associating Style Sheets with XML documents</cite> specification. <a data-link-type="biblio" href="references.html#biblio-xml-stylesheet">[XML-STYLESHEET]</a></p>
-      <p>This specification also non-normatively mentions the <dfn class="idl-code" data-dfn-type="interface" data-export="" id="xsltprocessor"><code>XSLTProcessor</code><a class="self-link" href="infrastructure.html#xsltprocessor"></a></dfn> interface and its <dfn class="idl-code" data-dfn-for="XSLTProcessor" data-dfn-type="method" data-export="" id="dom-xsltprocessor-transformtofragment"><code>transformToFragment()</code><a class="self-link" href="infrastructure.html#dom-xsltprocessor-transformtofragment"></a></dfn> and <dfn class="idl-code" data-dfn-for="XSLTProcessor" data-dfn-type="method" data-export="" id="dom-xsltprocessor-transformtodocument"><code>transformToDocument()</code><a class="self-link" href="infrastructure.html#dom-xsltprocessor-transformtodocument"></a></dfn> methods.</p>
+      <p><a href="xhtml.html#xhtml">XHTML 구문</a>을 지원하는 구현은 XML의 여러 버전뿐 아니라, 그 구문이
+  네임스페이스를 가진 XML 직렬화를 사용하기 때문에, 해당하는 네임스페이스 명세를 지원해야(must) 
+  합니다. <a data-link-type="biblio" href="references.html#biblio-xml">[XML]</a> <a data-link-type="biblio" href="references.html#biblio-xml-names">[XML-NAMES]</a></p>
+      <p><a data-link-type="dfn" href="infrastructure.html#xml-namespace" id="ref-for-xml-namespace-1">XML 네임스페이스</a>에서 <a data-link-type="dfn" href="https://www.w3.org/TR/xml/#sec-white-space"><code>xml:space</code></a> 태그 이름을 가진 속성(attribute)은 XML 명세에 의해 정의되어 있습니다. <a data-link-type="biblio" href="references.html#biblio-xml">[XML]</a></p>
+      <p>이 명세는 또한, <cite data-lt="Associating Style Sheets with XML documents">스타일 시트와 XML 문서를 연관짓기</cite> 명세에 정의된, <a data-link-type="dfn" href="https://www.w3.org/TR/xml-stylesheet/#the-xml-stylesheet-processing-instruction"><code>&lt;?xml-stylesheet?&gt;</code></a> 처리 명령을 
+  참조합니다. <a data-link-type="biblio" href="references.html#biblio-xml-stylesheet">[XML-STYLESHEET]</a></p>
+      <p>이 명세는 또한 비규범적으로 <dfn class="idl-code" data-dfn-type="interface" data-export="" id="xsltprocessor"><code>XSLTProcessor</code><a class="self-link" href="infrastructure.html#xsltprocessor"></a></dfn> 인터페이스와 그것의 <dfn class="idl-code" data-dfn-for="XSLTProcessor" data-dfn-type="method" data-export="" id="dom-xsltprocessor-transformtofragment"><code>transformToFragment()</code><a class="self-link" href="infrastructure.html#dom-xsltprocessor-transformtofragment"></a></dfn>와 <dfn class="idl-code" data-dfn-for="XSLTProcessor" data-dfn-type="method" data-export="" id="dom-xsltprocessor-transformtodocument"><code>transformToDocument()</code><a class="self-link" href="infrastructure.html#dom-xsltprocessor-transformtodocument"></a></dfn> 메서드를 언급합니다.</p>
      </dd><dt data-md="">
       <p>URLs</p>
      </dt><dd data-md="">
-      <p>The following terms are defined in the WHATWG URL standard: <a data-link-type="biblio" href="references.html#biblio-url">[URL]</a></p>
+      <p>다음 용어들은 WHATWG URL 표준에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-url">[URL]</a></p>
       <ul>
        <li data-md="">
         <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-host">host</a></p>
@@ -1947,277 +1944,276 @@ encoding and returns a byte stream</p>
        </li><li data-md="">
         <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-origin">Origin</a> of URLs</p>
+        <p>URL의 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-origin">Origin</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">Absolute URL</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">절대 URL</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-relative">Relative URL</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-relative">상대 URL</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-scheme-relative">Relative schemes</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-scheme-relative">상대 스키마</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL parser</a> and <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-basic-url-parser">basic URL parser</a> as well as these parser states:</p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL 해석기</a>와 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-basic-url-parser">기본 URL 해석기</a>, 그리고 이 해석기 단계:</p>
         <ul>
          <li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#scheme-start-state">scheme start state</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#scheme-start-state">스키마 시작 단계</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#host-state">host state</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#host-state">host 단계</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#hostname-state">hostname state</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#hostname-state">hostname 단계</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#port-state">port state</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#port-state">port 단계</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#path-start-state">path start state</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#path-start-state">path 시작 단계</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#query-state">query state</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#query-state">query 단계</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#fragment-state">fragment state</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#fragment-state">fragment 단계</a></p>
         </li></ul>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL record</a>, as well as its individual components:</p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL 레코드</a>, 그리고 그것의 각 구성 요소:</p>
         <ul>
          <li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-scheme">scheme</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-scheme">스키마(scheme)</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-username">username</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-username">사용자 이름</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-password">password</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-password">비밀번호</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-host">host</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-host">호스트</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-port">port</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-port">포트</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">경로</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-query">query</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-query">쿼리</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-fragment">fragment</a></p>
+          <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-fragment">프래그먼트(fragment)</a></p>
         </li></ul>
        </li><li data-md="">
-        <p>A <a data-link-type="dfn" href="https://url.spec.whatwg.org/#network-scheme">network scheme</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#network-scheme">네트워크 스키마</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-serializer">URL serializer</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-serializer">URL 직렬 변환기</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-host-parser">host parser</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-host-parser">호스트 해석기</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-host-serializer">host serializer</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-host-serializer">호스트 직렬 변환기</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-host-equals">Host equals</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-host-equals">호스트 동등성</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#serialize-an-integer">serialize an integer</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#serialize-an-integer">정수 직렬화</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#default-encode-set">Default encode set</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#default-encode-set">기본 인코드 세트</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#percent-encode">Percent encode</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#percent-encode">퍼센트 인코드</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#utf-8-percent-encode">UTF-8 percent encode</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#utf-8-percent-encode">UTF-8 퍼센트 인코드</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#percent-decode">Percent decode</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#percent-decode">퍼센트 디코드</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#set-the-username">set the username</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#set-the-username">사용자 이름 설정</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#set-the-password">set the password</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#set-the-password">비밀번호 설정</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-domain-to-ascii">domain to ASCII</a> algorithm</p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-domain-to-ascii">도메인을 ASCII로 변환</a> 알고리즘</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-domain-to-unicode">domain to Unicode</a> algorithm</p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-domain-to-unicode">도메인을 유니코드로 변환</a> 알고리즘</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#non-relative-flag">non-relative flag</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#non-relative-flag">non-relative 플래그</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-violation">Parse errors</a> from the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL parser</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL 해석기</a>에서 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-violation">해석 오류</a></p>
       </li></ul>
-      <p>A number of schemes and protocols are referenced by this specification also:</p>
+      <p>몇 가지 스키마와 프로토콜들은 또한 이 명세에 의해 참조됩니다:</p>
       <ul>
        <li data-md="">
-        <p>The <dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" data-lt="about:|about:blank" id="schemedef-about"><a data-link-type="scheme" href="infrastructure.html#schemedef-about" id="ref-for-schemedef-about-1"><code>about:</code></a></dfn> scheme <a data-link-type="biblio" href="references.html#biblio-rfc6694">[RFC6694]</a></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" data-lt="about:|about:blank" id="schemedef-about"><a data-link-type="scheme" href="infrastructure.html#schemedef-about" id="ref-for-schemedef-about-1"><code>about:</code></a></dfn> 스키마 <a data-link-type="biblio" href="references.html#biblio-rfc6694">[RFC6694]</a></p>
        </li><li data-md="">
-        <p>The <dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" id="schemedef-blob"><a data-link-type="scheme" href="infrastructure.html#schemedef-blob" id="ref-for-schemedef-blob-1"><code>blob:</code></a></dfn> scheme <a data-link-type="biblio" href="references.html#biblio-fileapi">[FILEAPI]</a></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" id="schemedef-blob"><a data-link-type="scheme" href="infrastructure.html#schemedef-blob" id="ref-for-schemedef-blob-1"><code>blob:</code></a></dfn> 스키마 <a data-link-type="biblio" href="references.html#biblio-fileapi">[FILEAPI]</a></p>
        </li><li data-md="">
-        <p>The <dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" data-lt="data: url|data:|data url" id="schemedef-data-url"><code>data:</code></dfn> scheme <a data-link-type="biblio" href="references.html#biblio-rfc2397">[RFC2397]</a></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" data-lt="data: url|data:|data url" id="schemedef-data-url"><code>data:</code></dfn> 스키마 <a data-link-type="biblio" href="references.html#biblio-rfc2397">[RFC2397]</a></p>
        </li><li data-md="">
-        <p>The <dfn data-dfn-type="scheme" data-export="" id="schemedef-http"><code>http:</code><a class="self-link" href="infrastructure.html#schemedef-http"></a></dfn> scheme <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
+        <p><dfn data-dfn-type="scheme" data-export="" id="schemedef-http"><code>http:</code><a class="self-link" href="infrastructure.html#schemedef-http"></a></dfn> 스키마 <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
        </li><li data-md="">
-        <p>The <dfn data-dfn-type="scheme" data-export="" id="schemedef-https"><code>https:</code><a class="self-link" href="infrastructure.html#schemedef-https"></a></dfn> scheme <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
+        <p><dfn data-dfn-type="scheme" data-export="" id="schemedef-https"><code>https:</code><a class="self-link" href="infrastructure.html#schemedef-https"></a></dfn> 스키마 <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
        </li><li data-md="">
-        <p>The <dfn data-dfn-type="scheme" data-export="" id="schemedef-mailto"><code>mailto:</code><a class="self-link" href="infrastructure.html#schemedef-mailto"></a></dfn> scheme <a data-link-type="biblio" href="references.html#biblio-rfc6068">[RFC6068]</a></p>
+        <p><dfn data-dfn-type="scheme" data-export="" id="schemedef-mailto"><code>mailto:</code><a class="self-link" href="infrastructure.html#schemedef-mailto"></a></dfn> 스키마 <a data-link-type="biblio" href="references.html#biblio-rfc6068">[RFC6068]</a></p>
        </li><li data-md="">
-        <p>The <dfn data-dfn-type="scheme" data-export="" id="schemedef-sms"><code>sms:</code><a class="self-link" href="infrastructure.html#schemedef-sms"></a></dfn> scheme <a data-link-type="biblio" href="references.html#biblio-rfc5724">[RFC5724]</a></p>
+        <p><dfn data-dfn-type="scheme" data-export="" id="schemedef-sms"><code>sms:</code><a class="self-link" href="infrastructure.html#schemedef-sms"></a></dfn> 스키마 <a data-link-type="biblio" href="references.html#biblio-rfc5724">[RFC5724]</a></p>
        </li><li data-md="">
-        <p>The <dfn data-dfn-type="scheme" data-export="" id="schemedef-urn"><code>urn:</code><a class="self-link" href="infrastructure.html#schemedef-urn"></a></dfn> scheme <a data-link-type="biblio" href="references.html#biblio-urn">[URN]</a></p>
+        <p><dfn data-dfn-type="scheme" data-export="" id="schemedef-urn"><code>urn:</code><a class="self-link" href="infrastructure.html#schemedef-urn"></a></dfn> 스키마 <a data-link-type="biblio" href="references.html#biblio-urn">[URN]</a></p>
       </li></ul>
      </dd><dt data-md="">
-      <p>HTTP and related specifications</p>
+      <p>HTTP 그리고 관련된 명세</p>
      </dt><dd data-md="">
-      <p>The following terms are defined in the HTTP specifications: <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
+      <p>다음 용어들은 HTTP 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
       <ul>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-5.3.2"><code>Accept</code></a> header</p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-5.3.2"><code>Accept</code></a> 헤더</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-5.3.5"><code>Accept-Language</code></a> header</p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-5.3.5"><code>Accept-Language</code></a> 헤더</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7234#section-5.2"><code>Cache-Control</code></a> header</p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7234#section-5.2"><code>Cache-Control</code></a> 헤더</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc6266#section-4.1"><code>Content-Disposition</code></a> header</p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc6266#section-4.1"><code>Content-Disposition</code></a> 헤더</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-3.1.3.2"><code>Content-Language</code></a> header</p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-3.1.3.2"><code>Content-Language</code></a> 헤더</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7230#section-3.3.2"><code>Content-Length</code></a> header</p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7230#section-3.3.2"><code>Content-Length</code></a> 헤더</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7232#section-2.2"><code>Last-Modified</code></a> header</p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7232#section-2.2"><code>Last-Modified</code></a> 헤더</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-5.5.2"><code>Referer</code></a> header</p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc7231#section-5.5.2"><code>Referer</code></a> 헤더</p>
       </li></ul>
-      <p>The following terms are defined in the Cookie specification: <a data-link-type="biblio" href="references.html#biblio-cookies">[COOKIES]</a></p>
+      <p>다음 용어들은 쿠키(Cookie) 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-cookies">[COOKIES]</a></p>
       <ul>
        <li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="cookie-string">cookie-string</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="cookie-string" data-noexport="" id="cookie-string">쿠키 문자열</dfn></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc6265#section-4.1">receives a set-cookie-string</a></p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc6265#section-4.1">쿠키 설정 문자열 수신</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc6265#section-5.4"><code>Cookie</code> header</a></p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc6265#section-5.4"><code>Cookie</code> 헤더</a></p>
       </li></ul>
-      <p>The following term is defined in the Web Linking specification: <a data-link-type="biblio" href="references.html#biblio-rfc5988">[RFC5988]</a></p>
+      <p>다음 용어들은 웹 링크하기(Web Linking) 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-rfc5988">[RFC5988]</a></p>
       <ul>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc5988#section-5"><code>Link</code> header</a></p>
+        <p><a data-link-type="dfn" href="https://tools.ietf.org/html/rfc5988#section-5"><code>Link</code> 헤더</a></p>
       </li></ul>
      </dd><dt data-md="">
-      <p>Fetch</p>
+      <p>가져오기(Fetch)</p>
      </dt><dd data-md="">
-      <p>The following terms are defined in the WHATWG Fetch standard: <a data-link-type="biblio" href="references.html#biblio-fetch">[FETCH]</a></p>
+      <p>다음 용어들은 WHATWG Fetch 표준에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-fetch">[FETCH]</a></p>
       <ul>
        <li data-md="">
         <p><a data-link-type="scheme" href="infrastructure.html#schemedef-about" id="ref-for-schemedef-about-2"><code>about:blank</code></a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-https-state-value">HTTPS state value</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-https-state-value">HTTPS 상태 값</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-referrer-policy">referrer policy</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-referrer-policy">리퍼러(referrer) 정책</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#http-cors-protocol">CORS protocol</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#http-cors-protocol">CORS 프로토콜</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#default-user-agent-value">default <code>User-Agent</code> value</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#default-user-agent-value">기본 <code>User-Agent</code> 값</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-header-extract-mime-type">extract a MIME type</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-header-extract-mime-type">MIME 타입 추출</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">fetch</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">가져오기(fetch)</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#ok-status">ok status</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#ok-status">ok 상태</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#origin-header"><code>Origin</code> header</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#origin-header"><code>Origin</code> 헤더</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#process-response">process response</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#process-response">응답 처리</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-header-list-set">set</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-header-list-set">설정</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch-terminate">terminate</a></p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch-terminate">종료</a></p>
        </li><li data-md="">
-        <p>the <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#requestcredentials"><code>RequestCredentials</code></a> enumeration</p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#requestcredentials"><code>RequestCredentials</code></a> 열거</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response">response</a> and its associated:</p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response">응답</a>과 그와 연관된:</p>
         <ul>
          <li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-type">type</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-type">유형</a></p>
          </li><li data-md="">
           <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-url">url</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-url-list">url list</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-url-list">url 목록</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-status">status</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-status">상태</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-header-list">header list</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-header-list">헤더 목록</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-body">body</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-body">몸체</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-internal-response">internal response</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-internal-response">내부 응답</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-csp-list">CSP list</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-csp-list">CSP 목록</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-https-state">HTTPS state</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-https-state">HTTPS 상태</a></p>
         </li></ul>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request">request</a> and its associated:</p>
+        <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request">요청</a>과 그와 연관된:</p>
         <ul>
          <li data-md="">
           <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-url">url</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-method">method</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-method">메서드</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-header-list">header list</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-header-list">헤더 목록</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-body">body</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-body">몸체</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-client">client</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-client">클라이언트(client)</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-target-browsing-context">target browsing context</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-target-browsing-context">타겟 브라우징 컨텍스트</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-initiator">initiator</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-initiator">개시자</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-type">type</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-type">유형</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-destination">destination</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-destination">목적지</a></p>
          </li><li data-md="">
           <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-origin">origin</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#omit-origin-header-flag">omit-<code>Origin</code>-header flag</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#omit-origin-header-flag">omit-<code>Origin</code>-header 플래그</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#same-origin-data-url-flag">same-origin data-URL flag</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#same-origin-data-url-flag">same-origin data-URL 플래그</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-referrer">referrer</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-referrer">리퍼러(referrer)</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#synchronous-flag">synchronous flag</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#synchronous-flag">synchronous 플래그</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-mode">mode</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-mode">모드(mode)</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-credentials-mode">credentials mode</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-credentials-mode">자격 증명 모드</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag">use-URL-credentials flag</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag">use-URL-credentials 플래그</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#unsafe-request-flag">unsafe-request flag</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#unsafe-request-flag">unsafe-request 플래그</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-cache-mode">cache mode</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-cache-mode">캐시 모드</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-redirect-mode">redirect mode</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-redirect-mode">리다이렉트(redirect) 모드</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-nonce-metadata">cryptographic nonce metadata</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-nonce-metadata">암호용 넌스 메타데이터</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-parser-metadata">parser metadata</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-parser-metadata">해석기 메타 데이터</a></p>
         </li></ul>
       </li></ul>
      </dd><dt data-md="">
-      <p>Web IDL</p>
+      <p>웹 IDL</p>
      </dt><dd data-md="">
-      <p>The IDL fragments in this specification must be interpreted as required for conforming IDL
-  fragments, as described in the Web IDL specification. <a data-link-type="biblio" href="references.html#biblio-webidl">[WEBIDL]</a></p>
-      <p>The following terms are defined in the Web IDL specification:</p>
+      <p>이 명세에서 IDL 코드 조각은 웹 IDL 명세에 정의된 대로, IDL 코드 조각에 적합하도록 요구된 대로
+  해석되어야(must) 합니다. <a data-link-type="biblio" href="references.html#biblio-webidl">[WEBIDL]</a></p>
+      <p>다음 용어들은 Web IDL 명세에 정의되어 있습니다:</p>
       <ul>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-array-index-property-name">array index property name</a></p>
+        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-array-index-property-name">배열 인덱스 속성(property) 이름</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#dfn-supported-property-indices">supported property indices</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#dfn-supported-property-indices">지원되는 속성(property) 인덱스</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#dfn-determine-the-value-of-an-indexed-property">Determine the value of an indexed property</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#dfn-determine-the-value-of-an-indexed-property">인덱싱 된 속성(property)의 값 측정</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-support-named-properties">Support named properties</a></p>
+        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-support-named-properties">명명된 속성(property) 지원</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-supported-property-names">Supported property names</a></p>
+        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-supported-property-names">지원되는 속성(property) 이름</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-determine-the-value-of-a-named-property">Determine the value of a named property</a></p>
+        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-determine-the-value-of-a-named-property">명명된 속성(property)의 값 측정</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-perform-a-security-check">perform a security check</a></p>
+        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-perform-a-security-check">보안 검사 수행</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">Platform object</a></p>
+        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">플랫폼 객체</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#es-platform-objects">Global environment associated with</a> a platform object</p>
+        <p>플랫폼 객체와 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#es-platform-objects">연관된 전역 환경</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#dfn-read-only">Read only</a> (when applied to arrays)</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#dfn-read-only">읽기 전용</a> (배열에 적용될 경우)</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-callback-this-value">Callback this value</a></p>
+        <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-callback-this-value">이 값을 콜백</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#es-type-mapping">Converting</a> between WebIDL types and JS types</p>
+        <p>웹 IDL과 JS 유형 사이 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#es-type-mapping">전환하기</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#es-invoking-callback-functions">invoke the Web IDL callback function</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#es-invoking-callback-functions">웹 IDL 콜백 함수 호출</a></p>
       </li></ul>
-      <p>The Web IDL specification also defines the following types that are used in Web IDL fragments
-  in this specification:</p>
+      <p>웹 IDL 명세는 또한 이 명세의 웹 IDL 코드 조각에 사용된 다음 유형들을 정의합니다:</p>
       <ul>
        <li data-md="">
         <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#common-ArrayBufferView"><code>ArrayBufferView</code></a></p>
@@ -2242,9 +2238,8 @@ encoding and returns a byte stream</p>
        </li><li data-md="">
         <p><a class="css" data-link-type="type" href="https://www.w3.org/TR/WebIDL-1/#idl-unsigned-long"><code>unsigned long</code></a></p>
       </li></ul>
-      <p>The term <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="throw">throw</dfn> in this specification is used as defined in the WebIDL
-  specification. The following exception names are defined by WebIDL and used by this
-  specification:</p>
+      <p>이 명세에서 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="throw" data-noexport="" id="throw">던지다(throw)</dfn>라는 용어는 WebIDL 명세에 정의된 대로 사용됩니다.
+  다음 예외 이름들은 WebIDL에서 정의되고 이 명세에서 사용됩니다:</p>
       <ul>
        <li data-md="">
         <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#indexsizeerror"><code>IndexSizeError</code></a></p>
@@ -2273,49 +2268,44 @@ encoding and returns a byte stream</p>
        </li><li data-md="">
         <p><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#datacloneerror"><code>DataCloneError</code></a></p>
       </li></ul>
-      <p>When this specification requires a user agent to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="date object|a new date object" data-noexport="" id="date-object">create a <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> object</dfn> representing a particular time (which could be the special value Not-a-Number), the
-  milliseconds component of that time, if any, must be truncated to an integer, and the time
-  value of the newly created <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> object must represent the resulting truncated
-  time.</p>
-      <p class="example" id="example-98552a4c"><a class="self-link" href="infrastructure.html#example-98552a4c"></a> For instance, given the time 23045 millionths of a second after 01:00 UTC on
-    January 1st 2000, i.e., the time 2000-01-01T00:00:00.023045Z, then the <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> object
-    created representing that time would represent the same time as that created representing the
-    time 2000-01-01T00:00:00.023Z, 45 millionths earlier. If the given time is NaN, then the result
-    is a <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> object that represents a time value NaN (indicating that the object does
-    not represent a specific instant of time). </p>
+      <p>이 명세가 유저 에이전트가 특정 시간(특별한 값 Not-a-Number이 될 수 있는)을 나타내는 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="date object|a new date object" data-noexport="" id="date-object"><code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> 객체 생성</dfn>을 요구하는 경우, 그 시간의
+  밀리초 요소가 있다면 이는 정수로 잘라내져야(must) 하고, 새롭게 생성된 <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> 객체의 시간 값은 
+  결과적으로 잘라낸 시간을 나타내야(must) 합니다.</p>
+      <p class="example" id="example-32dbae8a"><a class="self-link" href="infrastructure.html#example-32dbae8a"></a> 예를 들어, 2000년 1월 1일 01:00 UTC 이후 100만분의 23045초, 즉 2000-01-01T00:00:00.023045Z가 
+    주어진 경우, 100만분의 45초 빠른, 2000-01-01T00:00:00.023Z를 나타내도록 생성된 <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> 객체와 
+    동일한 시간을 나타내는 <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> 객체가 생성됩니다. 주어진 시간이 NaN이라면, 결과는 시간 값 
+    NaN을 나타내는 (객체가 특정 시간을 나타내지 않는 것을 보여주는) <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> 객체입니다. </p>
      </dd><dt data-md="">
-      <p>JavaScript</p>
+      <p>자바스크립트</p>
      </dt><dd data-md="">
-      <p>Some parts of the language described by this specification only support JavaScript as the
-  underlying scripting language. <a data-link-type="biblio" href="references.html#biblio-ecma-262">[ECMA-262]</a></p>
-      <p class="note" role="note"> The term "JavaScript" is used to refer to ECMA262, rather than the official term ECMAScript,
-    since the term JavaScript is more widely known. Similarly, the <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-5">MIME type</a> used to
-    refer to JavaScript in this specification is <code>text/javascript</code>, since that is the
-    most commonly used type, <a data-link-type="dfn" href="introduction.html#willful-violation" id="ref-for-willful-violation-1">despite it being an officially obsoleted type</a> according to
-    RFC 4329. <a data-link-type="biblio" href="references.html#biblio-rfc4329">[RFC4329]</a> </p>
-      <p>The following terms are defined in the JavaScript specification and used in this
-  specification <a data-link-type="biblio" href="references.html#biblio-ecma-262">[ECMA-262]</a>:</p>
+      <p>이 명세에 의해 설명되는 언어의 일부분은 오직 기본 스크립팅 언어로 자바스크립트를 지원합니다. <a data-link-type="biblio" href="references.html#biblio-ecma-262">[ECMA-262]</a></p>
+      <p class="note" role="note"> "자바스크립트"라는 용어는 공식적인 ECMAScript라는 용어보다 자바스크립트라는 용어가 좀 더 
+    널리 알려져있기 때문에 ECMA262를 지칭하는데 사용됩니다. 비슷하게, 이 명세에서 자바스크립트를 
+    지칭하는데 사용된 <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-5">MIME 타입</a>은 <code>text/javascript</code>이 거의 보통 
+    사용되는 유형이기 때문에, RFC 4329에 따라 <a data-link-type="dfn" href="introduction.html#willful-violation" id="ref-for-willful-violation-1">공식적으로 폐기된
+    유형임에도 불구하고</a> <code>text/javascript</code>입니다. <a data-link-type="biblio" href="references.html#biblio-rfc4329">[RFC4329]</a> </p>
+      <p>다음 용어들은 자바스크립트 명세에 정의 되고 이 명세에서 사용됩니다 <a data-link-type="biblio" href="references.html#biblio-ecma-262">[ECMA-262]</a>:</p>
       <ul>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion">automatic semicolon insertion</a></p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion">자동 세미콜론 삽입</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#early-error-rule">early error</a></p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#early-error-rule">조기 오류</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#directive-prologue">Directive Prologue</a></p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#directive-prologue">지시어 프롤로그</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-execution-contexts">JavaScript execution context</a></p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-execution-contexts">자바스크립트 실행 컨텍스트</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#execution-context-stack">JavaScript execution context stack</a></p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#execution-context-stack">자바스크립트 실행 컨텍스트 스택</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#running-execution-context">running JavaScript execution context</a></p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#running-execution-context">자바스크립트 실행 컨텍스트 수행</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-code-realms">JavaScript realm</a></p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-code-realms">자바스크립트 범위</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#current-realm">current Realm Record</a></p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#current-realm">현재 범위 레코드</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#use-strict-directive">Use Strict Directive</a></p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#use-strict-directive">엄격한 규칙 사용(use strict) 지시어</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-well-known-symbols">Well-Known Symbols</a>, including:</p>
+        <p>다음을 포함하는 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-well-known-symbols">잘 알려진 기호</a>:</p>
         <ul>
          <li data-md="">
           <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="hasinstance">@@hasInstance</dfn></p>
@@ -2327,7 +2317,7 @@ encoding and returns a byte stream</p>
           <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="tostringtag">@@toStringTag</dfn></p>
         </li></ul>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-well-known-intrinsic-objects">Well-Known Intrinsic Objects</a>, including:</p>
+        <p>다음을 포함하는 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-well-known-intrinsic-objects">잘 알려진 고유한 객체들</a>:</p>
         <ul>
          <li data-md="">
           <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-arraybuffer-constructor">%ArrayBuffer%</a></p>
@@ -2339,253 +2329,248 @@ encoding and returns a byte stream</p>
           <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-object.prototype.valueof">%ObjProto_valueOf%</a></p>
         </li></ul>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#prod-FunctionBody">FunctionBody</a> production</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#prod-FunctionBody">함수 몸체</a> 산출물</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#prod-Pattern">Pattern</a> production</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#prod-Pattern">패턴</a> 산출물</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#prod-Script">Script</a> production</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#prod-Script">스크립트</a> 산출물</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a> notation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">형(type)</a> 표기법</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a> and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a> specification types</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">리스트</a>와 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">레코드</a> 명세 유형</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-property-descriptor-specification-type">Property Descriptor</a> specification type</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-property-descriptor-specification-type">속성(property) 서술자</a> 명세 유형</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-arraycreate">ArrayCreate</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-arraycreate">ArrayCreate</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-call">Call</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-call">Call</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-clonearraybuffer">CloneArrayBuffer</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-clonearraybuffer">CloneArrayBuffer</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-construct">Construct</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-construct">Construct</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-createdataproperty">CreateDataProperty</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-createdataproperty">CreateDataProperty</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-detacharraybuffer">DetachArrayBuffer</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-detacharraybuffer">DetachArrayBuffer</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-enqueuejob">EnqueueJob</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-enqueuejob">EnqueueJob</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-functioncreate">FunctionCreate</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-functioncreate">FunctionCreate</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-get-o-p">Get</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-get-o-p">Get</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-getactivescriptormodule">GetActiveScriptOrModule</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-getactivescriptormodule">GetActiveScriptOrModule</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-getfunctionrealm">GetFunctionRealm</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-getfunctionrealm">GetFunctionRealm</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-hasownproperty">HasOwnProperty</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-hasownproperty">HasOwnProperty</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-hostensurecancompilestrings">HostEnsureCanCompileStrings</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-hostensurecancompilestrings">HostEnsureCanCompileStrings</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-host-promise-rejection-tracker">HostPromiseRejectionTracker</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-host-promise-rejection-tracker">HostPromiseRejectionTracker</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-initializehostdefinedrealm">InitializeHostDefinedRealm</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-initializehostdefinedrealm">InitializeHostDefinedRealm</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isaccessordescriptor">IsAccessorDescriptor</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isaccessordescriptor">IsAccessorDescriptor</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-iscallable">IsCallable</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-iscallable">IsCallable</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isconstructor">IsConstructor</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isconstructor">IsConstructor</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isdatadescriptor">IsDataDescriptor</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isdatadescriptor">IsDataDescriptor</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isdetachedbuffer">IsDetachedBuffer</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isdetachedbuffer">IsDetachedBuffer</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-newobjectenvironment">NewObjectEnvironment</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-newobjectenvironment">NewObjectEnvironment</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarygetprototypeof">OrdinaryGetPrototypeOf</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarygetprototypeof">OrdinaryGetPrototypeOf</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarysetprototypeof">OrdinarySetPrototypeOf</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarysetprototypeof">OrdinarySetPrototypeOf</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinaryisextensible">OrdinaryIsExtensible</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinaryisextensible">OrdinaryIsExtensible</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarypreventextensions">OrdinaryPreventExtensions</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarypreventextensions">OrdinaryPreventExtensions</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarygetownproperty">OrdinaryGetOwnProperty</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarygetownproperty">OrdinaryGetOwnProperty</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarydefineownproperty">OrdinaryDefineOwnProperty</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarydefineownproperty">OrdinaryDefineOwnProperty</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinaryget">OrdinaryGet</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinaryget">OrdinaryGet</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinaryset">OrdinarySet</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinaryset">OrdinarySet</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarydelete">OrdinaryDelete</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarydelete">OrdinaryDelete</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinaryownpropertykeys">OrdinaryOwnPropertyKeys</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinaryownpropertykeys">OrdinaryOwnPropertyKeys</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-parse-script">ParseScript</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-parse-script">ParseScript</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-runjobs">RunJobs</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-runjobs">RunJobs</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-samevalue">SameValue</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-samevalue">SameValue</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-runtime-semantics-scriptevaluation">ScriptEvaluation</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-runtime-semantics-scriptevaluation">ScriptEvaluation</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-toboolean">ToBoolean</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-toboolean">ToBoolean</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-tostring">ToString</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-tostring">ToString</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-touint32">ToUint32</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-touint32">ToUint32</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#typedarray-create">TypedArrayCreate</a> abstract operation</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#typedarray-create">TypedArrayCreate</a> 추상적 연산</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-abstract-equality-comparison">Abstract Equality Comparison</a> algorithm</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-abstract-equality-comparison">관념적 동일 비교</a> 알고리즘</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-strict-equality-comparison">Strict Equality Comparison</a> algorithm</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-strict-equality-comparison">엄격한 동일 비교</a> 알고리즘</p>
        </li><li data-md="">
-        <p>The <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-arraybuffer-constructor">ArrayBuffer</a></code> object</p>
+        <p><code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-arraybuffer-constructor">ArrayBuffer</a></code> 객체</p>
        </li><li data-md="">
-        <p>The <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> object</p>
+        <p><code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-date-constructor">Date</a></code> 객체</p>
        </li><li data-md="">
-        <p>The <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-native-error-types-used-in-this-standard-syntaxerror">SyntaxError</a></code> object</p>
+        <p><code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-native-error-types-used-in-this-standard-syntaxerror">SyntaxError</a></code> 객체</p>
        </li><li data-md="">
-        <p>The <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-native-error-types-used-in-this-standard-typeerror">TypeError</a></code> object</p>
+        <p><code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-native-error-types-used-in-this-standard-typeerror">TypeError</a></code> 객체</p>
        </li><li data-md="">
-        <p>The <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-native-error-types-used-in-this-standard-rangeerror">RangeError</a></code> object</p>
+        <p><code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-native-error-types-used-in-this-standard-rangeerror">RangeError</a></code> 객체</p>
        </li><li data-md="">
-        <p>The <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-regexp-constructor">RegExp</a></code> object</p>
+        <p><code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-regexp-constructor">RegExp</a></code> 객체</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-typeof-operator">typeof</a> operator</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-typeof-operator">typeof</a> 연산자</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#table-49">The TypedArray Constructors</a> table</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#table-49">형색화 배열 생성자</a> 표</p>
       </li></ul>
      </dd><dt data-md="">
       <p>DOM</p>
      </dt><dd data-md="">
-      <p>The Document Object Model (DOM) is a representation — a model — of a document and
-  its content. The DOM is not just an API; the conformance criteria of HTML implementations are
-  defined, in this specification, in terms of operations on the DOM. <a data-link-type="biblio" href="references.html#biblio-dom">[DOM]</a></p>
-      <p>Implementations must support DOM and the events defined in UI Events, because this
-  specification is defined in terms of the DOM, and some of the features are defined as
-  extensions to the DOM interfaces. <a data-link-type="biblio" href="references.html#biblio-dom">[DOM]</a> <a data-link-type="biblio" href="references.html#biblio-uievents">[UIEVENTS]</a></p>
-      <p>In particular, the following features are defined in the DOM specification: <a data-link-type="biblio" href="references.html#biblio-dom">[DOM]</a></p>
+      <p>문서 객체 모델(DOM)은 문서와 그것의 콘텐트의 표현 — 모델 —입니다.
+  DOM은 단지 API가 아닙니다; HTML 구현의 적합성 기준은 DOM에서의 작업의 관점에서 이 명세에 
+  정의되어 있습니다. <a data-link-type="biblio" href="references.html#biblio-dom">[DOM]</a></p>
+      <p>구현은 이 명세가 DOM과 DOM 인터페이스로의 확장으로 정의되는 몇 가지 기능의 관점에서 정의되기
+  때문에 DOM과 UI 이벤트에 정의된 이벤트를 지원해야(must) 합니다. <a data-link-type="biblio" href="references.html#biblio-dom">[DOM]</a> <a data-link-type="biblio" href="references.html#biblio-uievents">[UIEVENTS]</a></p>
+      <p>특히, 다음 기능들은 DOM 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-dom">[DOM]</a></p>
       <ul>
        <li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#attr">Attr</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#attr">Attr</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#comment">Comment</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#comment">Comment</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#domimplementation">DOMImplementation</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#domimplementation">DOMImplementation</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#xmldocument">XMLDocument</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#xmldocument">XMLDocument</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#documentfragment">DocumentFragment</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#documentfragment">DocumentFragment</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#documenttype">DocumentType</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#documenttype">DocumentType</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#childnode">ChildNode</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#childnode">ChildNode</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom/#interface-element">Element</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom/#interface-element">Element</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#node">Node</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#node">Node</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#nodelist">NodeList</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#nodelist">NodeList</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#processinginstruction">ProcessingInstruction</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#processinginstruction">ProcessingInstruction</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#text">Text</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#text">Text</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#htmlcollection">HTMLCollection</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#htmlcollection">HTMLCollection</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-nodelist-item">item()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-nodelist-item">item()</a></code> 메서드</p>
        </li><li data-md="">
-        <p>The terms <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-collection">collections</a> and <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#represented-by-the-collection">represented by the collection</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-collection">컬렉션</a>과 <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#represented-by-the-collection">컬렉션에 의해 표현되는</a>이라는 용어</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#domtokenlist">DOMTokenList</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#domtokenlist">DOMTokenList</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-domimplementation-createdocument">createDocument()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-domimplementation-createdocument">createDocument()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-domimplementation-createhtmldocument">createHTMLDocument()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-domimplementation-createhtmldocument">createHTMLDocument()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-document-createelement">createElement()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-document-createelement">createElement()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-document-createelementns">createElementNS()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-document-createelementns">createElementNS()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-nonelementparentnode-getelementbyid">getElementById()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-nonelementparentnode-getelementbyid">getElementById()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-element-getelementsbyclassname">getElementsByClassName()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-element-getelementsbyclassname">getElementsByClassName()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-insertbefore">insertBefore()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-insertbefore">insertBefore()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-appendchild">appendChild()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-appendchild">appendChild()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-clonenode">cloneNode()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-clonenode">cloneNode()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-document-importnode">importNode()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-document-importnode">importNode()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-childnodes">childNodes</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-childnodes">childNodes</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-element-localname">localName</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-element-localname">localName</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-parentnode">parentNode</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-parentnode">parentNode</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-element-namespaceuri">namespaceURI</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-element-namespaceuri">namespaceURI</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-element-tagname">tagName</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-element-tagname">tagName</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-element-id">id</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-element-id">id</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-insert">insert</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-append">append</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-remove">remove</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-replace">replace</a>, and <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-adopt">adopt</a> algorithms for nodes</p>
+        <p>노드에 대한 <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-insert">insert</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-append">append</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-remove">remove</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-replace">replace</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-adopt">adopt</a> 알고리즘</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-insert">insertion steps</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-remove">removing steps</a>, and <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-adopt">adopting steps</a> hooks</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-insert">insertion 단계</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-remove">removing 단계</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-adopt">adopting 단계</a> 훅(hook)</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-element-attribute">attribute list</a> concept.</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-element-attribute">속성(attirbute) 목록</a> 개념.</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-cd-data">data</a> of a text node.</p>
+        <p>텍스트 노드의 <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-cd-data">data</a>.</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event">Event</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event">Event</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#eventtarget">EventTarget</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#eventtarget">EventTarget</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dictdef-eventinit">EventInit</a></code> dictionary type</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dictdef-eventinit">EventInit</a></code> 사전형</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-target">target</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-target">target</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-currenttarget">currentTarget</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-currenttarget">currentTarget</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-istrusted">isTrusted</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-istrusted">isTrusted</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-initevent">initEvent()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-initevent">initEvent()</a></code> 메서드</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener">addEventListener()</a></code> method</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener">addEventListener()</a></code> 메서드</p>
        </li><li data-md="">
-        <p>The <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-type">type</a></code> of an event</p>
+        <p>이벤트의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-type">type</a></code></p>
        </li><li data-md="">
-        <p>The concept of an <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-event-listener">event listener</a> and the <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-event-listener">event listeners</a> associated with
-an <code>EventTarget</code></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-event-listener">이벤트 리스너</a>의 개념과 <code>EventTarget</code>과 연관된 <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-event-listener">이벤트 리스너</a>.</p>
        </li><li data-md="">
-        <p>The concept of a <dfn data-dfn-type="dfn" data-noexport="" id="target-override">target override<a class="self-link" href="infrastructure.html#target-override"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="target override" data-noexport="" id="target-override">타겟 재정의<a class="self-link" href="infrastructure.html#target-override"></a></dfn>의 개념</p>
        </li><li data-md="">
-        <p>The concept of a regular <dfn data-dfn-type="dfn" data-noexport="" id="event-parent">event parent<a class="self-link" href="infrastructure.html#event-parent"></a></dfn> and a <dfn data-dfn-type="dfn" data-noexport="" id="cross-boundary-event-parent">cross-boundary event parent<a class="self-link" href="infrastructure.html#cross-boundary-event-parent"></a></dfn></p>
+        <p>일반 <dfn data-dfn-type="dfn" data-lt="event parent" data-noexport="" id="event-parent">이벤트 부모<a class="self-link" href="infrastructure.html#event-parent"></a></dfn>의 개념과 <dfn data-dfn-type="dfn" data-lt="cross-boundary event parent" data-noexport="" id="cross-boundary-event-parent">교차방식의 이벤트 부모<a class="self-link" href="infrastructure.html#cross-boundary-event-parent"></a></dfn></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/encoding/#encoding">encoding</a> (herein the <i>character encoding</i>) and <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-document-content-type">content type</a> of a <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/encoding/#encoding">인코딩</a> (여기에서 <i>문자 인코딩</i>)과 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>dml <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-document-content-type">콘텐트 유형</a></p>
        </li><li data-md="">
-        <p>The distinction between <a data-link-type="dfn" href="infrastructure.html#xml-document" id="ref-for-xml-document-3">XML documents</a> and <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-2">HTML documents</a></p>
+        <p><a data-link-type="dfn" href="infrastructure.html#xml-document" id="ref-for-xml-document-3">XML 문서</a>와 <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-2">HTML 문서</a> 사이의 차이</p>
        </li><li data-md="">
-        <p>The terms <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="quirks-mode">quirks mode</dfn>, <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="limited-quirks-mode">limited-quirks mode</dfn>, and <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="no-quirks-mode">no-quirks mode</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="quirks mode" data-noexport="" id="quirks-mode">쿽크 모드</dfn>, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="limited-quirks mode" data-noexport="" id="limited-quirks-mode">제한된 쿼크 모드</dfn>, <dfn data-dfn-type="dfn" data-noexport="" id="">비쿼크 모드</dfn>라는 용어</p>
        </li><li data-md="">
-        <p>The algorithm to <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-clone">clone</a> a <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#node">Node</a></code>, and the concept of <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-clone">cloning steps</a> used by that algorithm</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#node">Node</a></code>를 <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-clone">복제</a>하기 위한 알고리즘과, 그 알고리즘에 의해 사용되는 <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-clone">복제 단계</a>의 개념</p>
        </li><li data-md="">
-        <p>The concept of <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="base-url-change-steps">base URL change steps</dfn> and the definition of what happens when an
-element is <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="affected-by-a-base-url-change">affected by a base URL change</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="base URL change steps" data-noexport="" id="base-url-change-steps">기본 URL 변경 단계</dfn>의 개념과 요소(element)가 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="affected by a base URL change" data-noexport="" id="affected-by-a-base-url-change">기본 URL 변경에 의해 영향을 받는</dfn> 경우 발생하는 것의 정의</p>
        </li><li data-md="">
-        <p>The concept of an element’s <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-id">unique identifier (ID)</a></p>
+        <p>요소의 <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-id">고유 식별자 (ID)</a>의 개념</p>
        </li><li data-md="">
-        <p>The term <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="supported tokens|supported token" data-noexport="" id="supported-tokens">supported tokens</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="supported tokens|supported token" data-noexport="" id="supported-tokens">지원되는 토큰</dfn>이라는 용어</p>
        </li><li data-md="">
-        <p>The concept of a DOM <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-range">range</a>, and the terms <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-range-start">start</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-range-end">end</a>, and <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-range-bp">boundary point</a> as applied to ranges.</p>
+        <p>DOM <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-range">범위</a>의 개념과, 범위에 적용되는 <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-range-start">시작</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-range-end">끝</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-range-bp">경계점</a>이라는 용어.</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#mutationobserver">MutationObserver</a></code> interface and <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="mutation-observers">mutation observers</dfn> in
-general</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#mutationobserver">MutationObserver</a></code> 인터페이스와 일반 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="mutation observers" data-noexport="" id="mutation-observers">변경 관찰자</dfn></p>
       </li></ul>
-      <p>The term <a data-link-type="dfn" href="infrastructure.html#throw" id="ref-for-throw-1">throw</a> in this specification is used as defined in the DOM specification.
-  The following <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a> types are defined in the DOM specification: <a data-link-type="biblio" href="references.html#biblio-dom">[DOM]</a></p>
+      <p>이 명세에서 <a data-link-type="dfn" href="infrastructure.html#throw" id="ref-for-throw-1">던지다</a>라는 용어는 DOM 명세에 정의된 대로 사용됩니다. 다음 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a> 유형들은 DOM 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-dom">[DOM]</a></p>
       <ul>
        <li data-md="">
         <p><code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#indexsizeerror">IndexSizeError</a></code></p>
@@ -2628,126 +2613,126 @@ general</p>
        </li><li data-md="">
         <p><code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code></p>
       </li></ul>
-      <p class="example" id="example-cc01fb9e"><a class="self-link" href="infrastructure.html#example-cc01fb9e"></a> For example, to <i>throw a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#timeouterror">TimeoutError</a></code> exception</i>, a user agent would
-    construct a <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a> object whose type was the string
-    "<code>TimeoutError</code>" (and whose code was the number 23, for legacy reasons) and
-    actually throw that object as an exception. </p>
-      <p>The following features are defined in the UI Events specification: <a data-link-type="biblio" href="references.html#biblio-uievents">[UIEVENTS]</a></p>
+      <p class="example" id="example-e32b1136"><a class="self-link" href="infrastructure.html#example-e32b1136"></a> 예를 들어, <i>throw a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#timeouterror">TimeoutError</a></code> 예외를 던지기</i> 위해, 유저 에이전트는 유형이 문자열 
+    "<code>TimeoutError</code>"이고(그리고 레거시 이유로, 코드가 23번인) 실제로 예외로 그 객체를 
+    던지는 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a> 객체를 구성할 것입니다. </p>
+      <p>다음 기능들은 UI 이벤트 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-uievents">[UIEVENTS]</a></p>
       <ul>
        <li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-MouseEvent">MouseEvent</a></code> interface and the following interface members:</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-MouseEvent">MouseEvent</a></code> 인터페이스와 다음 인터페이스 멤버:</p>
         <ul>
          <li data-md="">
-          <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-relatedTarget">relatedTarget</a></code> attribute</p>
+          <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-relatedTarget">relatedTarget</a></code> 속성(attribute)</p>
          </li><li data-md="">
-          <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-button">button</a></code> attribute</p>
+          <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-button">button</a></code> 속성(attribute)</p>
          </li><li data-md="">
-          <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-ctrlKey">ctrlKey</a></code> attribute</p>
+          <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-ctrlKey">ctrlKey</a></code> 속성(attribute)</p>
          </li><li data-md="">
-          <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-shiftKey">shiftKey</a></code> attribute</p>
+          <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-shiftKey">shiftKey</a></code> 속성(attribute)</p>
          </li><li data-md="">
-          <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-altKey">altKey</a></code> attribute</p>
+          <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-altKey">altKey</a></code> 속성(attribute)</p>
          </li><li data-md="">
-          <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-metaKey">metaKey</a></code> attribute</p>
+          <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-metaKey">metaKey</a></code> 속성(attribute)</p>
          </li><li data-md="">
-          <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-getModifierState">getModifierState()</a></code> method</p>
+          <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-getModifierState">getModifierState()</a></code> 메서드</p>
         </li></ul>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#idl-def-MouseEventInit">MouseEventInit</a></code> dictionary type</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#idl-def-MouseEventInit">MouseEventInit</a></code> 사전형</p>
        </li><li data-md="">
-        <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-FocusEvent">FocusEvent</a></code> interface and its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-FocusEvent-relatedTarget">relatedTarget</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-FocusEvent">FocusEvent</a></code> 인터페이스와 그것의 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-FocusEvent-relatedTarget">relatedTarget</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-UIEvent">UIEvent</a></code> interface’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-UIEvent-view">view</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-UIEvent-detail">detail</a></code> attributes</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-UIEvent">UIEvent</a></code> 인터페이스의 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-UIEvent-view">view</a></code>와 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-UIEvent-detail">detail</a></code> 속성(attribute)</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-click">click</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-click">click</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-dblclick">dblclick</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-dblclick">dblclick</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mousedown">mousedown</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mousedown">mousedown</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mouseenter">mouseenter</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mouseenter">mouseenter</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mouseleave">mouseleave</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mouseleave">mouseleave</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mousemove">mousemove</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mousemove">mousemove</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mouseout">mouseout</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mouseout">mouseout</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mouseover">mouseover</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mouseover">mouseover</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mouseup">mouseup</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-mouseup">mouseup</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-wheel">wheel</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-wheel">wheel</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-keydown">keydown</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-keydown">keydown</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-keyup">keyup</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-keyup">keyup</a> 이벤트</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-keypress">keypress</a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/uievents/#event-type-keypress">keypress</a> 이벤트</p>
       </li></ul>
-      <p>The following features are defined in the Touch Events specification: <a data-link-type="biblio" href="references.html#biblio-touch-events">[TOUCH-EVENTS]</a></p>
+      <p>다음 기능들은 터치 이벤트 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-touch-events">[TOUCH-EVENTS]</a></p>
       <ul>
        <li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/touch-events/#idl-def-TouchEvent">Touch</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/touch-events/#idl-def-TouchEvent">Touch</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/touch-events/#dfn-touch-point">Touch point</a> concept</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/touch-events/#dfn-touch-point">터치 포인트</a> 개념</p>
       </li></ul>
-      <p>This specification sometimes uses the term <dfn class="idl-code" data-dfn-for="global" data-dfn-type="event" data-export="" id="eventdef-global-name">name<a class="self-link" href="infrastructure.html#eventdef-global-name"></a></dfn> to refer to the event’s <code>type</code>; as in, "an event named <code>click</code>" or "if the event name is <code>keypress</code>". The terms "name" and "type" for events are synonymous.</p>
-      <p>The following features are defined in the DOM Parsing and Serialization specification: <a data-link-type="biblio" href="references.html#biblio-dom-parsing">[DOM-Parsing]</a></p>
+      <p>이 명세는 때때로 이벤트의 <code>type</code>을 지칭하기 위해, "<code>click</code>이라고 명명된
+  이벤트"나 "이벤트 이름이 <code>keypress</code>라면"의 경우와 같이, <dfn class="idl-code" data-dfn-for="global" data-dfn-type="event" data-export="" data-lt="name" id="eventdef-global-name">이름<a class="self-link" href="infrastructure.html#eventdef-global-name"></a></dfn>이라는 용어를 사용합니다. 이벤트에 대한 "이름"과
+  "타입"이라는 용어는 동의어입니다.</p>
+      <p>다음 기능들은 DOM 해석과 직렬화 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-dom-parsing">[DOM-Parsing]</a></p>
       <ul>
        <li data-md="">
         <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-innerHTML">innerHTML</a></code></p>
        </li><li data-md="">
         <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/DOM-Parsing/#widl-Element-outerHTML">outerHTML</a></code></p>
       </li></ul>
-      <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/selection-api/#idl-def-Selection">Selection</a></code> interface is defined in the <cite>Selection API</cite> specification. <a data-link-type="biblio" href="references.html#biblio-selection-api">[SELECTION-API]</a></p>
-      <p class="note" role="note"> User agents are also encouraged to implement the features described in the <cite>HTML Editing APIs</cite> and <cite><code>UndoManager</code> and DOM Transaction</cite> specifications. <a data-link-type="biblio" href="references.html#biblio-editing">[EDITING]</a> <a data-link-type="biblio" href="references.html#biblio-undo">[UNDO]</a> </p>
-      <p>The following parts of the Fullscreen specification are referenced from this specification, in
-  part to define how the
-  Fullscreen API interacts with the sandboxing features in HTML: <a data-link-type="biblio" href="references.html#biblio-fullscreen">[FULLSCREEN]</a></p>
+      <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/selection-api/#idl-def-Selection">Selection</a></code> 인터페이스는 <cite>선택 API</cite> 명세에 정의되어 있습니다. <a data-link-type="biblio" href="references.html#biblio-selection-api">[SELECTION-API]</a></p>
+      <p class="note" role="note"> 유저 에이전트는 또한 <cite>HTML 편집 API들</cite>과 <cite><code>UndoManager</code>와 DOM 처리</cite> 명세에 설명된 기능들을 구현하도록 권장됩니다. <a data-link-type="biblio" href="references.html#biblio-editing">[EDITING]</a> <a data-link-type="biblio" href="references.html#biblio-undo">[UNDO]</a> </p>
+      <p>풀스크린 명세의 다음 부분들은, 풀스크린 API가 HTML에서 샌드박싱 기능과 상호작용하는 방법을
+  정의하기 위한 부분에서, 이 명세에서 참조됩니다: <a data-link-type="biblio" href="references.html#biblio-fullscreen">[FULLSCREEN]</a></p>
       <ul>
        <li data-md="">
-        <p>The <a data-link-type="dfn" href="https://fullscreen.spec.whatwg.org/#top-layer">top layer</a> concept</p>
+        <p><a data-link-type="dfn" href="https://fullscreen.spec.whatwg.org/#top-layer">최상위 레이어</a> 개념</p>
        </li><li data-md="">
         <p><code class="idl"><a data-link-type="idl" href="https://fullscreen.spec.whatwg.org/#dom-element-requestfullscreen">requestFullscreen()</a></code></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://fullscreen.spec.whatwg.org/#fullscreen-enabled-flag">fullscreen enabled flag</a></p>
+        <p><a data-link-type="dfn" href="https://fullscreen.spec.whatwg.org/#fullscreen-enabled-flag">fullscreen enabled 플래그</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://fullscreen.spec.whatwg.org/#fully-exit-fullscreen">fully exit fullscreen</a> algorithm</p>
+        <p><a data-link-type="dfn" href="https://fullscreen.spec.whatwg.org/#fully-exit-fullscreen">풀스크린을 완전히 나가는</a> 알고리즘</p>
       </li></ul>
-      <p>The <cite>High Resolution Time</cite> specification provides the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/hr-time/#dom-domhighrestimestamp">DOMHighResTimeStamp</a></code> typedef and the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/hr-time/#the-performance-interface">Performance</a></code> object’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/hr-time/#dom-performance-now">now()</a></code> method. <a data-link-type="biblio" href="references.html#biblio-hr-time-2">[HR-TIME-2]</a></p>
+      <p><cite>고분해능 시간</cite> 명세는 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/hr-time/#dom-domhighrestimestamp">DOMHighResTimeStamp</a></code> 형식 정의와 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/hr-time/#the-performance-interface">Performance</a></code> 객체의 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/hr-time/#dom-performance-now">now()</a></code> 메서드를 제공합니다. <a data-link-type="biblio" href="references.html#biblio-hr-time-2">[HR-TIME-2]</a></p>
      </dd><dt data-md="">
-      <p>File API</p>
+      <p>파일 API</p>
      </dt><dd data-md="">
-      <p>This specification uses the following features defined in the File API specification: <a data-link-type="biblio" href="references.html#biblio-fileapi">[FILEAPI]</a></p>
+      <p>이 명세는 파일 API 명세에 정의된 다음 기능들을 사용합니다: <a data-link-type="biblio" href="references.html#biblio-fileapi">[FILEAPI]</a></p>
       <ul>
        <li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/FileAPI/#dfn-Blob">Blob</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/FileAPI/#dfn-Blob">Blob</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/FileAPI/#dfn-file">File</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/FileAPI/#dfn-file">File</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/FileAPI/#dfn-filelist">FileList</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/FileAPI/#dfn-filelist">FileList</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p>The concept of a <a data-link-type="dfn" href="https://www.w3.org/TR/FileAPI/#closed">closed</a> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/FileAPI/#dfn-Blob">Blob</a></code></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/FileAPI/#closed">closed</a>의 개념 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/FileAPI/#dfn-Blob">Blob</a></code></p>
        </li><li data-md="">
         <p><a class="idl-code" data-link-type="attribute" href="https://www.w3.org/TR/FileAPI/#dfn-type"><code>Blob.type</code></a></p>
        </li><li data-md="">
-        <p>The concept of <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="error occurs during reading of the object|read errors" data-noexport="" id="error-occurs-during-reading-of-the-object">read errors</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="error occurs during reading of the object|read errors" data-noexport="" id="error-occurs-during-reading-of-the-object">읽기 오류</dfn>의 개념</p>
       </li></ul>
      </dd><dt data-md="">
-      <p>Media Source Extensions</p>
+      <p>미디어 소스 확장</p>
      </dt><dd data-md="">
-      <p>The following terms are defined in the Media Source Extensions specification: <a data-link-type="biblio" href="references.html#biblio-media-source">[MEDIA-SOURCE]</a></p>
+      <p>다음 용어들은 미디어 소스 확장 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-media-source">[MEDIA-SOURCE]</a></p>
       <ul>
        <li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="detach from a media element" data-noexport="" id="detach-from-a-media-element">Detaching from a media element</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="detach from a media element" data-noexport="" id="detach-from-a-media-element">미디어 요소(element)로부터 분리</dfn></p>
        </li><li data-md="">
         <p><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/media-source/#idl-def-MediaSource">MediaSource</a></code> <a data-link-type="biblio" href="references.html#biblio-media-source">[MEDIA-SOURCE]</a></p>
       </li></ul>
      </dd><dt data-md="">
-      <p>Media Capture and Streams</p>
+      <p>미디어 캡쳐와 스트림</p>
      </dt><dd data-md="">
-      <p>The following term is defined in the Media Capture and Streams specification: <a data-link-type="biblio" href="references.html#biblio-mediacapture-streams">[MEDIACAPTURE-STREAMS]</a></p>
+      <p>다음 용어는 미디어 캡쳐와 스트림 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-mediacapture-streams">[MEDIACAPTURE-STREAMS]</a></p>
       <ul>
        <li data-md="">
         <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/mediacapture-streams/#idl-def-MediaStream">MediaStream</a></code> <a data-link-type="biblio" href="references.html#biblio-mediacapture-streams">[MEDIACAPTURE-STREAMS]</a></p>
@@ -2755,74 +2740,70 @@ general</p>
      </dd><dt data-md="">
       <p>XMLHttpRequest</p>
      </dt><dd data-md="">
-      <p>This specification references the XMLHttpRequest specification to describe how the two
-  specifications interact. The following
-  features and terms are defined in the XMLHttpRequest specification: <a data-link-type="biblio" href="references.html#biblio-xhr">[XHR]</a></p>
+      <p>이 명세는 두 명세가 상호 작용하는 방법을 설명하기 위해 XMLHttpRequest 명세를 참조합니다. 다음
+  기능들과 용어들은 XMLHttpRequest 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-xhr">[XHR]</a></p>
       <ul>
        <li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://xhr.spec.whatwg.org/#interface-xmlhttprequest">XMLHttpRequest</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://xhr.spec.whatwg.org/#interface-xmlhttprequest">XMLHttpRequest</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://xhr.spec.whatwg.org/#the-responsexml-attribute">XMLHttpRequest.responseXML</a></code> attribute</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://xhr.spec.whatwg.org/#the-responsexml-attribute">XMLHttpRequest.responseXML</a></code> 속성(attribute)</p>
       </li></ul>
      </dd><dt data-md="">
       <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/progress-events/#interface-progressevent">ProgressEvent</a></code></p>
      </dt><dd data-md="">
-      <p>This specification references the Progress Events specification to describe how the two
-  specifications interact and to use its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/progress-events/#interface-progressevent">ProgressEvent</a></code> feature. The following
-  feature are defined in the Progress Events specification: <a data-link-type="biblio" href="references.html#biblio-progress-events">[PROGRESS-EVENTS]</a></p>
+      <p>이 명세는 두 명세가 상호작용하는 방법과 그것의 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/progress-events/#interface-progressevent">ProgressEvent</a></code> 기능을 사용하는 방법을 설명하기
+  위해 프로그레스 이벤트(Progress Events) 명세를 참조합니다. 다음 기능은 프로그레스 이벤트 명세에 
+  정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-progress-events">[PROGRESS-EVENTS]</a></p>
       <ul>
        <li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/progress-events/#interface-progressevent">ProgressEvent</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/progress-events/#interface-progressevent">ProgressEvent</a></code> 인터페이스</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="attribute" href="https://www.w3.org/TR/progress-events/#dom-progressevent-lengthcomputable"><code>ProgressEvent.lengthComputable</code></a> attribute</p>
+        <p><a class="idl-code" data-link-type="attribute" href="https://www.w3.org/TR/progress-events/#dom-progressevent-lengthcomputable"><code>ProgressEvent.lengthComputable</code></a> 속성(attribute)</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="attribute" href="https://www.w3.org/TR/progress-events/#dom-progressevent-loaded"><code>ProgressEvent.loaded</code></a> attribute</p>
+        <p><a class="idl-code" data-link-type="attribute" href="https://www.w3.org/TR/progress-events/#dom-progressevent-loaded"><code>ProgressEvent.loaded</code></a> 속성(attribute)</p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="attribute" href="https://www.w3.org/TR/progress-events/#dom-progressevent-total"><code>ProgressEvent.total</code></a> attribute</p>
+        <p><a class="idl-code" data-link-type="attribute" href="https://www.w3.org/TR/progress-events/#dom-progressevent-total"><code>ProgressEvent.total</code></a> 속성(attribute)</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/progress-events/#concept-event-fire-progress">Fire a progress event named <var>e</var></a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/progress-events/#concept-event-fire-progress"><var>e</var>로 명명된 프로그레스 이벤트를 발생</a></p>
       </li></ul>
      </dd><dt data-md="">
-      <p>Server-Sent Events</p>
+      <p>서버 발송 이벤트(Server-Sent Events)</p>
      </dt><dd data-md="">
-      <p>This specification references <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/eventsource/#eventsource">EventSource</a></code> which is specified in the
-  Server-Sent Events specification <a data-link-type="biblio" href="references.html#biblio-eventsource">[EVENTSOURCE]</a></p>
+      <p>이 명세는 서버 발송 이벤트 명세에 명시된 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/eventsource/#eventsource">EventSource</a></code>를 참조합니다. <a data-link-type="biblio" href="references.html#biblio-eventsource">[EVENTSOURCE]</a></p>
      </dd><dt data-md="">
-      <p>Media Queries</p>
+      <p>미디어 쿼리(Media Queries)</p>
      </dt><dd data-md="">
-      <p>Implementations must support the Media Queries language. <a data-link-type="biblio" href="references.html#biblio-mediaq">[MEDIAQ]</a></p>
+      <p>구현은 미디어 쿼리 언어를 지원해야(must) 합니다. <a data-link-type="biblio" href="references.html#biblio-mediaq">[MEDIAQ]</a></p>
      </dd><dt data-md="">
-      <p>CSS modules</p>
+      <p>CSS 모듈(modules)</p>
      </dt><dd data-md="">
-      <p>While support for CSS as a whole is not required of implementations of this specification
-  (though it is encouraged, at least for Web browsers), some features are defined in terms of
-  specific CSS requirements.</p>
-      <p>In particular, some features require that a string be <dfn data-dfn-type="dfn" data-noexport="" id="parsed-as-a-css-color-value">parsed as a CSS &lt;color&gt; value<a class="self-link" href="infrastructure.html#parsed-as-a-css-color-value"></a></dfn>. When parsing a CSS value, user agents are
-  required by the CSS specifications to apply some error handling rules. These apply to this
-  specification also. <a data-link-type="biblio" href="references.html#biblio-css3color">[CSS3COLOR]</a> <a data-link-type="biblio" href="references.html#biblio-css-2015">[CSS-2015]</a></p>
-      <p class="example" id="example-1b106b1b"><a class="self-link" href="infrastructure.html#example-1b106b1b"></a> For example, user agents are required to close all open constructs upon finding the end of a
-    style sheet unexpectedly. Thus, when parsing the string "<code>rgb(0,0,0</code>" (with a
-    missing close-parenthesis) for a color value, the close parenthesis is implied by this error
-    handling rule, and a value is obtained (the color <a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-color-4/#valdef-color-black">black</a>). However, the similar construct
-    "<code>rgb(0,0,</code>" (with both a missing parenthesis and a missing "blue" value) cannot
-    be parsed, as closing the open construct does not result in a viable value. </p>
-      <p>The following terms and features are defined in the CSS specification: <a data-link-type="biblio" href="references.html#biblio-css-2015">[CSS-2015]</a></p>
+      <p>CSS를 전체적으로 지원하는 것은 이 명세의 구현에 필요하지 않지만(권장되기는 하지만, 웹 브라우저에
+  대해 최소한), 일부 기능들은 CSS 특정 요구사항의 관점에서 정의되어 있습니다.</p>
+      <p>특히, 일부 기능은 문자열이 <dfn data-dfn-type="dfn" data-lt="parsed as a CSS <color> value" data-noexport="" id="parsed-as-a-css-color-value">CSS &lt;color&gt; 값으로 해석<a class="self-link" href="infrastructure.html#parsed-as-a-css-color-value"></a></dfn> 되는 것을 요구합니다. CSS 값을 해석하는 경우, 유저 에이전트는 CSS 명세에 의해 일부 오류 처리 
+  규칙이 적용되도록 요구됩니다. 이것들은 이 명세에도 적용됩니다. <a data-link-type="biblio" href="references.html#biblio-css3color">[CSS3COLOR]</a> <a data-link-type="biblio" href="references.html#biblio-css-2015">[CSS-2015]</a></p>
+      <p class="example" id="example-aca42b48"><a class="self-link" href="infrastructure.html#example-aca42b48"></a> 예를 들어, 유저 에이전트는 스타일 시트의 끝을 찾자마자 모든 열려진 구성을 닫도록 요구됩니다.
+    따라서, 색상 값에 대한 문자열 "<code>rgb(0,0,0</code>" (닫는 괄호가 누락된)을 해석하는 경우,
+    이 오류 처리 규칙에 의해 닫는 괄호가 암묵적이 되고, 값이 얻어집니다 (색상 <span class="css">검정</span>). 하지만,
+    비슷한 구성 "<code>rgb(0,0,</code>"는 (괄호와 "blue" 값이 모두 누락된) 열려진 구성을 닫는 
+    것이 실행 가능한 값이 되지 않기 때문에 해석될 수 없습니다. </p>
+      <p>다음 용어들과 기능들은 CSS 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-css-2015">[CSS-2015]</a></p>
       <ul>
        <li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="viewport">viewport</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="viewport" data-noexport="" id="viewport">뷰포트(viewport)</dfn></p>
        </li><li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="replaced-element">replaced element</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="replaced element" data-noexport="" id="replaced-element">대체 요소(element)</dfn></p>
        </li><li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="intrinsic-dimensions">intrinsic dimensions</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="intrinsic dimensions" data-noexport="" id="intrinsic-dimensions">고유 치수</dfn></p>
       </li></ul>
-      <p>The term <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="named color|named colors" data-noexport="" id="named-color">named color</dfn> is defined in the CSS Color specification. <a data-link-type="biblio" href="references.html#biblio-css3color">[CSS3COLOR]</a></p>
-      <p>The terms <dfn class="dfn-paneled" data-dfn-for="css" data-dfn-type="dfn" data-noexport="" id="css-intrinsic-width">intrinsic width</dfn> and <dfn class="dfn-paneled" data-dfn-for="css" data-dfn-type="dfn" data-noexport="" id="css-intrinsic-height">intrinsic height</dfn> refer to the width
-  dimension and the height dimension, respectively, of <a data-link-type="dfn" href="infrastructure.html#intrinsic-dimensions" id="ref-for-intrinsic-dimensions-1">intrinsic dimensions</a>.</p>
-      <p>The term <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="provides-a-paint-source">provides a paint source</dfn> is used as defined in the <cite>CSS Image Values and Replaced Content</cite> specification to define the interaction of
-  certain HTML elements with the CSS 'element()' function. <a data-link-type="biblio" href="references.html#biblio-css3-images">[CSS3-IMAGES]</a></p>
-      <p>The term <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="default-object-size">default object size</dfn> is also defined in the <cite>CSS Image Values and Replaced Content</cite> specification. <a data-link-type="biblio" href="references.html#biblio-css3-images">[CSS3-IMAGES]</a></p>
-      <p>Implementations that support scripting must support the CSS Object Model. The following
-  features and terms are defined in the CSSOM specifications: <a data-link-type="biblio" href="references.html#biblio-cssom">[CSSOM]</a> <a data-link-type="biblio" href="references.html#biblio-cssom-view">[CSSOM-VIEW]</a></p>
+      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="named color|named colors" data-noexport="" id="named-color">명명된 색상</dfn>이라는 용어는 CSS 색상 명세에 정의되어
+  있습니다. <a data-link-type="biblio" href="references.html#biblio-css3color">[CSS3COLOR]</a></p>
+      <p><dfn class="dfn-paneled" data-dfn-for="css" data-dfn-type="dfn" data-lt="intrinsic width" data-noexport="" id="css-intrinsic-width">고유 너비</dfn>와 <dfn class="dfn-paneled" data-dfn-for="css" data-dfn-type="dfn" data-lt="intrinsic height" data-noexport="" id="css-intrinsic-height">고유 높이</dfn>라는
+  용어는 각각 <a data-link-type="dfn" href="infrastructure.html#intrinsic-dimensions" id="ref-for-intrinsic-dimensions-1">고유 치수</a>의 너비 치수와 높이 치수를 지칭합니다.</p>
+      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="provides a paint source" data-noexport="" id="provides-a-paint-source">페인트 소스를 제공한다</dfn>는 용어는 CSS 'element()' 함수와
+  특정 HTML 요소(element)의 상호작용을 정의하기 위해 <cite>CSS 이미지 값과 대체 콘텐트</cite> 명세에 정의된 대로 사용됩니다. <a data-link-type="biblio" href="references.html#biblio-css3-images">[CSS3-IMAGES]</a></p>
+      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="default object size" data-noexport="" id="default-object-size">기본 객체 사이즈</dfn>라는 용어 역시 <cite>CSS 이미지 값과 대체 콘텐트</cite> 명세에 정의되어 있습니다. <a data-link-type="biblio" href="references.html#biblio-css3-images">[CSS3-IMAGES]</a></p>
+      <p>스크립팅을 지원하는 구현은 CSS 객체 모델을 지원해야 합니다. 다음 기능들과 용어들은 CSSOM 명세에
+  정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-cssom">[CSSOM]</a> <a data-link-type="biblio" href="references.html#biblio-cssom-view">[CSSOM-VIEW]</a></p>
       <ul>
        <li data-md="">
         <p><a class="idl-code" data-link-type="interface" href="https://drafts.csswg.org/cssom-view-1/#screen"><code>Screen</code></a></p>
@@ -2831,66 +2812,62 @@ general</p>
        </li><li data-md="">
         <p><a class="idl-code" data-link-type="interface" href="https://drafts.csswg.org/cssom-1/#cssstyledeclaration"><code>CSSStyleDeclaration</code></a></p>
        </li><li data-md="">
-        <p><a class="idl-code" data-link-type="attribute" href="https://drafts.csswg.org/cssom-1/#dom-cssstyledeclaration-csstext"><code>cssText</code></a> attribute of <a class="idl-code" data-link-type="interface" href="https://drafts.csswg.org/cssom-1/#cssstyledeclaration"><code>CSSStyleDeclaration</code></a></p>
+        <p><a class="idl-code" data-link-type="interface" href="https://drafts.csswg.org/cssom-1/#cssstyledeclaration"><code>CSSStyleDeclaration</code></a>의 <a class="idl-code" data-link-type="attribute" href="https://drafts.csswg.org/cssom-1/#dom-cssstyledeclaration-csstext"><code>cssText</code></a> 속성(attribute)</p>
        </li><li data-md="">
         <p><a class="idl-code" data-link-type="interface" href="https://drafts.csswg.org/cssom-1/#stylesheet"><code>StyleSheet</code></a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-1/#create-a-css-style-sheet">create a CSS style sheet</a></p>
+        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-1/#create-a-css-style-sheet">CSS 스타일 시트 생성</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-1/#remove-a-css-style-sheet">remove a CSS style sheet</a></p>
+        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-1/#remove-a-css-style-sheet">CSS 스타일 시트 제거</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-1/#associated-css-style-sheet">associated CSS style sheet</a></p>
+        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-1/#associated-css-style-sheet">연관된 CSS 스타일 시트</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-1/#css-style-sheet">CSS style sheets</a> and their properties: <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-stylesheet-type">type</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-location">location</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-stylesheet-parentstylesheet">parent CSS style sheet</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-stylesheet-ownernode">owner node</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-cssstylesheet-ownerrule">owner CSS rule</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-stylesheet-media">media</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-stylesheet-title">title</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#concept-css-style-sheet-alternate-flag">alternate flag</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#concept-css-style-sheet-disabled-flag">disabled flag</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#concept-css-style-sheet-css-rules">CSS rules</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#concept-css-style-sheet-origin-clean-flag">origin-clean flag</a></p>
+        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-1/#css-style-sheet">CSS 스타일 시트</a>와 프로퍼티(propetry)들: <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-stylesheet-type">type</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-location">location</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-stylesheet-parentstylesheet">부모 CSS 스타일 시트</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-stylesheet-ownernode">소유자 노드</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-cssstylesheet-ownerrule">소유자 CSS 규칙</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-stylesheet-media">media</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#dom-stylesheet-title">title</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#concept-css-style-sheet-alternate-flag">alternate 플래그</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#concept-css-style-sheet-disabled-flag">disabled 플래그</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#concept-css-style-sheet-css-rules">CSS 규칙</a>, <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#concept-css-style-sheet-origin-clean-flag">origin-clean 플래그</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#enabled-css-style-sheet-set">Alternative style sheet sets</a> and the <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#enabled-css-style-sheet-set">preferred style sheet set</a></p>
+        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#enabled-css-style-sheet-set">대체 스타일 시트 세트</a>와 <a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#enabled-css-style-sheet-set">우선되는 스타일 시트 세트</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#serializing-css-values">Serializing a CSS value</a></p>
+        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom/#serializing-css-values">CSS 값 직렬화</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view-1/#run-the-resize-steps">run the resize steps</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view-1/#run-the-resize-steps">크기 조정 단계 수행</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view-1/#run-the-scroll-steps">run the scroll steps</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view-1/#run-the-scroll-steps">스크롤 단계 수행</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view-1/#evaluate-media-queries-and-report-changes">evaluate media queries and report changes</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view-1/#evaluate-media-queries-and-report-changes">미디어쿼리 평가와 변경 보고</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-view-1/#scroll-an-element-into-view">Scroll an element into view</a></p>
+        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-view-1/#scroll-an-element-into-view">뷰(view) 안으로 요소(element)를 스크롤</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-view-1/#scroll-to-the-beginning-of-the-document">Scroll to the beginning of the document</a></p>
+        <p><a data-link-type="dfn" href="https://drafts.csswg.org/cssom-view-1/#scroll-to-the-beginning-of-the-document">문서의 시작 부분으로 스크롤</a></p>
        </li><li data-md="">
-        <p>The <a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/cssom-view-1/#eventdef-window-resize"><code>resize</code></a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/cssom-view-1/#eventdef-window-resize"><code>resize</code></a> 이벤트</p>
        </li><li data-md="">
-        <p>The <a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/cssom-view-1/#eventdef-document-scroll"><code>scroll</code></a> event</p>
+        <p><a class="idl-code" data-link-type="event" href="https://www.w3.org/TR/cssom-view-1/#eventdef-document-scroll"><code>scroll</code></a> 이벤트</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view-1/#the-features-argument-to-the-open()-method">The <em>features</em> argument of <code>window.open</code></a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view-1/#the-features-argument-to-the-open()-method"><code>window.open</code>의 <em>특징</em> 인자(argument)</a></p>
       </li></ul>
-      <p>The following features and terms are defined in the <cite>CSS Syntax</cite> specifications: <a data-link-type="biblio" href="references.html#biblio-css-syntax-3">[CSS-SYNTAX-3]</a></p>
+      <p>다음 기능들과 용어들은 <cite>CSS 구문</cite> 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-css-syntax-3">[CSS-SYNTAX-3]</a></p>
       <ul>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/css3-syntax/#consume-a-component-value">Parse a comma-separated list of component values</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/css3-syntax/#consume-a-component-value">구성 값들의 콤마로 구분된 목록 해석</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/css3-syntax/#component-value">component value</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/css3-syntax/#component-value">구성 값</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/css3-syntax/#environment-encoding">environment encoding</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/css3-syntax/#environment-encoding">환경 인코딩</a></p>
        </li><li data-md="">
         <p><a class="css" data-link-type="type" href="https://www.w3.org/TR/css3-syntax/#typedef-whitespace-token">&lt;whitespace-token&gt;</a></p>
       </li></ul>
-      <p>The feature <a class="css" data-link-type="type" href="https://drafts.csswg.org/css-values-3/#length-value" title="Expands to: em | advance measure | vb | ch | vmin | cm | pc | pixel unit | vi | in | rem | q | vh | ex | pt | vw | vmax | ic | mm">&lt;length&gt;</a> is defined in the <cite>CSS Values and Units</cite> specification. <a data-link-type="biblio" href="references.html#biblio-css-values">[CSS-VALUES]</a></p>
-      <p>The term <a data-link-type="dfn" href="https://www.w3.org/TR/css-style-attr/#syntax">CSS styling attribute</a> is defined in the <cite>CSS Style Attributes</cite> specification. <a data-link-type="biblio" href="references.html#biblio-css-style-attr">[CSS-STYLE-ATTR]</a></p>
-      <p>The <code>CanvasRenderingContext2D</code> object’s use of fonts depends on the features
-  described in the CSS <cite>Fonts</cite> and <cite>Font Loading</cite> specifications,
-  including in particular <a class="idl-code" data-link-type="interface" href="https://drafts.csswg.org/css-font-loading-3/#fontface"><code>FontFace</code></a> objects and the <a data-link-type="dfn" href="https://drafts.csswg.org/css-font-loading-3/#font-source">font source</a> concept. <a data-link-type="biblio" href="references.html#biblio-css-fonts-3">[CSS-FONTS-3]</a> <a data-link-type="biblio" href="references.html#biblio-css-font-loading-3">[CSS-FONT-LOADING-3]</a></p>
-      <p>The following interface is defined in the Geometry Interfaces Module specification: <a data-link-type="biblio" href="references.html#biblio-geometry-1">[GEOMETRY-1]</a></p>
+      <p><a class="css" data-link-type="type" href="https://drafts.csswg.org/css-values-3/#length-value" title="Expands to: em | advance measure | vb | ch | vmin | cm | pc | pixel unit | vi | in | rem | q | vh | ex | pt | vw | vmax | ic | mm">&lt;length&gt;</a> 특성은 <cite>CSS 값과 단위</cite> 명세에 정의되어 있습니다. <a data-link-type="biblio" href="references.html#biblio-css-values">[CSS-VALUES]</a></p>
+      <p><a data-link-type="dfn" href="https://www.w3.org/TR/css-style-attr/#syntax">CSS 스타일링 속성(attribute)</a>라는 용어는 <cite>CSS Style 속성(attribute)</cite> 명세에 정의되어 있습니다. <a data-link-type="biblio" href="references.html#biblio-css-style-attr">[CSS-STYLE-ATTR]</a></p>
+      <p><code>CanvasRenderingContext2D</code> 객체의 폰트 사용은 CSS <cite>폰트</cite>와 <cite>폰트 로딩</cite> 명세에 설명된 기능에 따라, 특히 <a class="idl-code" data-link-type="interface" href="https://drafts.csswg.org/css-font-loading-3/#fontface"><code>FontFace</code></a> 객체와 <a data-link-type="dfn" href="https://drafts.csswg.org/css-font-loading-3/#font-source">폰트 소스</a> 개념을 포함하여, 달라집니다. <a data-link-type="biblio" href="references.html#biblio-css-fonts-3">[CSS-FONTS-3]</a> <a data-link-type="biblio" href="references.html#biblio-css-font-loading-3">[CSS-FONT-LOADING-3]</a></p>
+      <p>다음 인터페이스는 외형 인터페이스 모듈(Geometry Interfaces Module) 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-geometry-1">[GEOMETRY-1]</a></p>
       <ul>
        <li data-md="">
-        <p><code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry-1/#dommatrix">DOMMatrix</a></code> interface</p>
+        <p><code class="idl"><a data-link-type="idl" href="https://drafts.fxtf.org/geometry-1/#dommatrix">DOMMatrix</a></code> 인터페이스</p>
       </li></ul>
      </dd><dt data-md="">
       <p>SVG</p>
      </dt><dd data-md="">
-      <p>The <code>CanvasRenderingContext2D</code> object’s use of fonts depends on the features
-  described in the CSS <cite>Fonts</cite> and <cite>Font Loading</cite> specifications,
-  including in particular <a class="idl-code" data-link-type="interface" href="https://drafts.csswg.org/css-font-loading-3/#fontface"><code>FontFace</code></a> objects and the <a data-link-type="dfn" href="https://drafts.csswg.org/css-font-loading-3/#font-source">font source</a> concept. <a data-link-type="biblio" href="references.html#biblio-css-fonts-3">[CSS-FONTS-3]</a> <a data-link-type="biblio" href="references.html#biblio-css-font-loading-3">[CSS-FONT-LOADING-3]</a></p>
-      <p>The following interface is defined in the SVG specification: <a data-link-type="biblio" href="references.html#biblio-svg11">[SVG11]</a></p>
+      <p><code>CanvasRenderingContext2D</code> 객체의 폰트 사용은 CSS <cite>폰트</cite>와 <cite>폰트 로딩</cite> 명세에 설명된 기능에 따라, 특히 <a class="idl-code" data-link-type="interface" href="https://drafts.csswg.org/css-font-loading-3/#fontface"><code>FontFace</code></a> 객체와 <a data-link-type="dfn" href="https://drafts.csswg.org/css-font-loading-3/#font-source">폰트 소스</a> 개념을 포함하여, 달라집니다. <a data-link-type="biblio" href="references.html#biblio-css-fonts-3">[CSS-FONTS-3]</a> <a data-link-type="biblio" href="references.html#biblio-css-font-loading-3">[CSS-FONT-LOADING-3]</a></p>
+      <p>다음 인터페이스는 SVG 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-svg11">[SVG11]</a></p>
       <ul>
        <li data-md="">
         <p><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/SVG/coords.html#InterfaceSVGMatrix">SVGMatrix</a></code></p>
@@ -2898,7 +2875,7 @@ general</p>
      </dd><dt data-md="">
       <p>WebGL</p>
      </dt><dd data-md="">
-      <p>The following interface is defined in the WebGL specification: <a data-link-type="biblio" href="references.html#biblio-webgl">[WEBGL]</a></p>
+      <p>다음 인터페이스는 WebGL 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-webgl">[WEBGL]</a></p>
       <ul>
        <li data-md="">
         <p><code class="idl"><a data-link-type="idl" href="https://www.khronos.org/registry/webgl/specs/1.0/#WEBGLRENDERINGCONTEXT">WebGLRenderingContext</a></code></p>
@@ -2906,72 +2883,71 @@ general</p>
      </dd><dt data-md="">
       <p>WebVTT</p>
      </dt><dd data-md="">
-      <p>Implementations may support <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="webvtt">WebVTT</dfn> as a text track format for subtitles, captions,
-  chapter titles, metadata, etc, for media resources. <a data-link-type="biblio" href="references.html#biblio-webvtt">[WEBVTT]</a></p>
-      <p>The following terms, used in this specification, are defined in the WebVTT specification:</p>
+      <p>구현은 미디어 리소스에 대한 자막(subtitle), 캡션(caption), 챕터 제목, 메타데이터 등으로서 <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="webvtt">WebVTT</dfn>를 지원할 수 있습니다. <a data-link-type="biblio" href="references.html#biblio-webvtt">[WEBVTT]</a></p>
+      <p>이 명세에 사용된 다음 용어들은 WebVTT 명세에 정의되어 있습니다:</p>
       <ul>
        <li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="webvtt-file">WebVTT file</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="WebVTT file" data-noexport="" id="webvtt-file">WebVTT 파일</dfn></p>
        </li><li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="webvtt-file-using-cue-text">WebVTT file using cue text</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="WebVTT file using cue text" data-noexport="" id="webvtt-file-using-cue-text">큐 텍스트를 사용하는 WebVTT 파일</dfn></p>
        </li><li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="webvtt-file-using-chapter-title-text">WebVTT file using chapter title text</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="WebVTT file using chapter title text" data-noexport="" id="webvtt-file-using-chapter-title-text">챕터 제목 텍스트를 사용하는 WebVTT 파일</dfn></p>
        </li><li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="webvtt-file-using-only-nested-cues">WebVTT file using only nested cues</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="WebVTT file using only nested cues" data-noexport="" id="webvtt-file-using-only-nested-cues">중첩된 큐만을 사용하는 WebVTT 파일</dfn></p>
        </li><li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="webvtt-parser">WebVTT parser</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="WebVTT parser" data-noexport="" id="webvtt-parser">WebVTT 해석기</dfn></p>
        </li><li data-md="">
-        <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="rules-for-updating-the-display-of-webvtt-text-tracks">rules for updating the display of WebVTT text tracks</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="rules for updating the display of WebVTT text tracks" data-noexport="" id="rules-for-updating-the-display-of-webvtt-text-tracks">WebVTT 텍스트 트랙의 표시 갱신을 위한 규칙</dfn></p>
        </li><li data-md="">
-        <p>The <dfn data-dfn-type="dfn" data-noexport="" id="rules-for-interpreting-webvtt-cue-text">rules for interpreting WebVTT cue text<a class="self-link" href="infrastructure.html#rules-for-interpreting-webvtt-cue-text"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="rules for interpreting WebVTT cue text" data-noexport="" id="rules-for-interpreting-webvtt-cue-text">WebVTT 큐 텍스트 해석을 위한 규칙<a class="self-link" href="infrastructure.html#rules-for-interpreting-webvtt-cue-text"></a></dfn></p>
        </li><li data-md="">
-        <p>The WebVTT <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="text-track-cue-writing-direction">text track cue writing direction</dfn></p>
+        <p>WebVTT <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="text track cue writing direction" data-noexport="" id="text-track-cue-writing-direction">텍스트 트랙 큐 쓰기 방향</dfn></p>
       </li></ul>
      </dd><dt data-md="">
-      <p>The WebSocket protocol</p>
+      <p>웹소켓 프로토콜</p>
      </dt><dd data-md="">
-      <p>The following terms are defined in the WebSocket protocol specification: <a data-link-type="biblio" href="references.html#biblio-rfc6455">[RFC6455]</a></p>
+      <p>다음 용어들은 웹소켓 프로토콜 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-rfc6455">[RFC6455]</a></p>
       <ul>
        <li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="establish-a-websocket-connection">establish a WebSocket connection<a class="self-link" href="infrastructure.html#establish-a-websocket-connection"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="establish a WebSocket connection" data-noexport="" id="establish-a-websocket-connection">웹 소켓 연결 수립<a class="self-link" href="infrastructure.html#establish-a-websocket-connection"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="the-websocket-connection-is-established">the WebSocket connection is established<a class="self-link" href="infrastructure.html#the-websocket-connection-is-established"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="the WebSocket connection is established" data-noexport="" id="the-websocket-connection-is-established">웹 소켓 연결 수립됨<a class="self-link" href="infrastructure.html#the-websocket-connection-is-established"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="validate-the-servers-response">validate the server’s response<a class="self-link" href="infrastructure.html#validate-the-servers-response"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="validate the server’s response" data-noexport="" id="validate-the-servers-response">서버 응답 검증<a class="self-link" href="infrastructure.html#validate-the-servers-response"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="extensions-in-use">extensions in use<a class="self-link" href="infrastructure.html#extensions-in-use"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="extensions in use" data-noexport="" id="extensions-in-use">쓰이고 있는 확장<a class="self-link" href="infrastructure.html#extensions-in-use"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="subprotocol-in-use">subprotocol in use<a class="self-link" href="infrastructure.html#subprotocol-in-use"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="subprotocol in use" data-noexport="" id="subprotocol-in-use">쓰이고 있는 서브프로토콜<a class="self-link" href="infrastructure.html#subprotocol-in-use"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="headers-to-send-appropriate-cookies">headers to send appropriate cookies<a class="self-link" href="infrastructure.html#headers-to-send-appropriate-cookies"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="headers to send appropriate cookies" data-noexport="" id="headers-to-send-appropriate-cookies">적절한 쿠키를 보내기 위한 헤더<a class="self-link" href="infrastructure.html#headers-to-send-appropriate-cookies"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="cookies-set-during-the-servers-opening-handshake">cookies set during the server’s opening handshake<a class="self-link" href="infrastructure.html#cookies-set-during-the-servers-opening-handshake"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="cookies set during the server’s opening handshake" data-noexport="" id="cookies-set-during-the-servers-opening-handshake">서버의 여는 핸드쉐이크(opening handshake) 동안 쿠키 설정<a class="self-link" href="infrastructure.html#cookies-set-during-the-servers-opening-handshake"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="a-websocket-message-has-been-received">a WebSocket message has been received<a class="self-link" href="infrastructure.html#a-websocket-message-has-been-received"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="a WebSocket message has been received" data-noexport="" id="a-websocket-message-has-been-received">웹소켓 메세지가 수신되었습니다<a class="self-link" href="infrastructure.html#a-websocket-message-has-been-received"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="send-a-websocket-message">send a WebSocket Message<a class="self-link" href="infrastructure.html#send-a-websocket-message"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="send a WebSocket Message" data-noexport="" id="send-a-websocket-message">웹소켓 메시지 전송<a class="self-link" href="infrastructure.html#send-a-websocket-message"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="fail-the-websocket-connection">fail the WebSocket connection<a class="self-link" href="infrastructure.html#fail-the-websocket-connection"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="fail the WebSocket connection" data-noexport="" id="fail-the-websocket-connection">웹소켓 연결 실패<a class="self-link" href="infrastructure.html#fail-the-websocket-connection"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="close-the-websocket-connection">close the WebSocket connection<a class="self-link" href="infrastructure.html#close-the-websocket-connection"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="close the WebSocket connection" data-noexport="" id="close-the-websocket-connection">웹소켓 연결 종료<a class="self-link" href="infrastructure.html#close-the-websocket-connection"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="start-the-websocket-closing-handshake">start the WebSocket closing handshake<a class="self-link" href="infrastructure.html#start-the-websocket-closing-handshake"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="start the WebSocket closing handshake" data-noexport="" id="start-the-websocket-closing-handshake">웹소켓 닫는 핸드쉐이크(closing handshake) 시작<a class="self-link" href="infrastructure.html#start-the-websocket-closing-handshake"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="the-websocket-closing-handshake-is-started">the WebSocket closing handshake is started<a class="self-link" href="infrastructure.html#the-websocket-closing-handshake-is-started"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="the WebSocket closing handshake is started" data-noexport="" id="the-websocket-closing-handshake-is-started">웹소켓 닫는 핸드쉐이크(closing handshake)가 시작되었습니다<a class="self-link" href="infrastructure.html#the-websocket-closing-handshake-is-started"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="the-websocket-connection-is-closed">the WebSocket connection is closed<a class="self-link" href="infrastructure.html#the-websocket-connection-is-closed"></a></dfn> (possibly <i>cleanly</i>)</p>
+        <p><dfn data-dfn-type="dfn" data-lt="the WebSocket connection is closed" data-noexport="" id="the-websocket-connection-is-closed">웹소켓 연결이 종료되었습니다<a class="self-link" href="infrastructure.html#the-websocket-connection-is-closed"></a></dfn> (아마도 <i>완전히</i>)</p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="the-websocket-connection-close-code">the WebSocket connection close code<a class="self-link" href="infrastructure.html#the-websocket-connection-close-code"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="the WebSocket connection close code" data-noexport="" id="the-websocket-connection-close-code">웹소켓 연결 종료 코드<a class="self-link" href="infrastructure.html#the-websocket-connection-close-code"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="the-websocket-connection-close-reason">the WebSocket connection close reason<a class="self-link" href="infrastructure.html#the-websocket-connection-close-reason"></a></dfn></p>
+        <p><dfn data-dfn-type="dfn" data-lt="the WebSocket connection close reason" data-noexport="" id="the-websocket-connection-close-reason">웹소켓 연결 종료 사유<a class="self-link" href="infrastructure.html#the-websocket-connection-close-reason"></a></dfn></p>
        </li><li data-md="">
-        <p><dfn data-dfn-type="dfn" data-noexport="" id="sec-websocket-protocol"><code>Sec-WebSocket-Protocol</code><a class="self-link" href="infrastructure.html#sec-websocket-protocol"></a></dfn> field</p>
+        <p><dfn data-dfn-type="dfn" data-noexport="" id="sec-websocket-protocol"><code>Sec-WebSocket-Protocol</code><a class="self-link" href="infrastructure.html#sec-websocket-protocol"></a></dfn> 필드</p>
       </li></ul>
      </dd><dt data-md="">
       <p>ARIA</p>
      </dt><dd data-md="">
-      <p>The <dfn data-dfn-for="global" data-dfn-type="element-attr" data-export="" id="element-attrdef-global-role"><code>role</code><a class="self-link" href="infrastructure.html#element-attrdef-global-role"></a></dfn> attribute is defined in the ARIA specification, as are the
-  following roles: <a data-link-type="biblio" href="references.html#biblio-wai-aria">[WAI-ARIA]</a></p>
+      <p><dfn data-dfn-for="global" data-dfn-type="element-attr" data-export="" id="element-attrdef-global-role"><code>role</code><a class="self-link" href="infrastructure.html#element-attrdef-global-role"></a></dfn> 속성(attirbute)는 다음 역할(role)들과
+  같이 ARIA 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-wai-aria">[WAI-ARIA]</a></p>
       <ul>
        <li data-md="">
         <p><a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#alert"><code>alert</code></a></p>
@@ -3078,8 +3054,8 @@ general</p>
        </li><li data-md="">
         <p><a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#treeitem"><code>treeitem</code></a></p>
       </li></ul>
-      <p>In addition, the following <dfn data-dfn-for="global" data-dfn-type="element-attr" data-export="" id="element-attrdef-global-aria"><code>aria-*</code><a class="self-link" href="infrastructure.html#element-attrdef-global-aria"></a></dfn> content attributes are defined in
-  the ARIA specification: <a data-link-type="biblio" href="references.html#biblio-wai-aria">[WAI-ARIA]</a></p>
+      <p>게다가, 다음 <dfn data-dfn-for="global" data-dfn-type="element-attr" data-export="" id="element-attrdef-global-aria"><code>aria-*</code><a class="self-link" href="infrastructure.html#element-attrdef-global-aria"></a></dfn> 콘텐트 속성(attribute)는
+  ARIA 명세에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-wai-aria">[WAI-ARIA]</a></p>
       <ul>
        <li data-md="">
         <p><dfn data-dfn-for="global" data-dfn-type="element-attr" data-export="" id="element-attrdef-global-aria-checked"><code>aria-checked</code><a class="self-link" href="infrastructure.html#element-attrdef-global-aria-checked"></a></dfn></p>
@@ -3119,59 +3095,58 @@ general</p>
         <p><dfn data-dfn-for="global" data-dfn-type="element-attr" data-export="" id="element-attrdef-global-aria-valuenow"><code>aria-valuenow</code><a class="self-link" href="infrastructure.html#element-attrdef-global-aria-valuenow"></a></dfn></p>
       </li></ul>
      </dd><dt data-md="">
-      <p>Content Security Policy</p>
+      <p>콘텐트 보안 정책</p>
      </dt><dd data-md="">
-      <p>The following terms are defined in <cite>Content Security Policy</cite>: <a data-link-type="biblio" href="references.html#biblio-csp3">[CSP3]</a></p>
+      <p>다음 용어들은 <cite>콘텐트 보안 정책</cite>에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-csp3">[CSP3]</a></p>
       <ul>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#policy">Content Security Policy</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#policy">콘텐트 보안 정책</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#directives">Content Security Policy directive</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#directives">콘텐트 보안 정책 지시어</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#grammardef-serialized-policy">Content Security Policy syntax</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#grammardef-serialized-policy">콘텐트 보안 정책 구문</a></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#enforced">enforce the policy</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#enforced">정책 시행</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#parse-serialized-policy">parse a serialized Content Security Policy</a> algorithm</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#parse-serialized-policy">직렬화된 콘텐트 보안 정책 해석</a> 알고리즘</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#initialize-global-object-csp">Initialize a global object’s CSP list</a> algorithm</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#initialize-global-object-csp">전역 객체의 CSP 목록 초기화</a> 알고리즘</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#initialize-document-csp">Initialize a Document’s CSP list</a> algorithm</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#initialize-document-csp">문서의 CSP 목록 초기화</a> 알고리즘</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#should-block-inline">Should element’s inline behavior be blocked by Content Security Policy?</a> algorithm</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#should-block-inline">요소(element)의 인라인 동작은 콘텐트 보안 정책에 의해 차단되어야(should) 하는가?</a> 알고리즘</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#report-uri"><code>report-uri</code></a>, <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#frame-ancestors"><code>frame-ancestors</code></a>, and <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#directive-sandbox"><code>sandbox</code></a> <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#directives">directives</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#report-uri"><code>report-uri</code></a>, <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#frame-ancestors"><code>frame-ancestors</code></a>, <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#directive-sandbox"><code>sandbox</code></a> <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#directives">지시어</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#can-compile-strings">EnsureCSPDoesNotBlockStringCompilation</a> abstract algorithm</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#can-compile-strings">EnsureCSPDoesNotBlockStringCompilation</a> 추상화 알고리즘</p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#allow-base-for-document">Is base allowed for Document?</a> algorithm</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#allow-base-for-document">문서에 대해 허용된 base인가?</a> 알고리즘</p>
       </li></ul>
      </dd><dd data-md="">
-      <p>The following terms are defined in <cite>Content Security Policy: Document Features </cite></p>
+      <p>다음 용어들은 <cite>콘텐트 보안 정책: 문서 특징</cite>에 정의되어 있습니다. </p>
       <ul>
        <li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#frame-ancestors"><code>frame-ancestors</code> directive</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#frame-ancestors"><code>frame-ancestors</code> 지시어</a></p>
        </li><li data-md="">
-        <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#directive-sandbox"><code>sandbox</code> directive</a></p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/CSP3/#directive-sandbox"><code>sandbox</code> 지시어</a></p>
       </li></ul>
      </dd><dt data-md="">
-      <p>Service Workers</p>
+      <p>서비스 워커</p>
      </dt><dd data-md="">
-      <p>The following terms are defined in <cite>Service Workers</cite>: <a data-link-type="biblio" href="references.html#biblio-service-workers">[SERVICE-WORKERS]</a></p>
+      <p>다음 용어들은 <cite>서비스 워커</cite>에 정의되어 있습니다: <a data-link-type="biblio" href="references.html#biblio-service-workers">[SERVICE-WORKERS]</a></p>
       <ul>
        <li data-md="">
-        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="match-service-worker-registration">match service worker registration</dfn></p>
+        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="match service worker registration" data-noexport="" id="match-service-worker-registration">서비스 워커 등록 매칭</dfn></p>
       </li></ul>
     </dd></dl>
-    <p>This specification does not <em>require</em> support of any particular network protocol, style
-  sheet language, scripting language, or any of the DOM specifications beyond those required in the
-  list above. However, the language described by this specification is biased towards CSS as the
-  styling language, JavaScript as the scripting language, and HTTP as the network protocol, and
-  several features assume that those languages and protocols are in use.</p>
-    <p>A user agent that implements the HTTP protocol must implement the Web Origin Concept
-  specification and the HTTP State Management Mechanism specification (Cookies) as well. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a> <a data-link-type="biblio" href="references.html#biblio-origin">[ORIGIN]</a> <a data-link-type="biblio" href="references.html#biblio-cookies">[COOKIES]</a></p>
-    <p class="note" role="note"> This specification might have certain additional requirements on character encodings, image
-    formats, audio formats, and video formats in the respective sections. </p>
+    <p>이 명세는 임의의 특정 네트워크 프로토콜, 스타일 시트 언어, 스크립팅 언어, 위 목록에 요구된 것들을
+  넘어선 임의의 DOM 명세의 지원을 <em>요구</em>하지 않습니다. 하지만, 이 명세에 설명된 언어는 
+  스타일 언어로 CSS에, 스크립트 언어로 자바스크립트에, 네트워크 프로토콜에 HTTP에 관심을 두고 있고,
+  몇가지 기능들은 그 언어와 프로토콜들이 사용되고 있는 것으로 추정됩니다.</p>
+    <p>HTTP 프로토콜을 구현하는 유저 에이전트는 웹 출처 개념(Web Origin Concept) 명세와 HTTP 상태 관리
+  메커니즘 명세(쿠키) 역시 구현해야(must) 합니다. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a> <a data-link-type="biblio" href="references.html#biblio-origin">[ORIGIN]</a> <a data-link-type="biblio" href="references.html#biblio-cookies">[COOKIES]</a></p>
+    <p class="note" role="note"> 이 명세는 각각의 섹션에서 문자 인코딩, 이미지 형식, 오디오 형식, 비디오 형식에 대한 추가적인 
+    요구사항을 가질 수 있습니다. </p>
     <h4 class="heading settled" data-level="2.2.3" id="conformance-requirements-extensibility"><span class="secno">2.2.3. </span><span class="content">Extensibility</span><a class="self-link" href="infrastructure.html#conformance-requirements-extensibility"></a></h4>
     <p>Vendor-specific proprietary user agent extensions to this specification are strongly discouraged.
   Documents must not use such extensions, as doing so reduces interoperability and fragments the
@@ -6216,7 +6191,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="willful-violation">
    <b><a href="introduction.html#willful-violation">#willful-violation</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-willful-violation-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-willful-violation-1">2.2.2. 의존성</a>
     </li><li><a href="infrastructure.html#ref-for-willful-violation-2">2.2.4. Interactions with XPath and XSLT</a> <a href="infrastructure.html#ref-for-willful-violation-3">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-willful-violation-4">4.10.5.1.5. E-mail state (type=email)</a>
     </li><li><a href="webappapis.html#ref-for-willful-violation-5">7.1.3.7. Integration with the JavaScript job queue</a>
@@ -6260,7 +6235,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#html-document">#html-document</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-html-document-1">2.1. 전문 용어</a>
-    </li><li><a href="infrastructure.html#ref-for-html-document-2">2.2.2. Dependencies</a>
+    </li><li><a href="infrastructure.html#ref-for-html-document-2">2.2.2. 의존성</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. Interactions with XPath and XSLT</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-4">2.5.1. Terminology</a>
     </li><li><a href="dom.html#ref-for-html-document-5">3.2.5. Global attributes</a>
@@ -6296,7 +6271,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#xml-document">#xml-document</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-xml-document-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-xml-document-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-xml-document-3">2.2.2. Dependencies</a>
+    </li><li><a href="infrastructure.html#ref-for-xml-document-3">2.2.2. 의존성</a>
     </li><li><a href="dom.html#ref-for-xml-document-4">3.2.2. Elements in the DOM</a>
     </li><li><a href="dom.html#ref-for-xml-document-5">3.2.5. Global attributes</a> <a href="dom.html#ref-for-xml-document-6">(2)</a>
     </li><li><a href="dom.html#ref-for-xml-document-7">3.2.5.3. 
@@ -6370,7 +6345,7 @@ equal to the number of seconds in <var>t</var>.</p>
     <li><a href="introduction.html#ref-for-mime-type-1">1.6. HTML vs XHTML</a>
     </li><li><a href="infrastructure.html#ref-for-mime-type-2">2.1.1. 리소스</a>
     </li><li><a href="infrastructure.html#ref-for-mime-type-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-mime-type-4">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-mime-type-5">2.2.2. Dependencies</a>
+    </li><li><a href="infrastructure.html#ref-for-mime-type-5">2.2.2. 의존성</a>
     </li><li><a href="infrastructure.html#ref-for-mime-type-6">2.6.4. Determining the type of a resource</a>
     </li><li><a href="document-metadata.html#ref-for-mime-type-7">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-mime-type-8">(2)</a> <a href="document-metadata.html#ref-for-mime-type-9">(3)</a> <a href="document-metadata.html#ref-for-mime-type-10">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-mime-type-11">4.2.6. The style element</a>
@@ -6824,7 +6799,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="character-encoding">
    <b><a href="infrastructure.html#character-encoding">#character-encoding</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-character-encoding-1">2.2.2. Dependencies</a> <a href="infrastructure.html#ref-for-character-encoding-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-character-encoding-1">2.2.2. 의존성</a> <a href="infrastructure.html#ref-for-character-encoding-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-character-encoding-3">2.5.2. Parsing URLs</a>
     </li><li><a href="document-metadata.html#ref-for-character-encoding-4">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-character-encoding-5">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-character-encoding-6">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-character-encoding-7">(2)</a> <a href="document-metadata.html#ref-for-character-encoding-8">(3)</a>
@@ -6950,7 +6925,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="utf-8-decode">
    <b><a href="infrastructure.html#utf-8-decode">#utf-8-decode</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-8-decode-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-utf-8-decode-1">2.2.2. 의존성</a>
     </li><li><a href="browsers.html#ref-for-utf-8-decode-2">6.7.1. Navigating across documents</a>
     </li><li><a href="webappapis.html#ref-for-utf-8-decode-3">7.1.3.2. Fetching scripts</a>
     </li><li><a href="obsolete.html#ref-for-utf-8-decode-4">11.3.4.1. Parsing cache manifests</a> <a href="obsolete.html#ref-for-utf-8-decode-5">(2)</a>
@@ -6959,7 +6934,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="utf-8-decode-without-bom">
    <b><a href="infrastructure.html#utf-8-decode-without-bom">#utf-8-decode-without-bom</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-8-decode-without-bom-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-utf-8-decode-without-bom-1">2.2.2. 의존성</a>
     </li><li><a href="dom.html#ref-for-utf-8-decode-without-bom-2">3.1.2. Resource metadata management</a>
    </li></ul>
   </aside>
@@ -6972,7 +6947,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="schemedef-about">
    <b><a href="infrastructure.html#schemedef-about">#schemedef-about</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-schemedef-about-1">2.2.2. Dependencies</a> <a href="infrastructure.html#ref-for-schemedef-about-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-schemedef-about-1">2.2.2. 의존성</a> <a href="infrastructure.html#ref-for-schemedef-about-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-schemedef-about-3">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-schemedef-about-4">(2)</a>
     </li><li><a href="browsers.html#ref-for-schemedef-about-5">6.1. Browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-schemedef-about-6">6.3. The Window object</a>
@@ -6983,7 +6958,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="schemedef-blob">
    <b><a href="infrastructure.html#schemedef-blob">#schemedef-blob</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-schemedef-blob-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-schemedef-blob-1">2.2.2. 의존성</a>
     </li><li><a href="webappapis.html#ref-for-schemedef-blob-2">7.1.3.4. Calling scripts</a>
    </li></ul>
   </aside>
@@ -7006,7 +6981,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="throw">
    <b><a href="infrastructure.html#throw">#throw</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-throw-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-throw-1">2.2.2. 의존성</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="date-object">
@@ -7066,14 +7041,6 @@ equal to the number of seconds in <var>t</var>.</p>
     <li><a href="matching-html-elements-using-selectors.html#ref-for-limited-quirks-mode-1">4.15.1. Case-sensitivity</a>
     </li><li><a href="syntax.html#ref-for-limited-quirks-mode-2">8.2.5.4.1. The "initial" insertion mode</a>
     </li><li><a href="syntax.html#ref-for-limited-quirks-mode-3">8.4. Parsing HTML fragments</a> <a href="syntax.html#ref-for-limited-quirks-mode-4">(2)</a>
-   </li></ul>
-  </aside>
-  <aside class="dfn-panel" data-for="no-quirks-mode">
-   <b><a href="infrastructure.html#no-quirks-mode">#no-quirks-mode</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="introduction.html#ref-for-no-quirks-mode-1">1.10.2. 구문 오류</a>
-    </li><li><a href="matching-html-elements-using-selectors.html#ref-for-no-quirks-mode-2">4.15.1. Case-sensitivity</a>
-    </li><li><a href="syntax.html#ref-for-no-quirks-mode-3">8.4. Parsing HTML fragments</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="base-url-change-steps">
@@ -7142,7 +7109,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="intrinsic-dimensions">
    <b><a href="infrastructure.html#intrinsic-dimensions">#intrinsic-dimensions</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-intrinsic-dimensions-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-intrinsic-dimensions-1">2.2.2. 의존성</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-2">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-5">(4)</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-6">(5)</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-7">(6)</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-8">(7)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-9">4.7.10. The video element</a>
     </li><li><a href="semantics-scripting.html#ref-for-intrinsic-dimensions-10">4.12.4. The canvas element</a>
@@ -8843,7 +8810,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="xml-namespace">
    <b><a href="infrastructure.html#xml-namespace">#xml-namespace</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-xml-namespace-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-xml-namespace-1">2.2.2. 의존성</a>
     </li><li><a href="dom.html#ref-for-xml-namespace-2">3.2.5. Global attributes</a>
     </li><li><a href="dom.html#ref-for-xml-namespace-3">3.2.5.3. 
   The lang and xml:lang attributes </a> <a href="dom.html#ref-for-xml-namespace-4">(2)</a> <a href="dom.html#ref-for-xml-namespace-5">(3)</a> <a href="dom.html#ref-for-xml-namespace-6">(4)</a> <a href="dom.html#ref-for-xml-namespace-7">(5)</a> <a href="dom.html#ref-for-xml-namespace-8">(6)</a> <a href="dom.html#ref-for-xml-namespace-9">(7)</a> <a href="dom.html#ref-for-xml-namespace-10">(8)</a>
