@@ -1351,140 +1351,130 @@
     요구사항을 가질 수 있습니다.
   </p>
 
-<h4 id="conformance-requirements-extensibility">Extensibility</h4>
+<h4 id="conformance-requirements-extensibility">확장성</h4>
 
-  Vendor-specific proprietary user agent extensions to this specification are strongly discouraged.
-  Documents must not use such extensions, as doing so reduces interoperability and fragments the
-  user base, allowing only users of specific user agents to access the content in question.
+  벤더 특정 소유 유저 에이전트가 이 명세를 확장하는 것은 강력하게 지양됩니다. 
+  문서는 사용자의 특정 유저 에이전트만이 문제의 콘텐트를 접근하는 것을 허용하여 상호 운용성을 줄이고 
+  사용자 기반을 파편화하기 때문에 그러한 확장을 사용해서는(must) 안됩니다. 
 
-  If such extensions are nonetheless needed, e.g., for experimental purposes, then vendors are
-  strongly urged to use one of the following extension mechanisms:
+  그러한 확장이 그렇더라도 필요하다면, 예를 들어 실험적인 목적으로, 벤더들은 다음 확장 메커니즘의 
+  사용이 강력히 권장됩니다:
 
-  * For markup-level features that can be limited to the XML serialization and need not be
-    supported in the HTML serialization, vendors should use the namespace mechanism to define
-    custom namespaces in which the non-standard elements and attributes are supported.
+  * XML 직렬화에 제한될 수 없고 HTML 직렬화에 지원될 필요가 없는 마크업 레벨 기능에 대해, 벤더들은 
+    비표준 요소(element)와 속성(attribute)가 지원되는 사용자 정의 네임스페이스를 정의하기 위한 
+    네임스페이스 메커니즘을 사용해야(should) 합니다.
 
-  * For markup-level features that are intended for use with <a href="#syntax">the HTML syntax</a>,
-    extensions should be limited to new attributes of the form
-    "<code>x-<var>vendor</var>-<var>feature</var></code>", where <var>vendor</var> is a short
-    string that identifies the vendor responsible for the extension, and <var>feature</var> is
-    the name of the feature. New element names should not be created. Using attributes for such
-    extensions exclusively allows extensions from multiple vendors to co-exist on the same
-    element, which would not be possible with elements. Using the
-    "<code>x-<var>vendor</var>-<var>feature</var></code>" form allows extensions to be made
-    without risk of conflicting with future additions to the specification.
+  * <a href="#syntax">HTML 구문</a>을 사용하도록 의도된 마크업 레벨 기능에 대해, 확장은 
+    <var>vendor</var>가 확장에 대한 벤더 책임을 확인하는 짧은 문자열이고 <var>feature</var>가 기능의 
+    이름인"<code>x-<var>vendor</var>-<var>feature</var></code>" 형식의 새로운 속성(attirbute)로  
+    제한되어야(should) 합니다. 새로운 요소(element) 이름은 생성되어서는(should) 안됩니다. 그러한 
+    확장을 위한 속성(attribute) 사용은 독점적으로 여러 벤더로부터의 확장이 동일한 요소(element)에 
+    공존하는 것을 허용하고, 이 요소는 요소로 가능하지 않습니다. 
+    "<code>x-<var>vendor</var>-<var>feature</var></code>" 형식을 사용하는 것은 확장이 향후 명세에 
+    추가 사항과 충돌하는 위험성 없이 되는 허용합니다.
 
     <div class="example">
-      For instance, a browser named "FerretBrowser" could use "ferret" as a vendor prefix,
-      while a browser named "Mellblom Browser" could use "mb". If both of these browsers
-      invented extensions that turned elements into scratch-and-sniff areas, an author
-      experimenting with these features could write:
+      예를 들어, "FerretBrowser"라는 브라우저는 벤더 프리픽스(prefix)로 "ferret"를 사용할 수 있고,
+      반면 "Mellblom Browser"라는 브라우저는 "mb"를 사용할 수 있습니다. 이 브라우저들 모두 
+      요소(element)를 scratch-and-sniff 영역으로 설정하는 확장을 고안한다면, 이 기능을 실험하는 
+      작성자는 다음과 같이 작성할 수 있습니다:
 
       <pre highlight="html">
-        &lt;p>This smells of lemons!
+        &lt;p>이것은 레몬 냄새가 납니다!
         &lt;span x-ferret-smellovision x-ferret-smellcode="LEM01"
         x-mb-outputsmell x-mb-smell="lemon juice">&lt;/span>&lt;/p>
       </pre>
     </div>
 
-  Attribute names beginning with the two characters "<code>x-</code>" are reserved for
-  user agent use and are guaranteed to never be formally added to the HTML language. For
-  flexibility, attributes names containing underscores (the U+005F LOW LINE character) are also
-  reserved for experimental purposes and are guaranteed to never be formally added to the HTML
-  language.
+  두 문자 <code>x-</code>"로 시작하는 속성(attribute)이름은 유저 에이전트가 사용하기 위해 예약 
+  되었고 HTML 언에어 결코 공식적으로 추가되지 않을 것이 확실합니다. 유연성을 위해, 
+  밑줄(U+005F LOW LINE 문자)을 포함하는 속성(attribute)이름 역시 실험적인 목적을 위해 예약 되었고 
+  HTML 언어에 결코 공식적으로 추가되지 않을 것이 확실합니다.
 
-  <p class="note">Pages that use such attributes are by definition non-conforming.</p>
+  <p class="note">그러한 속성(attribute)을 사용하는 페이지는 비 규범적 정의에 의합니다.</p>
 
-  For DOM extensions, e.g., new methods and IDL attributes, the new members should be prefixed by
-  vendor-specific strings to prevent clashes with future versions of this specification.
+  DOM 확장을 위해, 예를 들어 새로운 메서드와 IDL 속성(attribute), 새로운 멤버들은 이 명세의 미래 
+  버전과 충돌하는 것을 방지하기 위해 벤더 특정 문자열이 앞에 붙어야(should) 합니다. 
 
-  For events, experimental event types should be prefixed with vendor-specific strings.
-
-  <div class="example">
-    For example, if a user agent called "Pleasold" were to add an event to indicate when
-    the user is going up in an elevator, it could use the prefix "<code>pleasold</code>" and
-    thus name the event "<code>pleasoldgoingup</code>", possibly with an event handler attribute
-    named "<code>onpleasoldgoingup</code>".
-  </div>
-
-  All extensions must be defined so that the use of extensions neither contradicts nor causes the
-  non-conformance of functionality defined in the specification.
+  이벤트를 위해, 실험적인 이벤트 유형은 벤더 특정 문자열이 앞에 붙어야(should) 합니다.
 
   <div class="example">
-    For example, while strongly discouraged from doing so, an implementation "Foo Browser" could
-    add a new IDL attribute "<code>fooTypeTime</code>" to a control's DOM interface that returned
-    the time it took the user to select the current value of a control (say). On the other hand,
-    defining a new control that appears in a form's <code>elements</code> array would be in
-    violation of the above requirement, as it would violate the definition of
-    <code>elements</code> given in this specification.
+    예를 들어, 사용자가 엘레베이터에서 올라갈 때 보여주기 위한 이벤트 "Pleasold"를 호출했다면,
+    "<code>pleasold</code>" 접두어를 사용할 수 있고 따라서 이벤트를 아마 "<code>onpleasoldgoingup</code>"라고 
+    명명된 이벤트 핸들러가 있는 "<code>pleasoldgoingup</code>"로 명명합니다.
   </div>
 
-  When adding new <a>reflecting</a> IDL attributes corresponding to content attributes of the form
-  "<code>x-<var>vendor</var>-<var>feature</var></code>", the IDL attribute should be named
-  "<code><var>vendor</var><var>Feature</var></code>" (i.e., the "<code>x</code>" is dropped from
-  the IDL attribute's name).
+  모든 확장들은 확장의 사용이 모순되거나 명세에 정의된 기능성의 비적합이 야기되지 않도록 정의되어야 
+  합니다
+
+  <div class="example">
+    예를 들어, 그렇게 하는 것이 강하게 지양되는 동안, "Foo Browser" 구현은 새로운 IDL 속성(attribute)
+    "<code>fooTypeTime</code>"를 사용자가 컨트롤의 현재 값을 선택한 시간이 반환되는 컨트롤의 DOM 
+    인터페이스에 추가할 수 있습니다(일례로). 다른 한편으로, 양식(form)의 <code>elements</code> 
+    배열에 나타나는 새로운 컨트롤을 정의하는 것은 이 명세에 주어진 <code>elements</code>의 정의를 
+    위반할 것이기 때문에 위 요구사항을 위반할 것입니다.
+  </div>
+
+  "<code>x-<var>vendor</var>-<var>feature</var></code>" 형식의 콘텐트 속성에 상응하는 새로운  
+  <a lt="reflecting">반영하는</a> IDL 속성(attribute)을 추가하는 경우, IDL 속성(attribute)은 
+  "<code><var>vendor</var><var>Feature</var></code>"라고 명명되어야(should) 합니다(즉, 
+  "<code>x</code>"는 IDL 속성(attribute)의 이름에서 빠집니다).
 
 <hr />
 
-  When vendor-neutral extensions to this specification are needed, either this specification can be
-  updated accordingly, or an extension specification can be written that overrides the requirements
-  in this specification. When someone applying this specification to their activities decides that
-  they will recognize the requirements of such an extension specification, it becomes an
-  <a>applicable specification</a> for the purposes of conformance requirements in this
-  specification.
+  벤더 중립적인 확장이 이 명세에 필요한 경우, 이 명세가 그에 맞춰 업데이트 되거나, 확장 명세가 이 
+  명세의 요구사항을 재정의하는 것이 기록될 수 있습니다. 이 명세를 그들의 액티비티에 적용하는 사람이
+  그러한 확장 명세의 요구사항을 인식할 것을 결정할 경우, 이 명세의 적합성 요구사항의 목적에 대해
+  <a lt="applicable specification">적절한 명세</a>가 됩니다.
 
   <p class="note">
-    Someone could write a specification that defines any arbitrary byte stream as conforming, and
-    then claim that their random junk is conforming. However, that does not mean that their random
-    junk actually is conforming for everyone's purposes: if someone else decides that the
-    specification does not apply to their work, then they can quite legitimately say that the
-    aforementioned random junk is just that, junk, and not conforming at all. As far as conformance
-    goes, what matters in a particular community is what that community <em>agrees</em> is
-    applicable.
+    누군가 임의의 적합한 바이트 스트림을 정의하는 명세를 작성하고, 이후 그들의 무작위 쓰레기가
+    적합하다고 주장할 수 있습니다. 하지만, 그것이 그들의 무작위 쓰레기가 실제로 모두의 목적에 대해 
+    적합하다는 것을 의미하지 않습니다: 다른 누군가 명세가 그들의 작업에 적용하지 않는다고 결정한다면,
+    그들은 앞서 언급한 임의의 쓰레기가 단지 쓰레기이고 전혀 적합하지 않다고 꽤 정당하게 말할 수 
+    있습니다. 적합성에 관한 한, 특정 커뮤니티에서 중요한 것은 그 커뮤니티가 <em>동의하는</em> 것이
+    적용된다는 것이다.
   </p>
 
-  <dfn>applicable specification</dfn>.
+  <dfn lt="applicable specification">적용 가능한 명세</dfn>.
 
-  The conformance terminology for documents depends on the nature of the changes introduced by such
-  applicable specifications, and on the content and intended interpretation of the document.
-  Applicable specifications MAY define new document content (e.g., a foobar element), MAY prohibit
-  certain otherwise conforming content (e.g., prohibit use of &lt;table>s), or MAY change the
-  semantics, DOM mappings, or other processing rules for content defined in this specification.
-  Whether a document is or is not a <a lt="conforming document">conforming HTML document</a> does not depend on the use of
-  applicable specifications: if the syntax and semantics of a given <a lt="conforming document">conforming HTML document</a>
-  is unchanged by the use of applicable specification(s), then that document remains a
-  <a lt="conforming document">conforming HTML document</a>. If the semantics or processing of a given (otherwise conforming)
-  document is changed by use of applicable specification(s), then it is not a
-  <a lt="conforming document">conforming HTML document</a>. For such cases, the applicable specifications SHOULD define
-  conformance terminology.
+  문서에 대한 적합성 용어는 그러한 적용 가능한 명세에 의해 도입된 변경 사항과 문서의 콘텐트와 
+  의도된 해석에 따라 달라집니다.
+  적용 가능한 명세는 새로운 문서 콘텐트(예를 들어 foobar 요소)를 정의하거나, 다른 특정 적합한 
+  콘텐트를 금지하거나(예를 들어, &lt;table>s의 사용을 금지), 의미, DOM 매핑, 이 명세에 정의된 
+  콘텐트에 대한 처리 규칙을 변경할 수도 있습니다. 문서가 
+  <a lt="conforming document">적합한 HTML 문서</a>인지 아닌지는 적용 가능한 명세의 사용에 따르지 
+  않습니다: 주어진 <a lt="conforming document">적합한 HTML 문서</a>의 구문과 의미가 적용 가능한 
+  명세(들)의 사용에 의해 변경되지 않는다면, 그 문서는 여전히 <a lt="conforming document">적합한 HTML 문서</a>
+  입니다. 주어진 (다른 적합한) 문서의 의미와 처리가 적용 가능한 명세(들)의 사용에 의해 변경된다면, 
+  그것은 <a lt="conforming document">적합한 HTML 문서</a>가 아닙니다. 그러한 경우에 대해, 적용 가능한
+  명세는 적합성 용어를 정의해야(SHOULD) 합니다.
 
   <p class="note">
-    As a suggested but not required convention, such specifications might define conformance
-    terminology such as: "Conforming HTML+XXX document", where XXX is a short name
-    for the applicable specification. (Example: "Conforming HTML+AutomotiveExtensions document").
+    제안되었지만 요구된 규정이 아니기 때문에, 그러한 명세는 XXX가 적용 가능한 명세에 대한 짧은 이름
+    인 "적합한 HTML+XXX 문서"와 같은 적합성 용어를 정의 할 수 있습니다. (예: "적합한
+    HTML+AutomotiveExtensions 문서")
   </p>
 
-  <p class="note">a consequence of the rule given above is that certain syntactically correct HTML
-    documents may not be <a lt="conforming document">conforming HTML documents</a> in the presence of applicable
-    specifications. (Example: the applicable specification defines &lt;table> to be a piece of
-    furniture &#8212; a document written to that specification and containing a &lt;table> element
-    is NOT a <a lt="conforming document">conforming HTML document</a>, even if the element happens to be syntactically
-    correct HTML.)
+  <p class="note">위에 주어진 규칙의 결과는 특정한 구문상으로 옳은 HTML 문서가 적용 가능한 명세가 
+    있는 곳에서 <a lt="conforming document">적합한 HTML 문서</a>가 아닐 수 있다는 것입니다. (예: 
+    적용 가능한 명세는 &lt;table>을 하나의 내용으로 정의합니다 &#8212; 그 명세에 작성되고 &lt;table>
+    요소(element)를 포함하는 문서는 요소(element)가 구문적으로 옳은 HTML으로 되어 있더라도 
+    <a lt="conforming document">적합한 HTML 문서</a>가 아닙니다.)
   </p>
 
   <hr />
 
-  User agents must treat elements and attributes that they do not understand as semantically
-  neutral; leaving them in the DOM (for DOM processors), and styling them according to CSS (for CSS
-  processors), but not inferring any meaning from them.
+  유저 에이전트는 구문적으로 중립적인 것으로 이해할 수 없는 요소(element)와 속성(attribute)를 
+  처리해야(must) 합니다; DOM에 그것들을 두고(DOM 처리기에 대해), CSS를 따라 스타일링 하지만 (CSS
+  처리기에 대해), 그것들로부터 어떠한 의미도 끌어내지 않습니다.
 
-  When support for a feature is disabled (e.g., as an emergency measure to mitigate a security
-  problem, or to aid in development, or for performance reasons), user agents must act as if they
-  had no support for the feature whatsoever, and as if the feature was not mentioned in this
-  specification. For example, if a particular feature is accessed via an attribute in a Web IDL
-  interface, the attribute itself would be omitted from the objects that implement that interface
-  &mdash; leaving the attribute on the object but making it return null or throw an exception is
-  insufficient.
+  기능에 대한 지원이 비활성 된 경우 (예를 들어, 보안 문제를 완화시키기 위해, 혹은 개발 지원을 위해, 
+  혹은 성능 이유로 긴급한 조치로서), 유저 에이전트는 어떤 기능에 대해서도 지원이 없었던 것 처럼, 
+  그리고 기능이 이 명세에 언급지 않은 것 처럼 수행해야(must) 합니다. 예를 들어, 특정 기능이 웹 IDL
+  인터페이스에서 속성(attribute)를 통해 접근된다면, 속성(attribute) 자체는 그 인터페이스를 구현하는 
+  &mdash; 객체에 속성(attribute)를 두지만 null을 반환하거나 예외를 던지는(throw) 것을 불충분하게 하여
+  , 객체로부터 생략될 것입니다.
 
 <h4 id="interactions-with-xpath-and-xslt">Interactions with XPath and XSLT</h4>
 
