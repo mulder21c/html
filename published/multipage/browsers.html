@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <meta content="ED" name="w3c-status">
-  <title>HTML: 6. Loading Web pages</title>
+  <meta content="REC" name="w3c-status">
+  <title>HTML 5.1: 6. Loading Web pages</title>
   <link href="styles/styles-html.css" rel="stylesheet" type="text/css">
-  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED" rel="stylesheet" type="text/css">
+  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-REC" rel="stylesheet" type="text/css">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
  *
@@ -1423,8 +1423,8 @@ pre.idl.highlight { color: #708090; }
   <div class="head">
    <header>
     <p data-fill-with="logo"><a href="http://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"></a></p>
-    <h1 class="p-name no-ref allcaps" id="title">HTML</h1>
-    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2016-06-02">2 June 2016</time></span></h2>
+    <h1 class="p-name no-ref allcaps" id="title">HTML 5.1</h1>
+    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Recommendation, <time class="dt-updated" datetime="2016-11-01">1 November 2016</time></span></h2>
    </header>
    
    
@@ -1558,7 +1558,7 @@ pre.idl.highlight { color: #708090; }
   except where specified otherwise, the requirements defined in this section <em>do</em> apply to
   all user agents, whether they are Web browsers or not.</p>
     <h3 class="heading settled" data-level="6.1" id="sec-browsing-contexts"><span class="secno">6.1. </span><span class="content">Browsing contexts</span><a class="self-link" href="browsers.html#sec-browsing-contexts"></a></h3>
-    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="browsing context|browsing contexts" data-noexport="" id="browsing-context">browsing context</dfn> is an environment in which <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> objects are presented to the user.</p>
+    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="browsing context|browsing contexts" data-noexport="" id="browsing-context">브라우징 컨텍스트</dfn> is an environment in which <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> objects are presented to the user.</p>
     <p class="note" role="note">A tab or window in a Web browser typically contains a <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-92">browsing context</a>, as
   does an <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-55">iframe</a></code> or <code><a data-link-type="element" href="obsolete.html#elementdef-frame" id="ref-for-elementdef-frame-2">frame</a></code>s in a <code><a data-link-type="element" href="obsolete.html#elementdef-frameset" id="ref-for-elementdef-frameset-6">frameset</a></code>.</p>
     <p>A <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-93">browsing context</a> has a corresponding <code class="idl"><a data-link-type="idl" href="browsers.html#windowproxy" id="ref-for-windowproxy-5">WindowProxy</a></code> object.</p>
@@ -2547,7 +2547,7 @@ pre.idl.highlight { color: #708090; }
      </li><li data-md="">
       <p>the value of the <code>id</code> content attribute of any <a data-link-type="dfn" href="infrastructure.html#html-element" id="ref-for-html-element-59">HTML element</a> in the <a data-link-type="dfn" href="browsers.html#active-document" id="ref-for-active-document-57">active document</a> with a non-empty <code>id</code> content attribute.</p>
     </li></ul>
-    <p>To <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-determine-the-value-of-a-named-property">determine the value of a named property</a> <var>name</var> when <dfn data-dfn-type="dfn" data-noexport="" id="the-window-object-is-indexed-for-property-retrieval">the <code>Window</code> object is indexed for property retrieval<a class="self-link" href="browsers.html#the-window-object-is-indexed-for-property-retrieval"></a></dfn>, the user agent must
+    <p>To <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-determine-the-value-of-a-named-property">determine the value of a named property</a> <var>name</var> when <dfn data-dfn-type="dfn" data-noexport="" id="the-window-object-is-indexed-for-property-retrieval">the <code>Window</code> object is indexed for property retrieval<a class="self-link" href="browsers.html#the-window-object-is-indexed-for-property-retrieval"></a></dfn>, the user agent must
   return the value obtained using the following steps:</p>
     <ol>
      <li>
@@ -3125,9 +3125,9 @@ x <span class="k">instanceof</span> Window<span class="p">;</span> <span class="
     browsing context flag</a>.</p>
      </dd><dt>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="sandboxed-plugins-browsing-context-flag">sandboxed plugins browsing context flag</dfn>
      </dt><dd>
-      <p>This flag prevents content from instantiating <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-58">plugins</a>, whether
+      <p>This flag prevents content from instantiating <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-59">plugins</a>, whether
     using <span>the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-40">embed</a></code> element</span>, <span>the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-78">object</a></code> element</span>, <span>the <code><a data-link-type="element" href="obsolete.html#elementdef-applet" id="ref-for-elementdef-applet-6">applet</a></code> element</span>, or through <a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-51">navigation</a> of a <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-65">nested browsing context</a>, unless
-    those <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-59">plugins</a> can be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-6">secured</a>.</p>
+    those <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-60">plugins</a> can be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-6">secured</a>.</p>
      </dd><dt>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="sandboxed into a unique origin|sandboxed origin browsing context flag" data-noexport="" id="sandboxed-into-a-unique-origin">sandboxed origin browsing context flag</dfn>
      </dt><dd>
       <p>This flag <a data-link-type="dfn" href="browsers.html#forces-content-into-a-unique-origin" id="ref-for-forces-content-into-a-unique-origin-1">forces content into a unique origin</a>, thus preventing
@@ -3603,8 +3603,8 @@ onpopstate <span class="o">=</span> <span class="kd">function</span><span class=
     </div>
     <div class="example" id="example-7e4f1b3c">
      <a class="self-link" href="browsers.html#example-7e4f1b3c"></a> Applications might not use the same title for a <a data-link-type="dfn" href="browsers.html#session-history-entry" id="ref-for-session-history-entry-5">session history entry</a> as the
-    value of the document’s <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-25"><code>title</code></a> element at that time. For example, here is a simple
-    page that shows a block in the <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-26"><code>title</code></a> element. Clearly, when navigating backwards to
+    value of the document’s <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-26"><code>title</code></a> element at that time. For example, here is a simple
+    page that shows a block in the <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-27"><code>title</code></a> element. Clearly, when navigating backwards to
     a previous state the user does not go back in time, and therefore it would be inappropriate to
     put the time in the session history title. 
 <pre class="highlight"><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
@@ -4056,7 +4056,7 @@ the step labeled <var>End</var>.</p>
     this algorithm goes from operating immediately in the context of the calling <a data-link-type="dfn" href="webappapis.html#tasks" id="ref-for-tasks-77">task</a> to operating <a data-link-type="dfn" href="infrastructure.html#in-parallel" id="ref-for-in-parallel-28">in parallel</a> independent of the <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-34">event loop</a>, some of the intervening steps need to be able to handle both being run as part of a <a data-link-type="dfn" href="webappapis.html#tasks" id="ref-for-tasks-78">task</a> and
     running <a data-link-type="dfn" href="infrastructure.html#in-parallel" id="ref-for-in-parallel-29">in parallel</a>. The <var>gone async</var> flag is thus used to make these steps
     aware of which mode they are operating in. </p>
-      </li><li><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="the step labeled fragment identifiers" data-noexport="" id="the-step-labeled-fragment-identifiers"></dfn><i>Fragment identifiers</i>: If this is not a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="reload-triggered-navigation">reload-triggered navigation</dfn>: apply the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL parser</a> algorithm to the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> of the new resource and the <a data-link-type="dfn" href="dom.html#the-document-address" id="ref-for-the-document-address-18">address</a> of the <a data-link-type="dfn" href="browsers.html#active-document" id="ref-for-active-document-81">active document</a> of the <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-238">browsing context</a> being navigated; if all the components of the resulting <a data-link-type="dfn" href="https://url.spec.whatwg.org/#url-parsing">parsed
+      </li><li><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="the step labeled fragment identifiers" data-noexport="" id="the-step-labeled-fragment-identifiers"></dfn><i>Fragment identifiers</i>: If this is not a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="reload-triggered-navigation">reload-triggered navigation</dfn>: apply the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL parser</a> algorithm to the <a data-link-type="dfn">absolute URL</a> of the new resource and the <a data-link-type="dfn" href="dom.html#the-document-address" id="ref-for-the-document-address-18">address</a> of the <a data-link-type="dfn" href="browsers.html#active-document" id="ref-for-active-document-81">active document</a> of the <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-238">browsing context</a> being navigated; if all the components of the resulting <a data-link-type="dfn" href="https://url.spec.whatwg.org/#url-parsing">parsed
     URLs</a>, ignoring any <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-fragment">fragment</a> components, are
     identical, and the new resource is to be fetched using <code>GET</code>, and the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL record</a> of the new resource has a <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-fragment">fragment</a> component that is not null (even if it is empty),
     then <a data-link-type="dfn" href="browsers.html#fragment-identifier" id="ref-for-fragment-identifier-3">navigate to that fragment identifier</a> and abort these
@@ -4238,11 +4238,11 @@ the step labeled <var>End</var>.</p>
       once they have completed, abort this <a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-68">navigate</a> algorithm.
         </dd><dt>A type that will use an external application to render the content in the <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-252">browsing
       context</a>
-        </dt><dd>Follow the steps given in the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-60">plugin</a> section, and then,
+        </dt><dd>Follow the steps given in the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-61">plugin</a> section, and then,
       once they have completed, abort this <a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-69">navigate</a> algorithm.
        </dd></dl>
        <p>An <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="explicitly-supported-xml-type">explicitly supported XML type</dfn> is one for which the user agent is configured to
-    use an external application to render the content (either a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-61">plugin</a> rendering
+    use an external application to render the content (either a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-62">plugin</a> rendering
     directly in the <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-253">browsing context</a>, or a separate application), or one for which the
     user agent has dedicated processing rules (e.g., a Web browser with a built-in Atom feed viewer
     would be said to explicitly support the <code>application/atom+xml</code> MIME type).</p>
@@ -4250,7 +4250,7 @@ the step labeled <var>End</var>.</p>
     types</a> <code>application/json</code>, <code>text/json</code>, and any <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-35">MIME
     type</a> whose subtype ends with the five characters "<code>+json</code>".</p>
        <p>An <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="explicitly-supported-json-type">explicitly supported JSON type</dfn> is one for which the user agent is configured to
-    use an external application to render the content (either a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-62">plugin</a> rendering
+    use an external application to render the content (either a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-63">plugin</a> rendering
     directly in the <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-254">browsing context</a>, or a separate application), or one for which the
     user agent has dedicated processing rules.</p>
        <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="set the document’s address|setting the document’s address" data-noexport="" id="set-the-documents-address">Setting the document’s address</dfn>: If there is no <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="override-url">override URL</dfn>, then any <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> created by these steps must have its <a data-link-type="dfn" href="dom.html#the-document-address" id="ref-for-the-document-address-20">address</a> set to the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> that was
@@ -4438,7 +4438,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
      <p>After creating the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object, but potentially before the page has finished
   parsing, the user agent must <a data-link-type="dfn" href="browsers.html#updating-the-session-history-with-the-new-page" id="ref-for-updating-the-session-history-with-the-new-page-4">update the session history with the new page</a>.</p>
      <p>User agents may add content to the <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-43">head</a></code> element of the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>, e.g.,
-  to link to a style sheet, provide a script, give the document a <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-27"><code>title</code></a>, etc.</p>
+  to link to a style sheet, provide a script, give the document a <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-28"><code>title</code></a>, etc.</p>
      <p class="note" role="note"> In particular, if the user agent supports the <code>Format=Flowed</code> feature of RFC3676 then the user agent would need to apply extra styling to cause the text to
   wrap correctly and to handle the quoting feature. <a data-link-type="biblio" href="references.html#biblio-rfc3676">[RFC3676]</a> </p>
      <p>The <a data-link-type="dfn" href="webappapis.html#task-source" id="ref-for-task-source-21">task source</a> for the two tasks mentioned in this section must be the <a data-link-type="dfn" href="webappapis.html#networking-task-source" id="ref-for-networking-task-source-27">networking task source</a>.</p>
@@ -4489,7 +4489,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
      <p>After creating the <code>Document</code> object, but potentially before the page has finished
   fully loading, the user agent must <a data-link-type="dfn" href="browsers.html#updating-the-session-history-with-the-new-page" id="ref-for-updating-the-session-history-with-the-new-page-5">update the session history with the new page</a>.</p>
      <p>User agents may add content to the <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-45">head</a></code> element of the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>, or
-  attributes to the element <var>host element</var>, e.g., to link to a style sheet, provide a script, give the document a <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-28"><code>title</code></a>, make the media <a data-link-type="element-attr" href="semantics-embedded-content.html#element-attrdef-media-autoplay" id="ref-for-element-attrdef-media-autoplay-2">autoplay</a>, etc.</p>
+  attributes to the element <var>host element</var>, e.g., to link to a style sheet, provide a script, give the document a <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-29"><code>title</code></a>, make the media <a data-link-type="element-attr" href="semantics-embedded-content.html#element-attrdef-media-autoplay" id="ref-for-element-attrdef-media-autoplay-2">autoplay</a>, etc.</p>
      <h4 class="heading settled" data-level="6.7.7" id="page-load-processing-model-for-content-that-uses-plugins"><span class="secno">6.7.7. </span><span class="content">Page load processing model for content that uses plugins</span><a class="self-link" href="browsers.html#page-load-processing-model-for-content-that-uses-plugins"></a></h4>
      <p>When a resource that requires an external resource to be rendered is to be loaded in a <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-262">browsing context</a>, the user agent should create a <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object, mark
   it as being an <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-30">HTML document</a> and mark it as being a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="plugin-document">plugin document</dfn>, set its <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-document-content-type">content
@@ -4504,10 +4504,10 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   fully loading, the user agent must <a data-link-type="dfn" href="browsers.html#updating-the-session-history-with-the-new-page" id="ref-for-updating-the-session-history-with-the-new-page-6">update the session history with the new page</a>.</p>
      <p>User agents may add content to the <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-47">head</a></code> element of the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>, or
   attributes to the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-42">embed</a></code> element, e.g., to link to a style sheet,
-  to give the document a <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-29"><code>title</code></a>, etc.</p>
+  to give the document a <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-30"><code>title</code></a>, etc.</p>
      <p class="note" role="note"> If the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>'s <a data-link-type="dfn" href="browsers.html#active-sandboxing-flag-set" id="ref-for-active-sandboxing-flag-set-20">active sandboxing
   flag set</a> has its <a data-link-type="dfn" href="browsers.html#sandboxed-plugins-browsing-context-flag" id="ref-for-sandboxed-plugins-browsing-context-flag-4">sandboxed plugins browsing context flag</a> set, the synthesized <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-43">embed</a></code> element will fail to render the content if
-  the relevant <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-63">plugin</a> cannot be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-7">secured</a>. </p>
+  the relevant <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-64">plugin</a> cannot be <a data-link-type="dfn" href="infrastructure.html#secured" id="ref-for-secured-7">secured</a>. </p>
      <h4 class="heading settled" data-level="6.7.8" id="page-load-processing-model-for-inline-content-that-doesnt-have-a-dom"><span class="secno">6.7.8. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="display the inline content" data-noexport="" id="display-the-inline-content">Page load processing model for inline content that doesn’t have a DOM</dfn></span><a class="self-link" href="browsers.html#page-load-processing-model-for-inline-content-that-doesnt-have-a-dom"></a></h4>
      <p>When the user agent is to display a user agent page inline in a <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-263">browsing context</a>,
   the user agent should create a <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object, mark it as being an <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-31">HTML document</a>, set its <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-document-content-type">content type</a> to "<a href="iana.html#text-html"><code>text/html</code></a>",
@@ -4550,8 +4550,8 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
      <ol>
       <li>Let <var>target</var> be <a data-link-type="dfn" href="browsers.html#an-indicated-part-of-the-document" id="ref-for-an-indicated-part-of-the-document-4">the indicated part of the
     document</a>, as defined below.
-      </li><li>If <var>target</var> is the top of the document, then <a data-link-type="dfn" href="https://drafts.csswg.org/cssom-view-1/#scroll-to-the-beginning-of-the-document">scroll to the beginning of the document</a> for the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>, and abort these steps. <a data-link-type="biblio" href="references.html#biblio-cssom-view">[CSSOM-VIEW]</a>
-      </li><li>Use the <a data-link-type="dfn" href="https://drafts.csswg.org/cssom-view-1/#scroll-an-element-into-view">scroll an element into view</a> algorithm to scroll <var>target</var> into view, with the <var>align to top flag</var> set. <a data-link-type="biblio" href="references.html#biblio-cssom-view">[CSSOM-VIEW]</a>
+      </li><li>If <var>target</var> is the top of the document, then <a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view/#scroll-to-the-beginning-of-the-document">scroll to the beginning of the document</a> for the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>, and abort these steps. <a data-link-type="biblio" href="references.html#biblio-cssom-view">[CSSOM-VIEW]</a>
+      </li><li>Use the <a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view/#scroll-an-element-into-view">scroll an element into view</a> algorithm to scroll <var>target</var> into view, with the <var>align to top flag</var> set. <a data-link-type="biblio" href="references.html#biblio-cssom-view">[CSSOM-VIEW]</a>
       </li><li>Run the <a data-link-type="dfn" href="editing.html#focusing-steps" id="ref-for-focusing-steps-14">focusing steps</a> for that element, with the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>'s <a data-link-type="dfn" href="infrastructure.html#viewport" id="ref-for-viewport-33">viewport</a> as the <i>fallback target</i>.
       </li><li>Move the <a data-link-type="dfn" href="editing.html#sequential-focus-navigation-starting-point" id="ref-for-sequential-focus-navigation-starting-point-5">sequential focus navigation starting point</a> to <var>target</var>. 
      </li></ol>
@@ -4988,7 +4988,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="willful-violation">
    <b><a href="introduction.html#willful-violation">#willful-violation</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-willful-violation-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-willful-violation-1">2.2.2. 의존성</a>
     </li><li><a href="infrastructure.html#ref-for-willful-violation-2">2.2.4. Interactions with XPath and XSLT</a> <a href="infrastructure.html#ref-for-willful-violation-3">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-willful-violation-4">4.10.5.1.5. E-mail state (type=email)</a>
     </li><li><a href="webappapis.html#ref-for-willful-violation-5">7.1.3.7. Integration with the JavaScript job queue</a>
@@ -4999,21 +4999,21 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="conventions-this">
    <b><a href="introduction.html#conventions-this">#conventions-this</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-conventions-this-1">1.7.2. Typographic conventions</a> <a href="introduction.html#ref-for-conventions-this-2">(2)</a>
+    <li><a href="introduction.html#ref-for-conventions-this-1">1.7.2. 표기법</a> <a href="introduction.html#ref-for-conventions-this-2">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-conventions-this">
    <b><a href="introduction.html#elementdef-conventions-this">#elementdef-conventions-this</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-conventions-this-1">1.7.2. Typographic conventions</a>
+    <li><a href="introduction.html#ref-for-elementdef-conventions-this-1">1.7.2. 표기법</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="fingerprinting-vector">
    <b><a href="introduction.html#fingerprinting-vector">#fingerprinting-vector</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-fingerprinting-vector-1">1.8. Privacy concerns</a>
-    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-2">2.1.5. Plugin Content Handlers</a>
-    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-3">2.2.1. Conformance classes</a>
+    <li><a href="introduction.html#ref-for-fingerprinting-vector-1">1.8. 개인 정보 보호</a>
+    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-2">2.1.5. Plugin 콘텐트 처리기</a>
+    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-3">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-4">2.6.2. Processing model</a>
     </li><li><a href="dom.html#ref-for-fingerprinting-vector-5">3.1.2. Resource metadata management</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fingerprinting-vector-6">4.7.14.6. Offsets into the media resource</a>
@@ -5025,14 +5025,14 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="document">
    <b><a href="infrastructure.html#document">#document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-document-1">2.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-document-1">2.1. 전문 용어</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="html-document">
    <b><a href="infrastructure.html#html-document">#html-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-document-1">2.1. Terminology</a>
-    </li><li><a href="infrastructure.html#ref-for-html-document-2">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-html-document-1">2.1. 전문 용어</a>
+    </li><li><a href="infrastructure.html#ref-for-html-document-2">2.2.2. 의존성</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. Interactions with XPath and XSLT</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-4">2.5.1. Terminology</a>
     </li><li><a href="dom.html#ref-for-html-document-5">3.2.5. Global attributes</a>
@@ -5067,8 +5067,8 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="xml-document">
    <b><a href="infrastructure.html#xml-document">#xml-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-xml-document-1">2.1. Terminology</a> <a href="infrastructure.html#ref-for-xml-document-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-xml-document-3">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-xml-document-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-xml-document-2">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-xml-document-3">2.2.2. 의존성</a>
     </li><li><a href="dom.html#ref-for-xml-document-4">3.2.2. Elements in the DOM</a>
     </li><li><a href="dom.html#ref-for-xml-document-5">3.2.5. Global attributes</a> <a href="dom.html#ref-for-xml-document-6">(2)</a>
     </li><li><a href="dom.html#ref-for-xml-document-7">3.2.5.3. 
@@ -5092,7 +5092,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="infrastructure.html#in-parallel">#in-parallel</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-in-parallel-1">1.9.2. 
-  Common pitfalls to avoid when using the scripting APIs </a>
+  API 스크립팅을 사용하는 경우를 막는 일반적인 위험 </a>
     </li><li><a href="infrastructure.html#ref-for-in-parallel-2">2.6.2. Processing model</a>
     </li><li><a href="dom.html#ref-for-in-parallel-3">3.1.4. Loading XML documents</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-in-parallel-4">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-5">(2)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-6">(3)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-7">(4)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-8">(5)</a>
@@ -5140,9 +5140,9 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="infrastructure.html#mime-type">#mime-type</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-mime-type-1">1.6. HTML vs XHTML</a>
-    </li><li><a href="infrastructure.html#ref-for-mime-type-2">2.1.1. Resources</a>
+    </li><li><a href="infrastructure.html#ref-for-mime-type-2">2.1.1. 리소스</a>
     </li><li><a href="infrastructure.html#ref-for-mime-type-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-mime-type-4">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-mime-type-5">2.2.2. Dependencies</a>
+    </li><li><a href="infrastructure.html#ref-for-mime-type-5">2.2.2. 의존성</a>
     </li><li><a href="infrastructure.html#ref-for-mime-type-6">2.6.4. Determining the type of a resource</a>
     </li><li><a href="document-metadata.html#ref-for-mime-type-7">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-mime-type-8">(2)</a> <a href="document-metadata.html#ref-for-mime-type-9">(3)</a> <a href="document-metadata.html#ref-for-mime-type-10">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-mime-type-11">4.2.6. The style element</a>
@@ -5168,7 +5168,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="valid-mime-type">
    <b><a href="infrastructure.html#valid-mime-type">#valid-mime-type</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-valid-mime-type-1">2.1.1. Resources</a>
+    <li><a href="infrastructure.html#ref-for-valid-mime-type-1">2.1.1. 리소스</a>
     </li><li><a href="document-metadata.html#ref-for-valid-mime-type-2">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-valid-mime-type-3">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-valid-mime-type-4">4.2.6. The style element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-valid-mime-type-5">4.7.4. The source element when used with the picture element</a>
@@ -5191,7 +5191,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="html-mime-type">
    <b><a href="infrastructure.html#html-mime-type">#html-mime-type</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-mime-type-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-html-mime-type-1">2.2.1. 적합성 종류</a>
     </li><li><a href="browsers.html#ref-for-html-mime-type-2">6.7.1. Navigating across documents</a>
     </li><li><a href="browsers.html#ref-for-html-mime-type-3">6.7.9. Navigating to a fragment identifier</a>
     </li><li><a href="syntax.html#ref-for-html-mime-type-4">8. The HTML syntax</a>
@@ -5267,7 +5267,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="infrastructure.html#xml-mime-type">#xml-mime-type</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-xml-mime-type-1">1.6. HTML vs XHTML</a>
-    </li><li><a href="infrastructure.html#ref-for-xml-mime-type-2">2.1. Terminology</a> <a href="infrastructure.html#ref-for-xml-mime-type-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-xml-mime-type-2">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-xml-mime-type-3">(2)</a>
     </li><li><a href="dom.html#ref-for-xml-mime-type-4">3.1.4. Loading XML documents</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-xml-mime-type-5">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-xml-mime-type-6">(2)</a>
     </li><li><a href="browsers.html#ref-for-xml-mime-type-7">6.7.1. Navigating across documents</a>
@@ -5278,14 +5278,14 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="document-root-element-of-a-document-object">
    <b><a href="infrastructure.html#document-root-element-of-a-document-object">#document-root-element-of-a-document-object</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-document-root-element-of-a-document-object-1">2.1.3. DOM trees</a>
+    <li><a href="infrastructure.html#ref-for-document-root-element-of-a-document-object-1">2.1.3. DOM 트리</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="root-element">
    <b><a href="infrastructure.html#root-element">#root-element</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-root-element-1">1.9. A quick introduction to HTML</a>
-    </li><li><a href="infrastructure.html#ref-for-root-element-2">2.1.3. DOM trees</a> <a href="infrastructure.html#ref-for-root-element-3">(2)</a> <a href="infrastructure.html#ref-for-root-element-4">(3)</a> <a href="infrastructure.html#ref-for-root-element-5">(4)</a> <a href="infrastructure.html#ref-for-root-element-6">(5)</a> <a href="infrastructure.html#ref-for-root-element-7">(6)</a> <a href="infrastructure.html#ref-for-root-element-8">(7)</a>
+    <li><a href="introduction.html#ref-for-root-element-1">1.9. HTML 간단한 소개</a>
+    </li><li><a href="infrastructure.html#ref-for-root-element-2">2.1.3. DOM 트리</a> <a href="infrastructure.html#ref-for-root-element-3">(2)</a> <a href="infrastructure.html#ref-for-root-element-4">(3)</a> <a href="infrastructure.html#ref-for-root-element-5">(4)</a> <a href="infrastructure.html#ref-for-root-element-6">(5)</a> <a href="infrastructure.html#ref-for-root-element-7">(6)</a> <a href="infrastructure.html#ref-for-root-element-8">(7)</a>
     </li><li><a href="dom.html#ref-for-root-element-9">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-root-element-10">(2)</a> <a href="dom.html#ref-for-root-element-11">(3)</a> <a href="dom.html#ref-for-root-element-12">(4)</a> <a href="dom.html#ref-for-root-element-13">(5)</a> <a href="dom.html#ref-for-root-element-14">(6)</a>
     </li><li><a href="dom.html#ref-for-root-element-15">3.2.5.3. 
   The lang and xml:lang attributes </a>
@@ -5302,7 +5302,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="in-the-document">
    <b><a href="infrastructure.html#in-the-document">#in-the-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-in-the-document-1">2.1.3. DOM trees</a> <a href="infrastructure.html#ref-for-in-the-document-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-in-the-document-1">2.1.3. DOM 트리</a> <a href="infrastructure.html#ref-for-in-the-document-2">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-in-the-document-3">4.2.6. The style element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-in-the-document-4">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-in-the-document-5">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-in-the-document-6">4.7.8. The object element</a>
@@ -5354,7 +5354,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="home-subtree">
    <b><a href="infrastructure.html#home-subtree">#home-subtree</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-home-subtree-1">2.1.3. DOM trees</a>
+    <li><a href="infrastructure.html#ref-for-home-subtree-1">2.1.3. DOM 트리</a>
     </li><li><a href="infrastructure.html#ref-for-home-subtree-2">2.7.1. Reflecting content attributes in IDL attributes</a> <a href="infrastructure.html#ref-for-home-subtree-3">(2)</a>
     </li><li><a href="dom.html#ref-for-home-subtree-4">3.2.5.1. The id attribute</a>
     </li><li><a href="sec-forms.html#ref-for-home-subtree-5">4.10.3. The form element</a>
@@ -5370,7 +5370,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="tree-order">
    <b><a href="infrastructure.html#tree-order">#tree-order</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-tree-order-1">2.1.3. DOM trees</a>
+    <li><a href="infrastructure.html#ref-for-tree-order-1">2.1.3. DOM 트리</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-2">2.4.9. References</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-3">2.5.1. Terminology</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-4">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-tree-order-5">(2)</a>
@@ -5525,7 +5525,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="dispatch">
    <b><a href="infrastructure.html#dispatch">#dispatch</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-dispatch-1">2.1.4. Scripting</a>
+    <li><a href="infrastructure.html#ref-for-dispatch-1">2.1.4. 스크립팅</a>
     </li><li><a href="editing.html#ref-for-dispatch-2">5.3. Activation</a>
     </li><li><a href="editing.html#ref-for-dispatch-3">5.4.4. Processing model</a>
     </li><li><a href="editing.html#ref-for-dispatch-4">5.7.4. The DragEvent interface</a>
@@ -5568,20 +5568,20 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="plugin">
    <b><a href="infrastructure.html#plugin">#plugin</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-plugin-1">1.5.3. Extensibility</a>
-    </li><li><a href="infrastructure.html#ref-for-plugin-2">2.1.5. Plugin Content Handlers</a> <a href="infrastructure.html#ref-for-plugin-3">(2)</a> <a href="infrastructure.html#ref-for-plugin-4">(3)</a> <a href="infrastructure.html#ref-for-plugin-5">(4)</a> <a href="infrastructure.html#ref-for-plugin-6">(5)</a> <a href="infrastructure.html#ref-for-plugin-7">(6)</a> <a href="infrastructure.html#ref-for-plugin-8">(7)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-9">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-plugin-10">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-11">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-12">(4)</a> <a href="semantics-embedded-content.html#ref-for-plugin-13">(5)</a> <a href="semantics-embedded-content.html#ref-for-plugin-14">(6)</a> <a href="semantics-embedded-content.html#ref-for-plugin-15">(7)</a> <a href="semantics-embedded-content.html#ref-for-plugin-16">(8)</a> <a href="semantics-embedded-content.html#ref-for-plugin-17">(9)</a> <a href="semantics-embedded-content.html#ref-for-plugin-18">(10)</a> <a href="semantics-embedded-content.html#ref-for-plugin-19">(11)</a> <a href="semantics-embedded-content.html#ref-for-plugin-20">(12)</a> <a href="semantics-embedded-content.html#ref-for-plugin-21">(13)</a> <a href="semantics-embedded-content.html#ref-for-plugin-22">(14)</a> <a href="semantics-embedded-content.html#ref-for-plugin-23">(15)</a> <a href="semantics-embedded-content.html#ref-for-plugin-24">(16)</a> <a href="semantics-embedded-content.html#ref-for-plugin-25">(17)</a> <a href="semantics-embedded-content.html#ref-for-plugin-26">(18)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-27">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-plugin-28">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-29">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-30">(4)</a> <a href="semantics-embedded-content.html#ref-for-plugin-31">(5)</a> <a href="semantics-embedded-content.html#ref-for-plugin-32">(6)</a> <a href="semantics-embedded-content.html#ref-for-plugin-33">(7)</a> <a href="semantics-embedded-content.html#ref-for-plugin-34">(8)</a> <a href="semantics-embedded-content.html#ref-for-plugin-35">(9)</a> <a href="semantics-embedded-content.html#ref-for-plugin-36">(10)</a> <a href="semantics-embedded-content.html#ref-for-plugin-37">(11)</a> <a href="semantics-embedded-content.html#ref-for-plugin-38">(12)</a> <a href="semantics-embedded-content.html#ref-for-plugin-39">(13)</a> <a href="semantics-embedded-content.html#ref-for-plugin-40">(14)</a> <a href="semantics-embedded-content.html#ref-for-plugin-41">(15)</a> <a href="semantics-embedded-content.html#ref-for-plugin-42">(16)</a> <a href="semantics-embedded-content.html#ref-for-plugin-43">(17)</a> <a href="semantics-embedded-content.html#ref-for-plugin-44">(18)</a> <a href="semantics-embedded-content.html#ref-for-plugin-45">(19)</a> <a href="semantics-embedded-content.html#ref-for-plugin-46">(20)</a> <a href="semantics-embedded-content.html#ref-for-plugin-47">(21)</a> <a href="semantics-embedded-content.html#ref-for-plugin-48">(22)</a> <a href="semantics-embedded-content.html#ref-for-plugin-49">(23)</a> <a href="semantics-embedded-content.html#ref-for-plugin-50">(24)</a> <a href="semantics-embedded-content.html#ref-for-plugin-51">(25)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-52">4.7.9. The param element</a> <a href="semantics-embedded-content.html#ref-for-plugin-53">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-54">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-55">(4)</a>
-    </li><li><a href="sec-forms.html#ref-for-plugin-56">4.10.22.4. Constructing the form data set</a> <a href="sec-forms.html#ref-for-plugin-57">(2)</a>
-    </li><li><a href="browsers.html#ref-for-plugin-58">6.5. Sandboxing</a> <a href="browsers.html#ref-for-plugin-59">(2)</a>
-    </li><li><a href="browsers.html#ref-for-plugin-60">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-plugin-61">(2)</a> <a href="browsers.html#ref-for-plugin-62">(3)</a>
-    </li><li><a href="browsers.html#ref-for-plugin-63">6.7.7. Page load processing model for content that uses plugins</a>
-    </li><li><a href="webappapis.html#ref-for-plugin-64">7.6.1.5. Plugins</a> <a href="webappapis.html#ref-for-plugin-65">(2)</a> <a href="webappapis.html#ref-for-plugin-66">(3)</a> <a href="webappapis.html#ref-for-plugin-67">(4)</a> <a href="webappapis.html#ref-for-plugin-68">(5)</a> <a href="webappapis.html#ref-for-plugin-69">(6)</a> <a href="webappapis.html#ref-for-plugin-70">(7)</a> <a href="webappapis.html#ref-for-plugin-71">(8)</a> <a href="webappapis.html#ref-for-plugin-72">(9)</a> <a href="webappapis.html#ref-for-plugin-73">(10)</a> <a href="webappapis.html#ref-for-plugin-74">(11)</a> <a href="webappapis.html#ref-for-plugin-75">(12)</a> <a href="webappapis.html#ref-for-plugin-76">(13)</a> <a href="webappapis.html#ref-for-plugin-77">(14)</a> <a href="webappapis.html#ref-for-plugin-78">(15)</a> <a href="webappapis.html#ref-for-plugin-79">(16)</a> <a href="webappapis.html#ref-for-plugin-80">(17)</a> <a href="webappapis.html#ref-for-plugin-81">(18)</a> <a href="webappapis.html#ref-for-plugin-82">(19)</a> <a href="webappapis.html#ref-for-plugin-83">(20)</a> <a href="webappapis.html#ref-for-plugin-84">(21)</a> <a href="webappapis.html#ref-for-plugin-85">(22)</a> <a href="webappapis.html#ref-for-plugin-86">(23)</a> <a href="webappapis.html#ref-for-plugin-87">(24)</a> <a href="webappapis.html#ref-for-plugin-88">(25)</a> <a href="webappapis.html#ref-for-plugin-89">(26)</a> <a href="webappapis.html#ref-for-plugin-90">(27)</a>
-    </li><li><a href="rendering.html#ref-for-plugin-91">10.4.1. Embedded content</a>
-    </li><li><a href="obsolete.html#ref-for-plugin-92">11.2. Non-conforming features</a>
-    </li><li><a href="obsolete.html#ref-for-plugin-93">11.3.1. The applet element</a> <a href="obsolete.html#ref-for-plugin-94">(2)</a> <a href="obsolete.html#ref-for-plugin-95">(3)</a> <a href="obsolete.html#ref-for-plugin-96">(4)</a> <a href="obsolete.html#ref-for-plugin-97">(5)</a> <a href="obsolete.html#ref-for-plugin-98">(6)</a>
-    </li><li><a href="fullindex.html#ref-for-plugin-99">Elements</a> <a href="fullindex.html#ref-for-plugin-100">(2)</a>
+    <li><a href="introduction.html#ref-for-plugin-1">1.5.3. 확장성</a>
+    </li><li><a href="infrastructure.html#ref-for-plugin-2">2.1.5. Plugin 콘텐트 처리기</a> <a href="infrastructure.html#ref-for-plugin-3">(2)</a> <a href="infrastructure.html#ref-for-plugin-4">(3)</a> <a href="infrastructure.html#ref-for-plugin-5">(4)</a> <a href="infrastructure.html#ref-for-plugin-6">(5)</a> <a href="infrastructure.html#ref-for-plugin-7">(6)</a> <a href="infrastructure.html#ref-for-plugin-8">(7)</a> <a href="infrastructure.html#ref-for-plugin-9">(8)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-10">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-plugin-11">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-12">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-13">(4)</a> <a href="semantics-embedded-content.html#ref-for-plugin-14">(5)</a> <a href="semantics-embedded-content.html#ref-for-plugin-15">(6)</a> <a href="semantics-embedded-content.html#ref-for-plugin-16">(7)</a> <a href="semantics-embedded-content.html#ref-for-plugin-17">(8)</a> <a href="semantics-embedded-content.html#ref-for-plugin-18">(9)</a> <a href="semantics-embedded-content.html#ref-for-plugin-19">(10)</a> <a href="semantics-embedded-content.html#ref-for-plugin-20">(11)</a> <a href="semantics-embedded-content.html#ref-for-plugin-21">(12)</a> <a href="semantics-embedded-content.html#ref-for-plugin-22">(13)</a> <a href="semantics-embedded-content.html#ref-for-plugin-23">(14)</a> <a href="semantics-embedded-content.html#ref-for-plugin-24">(15)</a> <a href="semantics-embedded-content.html#ref-for-plugin-25">(16)</a> <a href="semantics-embedded-content.html#ref-for-plugin-26">(17)</a> <a href="semantics-embedded-content.html#ref-for-plugin-27">(18)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-28">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-plugin-29">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-30">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-31">(4)</a> <a href="semantics-embedded-content.html#ref-for-plugin-32">(5)</a> <a href="semantics-embedded-content.html#ref-for-plugin-33">(6)</a> <a href="semantics-embedded-content.html#ref-for-plugin-34">(7)</a> <a href="semantics-embedded-content.html#ref-for-plugin-35">(8)</a> <a href="semantics-embedded-content.html#ref-for-plugin-36">(9)</a> <a href="semantics-embedded-content.html#ref-for-plugin-37">(10)</a> <a href="semantics-embedded-content.html#ref-for-plugin-38">(11)</a> <a href="semantics-embedded-content.html#ref-for-plugin-39">(12)</a> <a href="semantics-embedded-content.html#ref-for-plugin-40">(13)</a> <a href="semantics-embedded-content.html#ref-for-plugin-41">(14)</a> <a href="semantics-embedded-content.html#ref-for-plugin-42">(15)</a> <a href="semantics-embedded-content.html#ref-for-plugin-43">(16)</a> <a href="semantics-embedded-content.html#ref-for-plugin-44">(17)</a> <a href="semantics-embedded-content.html#ref-for-plugin-45">(18)</a> <a href="semantics-embedded-content.html#ref-for-plugin-46">(19)</a> <a href="semantics-embedded-content.html#ref-for-plugin-47">(20)</a> <a href="semantics-embedded-content.html#ref-for-plugin-48">(21)</a> <a href="semantics-embedded-content.html#ref-for-plugin-49">(22)</a> <a href="semantics-embedded-content.html#ref-for-plugin-50">(23)</a> <a href="semantics-embedded-content.html#ref-for-plugin-51">(24)</a> <a href="semantics-embedded-content.html#ref-for-plugin-52">(25)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-plugin-53">4.7.9. The param element</a> <a href="semantics-embedded-content.html#ref-for-plugin-54">(2)</a> <a href="semantics-embedded-content.html#ref-for-plugin-55">(3)</a> <a href="semantics-embedded-content.html#ref-for-plugin-56">(4)</a>
+    </li><li><a href="sec-forms.html#ref-for-plugin-57">4.10.22.4. Constructing the form data set</a> <a href="sec-forms.html#ref-for-plugin-58">(2)</a>
+    </li><li><a href="browsers.html#ref-for-plugin-59">6.5. Sandboxing</a> <a href="browsers.html#ref-for-plugin-60">(2)</a>
+    </li><li><a href="browsers.html#ref-for-plugin-61">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-plugin-62">(2)</a> <a href="browsers.html#ref-for-plugin-63">(3)</a>
+    </li><li><a href="browsers.html#ref-for-plugin-64">6.7.7. Page load processing model for content that uses plugins</a>
+    </li><li><a href="webappapis.html#ref-for-plugin-65">7.6.1.5. Plugins</a> <a href="webappapis.html#ref-for-plugin-66">(2)</a> <a href="webappapis.html#ref-for-plugin-67">(3)</a> <a href="webappapis.html#ref-for-plugin-68">(4)</a> <a href="webappapis.html#ref-for-plugin-69">(5)</a> <a href="webappapis.html#ref-for-plugin-70">(6)</a> <a href="webappapis.html#ref-for-plugin-71">(7)</a> <a href="webappapis.html#ref-for-plugin-72">(8)</a> <a href="webappapis.html#ref-for-plugin-73">(9)</a> <a href="webappapis.html#ref-for-plugin-74">(10)</a> <a href="webappapis.html#ref-for-plugin-75">(11)</a> <a href="webappapis.html#ref-for-plugin-76">(12)</a> <a href="webappapis.html#ref-for-plugin-77">(13)</a> <a href="webappapis.html#ref-for-plugin-78">(14)</a> <a href="webappapis.html#ref-for-plugin-79">(15)</a> <a href="webappapis.html#ref-for-plugin-80">(16)</a> <a href="webappapis.html#ref-for-plugin-81">(17)</a> <a href="webappapis.html#ref-for-plugin-82">(18)</a> <a href="webappapis.html#ref-for-plugin-83">(19)</a> <a href="webappapis.html#ref-for-plugin-84">(20)</a> <a href="webappapis.html#ref-for-plugin-85">(21)</a> <a href="webappapis.html#ref-for-plugin-86">(22)</a> <a href="webappapis.html#ref-for-plugin-87">(23)</a> <a href="webappapis.html#ref-for-plugin-88">(24)</a> <a href="webappapis.html#ref-for-plugin-89">(25)</a> <a href="webappapis.html#ref-for-plugin-90">(26)</a> <a href="webappapis.html#ref-for-plugin-91">(27)</a>
+    </li><li><a href="rendering.html#ref-for-plugin-92">10.4.1. Embedded content</a>
+    </li><li><a href="obsolete.html#ref-for-plugin-93">11.2. Non-conforming features</a>
+    </li><li><a href="obsolete.html#ref-for-plugin-94">11.3.1. The applet element</a> <a href="obsolete.html#ref-for-plugin-95">(2)</a> <a href="obsolete.html#ref-for-plugin-96">(3)</a> <a href="obsolete.html#ref-for-plugin-97">(4)</a> <a href="obsolete.html#ref-for-plugin-98">(5)</a> <a href="obsolete.html#ref-for-plugin-99">(6)</a>
+    </li><li><a href="fullindex.html#ref-for-plugin-100">Elements</a> <a href="fullindex.html#ref-for-plugin-101">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="secured">
@@ -5596,7 +5596,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="character-encoding">
    <b><a href="infrastructure.html#character-encoding">#character-encoding</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-character-encoding-1">2.2.2. Dependencies</a> <a href="infrastructure.html#ref-for-character-encoding-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-character-encoding-1">2.2.2. 의존성</a> <a href="infrastructure.html#ref-for-character-encoding-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-character-encoding-3">2.5.2. Parsing URLs</a>
     </li><li><a href="document-metadata.html#ref-for-character-encoding-4">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-character-encoding-5">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-character-encoding-6">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-character-encoding-7">(2)</a> <a href="document-metadata.html#ref-for-character-encoding-8">(3)</a>
@@ -5620,7 +5620,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="utf-16-encoding">
    <b><a href="infrastructure.html#utf-16-encoding">#utf-16-encoding</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-16-encoding-1">2.1.6. Character encodings</a> <a href="infrastructure.html#ref-for-utf-16-encoding-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-utf-16-encoding-1">2.1.6. 문자 인코딩</a> <a href="infrastructure.html#ref-for-utf-16-encoding-2">(2)</a>
     </li><li><a href="syntax.html#ref-for-utf-16-encoding-3">8.2.2.2. Determining the character encoding</a>
     </li><li><a href="syntax.html#ref-for-utf-16-encoding-4">8.2.2.4. Changing the encoding while parsing</a> <a href="syntax.html#ref-for-utf-16-encoding-5">(2)</a>
    </li></ul>
@@ -5628,7 +5628,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="ascii-compatible-encoding">
    <b><a href="infrastructure.html#ascii-compatible-encoding">#ascii-compatible-encoding</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-ascii-compatible-encoding-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-ascii-compatible-encoding-1">2.1.6. 문자 인코딩</a>
     </li><li><a href="document-metadata.html#ref-for-ascii-compatible-encoding-2">4.2.5.5. Specifying the document’s character encoding</a> <a href="document-metadata.html#ref-for-ascii-compatible-encoding-3">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-ascii-compatible-encoding-4">4.10.3. The form element</a>
     </li><li><a href="sec-forms.html#ref-for-ascii-compatible-encoding-5">4.10.22.7. Multipart form data</a>
@@ -5639,13 +5639,13 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="code-unit">
    <b><a href="infrastructure.html#code-unit">#code-unit</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-code-unit-1">2.1.6. Character encodings</a> <a href="infrastructure.html#ref-for-code-unit-2">(2)</a> <a href="infrastructure.html#ref-for-code-unit-3">(3)</a>
+    <li><a href="infrastructure.html#ref-for-code-unit-1">2.1.6. 문자 인코딩</a> <a href="infrastructure.html#ref-for-code-unit-2">(2)</a> <a href="infrastructure.html#ref-for-code-unit-3">(3)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="unicode-code-point">
    <b><a href="infrastructure.html#unicode-code-point">#unicode-code-point</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-unicode-code-point-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-unicode-code-point-1">2.1.6. 문자 인코딩</a>
     </li><li><a href="syntax.html#ref-for-unicode-code-point-2">8.2.1. Overview of the parsing model</a>
    </li></ul>
   </aside>
@@ -5658,7 +5658,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="unicode-character">
    <b><a href="infrastructure.html#unicode-character">#unicode-character</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-unicode-character-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-unicode-character-1">2.1.6. 문자 인코딩</a>
     </li><li><a href="dom.html#ref-for-unicode-character-2">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="syntax.html#ref-for-unicode-character-3">8.2.2.5. Preprocessing the input stream</a>
    </li></ul>
@@ -5675,9 +5675,9 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="conforming-document">
    <b><a href="infrastructure.html#conforming-document">#conforming-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-conforming-document-1">1.10. Conformance requirements for authors</a>
-    </li><li><a href="infrastructure.html#ref-for-conforming-document-2">2.2.1. Conformance classes</a>
-    </li><li><a href="infrastructure.html#ref-for-conforming-document-3">2.2.3. Extensibility</a> <a href="infrastructure.html#ref-for-conforming-document-4">(2)</a> <a href="infrastructure.html#ref-for-conforming-document-5">(3)</a> <a href="infrastructure.html#ref-for-conforming-document-6">(4)</a> <a href="infrastructure.html#ref-for-conforming-document-7">(5)</a> <a href="infrastructure.html#ref-for-conforming-document-8">(6)</a>
+    <li><a href="introduction.html#ref-for-conforming-document-1">1.10. 작성자를 위한 적합성 요구사항</a>
+    </li><li><a href="infrastructure.html#ref-for-conforming-document-2">2.2.1. 적합성 종류</a>
+    </li><li><a href="infrastructure.html#ref-for-conforming-document-3">2.2.3. 확장성</a> <a href="infrastructure.html#ref-for-conforming-document-4">(2)</a> <a href="infrastructure.html#ref-for-conforming-document-5">(3)</a> <a href="infrastructure.html#ref-for-conforming-document-6">(4)</a> <a href="infrastructure.html#ref-for-conforming-document-7">(5)</a> <a href="infrastructure.html#ref-for-conforming-document-8">(6)</a>
     </li><li><a href="sections.html#ref-for-conforming-document-9">4.3.1. The body element</a>
     </li><li><a href="semantics-scripting.html#ref-for-conforming-document-10">4.12.2. The noscript element</a>
    </li></ul>
@@ -5685,7 +5685,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="rendering-support-the-suggested-default-rendering">
    <b><a href="infrastructure.html#rendering-support-the-suggested-default-rendering">#rendering-support-the-suggested-default-rendering</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-1">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-rendering-support-the-suggested-default-rendering-2">(2)</a>
     </li><li><a href="dom.html#ref-for-rendering-support-the-suggested-default-rendering-3">3.2.6.2. User agent conformance criteria</a>
     </li><li><a href="rendering.html#ref-for-rendering-support-the-suggested-default-rendering-4">10. Rendering</a>
    </li></ul>
@@ -5693,7 +5693,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="lack-scripting-support">
    <b><a href="infrastructure.html#lack-scripting-support">#lack-scripting-support</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-lack-scripting-support-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-lack-scripting-support-1">2.2.1. 적합성 종류</a>
     </li><li><a href="syntax.html#ref-for-lack-scripting-support-2">8.2.1. Overview of the parsing model</a>
    </li></ul>
   </aside>
@@ -5722,7 +5722,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="utf-8-decode">
    <b><a href="infrastructure.html#utf-8-decode">#utf-8-decode</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-8-decode-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-utf-8-decode-1">2.2.2. 의존성</a>
     </li><li><a href="browsers.html#ref-for-utf-8-decode-2">6.7.1. Navigating across documents</a>
     </li><li><a href="webappapis.html#ref-for-utf-8-decode-3">7.1.3.2. Fetching scripts</a>
     </li><li><a href="obsolete.html#ref-for-utf-8-decode-4">11.3.4.1. Parsing cache manifests</a> <a href="obsolete.html#ref-for-utf-8-decode-5">(2)</a>
@@ -5731,7 +5731,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="utf-8-decode-without-bom">
    <b><a href="infrastructure.html#utf-8-decode-without-bom">#utf-8-decode-without-bom</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-8-decode-without-bom-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-utf-8-decode-without-bom-1">2.2.2. 의존성</a>
     </li><li><a href="dom.html#ref-for-utf-8-decode-without-bom-2">3.1.2. Resource metadata management</a>
    </li></ul>
   </aside>
@@ -5744,7 +5744,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="schemedef-about">
    <b><a href="infrastructure.html#schemedef-about">#schemedef-about</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-schemedef-about-1">2.2.2. Dependencies</a> <a href="infrastructure.html#ref-for-schemedef-about-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-schemedef-about-1">2.2.2. 의존성</a> <a href="infrastructure.html#ref-for-schemedef-about-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-schemedef-about-3">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-schemedef-about-4">(2)</a>
     </li><li><a href="browsers.html#ref-for-schemedef-about-5">6.1. Browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-schemedef-about-6">6.3. The Window object</a>
@@ -5755,14 +5755,14 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="schemedef-blob">
    <b><a href="infrastructure.html#schemedef-blob">#schemedef-blob</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-schemedef-blob-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-schemedef-blob-1">2.2.2. 의존성</a>
     </li><li><a href="webappapis.html#ref-for-schemedef-blob-2">7.1.3.4. Calling scripts</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="schemedef-data-url">
    <b><a href="infrastructure.html#schemedef-data-url">#schemedef-data-url</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-schemedef-data-url-1">2.1.1. Resources</a> <a href="infrastructure.html#ref-for-schemedef-data-url-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-schemedef-data-url-1">2.1.1. 리소스</a> <a href="infrastructure.html#ref-for-schemedef-data-url-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-schemedef-data-url-3">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-schemedef-data-url-4">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-schemedef-data-url-5">4.10.22.3. Form submission algorithm</a>
     </li><li><a href="semantics-scripting.html#ref-for-schemedef-data-url-6">4.12.4. The canvas element</a> <a href="semantics-scripting.html#ref-for-schemedef-data-url-7">(2)</a> <a href="semantics-scripting.html#ref-for-schemedef-data-url-8">(3)</a>
@@ -5778,7 +5778,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="throw">
    <b><a href="infrastructure.html#throw">#throw</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-throw-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-throw-1">2.2.2. 의존성</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="date-object">
@@ -5818,7 +5818,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="quirks-mode">
    <b><a href="infrastructure.html#quirks-mode">#quirks-mode</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-quirks-mode-1">1.10.2. Syntax errors</a>
+    <li><a href="introduction.html#ref-for-quirks-mode-1">1.10.2. 구문 오류</a>
     </li><li><a href="links.html#ref-for-quirks-mode-2">4.8.6.10. Link type "stylesheet"</a>
     </li><li><a href="tabular-data.html#ref-for-quirks-mode-3">4.9.12.1. Forming a table</a>
     </li><li><a href="matching-html-elements-using-selectors.html#ref-for-quirks-mode-4">4.15.1. Case-sensitivity</a>
@@ -5838,14 +5838,6 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
     <li><a href="matching-html-elements-using-selectors.html#ref-for-limited-quirks-mode-1">4.15.1. Case-sensitivity</a>
     </li><li><a href="syntax.html#ref-for-limited-quirks-mode-2">8.2.5.4.1. The "initial" insertion mode</a>
     </li><li><a href="syntax.html#ref-for-limited-quirks-mode-3">8.4. Parsing HTML fragments</a> <a href="syntax.html#ref-for-limited-quirks-mode-4">(2)</a>
-   </li></ul>
-  </aside>
-  <aside class="dfn-panel" data-for="no-quirks-mode">
-   <b><a href="infrastructure.html#no-quirks-mode">#no-quirks-mode</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="introduction.html#ref-for-no-quirks-mode-1">1.10.2. Syntax errors</a>
-    </li><li><a href="matching-html-elements-using-selectors.html#ref-for-no-quirks-mode-2">4.15.1. Case-sensitivity</a>
-    </li><li><a href="syntax.html#ref-for-no-quirks-mode-3">8.4. Parsing HTML fragments</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="base-url-change-steps">
@@ -5914,7 +5906,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="intrinsic-dimensions">
    <b><a href="infrastructure.html#intrinsic-dimensions">#intrinsic-dimensions</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-intrinsic-dimensions-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-intrinsic-dimensions-1">2.2.2. 의존성</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-2">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-5">(4)</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-6">(5)</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-7">(6)</a> <a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-8">(7)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-intrinsic-dimensions-9">4.7.10. The video element</a>
     </li><li><a href="semantics-scripting.html#ref-for-intrinsic-dimensions-10">4.12.4. The canvas element</a>
@@ -6034,7 +6026,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="applicable-specification">
    <b><a href="infrastructure.html#applicable-specification">#applicable-specification</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-applicable-specification-1">2.2.3. Extensibility</a>
+    <li><a href="infrastructure.html#ref-for-applicable-specification-1">2.2.3. 확장성</a>
     </li><li><a href="dom.html#ref-for-applicable-specification-2">3.2.2. Elements in the DOM</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-applicable-specification-3">4.7.18. MathML</a>
     </li><li><a href="browsers.html#ref-for-applicable-specification-4">6.3.4. Garbage collection and browsing contexts</a>
@@ -6145,7 +6137,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="space-characters">
    <b><a href="infrastructure.html#space-characters">#space-characters</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-space-characters-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-space-characters-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="infrastructure.html#ref-for-space-characters-2">2.4.1. Common parser idioms</a> <a href="infrastructure.html#ref-for-space-characters-3">(2)</a> <a href="infrastructure.html#ref-for-space-characters-4">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-space-characters-5">2.4.4.6. Lists of floating-point numbers</a> <a href="infrastructure.html#ref-for-space-characters-6">(2)</a> <a href="infrastructure.html#ref-for-space-characters-7">(3)</a> <a href="infrastructure.html#ref-for-space-characters-8">(4)</a> <a href="infrastructure.html#ref-for-space-characters-9">(5)</a>
     </li><li><a href="infrastructure.html#ref-for-space-characters-10">2.4.4.7. Lists of dimensions</a> <a href="infrastructure.html#ref-for-space-characters-11">(2)</a>
@@ -6190,7 +6182,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="control-characters">
    <b><a href="infrastructure.html#control-characters">#control-characters</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-control-characters-1">2.1.3. DOM trees</a>
+    <li><a href="infrastructure.html#ref-for-control-characters-1">2.1.3. DOM 트리</a>
     </li><li><a href="dom.html#ref-for-control-characters-2">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="syntax.html#ref-for-control-characters-3">8.1.2.3. Attributes</a>
     </li><li><a href="syntax.html#ref-for-control-characters-4">8.1.4. Character references</a>
@@ -6439,7 +6431,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="valid-integer">
    <b><a href="infrastructure.html#valid-integer">#valid-integer</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-valid-integer-1">1.7.1. How to read this specification</a> <a href="introduction.html#ref-for-valid-integer-2">(2)</a>
+    <li><a href="introduction.html#ref-for-valid-integer-1">1.7.1. 이 명세를 읽는 방법</a> <a href="introduction.html#ref-for-valid-integer-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-valid-integer-3">2.4.4.1. Signed integers</a> <a href="infrastructure.html#ref-for-valid-integer-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-valid-integer-5">2.7.1. Reflecting content attributes in IDL attributes</a>
     </li><li><a href="grouping-content.html#ref-for-valid-integer-6">4.4.5. The ol element</a>
@@ -6454,7 +6446,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="parse-token-as-an-integer">
    <b><a href="infrastructure.html#parse-token-as-an-integer">#parse-token-as-an-integer</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-parse-token-as-an-integer-1">1.7.1. How to read this specification</a>
+    <li><a href="introduction.html#ref-for-parse-token-as-an-integer-1">1.7.1. 이 명세를 읽는 방법</a>
     </li><li><a href="infrastructure.html#ref-for-parse-token-as-an-integer-2">2.4.4.2. Non-negative integers</a>
     </li><li><a href="infrastructure.html#ref-for-parse-token-as-an-integer-3">2.7.1. Reflecting content attributes in IDL attributes</a>
     </li><li><a href="grouping-content.html#ref-for-parse-token-as-an-integer-4">4.4.5. The ol element</a>
@@ -7115,7 +7107,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="reparsed">
    <b><a href="infrastructure.html#reparsed">#reparsed</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-reparsed-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-reparsed-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="infrastructure.html#ref-for-reparsed-2">2.5.3. Dynamic changes to base URLs</a> <a href="infrastructure.html#ref-for-reparsed-3">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-reparsed-4">2.7.1. Reflecting content attributes in IDL attributes</a> <a href="infrastructure.html#ref-for-reparsed-5">(2)</a>
     </li><li><a href="dom.html#ref-for-reparsed-6">3.1.4. Loading XML documents</a>
@@ -7311,7 +7303,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="reflection">
    <b><a href="infrastructure.html#reflection">#reflection</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-reflection-1">2.2.3. Extensibility</a>
+    <li><a href="infrastructure.html#ref-for-reflection-1">2.2.3. 확장성</a>
     </li><li><a href="infrastructure.html#ref-for-reflection-2">2.6.6. CORS settings attributes</a>
     </li><li><a href="dom.html#ref-for-reflection-3">3.2.5.2. The title attribute</a>
     </li><li><a href="dom.html#ref-for-reflection-4">3.2.5.3. 
@@ -7551,9 +7543,9 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="html-namespace">
    <b><a href="infrastructure.html#html-namespace">#html-namespace</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-namespace-1">2.1. Terminology</a> <a href="infrastructure.html#ref-for-html-namespace-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-html-namespace-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-html-namespace-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-html-namespace-4">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. Conformance classes</a>
+    </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. Interactions with XPath and XSLT</a>
     </li><li><a href="dom.html#ref-for-html-namespace-7">3.1.3. DOM tree accessors</a>
     </li><li><a href="dom.html#ref-for-html-namespace-8">3.2.4.2.6. Embedded content</a>
@@ -7615,7 +7607,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="xml-namespace">
    <b><a href="infrastructure.html#xml-namespace">#xml-namespace</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-xml-namespace-1">2.2.2. Dependencies</a>
+    <li><a href="infrastructure.html#ref-for-xml-namespace-1">2.2.2. 의존성</a>
     </li><li><a href="dom.html#ref-for-xml-namespace-2">3.2.5. Global attributes</a>
     </li><li><a href="dom.html#ref-for-xml-namespace-3">3.2.5.3. 
   The lang and xml:lang attributes </a> <a href="dom.html#ref-for-xml-namespace-4">(2)</a> <a href="dom.html#ref-for-xml-namespace-5">(3)</a> <a href="dom.html#ref-for-xml-namespace-6">(4)</a> <a href="dom.html#ref-for-xml-namespace-7">(5)</a> <a href="dom.html#ref-for-xml-namespace-8">(6)</a> <a href="dom.html#ref-for-xml-namespace-9">(7)</a> <a href="dom.html#ref-for-xml-namespace-10">(8)</a>
@@ -8672,7 +8664,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="content-attribute">
    <b><a href="dom.html#content-attribute">#content-attribute</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-content-attribute-1">2.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-content-attribute-1">2.1. 전문 용어</a>
     </li><li><a href="semantics.html#ref-for-content-attribute-2">4.1.1. The html element</a>
     </li><li><a href="document-metadata.html#ref-for-content-attribute-3">4.2.1. The head element</a>
     </li><li><a href="document-metadata.html#ref-for-content-attribute-4">4.2.2. The title element</a>
@@ -9120,7 +9112,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="dom.html#phrasing-content">#phrasing-content</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-phrasing-content-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="dom.html#ref-for-phrasing-content-2">3.2.3. Element definitions</a> <a href="dom.html#ref-for-phrasing-content-3">(2)</a> <a href="dom.html#ref-for-phrasing-content-4">(3)</a> <a href="dom.html#ref-for-phrasing-content-5">(4)</a> <a href="dom.html#ref-for-phrasing-content-6">(5)</a>
     </li><li><a href="dom.html#ref-for-phrasing-content-7">3.2.4.2.5. Phrasing content</a> <a href="dom.html#ref-for-phrasing-content-8">(2)</a>
     </li><li><a href="dom.html#ref-for-phrasing-content-9">3.2.4.2.8. Palpable content</a>
@@ -9263,7 +9255,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="dom.html#interactive-content">#interactive-content</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-interactive-content-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="dom.html#ref-for-interactive-content-2">3.2.4.2.7. Interactive content</a>
     </li><li><a href="dom.html#ref-for-interactive-content-3">3.2.5.2. The title attribute</a>
     </li><li><a href="textlevel-semantics.html#ref-for-interactive-content-4">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-interactive-content-5">(2)</a>
@@ -9403,7 +9395,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="dom.html#paragraph">#paragraph</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-paragraph-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="dom.html#ref-for-paragraph-2">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-paragraph-3">3.2.4.4. Paragraphs</a> <a href="dom.html#ref-for-paragraph-4">(2)</a> <a href="dom.html#ref-for-paragraph-5">(3)</a> <a href="dom.html#ref-for-paragraph-6">(4)</a>
     </li><li><a href="grouping-content.html#ref-for-paragraph-7">4.4.1. The p element</a> <a href="grouping-content.html#ref-for-paragraph-8">(2)</a>
@@ -9536,7 +9528,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="dom.html#element-attrdef-global-id">#element-attrdef-global-id</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-global-id-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="infrastructure.html#ref-for-element-attrdef-global-id-2">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-element-attrdef-global-id-3">(2)</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-global-id-4">3.2.5. Global attributes</a>
     </li><li><a href="tabular-data.html#ref-for-element-attrdef-global-id-5">4.9.11. Attributes common to td and th elements</a> <a href="tabular-data.html#ref-for-element-attrdef-global-id-6">(2)</a>
@@ -9562,7 +9554,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="dom.html#element-attrdef-global-lang">#element-attrdef-global-lang</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-global-lang-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="dom.html#ref-for-element-attrdef-global-lang-2">3.2.1. Semantics</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-global-lang-3">3.2.5. Global attributes</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-global-lang-4">3.2.5.3. 
@@ -9585,7 +9577,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="dom.html#element-attrdef-xml-lang">#element-attrdef-xml-lang</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-xml-lang-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="dom.html#ref-for-element-attrdef-xml-lang-2">3.2.5.3. 
   The lang and xml:lang attributes </a> <a href="dom.html#ref-for-element-attrdef-xml-lang-3">(2)</a> <a href="dom.html#ref-for-element-attrdef-xml-lang-4">(3)</a>
     </li><li><a href="syntax.html#ref-for-element-attrdef-xml-lang-5">8.1.2.3. Attributes</a>
@@ -9723,14 +9715,14 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="element-attrdef-global-class">
    <b><a href="dom.html#element-attrdef-global-class">#element-attrdef-global-class</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-element-attrdef-global-class-1">1.5.3. Extensibility</a>
+    <li><a href="introduction.html#ref-for-element-attrdef-global-class-1">1.5.3. 확장성</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="element-attrdef-global-style">
    <b><a href="dom.html#element-attrdef-global-style">#element-attrdef-global-style</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-element-attrdef-global-style-1">1.10.1. Presentational markup</a> <a href="introduction.html#ref-for-element-attrdef-global-style-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-element-attrdef-global-style-3">2.2.1. Conformance classes</a>
+    <li><a href="introduction.html#ref-for-element-attrdef-global-style-1">1.10.1. 표현 마크업</a> <a href="introduction.html#ref-for-element-attrdef-global-style-2">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-element-attrdef-global-style-3">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-global-style-4">3.2.5.8. The style attribute</a> <a href="dom.html#ref-for-element-attrdef-global-style-5">(2)</a> <a href="dom.html#ref-for-element-attrdef-global-style-6">(3)</a>
     </li><li><a href="rendering.html#ref-for-element-attrdef-global-style-7">10.4.4. Image maps</a>
    </li></ul>
@@ -9745,7 +9737,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="element-attrdef-global-data">
    <b><a href="dom.html#element-attrdef-global-data">#element-attrdef-global-data</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-element-attrdef-global-data-1">1.5.3. Extensibility</a>
+    <li><a href="introduction.html#ref-for-element-attrdef-global-data-1">1.5.3. 확장성</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="bidirectional-algorithm-formatting-character-ranges">
@@ -9946,7 +9938,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-html">
    <b><a href="semantics.html#elementdef-html">#elementdef-html</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-html-1">1.9. A quick introduction to HTML</a> <a href="introduction.html#ref-for-elementdef-html-2">(2)</a>
+    <li><a href="introduction.html#ref-for-elementdef-html-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-html-2">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-html-3">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-html-4">(2)</a> <a href="dom.html#ref-for-elementdef-html-5">(3)</a> <a href="dom.html#ref-for-elementdef-html-6">(4)</a>
     </li><li><a href="dom.html#ref-for-elementdef-html-7">3.2.5.3. 
   The lang and xml:lang attributes </a>
@@ -9996,7 +9988,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-head">
    <b><a href="document-metadata.html#elementdef-head">#elementdef-head</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-head-1">1.9. A quick introduction to HTML</a> <a href="introduction.html#ref-for-elementdef-head-2">(2)</a> <a href="introduction.html#ref-for-elementdef-head-3">(3)</a> <a href="introduction.html#ref-for-elementdef-head-4">(4)</a>
+    <li><a href="introduction.html#ref-for-elementdef-head-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-head-2">(2)</a> <a href="introduction.html#ref-for-elementdef-head-3">(3)</a> <a href="introduction.html#ref-for-elementdef-head-4">(4)</a>
     </li><li><a href="dom.html#ref-for-elementdef-head-5">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-head-6">(2)</a> <a href="dom.html#ref-for-elementdef-head-7">(3)</a> <a href="dom.html#ref-for-elementdef-head-8">(4)</a> <a href="dom.html#ref-for-elementdef-head-9">(5)</a> <a href="dom.html#ref-for-elementdef-head-10">(6)</a> <a href="dom.html#ref-for-elementdef-head-11">(7)</a>
     </li><li><a href="semantics.html#ref-for-elementdef-head-12">4.1.1. The html element</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-head-13">4.2.1. The head element</a> <a href="document-metadata.html#ref-for-elementdef-head-14">(2)</a> <a href="document-metadata.html#ref-for-elementdef-head-15">(3)</a> <a href="document-metadata.html#ref-for-elementdef-head-16">(4)</a> <a href="document-metadata.html#ref-for-elementdef-head-17">(5)</a> <a href="document-metadata.html#ref-for-elementdef-head-18">(6)</a> <a href="document-metadata.html#ref-for-elementdef-head-19">(7)</a>
@@ -10046,23 +10038,23 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-title">
    <b><a href="document-metadata.html#elementdef-title">#elementdef-title</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-title-1">1.9. A quick introduction to HTML</a> <a href="introduction.html#ref-for-elementdef-title-2">(2)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-title-3">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-title-4">(2)</a> <a href="dom.html#ref-for-elementdef-title-5">(3)</a> <a href="dom.html#ref-for-elementdef-title-6">(4)</a> <a href="dom.html#ref-for-elementdef-title-7">(5)</a> <a href="dom.html#ref-for-elementdef-title-8">(6)</a> <a href="dom.html#ref-for-elementdef-title-9">(7)</a> <a href="dom.html#ref-for-elementdef-title-10">(8)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-title-11">3.2.4.2.1. Metadata content</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-title-12">4.2.1. The head element</a> <a href="document-metadata.html#ref-for-elementdef-title-13">(2)</a> <a href="document-metadata.html#ref-for-elementdef-title-14">(3)</a> <a href="document-metadata.html#ref-for-elementdef-title-15">(4)</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-title-16">4.2.2. The title element</a> <a href="document-metadata.html#ref-for-elementdef-title-17">(2)</a> <a href="document-metadata.html#ref-for-elementdef-title-18">(3)</a> <a href="document-metadata.html#ref-for-elementdef-title-19">(4)</a> <a href="document-metadata.html#ref-for-elementdef-title-20">(5)</a> <a href="document-metadata.html#ref-for-elementdef-title-21">(6)</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-title-22">4.2.5. The meta element</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-title-23">4.2.5.1. Standard metadata names</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-title-24">4.7.6. The iframe element</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-title-25">6.6.2. The History interface</a> <a href="browsers.html#ref-for-elementdef-title-26">(2)</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-title-27">6.7.4. Page load processing model for text files</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-title-28">6.7.6. Page load processing model for media</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-title-29">6.7.7. Page load processing model for content that uses plugins</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-title-30">8.1.2. Elements</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-title-31">8.2.3.2. The stack of open elements</a> <a href="syntax.html#ref-for-elementdef-title-32">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-title-33">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-title-34">Element content categories</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-title-35">Element Interfaces</a>
+    <li><a href="introduction.html#ref-for-elementdef-title-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-title-2">(2)</a> <a href="introduction.html#ref-for-elementdef-title-3">(3)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-title-4">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-title-5">(2)</a> <a href="dom.html#ref-for-elementdef-title-6">(3)</a> <a href="dom.html#ref-for-elementdef-title-7">(4)</a> <a href="dom.html#ref-for-elementdef-title-8">(5)</a> <a href="dom.html#ref-for-elementdef-title-9">(6)</a> <a href="dom.html#ref-for-elementdef-title-10">(7)</a> <a href="dom.html#ref-for-elementdef-title-11">(8)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-title-12">3.2.4.2.1. Metadata content</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-title-13">4.2.1. The head element</a> <a href="document-metadata.html#ref-for-elementdef-title-14">(2)</a> <a href="document-metadata.html#ref-for-elementdef-title-15">(3)</a> <a href="document-metadata.html#ref-for-elementdef-title-16">(4)</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-title-17">4.2.2. The title element</a> <a href="document-metadata.html#ref-for-elementdef-title-18">(2)</a> <a href="document-metadata.html#ref-for-elementdef-title-19">(3)</a> <a href="document-metadata.html#ref-for-elementdef-title-20">(4)</a> <a href="document-metadata.html#ref-for-elementdef-title-21">(5)</a> <a href="document-metadata.html#ref-for-elementdef-title-22">(6)</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-title-23">4.2.5. The meta element</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-title-24">4.2.5.1. Standard metadata names</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-title-25">4.7.6. The iframe element</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-title-26">6.6.2. The History interface</a> <a href="browsers.html#ref-for-elementdef-title-27">(2)</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-title-28">6.7.4. Page load processing model for text files</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-title-29">6.7.6. Page load processing model for media</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-title-30">6.7.7. Page load processing model for content that uses plugins</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-title-31">8.1.2. Elements</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-title-32">8.2.3.2. The stack of open elements</a> <a href="syntax.html#ref-for-elementdef-title-33">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-title-34">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-title-35">Element content categories</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-title-36">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmltitleelement-htmltitleelement">
@@ -10081,7 +10073,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-base">
    <b><a href="document-metadata.html#elementdef-base">#elementdef-base</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-base-1">1.9.1. Writing secure applications with HTML</a>
+    <li><a href="introduction.html#ref-for-elementdef-base-1">1.9.1. HTML로 안전한 어플리케이션 작성</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-base-2">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-elementdef-base-3">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-base-4">3.2.4.2.1. Metadata content</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-base-5">4.2.1. The head element</a> <a href="document-metadata.html#ref-for-elementdef-base-6">(2)</a>
@@ -10208,7 +10200,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="element-attrdef-link-rel">
    <b><a href="document-metadata.html#element-attrdef-link-rel">#element-attrdef-link-rel</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-element-attrdef-link-rel-1">1.5.3. Extensibility</a>
+    <li><a href="introduction.html#ref-for-element-attrdef-link-rel-1">1.5.3. 확장성</a>
     </li><li><a href="document-metadata.html#ref-for-element-attrdef-link-rel-2">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-3">(2)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-4">(3)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-5">(4)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-6">(5)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-7">(6)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-8">(7)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-9">(8)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-10">(9)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-11">(10)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-12">(11)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-13">(12)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-14">(13)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-15">(14)</a> <a href="document-metadata.html#ref-for-element-attrdef-link-rel-16">(15)</a>
     </li><li><a href="links.html#ref-for-element-attrdef-link-rel-17">4.8.1. Introduction</a> <a href="links.html#ref-for-element-attrdef-link-rel-18">(2)</a>
     </li><li><a href="links.html#ref-for-element-attrdef-link-rel-19">4.8.6. Link types</a>
@@ -10336,7 +10328,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-meta">
    <b><a href="document-metadata.html#elementdef-meta">#elementdef-meta</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-meta-1">1.5.3. Extensibility</a>
+    <li><a href="introduction.html#ref-for-elementdef-meta-1">1.5.3. 확장성</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-meta-2">2.6.5. Extracting character encodings from meta elements</a> <a href="infrastructure.html#ref-for-elementdef-meta-3">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-meta-4">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-elementdef-meta-5">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-meta-6">3.2.4.2.1. Metadata content</a>
@@ -10422,7 +10414,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="register-the-names">
    <b><a href="document-metadata.html#register-the-names">#register-the-names</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-register-the-names-1">1.5.3. Extensibility</a>
+    <li><a href="introduction.html#ref-for-register-the-names-1">1.5.3. 확장성</a>
     </li><li><a href="document-metadata.html#ref-for-register-the-names-2">4.2.5.4. Other pragma directives</a>
     </li><li><a href="obsolete.html#ref-for-register-the-names-3">11.2. Non-conforming features</a>
    </li></ul>
@@ -10495,7 +10487,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-style">
    <b><a href="document-metadata.html#elementdef-style">#elementdef-style</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-style-1">1.10.1. Presentational markup</a> <a href="introduction.html#ref-for-elementdef-style-2">(2)</a>
+    <li><a href="introduction.html#ref-for-elementdef-style-1">1.10.1. 표현 마크업</a> <a href="introduction.html#ref-for-elementdef-style-2">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-style-3">3.2.4.2.1. Metadata content</a>
     </li><li><a href="dom.html#ref-for-elementdef-style-4">3.2.5.2. The title attribute</a>
     </li><li><a href="dom.html#ref-for-elementdef-style-5">3.2.5.6. The dir attribute</a>
@@ -10615,7 +10607,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-body">
    <b><a href="sections.html#elementdef-body">#elementdef-body</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-body-1">1.9. A quick introduction to HTML</a> <a href="introduction.html#ref-for-elementdef-body-2">(2)</a> <a href="introduction.html#ref-for-elementdef-body-3">(3)</a> <a href="introduction.html#ref-for-elementdef-body-4">(4)</a> <a href="introduction.html#ref-for-elementdef-body-5">(5)</a> <a href="introduction.html#ref-for-elementdef-body-6">(6)</a> <a href="introduction.html#ref-for-elementdef-body-7">(7)</a>
+    <li><a href="introduction.html#ref-for-elementdef-body-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-body-2">(2)</a> <a href="introduction.html#ref-for-elementdef-body-3">(3)</a> <a href="introduction.html#ref-for-elementdef-body-4">(4)</a> <a href="introduction.html#ref-for-elementdef-body-5">(5)</a> <a href="introduction.html#ref-for-elementdef-body-6">(6)</a> <a href="introduction.html#ref-for-elementdef-body-7">(7)</a>
     </li><li><a href="dom.html#ref-for-elementdef-body-8">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-body-9">(2)</a> <a href="dom.html#ref-for-elementdef-body-10">(3)</a> <a href="dom.html#ref-for-elementdef-body-11">(4)</a> <a href="dom.html#ref-for-elementdef-body-12">(5)</a> <a href="dom.html#ref-for-elementdef-body-13">(6)</a> <a href="dom.html#ref-for-elementdef-body-14">(7)</a> <a href="dom.html#ref-for-elementdef-body-15">(8)</a> <a href="dom.html#ref-for-elementdef-body-16">(9)</a> <a href="dom.html#ref-for-elementdef-body-17">(10)</a> <a href="dom.html#ref-for-elementdef-body-18">(11)</a>
     </li><li><a href="dom.html#ref-for-elementdef-body-19">3.2.5. Global attributes</a>
     </li><li><a href="semantics.html#ref-for-elementdef-body-20">4.1.1. The html element</a>
@@ -10696,7 +10688,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="sections.html#elementdef-section">#elementdef-section</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-section-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="dom.html#ref-for-elementdef-section-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-section-3">3.2.4.2.3. Sectioning content</a>
     </li><li><a href="dom.html#ref-for-elementdef-section-4">3.2.4.2.8. Palpable content</a>
@@ -10767,8 +10759,8 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-h1">
    <b><a href="sections.html#elementdef-h1">#elementdef-h1</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-h1-1">1.9. A quick introduction to HTML</a> <a href="introduction.html#ref-for-elementdef-h1-2">(2)</a>
-    </li><li><a href="introduction.html#ref-for-elementdef-h1-3">1.10.2. Syntax errors</a>
+    <li><a href="introduction.html#ref-for-elementdef-h1-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-h1-2">(2)</a>
+    </li><li><a href="introduction.html#ref-for-elementdef-h1-3">1.10.2. 구문 오류</a>
     </li><li><a href="dom.html#ref-for-elementdef-h1-4">3.2.1. Semantics</a>
     </li><li><a href="dom.html#ref-for-elementdef-h1-5">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-h1-6">3.2.4.2.4. Heading content</a>
@@ -10790,7 +10782,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-h2">
    <b><a href="sections.html#elementdef-h2">#elementdef-h2</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-h2-1">1.10.2. Syntax errors</a>
+    <li><a href="introduction.html#ref-for-elementdef-h2-1">1.10.2. 구문 오류</a>
     </li><li><a href="dom.html#ref-for-elementdef-h2-2">3.2.1. Semantics</a>
     </li><li><a href="dom.html#ref-for-elementdef-h2-3">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-h2-4">3.2.4.2.4. Heading content</a>
@@ -10936,7 +10928,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-address">
    <b><a href="sections.html#elementdef-address">#elementdef-address</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-elementdef-address-1">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-elementdef-address-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-elementdef-address-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-address-2">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-address-3">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-address-4">3.2.4.2.8. Palpable content</a>
     </li><li><a href="sections.html#ref-for-elementdef-address-5">4.3.9. The address element</a> <a href="sections.html#ref-for-elementdef-address-6">(2)</a> <a href="sections.html#ref-for-elementdef-address-7">(3)</a> <a href="sections.html#ref-for-elementdef-address-8">(4)</a> <a href="sections.html#ref-for-elementdef-address-9">(5)</a> <a href="sections.html#ref-for-elementdef-address-10">(6)</a> <a href="sections.html#ref-for-elementdef-address-11">(7)</a>
@@ -10970,7 +10962,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="outline">
    <b><a href="sections.html#outline">#outline</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-outline-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-outline-1">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-outline-2">3.2.4.2.3. Sectioning content</a> <a href="dom.html#ref-for-outline-3">(2)</a>
     </li><li><a href="sections.html#ref-for-outline-4">4.3.3. The section element</a>
     </li><li><a href="sections.html#ref-for-outline-5">4.3.7. The header element</a>
@@ -11000,10 +10992,10 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-p">
    <b><a href="grouping-content.html#elementdef-p">#elementdef-p</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-p-1">1.9. A quick introduction to HTML</a> <a href="introduction.html#ref-for-elementdef-p-2">(2)</a>
-    </li><li><a href="introduction.html#ref-for-elementdef-p-3">1.10.2. Syntax errors</a> <a href="introduction.html#ref-for-elementdef-p-4">(2)</a> <a href="introduction.html#ref-for-elementdef-p-5">(3)</a> <a href="introduction.html#ref-for-elementdef-p-6">(4)</a>
+    <li><a href="introduction.html#ref-for-elementdef-p-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-p-2">(2)</a>
+    </li><li><a href="introduction.html#ref-for-elementdef-p-3">1.10.2. 구문 오류</a> <a href="introduction.html#ref-for-elementdef-p-4">(2)</a> <a href="introduction.html#ref-for-elementdef-p-5">(3)</a> <a href="introduction.html#ref-for-elementdef-p-6">(4)</a>
     </li><li><a href="introduction.html#ref-for-elementdef-p-7">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="dom.html#ref-for-elementdef-p-8">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-p-9">3.2.4.2.8. Palpable content</a>
     </li><li><a href="dom.html#ref-for-elementdef-p-10">3.2.4.3. Transparent content models</a>
@@ -11044,8 +11036,8 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-hr">
    <b><a href="grouping-content.html#elementdef-hr">#elementdef-hr</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-hr-1">1.10.1. Presentational markup</a>
-    </li><li><a href="introduction.html#ref-for-elementdef-hr-2">1.10.2. Syntax errors</a>
+    <li><a href="introduction.html#ref-for-elementdef-hr-1">1.10.1. 표현 마크업</a>
+    </li><li><a href="introduction.html#ref-for-elementdef-hr-2">1.10.2. 구문 오류</a>
     </li><li><a href="dom.html#ref-for-elementdef-hr-3">3.2.4.2.2. Flow content</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-hr-4">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-hr-5">4.4.2. The hr element</a> <a href="grouping-content.html#ref-for-elementdef-hr-6">(2)</a> <a href="grouping-content.html#ref-for-elementdef-hr-7">(3)</a> <a href="grouping-content.html#ref-for-elementdef-hr-8">(4)</a> <a href="grouping-content.html#ref-for-elementdef-hr-9">(5)</a>
@@ -11102,7 +11094,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-blockquote">
    <b><a href="grouping-content.html#elementdef-blockquote">#elementdef-blockquote</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-elementdef-blockquote-1">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-elementdef-blockquote-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-elementdef-blockquote-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-blockquote-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-blockquote-3">2.5.3. Dynamic changes to base URLs</a>
     </li><li><a href="dom.html#ref-for-elementdef-blockquote-4">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-blockquote-5">3.2.4.2.8. Palpable content</a>
@@ -11210,7 +11202,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="grouping-content.html#elementdef-ul">#elementdef-ul</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-ul-1">1.10.3. 
-  Restrictions on content models and on attribute values </a> <a href="introduction.html#ref-for-elementdef-ul-2">(2)</a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-ul-2">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-ul-3">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-ul-4">3.2.4.2.8. Palpable content</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-ul-5">4.4.1. The p element</a> <a href="grouping-content.html#ref-for-elementdef-ul-6">(2)</a>
@@ -11243,7 +11235,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="grouping-content.html#elementdef-li">#elementdef-li</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-li-1">1.10.3. 
-  Restrictions on content models and on attribute values </a> <a href="introduction.html#ref-for-elementdef-li-2">(2)</a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-li-2">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-li-3">3.2.4.2.8. Palpable content</a> <a href="dom.html#ref-for-elementdef-li-4">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-li-5">4.4.5. The ol element</a> <a href="grouping-content.html#ref-for-elementdef-li-6">(2)</a> <a href="grouping-content.html#ref-for-elementdef-li-7">(3)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-li-8">4.4.6. The ul element</a> <a href="grouping-content.html#ref-for-elementdef-li-9">(2)</a>
@@ -11426,8 +11418,8 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="grouping-content.html#elementdef-div">#elementdef-div</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-div-1">1.10.3. 
-  Restrictions on content models and on attribute values </a> <a href="introduction.html#ref-for-elementdef-div-2">(2)</a> <a href="introduction.html#ref-for-elementdef-div-3">(3)</a> <a href="introduction.html#ref-for-elementdef-div-4">(4)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-div-5">2.2.1. Conformance classes</a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-div-2">(2)</a> <a href="introduction.html#ref-for-elementdef-div-3">(3)</a> <a href="introduction.html#ref-for-elementdef-div-4">(4)</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-div-5">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-6">3.2.4. Content models</a> <a href="dom.html#ref-for-elementdef-div-7">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-8">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-9">3.2.4.2.8. Palpable content</a>
@@ -11459,7 +11451,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-a">
    <b><a href="textlevel-semantics.html#elementdef-a">#elementdef-a</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-a-1">1.9. A quick introduction to HTML</a> <a href="introduction.html#ref-for-elementdef-a-2">(2)</a> <a href="introduction.html#ref-for-elementdef-a-3">(3)</a>
+    <li><a href="introduction.html#ref-for-elementdef-a-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-a-2">(2)</a> <a href="introduction.html#ref-for-elementdef-a-3">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-a-4">2.7.2.1. The HTMLAllCollection interface</a>
     </li><li><a href="dom.html#ref-for-elementdef-a-5">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-a-6">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-a-7">3.2.4.2.2. Flow content</a>
@@ -11618,7 +11610,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-small">
    <b><a href="textlevel-semantics.html#elementdef-small">#elementdef-small</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-small-1">1.10.1. Presentational markup</a>
+    <li><a href="introduction.html#ref-for-elementdef-small-1">1.10.1. 표현 마크업</a>
     </li><li><a href="dom.html#ref-for-elementdef-small-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-small-3">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-small-4">3.2.4.2.8. Palpable content</a>
@@ -11633,7 +11625,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-s">
    <b><a href="textlevel-semantics.html#elementdef-s">#elementdef-s</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-s-1">1.10.1. Presentational markup</a>
+    <li><a href="introduction.html#ref-for-elementdef-s-1">1.10.1. 표현 마크업</a>
     </li><li><a href="dom.html#ref-for-elementdef-s-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-s-3">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-s-4">3.2.4.2.8. Palpable content</a>
@@ -12024,7 +12016,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="textlevel-semantics.html#elementdef-kbd">#elementdef-kbd</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-kbd-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="dom.html#ref-for-elementdef-kbd-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-kbd-3">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-kbd-4">3.2.4.2.8. Palpable content</a>
@@ -12067,9 +12059,9 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-i">
    <b><a href="textlevel-semantics.html#elementdef-i">#elementdef-i</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-i-1">1.10.1. Presentational markup</a>
-    </li><li><a href="introduction.html#ref-for-elementdef-i-2">1.10.2. Syntax errors</a> <a href="introduction.html#ref-for-elementdef-i-3">(2)</a> <a href="introduction.html#ref-for-elementdef-i-4">(3)</a> <a href="introduction.html#ref-for-elementdef-i-5">(4)</a> <a href="introduction.html#ref-for-elementdef-i-6">(5)</a> <a href="introduction.html#ref-for-elementdef-i-7">(6)</a> <a href="introduction.html#ref-for-elementdef-i-8">(7)</a> <a href="introduction.html#ref-for-elementdef-i-9">(8)</a> <a href="introduction.html#ref-for-elementdef-i-10">(9)</a> <a href="introduction.html#ref-for-elementdef-i-11">(10)</a> <a href="introduction.html#ref-for-elementdef-i-12">(11)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-i-13">2.2.1. Conformance classes</a>
+    <li><a href="introduction.html#ref-for-elementdef-i-1">1.10.1. 표현 마크업</a>
+    </li><li><a href="introduction.html#ref-for-elementdef-i-2">1.10.2. 구문 오류</a> <a href="introduction.html#ref-for-elementdef-i-3">(2)</a> <a href="introduction.html#ref-for-elementdef-i-4">(3)</a> <a href="introduction.html#ref-for-elementdef-i-5">(4)</a> <a href="introduction.html#ref-for-elementdef-i-6">(5)</a> <a href="introduction.html#ref-for-elementdef-i-7">(6)</a> <a href="introduction.html#ref-for-elementdef-i-8">(7)</a> <a href="introduction.html#ref-for-elementdef-i-9">(8)</a> <a href="introduction.html#ref-for-elementdef-i-10">(9)</a> <a href="introduction.html#ref-for-elementdef-i-11">(10)</a> <a href="introduction.html#ref-for-elementdef-i-12">(11)</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-i-13">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-14">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-15">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-16">3.2.4.2.8. Palpable content</a>
@@ -12088,8 +12080,8 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-b">
    <b><a href="textlevel-semantics.html#elementdef-b">#elementdef-b</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-b-1">1.10.1. Presentational markup</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-b-2">2.2.1. Conformance classes</a>
+    <li><a href="introduction.html#ref-for-elementdef-b-1">1.10.1. 표현 마크업</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-b-2">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-b-3">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-b-4">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-b-5">3.2.4.2.8. Palpable content</a>
@@ -12111,7 +12103,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-u">
    <b><a href="textlevel-semantics.html#elementdef-u">#elementdef-u</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-u-1">1.10.1. Presentational markup</a>
+    <li><a href="introduction.html#ref-for-elementdef-u-1">1.10.1. 표현 마크업</a>
     </li><li><a href="dom.html#ref-for-elementdef-u-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-u-3">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-u-4">3.2.4.2.8. Palpable content</a>
@@ -12177,8 +12169,8 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="textlevel-semantics.html#elementdef-span">#elementdef-span</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-span-1">1.10.3. 
-  Restrictions on content models and on attribute values </a> <a href="introduction.html#ref-for-elementdef-span-2">(2)</a> <a href="introduction.html#ref-for-elementdef-span-3">(3)</a> <a href="introduction.html#ref-for-elementdef-span-4">(4)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-span-5">2.2.1. Conformance classes</a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-span-2">(2)</a> <a href="introduction.html#ref-for-elementdef-span-3">(3)</a> <a href="introduction.html#ref-for-elementdef-span-4">(4)</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-span-5">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-elementdef-span-6">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-span-7">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-span-8">3.2.4.2.8. Palpable content</a>
@@ -12428,9 +12420,9 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-img">
    <b><a href="semantics-embedded-content.html#elementdef-img">#elementdef-img</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-img-1">1.9.1. Writing secure applications with HTML</a>
+    <li><a href="introduction.html#ref-for-elementdef-img-1">1.9.1. HTML로 안전한 어플리케이션 작성</a>
     </li><li><a href="introduction.html#ref-for-elementdef-img-2">1.9.2. 
-  Common pitfalls to avoid when using the scripting APIs </a> <a href="introduction.html#ref-for-elementdef-img-3">(2)</a> <a href="introduction.html#ref-for-elementdef-img-4">(3)</a>
+  API 스크립팅을 사용하는 경우를 막는 일반적인 위험 </a> <a href="introduction.html#ref-for-elementdef-img-3">(2)</a> <a href="introduction.html#ref-for-elementdef-img-4">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-img-5">2.7.2.1. The HTMLAllCollection interface</a>
     </li><li><a href="dom.html#ref-for-elementdef-img-6">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-img-7">(2)</a> <a href="dom.html#ref-for-elementdef-img-8">(3)</a> <a href="dom.html#ref-for-elementdef-img-9">(4)</a> <a href="dom.html#ref-for-elementdef-img-10">(5)</a> <a href="dom.html#ref-for-elementdef-img-11">(6)</a>
     </li><li><a href="dom.html#ref-for-elementdef-img-12">3.2.4.2.2. Flow content</a>
@@ -12856,8 +12848,8 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-iframe">
    <b><a href="semantics-embedded-content.html#elementdef-iframe">#elementdef-iframe</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-iframe-1">1.9.1. Writing secure applications with HTML</a> <a href="introduction.html#ref-for-elementdef-iframe-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-iframe-3">2.1.5. Plugin Content Handlers</a>
+    <li><a href="introduction.html#ref-for-elementdef-iframe-1">1.9.1. HTML로 안전한 어플리케이션 작성</a> <a href="introduction.html#ref-for-elementdef-iframe-2">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-iframe-3">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-iframe-4">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-elementdef-iframe-5">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-iframe-6">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-iframe-7">(2)</a> <a href="dom.html#ref-for-elementdef-iframe-8">(3)</a>
     </li><li><a href="dom.html#ref-for-elementdef-iframe-9">3.2.4.2.2. Flow content</a>
@@ -12968,7 +12960,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="element-attrdef-iframe-sandbox">
    <b><a href="semantics-embedded-content.html#element-attrdef-iframe-sandbox">#element-attrdef-iframe-sandbox</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-element-attrdef-iframe-sandbox-1">2.1.5. Plugin Content Handlers</a>
+    <li><a href="infrastructure.html#ref-for-element-attrdef-iframe-sandbox-1">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-iframe-sandbox-2">3.1.2. Resource metadata management</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-3">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-4">(2)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-5">(3)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-6">(4)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-7">(5)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-8">(6)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-9">(7)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-10">(8)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-11">(9)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-12">(10)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-13">(11)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-14">(12)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-15">(13)</a>
     </li><li><a href="browsers.html#ref-for-element-attrdef-iframe-sandbox-16">6.1.5. Browsing context names</a>
@@ -13029,7 +13021,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-embed">
    <b><a href="semantics-embedded-content.html#elementdef-embed">#elementdef-embed</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-embed-1">1.5.3. Extensibility</a>
+    <li><a href="introduction.html#ref-for-elementdef-embed-1">1.5.3. 확장성</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-embed-2">2.7.2.1. The HTMLAllCollection interface</a>
     </li><li><a href="dom.html#ref-for-elementdef-embed-3">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-embed-4">(2)</a> <a href="dom.html#ref-for-elementdef-embed-5">(3)</a> <a href="dom.html#ref-for-elementdef-embed-6">(4)</a>
     </li><li><a href="dom.html#ref-for-elementdef-embed-7">3.2.4.2.2. Flow content</a>
@@ -15245,7 +15237,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="semantics-embedded-content.html#elementdef-area">#elementdef-area</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-area-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="dom.html#ref-for-elementdef-area-2">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-area-3">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-area-4">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-area-5">3.2.4.2.5. Phrasing content</a>
@@ -15310,7 +15302,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="semantics-embedded-content.html#element-attrdef-area-shape">#element-attrdef-area-shape</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-area-shape-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-area-shape-2">4.7.16. The area element</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-area-shape-3">Elements</a>
    </li></ul>
@@ -15319,14 +15311,14 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="semantics-embedded-content.html#attr-valuedef-area-shape-circle">#attr-valuedef-area-shape-circle</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-attr-valuedef-area-shape-circle-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="attr-valuedef-area-shape-circ">
    <b><a href="semantics-embedded-content.html#attr-valuedef-area-shape-circ">#attr-valuedef-area-shape-circ</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-attr-valuedef-area-shape-circ-1">1.10.3. 
-  Restrictions on content models and on attribute values </a> <a href="introduction.html#ref-for-attr-valuedef-area-shape-circ-2">(2)</a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-attr-valuedef-area-shape-circ-2">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="element-attrdef-area-coords">
@@ -15529,7 +15521,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="hyperlink">
    <b><a href="links.html#hyperlink">#hyperlink</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-hyperlink-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-hyperlink-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="infrastructure.html#ref-for-hyperlink-2">2.5.3. Dynamic changes to base URLs</a>
     </li><li><a href="document-metadata.html#ref-for-hyperlink-3">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-hyperlink-4">(2)</a> <a href="document-metadata.html#ref-for-hyperlink-5">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-hyperlink-6">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-hyperlink-7">(2)</a> <a href="document-metadata.html#ref-for-hyperlink-8">(3)</a> <a href="document-metadata.html#ref-for-hyperlink-9">(4)</a> <a href="document-metadata.html#ref-for-hyperlink-10">(5)</a>
@@ -15572,7 +15564,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="element-attrdef-a-href">
    <b><a href="links.html#element-attrdef-a-href">#element-attrdef-a-href</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-element-attrdef-a-href-1">1.9. A quick introduction to HTML</a> <a href="introduction.html#ref-for-element-attrdef-a-href-2">(2)</a> <a href="introduction.html#ref-for-element-attrdef-a-href-3">(3)</a>
+    <li><a href="introduction.html#ref-for-element-attrdef-a-href-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-element-attrdef-a-href-2">(2)</a> <a href="introduction.html#ref-for-element-attrdef-a-href-3">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-element-attrdef-a-href-4">2.5.3. Dynamic changes to base URLs</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-a-href-5">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-element-attrdef-a-href-6">(2)</a> <a href="dom.html#ref-for-element-attrdef-a-href-7">(3)</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-a-href-8">3.2.4.2.7. Interactive content</a>
@@ -15599,7 +15591,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="links.html#element-attrdef-a-target">#element-attrdef-a-target</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-a-target-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-a-target-2">Elements</a> <a href="fullindex.html#ref-for-element-attrdef-a-target-3">(2)</a>
    </li></ul>
   </aside>
@@ -15793,13 +15785,13 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="link-types-extensions-to-the-predefined-set-of-link-type">
    <b><a href="links.html#link-types-extensions-to-the-predefined-set-of-link-type">#link-types-extensions-to-the-predefined-set-of-link-type</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-link-types-extensions-to-the-predefined-set-of-link-type-1">1.5.3. Extensibility</a>
+    <li><a href="introduction.html#ref-for-link-types-extensions-to-the-predefined-set-of-link-type-1">1.5.3. 확장성</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-table">
    <b><a href="tabular-data.html#elementdef-table">#elementdef-table</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-table-1">1.10.2. Syntax errors</a>
+    <li><a href="introduction.html#ref-for-elementdef-table-1">1.10.2. 구문 오류</a>
     </li><li><a href="dom.html#ref-for-elementdef-table-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-table-3">3.2.4.2.8. Palpable content</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-table-4">4.4.1. The p element</a>
@@ -16680,7 +16672,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="sec-forms.html#elementdef-form">#elementdef-form</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-form-1">1.10.3. 
-  Restrictions on content models and on attribute values </a> <a href="introduction.html#ref-for-elementdef-form-2">(2)</a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-form-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-form-3">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-elementdef-form-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-form-5">2.7.2.2. The HTMLFormControlsCollection interface</a>
     </li><li><a href="dom.html#ref-for-elementdef-form-6">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-form-7">(2)</a> <a href="dom.html#ref-for-elementdef-form-8">(3)</a> <a href="dom.html#ref-for-elementdef-form-9">(4)</a>
@@ -18634,30 +18626,30 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="sec-forms.html#elementdef-button">#elementdef-button</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-button-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-button-2">2.1.2. XML</a> <a href="infrastructure.html#ref-for-elementdef-button-3">(2)</a> <a href="infrastructure.html#ref-for-elementdef-button-4">(3)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-button-5">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-elementdef-button-6">(2)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-button-7">3.2.4.2.2. Flow content</a>
-    </li><li><a href="dom.html#ref-for-elementdef-button-8">3.2.4.2.5. Phrasing content</a>
-    </li><li><a href="dom.html#ref-for-elementdef-button-9">3.2.4.2.7. Interactive content</a>
-    </li><li><a href="dom.html#ref-for-elementdef-button-10">3.2.4.2.8. Palpable content</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-button-11">4.7.5.1.3. A link or button containing nothing but an image</a>
-    </li><li><a href="sec-forms.html#ref-for-elementdef-button-12">4.10.1.1. Writing a form’s user interface</a>
-    </li><li><a href="sec-forms.html#ref-for-elementdef-button-13">4.10.2. Categories</a> <a href="sec-forms.html#ref-for-elementdef-button-14">(2)</a> <a href="sec-forms.html#ref-for-elementdef-button-15">(3)</a> <a href="sec-forms.html#ref-for-elementdef-button-16">(4)</a> <a href="sec-forms.html#ref-for-elementdef-button-17">(5)</a> <a href="sec-forms.html#ref-for-elementdef-button-18">(6)</a>
-    </li><li><a href="sec-forms.html#ref-for-elementdef-button-19">4.10.6. The button element</a> <a href="sec-forms.html#ref-for-elementdef-button-20">(2)</a> <a href="sec-forms.html#ref-for-elementdef-button-21">(3)</a> <a href="sec-forms.html#ref-for-elementdef-button-22">(4)</a> <a href="sec-forms.html#ref-for-elementdef-button-23">(5)</a> <a href="sec-forms.html#ref-for-elementdef-button-24">(6)</a> <a href="sec-forms.html#ref-for-elementdef-button-25">(7)</a> <a href="sec-forms.html#ref-for-elementdef-button-26">(8)</a> <a href="sec-forms.html#ref-for-elementdef-button-27">(9)</a> <a href="sec-forms.html#ref-for-elementdef-button-28">(10)</a> <a href="sec-forms.html#ref-for-elementdef-button-29">(11)</a>
-    </li><li><a href="sec-forms.html#ref-for-elementdef-button-30">4.10.19.5. Enabling and disabling form controls: the disabled attribute</a>
-    </li><li><a href="interactive-elements.html#ref-for-elementdef-button-31">4.11.3. The menu element</a>
-    </li><li><a href="interactive-elements.html#ref-for-elementdef-button-32">4.11.6.3. Using the button element to define a command</a> <a href="interactive-elements.html#ref-for-elementdef-button-33">(2)</a>
-    </li><li><a href="disabled-elements.html#ref-for-elementdef-button-34">4.14. Disabled elements</a>
-    </li><li><a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-35">4.15.2. Pseudo-classes</a> <a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-36">(2)</a> <a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-37">(3)</a>
-    </li><li><a href="editing.html#ref-for-elementdef-button-38">5.4.3. The tabindex attribute</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-button-39">8.2.3.2. The stack of open elements</a> <a href="syntax.html#ref-for-elementdef-button-40">(2)</a>
-    </li><li><a href="rendering.html#ref-for-elementdef-button-41">10.5.2. The button element</a> <a href="rendering.html#ref-for-elementdef-button-42">(2)</a> <a href="rendering.html#ref-for-elementdef-button-43">(3)</a>
-    </li><li><a href="obsolete.html#ref-for-elementdef-button-44">11.2. Non-conforming features</a> <a href="obsolete.html#ref-for-elementdef-button-45">(2)</a> <a href="obsolete.html#ref-for-elementdef-button-46">(3)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-button-47">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-button-48">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-button-49">(2)</a> <a href="fullindex.html#ref-for-elementdef-button-50">(3)</a> <a href="fullindex.html#ref-for-elementdef-button-51">(4)</a> <a href="fullindex.html#ref-for-elementdef-button-52">(5)</a> <a href="fullindex.html#ref-for-elementdef-button-53">(6)</a> <a href="fullindex.html#ref-for-elementdef-button-54">(7)</a> <a href="fullindex.html#ref-for-elementdef-button-55">(8)</a> <a href="fullindex.html#ref-for-elementdef-button-56">(9)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-button-57">Attributes</a> <a href="fullindex.html#ref-for-elementdef-button-58">(2)</a> <a href="fullindex.html#ref-for-elementdef-button-59">(3)</a> <a href="fullindex.html#ref-for-elementdef-button-60">(4)</a> <a href="fullindex.html#ref-for-elementdef-button-61">(5)</a> <a href="fullindex.html#ref-for-elementdef-button-62">(6)</a> <a href="fullindex.html#ref-for-elementdef-button-63">(7)</a> <a href="fullindex.html#ref-for-elementdef-button-64">(8)</a> <a href="fullindex.html#ref-for-elementdef-button-65">(9)</a> <a href="fullindex.html#ref-for-elementdef-button-66">(10)</a> <a href="fullindex.html#ref-for-elementdef-button-67">(11)</a> <a href="fullindex.html#ref-for-elementdef-button-68">(12)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-button-69">Element Interfaces</a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-button-2">2.1.2. XML</a> <a href="infrastructure.html#ref-for-elementdef-button-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-button-4">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-elementdef-button-5">(2)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-button-6">3.2.4.2.2. Flow content</a>
+    </li><li><a href="dom.html#ref-for-elementdef-button-7">3.2.4.2.5. Phrasing content</a>
+    </li><li><a href="dom.html#ref-for-elementdef-button-8">3.2.4.2.7. Interactive content</a>
+    </li><li><a href="dom.html#ref-for-elementdef-button-9">3.2.4.2.8. Palpable content</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-button-10">4.7.5.1.3. A link or button containing nothing but an image</a>
+    </li><li><a href="sec-forms.html#ref-for-elementdef-button-11">4.10.1.1. Writing a form’s user interface</a>
+    </li><li><a href="sec-forms.html#ref-for-elementdef-button-12">4.10.2. Categories</a> <a href="sec-forms.html#ref-for-elementdef-button-13">(2)</a> <a href="sec-forms.html#ref-for-elementdef-button-14">(3)</a> <a href="sec-forms.html#ref-for-elementdef-button-15">(4)</a> <a href="sec-forms.html#ref-for-elementdef-button-16">(5)</a> <a href="sec-forms.html#ref-for-elementdef-button-17">(6)</a>
+    </li><li><a href="sec-forms.html#ref-for-elementdef-button-18">4.10.6. The button element</a> <a href="sec-forms.html#ref-for-elementdef-button-19">(2)</a> <a href="sec-forms.html#ref-for-elementdef-button-20">(3)</a> <a href="sec-forms.html#ref-for-elementdef-button-21">(4)</a> <a href="sec-forms.html#ref-for-elementdef-button-22">(5)</a> <a href="sec-forms.html#ref-for-elementdef-button-23">(6)</a> <a href="sec-forms.html#ref-for-elementdef-button-24">(7)</a> <a href="sec-forms.html#ref-for-elementdef-button-25">(8)</a> <a href="sec-forms.html#ref-for-elementdef-button-26">(9)</a> <a href="sec-forms.html#ref-for-elementdef-button-27">(10)</a> <a href="sec-forms.html#ref-for-elementdef-button-28">(11)</a>
+    </li><li><a href="sec-forms.html#ref-for-elementdef-button-29">4.10.19.5. Enabling and disabling form controls: the disabled attribute</a>
+    </li><li><a href="interactive-elements.html#ref-for-elementdef-button-30">4.11.3. The menu element</a>
+    </li><li><a href="interactive-elements.html#ref-for-elementdef-button-31">4.11.6.3. Using the button element to define a command</a> <a href="interactive-elements.html#ref-for-elementdef-button-32">(2)</a>
+    </li><li><a href="disabled-elements.html#ref-for-elementdef-button-33">4.14. Disabled elements</a>
+    </li><li><a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-34">4.15.2. Pseudo-classes</a> <a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-35">(2)</a> <a href="matching-html-elements-using-selectors.html#ref-for-elementdef-button-36">(3)</a>
+    </li><li><a href="editing.html#ref-for-elementdef-button-37">5.4.3. The tabindex attribute</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-button-38">8.2.3.2. The stack of open elements</a> <a href="syntax.html#ref-for-elementdef-button-39">(2)</a>
+    </li><li><a href="rendering.html#ref-for-elementdef-button-40">10.5.2. The button element</a> <a href="rendering.html#ref-for-elementdef-button-41">(2)</a> <a href="rendering.html#ref-for-elementdef-button-42">(3)</a>
+    </li><li><a href="obsolete.html#ref-for-elementdef-button-43">11.2. Non-conforming features</a> <a href="obsolete.html#ref-for-elementdef-button-44">(2)</a> <a href="obsolete.html#ref-for-elementdef-button-45">(3)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-button-46">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-button-47">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-button-48">(2)</a> <a href="fullindex.html#ref-for-elementdef-button-49">(3)</a> <a href="fullindex.html#ref-for-elementdef-button-50">(4)</a> <a href="fullindex.html#ref-for-elementdef-button-51">(5)</a> <a href="fullindex.html#ref-for-elementdef-button-52">(6)</a> <a href="fullindex.html#ref-for-elementdef-button-53">(7)</a> <a href="fullindex.html#ref-for-elementdef-button-54">(8)</a> <a href="fullindex.html#ref-for-elementdef-button-55">(9)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-button-56">Attributes</a> <a href="fullindex.html#ref-for-elementdef-button-57">(2)</a> <a href="fullindex.html#ref-for-elementdef-button-58">(3)</a> <a href="fullindex.html#ref-for-elementdef-button-59">(4)</a> <a href="fullindex.html#ref-for-elementdef-button-60">(5)</a> <a href="fullindex.html#ref-for-elementdef-button-61">(6)</a> <a href="fullindex.html#ref-for-elementdef-button-62">(7)</a> <a href="fullindex.html#ref-for-elementdef-button-63">(8)</a> <a href="fullindex.html#ref-for-elementdef-button-64">(9)</a> <a href="fullindex.html#ref-for-elementdef-button-65">(10)</a> <a href="fullindex.html#ref-for-elementdef-button-66">(11)</a> <a href="fullindex.html#ref-for-elementdef-button-67">(12)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-button-68">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlbuttonelement-htmlbuttonelement">
@@ -19196,7 +19188,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="sec-forms.html#elementdef-textarea">#elementdef-textarea</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-textarea-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-textarea-2">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-elementdef-textarea-3">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-textarea-4">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-textarea-5">3.2.4.2.5. Phrasing content</a> <a href="dom.html#ref-for-elementdef-textarea-6">(2)</a> <a href="dom.html#ref-for-elementdef-textarea-7">(3)</a>
@@ -19523,7 +19515,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-output">
    <b><a href="sec-forms.html#elementdef-output">#elementdef-output</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-output-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-elementdef-output-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="dom.html#ref-for-elementdef-output-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-output-3">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-output-4">3.2.4.2.8. Palpable content</a>
@@ -20121,7 +20113,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="sec-forms.html#element-attrdef-disabledformelements-disabled">#element-attrdef-disabledformelements-disabled</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-disabledformelements-disabled-1">1.10.3. 
-  Restrictions on content models and on attribute values </a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-disabledformelements-disabled-2">4.10.5. The input element</a> <a href="sec-forms.html#ref-for-element-attrdef-disabledformelements-disabled-3">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-disabledformelements-disabled-4">4.10.6. The button element</a> <a href="sec-forms.html#ref-for-element-attrdef-disabledformelements-disabled-5">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-disabledformelements-disabled-6">4.10.7. The select element</a> <a href="sec-forms.html#ref-for-element-attrdef-disabledformelements-disabled-7">(2)</a>
@@ -21972,12 +21964,12 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="elementdef-script">
    <b><a href="semantics-scripting.html#elementdef-script">#elementdef-script</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-elementdef-script-1">1.5.3. Extensibility</a>
-    </li><li><a href="introduction.html#ref-for-elementdef-script-2">1.9. A quick introduction to HTML</a>
-    </li><li><a href="introduction.html#ref-for-elementdef-script-3">1.9.1. Writing secure applications with HTML</a>
+    <li><a href="introduction.html#ref-for-elementdef-script-1">1.5.3. 확장성</a>
+    </li><li><a href="introduction.html#ref-for-elementdef-script-2">1.9. HTML 간단한 소개</a>
+    </li><li><a href="introduction.html#ref-for-elementdef-script-3">1.9.1. HTML로 안전한 어플리케이션 작성</a>
     </li><li><a href="introduction.html#ref-for-elementdef-script-4">1.10.3. 
-  Restrictions on content models and on attribute values </a> <a href="introduction.html#ref-for-elementdef-script-5">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-script-6">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-elementdef-script-7">(2)</a> <a href="infrastructure.html#ref-for-elementdef-script-8">(3)</a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-script-5">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-script-6">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-script-7">(2)</a> <a href="infrastructure.html#ref-for-elementdef-script-8">(3)</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-9">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-script-10">(2)</a> <a href="dom.html#ref-for-elementdef-script-11">(3)</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-12">3.2.4.2.1. Metadata content</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-13">3.2.4.2.2. Flow content</a>
@@ -22027,7 +22019,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="htmlscriptelement-htmlscriptelement">
    <b><a href="semantics-scripting.html#htmlscriptelement-htmlscriptelement">#htmlscriptelement-htmlscriptelement</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-htmlscriptelement-htmlscriptelement-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-htmlscriptelement-htmlscriptelement-1">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-htmlscriptelement-htmlscriptelement-2">3.1.1. The Document object</a>
     </li><li><a href="obsolete.html#ref-for-htmlscriptelement-htmlscriptelement-3">11.3.5. Other elements, attributes and APIs</a>
     </li><li><a href="fullindex.html#ref-for-htmlscriptelement-htmlscriptelement-4">Elements</a>
@@ -22054,7 +22046,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="semantics-scripting.html#element-attrdef-script-src">#element-attrdef-script-src</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-script-src-1">1.10.3. 
-  Restrictions on content models and on attribute values </a> <a href="introduction.html#ref-for-element-attrdef-script-src-2">(2)</a>
+  콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-element-attrdef-script-src-2">(2)</a>
     </li><li><a href="semantics-scripting.html#ref-for-element-attrdef-script-src-3">4.12.1. The script element</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-4">(2)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-5">(3)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-6">(4)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-7">(5)</a>
     </li><li><a href="semantics-scripting.html#ref-for-element-attrdef-script-src-8">4.12.1.1. Processing model</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-9">(2)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-10">(3)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-11">(4)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-12">(5)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-13">(6)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-14">(7)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-15">(8)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-16">(9)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-17">(10)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-18">(11)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-19">(12)</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-20">(13)</a>
     </li><li><a href="semantics-scripting.html#ref-for-element-attrdef-script-src-21">4.12.1.4. Inline documentation for external scripts</a> <a href="semantics-scripting.html#ref-for-element-attrdef-script-src-22">(2)</a>
@@ -23447,9 +23439,9 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="browsing-context">
    <b><a href="browsers.html#browsing-context">#browsing-context</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-browsing-context-1">1.5.1. Serializability of script execution</a>
-    </li><li><a href="infrastructure.html#ref-for-browsing-context-2">2.1.5. Plugin Content Handlers</a>
-    </li><li><a href="infrastructure.html#ref-for-browsing-context-3">2.2.1. Conformance classes</a> <a href="infrastructure.html#ref-for-browsing-context-4">(2)</a>
+    <li><a href="introduction.html#ref-for-browsing-context-1">1.5.1. 스크립트 실행의 직렬화</a>
+    </li><li><a href="infrastructure.html#ref-for-browsing-context-2">2.1.5. Plugin 콘텐트 처리기</a>
+    </li><li><a href="infrastructure.html#ref-for-browsing-context-3">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-browsing-context-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-5">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-browsing-context-6">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-7">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-browsing-context-8">(2)</a>
     </li><li><a href="dom.html#ref-for-browsing-context-9">3.1. Documents</a> <a href="dom.html#ref-for-browsing-context-10">(2)</a> <a href="dom.html#ref-for-browsing-context-11">(3)</a> <a href="dom.html#ref-for-browsing-context-12">(4)</a> <a href="dom.html#ref-for-browsing-context-13">(5)</a>
@@ -23715,7 +23707,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="child-browsing-context">
    <b><a href="browsers.html#child-browsing-context">#child-browsing-context</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-child-browsing-context-1">2.1.5. Plugin Content Handlers</a>
+    <li><a href="infrastructure.html#ref-for-child-browsing-context-1">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-child-browsing-context-2">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-child-browsing-context-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-child-browsing-context-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-child-browsing-context-5">(4)</a> <a href="semantics-embedded-content.html#ref-for-child-browsing-context-6">(5)</a>
     </li><li><a href="editing.html#ref-for-child-browsing-context-7">5.4.6. Focus management APIs</a>
     </li><li><a href="browsers.html#ref-for-child-browsing-context-8">6.1.1. Nested browsing contexts</a> <a href="browsers.html#ref-for-child-browsing-context-9">(2)</a> <a href="browsers.html#ref-for-child-browsing-context-10">(3)</a> <a href="browsers.html#ref-for-child-browsing-context-11">(4)</a> <a href="browsers.html#ref-for-child-browsing-context-12">(5)</a> <a href="browsers.html#ref-for-child-browsing-context-13">(6)</a>
@@ -24044,7 +24036,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="window-window">
    <b><a href="browsers.html#window-window">#window-window</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-window-window-1">1.9.1. Writing secure applications with HTML</a>
+    <li><a href="introduction.html#ref-for-window-window-1">1.9.1. HTML로 안전한 어플리케이션 작성</a>
     </li><li><a href="infrastructure.html#ref-for-window-window-2">2.7.5. Garbage collection</a> <a href="infrastructure.html#ref-for-window-window-3">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-window-window-4">2.9.3. StructuredCloneWithTransfer ( input, transferList, targetRealm )</a>
     </li><li><a href="document-metadata.html#ref-for-window-window-5">4.2.4. The link element</a>
@@ -24084,7 +24076,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="dom-window-top">
    <b><a href="browsers.html#dom-window-top">#dom-window-top</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-dom-window-top-1">1.9.1. Writing secure applications with HTML</a>
+    <li><a href="introduction.html#ref-for-dom-window-top-1">1.9.1. HTML로 안전한 어플리케이션 작성</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-window-opener">
@@ -26010,7 +26002,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="event-loop">
    <b><a href="webappapis.html#event-loop">#event-loop</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-event-loop-1">2.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-event-loop-1">2.1. 전문 용어</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. Interactions with XPath and XSLT</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-3">2.9.1. Cloneable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-4">2.9.2. Transferable objects</a>
@@ -26295,7 +26287,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="synchronous-section">
    <b><a href="webappapis.html#synchronous-section">#synchronous-section</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-synchronous-section-1">1.7.2. Typographic conventions</a>
+    <li><a href="introduction.html#ref-for-synchronous-section-1">1.7.2. 표기법</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-synchronous-section-2">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-5">(4)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-6">(5)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-7">(6)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-8">(7)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-9">(8)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-synchronous-section-10">4.7.14.5. Loading the media resource</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-11">(2)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-12">(3)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-13">(4)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-14">(5)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-15">(6)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-16">(7)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-17">(8)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-18">(9)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-19">(10)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-20">(11)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-21">(12)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-22">(13)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-23">(14)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-24">(15)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-25">(16)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-26">(17)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-27">(18)</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-28">(19)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-synchronous-section-29">4.7.14.8. Playing the media resource</a> <a href="semantics-embedded-content.html#ref-for-synchronous-section-30">(2)</a>
@@ -26421,9 +26413,9 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="event-handler-content-event-handler-content-attribute">
    <b><a href="webappapis.html#event-handler-content-event-handler-content-attribute">#event-handler-content-event-handler-content-attribute</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-event-handler-content-event-handler-content-attribute-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-event-handler-content-event-handler-content-attribute-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="introduction.html#ref-for-event-handler-content-event-handler-content-attribute-2">1.9.2. 
-  Common pitfalls to avoid when using the scripting APIs </a>
+  API 스크립팅을 사용하는 경우를 막는 일반적인 위험 </a>
     </li><li><a href="dom.html#ref-for-event-handler-content-event-handler-content-attribute-3">3.2.5. Global attributes</a>
     </li><li><a href="sections.html#ref-for-event-handler-content-event-handler-content-attribute-4">4.3.1. The body element</a> <a href="sections.html#ref-for-event-handler-content-event-handler-content-attribute-5">(2)</a> <a href="sections.html#ref-for-event-handler-content-event-handler-content-attribute-6">(3)</a>
     </li><li><a href="webappapis.html#ref-for-event-handler-content-event-handler-content-attribute-7">7.1.1. Introduction</a>
@@ -26862,9 +26854,9 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="dom-globaleventhandlers-onload">
    <b><a href="webappapis.html#dom-globaleventhandlers-onload">#dom-globaleventhandlers-onload</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-dom-globaleventhandlers-onload-1">1.9.1. Writing secure applications with HTML</a>
+    <li><a href="introduction.html#ref-for-dom-globaleventhandlers-onload-1">1.9.1. HTML로 안전한 어플리케이션 작성</a>
     </li><li><a href="introduction.html#ref-for-dom-globaleventhandlers-onload-2">1.9.2. 
-  Common pitfalls to avoid when using the scripting APIs </a>
+  API 스크립팅을 사용하는 경우를 막는 일반적인 위험 </a>
     </li><li><a href="sections.html#ref-for-dom-globaleventhandlers-onload-3">4.3.1. The body element</a>
     </li><li><a href="webappapis.html#ref-for-dom-globaleventhandlers-onload-4">7.1.5.2.1. IDL definitions</a>
     </li><li><a href="obsolete.html#ref-for-dom-globaleventhandlers-onload-5">11.3.3. Frames</a>
@@ -27744,7 +27736,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="start-tag">
    <b><a href="syntax.html#start-tag">#start-tag</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-start-tag-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-start-tag-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="dom.html#ref-for-start-tag-2">3.2.3. Element definitions</a>
     </li><li><a href="semantics.html#ref-for-start-tag-3">4.1.1. The html element</a>
     </li><li><a href="document-metadata.html#ref-for-start-tag-4">4.2.1. The head element</a>
@@ -27761,7 +27753,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="end-tag">
    <b><a href="syntax.html#end-tag">#end-tag</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-end-tag-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-end-tag-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="dom.html#ref-for-end-tag-2">3.2.3. Element definitions</a>
     </li><li><a href="dom.html#ref-for-end-tag-3">3.2.4.1. The "nothing" content model</a>
     </li><li><a href="semantics.html#ref-for-end-tag-4">4.1.1. The html element</a>
@@ -27808,21 +27800,21 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="attribute">
    <b><a href="syntax.html#attribute">#attribute</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-attribute-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-attribute-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="syntax.html#ref-for-attribute-2">8.1.2.1. Start tags</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="name">
    <b><a href="syntax.html#name">#name</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-name-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-name-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="syntax.html#ref-for-name-2">8.1.2.3. Attributes</a> <a href="syntax.html#ref-for-name-3">(2)</a> <a href="syntax.html#ref-for-name-4">(3)</a> <a href="syntax.html#ref-for-name-5">(4)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="attribute-value">
    <b><a href="syntax.html#attribute-value">#attribute-value</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-attribute-value-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-attribute-value-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="dom.html#ref-for-attribute-value-2">3.2.5.6. The dir attribute</a> <a href="dom.html#ref-for-attribute-value-3">(2)</a> <a href="dom.html#ref-for-attribute-value-4">(3)</a>
     </li><li><a href="syntax.html#ref-for-attribute-value-5">8.1.2.3. Attributes</a> <a href="syntax.html#ref-for-attribute-value-6">(2)</a> <a href="syntax.html#ref-for-attribute-value-7">(3)</a>
    </li></ul>
@@ -27830,13 +27822,13 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="unquoted">
    <b><a href="syntax.html#unquoted">#unquoted</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-unquoted-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-unquoted-1">1.9. HTML 간단한 소개</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="optional-start-and-end-tags">
    <b><a href="syntax.html#optional-start-and-end-tags">#optional-start-and-end-tags</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-optional-start-and-end-tags-1">1.9. A quick introduction to HTML</a>
+    <li><a href="introduction.html#ref-for-optional-start-and-end-tags-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="dom.html#ref-for-optional-start-and-end-tags-2">3.2.3. Element definitions</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-optional-start-and-end-tags-3">4.7.6. The iframe element</a>
     </li><li><a href="syntax.html#ref-for-optional-start-and-end-tags-4">8.1. Writing HTML documents</a>
@@ -27925,7 +27917,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="parser-parse-error">
    <b><a href="syntax.html#parser-parse-error">#parser-parse-error</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="introduction.html#ref-for-parser-parse-error-1">1.10.2. Syntax errors</a>
+    <li><a href="introduction.html#ref-for-parser-parse-error-1">1.10.2. 구문 오류</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-parser-parse-error-2">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-parser-parse-error-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-parser-parse-error-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-parser-parse-error-5">(4)</a> <a href="semantics-embedded-content.html#ref-for-parser-parse-error-6">(5)</a> <a href="semantics-embedded-content.html#ref-for-parser-parse-error-7">(6)</a> <a href="semantics-embedded-content.html#ref-for-parser-parse-error-8">(7)</a> <a href="semantics-embedded-content.html#ref-for-parser-parse-error-9">(8)</a> <a href="semantics-embedded-content.html#ref-for-parser-parse-error-10">(9)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-parser-parse-error-11">4.7.6. The iframe element</a>
     </li><li><a href="semantics-scripting.html#ref-for-parser-parse-error-12">4.12.2. The noscript element</a> <a href="semantics-scripting.html#ref-for-parser-parse-error-13">(2)</a>
@@ -28162,13 +28154,13 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="utf-16be">
    <b><a href="syntax.html#utf-16be">#utf-16be</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-16be-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-utf-16be-1">2.1.6. 문자 인코딩</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="utf-16le">
    <b><a href="syntax.html#utf-16le">#utf-16le</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-utf-16le-1">2.1.6. Character encodings</a>
+    <li><a href="infrastructure.html#ref-for-utf-16le-1">2.1.6. 문자 인코딩</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="x-user-defined">
@@ -28643,7 +28635,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
   <aside class="dfn-panel" data-for="scripting-flag">
    <b><a href="syntax.html#scripting-flag">#scripting-flag</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-scripting-flag-1">2.2.1. Conformance classes</a>
+    <li><a href="infrastructure.html#ref-for-scripting-flag-1">2.2.1. 적합성 종류</a>
     </li><li><a href="semantics-scripting.html#ref-for-scripting-flag-2">4.12.2. The noscript element</a>
     </li><li><a href="syntax.html#ref-for-scripting-flag-3">8.2.3.5. Other parsing state flags</a>
     </li><li><a href="syntax.html#ref-for-scripting-flag-4">8.2.5.4.4. The "in head" insertion mode</a> <a href="syntax.html#ref-for-scripting-flag-5">(2)</a>
@@ -31576,7 +31568,7 @@ or because it is an unknown type that will be processed <a data-link-type="dfn" 
    <b><a href="fullindex.html#eventdef-global-load">#eventdef-global-load</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-eventdef-global-load-1">1.9.2. 
-  Common pitfalls to avoid when using the scripting APIs </a>
+  API 스크립팅을 사용하는 경우를 막는 일반적인 위험 </a>
     </li><li><a href="obsolete.html#ref-for-eventdef-global-load-2">11.3.3. Frames</a> <a href="obsolete.html#ref-for-eventdef-global-load-3">(2)</a>
     </li><li><a href="fullindex.html#ref-for-eventdef-global-load-4">Attributes</a>
     </li><li><a href="fullindex.html#ref-for-eventdef-global-load-5">Events</a>
