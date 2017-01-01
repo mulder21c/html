@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <meta content="ED" name="w3c-status">
-  <title>HTML: 5. User interaction</title>
+  <meta content="REC" name="w3c-status">
+  <title>HTML 5.1: 5. User interaction</title>
   <link href="styles/styles-html.css" rel="stylesheet" type="text/css">
-  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED" rel="stylesheet" type="text/css">
+  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-REC" rel="stylesheet" type="text/css">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
  *
@@ -1423,8 +1423,8 @@ pre.idl.highlight { color: #708090; }
   <div class="head">
    <header>
     <p data-fill-with="logo"><a href="http://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"></a></p>
-    <h1 class="p-name no-ref allcaps" id="title">HTML</h1>
-    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2016-06-02">2 June 2016</time></span></h2>
+    <h1 class="p-name no-ref allcaps" id="title">HTML 5.1</h1>
+    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Recommendation, <time class="dt-updated" datetime="2016-11-01">1 November 2016</time></span></h2>
    </header>
    
    
@@ -1445,7 +1445,7 @@ pre.idl.highlight { color: #708090; }
       </li><li><a href="editing.html#inert-subtrees"><span class="secno">5.2</span> <span class="content">Inert subtrees</span></a>
       </li><li><a href="editing.html#activation"><span class="secno">5.3</span> <span class="content">Activation</span></a>
       </li><li>
-       <a href="editing.html#focus"><span class="secno">5.4</span> <span class="content">Focus</span></a>
+       <a href="editing.html#focus0"><span class="secno">5.4</span> <span class="content">Focus</span></a>
        <ol class="toc">
         <li><a href="editing.html#focus-introduction"><span class="secno">5.4.1</span> <span class="content">Introduction</span></a>
         </li><li><a href="editing.html#data-model"><span class="secno">5.4.2</span> <span class="content">Data model</span></a>
@@ -1675,7 +1675,7 @@ pre.idl.highlight { color: #708090; }
        <p><a data-link-type="dfn" href="editing.html#running-synthetic-click-activation-steps" id="ref-for-running-synthetic-click-activation-steps-11">Run synthetic click activation steps</a> on the element.</p>
      </li></ol>
     </div>
-    <h3 class="heading settled" data-level="5.4" id="focus"><span class="secno">5.4. </span><span class="content">Focus</span><a class="self-link" href="editing.html#focus"></a></h3>
+    <h3 class="heading settled" data-level="5.4" id="focus0"><span class="secno">5.4. </span><span class="content">Focus</span><a class="self-link" href="editing.html#focus0"></a></h3>
     <h4 class="heading settled" data-level="5.4.1" id="focus-introduction"><span class="secno">5.4.1. </span><span class="content">Introduction</span><a class="self-link" href="editing.html#focus-introduction"></a></h4>
     <p><em>This section is non-normative.</em></p>
     <p>An HTML user interface typically consists of multiple interactive widgets, such as form
@@ -2260,7 +2260,7 @@ pre.idl.highlight { color: #708090; }
      </dt><dd>
       <p>Moves the focus to the <a data-link-type="dfn" href="infrastructure.html#viewport" id="ref-for-viewport-30">viewport</a>. Use of this method is discouraged; if you want to focus the <a data-link-type="dfn" href="infrastructure.html#viewport" id="ref-for-viewport-31">viewport</a>, call the <code>focus()</code> method on the <code>Document</code>’s root element.</p>
       <p>Do not use this method to hide the focus ring if you find the focus ring unsightly. Instead,
-    use a CSS rule to override the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-ui-3/#propdef-outline">outline</a> property, and provide a different way to show what
+    use a CSS rule to override the <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/CSS22/ui.html#propdef-outline">outline</a> property, and provide a different way to show what
     element is focused. Be aware that if an alternative focusing style isn’t made available, the
     page will be significantly less usable for people who primarily navigate pages using a keyboard,
     or those with reduced vision who use focus outlines to help them navigate the page.</p>
@@ -2271,7 +2271,7 @@ pre.idl.highlight { color: #708090; }
       </div>
       <p>Do not use this method to hide the focus ring. Do not use any
     other method that hides the focus ring from keyboard users, in
-    particular do not use a CSS rule to override the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-ui-3/#propdef-outline">outline</a> property. Removal of the focus ring leads to serious accessibility
+    particular do not use a CSS rule to override the <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/CSS22/ui.html#propdef-outline">outline</a> property. Removal of the focus ring leads to serious accessibility
     issues for users who navigate and interact with interactive
     content using the keyboard.</p>
     </dd></dl>
@@ -2456,30 +2456,30 @@ pre.idl.highlight { color: #708090; }
   start and end boundary points to be at the start of the <code>Document</code> and then run the <a data-link-type="dfn" href="editing.html#focusing-steps" id="ref-for-focusing-steps-13">focusing steps</a> for the root element of the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>, if any.</p>
     </div>
     <h4 class="heading settled" data-level="5.6.3" id="best-practices-for-in-page-editors"><span class="secno">5.6.3. </span><span class="content">Best practices for in-page editors</span><a class="self-link" href="editing.html#best-practices-for-in-page-editors"></a></h4>
-    <p>Authors are encouraged to set the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-text-3/#propdef-white-space">white-space</a> property on <a data-link-type="dfn" href="editing.html#editing-host" id="ref-for-editing-host-4">editing
+    <p>Authors are encouraged to set the <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/CSS22/text.html#propdef-white-space">white-space</a> property on <a data-link-type="dfn" href="editing.html#editing-host" id="ref-for-editing-host-4">editing
   hosts</a> and on markup that was originally created through these editing mechanisms to the
   value <a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-text-3/#valdef-white-space-pre-wrap">pre-wrap</a>. Default HTML whitespace handling is not well suited to WYSIWYG editing, and line
-  wrapping will not work correctly in some corner cases if <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-text-3/#propdef-white-space">white-space</a> is left at its default
+  wrapping will not work correctly in some corner cases if <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/CSS22/text.html#propdef-white-space">white-space</a> is left at its default
   value.</p>
     <div class="example" id="example-9da9a343">
      <a class="self-link" href="editing.html#example-9da9a343"></a> As an example of problems that occur if the default <span class="css">normal</span> value is used instead, consider
     the case of the user typing "<kbd>yellow␣␣ball</kbd>", with two spaces (here
     represented by "␣") between the words. With the editing rules in place for the default
-    value of <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-text-3/#propdef-white-space">white-space</a> (<span class="css">normal</span>), the resulting markup will either consist of
+    value of <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/CSS22/text.html#propdef-white-space">white-space</a> (<span class="css">normal</span>), the resulting markup will either consist of
     "<samp>yellow&amp;nbsp;&nbsp;ball</samp>" or "<samp>yellow&nbsp;&amp;nbsp;ball</samp>"; i.e.,
     there will be a non-breaking space between the two words in addition to the regular space. This
-    is necessary because the <span class="css">normal</span> value for <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-text-3/#propdef-white-space">white-space</a> requires adjacent regular spaces to be
+    is necessary because the <span class="css">normal</span> value for <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/CSS22/text.html#propdef-white-space">white-space</a> requires adjacent regular spaces to be
     collapsed together. 
      <p>In the former case, "<samp>yellow⍽</samp>" might wrap to the next line ("⍽"
     being used here to represent a non-breaking space) even though "<samp>yellow</samp>" alone might
     fit at the end of the line; in the latter case, "<samp>⍽ball</samp>", if wrapped to the
     start of the line, would have visible indentation from the non-breaking space.</p>
-     <p>When <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-text-3/#propdef-white-space">white-space</a> is set to <a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-text-3/#valdef-white-space-pre-wrap">pre-wrap</a>, however, the editing rules will instead simply put
+     <p>When <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/CSS22/text.html#propdef-white-space">white-space</a> is set to <a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-text-3/#valdef-white-space-pre-wrap">pre-wrap</a>, however, the editing rules will instead simply put
     two regular spaces between the words, and should the two words be split at the end of a line, the
     spaces would be neatly removed from the rendering.</p>
     </div>
     <h4 class="heading settled" data-level="5.6.4" id="editing-apis"><span class="secno">5.6.4. </span><span class="content">Editing APIs</span><a class="self-link" href="editing.html#editing-apis"></a></h4>
-    <p>The definition of the terms <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="active-range">active range</dfn>, <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="editing-host">editing host</dfn>, and <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="editable">editable</dfn>, the user interface requirements of elements that are <a data-link-type="dfn" href="editing.html#editing-host" id="ref-for-editing-host-5">editing hosts</a> or <a data-link-type="dfn" href="editing.html#editable" id="ref-for-editable-3">editable</a>, the <dfn class="css" data-dfn-type="function" data-export="" id="funcdef-execcommand"><code>execCommand()</code><a class="self-link" href="editing.html#funcdef-execcommand"></a></dfn>, <dfn class="css" data-dfn-type="function" data-export="" id="funcdef-querycommandenabled"><code>queryCommandEnabled()</code><a class="self-link" href="editing.html#funcdef-querycommandenabled"></a></dfn>, <dfn class="css" data-dfn-type="function" data-export="" id="funcdef-querycommandindeterm"><code>queryCommandIndeterm()</code><a class="self-link" href="editing.html#funcdef-querycommandindeterm"></a></dfn>, <dfn class="css" data-dfn-type="function" data-export="" id="funcdef-querycommandstate"><code>queryCommandState()</code><a class="self-link" href="editing.html#funcdef-querycommandstate"></a></dfn>, <dfn class="css" data-dfn-type="function" data-export="" id="funcdef-querycommandsupported"><code>queryCommandSupported()</code><a class="self-link" href="editing.html#funcdef-querycommandsupported"></a></dfn>, and <dfn class="css" data-dfn-type="function" data-export="" id="funcdef-querycommandvalue"><code>queryCommandValue()</code><a class="self-link" href="editing.html#funcdef-querycommandvalue"></a></dfn> methods, text selections, and the <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="delete-the-selection">delete the selection</dfn> algorithm are being specified in the various developing
+    <p>The definition of the terms <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="active-range">active range</dfn>, <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="editing-host">editing host</dfn>, and <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="editable">editable</dfn>, the user interface requirements of elements that are <a data-link-type="dfn" href="editing.html#editing-host" id="ref-for-editing-host-5">editing hosts</a> or <a data-link-type="dfn" href="editing.html#editable" id="ref-for-editable-3">editable</a>, the <dfn data-dfn-type="dfn" data-noexport="" id="execcommand"><code>execCommand()</code><a class="self-link" href="editing.html#execcommand"></a></dfn>, <dfn data-dfn-type="dfn" data-noexport="" id="querycommandenabled"><code>queryCommandEnabled()</code><a class="self-link" href="editing.html#querycommandenabled"></a></dfn>, <dfn data-dfn-type="dfn" data-noexport="" id="querycommandindeterm"><code>queryCommandIndeterm()</code><a class="self-link" href="editing.html#querycommandindeterm"></a></dfn>, <dfn data-dfn-type="dfn" data-noexport="" id="querycommandstate"><code>queryCommandState()</code><a class="self-link" href="editing.html#querycommandstate"></a></dfn>, <dfn data-dfn-type="dfn" data-noexport="" id="querycommandsupported"><code>queryCommandSupported()</code><a class="self-link" href="editing.html#querycommandsupported"></a></dfn>, and <dfn data-dfn-type="dfn" data-noexport="" id="querycommandvalue"><code>queryCommandValue()</code><a class="self-link" href="editing.html#querycommandvalue"></a></dfn> methods, text selections, and the <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="delete-the-selection">delete the selection</dfn> algorithm are being specified in the various developing
   HTML Editing specification drafts <a data-link-type="biblio" href="references.html#biblio-editing">[EDITING]</a>. The interaction of editing and undo/redo
   features are being specified in the UndoManager and DOM Transaction specification. <a data-link-type="biblio" href="references.html#biblio-undo">[UNDO]</a></p>
     <h4 class="heading settled" data-level="5.6.5" id="spelling-and-grammar-checking"><span class="secno">5.6.5. </span><span class="content">Spelling and grammar checking</span><a class="self-link" href="editing.html#spelling-and-grammar-checking"></a></h4>
@@ -2582,7 +2582,7 @@ pre.idl.highlight { color: #708090; }
   text that the user agent deems the user has no interest in having checked (e.g., text that was
   already present when the page was loaded, or that the user did not type, or text in controls that
   the user has not focused, or in parts of e-mail addresses that the user agent is not confident
-  were misspelt). The <dfn class="css" data-dfn-type="function" data-export="" id="funcdef-forcespellcheck"><code>forceSpellCheck()</code><a class="self-link" href="editing.html#funcdef-forcespellcheck"></a></dfn> method,
+  were misspelt). The <dfn data-dfn-type="dfn" data-noexport="" id="forcespellcheck"><code>forceSpellCheck()</code><a class="self-link" href="editing.html#forcespellcheck"></a></dfn> method,
   when invoked on an element, must override this behavior, forcing the user agent to consider all
   spelling and grammar errors in text in that element for which checking is enabled to be of
   interest to the user.</p>
@@ -2718,7 +2718,7 @@ specific to your site </span><span class="c">--&gt;</span>
         <p>A Unicode string giving the type or format of the data, generally given by a <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-29">MIME
       type</a>. Some values that are not <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-30">MIME types</a> are
       special-cased for legacy reasons. The API does not enforce the use of <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-31">MIME types</a>; other values can be used as well. In all cases, however, the values
-      are all <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#converted-to-ascii-lowercase">converted to ASCII lowercase</a> by the API.</p>
+      are all <a data-link-type="dfn">converted to ASCII lowercase</a> by the API.</p>
         <p class="note" role="note"> Strings that contain <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-57">space characters</a> cannot be used with the <code><a data-link-type="element-sub" href="editing.html#element-attrdef-global-dropzone" id="ref-for-element-attrdef-global-dropzone-5">dropzone</a></code> attribute, so authors are
       encouraged to use only <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-32">MIME types</a> or custom strings (without
       spaces). </p>
@@ -2863,7 +2863,7 @@ specific to your site </span><span class="c">--&gt;</span>
       </li><li>If the <a data-link-type="dfn" href="editing.html#drag-data-store" id="ref-for-drag-data-store-11">drag data store</a>’s mode is
     the <a data-link-type="dfn" href="editing.html#protected-mode" id="ref-for-protected-mode-2">protected mode</a>, return the empty string and abort these
     steps.
-      </li><li>Let <var>format</var> be the first argument, <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#converted-to-ascii-lowercase">converted to ASCII
+      </li><li>Let <var>format</var> be the first argument, <a data-link-type="dfn">converted to ASCII
     lowercase</a>.
       </li><li>Let <var>convert-to-URL</var> be false.
       </li><li>If <var>format</var> equals "<code>text</code>", change it to "<code>text/plain</code>".
@@ -2884,7 +2884,7 @@ specific to your site </span><span class="c">--&gt;</span>
       </li><li>If the <a data-link-type="dfn" href="editing.html#drag-data-store" id="ref-for-drag-data-store-13">drag data store</a>’s mode is
     not the <a data-link-type="dfn" href="editing.html#read-write-mode" id="ref-for-read-write-mode-3">read/write mode</a>, abort these steps. Nothing
     happens.
-      </li><li>Let <var>format</var> be the first argument, <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#converted-to-ascii-lowercase">converted to ASCII
+      </li><li>Let <var>format</var> be the first argument, <a data-link-type="dfn">converted to ASCII
     lowercase</a>.
       </li><li>
        <p>If <var>format</var> equals "<code>text</code>", change it to "<code>text/plain</code>".</p>
@@ -2905,7 +2905,7 @@ specific to your site </span><span class="c">--&gt;</span>
       </li><li>If the method was called with no arguments, remove each item in the <a data-link-type="dfn" href="editing.html#drag-data-store-item-list" id="ref-for-drag-data-store-item-list-9">drag data store
     item list</a> whose <code class="idl"><a data-link-type="idl" href="editing.html#dom-datatransferitem-kind" id="ref-for-dom-datatransferitem-kind-7">kind</a></code> is <i>Plain Unicode
     string</i>, and abort these steps.
-      </li><li>Let <var>format</var> be the first argument, <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#converted-to-ascii-lowercase">converted to ASCII
+      </li><li>Let <var>format</var> be the first argument, <a data-link-type="dfn">converted to ASCII
     lowercase</a>.
       </li><li>
        <p>If <var>format</var> equals "<code>text</code>", change it to "<code>text/plain</code>".</p>
@@ -2984,14 +2984,14 @@ specific to your site </span><span class="c">--&gt;</span>
         <dt>If the first argument to the method is a string
         </dt><dd>
          <p>If there is already an item in the <a data-link-type="dfn" href="editing.html#drag-data-store-item-list" id="ref-for-drag-data-store-item-list-14">drag data store item list</a> whose <code class="idl"><a data-link-type="idl" href="editing.html#dom-datatransferitem-kind" id="ref-for-dom-datatransferitem-kind-10">kind</a></code> is <i>Plain Unicode string</i> and whose <a data-link-type="dfn" href="editing.html#item-type-string" id="ref-for-item-type-string-8">type string</a> is equal to the value of the
-      method’s second argument, <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#converted-to-ascii-lowercase">converted to ASCII lowercase</a>, then throw a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#notsupportederror">NotSupportedError</a></code> exception and abort these steps.</p>
+      method’s second argument, <a data-link-type="dfn">converted to ASCII lowercase</a>, then throw a <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#notsupportederror">NotSupportedError</a></code> exception and abort these steps.</p>
          <p>Otherwise, add an item to the <a data-link-type="dfn" href="editing.html#drag-data-store-item-list" id="ref-for-drag-data-store-item-list-15">drag data store item list</a> whose <code class="idl"><a data-link-type="idl" href="editing.html#dom-datatransferitem-kind" id="ref-for-dom-datatransferitem-kind-11">kind</a></code> is <i>Plain Unicode string</i>, whose <a data-link-type="dfn" href="editing.html#item-type-string" id="ref-for-item-type-string-9">type string</a> is equal to the value of the method’s second
-      argument, <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#converted-to-ascii-lowercase">converted to ASCII lowercase</a>, and whose data is the string given by the
+      argument, <a data-link-type="dfn">converted to ASCII lowercase</a>, and whose data is the string given by the
       method’s first argument.</p>
         </dd><dt>If the first argument to the method is a <code>File</code>
         </dt><dd>
          <p>Add an item to the <a data-link-type="dfn" href="editing.html#drag-data-store-item-list" id="ref-for-drag-data-store-item-list-16">drag data store item list</a> whose <code class="idl"><a data-link-type="idl" href="editing.html#dom-datatransferitem-kind" id="ref-for-dom-datatransferitem-kind-12">kind</a></code> is <i>File</i>, whose <a data-link-type="dfn" href="editing.html#item-type-string" id="ref-for-item-type-string-10">type
-      string</a> is the <code class="idl"><a data-link-type="idl" href="editing.html#dom-datatransferitem-type" id="ref-for-dom-datatransferitem-type-1">type</a></code> of the <code>File</code>, <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#converted-to-ascii-lowercase">converted to ASCII lowercase</a>, and whose data is the same as the <code>File</code>’s data.</p>
+      string</a> is the <code class="idl"><a data-link-type="idl" href="editing.html#dom-datatransferitem-type" id="ref-for-dom-datatransferitem-type-1">type</a></code> of the <code>File</code>, <a data-link-type="dfn">converted to ASCII lowercase</a>, and whose data is the same as the <code>File</code>’s data.</p>
        </dd></dl>
       </li><li><a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#dfn-determine-the-value-of-an-indexed-property">Determine the value of the indexed property</a> corresponding to the newly added item, and return that value (a newly created <code class="idl"><a data-link-type="idl" href="editing.html#datatransferitem-datatransferitem" id="ref-for-datatransferitem-datatransferitem-7">DataTransferItem</a></code> object).
      </li></ol>
@@ -3253,7 +3253,7 @@ specific to your site </span><span class="c">--&gt;</span>
     context</a>, for example from a file system manager application. </p>
        <p>If the drag initiated outside of the application, the user agent must add items to the <a data-link-type="dfn" href="editing.html#drag-data-store-item-list" id="ref-for-drag-data-store-item-list-21">drag data store item list</a> as appropriate for the data being dragged, honoring
     platform conventions where appropriate; however, if the platform conventions do not use <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-33">MIME types</a> to label dragged data, the user agent must make a
-    best-effort attempt to map the types to MIME types, and, in any case, all the <a data-link-type="dfn" href="editing.html#item-type-string" id="ref-for-item-type-string-15">drag data item type strings</a> must be <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#converted-to-ascii-lowercase">converted to ASCII
+    best-effort attempt to map the types to MIME types, and, in any case, all the <a data-link-type="dfn" href="editing.html#item-type-string" id="ref-for-item-type-string-15">drag data item type strings</a> must be <a data-link-type="dfn">converted to ASCII
     lowercase</a>.</p>
        <p>User agents may also add one or more items representing the selection or dragged element(s)
     in other forms, e.g., as HTML.</p>
@@ -3270,7 +3270,7 @@ specific to your site </span><span class="c">--&gt;</span>
       </li><li>
        <p>Run the following substeps:</p>
        <ol>
-        <li>Let <var>urls</var> be an empty list of <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URLs</a>.
+        <li>Let <var>urls</var> be an empty list of <a data-link-type="dfn">absolute URLs</a>.
         </li><li>
          <p>For each <var>node</var> in the <a data-link-type="dfn" href="editing.html#list-of-dragged-nodes" id="ref-for-list-of-dragged-nodes-4">list of dragged nodes</a>:</p>
          <dl>
@@ -3667,7 +3667,7 @@ specific to your site </span><span class="c">--&gt;</span>
       <p>Indicates that dropping an accepted item on the element will result in the dragged data being
   moved to the new location.</p>
      </dd><dt data-md="">
-      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="link"><code>link</code></dfn></p>
+      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="link0"><code>link</code></dfn></p>
      </dt><dd data-md="">
       <p>Indicates that dropping an accepted item on the element will result in a link to the original
   data.</p>
@@ -3726,7 +3726,7 @@ the string, then skip to the step labeled <i>end of keyword</i> below.</p>
         </li><li data-md="">
          <p>Let <var>kind code</var> be the substring of <var>keyword</var> from the first character
 in the string to the last character in the string that is before the first U+003A COLON
-character (:) in the string, <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#converted-to-ascii-lowercase">converted to ASCII lowercase</a>.</p>
+character (:) in the string, <a data-link-type="dfn">converted to ASCII lowercase</a>.</p>
         </li><li data-md="">
          <p>Jump to the appropriate step from the list below, based on the value of <var>kind code</var>:</p>
          <dl class="switch">
@@ -3739,7 +3739,7 @@ character (:) in the string, <a data-link-type="dfn" href="https://dom.spec.what
          </dd></dl>
         </li><li data-md="">
          <p>Let <var>type</var> be the substring of <var>keyword</var> from the first character after
-the first U+003A COLON character (:) in the string, to the last character in the string, <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#converted-to-ascii-lowercase">converted to ASCII lowercase</a>.</p>
+the first U+003A COLON character (:) in the string, to the last character in the string, <a data-link-type="dfn">converted to ASCII lowercase</a>.</p>
         </li><li data-md="">
          <p>If there exist any items in the <a data-link-type="dfn" href="editing.html#drag-data-store-item-list" id="ref-for-drag-data-store-item-list-28">drag data store item list</a> whose <a data-link-type="dfn" href="editing.html#a-drag-data-item-kind" id="ref-for-a-drag-data-item-kind-18">drag data item kind</a> is  the kind given in <var>kind</var> and whose <a data-link-type="dfn" href="editing.html#item-type-string" id="ref-for-item-type-string-24">drag data item type string</a> is <var>type</var>, then let <var>matched</var> be
 true.</p>
@@ -3789,7 +3789,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     important because otherwise user agents could cause data to be dragged from sensitive sources and
     dropped into hostile documents without the user’s consent.</p>
      <p>User agents should filter potentially active (scripted) content (e.g., HTML) when it is dragged
-    and when it is dropped, using a safelist of known-safe features. Similarly, <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-relative">relative URLs</a> should be turned into absolute URLs to avoid references changing in unexpected ways. This
+    and when it is dropped, using a safelist of known-safe features. Similarly, <a data-link-type="dfn">relative URLs</a> should be turned into absolute URLs to avoid references changing in unexpected ways. This
     specification does not specify how this is performed.</p>
      <div class="example" id="example-5c09ff14"><a class="self-link" href="editing.html#example-5c09ff14"></a> Consider a hostile page providing some content and getting the user to select and drag and
       drop (or indeed, copy and paste) that content to a victim page’s <code><a data-link-type="element-sub" href="editing.html#element-attrdef-global-contenteditable" id="ref-for-element-attrdef-global-contenteditable-4">contenteditable</a></code> region. If the browser does not ensure that only safe content is dragged, potentially unsafe
@@ -3804,7 +3804,7 @@ The specified operation, if one is specified, is the one given by <var>operation
    <b><a href="introduction.html#willful-violation">#willful-violation</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-willful-violation-1">2.2.2. 의존성</a>
-    </li><li><a href="infrastructure.html#ref-for-willful-violation-2">2.2.4. Interactions with XPath and XSLT</a> <a href="infrastructure.html#ref-for-willful-violation-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-willful-violation-2">2.2.4. XPath와 XSLT와의 상호작용</a> <a href="infrastructure.html#ref-for-willful-violation-3">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-willful-violation-4">4.10.5.1.5. E-mail state (type=email)</a>
     </li><li><a href="webappapis.html#ref-for-willful-violation-5">7.1.3.7. Integration with the JavaScript job queue</a>
     </li><li><a href="xhtml.html#ref-for-willful-violation-6">9.2. Parsing XHTML documents</a> <a href="xhtml.html#ref-for-willful-violation-7">(2)</a>
@@ -3848,7 +3848,7 @@ The specified operation, if one is specified, is the one given by <var>operation
    <ul>
     <li><a href="infrastructure.html#ref-for-html-document-1">2.1. 전문 용어</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-2">2.2.2. 의존성</a>
-    </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-4">2.5.1. Terminology</a>
     </li><li><a href="dom.html#ref-for-html-document-5">3.2.5. Global attributes</a>
     </li><li><a href="dom.html#ref-for-html-document-6">3.2.5.3. 
@@ -4854,7 +4854,7 @@ The specified operation, if one is specified, is the one given by <var>operation
   <aside class="dfn-panel" data-for="case-sensitive">
    <b><a href="infrastructure.html#case-sensitive">#case-sensitive</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-case-sensitive-1">2.3. Case-sensitivity and string comparison</a>
+    <li><a href="infrastructure.html#ref-for-case-sensitive-1">2.3. 대소문자 구별과 문자열 비교</a>
     </li><li><a href="infrastructure.html#ref-for-case-sensitive-2">2.4.9. References</a>
     </li><li><a href="dom.html#ref-for-case-sensitive-3">3.1.3. DOM tree accessors</a>
     </li><li><a href="grouping-content.html#ref-for-case-sensitive-4">4.4.5. The ol element</a>
@@ -4937,7 +4937,7 @@ The specified operation, if one is specified, is the one given by <var>operation
   <aside class="dfn-panel" data-for="converting-a-string-to-ascii-lowercase">
    <b><a href="infrastructure.html#converting-a-string-to-ascii-lowercase">#converting-a-string-to-ascii-lowercase</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-1">2.2.4. Interactions with XPath and XSLT</a> <a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-1">2.2.4. XPath와 XSLT와의 상호작용</a> <a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-2">(2)</a>
     </li><li><a href="semantics-scripting.html#ref-for-converting-a-string-to-ascii-lowercase-3">4.12.4.2. Serializing bitmaps to a file</a>
    </li></ul>
   </aside>
@@ -6361,7 +6361,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     <li><a href="infrastructure.html#ref-for-html-namespace-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-html-namespace-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-html-namespace-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. 적합성 종류</a>
-    </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-html-namespace-7">3.1.3. DOM tree accessors</a>
     </li><li><a href="dom.html#ref-for-html-namespace-8">3.2.4.2.6. Embedded content</a>
     </li><li><a href="dom.html#ref-for-html-namespace-9">3.2.5. Global attributes</a>
@@ -6617,7 +6617,7 @@ The specified operation, if one is specified, is the one given by <var>operation
   <aside class="dfn-panel" data-for="current-document-readiness">
    <b><a href="dom.html#current-document-readiness">#current-document-readiness</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-current-document-readiness-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-current-document-readiness-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-current-document-readiness-2">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-current-document-readiness-3">(2)</a>
     </li><li><a href="dom.html#ref-for-current-document-readiness-4">3.1.4. Loading XML documents</a> <a href="dom.html#ref-for-current-document-readiness-5">(2)</a>
     </li><li><a href="browsers.html#ref-for-current-document-readiness-6">6.7.10. History traversal</a>
@@ -9321,6 +9321,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-style-39">Element content categories</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-style-40">Attributes</a> <a href="fullindex.html#ref-for-elementdef-style-41">(2)</a> <a href="fullindex.html#ref-for-elementdef-style-42">(3)</a> <a href="fullindex.html#ref-for-elementdef-style-43">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-style-44">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-style-45">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlstyleelement-htmlstyleelement">
@@ -9524,6 +9525,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-section-25">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-section-26">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-section-27">(2)</a> <a href="fullindex.html#ref-for-elementdef-section-28">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-section-29">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-section-30">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-nav">
@@ -9589,6 +9591,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-16">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-17">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-h1-18">(2)</a> <a href="fullindex.html#ref-for-elementdef-h1-19">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-20">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-h1-21">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-h2">
@@ -9710,6 +9713,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-header-34">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-header-35">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-header-36">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-header-37">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-header-38">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-footer">
@@ -9733,6 +9737,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-33">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-34">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-footer-35">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-36">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-footer-37">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-address">
@@ -10178,6 +10183,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-37">Elements</a> <a href="fullindex.html#ref-for-elementdef-figure-38">(2)</a> <a href="fullindex.html#ref-for-elementdef-figure-39">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-40">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-figure-41">(2)</a> <a href="fullindex.html#ref-for-elementdef-figure-42">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-43">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-figure-44">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-figcaption">
@@ -10199,6 +10205,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="syntax.html#ref-for-elementdef-figcaption-26">8.2.3.2. The stack of open elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figcaption-27">Elements</a> <a href="fullindex.html#ref-for-elementdef-figcaption-28">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figcaption-29">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-figcaption-30">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-main">
@@ -10743,6 +10750,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-time-21">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-time-22">(2)</a> <a href="fullindex.html#ref-for-elementdef-time-23">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-time-24">Attributes</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-time-25">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-time-26">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmltimeelement-htmltimeelement">
@@ -11166,7 +11174,8 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-picture-20">4.7.5.1.21. An image in a picture element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-picture-21">(2)</a> <a href="semantics-embedded-content.html#ref-for-elementdef-picture-22">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-picture-23">Elements</a> <a href="fullindex.html#ref-for-elementdef-picture-24">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-picture-25">Element Interfaces</a>
-    </li><li><a href="acknowledgements.html#ref-for-elementdef-picture-26">Acknowledgements</a>
+    </li><li><a href="changes.html#ref-for-elementdef-picture-26">Features added</a>
+    </li><li><a href="acknowledgements.html#ref-for-elementdef-picture-27">Acknowledgements</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlpictureelement-htmlpictureelement">
@@ -11285,6 +11294,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-img-197">Attributes</a> <a href="fullindex.html#ref-for-elementdef-img-198">(2)</a> <a href="fullindex.html#ref-for-elementdef-img-199">(3)</a> <a href="fullindex.html#ref-for-elementdef-img-200">(4)</a> <a href="fullindex.html#ref-for-elementdef-img-201">(5)</a> <a href="fullindex.html#ref-for-elementdef-img-202">(6)</a> <a href="fullindex.html#ref-for-elementdef-img-203">(7)</a> <a href="fullindex.html#ref-for-elementdef-img-204">(8)</a> <a href="fullindex.html#ref-for-elementdef-img-205">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-img-206">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-img-207">Events</a> <a href="fullindex.html#ref-for-elementdef-img-208">(2)</a> <a href="fullindex.html#ref-for-elementdef-img-209">(3)</a> <a href="fullindex.html#ref-for-elementdef-img-210">(4)</a> <a href="fullindex.html#ref-for-elementdef-img-211">(5)</a> <a href="fullindex.html#ref-for-elementdef-img-212">(6)</a> <a href="fullindex.html#ref-for-elementdef-img-213">(7)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-img-214">Changes to existing features</a> <a href="changes.html#ref-for-elementdef-img-215">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlimageelement-htmlimageelement">
@@ -11310,7 +11320,8 @@ The specified operation, if one is specified, is the one given by <var>operation
     <li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-1">4.7.1. Introduction</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-2">(2)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-3">(3)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-4">(4)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-5">(5)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-6">4.7.5. The img element</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-img-srcset-7">Elements</a>
-    </li><li><a href="acknowledgements.html#ref-for-element-attrdef-img-srcset-8">Acknowledgements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-img-srcset-8">Features added</a>
+    </li><li><a href="acknowledgements.html#ref-for-element-attrdef-img-srcset-9">Acknowledgements</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="element-attrdef-img-alt">
@@ -11320,6 +11331,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-alt-2">4.7.5.1. Requirements for providing text to act as an alternative for images</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-alt-3">4.7.5.1.4. Graphical Representations: Charts, diagrams, graphs, maps, illustrations</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-img-alt-4">Elements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-img-alt-5">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="image-candidate-string">
@@ -11633,6 +11645,7 @@ The specified operation, if one is specified, is the one given by <var>operation
    <b><a href="semantics-embedded-content.html#dom-htmlimageelement-currentsrc">#dom-htmlimageelement-currentsrc</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="semantics-embedded-content.html#ref-for-dom-htmlimageelement-currentsrc-1">4.7.5. The img element</a>
+    </li><li><a href="changes.html#ref-for-dom-htmlimageelement-currentsrc-2">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlimageelement-image">
@@ -11933,6 +11946,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-object-119">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-object-120">(2)</a> <a href="fullindex.html#ref-for-elementdef-object-121">(3)</a> <a href="fullindex.html#ref-for-elementdef-object-122">(4)</a> <a href="fullindex.html#ref-for-elementdef-object-123">(5)</a> <a href="fullindex.html#ref-for-elementdef-object-124">(6)</a> <a href="fullindex.html#ref-for-elementdef-object-125">(7)</a> <a href="fullindex.html#ref-for-elementdef-object-126">(8)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-object-127">Attributes</a> <a href="fullindex.html#ref-for-elementdef-object-128">(2)</a> <a href="fullindex.html#ref-for-elementdef-object-129">(3)</a> <a href="fullindex.html#ref-for-elementdef-object-130">(4)</a> <a href="fullindex.html#ref-for-elementdef-object-131">(5)</a> <a href="fullindex.html#ref-for-elementdef-object-132">(6)</a> <a href="fullindex.html#ref-for-elementdef-object-133">(7)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-object-134">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-object-135">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlobjectelement-htmlobjectelement">
@@ -14081,6 +14095,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-area-104">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-area-105">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-area-106">Attributes</a> <a href="fullindex.html#ref-for-elementdef-area-107">(2)</a> <a href="fullindex.html#ref-for-elementdef-area-108">(3)</a> <a href="fullindex.html#ref-for-elementdef-area-109">(4)</a> <a href="fullindex.html#ref-for-elementdef-area-110">(5)</a> <a href="fullindex.html#ref-for-elementdef-area-111">(6)</a> <a href="fullindex.html#ref-for-elementdef-area-112">(7)</a> <a href="fullindex.html#ref-for-elementdef-area-113">(8)</a> <a href="fullindex.html#ref-for-elementdef-area-114">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-area-115">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-area-116">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlareaelement-htmlareaelement">
@@ -14433,6 +14448,7 @@ The specified operation, if one is specified, is the one given by <var>operation
    <ul>
     <li><a href="textlevel-semantics.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-1">4.5.1. The a element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-2">4.7.16. The area element</a>
+    </li><li><a href="changes.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-3">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="set-the-url">
@@ -15681,6 +15697,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-label-61">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-label-62">(2)</a> <a href="fullindex.html#ref-for-elementdef-label-63">(3)</a> <a href="fullindex.html#ref-for-elementdef-label-64">(4)</a> <a href="fullindex.html#ref-for-elementdef-label-65">(5)</a> <a href="fullindex.html#ref-for-elementdef-label-66">(6)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-label-67">Attributes</a> <a href="fullindex.html#ref-for-elementdef-label-68">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-label-69">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-label-70">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmllabelelement-htmllabelelement">
@@ -16054,6 +16071,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-input-value-20">4.10.5.3.8. The step attribute</a>
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-input-value-21">4.10.5.4. Common input element APIs</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-22">(2)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-23">(3)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-24">(4)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-25">(5)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-26">(6)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-27">(7)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-28">(8)</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-input-value-29">Elements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-input-value-30">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dirty-checkedness-flag">
@@ -17850,6 +17868,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-option-125">Elements</a> <a href="fullindex.html#ref-for-elementdef-option-126">(2)</a> <a href="fullindex.html#ref-for-elementdef-option-127">(3)</a> <a href="fullindex.html#ref-for-elementdef-option-128">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-option-129">Attributes</a> <a href="fullindex.html#ref-for-elementdef-option-130">(2)</a> <a href="fullindex.html#ref-for-elementdef-option-131">(3)</a> <a href="fullindex.html#ref-for-elementdef-option-132">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-option-133">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-option-134">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmloptionelement-htmloptionelement">
@@ -20281,6 +20300,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-details-32">Attributes</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-details-33">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-details-34">Events</a> <a href="fullindex.html#ref-for-elementdef-details-35">(2)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-details-36">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmldetailselement-htmldetailselement">
@@ -20319,6 +20339,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="rendering.html#ref-for-elementdef-summary-8">10.5.3. The details element</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-summary-9">Elements</a> <a href="fullindex.html#ref-for-elementdef-summary-10">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-summary-11">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-summary-12">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-menu">
@@ -20469,6 +20490,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-25">Elements</a> <a href="fullindex.html#ref-for-elementdef-menuitem-26">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-27">Attributes</a> <a href="fullindex.html#ref-for-elementdef-menuitem-28">(2)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-29">(3)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-30">(4)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-31">(5)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-32">(6)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-33">(7)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-34">(8)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-35">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-36">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-menuitem-37">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlmenuitemelement-htmlmenuitemelement">
@@ -20806,6 +20828,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-script-144">Attributes</a> <a href="fullindex.html#ref-for-elementdef-script-145">(2)</a> <a href="fullindex.html#ref-for-elementdef-script-146">(3)</a> <a href="fullindex.html#ref-for-elementdef-script-147">(4)</a> <a href="fullindex.html#ref-for-elementdef-script-148">(5)</a> <a href="fullindex.html#ref-for-elementdef-script-149">(6)</a> <a href="fullindex.html#ref-for-elementdef-script-150">(7)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-script-151">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-script-152">Events</a> <a href="fullindex.html#ref-for-elementdef-script-153">(2)</a> <a href="fullindex.html#ref-for-elementdef-script-154">(3)</a> <a href="fullindex.html#ref-for-elementdef-script-155">(4)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-script-156">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlscriptelement-htmlscriptelement">
@@ -21183,6 +21206,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-63">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-canvas-64">(2)</a> <a href="fullindex.html#ref-for-elementdef-canvas-65">(3)</a> <a href="fullindex.html#ref-for-elementdef-canvas-66">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-67">Attributes</a> <a href="fullindex.html#ref-for-elementdef-canvas-68">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-69">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-canvas-70">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="typedefdef-htmlcanvaselement-renderingcontext">
@@ -21307,12 +21331,6 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="editing.html#ref-for-disabling-5">5.4.3. The tabindex attribute</a>
    </li></ul>
   </aside>
-  <aside class="dfn-panel" data-for="selectordef-active">
-   <b><a href="matching-html-elements-using-selectors.html#selectordef-active">#selectordef-active</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="matching-html-elements-using-selectors.html#ref-for-selectordef-active-1">4.15.2. Pseudo-classes</a>
-   </li></ul>
-  </aside>
   <aside class="dfn-panel" data-for="in-a-formal-activation-state">
    <b><a href="matching-html-elements-using-selectors.html#in-a-formal-activation-state">#in-a-formal-activation-state</a></b><b>Referenced in:</b>
    <ul>
@@ -21323,12 +21341,6 @@ The specified operation, if one is specified, is the one given by <var>operation
    <b><a href="matching-html-elements-using-selectors.html#being-actively-pointed-at">#being-actively-pointed-at</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="matching-html-elements-using-selectors.html#ref-for-being-actively-pointed-at-1">4.15.2. Pseudo-classes</a>
-   </li></ul>
-  </aside>
-  <aside class="dfn-panel" data-for="selectordef-hover">
-   <b><a href="matching-html-elements-using-selectors.html#selectordef-hover">#selectordef-hover</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-1">4.15.2. Pseudo-classes</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-2">(2)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-3">(3)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-4">(4)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-5">(5)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="hidden">
@@ -21682,6 +21694,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="editing.html#ref-for-element-attrdef-global-accesskey-5">5.5.2. The accesskey attribute</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-6">(2)</a>
     </li><li><a href="editing.html#ref-for-element-attrdef-global-accesskey-7">5.5.3. Processing model</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-8">(2)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-9">(3)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-10">(4)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-11">(5)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-12">(6)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-13">(7)</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-global-accesskey-14">Attributes</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-global-accesskey-15">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="assigned-access-key">
@@ -22213,10 +22226,10 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="fullindex.html#ref-for-element-attrdef-global-dropzone-19">Attributes</a>
    </li></ul>
   </aside>
-  <aside class="dfn-panel" data-for="link">
-   <b><a href="editing.html#link">#link</a></b><b>Referenced in:</b>
+  <aside class="dfn-panel" data-for="link0">
+   <b><a href="editing.html#link0">#link0</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="document-metadata.html#ref-for-link-1">4.2.4. The link element</a>
+    <li><a href="document-metadata.html#ref-for-link0-1">4.2.4. The link element</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="specified">
@@ -22625,6 +22638,7 @@ The specified operation, if one is specified, is the one given by <var>operation
    <b><a href="browsers.html#dom-window-frameelement">#dom-window-frameelement</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="browsers.html#ref-for-dom-window-frameelement-1">6.3. The Window object</a>
+    </li><li><a href="changes.html#ref-for-dom-window-frameelement-2">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="auxiliary-browsing-contexts">
@@ -23691,6 +23705,7 @@ The specified operation, if one is specified, is the one given by <var>operation
     </li><li><a href="browsers.html#ref-for-location-location-8">6.3. The Window object</a>
     </li><li><a href="browsers.html#ref-for-location-location-9">6.3.7. The WindowProxy object</a>
     </li><li><a href="browsers.html#ref-for-location-location-10">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-location-location-11">(2)</a> <a href="browsers.html#ref-for-location-location-12">(3)</a> <a href="browsers.html#ref-for-location-location-13">(4)</a> <a href="browsers.html#ref-for-location-location-14">(5)</a> <a href="browsers.html#ref-for-location-location-15">(6)</a> <a href="browsers.html#ref-for-location-location-16">(7)</a> <a href="browsers.html#ref-for-location-location-17">(8)</a> <a href="browsers.html#ref-for-location-location-18">(9)</a> <a href="browsers.html#ref-for-location-location-19">(10)</a> <a href="browsers.html#ref-for-location-location-20">(11)</a> <a href="browsers.html#ref-for-location-location-21">(12)</a> <a href="browsers.html#ref-for-location-location-22">(13)</a> <a href="browsers.html#ref-for-location-location-23">(14)</a> <a href="browsers.html#ref-for-location-location-24">(15)</a> <a href="browsers.html#ref-for-location-location-25">(16)</a> <a href="browsers.html#ref-for-location-location-26">(17)</a> <a href="browsers.html#ref-for-location-location-27">(18)</a> <a href="browsers.html#ref-for-location-location-28">(19)</a> <a href="browsers.html#ref-for-location-location-29">(20)</a> <a href="browsers.html#ref-for-location-location-30">(21)</a> <a href="browsers.html#ref-for-location-location-31">(22)</a> <a href="browsers.html#ref-for-location-location-32">(23)</a> <a href="browsers.html#ref-for-location-location-33">(24)</a> <a href="browsers.html#ref-for-location-location-34">(25)</a> <a href="browsers.html#ref-for-location-location-35">(26)</a> <a href="browsers.html#ref-for-location-location-36">(27)</a> <a href="browsers.html#ref-for-location-location-37">(28)</a> <a href="browsers.html#ref-for-location-location-38">(29)</a> <a href="browsers.html#ref-for-location-location-39">(30)</a> <a href="browsers.html#ref-for-location-location-40">(31)</a> <a href="browsers.html#ref-for-location-location-41">(32)</a> <a href="browsers.html#ref-for-location-location-42">(33)</a> <a href="browsers.html#ref-for-location-location-43">(34)</a> <a href="browsers.html#ref-for-location-location-44">(35)</a> <a href="browsers.html#ref-for-location-location-45">(36)</a> <a href="browsers.html#ref-for-location-location-46">(37)</a> <a href="browsers.html#ref-for-location-location-47">(38)</a> <a href="browsers.html#ref-for-location-location-48">(39)</a> <a href="browsers.html#ref-for-location-location-49">(40)</a> <a href="browsers.html#ref-for-location-location-50">(41)</a> <a href="browsers.html#ref-for-location-location-51">(42)</a> <a href="browsers.html#ref-for-location-location-52">(43)</a> <a href="browsers.html#ref-for-location-location-53">(44)</a> <a href="browsers.html#ref-for-location-location-54">(45)</a> <a href="browsers.html#ref-for-location-location-55">(46)</a> <a href="browsers.html#ref-for-location-location-56">(47)</a> <a href="browsers.html#ref-for-location-location-57">(48)</a> <a href="browsers.html#ref-for-location-location-58">(49)</a> <a href="browsers.html#ref-for-location-location-59">(50)</a>
+    </li><li><a href="changes.html#ref-for-location-location-60">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="relevant-document">
@@ -23823,7 +23838,7 @@ The specified operation, if one is specified, is the one given by <var>operation
   <aside class="dfn-panel" data-for="navigated">
    <b><a href="browsers.html#navigated">#navigated</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-navigated-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-navigated-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-navigated-2">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-navigated-3">(2)</a>
     </li><li><a href="dom.html#ref-for-navigated-4">3.1. Documents</a> <a href="dom.html#ref-for-navigated-5">(2)</a> <a href="dom.html#ref-for-navigated-6">(3)</a> <a href="dom.html#ref-for-navigated-7">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-navigated-8">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-navigated-9">(2)</a>
@@ -24803,7 +24818,7 @@ The specified operation, if one is specified, is the one given by <var>operation
    <b><a href="webappapis.html#event-loop">#event-loop</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-event-loop-1">2.1. 전문 용어</a>
-    </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-3">2.9.1. Cloneable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-4">2.9.2. Transferable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-5">2.9.4. StructuredClone ( input, targetRealm [ , memory ] )</a>
@@ -26685,7 +26700,7 @@ The specified operation, if one is specified, is the one given by <var>operation
   <aside class="dfn-panel" data-for="html-parser">
    <b><a href="syntax.html#html-parser">#html-parser</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-parser-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-html-parser-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-html-parser-2">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-html-parser-3">(2)</a>
     </li><li><a href="dom.html#ref-for-html-parser-4">3.2.5. Global attributes</a>
     </li><li><a href="document-metadata.html#ref-for-html-parser-5">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-html-parser-6">(2)</a> <a href="document-metadata.html#ref-for-html-parser-7">(3)</a>
@@ -27236,7 +27251,7 @@ The specified operation, if one is specified, is the one given by <var>operation
   <aside class="dfn-panel" data-for="stack-of-open-elements">
    <b><a href="syntax.html#stack-of-open-elements">#stack-of-open-elements</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-stack-of-open-elements-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-stack-of-open-elements-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="document-metadata.html#ref-for-stack-of-open-elements-2">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-stack-of-open-elements-3">(2)</a> <a href="document-metadata.html#ref-for-stack-of-open-elements-4">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-5">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-6">(2)</a> <a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-7">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-8">4.7.14.11.1. Text track model</a>
@@ -27970,7 +27985,7 @@ The specified operation, if one is specified, is the one given by <var>operation
   <aside class="dfn-panel" data-for="stopped">
    <b><a href="syntax.html#stopped">#stopped</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-stopped-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-stopped-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-stopped-2">3.1.2. Resource metadata management</a>
     </li><li><a href="sec-forms.html#ref-for-stopped-3">4.10.19.8.2. Processing model</a>
     </li><li><a href="browsers.html#ref-for-stopped-4">6.7.1. Navigating across documents</a>

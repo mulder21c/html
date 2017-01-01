@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <meta content="ED" name="w3c-status">
-  <title>HTML: 7. Web application APIs</title>
+  <meta content="REC" name="w3c-status">
+  <title>HTML 5.1: 7. Web application APIs</title>
   <link href="styles/styles-html.css" rel="stylesheet" type="text/css">
-  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED" rel="stylesheet" type="text/css">
+  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-REC" rel="stylesheet" type="text/css">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
  *
@@ -1423,8 +1423,8 @@ pre.idl.highlight { color: #708090; }
   <div class="head">
    <header>
     <p data-fill-with="logo"><a href="http://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"></a></p>
-    <h1 class="p-name no-ref allcaps" id="title">HTML</h1>
-    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2016-06-02">2 June 2016</time></span></h2>
+    <h1 class="p-name no-ref allcaps" id="title">HTML 5.1</h1>
+    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Recommendation, <time class="dt-updated" datetime="2016-11-01">1 November 2016</time></span></h2>
    </header>
    
    
@@ -1642,7 +1642,7 @@ script (used to mute errors for cross-origin scripts, since that can leak privat
      </dd><dt data-md="">
       <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="creation-url">creation URL</dfn></p>
      </dt><dd data-md="">
-      <p>An <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> representing the location of the resource with which the <a data-link-type="dfn" href="webappapis.html#environment-settings-object" id="ref-for-environment-settings-object-21">environment
+      <p>An <a data-link-type="dfn">absolute URL</a> representing the location of the resource with which the <a data-link-type="dfn" href="webappapis.html#environment-settings-object" id="ref-for-environment-settings-object-21">environment
   settings object</a> is associated. Note that this URL might be distinct from the <a data-link-type="dfn" href="webappapis.html#responsible-document" id="ref-for-responsible-document-7">responsible document</a>’s <a data-link-type="dfn" href="dom.html#the-document-address" id="ref-for-the-document-address-27">address</a>, due to mechanisms such as <code>history.pushState()</code>.</p>
      </dd><dt data-md="">
       <p>An <dfn class="dfn-paneled" data-dfn-for="settings" data-dfn-type="dfn" data-noexport="" id="settings-https-state">HTTPS state</dfn></p>
@@ -2108,7 +2108,7 @@ window<span class="p">.</span>hello <span class="o">=</span> <span class="p">(</
   would be an <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-error-constructor">Error</a></code> object. If there is no corresponding object, then the null value must be
   used instead.</p>
      </li><li data-md="">
-      <p>Let <var>location</var> be an <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> that corresponds to the resource from which <var>script</var> was obtained.</p>
+      <p>Let <var>location</var> be an <a data-link-type="dfn">absolute URL</a> that corresponds to the resource from which <var>script</var> was obtained.</p>
       <p class="note" role="note">The resource containing the script will typically be the file from which the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> was parsed, e.g., for inline <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-107">script</a></code> elements or <a data-link-type="dfn" href="webappapis.html#event-handler-content-event-handler-content-attribute" id="ref-for-event-handler-content-event-handler-content-attribute-8">event handler content
   attributes</a>; or the JavaScript file that the script was in, for external scripts. Even for
   dynamically-generated scripts, user agents are strongly encouraged to attempt to keep track of
@@ -2172,7 +2172,7 @@ window<span class="p">.</span>hello <span class="o">=</span> <span class="p">(</
     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="ErrorEvent" data-dfn-type="attribute" data-export="" id="dom-errorevent-message"><code>message</code></dfn> attribute must return the
   value it was initialized to. It represents the error message.</p>
     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="ErrorEvent" data-dfn-type="attribute" data-export="" id="dom-errorevent-filename"><code>filename</code></dfn> attribute must return the value it
-  was initialized to. It represents the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> of the script in which the error
+  was initialized to. It represents the <a data-link-type="dfn">absolute URL</a> of the script in which the error
   originally occurred.</p>
     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="ErrorEvent" data-dfn-type="attribute" data-export="" id="dom-errorevent-lineno"><code>lineno</code></dfn> attribute must return the value it
   was initialized to. It represents the line number where the error occurred in the script.</p>
@@ -2661,9 +2661,9 @@ button<span class="p">.</span>addEventListener<span class="p">(</span><span clas
       <dl class="switch">
        <dt>If <var>E</var> is an <code class="idl"><a data-link-type="idl" href="webappapis.html#errorevent-errorevent" id="ref-for-errorevent-errorevent-2">ErrorEvent</a></code> object and the <a data-link-type="dfn" href="webappapis.html#event-handler-idl-event-handler-idl-attribute" id="ref-for-event-handler-idl-event-handler-idl-attribute-11">event handler IDL attribute</a>’s
     type is <code>OnErrorEventHandler</code>
-       </dt><dd><a data-link-type="dfn" href="webappapis.html#invoke" id="ref-for-invoke-1">Invoke</a> <var>callback</var> with five arguments, the first one having the value of <var>E</var>’s <code class="idl"><a data-link-type="idl" href="webappapis.html#dom-errorevent-message" id="ref-for-dom-errorevent-message-3">message</a></code> attribute, the second having the value of <var>E</var>’s <code class="idl"><a data-link-type="idl" href="webappapis.html#dom-errorevent-filename" id="ref-for-dom-errorevent-filename-3">filename</a></code> attribute, the third having the value of <var>E</var>’s <code class="idl"><a data-link-type="idl" href="webappapis.html#dom-errorevent-lineno" id="ref-for-dom-errorevent-lineno-3">lineno</a></code> attribute, the fourth having the value of <var>E</var>’s <code class="idl"><a data-link-type="idl" href="webappapis.html#dom-errorevent-colno" id="ref-for-dom-errorevent-colno-3">colno</a></code> attribute, the fifth having the value of <var>E</var>’s <code class="idl"><a data-link-type="idl" href="webappapis.html#dom-errorevent-error" id="ref-for-dom-errorevent-error-3">error</a></code> attribute, and with the <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-callback-this-value">callback this value</a> set to <var>E</var>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-currenttarget">currentTarget</a></code>. Let <var>return value</var> be the callback’s return value. <a data-link-type="biblio" href="references.html#biblio-webidl">[WEBIDL]</a> 
+       </dt><dd><a data-link-type="dfn" href="webappapis.html#invoke" id="ref-for-invoke-1">Invoke</a> <var>callback</var> with five arguments, the first one having the value of <var>E</var>’s <code class="idl"><a data-link-type="idl" href="webappapis.html#dom-errorevent-message" id="ref-for-dom-errorevent-message-3">message</a></code> attribute, the second having the value of <var>E</var>’s <code class="idl"><a data-link-type="idl" href="webappapis.html#dom-errorevent-filename" id="ref-for-dom-errorevent-filename-3">filename</a></code> attribute, the third having the value of <var>E</var>’s <code class="idl"><a data-link-type="idl" href="webappapis.html#dom-errorevent-lineno" id="ref-for-dom-errorevent-lineno-3">lineno</a></code> attribute, the fourth having the value of <var>E</var>’s <code class="idl"><a data-link-type="idl" href="webappapis.html#dom-errorevent-colno" id="ref-for-dom-errorevent-colno-3">colno</a></code> attribute, the fifth having the value of <var>E</var>’s <code class="idl"><a data-link-type="idl" href="webappapis.html#dom-errorevent-error" id="ref-for-dom-errorevent-error-3">error</a></code> attribute, and with the <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-callback-this-value">callback this value</a> set to <var>E</var>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-currenttarget">currentTarget</a></code>. Let <var>return value</var> be the callback’s return value. <a data-link-type="biblio" href="references.html#biblio-webidl">[WEBIDL]</a> 
        </dd><dt>Otherwise
-       </dt><dd><a data-link-type="dfn" href="webappapis.html#invoke" id="ref-for-invoke-2">Invoke</a> <var>callback</var> with one argument, the value of which is the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event">Event</a></code> object <var>E</var>, with the <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-callback-this-value">callback this value</a> set to <var>E</var>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-currenttarget">currentTarget</a></code>. Let <var>return value</var> be the callback’s return value. <a data-link-type="biblio" href="references.html#biblio-webidl">[WEBIDL]</a> 
+       </dt><dd><a data-link-type="dfn" href="webappapis.html#invoke" id="ref-for-invoke-2">Invoke</a> <var>callback</var> with one argument, the value of which is the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event">Event</a></code> object <var>E</var>, with the <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-callback-this-value">callback this value</a> set to <var>E</var>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-currenttarget">currentTarget</a></code>. Let <var>return value</var> be the callback’s return value. <a data-link-type="biblio" href="references.html#biblio-webidl">[WEBIDL]</a> 
       </dd></dl>
       <p>In this step, <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="invoke">invoke</dfn> means to <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL-1/#es-invoking-callback-functions">invoke the Web IDL callback function</a>.</p>
       <p>If an exception gets thrown by the callback, end these steps and allow the exception to
@@ -3201,8 +3201,8 @@ button<span class="p">.</span>addEventListener<span class="p">(</span><span clas
     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="fire a synthetic mouse event named contextmenu|Firing a synthetic mouse event named e|firing a synthetic mouse event named click" data-noexport="" id="fire-a-synthetic-mouse-event-named-contextmenu">Firing a synthetic mouse event named <var>e</var></dfn> means that an event with the name <var>e</var>, which is <a data-link-type="dfn" href="infrastructure.html#trusted" id="ref-for-trusted-28">trusted</a> (except where otherwise
   stated), does not bubble (except where otherwise stated), is not cancelable (except where
   otherwise stated), and which uses the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-MouseEvent">MouseEvent</a></code> interface, must be created and <a data-link-type="dfn" href="infrastructure.html#dispatch" id="ref-for-dispatch-13">dispatched</a> at
-  the given target. The event object must have its <code class="idl"><a data-link-type="idl" href="https://drafts.csswg.org/cssom-view-1/#dom-mouseevent-screenx">screenX</a></code>, <code class="idl"><a data-link-type="idl" href="https://drafts.csswg.org/cssom-view-1/#dom-mouseevent-screeny">screenY</a></code>,
-  {{MouseEvent/clientX}, <code class="idl"><a data-link-type="idl" href="https://drafts.csswg.org/cssom-view-1/#dom-mouseevent-clienty">clientY</a></code>, and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-button">button</a></code> attributes initialized to
+  the given target. The event object must have its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/cssom-view/#dom-mouseevent-screenx">screenX</a></code>, <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/cssom-view/#dom-mouseevent-screeny">screenY</a></code>,
+  {{MouseEvent/clientX}, <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/cssom-view/#dom-mouseevent-clienty">clientY</a></code>, and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-button">button</a></code> attributes initialized to
   0, its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-ctrlKey">ctrlKey</a></code>, <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-shiftKey">shiftKey</a></code>, <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-altKey">altKey</a></code>, and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-metaKey">metaKey</a></code> attributes initialized according to the current state of the key input
   device, if any (false for any keys that are not available), its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-UIEvent-detail">detail</a></code> attribute
   initialized to 1, its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#widl-MouseEvent-relatedTarget">relatedTarget</a></code> attribute initialized to null (except where
@@ -3814,7 +3814,7 @@ button<span class="p">.</span>addEventListener<span class="p">(</span><span clas
          <dt>If the first method argument is a <code>Function</code>
          </dt><dd>
           <p><a data-link-type="dfn" href="webappapis.html#invoke" id="ref-for-invoke-3">Invoke</a> the <code>Function</code>. Use the third and subsequent method
-        arguments (if any) as the arguments for invoking the <code>Function</code>. Use <var>method context proxy</var> as the <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-callback-this-value">Callback this value</a>. <a data-link-type="biblio" href="references.html#biblio-ecma-262">[ECMA-262]</a></p>
+        arguments (if any) as the arguments for invoking the <code>Function</code>. Use <var>method context proxy</var> as the <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-callback-this-value">Callback this value</a>. <a data-link-type="biblio" href="references.html#biblio-ecma-262">[ECMA-262]</a></p>
          </dd><dt>Otherwise
          </dt><dd>
           <ol>
@@ -4085,7 +4085,7 @@ scheduleWork<span class="p">(</span><span class="p">)</span><span class="p">;</s
       <p>Let the <a data-link-type="dfn" href="webappapis.html#return-value-origin" id="ref-for-return-value-origin-1">return value origin</a> be <var>incumbent origin</var>.</p>
      </li><li>
       <p><a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-88">Navigate</a> the new <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-314">browsing context</a> to
-    the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> that resulted from <a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-44">parsing</a> <var>url</var> earlier, with <a data-link-type="dfn" href="browsers.html#replacement-must-be-enabled" id="ref-for-replacement-must-be-enabled-23">replacement enabled</a>, and with the <a data-link-type="dfn" href="webappapis.html#responsible-browsing-context" id="ref-for-responsible-browsing-context-18">responsible browsing context</a> specified by the <a data-link-type="dfn" href="webappapis.html#incumbent-settings-object" id="ref-for-incumbent-settings-object-18">incumbent settings
+    the <a data-link-type="dfn">absolute URL</a> that resulted from <a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-44">parsing</a> <var>url</var> earlier, with <a data-link-type="dfn" href="browsers.html#replacement-must-be-enabled" id="ref-for-replacement-must-be-enabled-23">replacement enabled</a>, and with the <a data-link-type="dfn" href="webappapis.html#responsible-browsing-context" id="ref-for-responsible-browsing-context-18">responsible browsing context</a> specified by the <a data-link-type="dfn" href="webappapis.html#incumbent-settings-object" id="ref-for-incumbent-settings-object-18">incumbent settings
     object</a> as the <a data-link-type="dfn" href="browsers.html#source-browsing-context" id="ref-for-source-browsing-context-21">source browsing context</a>.</p>
      </li><li>
       <p><a data-link-type="dfn" href="webappapis.html#spinning-the-event-loop" id="ref-for-spinning-the-event-loop-5">Spin the event loop</a> until the new <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-315">browsing context</a> is closed. The user agent must allow the user to indicate
@@ -4342,20 +4342,20 @@ scheduleWork<span class="p">(</span><span class="p">)</span><span class="p">;</s
     not successful.</p>
       <p class="note" role="note"> The <a data-link-type="dfn" href="infrastructure.html#resulting-url-string" id="ref-for-resulting-url-string-18">resulting URL string</a> would by definition not be a <a data-link-type="dfn" href="infrastructure.html#valid-url" id="ref-for-valid-url-10">valid URL</a> as it would include the string "<code>%s</code>" which is not a valid
     component in a URL. </p>
-      <p>User agents must throw a "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#securityerror">SecurityError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code> if the resulting <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> has an <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-origin">origin</a> that differs from the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-87">origin</a> specified by the <a data-link-type="dfn" href="webappapis.html#entry-settings-object" id="ref-for-entry-settings-object-17">entry settings object</a>.</p>
+      <p>User agents must throw a "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#securityerror">SecurityError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code> if the resulting <a data-link-type="dfn">absolute URL</a> has an <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-origin">origin</a> that differs from the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-87">origin</a> specified by the <a data-link-type="dfn" href="webappapis.html#entry-settings-object" id="ref-for-entry-settings-object-17">entry settings object</a>.</p>
       <p class="note" role="note"> This is forcibly the case if the <code>%s</code> placeholder is in the
     scheme, host, or port parts of the URL. </p>
       <p>The <a data-link-type="dfn" href="infrastructure.html#resulting-url-string" id="ref-for-resulting-url-string-19">resulting URL string</a> is the <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="proto-url">proto-URL</dfn>. It identifies the
     handler for the purposes of the methods described below.</p>
       <p>When the user agent uses this handler, it must replace the first occurrence of the exact
     literal string "<code>%s</code>" in the <var>url</var> argument with an
-    escaped version of the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> of the content in question (as defined below),
+    escaped version of the <a data-link-type="dfn">absolute URL</a> of the content in question (as defined below),
     then <a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-46">parse</a> the resulting URL, relative to the <a data-link-type="dfn" href="webappapis.html#api-base-url" id="ref-for-api-base-url-9">API
     base URL</a> specified by the <a data-link-type="dfn" href="webappapis.html#entry-settings-object" id="ref-for-entry-settings-object-18">entry settings object</a> at the time the <code>registerProtocolHandler()</code> method was
     invoked, and then <a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-89">navigate</a> an appropriate <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-320">browsing
     context</a> to the resulting URL.</p>
-      <p>To get the escaped version of the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> of the content in question, the
-    user agent must replace every character in that <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> that is not a
+      <p>To get the escaped version of the <a data-link-type="dfn">absolute URL</a> of the content in question, the
+    user agent must replace every character in that <a data-link-type="dfn">absolute URL</a> that is not a
     character in the URL <a data-link-type="dfn" href="https://url.spec.whatwg.org/#default-encode-set">default encode set</a> with the result of <a data-link-type="dfn" href="https://url.spec.whatwg.org/#utf-8-percent-encode">UTF-8 percent encoding</a> that character.</p>
      </dd><dt><var>title</var>
      </dt><dd>
@@ -4584,10 +4584,10 @@ scheduleWork<span class="p">(</span><span class="p">)</span><span class="p">;</s
     <p class="note" role="note"> It is important for
   privacy that the order of plugins not leak additional information, e.g., the order in which
   plugins were installed. </p>
-    <p>The <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-supported-property-names">supported property names</a> of a <code>PluginArray</code> object are the values
+    <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">supported property names</a> of a <code>PluginArray</code> object are the values
   of the <code>name</code> attributes of all the <code>Plugin</code> objects represented by the <code>PluginArray</code> object. The
   properties exposed in this way must be <a data-link-type="dfn" href="https://heycam.github.io/webidl/#LegacyUnenumerableNamedProperties">unenumerable</a>.</p>
-    <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="PluginArray" data-dfn-type="method" data-export="" data-lt="namedItem(name)" id="dom-pluginarray-nameditem"><code>namedItem()</code></dfn> method of a <code>PluginArray</code> object must return null if the argument is not one of the object’s <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-supported-property-names">supported property names</a>, and otherwise must return the <code>Plugin</code> object, of those represented by the <code>PluginArray</code> object, that has a <code>name</code> equal to the method’s argument.</p>
+    <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="PluginArray" data-dfn-type="method" data-export="" data-lt="namedItem(name)" id="dom-pluginarray-nameditem"><code>namedItem()</code></dfn> method of a <code>PluginArray</code> object must return null if the argument is not one of the object’s <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">supported property names</a>, and otherwise must return the <code>Plugin</code> object, of those represented by the <code>PluginArray</code> object, that has a <code>name</code> equal to the method’s argument.</p>
     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="PluginArray" data-dfn-type="method" data-export="" data-lt="refresh(reload)|refresh()" id="dom-pluginarray-refresh"><code>refresh()</code></dfn> method of the <code>PluginArray</code> object of a <code>Navigator</code> object, when invoked, must check to
   see if any <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-75">plugins</a> have been installed or reconfigured since the user
   agent created the <code>PluginArray</code> object. If so, and the method’s argument is true, then
@@ -4620,10 +4620,10 @@ scheduleWork<span class="p">(</span><span class="p">)</span><span class="p">;</s
     <p class="note" role="note"> It is important <a data-link-type="dfn" href="introduction.html#fingerprinting-vector" id="ref-for-fingerprinting-vector-9">for
   privacy</a> that the order of MIME types not leak additional information, e.g., the order in
   which plugins were installed. </p>
-    <p>The <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-supported-property-names">supported property names</a> of a <code>MimeTypeArray</code> object are the values
+    <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">supported property names</a> of a <code>MimeTypeArray</code> object are the values
   of the <code>type</code> attributes of all the <code>MimeType</code> objects represented by the <code>MimeTypeArray</code> object. The properties exposed in this way
   must be <a data-link-type="dfn" href="https://heycam.github.io/webidl/#LegacyUnenumerableNamedProperties">unenumerable</a>.</p>
-    <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="MimeTypeArray" data-dfn-type="method" data-export="" data-lt="namedItem(name)" id="dom-mimetypearray-nameditem"><code>namedItem()</code></dfn> method of a <code>MimeTypeArray</code> object must return null if the argument is not one of the object’s <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-supported-property-names">supported property names</a>, and otherwise must return the <code>MimeType</code> object
+    <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="MimeTypeArray" data-dfn-type="method" data-export="" data-lt="namedItem(name)" id="dom-mimetypearray-nameditem"><code>namedItem()</code></dfn> method of a <code>MimeTypeArray</code> object must return null if the argument is not one of the object’s <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">supported property names</a>, and otherwise must return the <code>MimeType</code> object
   that has a <code>type</code> equal to the method’s argument.</p>
     <hr>
     <p>A <code>Plugin</code> object represents a <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-80">plugin</a>. It has
@@ -4649,11 +4649,11 @@ scheduleWork<span class="p">(</span><span class="p">)</span><span class="p">;</s
     <p class="note" role="note"> It is important <a data-link-type="dfn" href="introduction.html#fingerprinting-vector" id="ref-for-fingerprinting-vector-10">for
   privacy</a> that the order of MIME types not leak additional information, e.g., the order in
   which plugins were installed. </p>
-    <p>The <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-supported-property-names">supported property names</a> of a <code>Plugin</code> object
+    <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">supported property names</a> of a <code>Plugin</code> object
   are the values of the <code>type</code> attributes of the <code>MimeType</code> objects representing the <a data-link-type="dfn" href="webappapis.html#reported-mime-types" id="ref-for-reported-mime-types-4">reported MIME types</a>. The properties
   exposed in this way must be <a data-link-type="dfn" href="https://heycam.github.io/webidl/#LegacyUnenumerableNamedProperties">unenumerable</a>.</p>
     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="Plugin" data-dfn-type="method" data-export="" data-lt="namedItem(name)" id="dom-plugin-nameditem"><code>namedItem()</code></dfn> method of a <code>Plugin</code> object must return null if the argument is not one of the
-  object’s <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-supported-property-names">supported property names</a>, and otherwise must return the <code>MimeType</code> object that has a <code>type</code> equal to the
+  object’s <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">supported property names</a>, and otherwise must return the <code>MimeType</code> object that has a <code>type</code> equal to the
   method’s argument.</p>
     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="Plugin" data-dfn-type="attribute" data-export="" id="dom-plugin-name"><code>name</code></dfn> attribute must return the <a data-link-type="dfn" href="infrastructure.html#plugin" id="ref-for-plugin-82">plugin</a>’s name.</p>
     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="Plugin" data-dfn-type="attribute" data-export="" id="dom-plugin-description"><code>description</code></dfn> and <dfn class="dfn-paneled idl-code" data-dfn-for="Plugin" data-dfn-type="attribute" data-export="" id="dom-plugin-filename"><code>filename</code></dfn> attributes must return user-agent-defined
@@ -4956,7 +4956,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
    <b><a href="introduction.html#willful-violation">#willful-violation</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-willful-violation-1">2.2.2. 의존성</a>
-    </li><li><a href="infrastructure.html#ref-for-willful-violation-2">2.2.4. Interactions with XPath and XSLT</a> <a href="infrastructure.html#ref-for-willful-violation-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-willful-violation-2">2.2.4. XPath와 XSLT와의 상호작용</a> <a href="infrastructure.html#ref-for-willful-violation-3">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-willful-violation-4">4.10.5.1.5. E-mail state (type=email)</a>
     </li><li><a href="webappapis.html#ref-for-willful-violation-5">7.1.3.7. Integration with the JavaScript job queue</a>
     </li><li><a href="xhtml.html#ref-for-willful-violation-6">9.2. Parsing XHTML documents</a> <a href="xhtml.html#ref-for-willful-violation-7">(2)</a>
@@ -5000,7 +5000,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
    <ul>
     <li><a href="infrastructure.html#ref-for-html-document-1">2.1. 전문 용어</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-2">2.2.2. 의존성</a>
-    </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-4">2.5.1. Terminology</a>
     </li><li><a href="dom.html#ref-for-html-document-5">3.2.5. Global attributes</a>
     </li><li><a href="dom.html#ref-for-html-document-6">3.2.5.3. 
@@ -6006,7 +6006,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
   <aside class="dfn-panel" data-for="case-sensitive">
    <b><a href="infrastructure.html#case-sensitive">#case-sensitive</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-case-sensitive-1">2.3. Case-sensitivity and string comparison</a>
+    <li><a href="infrastructure.html#ref-for-case-sensitive-1">2.3. 대소문자 구별과 문자열 비교</a>
     </li><li><a href="infrastructure.html#ref-for-case-sensitive-2">2.4.9. References</a>
     </li><li><a href="dom.html#ref-for-case-sensitive-3">3.1.3. DOM tree accessors</a>
     </li><li><a href="grouping-content.html#ref-for-case-sensitive-4">4.4.5. The ol element</a>
@@ -6089,7 +6089,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
   <aside class="dfn-panel" data-for="converting-a-string-to-ascii-lowercase">
    <b><a href="infrastructure.html#converting-a-string-to-ascii-lowercase">#converting-a-string-to-ascii-lowercase</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-1">2.2.4. Interactions with XPath and XSLT</a> <a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-1">2.2.4. XPath와 XSLT와의 상호작용</a> <a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-2">(2)</a>
     </li><li><a href="semantics-scripting.html#ref-for-converting-a-string-to-ascii-lowercase-3">4.12.4.2. Serializing bitmaps to a file</a>
    </li></ul>
   </aside>
@@ -7513,7 +7513,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     <li><a href="infrastructure.html#ref-for-html-namespace-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-html-namespace-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-html-namespace-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. 적합성 종류</a>
-    </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-html-namespace-7">3.1.3. DOM tree accessors</a>
     </li><li><a href="dom.html#ref-for-html-namespace-8">3.2.4.2.6. Embedded content</a>
     </li><li><a href="dom.html#ref-for-html-namespace-9">3.2.5. Global attributes</a>
@@ -7769,7 +7769,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
   <aside class="dfn-panel" data-for="current-document-readiness">
    <b><a href="dom.html#current-document-readiness">#current-document-readiness</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-current-document-readiness-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-current-document-readiness-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-current-document-readiness-2">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-current-document-readiness-3">(2)</a>
     </li><li><a href="dom.html#ref-for-current-document-readiness-4">3.1.4. Loading XML documents</a> <a href="dom.html#ref-for-current-document-readiness-5">(2)</a>
     </li><li><a href="browsers.html#ref-for-current-document-readiness-6">6.7.10. History traversal</a>
@@ -10473,6 +10473,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-style-39">Element content categories</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-style-40">Attributes</a> <a href="fullindex.html#ref-for-elementdef-style-41">(2)</a> <a href="fullindex.html#ref-for-elementdef-style-42">(3)</a> <a href="fullindex.html#ref-for-elementdef-style-43">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-style-44">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-style-45">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlstyleelement-htmlstyleelement">
@@ -10676,6 +10677,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-section-25">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-section-26">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-section-27">(2)</a> <a href="fullindex.html#ref-for-elementdef-section-28">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-section-29">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-section-30">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-nav">
@@ -10741,6 +10743,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-16">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-17">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-h1-18">(2)</a> <a href="fullindex.html#ref-for-elementdef-h1-19">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-20">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-h1-21">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-h2">
@@ -10862,6 +10865,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-header-34">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-header-35">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-header-36">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-header-37">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-header-38">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-footer">
@@ -10885,6 +10889,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-33">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-34">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-footer-35">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-36">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-footer-37">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-address">
@@ -11330,6 +11335,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-37">Elements</a> <a href="fullindex.html#ref-for-elementdef-figure-38">(2)</a> <a href="fullindex.html#ref-for-elementdef-figure-39">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-40">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-figure-41">(2)</a> <a href="fullindex.html#ref-for-elementdef-figure-42">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-43">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-figure-44">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-figcaption">
@@ -11351,6 +11357,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="syntax.html#ref-for-elementdef-figcaption-26">8.2.3.2. The stack of open elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figcaption-27">Elements</a> <a href="fullindex.html#ref-for-elementdef-figcaption-28">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figcaption-29">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-figcaption-30">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-main">
@@ -11895,6 +11902,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-time-21">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-time-22">(2)</a> <a href="fullindex.html#ref-for-elementdef-time-23">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-time-24">Attributes</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-time-25">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-time-26">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmltimeelement-htmltimeelement">
@@ -12318,7 +12326,8 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-picture-20">4.7.5.1.21. An image in a picture element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-picture-21">(2)</a> <a href="semantics-embedded-content.html#ref-for-elementdef-picture-22">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-picture-23">Elements</a> <a href="fullindex.html#ref-for-elementdef-picture-24">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-picture-25">Element Interfaces</a>
-    </li><li><a href="acknowledgements.html#ref-for-elementdef-picture-26">Acknowledgements</a>
+    </li><li><a href="changes.html#ref-for-elementdef-picture-26">Features added</a>
+    </li><li><a href="acknowledgements.html#ref-for-elementdef-picture-27">Acknowledgements</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlpictureelement-htmlpictureelement">
@@ -12437,6 +12446,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-img-197">Attributes</a> <a href="fullindex.html#ref-for-elementdef-img-198">(2)</a> <a href="fullindex.html#ref-for-elementdef-img-199">(3)</a> <a href="fullindex.html#ref-for-elementdef-img-200">(4)</a> <a href="fullindex.html#ref-for-elementdef-img-201">(5)</a> <a href="fullindex.html#ref-for-elementdef-img-202">(6)</a> <a href="fullindex.html#ref-for-elementdef-img-203">(7)</a> <a href="fullindex.html#ref-for-elementdef-img-204">(8)</a> <a href="fullindex.html#ref-for-elementdef-img-205">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-img-206">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-img-207">Events</a> <a href="fullindex.html#ref-for-elementdef-img-208">(2)</a> <a href="fullindex.html#ref-for-elementdef-img-209">(3)</a> <a href="fullindex.html#ref-for-elementdef-img-210">(4)</a> <a href="fullindex.html#ref-for-elementdef-img-211">(5)</a> <a href="fullindex.html#ref-for-elementdef-img-212">(6)</a> <a href="fullindex.html#ref-for-elementdef-img-213">(7)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-img-214">Changes to existing features</a> <a href="changes.html#ref-for-elementdef-img-215">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlimageelement-htmlimageelement">
@@ -12462,7 +12472,8 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     <li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-1">4.7.1. Introduction</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-2">(2)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-3">(3)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-4">(4)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-5">(5)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-6">4.7.5. The img element</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-img-srcset-7">Elements</a>
-    </li><li><a href="acknowledgements.html#ref-for-element-attrdef-img-srcset-8">Acknowledgements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-img-srcset-8">Features added</a>
+    </li><li><a href="acknowledgements.html#ref-for-element-attrdef-img-srcset-9">Acknowledgements</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="element-attrdef-img-alt">
@@ -12472,6 +12483,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-alt-2">4.7.5.1. Requirements for providing text to act as an alternative for images</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-alt-3">4.7.5.1.4. Graphical Representations: Charts, diagrams, graphs, maps, illustrations</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-img-alt-4">Elements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-img-alt-5">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="image-candidate-string">
@@ -12785,6 +12797,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
    <b><a href="semantics-embedded-content.html#dom-htmlimageelement-currentsrc">#dom-htmlimageelement-currentsrc</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="semantics-embedded-content.html#ref-for-dom-htmlimageelement-currentsrc-1">4.7.5. The img element</a>
+    </li><li><a href="changes.html#ref-for-dom-htmlimageelement-currentsrc-2">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlimageelement-image">
@@ -13085,6 +13098,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-object-119">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-object-120">(2)</a> <a href="fullindex.html#ref-for-elementdef-object-121">(3)</a> <a href="fullindex.html#ref-for-elementdef-object-122">(4)</a> <a href="fullindex.html#ref-for-elementdef-object-123">(5)</a> <a href="fullindex.html#ref-for-elementdef-object-124">(6)</a> <a href="fullindex.html#ref-for-elementdef-object-125">(7)</a> <a href="fullindex.html#ref-for-elementdef-object-126">(8)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-object-127">Attributes</a> <a href="fullindex.html#ref-for-elementdef-object-128">(2)</a> <a href="fullindex.html#ref-for-elementdef-object-129">(3)</a> <a href="fullindex.html#ref-for-elementdef-object-130">(4)</a> <a href="fullindex.html#ref-for-elementdef-object-131">(5)</a> <a href="fullindex.html#ref-for-elementdef-object-132">(6)</a> <a href="fullindex.html#ref-for-elementdef-object-133">(7)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-object-134">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-object-135">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlobjectelement-htmlobjectelement">
@@ -15233,6 +15247,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-area-104">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-area-105">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-area-106">Attributes</a> <a href="fullindex.html#ref-for-elementdef-area-107">(2)</a> <a href="fullindex.html#ref-for-elementdef-area-108">(3)</a> <a href="fullindex.html#ref-for-elementdef-area-109">(4)</a> <a href="fullindex.html#ref-for-elementdef-area-110">(5)</a> <a href="fullindex.html#ref-for-elementdef-area-111">(6)</a> <a href="fullindex.html#ref-for-elementdef-area-112">(7)</a> <a href="fullindex.html#ref-for-elementdef-area-113">(8)</a> <a href="fullindex.html#ref-for-elementdef-area-114">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-area-115">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-area-116">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlareaelement-htmlareaelement">
@@ -15585,6 +15600,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
    <ul>
     <li><a href="textlevel-semantics.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-1">4.5.1. The a element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-2">4.7.16. The area element</a>
+    </li><li><a href="changes.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-3">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="set-the-url">
@@ -16833,6 +16849,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-label-61">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-label-62">(2)</a> <a href="fullindex.html#ref-for-elementdef-label-63">(3)</a> <a href="fullindex.html#ref-for-elementdef-label-64">(4)</a> <a href="fullindex.html#ref-for-elementdef-label-65">(5)</a> <a href="fullindex.html#ref-for-elementdef-label-66">(6)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-label-67">Attributes</a> <a href="fullindex.html#ref-for-elementdef-label-68">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-label-69">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-label-70">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmllabelelement-htmllabelelement">
@@ -17206,6 +17223,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-input-value-20">4.10.5.3.8. The step attribute</a>
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-input-value-21">4.10.5.4. Common input element APIs</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-22">(2)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-23">(3)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-24">(4)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-25">(5)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-26">(6)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-27">(7)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-28">(8)</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-input-value-29">Elements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-input-value-30">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dirty-checkedness-flag">
@@ -19002,6 +19020,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-option-125">Elements</a> <a href="fullindex.html#ref-for-elementdef-option-126">(2)</a> <a href="fullindex.html#ref-for-elementdef-option-127">(3)</a> <a href="fullindex.html#ref-for-elementdef-option-128">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-option-129">Attributes</a> <a href="fullindex.html#ref-for-elementdef-option-130">(2)</a> <a href="fullindex.html#ref-for-elementdef-option-131">(3)</a> <a href="fullindex.html#ref-for-elementdef-option-132">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-option-133">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-option-134">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmloptionelement-htmloptionelement">
@@ -21433,6 +21452,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-details-32">Attributes</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-details-33">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-details-34">Events</a> <a href="fullindex.html#ref-for-elementdef-details-35">(2)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-details-36">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmldetailselement-htmldetailselement">
@@ -21471,6 +21491,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="rendering.html#ref-for-elementdef-summary-8">10.5.3. The details element</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-summary-9">Elements</a> <a href="fullindex.html#ref-for-elementdef-summary-10">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-summary-11">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-summary-12">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-menu">
@@ -21621,6 +21642,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-25">Elements</a> <a href="fullindex.html#ref-for-elementdef-menuitem-26">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-27">Attributes</a> <a href="fullindex.html#ref-for-elementdef-menuitem-28">(2)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-29">(3)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-30">(4)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-31">(5)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-32">(6)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-33">(7)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-34">(8)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-35">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-36">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-menuitem-37">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlmenuitemelement-htmlmenuitemelement">
@@ -21958,6 +21980,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-script-144">Attributes</a> <a href="fullindex.html#ref-for-elementdef-script-145">(2)</a> <a href="fullindex.html#ref-for-elementdef-script-146">(3)</a> <a href="fullindex.html#ref-for-elementdef-script-147">(4)</a> <a href="fullindex.html#ref-for-elementdef-script-148">(5)</a> <a href="fullindex.html#ref-for-elementdef-script-149">(6)</a> <a href="fullindex.html#ref-for-elementdef-script-150">(7)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-script-151">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-script-152">Events</a> <a href="fullindex.html#ref-for-elementdef-script-153">(2)</a> <a href="fullindex.html#ref-for-elementdef-script-154">(3)</a> <a href="fullindex.html#ref-for-elementdef-script-155">(4)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-script-156">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlscriptelement-htmlscriptelement">
@@ -22335,6 +22358,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-63">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-canvas-64">(2)</a> <a href="fullindex.html#ref-for-elementdef-canvas-65">(3)</a> <a href="fullindex.html#ref-for-elementdef-canvas-66">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-67">Attributes</a> <a href="fullindex.html#ref-for-elementdef-canvas-68">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-69">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-canvas-70">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="typedefdef-htmlcanvaselement-renderingcontext">
@@ -22459,12 +22483,6 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="editing.html#ref-for-disabling-5">5.4.3. The tabindex attribute</a>
    </li></ul>
   </aside>
-  <aside class="dfn-panel" data-for="selectordef-active">
-   <b><a href="matching-html-elements-using-selectors.html#selectordef-active">#selectordef-active</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="matching-html-elements-using-selectors.html#ref-for-selectordef-active-1">4.15.2. Pseudo-classes</a>
-   </li></ul>
-  </aside>
   <aside class="dfn-panel" data-for="in-a-formal-activation-state">
    <b><a href="matching-html-elements-using-selectors.html#in-a-formal-activation-state">#in-a-formal-activation-state</a></b><b>Referenced in:</b>
    <ul>
@@ -22475,12 +22493,6 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
    <b><a href="matching-html-elements-using-selectors.html#being-actively-pointed-at">#being-actively-pointed-at</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="matching-html-elements-using-selectors.html#ref-for-being-actively-pointed-at-1">4.15.2. Pseudo-classes</a>
-   </li></ul>
-  </aside>
-  <aside class="dfn-panel" data-for="selectordef-hover">
-   <b><a href="matching-html-elements-using-selectors.html#selectordef-hover">#selectordef-hover</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-1">4.15.2. Pseudo-classes</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-2">(2)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-3">(3)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-4">(4)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-5">(5)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="hidden">
@@ -22834,6 +22846,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="editing.html#ref-for-element-attrdef-global-accesskey-5">5.5.2. The accesskey attribute</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-6">(2)</a>
     </li><li><a href="editing.html#ref-for-element-attrdef-global-accesskey-7">5.5.3. Processing model</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-8">(2)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-9">(3)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-10">(4)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-11">(5)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-12">(6)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-13">(7)</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-global-accesskey-14">Attributes</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-global-accesskey-15">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="assigned-access-key">
@@ -23365,10 +23378,10 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="fullindex.html#ref-for-element-attrdef-global-dropzone-19">Attributes</a>
    </li></ul>
   </aside>
-  <aside class="dfn-panel" data-for="link">
-   <b><a href="editing.html#link">#link</a></b><b>Referenced in:</b>
+  <aside class="dfn-panel" data-for="link0">
+   <b><a href="editing.html#link0">#link0</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="document-metadata.html#ref-for-link-1">4.2.4. The link element</a>
+    <li><a href="document-metadata.html#ref-for-link0-1">4.2.4. The link element</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="specified">
@@ -23777,6 +23790,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
    <b><a href="browsers.html#dom-window-frameelement">#dom-window-frameelement</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="browsers.html#ref-for-dom-window-frameelement-1">6.3. The Window object</a>
+    </li><li><a href="changes.html#ref-for-dom-window-frameelement-2">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="auxiliary-browsing-contexts">
@@ -24843,6 +24857,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
     </li><li><a href="browsers.html#ref-for-location-location-8">6.3. The Window object</a>
     </li><li><a href="browsers.html#ref-for-location-location-9">6.3.7. The WindowProxy object</a>
     </li><li><a href="browsers.html#ref-for-location-location-10">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-location-location-11">(2)</a> <a href="browsers.html#ref-for-location-location-12">(3)</a> <a href="browsers.html#ref-for-location-location-13">(4)</a> <a href="browsers.html#ref-for-location-location-14">(5)</a> <a href="browsers.html#ref-for-location-location-15">(6)</a> <a href="browsers.html#ref-for-location-location-16">(7)</a> <a href="browsers.html#ref-for-location-location-17">(8)</a> <a href="browsers.html#ref-for-location-location-18">(9)</a> <a href="browsers.html#ref-for-location-location-19">(10)</a> <a href="browsers.html#ref-for-location-location-20">(11)</a> <a href="browsers.html#ref-for-location-location-21">(12)</a> <a href="browsers.html#ref-for-location-location-22">(13)</a> <a href="browsers.html#ref-for-location-location-23">(14)</a> <a href="browsers.html#ref-for-location-location-24">(15)</a> <a href="browsers.html#ref-for-location-location-25">(16)</a> <a href="browsers.html#ref-for-location-location-26">(17)</a> <a href="browsers.html#ref-for-location-location-27">(18)</a> <a href="browsers.html#ref-for-location-location-28">(19)</a> <a href="browsers.html#ref-for-location-location-29">(20)</a> <a href="browsers.html#ref-for-location-location-30">(21)</a> <a href="browsers.html#ref-for-location-location-31">(22)</a> <a href="browsers.html#ref-for-location-location-32">(23)</a> <a href="browsers.html#ref-for-location-location-33">(24)</a> <a href="browsers.html#ref-for-location-location-34">(25)</a> <a href="browsers.html#ref-for-location-location-35">(26)</a> <a href="browsers.html#ref-for-location-location-36">(27)</a> <a href="browsers.html#ref-for-location-location-37">(28)</a> <a href="browsers.html#ref-for-location-location-38">(29)</a> <a href="browsers.html#ref-for-location-location-39">(30)</a> <a href="browsers.html#ref-for-location-location-40">(31)</a> <a href="browsers.html#ref-for-location-location-41">(32)</a> <a href="browsers.html#ref-for-location-location-42">(33)</a> <a href="browsers.html#ref-for-location-location-43">(34)</a> <a href="browsers.html#ref-for-location-location-44">(35)</a> <a href="browsers.html#ref-for-location-location-45">(36)</a> <a href="browsers.html#ref-for-location-location-46">(37)</a> <a href="browsers.html#ref-for-location-location-47">(38)</a> <a href="browsers.html#ref-for-location-location-48">(39)</a> <a href="browsers.html#ref-for-location-location-49">(40)</a> <a href="browsers.html#ref-for-location-location-50">(41)</a> <a href="browsers.html#ref-for-location-location-51">(42)</a> <a href="browsers.html#ref-for-location-location-52">(43)</a> <a href="browsers.html#ref-for-location-location-53">(44)</a> <a href="browsers.html#ref-for-location-location-54">(45)</a> <a href="browsers.html#ref-for-location-location-55">(46)</a> <a href="browsers.html#ref-for-location-location-56">(47)</a> <a href="browsers.html#ref-for-location-location-57">(48)</a> <a href="browsers.html#ref-for-location-location-58">(49)</a> <a href="browsers.html#ref-for-location-location-59">(50)</a>
+    </li><li><a href="changes.html#ref-for-location-location-60">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="relevant-document">
@@ -24975,7 +24990,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
   <aside class="dfn-panel" data-for="navigated">
    <b><a href="browsers.html#navigated">#navigated</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-navigated-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-navigated-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-navigated-2">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-navigated-3">(2)</a>
     </li><li><a href="dom.html#ref-for-navigated-4">3.1. Documents</a> <a href="dom.html#ref-for-navigated-5">(2)</a> <a href="dom.html#ref-for-navigated-6">(3)</a> <a href="dom.html#ref-for-navigated-7">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-navigated-8">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-navigated-9">(2)</a>
@@ -25955,7 +25970,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
    <b><a href="webappapis.html#event-loop">#event-loop</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-event-loop-1">2.1. 전문 용어</a>
-    </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-3">2.9.1. Cloneable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-4">2.9.2. Transferable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-5">2.9.4. StructuredClone ( input, targetRealm [ , memory ] )</a>
@@ -27837,7 +27852,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
   <aside class="dfn-panel" data-for="html-parser">
    <b><a href="syntax.html#html-parser">#html-parser</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-parser-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-html-parser-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-html-parser-2">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-html-parser-3">(2)</a>
     </li><li><a href="dom.html#ref-for-html-parser-4">3.2.5. Global attributes</a>
     </li><li><a href="document-metadata.html#ref-for-html-parser-5">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-html-parser-6">(2)</a> <a href="document-metadata.html#ref-for-html-parser-7">(3)</a>
@@ -28388,7 +28403,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
   <aside class="dfn-panel" data-for="stack-of-open-elements">
    <b><a href="syntax.html#stack-of-open-elements">#stack-of-open-elements</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-stack-of-open-elements-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-stack-of-open-elements-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="document-metadata.html#ref-for-stack-of-open-elements-2">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-stack-of-open-elements-3">(2)</a> <a href="document-metadata.html#ref-for-stack-of-open-elements-4">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-5">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-6">(2)</a> <a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-7">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-8">4.7.14.11.1. Text track model</a>
@@ -29122,7 +29137,7 @@ loadMySprites<span class="p">(</span><span class="p">)</span><span class="p">.</
   <aside class="dfn-panel" data-for="stopped">
    <b><a href="syntax.html#stopped">#stopped</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-stopped-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-stopped-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-stopped-2">3.1.2. Resource metadata management</a>
     </li><li><a href="sec-forms.html#ref-for-stopped-3">4.10.19.8.2. Processing model</a>
     </li><li><a href="browsers.html#ref-for-stopped-4">6.7.1. Navigating across documents</a>

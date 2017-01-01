@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <meta content="ED" name="w3c-status">
-  <title>HTML</title>
+  <meta content="REC" name="w3c-status">
+  <title>HTML 5.1</title>
   <link href="styles/styles-html.css" rel="stylesheet" type="text/css">
-  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED" rel="stylesheet" type="text/css">
+  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-REC" rel="stylesheet" type="text/css">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
  *
@@ -1423,15 +1423,17 @@ pre.idl.highlight { color: #708090; }
   <div class="head">
    <header>
     <p data-fill-with="logo"><a href="http://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"></a></p>
-    <h1 class="p-name no-ref allcaps" id="title">HTML</h1>
-    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2016-06-02">2 June 2016</time></span></h2>
+    <h1 class="p-name no-ref allcaps" id="title">HTML 5.1</h1>
+    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Recommendation, <time class="dt-updated" datetime="2016-11-01">1 November 2016</time></span></h2>
    </header>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     </dt><dd><a class="u-url" href="https://w3c.github.io/html/">https://w3c.github.io/html/</a>
+     </dt><dd><a class="u-url" href="https://www.w3.org/TR/2016/REC-html-5.1-20161101/">https://www.w3.org/TR/2016/REC-html-5.1-20161101/</a>
      </dd><dt>Latest published version:
      </dt><dd><a href="http://www.w3.org/TR/html51/">http://www.w3.org/TR/html51/</a>
+     </dd><dt>Editor's Draft:
+     </dt><dd><a href="https://w3c.github.io/html/">https://w3c.github.io/html/</a>
      </dd><dt>Previous Versions:
      </dt><dd><a href="http://www.w3.org/TR/2016/WD-html51-20160503/" rel="previous">http://www.w3.org/TR/2016/WD-html51-20160503/</a>
      </dd><dd><a href="" rel="previous"></a>
@@ -1467,23 +1469,6 @@ agents in an effort to improve interoperability.</p>
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="status"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
-   <p> <em>This section describes the status of this document at the time of its publication. Other
-    documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this
-    technical report can be found in the <a href="http://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical
-    reports index</a> at http://www.w3.org/TR/.</em> </p>
-   <p> This document was published by the <a href="https://www.w3.org/WebPlatform/WG/">Web Platform Working Group</a> as a Editors Draft. This document is intended to become a W3C Recommendation.
-
-    Feedback and comments on this specification are welcome. Please use <a href="https://github.com/w3c/html/issues">Github issues</a>.
-    Historical discussions can be found in the <a href="http://lists.w3.org/Archives/Public/public-html/">public-html@w3.org archives</a>. </p>
-   <p> Publication as a Editors Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may
-    be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite
-    this document as other than work in progress. </p>
-   <p> This document was produced by a group operating under the <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5 February 2004 <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>. <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="http://www.w3.org/2004/01/pp-impl/40318/status" rel="disclosure">public list of any
-    patent disclosures</a> made in connection with the deliverables of the group; that page also
-    includes instructions for disclosing a patent. An individual who has actual knowledge of a
-    patent which the individual believes contains <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential
-    Claim(s)</a> must disclose the information in accordance with <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>. </p>
-   <p> This document is governed by the <a href="http://www.w3.org/2015/Process-20150901/" id="w3c_process_revision">1 September 2015 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>. </p>
    <p></p>
   </div>
   <div data-fill-with="at-risk">
@@ -1558,11 +1543,11 @@ agents in an effort to improve interoperability.</p>
         <li><a href="infrastructure.html#conformance-classes"><span class="secno">2.2.1</span> <span class="content">적합성 종류</span></a>
         </li><li><a href="infrastructure.html#conformance-requirements-dependencies"><span class="secno">2.2.2</span> <span class="content">의존성</span></a>
         </li><li><a href="infrastructure.html#conformance-requirements-extensibility"><span class="secno">2.2.3</span> <span class="content">확장성</span></a>
-        </li><li><a href="infrastructure.html#interactions-with-xpath-and-xslt"><span class="secno">2.2.4</span> <span class="content">Interactions with XPath and XSLT</span></a>
+        </li><li><a href="infrastructure.html#interactions-with-xpath-and-xslt"><span class="secno">2.2.4</span> <span class="content">XPath와 XSLT와의 상호작용</span></a>
        </li></ol>
-      </li><li><a href="infrastructure.html#case-sensitivity-and-string-comparison"><span class="secno">2.3</span> <span class="content">Case-sensitivity and string comparison</span></a>
+      </li><li><a href="infrastructure.html#case-sensitivity-and-string-comparison"><span class="secno">2.3</span> <span class="content">대소문자 구별과 문자열 비교</span></a>
       </li><li>
-       <a href="infrastructure.html#common-microsyntaxes"><span class="secno">2.4</span> <span class="content">Common microsyntaxes</span></a>
+       <a href="infrastructure.html#common-microsyntaxes"><span class="secno">2.4</span> <span class="content">공통 마이크로문법</span></a>
        <ol class="toc">
         <li><a href="infrastructure.html#common-parser-idioms"><span class="secno">2.4.1</span> <span class="content">Common parser idioms</span></a>
         </li><li><a href="infrastructure.html#sec-boolean-attributes"><span class="secno">2.4.2</span> <span class="content">Boolean attributes</span></a>
@@ -2193,7 +2178,7 @@ agents in an effort to improve interoperability.</p>
       </li><li><a href="editing.html#inert-subtrees"><span class="secno">5.2</span> <span class="content">Inert subtrees</span></a>
       </li><li><a href="editing.html#activation"><span class="secno">5.3</span> <span class="content">Activation</span></a>
       </li><li>
-       <a href="editing.html#focus"><span class="secno">5.4</span> <span class="content">Focus</span></a>
+       <a href="editing.html#focus0"><span class="secno">5.4</span> <span class="content">Focus</span></a>
        <ol class="toc">
         <li><a href="editing.html#focus-introduction"><span class="secno">5.4.1</span> <span class="content">Introduction</span></a>
         </li><li><a href="editing.html#data-model"><span class="secno">5.4.2</span> <span class="content">Data model</span></a>
@@ -2752,12 +2737,9 @@ agents in an effort to improve interoperability.</p>
     </li><li>
      <a href="changes.html#changes"><span class="secno"></span> <span class="content">Changes</span></a>
      <ol class="toc">
-      <li><a href="changes.html#changes-20160822"><span class="secno"></span> <span class="content">Changes since the <span>Candidate recommendation of </span> <p>The following features, that were marked "at risk" were removed for lack of implementation:</p> <ul> <li>The <code>dialog</code> element</li> <li>The <code>registerContentHandler()</code>, <code>isContentHandlerRegistered()</code> and <code>isProtocolHandlerRegistered()</code> methods</li> <li>The <code>datetime</code> value for the <code>type</code> attribute of the <code>input</code> element</li> <li>unimplemented parts of the autofill mechanism</li> <li>The <code>label</code> element is no longer Reassociatable</li> <li>the <code>toolbar</code> type for the <code>menu</code> element</li> <li>the <code>inputmode</code> attribute</li> <ul> <p>The mention of <code>longdesc</code> at several places within the document was removed, since it is a separate W3C Recommendation</p> <h3 class="heading settled"><span class="content">Changes between the <span>Candidate recommendation of </span> and the <span>3 May 2016 Public Working Draft</span>.</span></h3> <dl> <dt>Changes to match implementation or reflect lack of it</dt> <dd><span>Add <code>oncopy</code> /<code>oncut</code> /<code>onpaste</code> handling</span></dd> <dd><span>Remove <code>usemap</code> attribute on <code>object</code></span></dd> <dd><span>Remove <code>requestAutoComplete</code></span></dd> <dd><span>HTML Fragment serialisation doesn’t throw</span></dd> <dd><span>Allow <code>header</code> and <code>footer</code> elements to be nested if each level is within a sectioning element</span></dd> <dd><span>Make the algorithm for forming a table closer to what implementations do with them</span></dd> <dd><span>Remove <code>multiple</code> attribute on <code>input type="range"</code></span></dd> <dd><span>Remove IntersectionObservers</span></dd> <dd><span>Remove <code>canvasProxy</code>, <code>setContext</code> from <code>canvas</code></span></dd> <dd><span>Make behaviour for fractional step values in <code>stepUp</code> and <code>stepDown</code> match reality</span></dd> <dd><span>Allow empty <code>option</code> elements</span></dd> <dd><span><code>mousewheel</code> is now <code>wheel</code></span></dd><span> </span><dd><span></span><span>Remove <code>appCache</code></span></dd> <dd><span>Remove <code>MediaController</code> and <code>mediagroup</code> attribute</span></dd> <dd><span>Change <code>menu</code>/<code>type</code> attribute token from <code>popup</code> to <code>context</code></span></dd> <dd><span>Restore the <code>rev</code> attribute, used by RDFa, and e.g. Schema.org</span></dd> <dd><span>Remove the nested <code>section</code> <code>h1</code> outline model</span></dd> <dd><span>Removed <code>style scoped</code></span></dd> <dt>Changes related to other specifications</dt> <dd><span>Use closed blob from File API</span></dd> <dd><span>Integrate Resource Hints</span></dd> <dd><span>Update <code>HTMLAllCollection</code> to match Web IDL</span></dd> <dd><span>Integrate the encoding specification</span></dd> <dd><span>Provide hooks to integrate CSP, and Realms from ECMAScript</span></dd> <dt>Fixes for specification bugs</dt> <dd><span><code>value</code> attribute of <code>input  type="submit"</code> is translatable</span></dd> <dd><span>added <code>requestAnimationFrame</code></span></dd> <dd><span>Having <code>title</code>, or writing email to a friend is not sufficient to make an <code>img</code> conformant if the <code>img</code>/<code>alt</code> attribute is missing</span></dd> <dd><span>Fix the content model for <code>time</code></span></dd> <dd><span>Add <code>HTMLMediaElement</code>/<code>srcObject</code></span></dd> </dl> <h3 class="heading settled"><span class="content">Changes since the <span>12 April 2016 Public Working Draft</span>.</span></h3> <dl> <dt>Changes to match implementation or reflect lack of it</dt> <dd><span>Removed <code>seamless</code> attribute on iframe</span></dd> <dd><span>Removed table sorting</span></dd> <dd><span>Clarify that respecting user preferences for track selection is valid</span></dd> <dd><span>Allow <code>figcaption</code> anywhere within a <code>figure</code> (not just first or last)</span></dd> <dd><span>Remove special handling of <code>isindex</code> in form submission</span></dd> <dt>Normative reference changes</dt> <dd>Move from WCAG 1.0 to WCAG 2.0</dd> </dl> <h3 class="heading settled"><span class="content">Changes between the <span>12 April 2016 Public Working Draft</span> and the <span>10 March 2016 Public Working Draft</span>.</span></h3> <dl> <dt><span><code>accesskey</code> attribute only takes a single character</span></dt> <dd>This is to match implementation in browsers better.</dd> <dt><span>Add a callout to detach a media object in the media element load algorithm</span></dt><span> </span><dd><span>This is to synchronise with </span><span>MSE</span>. </dd><dt><span>Remove microdata</span></dt> <dd>There is a https://www.w3.org/TR/2013/NOTE-microdata-20131029/W3C Note describing Microdata as <span>an extension</span>.</dd> <dd>Note that the attributes may be added back, referring to a Recommendation-track version of the extension, since there is a substantial amount of implementation.</dd> </dl> <h3 class="heading settled"><span class="content">Changes between the <span>10 March 2016 Public Working Draft</span> and the <span>10 October 2015 Public Working Draft</span>.</span></h3> <p>Full details of all changes since 12 January 2016 are available from the <span>commit log</span> of the <span>w3c/html github repository</span>. Note that a large number of changes made between 10 October and 12 January were copied direct from the whatwg/html repository.</p> <dl> <dt>Removed because implementation is not consistent and the idea didn’t make sense</dt> <dd><span><code>form</code> attribute on <code>label</code> element</span>.</dd> <dt>Removed for lack of implementation and to potentially improve before re-adding</dt> <dd><span><code>accessKeyLabel</code> IDL attribute</span>.</dd> <dt>Removed for lack of implementation</dt> <dd><span>Blank <code>alt</code> on <code>area</code> elements with duplicate <code>href</code> attributes is no longer conformant</span>.</dd> <dd><span>Browsers don’t know about the user’s keyboard</span></dd> <dd><span>Storage Mutex</span></dd> <dd><span><code>navigator.yieldForStorageUpdates()</code></span></dd> <dd><span><code>hreflang</code> and<code>type</code> attributes on <code>area</code> links</span></dd> <dd><span><code>document.cssElementMap</code> and <code>DOMElementMap</code> interface</span></dd> <dd><span><code>document.commands</code> IDL</span></dd> <dd><span>master commands concept in <code>menuitem</code></span></dd> <dd><span>Command API and related concepts</span></dd> <dt><span>Focus navigation fixed</span></dt> <dd>When navigating internally, the next search for a link etc starts from where the navigation moved to - no longer optionally.</dd> <dt><span><code>main</code> refers to the <code>body</code></span></dt> <dd>As opposed to be allowed multiple times in the page, for other elements</dd> <dt><span>More ways <code>p</code> can be automatigically closed</span></dt> <dt><span>redefine "fully active" for a document</span></dt> <dd>Require that a document has its own browsing context to be fully active</dd> <dt><span>change currentSrc for images which don’t resolve</span></dt> <dd>From the absolute URL to the URL given to the resolver</dd> <dt><span><code>a</code> is non-interactive if it has no <code>href</code> attribute</span></dt> <dt>Fix Collections</dt> <dd><span><code>HTMLFormControlsCollection</code> not used for collections of <code>fieldset</code> elements</span></dd> <dd>Instead <span><code>fieldset</code> makes an <code>HTMLCollection</code></span></dd> <dd><span><code>namedItem</code> is an HTMLCollection not HTMLOptionsCollection</span></dd> <dt>Supported tokens</dt> <dd><span>Define supported tokens for link types and <code>dropzone</code> as those that have an impact on processing</span></dd> <dd><span>add supported tokens for rel</span></dd> <dt>Allow more cross-origin…</dt> <dd><span>Enable cross-origin <code>track</code> and <code>EventSource</code></span></dd> <dd><span>Allow cross-origin content for <code>ImageBitmap</code> in <code>canvas</code></span></dd> <dd><span>let frameElement return null</span></dd> <dt><span>Transferable objects can go to different domains</span></dt> <dt><span>Make content of <code>time</code> consistent</span></dt> <dd>There were contradictory requirements, now it is phrasing content, or text</dd> <dt><span>Integration with the ES job queue</span></dt> <dd>Defining EnqueueJob() and NextJob in a <span>monkeypatch</span> to ECMAScript.</dd> <dt>Add missing events</dt> <dd><span>Events and APIs for tracking promise rejection</span></dd> <dd><span><code>event-source-error</code> error for media fetching</span></dd> <dd><span><code>event-track-error</code> and <code>event-track-load</code></span></dd> <dt><span>Make <code>navigator.javaEnabled()</code> a method</span></dt> <dt>Table cleanups</dt> <dd><span>Add specific types for HTML table elements</span></dd> <dd><span><code>.tFoot</code> an <code>.createTFoot()</code> always insert at the end</span></dd> <dd><span>Disallow <code>tfoot</code> before <code>tbody</code></span></dd> <dt><span>Clear autoplay flag once autoplaying</span></dt> <dd>Otherwise odd things happened if the network changed</dd> <dt>Cleaning up toBlob in <code>canvas</code></dt> <dd><span>Make the <code>toBlob()</code> callback non-nullable</span></dd> <dd><span>Rename <code>fileCallback</code> to <code>blobcallback</code></span></dd> <dt>CSP hooks</dt> <dd><span>Add hooks for property on global object</span></dd> <dd><span>for inline events, styles</span></dd> <dd><span>inline elements</span></dd> <dd><span>update specification links</span></dd> <dt><span>Flip modes (remote/local) in loading media resources</span></dt> <dt><span>make origin on HTMLHyperlinkElementUtils and Location readonly</span></dt> <dt><code>meta refresh</code> parsing</dt> <dd><span>Match Gecko better</span></dd> <dd><span>make <code>;</code> optional</span></dd> <dt>Clean up SVG in HTML</dt> <dd><span>describe the flavour of SVG used in browsers</span></dd> <dd><span>Make SVG <code>title</code> first child not last</span></dd> <dt>Scroll restoration</dt> <dt><span>Add scroll restoration preferences to history traversal</span></dt> <dd><span>Clarify manual scrolling restoration</span></dd> <dt><span>Take account of <code>srclang</code> when rendering <code>track</code></span></dt> <dt>Windows without browsing context</dt> <dd><span><code>window.open()</code> can return null</span></dd> <dd><span>Add "noopener" to <code>rel</code> and <code>window</code></span></dd> <dt><span>Move HTTPS state from <code>window</code> to <code>document</code></span></dt> <dt>Drop some IDL attributes</dt> <dd><span><code>[Exposed=Window]</code> for HTMLHyperLinkElementUtils</span></dd> <dd><span><code>[Exposed=Window, Worker]</code> for DOMStringMap</span></dd> <dd><span>IDL Date</span></dd> <dt><span>Add IDL <code>[SameObject]</code> for some objects that return collections</span></dt> <dt><span>Make script IDL attributes reflect</span></dt> <dt><span>Remove "no exception" step from HAVE_METADATA</span></dt> <dt><span>Fix mismatched HTMLMediaElement currentTime exception</span></dt> <dd>If there is a current media controller it can still throw…</dd> <dt><span><code>setInterval()</code> timers clear too</span></dt> <dt><span>Cleanup Fullscreen</span></dt> <dt><span>rename <code>menu type="popup"</code> as <code>menu type="context"</code></span></dt> <dt><span>Support <code>width="0"</code></span></dt> <dd>For <code>img</code> and related elements, but not table cells</dd> </dl> <h3 class="heading settled"><span class="content">A <span>description of substantial changes</span> between the HTML 5.0 Recommendation of 2014 and the HTML 5.1 draft as it was in August 2015 is available as part of a separate document, that is no longer maintained.</span></h3> </ul></ul></span></a>
-      </li><li><a href="changes.html#changes-20160602"><span class="secno"></span> <span class="content">Changes between the <span>Candidate recommendation of </span> and the <span>3 May 2016 Public Working Draft</span>.</span></a>
-      </li><li><a href="changes.html#changes-201605"><span class="secno"></span> <span class="content">Changes since the <span>12 April 2016 Public Working Draft</span>.</span></a>
-      </li><li><a href="changes.html#changes-201604"><span class="secno"></span> <span class="content">Changes between the <span>12 April 2016 Public Working Draft</span> and the <span>10 March 2016 Public Working Draft</span>.</span></a>
-      </li><li><a href="changes.html#changes-201603"><span class="secno"></span> <span class="content">Changes between the <span>10 March 2016 Public Working Draft</span> and the <span>10 October 2015 Public Working Draft</span>.</span></a>
-      </li><li><a href="changes.html#changed-201510"><span class="secno"></span> <span class="content">A <span>description of substantial changes</span> between the HTML 5.0 Recommendation of 2014 and the HTML 5.1 draft as it was in August 2015 is available as part of a separate document, that is no longer maintained.</span></a>
+      <li><a href="changes.html#features-added"><span class="secno"></span> <span class="content">Features added</span></a>
+      </li><li><a href="changes.html#features-removed"><span class="secno"></span> <span class="content">Features removed</span></a>
+      </li><li><a href="changes.html#changes-to-existing-features"><span class="secno"></span> <span class="content">Changes to existing features</span></a>
      </li></ol>
     </li><li><a href="acknowledgements.html#acknowledgements"><span class="secno"></span> <span class="content">Acknowledgements</span></a>
    </li></ol>
@@ -2768,7 +2750,7 @@ agents in an effort to improve interoperability.</p>
    <b><a href="introduction.html#willful-violation">#willful-violation</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-willful-violation-1">2.2.2. 의존성</a>
-    </li><li><a href="infrastructure.html#ref-for-willful-violation-2">2.2.4. Interactions with XPath and XSLT</a> <a href="infrastructure.html#ref-for-willful-violation-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-willful-violation-2">2.2.4. XPath와 XSLT와의 상호작용</a> <a href="infrastructure.html#ref-for-willful-violation-3">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-willful-violation-4">4.10.5.1.5. E-mail state (type=email)</a>
     </li><li><a href="webappapis.html#ref-for-willful-violation-5">7.1.3.7. Integration with the JavaScript job queue</a>
     </li><li><a href="xhtml.html#ref-for-willful-violation-6">9.2. Parsing XHTML documents</a> <a href="xhtml.html#ref-for-willful-violation-7">(2)</a>
@@ -2812,7 +2794,7 @@ agents in an effort to improve interoperability.</p>
    <ul>
     <li><a href="infrastructure.html#ref-for-html-document-1">2.1. 전문 용어</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-2">2.2.2. 의존성</a>
-    </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-4">2.5.1. Terminology</a>
     </li><li><a href="dom.html#ref-for-html-document-5">3.2.5. Global attributes</a>
     </li><li><a href="dom.html#ref-for-html-document-6">3.2.5.3. 
@@ -3818,7 +3800,7 @@ agents in an effort to improve interoperability.</p>
   <aside class="dfn-panel" data-for="case-sensitive">
    <b><a href="infrastructure.html#case-sensitive">#case-sensitive</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-case-sensitive-1">2.3. Case-sensitivity and string comparison</a>
+    <li><a href="infrastructure.html#ref-for-case-sensitive-1">2.3. 대소문자 구별과 문자열 비교</a>
     </li><li><a href="infrastructure.html#ref-for-case-sensitive-2">2.4.9. References</a>
     </li><li><a href="dom.html#ref-for-case-sensitive-3">3.1.3. DOM tree accessors</a>
     </li><li><a href="grouping-content.html#ref-for-case-sensitive-4">4.4.5. The ol element</a>
@@ -3901,7 +3883,7 @@ agents in an effort to improve interoperability.</p>
   <aside class="dfn-panel" data-for="converting-a-string-to-ascii-lowercase">
    <b><a href="infrastructure.html#converting-a-string-to-ascii-lowercase">#converting-a-string-to-ascii-lowercase</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-1">2.2.4. Interactions with XPath and XSLT</a> <a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-1">2.2.4. XPath와 XSLT와의 상호작용</a> <a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-2">(2)</a>
     </li><li><a href="semantics-scripting.html#ref-for-converting-a-string-to-ascii-lowercase-3">4.12.4.2. Serializing bitmaps to a file</a>
    </li></ul>
   </aside>
@@ -5325,7 +5307,7 @@ agents in an effort to improve interoperability.</p>
     <li><a href="infrastructure.html#ref-for-html-namespace-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-html-namespace-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-html-namespace-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. 적합성 종류</a>
-    </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-html-namespace-7">3.1.3. DOM tree accessors</a>
     </li><li><a href="dom.html#ref-for-html-namespace-8">3.2.4.2.6. Embedded content</a>
     </li><li><a href="dom.html#ref-for-html-namespace-9">3.2.5. Global attributes</a>
@@ -5581,7 +5563,7 @@ agents in an effort to improve interoperability.</p>
   <aside class="dfn-panel" data-for="current-document-readiness">
    <b><a href="dom.html#current-document-readiness">#current-document-readiness</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-current-document-readiness-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-current-document-readiness-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-current-document-readiness-2">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-current-document-readiness-3">(2)</a>
     </li><li><a href="dom.html#ref-for-current-document-readiness-4">3.1.4. Loading XML documents</a> <a href="dom.html#ref-for-current-document-readiness-5">(2)</a>
     </li><li><a href="browsers.html#ref-for-current-document-readiness-6">6.7.10. History traversal</a>
@@ -8285,6 +8267,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-style-39">Element content categories</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-style-40">Attributes</a> <a href="fullindex.html#ref-for-elementdef-style-41">(2)</a> <a href="fullindex.html#ref-for-elementdef-style-42">(3)</a> <a href="fullindex.html#ref-for-elementdef-style-43">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-style-44">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-style-45">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlstyleelement-htmlstyleelement">
@@ -8488,6 +8471,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-section-25">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-section-26">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-section-27">(2)</a> <a href="fullindex.html#ref-for-elementdef-section-28">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-section-29">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-section-30">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-nav">
@@ -8553,6 +8537,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-16">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-17">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-h1-18">(2)</a> <a href="fullindex.html#ref-for-elementdef-h1-19">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-20">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-h1-21">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-h2">
@@ -8674,6 +8659,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-header-34">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-header-35">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-header-36">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-header-37">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-header-38">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-footer">
@@ -8697,6 +8683,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-33">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-34">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-footer-35">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-36">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-footer-37">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-address">
@@ -9142,6 +9129,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-37">Elements</a> <a href="fullindex.html#ref-for-elementdef-figure-38">(2)</a> <a href="fullindex.html#ref-for-elementdef-figure-39">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-40">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-figure-41">(2)</a> <a href="fullindex.html#ref-for-elementdef-figure-42">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-43">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-figure-44">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-figcaption">
@@ -9163,6 +9151,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="syntax.html#ref-for-elementdef-figcaption-26">8.2.3.2. The stack of open elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figcaption-27">Elements</a> <a href="fullindex.html#ref-for-elementdef-figcaption-28">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figcaption-29">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-figcaption-30">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-main">
@@ -9707,6 +9696,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-time-21">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-time-22">(2)</a> <a href="fullindex.html#ref-for-elementdef-time-23">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-time-24">Attributes</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-time-25">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-time-26">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmltimeelement-htmltimeelement">
@@ -10130,7 +10120,8 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-picture-20">4.7.5.1.21. An image in a picture element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-picture-21">(2)</a> <a href="semantics-embedded-content.html#ref-for-elementdef-picture-22">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-picture-23">Elements</a> <a href="fullindex.html#ref-for-elementdef-picture-24">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-picture-25">Element Interfaces</a>
-    </li><li><a href="acknowledgements.html#ref-for-elementdef-picture-26">Acknowledgements</a>
+    </li><li><a href="changes.html#ref-for-elementdef-picture-26">Features added</a>
+    </li><li><a href="acknowledgements.html#ref-for-elementdef-picture-27">Acknowledgements</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlpictureelement-htmlpictureelement">
@@ -10249,6 +10240,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-img-197">Attributes</a> <a href="fullindex.html#ref-for-elementdef-img-198">(2)</a> <a href="fullindex.html#ref-for-elementdef-img-199">(3)</a> <a href="fullindex.html#ref-for-elementdef-img-200">(4)</a> <a href="fullindex.html#ref-for-elementdef-img-201">(5)</a> <a href="fullindex.html#ref-for-elementdef-img-202">(6)</a> <a href="fullindex.html#ref-for-elementdef-img-203">(7)</a> <a href="fullindex.html#ref-for-elementdef-img-204">(8)</a> <a href="fullindex.html#ref-for-elementdef-img-205">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-img-206">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-img-207">Events</a> <a href="fullindex.html#ref-for-elementdef-img-208">(2)</a> <a href="fullindex.html#ref-for-elementdef-img-209">(3)</a> <a href="fullindex.html#ref-for-elementdef-img-210">(4)</a> <a href="fullindex.html#ref-for-elementdef-img-211">(5)</a> <a href="fullindex.html#ref-for-elementdef-img-212">(6)</a> <a href="fullindex.html#ref-for-elementdef-img-213">(7)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-img-214">Changes to existing features</a> <a href="changes.html#ref-for-elementdef-img-215">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlimageelement-htmlimageelement">
@@ -10274,7 +10266,8 @@ agents in an effort to improve interoperability.</p>
     <li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-1">4.7.1. Introduction</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-2">(2)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-3">(3)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-4">(4)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-5">(5)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-6">4.7.5. The img element</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-img-srcset-7">Elements</a>
-    </li><li><a href="acknowledgements.html#ref-for-element-attrdef-img-srcset-8">Acknowledgements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-img-srcset-8">Features added</a>
+    </li><li><a href="acknowledgements.html#ref-for-element-attrdef-img-srcset-9">Acknowledgements</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="element-attrdef-img-alt">
@@ -10284,6 +10277,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-alt-2">4.7.5.1. Requirements for providing text to act as an alternative for images</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-alt-3">4.7.5.1.4. Graphical Representations: Charts, diagrams, graphs, maps, illustrations</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-img-alt-4">Elements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-img-alt-5">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="image-candidate-string">
@@ -10597,6 +10591,7 @@ agents in an effort to improve interoperability.</p>
    <b><a href="semantics-embedded-content.html#dom-htmlimageelement-currentsrc">#dom-htmlimageelement-currentsrc</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="semantics-embedded-content.html#ref-for-dom-htmlimageelement-currentsrc-1">4.7.5. The img element</a>
+    </li><li><a href="changes.html#ref-for-dom-htmlimageelement-currentsrc-2">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlimageelement-image">
@@ -10897,6 +10892,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-object-119">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-object-120">(2)</a> <a href="fullindex.html#ref-for-elementdef-object-121">(3)</a> <a href="fullindex.html#ref-for-elementdef-object-122">(4)</a> <a href="fullindex.html#ref-for-elementdef-object-123">(5)</a> <a href="fullindex.html#ref-for-elementdef-object-124">(6)</a> <a href="fullindex.html#ref-for-elementdef-object-125">(7)</a> <a href="fullindex.html#ref-for-elementdef-object-126">(8)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-object-127">Attributes</a> <a href="fullindex.html#ref-for-elementdef-object-128">(2)</a> <a href="fullindex.html#ref-for-elementdef-object-129">(3)</a> <a href="fullindex.html#ref-for-elementdef-object-130">(4)</a> <a href="fullindex.html#ref-for-elementdef-object-131">(5)</a> <a href="fullindex.html#ref-for-elementdef-object-132">(6)</a> <a href="fullindex.html#ref-for-elementdef-object-133">(7)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-object-134">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-object-135">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlobjectelement-htmlobjectelement">
@@ -13045,6 +13041,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-area-104">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-area-105">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-area-106">Attributes</a> <a href="fullindex.html#ref-for-elementdef-area-107">(2)</a> <a href="fullindex.html#ref-for-elementdef-area-108">(3)</a> <a href="fullindex.html#ref-for-elementdef-area-109">(4)</a> <a href="fullindex.html#ref-for-elementdef-area-110">(5)</a> <a href="fullindex.html#ref-for-elementdef-area-111">(6)</a> <a href="fullindex.html#ref-for-elementdef-area-112">(7)</a> <a href="fullindex.html#ref-for-elementdef-area-113">(8)</a> <a href="fullindex.html#ref-for-elementdef-area-114">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-area-115">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-area-116">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlareaelement-htmlareaelement">
@@ -13397,6 +13394,7 @@ agents in an effort to improve interoperability.</p>
    <ul>
     <li><a href="textlevel-semantics.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-1">4.5.1. The a element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-2">4.7.16. The area element</a>
+    </li><li><a href="changes.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-3">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="set-the-url">
@@ -14645,6 +14643,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-label-61">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-label-62">(2)</a> <a href="fullindex.html#ref-for-elementdef-label-63">(3)</a> <a href="fullindex.html#ref-for-elementdef-label-64">(4)</a> <a href="fullindex.html#ref-for-elementdef-label-65">(5)</a> <a href="fullindex.html#ref-for-elementdef-label-66">(6)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-label-67">Attributes</a> <a href="fullindex.html#ref-for-elementdef-label-68">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-label-69">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-label-70">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmllabelelement-htmllabelelement">
@@ -15018,6 +15017,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-input-value-20">4.10.5.3.8. The step attribute</a>
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-input-value-21">4.10.5.4. Common input element APIs</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-22">(2)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-23">(3)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-24">(4)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-25">(5)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-26">(6)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-27">(7)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-28">(8)</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-input-value-29">Elements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-input-value-30">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dirty-checkedness-flag">
@@ -16814,6 +16814,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-option-125">Elements</a> <a href="fullindex.html#ref-for-elementdef-option-126">(2)</a> <a href="fullindex.html#ref-for-elementdef-option-127">(3)</a> <a href="fullindex.html#ref-for-elementdef-option-128">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-option-129">Attributes</a> <a href="fullindex.html#ref-for-elementdef-option-130">(2)</a> <a href="fullindex.html#ref-for-elementdef-option-131">(3)</a> <a href="fullindex.html#ref-for-elementdef-option-132">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-option-133">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-option-134">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmloptionelement-htmloptionelement">
@@ -19245,6 +19246,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-details-32">Attributes</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-details-33">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-details-34">Events</a> <a href="fullindex.html#ref-for-elementdef-details-35">(2)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-details-36">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmldetailselement-htmldetailselement">
@@ -19283,6 +19285,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="rendering.html#ref-for-elementdef-summary-8">10.5.3. The details element</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-summary-9">Elements</a> <a href="fullindex.html#ref-for-elementdef-summary-10">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-summary-11">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-summary-12">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-menu">
@@ -19433,6 +19436,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-25">Elements</a> <a href="fullindex.html#ref-for-elementdef-menuitem-26">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-27">Attributes</a> <a href="fullindex.html#ref-for-elementdef-menuitem-28">(2)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-29">(3)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-30">(4)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-31">(5)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-32">(6)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-33">(7)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-34">(8)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-35">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-36">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-menuitem-37">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlmenuitemelement-htmlmenuitemelement">
@@ -19770,6 +19774,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-script-144">Attributes</a> <a href="fullindex.html#ref-for-elementdef-script-145">(2)</a> <a href="fullindex.html#ref-for-elementdef-script-146">(3)</a> <a href="fullindex.html#ref-for-elementdef-script-147">(4)</a> <a href="fullindex.html#ref-for-elementdef-script-148">(5)</a> <a href="fullindex.html#ref-for-elementdef-script-149">(6)</a> <a href="fullindex.html#ref-for-elementdef-script-150">(7)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-script-151">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-script-152">Events</a> <a href="fullindex.html#ref-for-elementdef-script-153">(2)</a> <a href="fullindex.html#ref-for-elementdef-script-154">(3)</a> <a href="fullindex.html#ref-for-elementdef-script-155">(4)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-script-156">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlscriptelement-htmlscriptelement">
@@ -20147,6 +20152,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-63">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-canvas-64">(2)</a> <a href="fullindex.html#ref-for-elementdef-canvas-65">(3)</a> <a href="fullindex.html#ref-for-elementdef-canvas-66">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-67">Attributes</a> <a href="fullindex.html#ref-for-elementdef-canvas-68">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-69">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-canvas-70">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="typedefdef-htmlcanvaselement-renderingcontext">
@@ -20271,12 +20277,6 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="editing.html#ref-for-disabling-5">5.4.3. The tabindex attribute</a>
    </li></ul>
   </aside>
-  <aside class="dfn-panel" data-for="selectordef-active">
-   <b><a href="matching-html-elements-using-selectors.html#selectordef-active">#selectordef-active</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="matching-html-elements-using-selectors.html#ref-for-selectordef-active-1">4.15.2. Pseudo-classes</a>
-   </li></ul>
-  </aside>
   <aside class="dfn-panel" data-for="in-a-formal-activation-state">
    <b><a href="matching-html-elements-using-selectors.html#in-a-formal-activation-state">#in-a-formal-activation-state</a></b><b>Referenced in:</b>
    <ul>
@@ -20287,12 +20287,6 @@ agents in an effort to improve interoperability.</p>
    <b><a href="matching-html-elements-using-selectors.html#being-actively-pointed-at">#being-actively-pointed-at</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="matching-html-elements-using-selectors.html#ref-for-being-actively-pointed-at-1">4.15.2. Pseudo-classes</a>
-   </li></ul>
-  </aside>
-  <aside class="dfn-panel" data-for="selectordef-hover">
-   <b><a href="matching-html-elements-using-selectors.html#selectordef-hover">#selectordef-hover</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-1">4.15.2. Pseudo-classes</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-2">(2)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-3">(3)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-4">(4)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-5">(5)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="hidden">
@@ -20646,6 +20640,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="editing.html#ref-for-element-attrdef-global-accesskey-5">5.5.2. The accesskey attribute</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-6">(2)</a>
     </li><li><a href="editing.html#ref-for-element-attrdef-global-accesskey-7">5.5.3. Processing model</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-8">(2)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-9">(3)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-10">(4)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-11">(5)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-12">(6)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-13">(7)</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-global-accesskey-14">Attributes</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-global-accesskey-15">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="assigned-access-key">
@@ -21177,10 +21172,10 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-global-dropzone-19">Attributes</a>
    </li></ul>
   </aside>
-  <aside class="dfn-panel" data-for="link">
-   <b><a href="editing.html#link">#link</a></b><b>Referenced in:</b>
+  <aside class="dfn-panel" data-for="link0">
+   <b><a href="editing.html#link0">#link0</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="document-metadata.html#ref-for-link-1">4.2.4. The link element</a>
+    <li><a href="document-metadata.html#ref-for-link0-1">4.2.4. The link element</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="specified">
@@ -21589,6 +21584,7 @@ agents in an effort to improve interoperability.</p>
    <b><a href="browsers.html#dom-window-frameelement">#dom-window-frameelement</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="browsers.html#ref-for-dom-window-frameelement-1">6.3. The Window object</a>
+    </li><li><a href="changes.html#ref-for-dom-window-frameelement-2">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="auxiliary-browsing-contexts">
@@ -22655,6 +22651,7 @@ agents in an effort to improve interoperability.</p>
     </li><li><a href="browsers.html#ref-for-location-location-8">6.3. The Window object</a>
     </li><li><a href="browsers.html#ref-for-location-location-9">6.3.7. The WindowProxy object</a>
     </li><li><a href="browsers.html#ref-for-location-location-10">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-location-location-11">(2)</a> <a href="browsers.html#ref-for-location-location-12">(3)</a> <a href="browsers.html#ref-for-location-location-13">(4)</a> <a href="browsers.html#ref-for-location-location-14">(5)</a> <a href="browsers.html#ref-for-location-location-15">(6)</a> <a href="browsers.html#ref-for-location-location-16">(7)</a> <a href="browsers.html#ref-for-location-location-17">(8)</a> <a href="browsers.html#ref-for-location-location-18">(9)</a> <a href="browsers.html#ref-for-location-location-19">(10)</a> <a href="browsers.html#ref-for-location-location-20">(11)</a> <a href="browsers.html#ref-for-location-location-21">(12)</a> <a href="browsers.html#ref-for-location-location-22">(13)</a> <a href="browsers.html#ref-for-location-location-23">(14)</a> <a href="browsers.html#ref-for-location-location-24">(15)</a> <a href="browsers.html#ref-for-location-location-25">(16)</a> <a href="browsers.html#ref-for-location-location-26">(17)</a> <a href="browsers.html#ref-for-location-location-27">(18)</a> <a href="browsers.html#ref-for-location-location-28">(19)</a> <a href="browsers.html#ref-for-location-location-29">(20)</a> <a href="browsers.html#ref-for-location-location-30">(21)</a> <a href="browsers.html#ref-for-location-location-31">(22)</a> <a href="browsers.html#ref-for-location-location-32">(23)</a> <a href="browsers.html#ref-for-location-location-33">(24)</a> <a href="browsers.html#ref-for-location-location-34">(25)</a> <a href="browsers.html#ref-for-location-location-35">(26)</a> <a href="browsers.html#ref-for-location-location-36">(27)</a> <a href="browsers.html#ref-for-location-location-37">(28)</a> <a href="browsers.html#ref-for-location-location-38">(29)</a> <a href="browsers.html#ref-for-location-location-39">(30)</a> <a href="browsers.html#ref-for-location-location-40">(31)</a> <a href="browsers.html#ref-for-location-location-41">(32)</a> <a href="browsers.html#ref-for-location-location-42">(33)</a> <a href="browsers.html#ref-for-location-location-43">(34)</a> <a href="browsers.html#ref-for-location-location-44">(35)</a> <a href="browsers.html#ref-for-location-location-45">(36)</a> <a href="browsers.html#ref-for-location-location-46">(37)</a> <a href="browsers.html#ref-for-location-location-47">(38)</a> <a href="browsers.html#ref-for-location-location-48">(39)</a> <a href="browsers.html#ref-for-location-location-49">(40)</a> <a href="browsers.html#ref-for-location-location-50">(41)</a> <a href="browsers.html#ref-for-location-location-51">(42)</a> <a href="browsers.html#ref-for-location-location-52">(43)</a> <a href="browsers.html#ref-for-location-location-53">(44)</a> <a href="browsers.html#ref-for-location-location-54">(45)</a> <a href="browsers.html#ref-for-location-location-55">(46)</a> <a href="browsers.html#ref-for-location-location-56">(47)</a> <a href="browsers.html#ref-for-location-location-57">(48)</a> <a href="browsers.html#ref-for-location-location-58">(49)</a> <a href="browsers.html#ref-for-location-location-59">(50)</a>
+    </li><li><a href="changes.html#ref-for-location-location-60">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="relevant-document">
@@ -22787,7 +22784,7 @@ agents in an effort to improve interoperability.</p>
   <aside class="dfn-panel" data-for="navigated">
    <b><a href="browsers.html#navigated">#navigated</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-navigated-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-navigated-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-navigated-2">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-navigated-3">(2)</a>
     </li><li><a href="dom.html#ref-for-navigated-4">3.1. Documents</a> <a href="dom.html#ref-for-navigated-5">(2)</a> <a href="dom.html#ref-for-navigated-6">(3)</a> <a href="dom.html#ref-for-navigated-7">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-navigated-8">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-navigated-9">(2)</a>
@@ -23767,7 +23764,7 @@ agents in an effort to improve interoperability.</p>
    <b><a href="webappapis.html#event-loop">#event-loop</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-event-loop-1">2.1. 전문 용어</a>
-    </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-3">2.9.1. Cloneable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-4">2.9.2. Transferable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-5">2.9.4. StructuredClone ( input, targetRealm [ , memory ] )</a>
@@ -25649,7 +25646,7 @@ agents in an effort to improve interoperability.</p>
   <aside class="dfn-panel" data-for="html-parser">
    <b><a href="syntax.html#html-parser">#html-parser</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-parser-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-html-parser-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-html-parser-2">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-html-parser-3">(2)</a>
     </li><li><a href="dom.html#ref-for-html-parser-4">3.2.5. Global attributes</a>
     </li><li><a href="document-metadata.html#ref-for-html-parser-5">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-html-parser-6">(2)</a> <a href="document-metadata.html#ref-for-html-parser-7">(3)</a>
@@ -26200,7 +26197,7 @@ agents in an effort to improve interoperability.</p>
   <aside class="dfn-panel" data-for="stack-of-open-elements">
    <b><a href="syntax.html#stack-of-open-elements">#stack-of-open-elements</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-stack-of-open-elements-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-stack-of-open-elements-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="document-metadata.html#ref-for-stack-of-open-elements-2">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-stack-of-open-elements-3">(2)</a> <a href="document-metadata.html#ref-for-stack-of-open-elements-4">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-5">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-6">(2)</a> <a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-7">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-8">4.7.14.11.1. Text track model</a>
@@ -26934,7 +26931,7 @@ agents in an effort to improve interoperability.</p>
   <aside class="dfn-panel" data-for="stopped">
    <b><a href="syntax.html#stopped">#stopped</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-stopped-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-stopped-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-stopped-2">3.1.2. Resource metadata management</a>
     </li><li><a href="sec-forms.html#ref-for-stopped-3">4.10.19.8.2. Processing model</a>
     </li><li><a href="browsers.html#ref-for-stopped-4">6.7.1. Navigating across documents</a>

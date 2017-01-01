@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <meta content="ED" name="w3c-status">
-  <title>HTML: 4.7. Embedded content</title>
+  <meta content="REC" name="w3c-status">
+  <title>HTML 5.1: 4.7. Embedded content</title>
   <link href="styles/styles-html.css" rel="stylesheet" type="text/css">
-  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED" rel="stylesheet" type="text/css">
+  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-REC" rel="stylesheet" type="text/css">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
  *
@@ -1423,8 +1423,8 @@ pre.idl.highlight { color: #708090; }
   <div class="head">
    <header>
     <p data-fill-with="logo"><a href="http://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"></a></p>
-    <h1 class="p-name no-ref allcaps" id="title">HTML</h1>
-    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2016-06-02">2 June 2016</time></span></h2>
+    <h1 class="p-name no-ref allcaps" id="title">HTML 5.1</h1>
+    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Recommendation, <time class="dt-updated" datetime="2016-11-01">1 November 2016</time></span></h2>
    </header>
    
    
@@ -1714,7 +1714,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
       and declares the image sizes between these breakpoints to be <code>100vw</code>, <code>50vw</code>, or <code>calc(33vw - 100px)</code>.
       These sizes do not necessarily have to match up exactly with the actual image width as specified in the CSS.</p>
         <p>The user agent will pick a width from the <code>sizes</code> attribute,
-      using the first item with a <a class="css" data-link-type="type" href="https://drafts.csswg.org/mediaqueries-4/#typedef-media-condition">&lt;media-condition&gt;</a> (the part in parentheses) that evaluates to true,
+      using the first item with a <a class="css" data-link-type="type" href="https://www.w3.org/TR/mediaqueries-4/#typedef-media-condition">&lt;media-condition&gt;</a> (the part in parentheses) that evaluates to true,
       or using the last item (<code>calc(33vw - 100px)</code>) if they all evaluate to false.</p>
         <p>For example, if the <a data-link-type="dfn" href="infrastructure.html#viewport" id="ref-for-viewport-10">viewport</a> width is <code>29em</code>,
       then <code>(max-width: 30em)</code> evaluates to true and <code>100vw</code> is used,
@@ -1789,11 +1789,11 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
       <dt data-md="">
        <p>Media Queries <a data-link-type="biblio" href="references.html#biblio-mediaq">[MEDIAQ]</a></p>
       </dt><dd data-md="">
-       <p><a class="production css" data-link-type="type" href="https://drafts.csswg.org/mediaqueries-4/#typedef-media-condition">&lt;media-condition&gt;</a></p>
+       <p><a class="production css" data-link-type="type" href="https://www.w3.org/TR/mediaqueries-4/#typedef-media-condition">&lt;media-condition&gt;</a></p>
       </dd><dt data-md="">
        <p>CSS Values and Units <a data-link-type="biblio" href="references.html#biblio-css-values">[CSS-VALUES]</a></p>
       </dt><dd data-md="">
-       <p><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-values-3/#length-value" title="Expands to: em | advance measure | vb | ch | vmin | cm | pc | pixel unit | vi | in | rem | q | vh | ex | pt | vw | vmax | ic | mm">&lt;length&gt;</a></p>
+       <p><a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#length-value" title="Expands to: em | advance measure | vb | ch | vmin | cm | pc | pixel unit | vi | in | rem | q | vh | ex | pt | vw | vmax | ic | mm">&lt;length&gt;</a></p>
       </dd><dt data-md="">
        <p>CSS Syntax <a data-link-type="biblio" href="references.html#biblio-css-syntax-3">[CSS-SYNTAX-3]</a></p>
       </dt><dd data-md="">
@@ -1801,7 +1801,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
       </dd><dd data-md="">
        <p><a data-link-type="dfn" href="https://www.w3.org/TR/css3-syntax/#component-value">component value</a></p>
       </dd><dd data-md="">
-       <p><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-syntax-3/#typedef-whitespace-token">&lt;whitespace-token&gt;</a></p>
+       <p><a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-syntax-3/#typedef-whitespace-token">&lt;whitespace-token&gt;</a></p>
      </dd></dl>
      <h4 class="heading settled" data-level="4.7.3" id="the-picture-element"><span class="secno">4.7.3. </span><span class="content">The <dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-picture"><code>picture</code></dfn> element</span><a class="self-link" href="semantics-embedded-content.html#the-picture-element"></a></h4>
      <dl class="element">
@@ -2104,7 +2104,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
   300 ÷ 3.125 = 96 CSS pixels by 600 ÷ 3.125 = 192 CSS pixels. With a <a data-link-type="dfn" href="semantics-embedded-content.html#current-pixel-density" id="ref-for-current-pixel-density-5">current pixel density</a> of 2.0 (192 device pixels per CSS inch) and the same image data (300x600), the <a data-link-type="dfn" href="infrastructure.html#intrinsic-dimensions" id="ref-for-intrinsic-dimensions-3">intrinsic
   dimensions</a> would be 150x300.</p>
       <p>Each <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object must have a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="list-of-available-images">list of available images</dfn>. Each image
-  in this list is identified by a tuple consisting of an <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a>, a <a data-link-type="dfn" href="infrastructure.html#cors-settings-attribute" id="ref-for-cors-settings-attribute-3">CORS
+  in this list is identified by a tuple consisting of an <a data-link-type="dfn">absolute URL</a>, a <a data-link-type="dfn" href="infrastructure.html#cors-settings-attribute" id="ref-for-cors-settings-attribute-3">CORS
   settings attribute</a> mode, and, if the mode is not <a data-link-type="state" href="infrastructure.html#statedef-cors-no-cors" id="ref-for-statedef-cors-no-cors-2">No CORS</a>, an <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-6">origin</a>.
   Each image furthermore has an <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="ignore-higher-layer-caching">ignore higher-layer caching</dfn> flag.
   User agents may copy entries from one <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object’s <a data-link-type="dfn" href="semantics-embedded-content.html#list-of-available-images" id="ref-for-list-of-available-images-1">list of available images</a> to another at any time (e.g., when the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> is created, user agents can add to it all the images that are loaded in
@@ -2154,7 +2154,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
          <li><a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-13">Parse</a> <var>selected source</var>, relative
       to the element, and let the result be <var>absolute URL</var>. If that is not successful, then
       abort these inner set of steps.
-         </li><li>Let <var>key</var> be a tuple consisting of the resulting <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a>, the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-53">img</a></code> element’s <code>crossorigin</code> attribute’s mode, and, if that mode is not <a data-link-type="state" href="infrastructure.html#statedef-cors-no-cors" id="ref-for-statedef-cors-no-cors-3">No CORS</a>,
+         </li><li>Let <var>key</var> be a tuple consisting of the resulting <a data-link-type="dfn">absolute URL</a>, the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-53">img</a></code> element’s <code>crossorigin</code> attribute’s mode, and, if that mode is not <a data-link-type="state" href="infrastructure.html#statedef-cors-no-cors" id="ref-for-statedef-cors-no-cors-3">No CORS</a>,
       the <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>’s <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-7">origin</a>.
          </li><li>
           <p>If the <a data-link-type="dfn" href="semantics-embedded-content.html#list-of-available-images" id="ref-for-list-of-available-images-5">list of available images</a> contains an entry for <var>key</var>, run
@@ -2583,7 +2583,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
   and let <var>unparsed sizes list</var> be the result. <a data-link-type="biblio" href="references.html#biblio-css-syntax-3">[CSS-SYNTAX-3]</a></p>
       <p>For each <var>unparsed size</var> in <var>unparsed sizes list</var>:</p>
       <ol>
-       <li>Remove all consecutive <a class="css" data-link-type="type" href="https://drafts.csswg.org/css-syntax-3/#typedef-whitespace-token">&lt;whitespace-token&gt;</a>s
+       <li>Remove all consecutive <a class="css" data-link-type="type" href="https://www.w3.org/TR/css-syntax-3/#typedef-whitespace-token">&lt;whitespace-token&gt;</a>s
     from the end of <var>unparsed size</var>.
     If <var>unparsed size</var> is now empty,
     that is a <a data-link-type="dfn" href="syntax.html#parser-parse-error" id="ref-for-parser-parse-error-6">parse error</a>;
@@ -2594,15 +2594,15 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
     Any CSS function other than the <code>calc()</code> function is invalid.
     Otherwise, there is a <a data-link-type="dfn" href="syntax.html#parser-parse-error" id="ref-for-parser-parse-error-7">parse error</a>;
     continue to the next iteration of this algorithm.
-       </li><li>Remove all consecutive <a class="css" data-link-type="type" href="https://drafts.csswg.org/css-syntax-3/#typedef-whitespace-token">&lt;whitespace-token&gt;</a>s
+       </li><li>Remove all consecutive <a class="css" data-link-type="type" href="https://www.w3.org/TR/css-syntax-3/#typedef-whitespace-token">&lt;whitespace-token&gt;</a>s
     from the end of <var>unparsed size</var>.
     If <var>unparsed size</var> is now empty,
     return <var>size</var> and exit this algorithm.
     If this was not the last item in <var>unparsed sizes list</var>,
     that is a <a data-link-type="dfn" href="syntax.html#parser-parse-error" id="ref-for-parser-parse-error-8">parse error</a>.
-       </li><li>Parse the remaining <a data-link-type="dfn" href="https://www.w3.org/TR/css3-syntax/#component-value">component values</a> in <var>unparsed size</var> as a <a class="css" data-link-type="type" href="https://drafts.csswg.org/mediaqueries-4/#typedef-media-condition">&lt;media-condition&gt;</a>.
+       </li><li>Parse the remaining <a data-link-type="dfn" href="https://www.w3.org/TR/css3-syntax/#component-value">component values</a> in <var>unparsed size</var> as a <a class="css" data-link-type="type" href="https://www.w3.org/TR/mediaqueries-4/#typedef-media-condition">&lt;media-condition&gt;</a>.
     If it does not parse correctly,
-    or it does parse correctly but the <a class="css" data-link-type="type" href="https://drafts.csswg.org/mediaqueries-4/#typedef-media-condition">&lt;media-condition&gt;</a> evaluates to false,
+    or it does parse correctly but the <a class="css" data-link-type="type" href="https://www.w3.org/TR/mediaqueries-4/#typedef-media-condition">&lt;media-condition&gt;</a> evaluates to false,
     continue to the next iteration of this algorithm. <a data-link-type="biblio" href="references.html#biblio-mediaq">[MEDIAQ]</a>
        </li><li>Return <var>size</var> and exit this algorithm.
       </li></ol>
@@ -2803,7 +2803,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
     no image is specified; otherwise, returns false.</p>
       </dd><dt><var>image</var> . <code>currentSrc</code>
       </dt><dd>
-       <p>Returns the image’s <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a>.</p>
+       <p>Returns the image’s <a data-link-type="dfn">absolute URL</a>.</p>
       </dd><dt><var>image</var> = new <code>Image</code>( [ <var>width</var> [, <var>height</var> ] ] )
       </dt><dd>
        <p>Returns a new <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-99">img</a></code> element, with the <code>width</code> and <code>height</code> attributes set to the values
@@ -5527,7 +5527,7 @@ zero or more <code><a data-link-type="element" href="semantics-embedded-content.
           <ol>
            <li>⌛ If the <code>src</code> attribute’s value is the empty string, then end the <a data-link-type="dfn" href="webappapis.html#synchronous-section" id="ref-for-synchronous-section-16">synchronous section</a>, and jump
         down to the <i>failed with attribute</i> step below.
-           </li><li>⌛ Let <var>absolute URL</var> be the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> that
+           </li><li>⌛ Let <var>absolute URL</var> be the <a data-link-type="dfn">absolute URL</a> that
         would have resulted from <a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-21">parsing</a> the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> specified by the <code>src</code> attribute’s value relative to the <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-60">media element</a> when the <code>src</code> attribute was last
       changed. 
            </li><li>⌛ If <var>absolute URL</var> was obtained successfully, set the <code>currentSrc</code> attribute to <var>absolute
@@ -5568,7 +5568,7 @@ zero or more <code><a data-link-type="element" href="semantics-embedded-content.
             <p>Other changes don’t affect <var>pointer</var>.</p>
            </li><li>⌛ <i>Process candidate</i>: If <var>candidate</var> does not have a <code>src</code> attribute, or if its <code>src</code> attribute’s value is the empty string, then end the <a data-link-type="dfn" href="webappapis.html#synchronous-section" id="ref-for-synchronous-section-18">synchronous section</a>, and jump down to the <i>failed with elements</i> step
         below.
-           </li><li>⌛ Let <var>absolute URL</var> be the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> that
+           </li><li>⌛ Let <var>absolute URL</var> be the <a data-link-type="dfn">absolute URL</a> that
         would have resulted from <a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-22">parsing</a> the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> specified by <var>candidate</var>’s <code>src</code> attribute’s value relative to the <var>candidate</var> when the <code>src</code> attribute was last changed. 
            </li><li>⌛ If <var>absolute URL</var> was not obtained successfully, then end the <a data-link-type="dfn" href="webappapis.html#synchronous-section" id="ref-for-synchronous-section-19">synchronous section</a>, and jump down to the <i>failed with elements</i> step
         below.
@@ -5623,12 +5623,12 @@ zero or more <code><a data-link-type="element" href="semantics-embedded-content.
          </li><li>Set the element’s <a data-link-type="dfn" href="semantics-embedded-content.html#delaying-the-load-event-flag" id="ref-for-delaying-the-load-event-flag-5">delaying-the-load-event flag</a> to false. This stops <a data-link-type="dfn" href="syntax.html#delay-the-load-event" id="ref-for-delay-the-load-event-20">delaying the load event</a>.
         </li></ol>
       </li></ol>
-      <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="resource-fetch-algorithm">resource fetch algorithm</dfn> for a <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-64">media element</a> and a given <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> or <a data-link-type="dfn" href="semantics-embedded-content.html#media-provider-object" id="ref-for-media-provider-object-4">media provider object</a> is as
+      <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="resource-fetch-algorithm">resource fetch algorithm</dfn> for a <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-64">media element</a> and a given <a data-link-type="dfn">absolute URL</a> or <a data-link-type="dfn" href="semantics-embedded-content.html#media-provider-object" id="ref-for-media-provider-object-4">media provider object</a> is as
   follows:</p>
       <ol>
        <li>If the algorithm was invoked with a <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>, then let <var>mode</var> be <i>remote</i>, otherwise let <var>mode</var> be <i>local</i>.
        </li><li>If <var>mode</var> is <i>remote</i>, then let the <var>current media resource</var> be the
-    resource given by the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> passed to this algorithm; otherwise, let the <var>current media resource</var> be the resource given by the <a data-link-type="dfn" href="semantics-embedded-content.html#media-provider-object" id="ref-for-media-provider-object-5">media provider
+    resource given by the <a data-link-type="dfn">absolute URL</a> passed to this algorithm; otherwise, let the <var>current media resource</var> be the resource given by the <a data-link-type="dfn" href="semantics-embedded-content.html#media-provider-object" id="ref-for-media-provider-object-5">media provider
     object</a>. Either way, the <var>current media resource</var> is now the element’s <a data-link-type="dfn" href="semantics-embedded-content.html#media-resource" id="ref-for-media-resource-39">media
     resource</a>.
        </li><li>Remove all <a data-link-type="dfn" href="semantics-embedded-content.html#media-resource-specific-text-track" id="ref-for-media-resource-specific-text-track-1">media-resource-specific text
@@ -5657,7 +5657,7 @@ zero or more <code><a data-link-type="element" href="semantics-embedded-content.
              </li><li>Set the <code>networkState</code> to <code>NETWORK_LOADING</code>.
             </li></ol>
            </li><li>
-            <p>Let <var>request</var> be the result of <a data-link-type="dfn" href="infrastructure.html#creating-a-potential-cors-request" id="ref-for-creating-a-potential-cors-request-4">creating a potential-CORS request</a> given <var>current media resource</var>’s <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-url-absolute">absolute URL</a> and the <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-66">media element</a>’s <code>crossorigin</code> content attribute
+            <p>Let <var>request</var> be the result of <a data-link-type="dfn" href="infrastructure.html#creating-a-potential-cors-request" id="ref-for-creating-a-potential-cors-request-4">creating a potential-CORS request</a> given <var>current media resource</var>’s <a data-link-type="dfn">absolute URL</a> and the <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-66">media element</a>’s <code>crossorigin</code> content attribute
         value.</p>
             <p>Set <var>request</var>’s <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-client">client</a> to the <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-67">media element</a>’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>’s <code>Window</code> object’s <a data-link-type="dfn" href="webappapis.html#environment-settings-object" id="ref-for-environment-settings-object-7">environment settings object</a> and <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-type">type</a> to "<code>audio</code>" if the <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-68">media element</a> is an <code>audio</code> element and to "<code>video</code>" otherwise.</p>
             <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">Fetch</a> <var>request</var>.</p>
@@ -6391,7 +6391,7 @@ zero or more <code><a data-link-type="element" href="semantics-embedded-content.
   increase of the <a data-link-type="dfn" href="semantics-embedded-content.html#current-position" id="ref-for-current-position-39">current playback position</a> during normal playback, if any, at the time
   the attribute is evaluated.</p>
       <hr>
-      <p>When the <dfn class="css" data-dfn-type="function" data-export="" id="funcdef-play"><code>play()</code><a class="self-link" href="semantics-embedded-content.html#funcdef-play"></a></dfn> method on a <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-130">media element</a> is invoked, the user agent must run the following steps.</p>
+      <p>When the <dfn data-dfn-type="dfn" data-noexport="" id="play"><code>play()</code><a class="self-link" href="semantics-embedded-content.html#play"></a></dfn> method on a <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-130">media element</a> is invoked, the user agent must run the following steps.</p>
       <ol>
        <li>If the <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-131">media element</a>’s <code>networkState</code> attribute has the value <code>NETWORK_EMPTY</code>, invoke the <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-132">media element</a>’s <a data-link-type="dfn" href="semantics-embedded-content.html#resource-selection-algorithm" id="ref-for-resource-selection-algorithm-16">resource selection algorithm</a>.
        </li><li>
@@ -6415,7 +6415,7 @@ zero or more <code><a data-link-type="element" href="semantics-embedded-content.
        </li><li>Set the <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-137">media element</a>’s <a data-link-type="dfn" href="semantics-embedded-content.html#autoplaying-flag" id="ref-for-autoplaying-flag-4">autoplaying flag</a> to false.
       </li></ol>
       <hr>
-      <p>When the <dfn class="css" data-dfn-type="function" data-export="" id="funcdef-pause"><code>pause()</code><a class="self-link" href="semantics-embedded-content.html#funcdef-pause"></a></dfn> method is invoked, and when
+      <p>When the <dfn data-dfn-type="dfn" data-noexport="" id="pause"><code>pause()</code><a class="self-link" href="semantics-embedded-content.html#pause"></a></dfn> method is invoked, and when
   the user agent is required to pause the <a data-link-type="dfn" href="semantics-embedded-content.html#media-element" id="ref-for-media-element-138">media element</a>, the user agent must run the
   following steps:</p>
       <ol>
@@ -8850,7 +8850,7 @@ red:89
       bottom right corner is given by the coordinate (<var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>), those coordinates being interpreted as CSS pixels
       from the top left corner of the image.</p>
         </dd></dl>
-        <p>For historical reasons, the coordinates must be interpreted relative to the <em>displayed</em> image after any stretching caused by the CSS <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css21/visudet.html#propdef-width">width</a> and <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css21/visudet.html#propdef-height">height</a> properties
+        <p>For historical reasons, the coordinates must be interpreted relative to the <em>displayed</em> image after any stretching caused by the CSS <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/CSS21/visudet.html#propdef-width">width</a> and <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/CSS21/visudet.html#propdef-height">height</a> properties
     (or, for non-CSS browsers, the image element’s <code>width</code> and <code>height</code> attributes — CSS browsers map those attributes to the
     aforementioned CSS properties).</p>
         <p class="note" role="note"> Browser zoom features and transforms applied using CSS or SVG do not affect the
@@ -8931,7 +8931,7 @@ red:89
   agents are encouraged to provide a way to export any SVG fragment as an XML namespace-well-formed
   XML fragment.</p>
      </div>
-     <p>When the SVG <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/embedded.html#elementdef-foreignObject">foreignObject</a></code> element contains elements from the <a data-link-type="dfn" href="infrastructure.html#html-namespace" id="ref-for-html-namespace-12">HTML namespace</a>, such
+     <p>When the SVG <code><a data-link-type="element" href="https://www.w3.org/TR/svg2/embedded.html#elementdef-foreignObject">foreignObject</a></code> element contains elements from the <a data-link-type="dfn" href="infrastructure.html#html-namespace" id="ref-for-html-namespace-12">HTML namespace</a>, such
   elements must all be <a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-105">flow content</a>. <a data-link-type="biblio" href="references.html#biblio-svg11">[SVG11]</a></p>
      <p>The content model for <a data-link-type="element" href="https://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements">title</a> elements in the <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-7">SVG namespace</a> inside <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-16">HTML documents</a> is <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-122">phrasing content</a>. (This further constrains the
   requirements given in the SVG specification.)</p>
@@ -8996,7 +8996,7 @@ red:89
    <b><a href="introduction.html#willful-violation">#willful-violation</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-willful-violation-1">2.2.2. 의존성</a>
-    </li><li><a href="infrastructure.html#ref-for-willful-violation-2">2.2.4. Interactions with XPath and XSLT</a> <a href="infrastructure.html#ref-for-willful-violation-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-willful-violation-2">2.2.4. XPath와 XSLT와의 상호작용</a> <a href="infrastructure.html#ref-for-willful-violation-3">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-willful-violation-4">4.10.5.1.5. E-mail state (type=email)</a>
     </li><li><a href="webappapis.html#ref-for-willful-violation-5">7.1.3.7. Integration with the JavaScript job queue</a>
     </li><li><a href="xhtml.html#ref-for-willful-violation-6">9.2. Parsing XHTML documents</a> <a href="xhtml.html#ref-for-willful-violation-7">(2)</a>
@@ -9040,7 +9040,7 @@ red:89
    <ul>
     <li><a href="infrastructure.html#ref-for-html-document-1">2.1. 전문 용어</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-2">2.2.2. 의존성</a>
-    </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-4">2.5.1. Terminology</a>
     </li><li><a href="dom.html#ref-for-html-document-5">3.2.5. Global attributes</a>
     </li><li><a href="dom.html#ref-for-html-document-6">3.2.5.3. 
@@ -10046,7 +10046,7 @@ red:89
   <aside class="dfn-panel" data-for="case-sensitive">
    <b><a href="infrastructure.html#case-sensitive">#case-sensitive</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-case-sensitive-1">2.3. Case-sensitivity and string comparison</a>
+    <li><a href="infrastructure.html#ref-for-case-sensitive-1">2.3. 대소문자 구별과 문자열 비교</a>
     </li><li><a href="infrastructure.html#ref-for-case-sensitive-2">2.4.9. References</a>
     </li><li><a href="dom.html#ref-for-case-sensitive-3">3.1.3. DOM tree accessors</a>
     </li><li><a href="grouping-content.html#ref-for-case-sensitive-4">4.4.5. The ol element</a>
@@ -10129,7 +10129,7 @@ red:89
   <aside class="dfn-panel" data-for="converting-a-string-to-ascii-lowercase">
    <b><a href="infrastructure.html#converting-a-string-to-ascii-lowercase">#converting-a-string-to-ascii-lowercase</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-1">2.2.4. Interactions with XPath and XSLT</a> <a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-1">2.2.4. XPath와 XSLT와의 상호작용</a> <a href="infrastructure.html#ref-for-converting-a-string-to-ascii-lowercase-2">(2)</a>
     </li><li><a href="semantics-scripting.html#ref-for-converting-a-string-to-ascii-lowercase-3">4.12.4.2. Serializing bitmaps to a file</a>
    </li></ul>
   </aside>
@@ -11553,7 +11553,7 @@ red:89
     <li><a href="infrastructure.html#ref-for-html-namespace-1">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-html-namespace-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-html-namespace-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. 적합성 종류</a>
-    </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-html-namespace-7">3.1.3. DOM tree accessors</a>
     </li><li><a href="dom.html#ref-for-html-namespace-8">3.2.4.2.6. Embedded content</a>
     </li><li><a href="dom.html#ref-for-html-namespace-9">3.2.5. Global attributes</a>
@@ -11809,7 +11809,7 @@ red:89
   <aside class="dfn-panel" data-for="current-document-readiness">
    <b><a href="dom.html#current-document-readiness">#current-document-readiness</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-current-document-readiness-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-current-document-readiness-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-current-document-readiness-2">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-current-document-readiness-3">(2)</a>
     </li><li><a href="dom.html#ref-for-current-document-readiness-4">3.1.4. Loading XML documents</a> <a href="dom.html#ref-for-current-document-readiness-5">(2)</a>
     </li><li><a href="browsers.html#ref-for-current-document-readiness-6">6.7.10. History traversal</a>
@@ -14513,6 +14513,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-style-39">Element content categories</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-style-40">Attributes</a> <a href="fullindex.html#ref-for-elementdef-style-41">(2)</a> <a href="fullindex.html#ref-for-elementdef-style-42">(3)</a> <a href="fullindex.html#ref-for-elementdef-style-43">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-style-44">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-style-45">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlstyleelement-htmlstyleelement">
@@ -14716,6 +14717,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-section-25">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-section-26">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-section-27">(2)</a> <a href="fullindex.html#ref-for-elementdef-section-28">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-section-29">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-section-30">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-nav">
@@ -14781,6 +14783,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-16">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-17">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-h1-18">(2)</a> <a href="fullindex.html#ref-for-elementdef-h1-19">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-h1-20">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-h1-21">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-h2">
@@ -14902,6 +14905,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-header-34">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-header-35">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-header-36">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-header-37">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-header-38">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-footer">
@@ -14925,6 +14929,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-33">Elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-34">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-footer-35">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-footer-36">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-footer-37">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-address">
@@ -15370,6 +15375,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-37">Elements</a> <a href="fullindex.html#ref-for-elementdef-figure-38">(2)</a> <a href="fullindex.html#ref-for-elementdef-figure-39">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-40">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-figure-41">(2)</a> <a href="fullindex.html#ref-for-elementdef-figure-42">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figure-43">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-figure-44">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-figcaption">
@@ -15391,6 +15397,7 @@ red:89
     </li><li><a href="syntax.html#ref-for-elementdef-figcaption-26">8.2.3.2. The stack of open elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figcaption-27">Elements</a> <a href="fullindex.html#ref-for-elementdef-figcaption-28">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-figcaption-29">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-figcaption-30">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-main">
@@ -15935,6 +15942,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-time-21">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-time-22">(2)</a> <a href="fullindex.html#ref-for-elementdef-time-23">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-time-24">Attributes</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-time-25">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-time-26">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmltimeelement-htmltimeelement">
@@ -16358,7 +16366,8 @@ red:89
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-picture-20">4.7.5.1.21. An image in a picture element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-picture-21">(2)</a> <a href="semantics-embedded-content.html#ref-for-elementdef-picture-22">(3)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-picture-23">Elements</a> <a href="fullindex.html#ref-for-elementdef-picture-24">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-picture-25">Element Interfaces</a>
-    </li><li><a href="acknowledgements.html#ref-for-elementdef-picture-26">Acknowledgements</a>
+    </li><li><a href="changes.html#ref-for-elementdef-picture-26">Features added</a>
+    </li><li><a href="acknowledgements.html#ref-for-elementdef-picture-27">Acknowledgements</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlpictureelement-htmlpictureelement">
@@ -16477,6 +16486,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-img-197">Attributes</a> <a href="fullindex.html#ref-for-elementdef-img-198">(2)</a> <a href="fullindex.html#ref-for-elementdef-img-199">(3)</a> <a href="fullindex.html#ref-for-elementdef-img-200">(4)</a> <a href="fullindex.html#ref-for-elementdef-img-201">(5)</a> <a href="fullindex.html#ref-for-elementdef-img-202">(6)</a> <a href="fullindex.html#ref-for-elementdef-img-203">(7)</a> <a href="fullindex.html#ref-for-elementdef-img-204">(8)</a> <a href="fullindex.html#ref-for-elementdef-img-205">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-img-206">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-img-207">Events</a> <a href="fullindex.html#ref-for-elementdef-img-208">(2)</a> <a href="fullindex.html#ref-for-elementdef-img-209">(3)</a> <a href="fullindex.html#ref-for-elementdef-img-210">(4)</a> <a href="fullindex.html#ref-for-elementdef-img-211">(5)</a> <a href="fullindex.html#ref-for-elementdef-img-212">(6)</a> <a href="fullindex.html#ref-for-elementdef-img-213">(7)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-img-214">Changes to existing features</a> <a href="changes.html#ref-for-elementdef-img-215">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlimageelement-htmlimageelement">
@@ -16502,7 +16512,8 @@ red:89
     <li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-1">4.7.1. Introduction</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-2">(2)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-3">(3)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-4">(4)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-5">(5)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-srcset-6">4.7.5. The img element</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-img-srcset-7">Elements</a>
-    </li><li><a href="acknowledgements.html#ref-for-element-attrdef-img-srcset-8">Acknowledgements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-img-srcset-8">Features added</a>
+    </li><li><a href="acknowledgements.html#ref-for-element-attrdef-img-srcset-9">Acknowledgements</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="element-attrdef-img-alt">
@@ -16512,6 +16523,7 @@ red:89
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-alt-2">4.7.5.1. Requirements for providing text to act as an alternative for images</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-img-alt-3">4.7.5.1.4. Graphical Representations: Charts, diagrams, graphs, maps, illustrations</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-img-alt-4">Elements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-img-alt-5">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="image-candidate-string">
@@ -16825,6 +16837,7 @@ red:89
    <b><a href="semantics-embedded-content.html#dom-htmlimageelement-currentsrc">#dom-htmlimageelement-currentsrc</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="semantics-embedded-content.html#ref-for-dom-htmlimageelement-currentsrc-1">4.7.5. The img element</a>
+    </li><li><a href="changes.html#ref-for-dom-htmlimageelement-currentsrc-2">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlimageelement-image">
@@ -17125,6 +17138,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-object-119">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-object-120">(2)</a> <a href="fullindex.html#ref-for-elementdef-object-121">(3)</a> <a href="fullindex.html#ref-for-elementdef-object-122">(4)</a> <a href="fullindex.html#ref-for-elementdef-object-123">(5)</a> <a href="fullindex.html#ref-for-elementdef-object-124">(6)</a> <a href="fullindex.html#ref-for-elementdef-object-125">(7)</a> <a href="fullindex.html#ref-for-elementdef-object-126">(8)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-object-127">Attributes</a> <a href="fullindex.html#ref-for-elementdef-object-128">(2)</a> <a href="fullindex.html#ref-for-elementdef-object-129">(3)</a> <a href="fullindex.html#ref-for-elementdef-object-130">(4)</a> <a href="fullindex.html#ref-for-elementdef-object-131">(5)</a> <a href="fullindex.html#ref-for-elementdef-object-132">(6)</a> <a href="fullindex.html#ref-for-elementdef-object-133">(7)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-object-134">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-object-135">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlobjectelement-htmlobjectelement">
@@ -19273,6 +19287,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-area-104">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-area-105">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-area-106">Attributes</a> <a href="fullindex.html#ref-for-elementdef-area-107">(2)</a> <a href="fullindex.html#ref-for-elementdef-area-108">(3)</a> <a href="fullindex.html#ref-for-elementdef-area-109">(4)</a> <a href="fullindex.html#ref-for-elementdef-area-110">(5)</a> <a href="fullindex.html#ref-for-elementdef-area-111">(6)</a> <a href="fullindex.html#ref-for-elementdef-area-112">(7)</a> <a href="fullindex.html#ref-for-elementdef-area-113">(8)</a> <a href="fullindex.html#ref-for-elementdef-area-114">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-area-115">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-area-116">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlareaelement-htmlareaelement">
@@ -19625,6 +19640,7 @@ red:89
    <ul>
     <li><a href="textlevel-semantics.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-1">4.5.1. The a element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-2">4.7.16. The area element</a>
+    </li><li><a href="changes.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-3">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="set-the-url">
@@ -20873,6 +20889,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-label-61">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-label-62">(2)</a> <a href="fullindex.html#ref-for-elementdef-label-63">(3)</a> <a href="fullindex.html#ref-for-elementdef-label-64">(4)</a> <a href="fullindex.html#ref-for-elementdef-label-65">(5)</a> <a href="fullindex.html#ref-for-elementdef-label-66">(6)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-label-67">Attributes</a> <a href="fullindex.html#ref-for-elementdef-label-68">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-label-69">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-label-70">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmllabelelement-htmllabelelement">
@@ -21246,6 +21263,7 @@ red:89
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-input-value-20">4.10.5.3.8. The step attribute</a>
     </li><li><a href="sec-forms.html#ref-for-element-attrdef-input-value-21">4.10.5.4. Common input element APIs</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-22">(2)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-23">(3)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-24">(4)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-25">(5)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-26">(6)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-27">(7)</a> <a href="sec-forms.html#ref-for-element-attrdef-input-value-28">(8)</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-input-value-29">Elements</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-input-value-30">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dirty-checkedness-flag">
@@ -23042,6 +23060,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-option-125">Elements</a> <a href="fullindex.html#ref-for-elementdef-option-126">(2)</a> <a href="fullindex.html#ref-for-elementdef-option-127">(3)</a> <a href="fullindex.html#ref-for-elementdef-option-128">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-option-129">Attributes</a> <a href="fullindex.html#ref-for-elementdef-option-130">(2)</a> <a href="fullindex.html#ref-for-elementdef-option-131">(3)</a> <a href="fullindex.html#ref-for-elementdef-option-132">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-option-133">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-option-134">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmloptionelement-htmloptionelement">
@@ -25473,6 +25492,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-details-32">Attributes</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-details-33">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-details-34">Events</a> <a href="fullindex.html#ref-for-elementdef-details-35">(2)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-details-36">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmldetailselement-htmldetailselement">
@@ -25511,6 +25531,7 @@ red:89
     </li><li><a href="rendering.html#ref-for-elementdef-summary-8">10.5.3. The details element</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-summary-9">Elements</a> <a href="fullindex.html#ref-for-elementdef-summary-10">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-summary-11">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-summary-12">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-menu">
@@ -25661,6 +25682,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-25">Elements</a> <a href="fullindex.html#ref-for-elementdef-menuitem-26">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-27">Attributes</a> <a href="fullindex.html#ref-for-elementdef-menuitem-28">(2)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-29">(3)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-30">(4)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-31">(5)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-32">(6)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-33">(7)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-34">(8)</a> <a href="fullindex.html#ref-for-elementdef-menuitem-35">(9)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-menuitem-36">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-menuitem-37">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlmenuitemelement-htmlmenuitemelement">
@@ -25998,6 +26020,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-script-144">Attributes</a> <a href="fullindex.html#ref-for-elementdef-script-145">(2)</a> <a href="fullindex.html#ref-for-elementdef-script-146">(3)</a> <a href="fullindex.html#ref-for-elementdef-script-147">(4)</a> <a href="fullindex.html#ref-for-elementdef-script-148">(5)</a> <a href="fullindex.html#ref-for-elementdef-script-149">(6)</a> <a href="fullindex.html#ref-for-elementdef-script-150">(7)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-script-151">Element Interfaces</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-script-152">Events</a> <a href="fullindex.html#ref-for-elementdef-script-153">(2)</a> <a href="fullindex.html#ref-for-elementdef-script-154">(3)</a> <a href="fullindex.html#ref-for-elementdef-script-155">(4)</a>
+    </li><li><a href="changes.html#ref-for-elementdef-script-156">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlscriptelement-htmlscriptelement">
@@ -26375,6 +26398,7 @@ red:89
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-63">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-canvas-64">(2)</a> <a href="fullindex.html#ref-for-elementdef-canvas-65">(3)</a> <a href="fullindex.html#ref-for-elementdef-canvas-66">(4)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-67">Attributes</a> <a href="fullindex.html#ref-for-elementdef-canvas-68">(2)</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-canvas-69">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-canvas-70">Features added</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="typedefdef-htmlcanvaselement-renderingcontext">
@@ -26499,12 +26523,6 @@ red:89
     </li><li><a href="editing.html#ref-for-disabling-5">5.4.3. The tabindex attribute</a>
    </li></ul>
   </aside>
-  <aside class="dfn-panel" data-for="selectordef-active">
-   <b><a href="matching-html-elements-using-selectors.html#selectordef-active">#selectordef-active</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="matching-html-elements-using-selectors.html#ref-for-selectordef-active-1">4.15.2. Pseudo-classes</a>
-   </li></ul>
-  </aside>
   <aside class="dfn-panel" data-for="in-a-formal-activation-state">
    <b><a href="matching-html-elements-using-selectors.html#in-a-formal-activation-state">#in-a-formal-activation-state</a></b><b>Referenced in:</b>
    <ul>
@@ -26515,12 +26533,6 @@ red:89
    <b><a href="matching-html-elements-using-selectors.html#being-actively-pointed-at">#being-actively-pointed-at</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="matching-html-elements-using-selectors.html#ref-for-being-actively-pointed-at-1">4.15.2. Pseudo-classes</a>
-   </li></ul>
-  </aside>
-  <aside class="dfn-panel" data-for="selectordef-hover">
-   <b><a href="matching-html-elements-using-selectors.html#selectordef-hover">#selectordef-hover</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-1">4.15.2. Pseudo-classes</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-2">(2)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-3">(3)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-4">(4)</a> <a href="matching-html-elements-using-selectors.html#ref-for-selectordef-hover-5">(5)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="hidden">
@@ -26874,6 +26886,7 @@ red:89
     </li><li><a href="editing.html#ref-for-element-attrdef-global-accesskey-5">5.5.2. The accesskey attribute</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-6">(2)</a>
     </li><li><a href="editing.html#ref-for-element-attrdef-global-accesskey-7">5.5.3. Processing model</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-8">(2)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-9">(3)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-10">(4)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-11">(5)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-12">(6)</a> <a href="editing.html#ref-for-element-attrdef-global-accesskey-13">(7)</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-global-accesskey-14">Attributes</a>
+    </li><li><a href="changes.html#ref-for-element-attrdef-global-accesskey-15">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="assigned-access-key">
@@ -27405,10 +27418,10 @@ red:89
     </li><li><a href="fullindex.html#ref-for-element-attrdef-global-dropzone-19">Attributes</a>
    </li></ul>
   </aside>
-  <aside class="dfn-panel" data-for="link">
-   <b><a href="editing.html#link">#link</a></b><b>Referenced in:</b>
+  <aside class="dfn-panel" data-for="link0">
+   <b><a href="editing.html#link0">#link0</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="document-metadata.html#ref-for-link-1">4.2.4. The link element</a>
+    <li><a href="document-metadata.html#ref-for-link0-1">4.2.4. The link element</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="specified">
@@ -27817,6 +27830,7 @@ red:89
    <b><a href="browsers.html#dom-window-frameelement">#dom-window-frameelement</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="browsers.html#ref-for-dom-window-frameelement-1">6.3. The Window object</a>
+    </li><li><a href="changes.html#ref-for-dom-window-frameelement-2">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="auxiliary-browsing-contexts">
@@ -28883,6 +28897,7 @@ red:89
     </li><li><a href="browsers.html#ref-for-location-location-8">6.3. The Window object</a>
     </li><li><a href="browsers.html#ref-for-location-location-9">6.3.7. The WindowProxy object</a>
     </li><li><a href="browsers.html#ref-for-location-location-10">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-location-location-11">(2)</a> <a href="browsers.html#ref-for-location-location-12">(3)</a> <a href="browsers.html#ref-for-location-location-13">(4)</a> <a href="browsers.html#ref-for-location-location-14">(5)</a> <a href="browsers.html#ref-for-location-location-15">(6)</a> <a href="browsers.html#ref-for-location-location-16">(7)</a> <a href="browsers.html#ref-for-location-location-17">(8)</a> <a href="browsers.html#ref-for-location-location-18">(9)</a> <a href="browsers.html#ref-for-location-location-19">(10)</a> <a href="browsers.html#ref-for-location-location-20">(11)</a> <a href="browsers.html#ref-for-location-location-21">(12)</a> <a href="browsers.html#ref-for-location-location-22">(13)</a> <a href="browsers.html#ref-for-location-location-23">(14)</a> <a href="browsers.html#ref-for-location-location-24">(15)</a> <a href="browsers.html#ref-for-location-location-25">(16)</a> <a href="browsers.html#ref-for-location-location-26">(17)</a> <a href="browsers.html#ref-for-location-location-27">(18)</a> <a href="browsers.html#ref-for-location-location-28">(19)</a> <a href="browsers.html#ref-for-location-location-29">(20)</a> <a href="browsers.html#ref-for-location-location-30">(21)</a> <a href="browsers.html#ref-for-location-location-31">(22)</a> <a href="browsers.html#ref-for-location-location-32">(23)</a> <a href="browsers.html#ref-for-location-location-33">(24)</a> <a href="browsers.html#ref-for-location-location-34">(25)</a> <a href="browsers.html#ref-for-location-location-35">(26)</a> <a href="browsers.html#ref-for-location-location-36">(27)</a> <a href="browsers.html#ref-for-location-location-37">(28)</a> <a href="browsers.html#ref-for-location-location-38">(29)</a> <a href="browsers.html#ref-for-location-location-39">(30)</a> <a href="browsers.html#ref-for-location-location-40">(31)</a> <a href="browsers.html#ref-for-location-location-41">(32)</a> <a href="browsers.html#ref-for-location-location-42">(33)</a> <a href="browsers.html#ref-for-location-location-43">(34)</a> <a href="browsers.html#ref-for-location-location-44">(35)</a> <a href="browsers.html#ref-for-location-location-45">(36)</a> <a href="browsers.html#ref-for-location-location-46">(37)</a> <a href="browsers.html#ref-for-location-location-47">(38)</a> <a href="browsers.html#ref-for-location-location-48">(39)</a> <a href="browsers.html#ref-for-location-location-49">(40)</a> <a href="browsers.html#ref-for-location-location-50">(41)</a> <a href="browsers.html#ref-for-location-location-51">(42)</a> <a href="browsers.html#ref-for-location-location-52">(43)</a> <a href="browsers.html#ref-for-location-location-53">(44)</a> <a href="browsers.html#ref-for-location-location-54">(45)</a> <a href="browsers.html#ref-for-location-location-55">(46)</a> <a href="browsers.html#ref-for-location-location-56">(47)</a> <a href="browsers.html#ref-for-location-location-57">(48)</a> <a href="browsers.html#ref-for-location-location-58">(49)</a> <a href="browsers.html#ref-for-location-location-59">(50)</a>
+    </li><li><a href="changes.html#ref-for-location-location-60">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="relevant-document">
@@ -29015,7 +29030,7 @@ red:89
   <aside class="dfn-panel" data-for="navigated">
    <b><a href="browsers.html#navigated">#navigated</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-navigated-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-navigated-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-navigated-2">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-navigated-3">(2)</a>
     </li><li><a href="dom.html#ref-for-navigated-4">3.1. Documents</a> <a href="dom.html#ref-for-navigated-5">(2)</a> <a href="dom.html#ref-for-navigated-6">(3)</a> <a href="dom.html#ref-for-navigated-7">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-navigated-8">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-navigated-9">(2)</a>
@@ -29995,7 +30010,7 @@ red:89
    <b><a href="webappapis.html#event-loop">#event-loop</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-event-loop-1">2.1. 전문 용어</a>
-    </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. Interactions with XPath and XSLT</a>
+    </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-3">2.9.1. Cloneable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-4">2.9.2. Transferable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-5">2.9.4. StructuredClone ( input, targetRealm [ , memory ] )</a>
@@ -31877,7 +31892,7 @@ red:89
   <aside class="dfn-panel" data-for="html-parser">
    <b><a href="syntax.html#html-parser">#html-parser</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-html-parser-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-html-parser-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-html-parser-2">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-html-parser-3">(2)</a>
     </li><li><a href="dom.html#ref-for-html-parser-4">3.2.5. Global attributes</a>
     </li><li><a href="document-metadata.html#ref-for-html-parser-5">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-html-parser-6">(2)</a> <a href="document-metadata.html#ref-for-html-parser-7">(3)</a>
@@ -32428,7 +32443,7 @@ red:89
   <aside class="dfn-panel" data-for="stack-of-open-elements">
    <b><a href="syntax.html#stack-of-open-elements">#stack-of-open-elements</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-stack-of-open-elements-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-stack-of-open-elements-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="document-metadata.html#ref-for-stack-of-open-elements-2">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-stack-of-open-elements-3">(2)</a> <a href="document-metadata.html#ref-for-stack-of-open-elements-4">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-5">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-6">(2)</a> <a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-7">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-stack-of-open-elements-8">4.7.14.11.1. Text track model</a>
@@ -33162,7 +33177,7 @@ red:89
   <aside class="dfn-panel" data-for="stopped">
    <b><a href="syntax.html#stopped">#stopped</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-stopped-1">2.2.4. Interactions with XPath and XSLT</a>
+    <li><a href="infrastructure.html#ref-for-stopped-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-stopped-2">3.1.2. Resource metadata management</a>
     </li><li><a href="sec-forms.html#ref-for-stopped-3">4.10.19.8.2. Processing model</a>
     </li><li><a href="browsers.html#ref-for-stopped-4">6.7.1. Navigating across documents</a>
