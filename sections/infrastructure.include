@@ -1476,138 +1476,133 @@
   &mdash; 객체에 속성(attribute)를 두지만 null을 반환하거나 예외를 던지는(throw) 것을 불충분하게 하여
   , 객체로부터 생략될 것입니다.
 
-<h4 id="interactions-with-xpath-and-xslt">Interactions with XPath and XSLT</h4>
+<h4 id="interactions-with-xpath-and-xslt">XPath와 XSLT와의 상호작용</h4>
 
-  Implementations of XPath 1.0 that operate on <a>HTML documents</a> parsed or created in the
-  manners described in this specification (e.g., as part of the <code>document.evaluate()</code> API)
-  must act as if the following edit was applied to the XPath 1.0 specification.
+  이 명세에 설명된 방법으로(예를 들어, <code>document.evaluate()</code> API의 일부로) 해석되거나 
+  생성된 <a lt="HTML documents">HTML 문서</a>에서 운용되는 XPath 1.0의 구현은 마치 다음 편집이 XPath
+  1.0 명세에 적용된 것처럼 수행해야(must) 합니다.
 
-  First, remove this paragraph:
+  먼저, 이 문단을 제거합니다:
 
   <blockquote cite="https://www.w3.org/TR/1999/REC-xpath-19991116#node-tests">
-    A <a>QName</a> in the node test is expanded into an <a>expanded-name</a> using the namespace
-    declarations from the expression context. This is the same way expansion is done for element
-    type names in start and end-tags except that the default namespace declared with
-    <code>xmlns</code> is not used: if the <a>QName</a> does not have a prefix, then the namespace
-    URI is null (this is the same way attribute names are expanded). It is an error if the
-    <a>QName</a> has a prefix for which there is no namespace declaration in the expression context.
+    노드 테스트의 <a lt="QName">QName</a>이 표현 맥락에서 네임스페이스 선언을 사용하여 
+    <a lt="expanded-name">확장된 이름</a>으로 확장됩니다. 이것은 <code>xmlns</code>로 선언된 
+    기본 네임스페이스가 사용되지 않는 것을 제외하고 시작 태그와 종료 태그의 요소 유형 이름에 대해 
+    확장이 수행된 것과 같은 방식입니다: <a lt="QName">QName</a>이 접두어를 가지지 않는다면, 
+    네임스페이스 URI는 null입니다(이것은 속성 이름이 확장되는 것과 같은 방식 입니다). <a lt="QName">QName</a>이 
+    표현 맥락에 네임스페이스 선언이 없는 접두어를 가진다면 이것은 오류입니다.
   </blockquote>
 
-  Then, insert in its place the following:
+  그 후, 다음을 그 자리에 삽입합니다:
 
   <blockquote cite="https://www.w3.org/Bugs/Public/show_bug.cgi?id=7059#c37">
-    A QName in the node test is expanded into an expanded-name using the namespace declarations from
-    the expression context. If the QName has a prefix, then there must be a namespace declaration
-    for this prefix in the expression context, and the corresponding namespace URI is the one that
-    is associated with this prefix. It is an error if the QName has a prefix for which there is no
-    namespace declaration in the expression context.
+    노드 테스트의 QName이 표현 맥락에서 네임스페이스 선언을 사용하여 확장된 이름으로 확장됩니다.
+    QName이 접두어를 가진다면, 표현 맥락에 이 접두어에 대한 네임스페이스 선언이 존해해야(must) 하고,
+    해당하는 네임스페이스 URI는 이 접두어와 연관된 것이어야(must) 합니다. QName이 표현 맥락에 
+    네임스페이스 선언이 없는 접두어를 가진다면 이것은 오류입니다.
 
-    If the QName has no prefix and the principal node type of the axis is element, then the default
-    element namespace is used. Otherwise if the QName has no prefix, the namespace URI is null. The
-    default element namespace is a member of the context for the XPath expression. The value of the
-    default element namespace when executing an XPath expression through the DOM3 XPath API is
-    determined in the following way:
+    QName이 접두어를 가지지 않고 주축의 주요 노드 타입이 요소(element)라면, 기본 요소(element)
+    네임스페이스가 사용됩니다. 그렇지 않고 QName이 접두어를 가지지 않는다면, 네임스페이스 URI는 null
+    입니다. 기본 요소(element) 네임스페이스는 XPath 표현에 대한 맥락의 멤버입니다. XPath 표현을 
+    DOM3 XPath API를 통해 실행할 때 기본 요소(element) 네임스페이스의 값은 다음 방법으로 결정됩니다:
 
-    1. If the context node is from an HTML DOM, the default element namespace is
-        "https://www.w3.org/1999/xhtml".
-    2. Otherwise, the default element namespace URI is null.
+    1. 컨텍스트 노드가 HTML DOM으로부터라면, 기본 요소(element) 네임스페이스는
+        "https://www.w3.org/1999/xhtml" 입니다.
+    2. 그렇지 않으면, 기본 요소(element) 네임스페이스 URI는 null입니다.
 
     <p class="note">
-      This is equivalent to adding the default element namespace feature of XPath 2.0 to XPath 1.0,
-      and using the HTML namespace as the default element namespace for HTML documents. It is
-      motivated by the desire to have implementations be compatible with legacy HTML content while
-      still supporting the changes that this specification introduces to HTML regarding the
-      namespace used for HTML elements, and by the desire to use XPath 1.0 rather than XPath 2.0.
+      이것은 XPath 2.0의 기본 요소(element) 네임스페이스 기능을 XPath 1.0에 추가하는 것과, HTML 문서에
+      대한 기본 요소(element) 네임스페이스로서 HTML 네임스페이스를 사용하는 것과 동일합니다. 그것은
+      이 명세가 HTML 요소(element)에 대해 사용된 네임스페이스에 대하여 HTML에 도입하는 변경사항을 
+      여전히 지원하는 동안 구현이 레거시 HTML 콘텐트와 호환되도록 하고자 하는 바람과, XPath 2.0보다 
+      XPath 1.0을 사용하고자 하는 바람에 기인합니다.
     </p>
   </blockquote>
 
   <p class="note">
-    This change is a <a>willful violation</a> of the XPath 1.0 specification, motivated by
-    desire to have implementations be compatible with legacy content while still supporting the
-    changes that this specification introduces to HTML regarding which namespace is used for HTML
-    elements. [[!XPATH]]
+    이 변경은 Xpath 1.0 명세의 <a lt="willful violation">고의적 위반</a>으로, 구현이 HTML 요소(element)에
+    대해 사용되는 네임스페이스에 대해 이 명세가 HTML에 도입하는 변경 사항을 여전히 지원하면서 레거시
+    콘텐트와 호환되도록 하고자 하는 바람에 기인합니다. [[!XPATH]]
   </p>
 
   <hr />
 
-  XSLT 1.0 processors outputting to a DOM when the output method is "html" (either explicitly or via
-  the defaulting rule in XSLT 1.0) are affected as follows:
+  출력 메서드가 "html"인 경우 DOM으로 출력하는 XSLT 1.0 처리기는 (명시적으로 혹은 XSLT 1.0 기본
+  규칙을 통해) 다음과 같이 영향을 받습니다:
 
-  If the transformation program outputs an element in no namespace, the processor must, prior to
-  constructing the corresponding DOM element node, change the namespace of the element to the
-  <a>HTML namespace</a>, <a lt="Converting a string to ASCII lowercase">ASCII-lowercase</a> the element's local name, and <a lt="Converting a string to ASCII lowercase">ASCII-lowercase</a>
-  the names of any non-namespaced attributes on the element.
+  변환 프로그램이 네임스페이스 없이 요소(element)를 출력한다면, 처리기는, 해당 DOM 요소(element)
+  노드를 구성하기에 앞서, 요소(element)의 네임스페이스를 <a lt="HTML namespace">HTML 네임스페이스</a>,
+  요소(element)의 <a lt="Converting a string to ASCII lowercase">ASCII-소문자</a> 로컬 이름, 
+  요소(element)에 네임스페이스 없는 속성(attribute)들의 <a lt="Converting a string to ASCII lowercase">ASCII-소문자</a>
+  이름으로 변경해야(must) 합니다.
 
   <p class="note">
-    This requirement is a <a>willful violation</a> of the XSLT 1.0 specification, required because
-    this specification changes the namespaces and case-sensitivity rules of HTML in a manner that
-    would otherwise be incompatible with DOM-based XSLT transformations. (Processors that serialize
-    the output are unaffected.) [[XSLT]]
+    이; 요구사항은 XSLT 1.0 명세의 <a lt="willful violation">고의적 위반</a>으로, 이 명세가 DOM 기반 
+    XML 변경과 호환되지 않는 방법으로 네임스페이스와 대소문자를 구별하는 HTML의 규칙을 변경하기
+    때문입니다.(출력을 직렬화하는 처리기는 영향을 받지 않습니다.) [[XSLT]]
   </p>
 
   <hr />
 
-  This specification does not specify precisely how XSLT processing interacts with the
-  <a>HTML parser</a> infrastructure (for example, whether an XSLT processor acts as if it puts any
-  elements into a <a>stack of open elements</a>). However, XSLT processors must <a lt="stops parsing">stop parsing</a>
-  if they successfully complete, and must set the <a>current document readiness</a> first to
-  "<code>interactive</code>" and then to "<code>complete</code>" if they are aborted.
+  이 명세는 XSLT 처리가가 <a lt="HTML parser">HTML 해석기</a> 인프라와 상호작용 하는 방법을 정확하게
+  명시하지 않습니다(예를 들어, XSLT 처리기가  <a lt="stack of open elements">열린 요소(element) 스택</a>에
+  임의의 요소(element)를 밀어 넣는 것처럼 수행하는지 여부). 하지만, XSLT 처리기는 그것이 성공적으로
+  완료되면 <a lt="stops parsing">해석을 중지</a>해야(must)하고, <a lt="current document readiness">현재 문서 준비상태</a>를
+  먼저 "<code>interactive</code>"로 설정해야(must)하고 그 후 그것이 취소되면 "<code>complete</code>"로 
+  설정해야(must)합니다.
 
   <hr />
 
-  This specification does not specify how XSLT interacts with the <a>navigation</a> algorithm, how
-  it fits in with the <a>event loop</a>, nor how error pages are to be handled (e.g., whether XSLT
-  errors are to replace an incremental XSLT output, or are rendered inline, etc).
+  이 명세는 XSLT가 <a lt="navigation">탐색</a> 알고리즘과 상호작용하는 방법, <a lt="event loop">이벤트 루프</a>와
+  맞추는 방법, 오류 페이지가 처리되는 방법(예를 들어, XSLT 오류가 누적된 XSLT 출력을 대체하는 것인지 
+  또는 인라인으로 렌더링 되는지 등)을 지정하지 않습니다.
 
   <p class="note">
-    There are also additional non-normative comments regarding the interaction of XSLT and HTML
-    <a href="#interaction-of-script-elements-and-xslt">in the <code>script</code> element section</a>,
-    and of XSLT, XPath, and HTML <a href="#interaction-of-template-elements-with-xslt-and-xpath">in the
-    <code>template</code> element section</a>.
+    <a href="#interaction-of-script-elements-and-xslt"><code>script</code> 요소(element) 섹션</a>에
+    XSLT와 HTML의 상호작용, 그리고 <a href="#interaction-of-template-elements-with-xslt-and-xpath"><code>template</code>
+    요소(element) 섹션</a>에 XSLT, XPath, HTML의 상호작용에 관한 추가적인 비규범적인 사족이 있습니다.
   </p>
 
-<h3 id="case-sensitivity-and-string-comparison">Case-sensitivity and string comparison</h3>
+<h3 id="case-sensitivity-and-string-comparison">대소문자 구별과 문자열 비교</h3>
 
-  Comparing two strings in a <dfn>case-sensitive</dfn> manner means comparing them exactly, code
-  point for code point.
+  <dfn lt="case-sensitive">대소문자 구분</dfn> 방법으로 두 문자열을 비교하는 것은 코드 지점에 대해
+  코드 지점을 정확하게 비교한다는 것을 의미합니다.
 
-  Comparing two strings in an <dfn>ASCII case-insensitive</dfn> manner means comparing them exactly,
-  code point for code point, except that the characters in the range U+0041 to U+005A (i.e., LATIN
-  CAPITAL LETTER A to LATIN CAPITAL LETTER Z) and the corresponding characters in the range U+0061
-  to U+007A (i.e., LATIN SMALL LETTER A to LATIN SMALL LETTER Z) are considered to also match.
+  <dfn lt="ASCII case-insensitive">ASCII 대소문자 비구분</dfn> 방법으로 두 문자열을 비교하는 것은 
+  U+0041에서 U+005A까지 범위의 문자(즉, 라틴 대문자 A부터 라틴 대문자Z까지)와 U+0061에서 U+007A까지 
+  범위에 해당하는 문자들이 모두 일치하는 것으로 간주되는 것을 제외하고, 코드 지점에 대해 코드 
+  지점을 정확하게 비교한다는 것을 의미합니다.
 
-  Comparing two strings in a <dfn>compatibility caseless</dfn> manner means using the Unicode
-  <i>compatibility caseless match</i> operation to compare the two strings, with no
-  language-specific tailorings. [[!UNICODE]]
+  <dfn lt="compatibility caseless">호환되는 대소문자 무(無)구별</dfn> 방법으로 두 문자열을 비교하는 
+  것은 언어별 맞춤없이 두 문자열을 비교하기 위해 유니코드 <i lt="compatibility caseless match">호환되는 대소문자 무(無)구별 일치</i>
+  연산을 사용하는 것을 의미합니다. [[!UNICODE]]
 
-  Except where otherwise stated, string comparisons must be performed in a <a>case-sensitive</A>
-  manner.
+  달리 명시되지 않는 한, 문자열 비교는 <a lt="case-sensitive">대소문자 구분</A>방법으로 수행되어야(must)
+  합니다.
 
-  <dfn>Converting a string to ASCII uppercase</dfn> means replacing all characters in the range
-  U+0061 to U+007A (i.e., LATIN SMALL LETTER A to LATIN SMALL LETTER Z) with the corresponding
-  characters in the range U+0041 to U+005A (i.e., LATIN CAPITAL LETTER A to LATIN CAPITAL LETTER Z).
+  <dfn lt="Converting a string to ASCII uppercase">문자열을 ASCII 대문자로 변환</dfn>하는 것은 
+  U+0061에서 U+007A 범위 (즉, 라틴 소문자 A부터 라틴 소문자 Z) 내 모든 문자를 U+0041에서 U+005A 범위
+  (즉, 라틴 대문자 A부터 라틴 대문자 Z) 내 해당하는 문자로 바꾸는 것을 의미합니다.
 
-  <dfn>Converting a string to ASCII lowercase</dfn> means replacing all characters in the range
-  U+0041 to U+005A (i.e., LATIN CAPITAL LETTER A to LATIN CAPITAL LETTER Z) with the corresponding
-  characters in the range U+0061 to U+007A (i.e., LATIN SMALL LETTER A to LATIN SMALL LETTER Z).
+  <dfn lt="Converting a string to ASCII lowercase">문자열을 ASCII 소문자로 변환</dfn>하는 것은
+  U+0041에서 U+005A 범위 (즉, 라틴 대문자 A부터 라틴 대문자 Z) 내 모든 문자를 U+0061에서 U+007A 범위
+  (즉, 라틴 소문자 A부터 라틴 소문자 Z) 내 해당하는 문자로 바꾸는 것을 의미합니다.
 
-  A string <var>pattern</var> is a <dfn>prefix match</dfn> for a string <var>s</var> when
-  <var>pattern</var> is not longer than <var>s</var> and truncating <var>s</var> to
-  <var>pattern</var>'s length leaves the two strings as matches of each other.
+  문자열 <var>pattern</var>이 <var>s</var>보다 길지 않고 <var>s</var>를 <var>pattern</var>의 길이로 
+  잘라내는 것이 두 문자열을 서로 일치하게 하는 경우 문자열 <var>pattern</var>은 문자열 <var>s</var>에 
+  대한 <dfn lt="prefix match">접두어 일치</dfn>입니다.
 
-<h3 id="common-microsyntaxes">Common microsyntaxes</h3>
+<h3 id="common-microsyntaxes">공통 마이크로문법</h3>
 
-  There are various places in HTML that accept particular data types, such as dates or numbers. This
-  section describes what the conformance criteria for content in those formats is, and how to parse
-  them.
+  HTML에는 날짜나 숫자 같은, 특정한 데이터 유형을 허용하는 다양한 위치가 있습니다. 이 섹션은 그러한 
+  형식의 콘텐트에 대한 적합성 기준과 그것들을 해석하는 방법을 기술합니다.
 
   <p class="note">
-    Implementors are strongly urged to carefully examine any third-party libraries they might
-    consider using to implement the parsing of syntaxes described below. For example, date
-    libraries are likely to implement error handling behavior that differs from what is required
-    in this specification, since error-handling behavior is often not defined in specifications
-    that describe date syntaxes similar to those used in this specification, and thus
-    implementations tend to vary greatly in how they handle errors.
+    구현자는 아래에 설명된 문법의 해석을 구현하기 위해 사용하는 것으로 간주될 수 있는 서드파티 
+    라이브러리들을 주의 깊게 검토하도록 강력하게 권장됩니다. 예를 들어, 날짜 라이브러리는, 오류 처리
+    동작이 종종 이 명세에 사용된 것과 유사항 날짜 구문을 기술하는 명세에 정의 되어 있지 않기 때문에, 
+    이 명세에 요구된 것과 다른 오류 처리 동작을 구현할 수 있고, 따라서 구현자는 오류를 처리하는 
+    방법에서 크게 달라지는 경향이 있습니다.
   </p>
 
 <h4 id="common-parser-idioms">Common parser idioms</h4>
