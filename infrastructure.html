@@ -1463,8 +1463,8 @@ pre.idl.highlight { color: #708090; }
       </li><li>
        <a href="infrastructure.html#common-microsyntaxes"><span class="secno">2.4</span> <span class="content">공통 마이크로문법</span></a>
        <ol class="toc">
-        <li><a href="infrastructure.html#common-parser-idioms"><span class="secno">2.4.1</span> <span class="content">Common parser idioms</span></a>
-        </li><li><a href="infrastructure.html#sec-boolean-attributes"><span class="secno">2.4.2</span> <span class="content">Boolean attributes</span></a>
+        <li><a href="infrastructure.html#common-parser-idioms"><span class="secno">2.4.1</span> <span class="content">공통 해석기 표현</span></a>
+        </li><li><a href="infrastructure.html#sec-boolean-attributes"><span class="secno">2.4.2</span> <span class="content">불리언 속성(attribute)</span></a>
         </li><li><a href="infrastructure.html#keywords-and-enumerated-attributes"><span class="secno">2.4.3</span> <span class="content">Keywords and enumerated attributes</span></a>
         </li><li>
          <a href="infrastructure.html#numbers"><span class="secno">2.4.4</span> <span class="content">Numbers</span></a>
@@ -1718,7 +1718,7 @@ pre.idl.highlight { color: #708090; }
     <p>이 문서의 규범적 부분에 있는 "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
   "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", "OPTIONAL" 키워드들은 RFC2119에 설명된 대로
   해석되어야 합니다. 이 문서의 규범적인 부분에 있는 "OPTIONALLY" 키워드는 "MAY"와 "OPTIONAL"처럼 
-  동일한 규범적 의미로 해석되어야 합니다. 가독성을 위해, 이 단어들은 이 섹션에서 모두 대문자로
+  동일한 규범적 의미로 해석되어야 합니다. 가독성을 위해, 이 단어들은 이 명세에서 모두 대문자 글자로
   나타내지는 않습니다. <a data-link-type="biblio" href="references.html#biblio-rfc2119">[RFC2119]</a></p>
     <p class="translator-note"> 본 번역본에서는 가급적 위 표기들을 한글과 함께 영문을 괄호 안에 표기하려 하고 있으나, 깜박하고
     놓치고 지나갈 수 있기 때문에 가급적 위 키워드와 관련된 한글 표현에 대해서는 영문으로 된 원문과
@@ -3297,9 +3297,9 @@ pre.idl.highlight { color: #708090; }
     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="case-sensitive" data-noexport="" id="case-sensitive">대소문자 구분</dfn> 방법으로 두 문자열을 비교하는 것은 코드 지점에 대해
   코드 지점을 정확하게 비교한다는 것을 의미합니다.</p>
     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ASCII case-insensitive" data-noexport="" id="ascii-case-insensitive">ASCII 대소문자 비구분</dfn> 방법으로 두 문자열을 비교하는 것은
-  U+0041에서 U+005A까지 범위의 문자(즉, 라틴 대문자 A부터 라틴 대문자Z까지)와 U+0061에서 U+007A까지 
-  범위에 해당하는 문자들이 모두 일치하는 것으로 간주되는 것을 제외하고, 코드 지점에 대해 코드 
-  지점을 정확하게 비교한다는 것을 의미합니다.</p>
+  U+0041에서 U+005A까지 범위의 문자(즉, 라틴 대문자 A부터 라틴 대문자 Z까지)와 U+0061에서 U+007A까지 
+  범위에 해당하는 문자(즉, 라틴 소문자 글자 A부터 라틴 소문자 글자 Z까지)들이 모두 일치하는 것으로 
+  간주되는 것을 제외하고, 코드 지점에 대해 코드 지점을 정확하게 비교한다는 것을 의미합니다.</p>
     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="compatibility caseless" data-noexport="" id="compatibility-caseless">호환되는 대소문자 무(無)구별</dfn> 방법으로 두 문자열을 비교하는
   것은 언어별 맞춤없이 두 문자열을 비교하기 위해 유니코드 <i data-lt="compatibility caseless match">호환되는 대소문자 무(無)구별 일치</i> 연산을 사용하는 것을 의미합니다. <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
     <p>달리 명시되지 않는 한, 문자열 비교는 <a data-link-type="dfn" href="infrastructure.html#case-sensitive" id="ref-for-case-sensitive-1">대소문자 구분</a>방법으로 수행되어야(must)
@@ -3321,91 +3321,90 @@ pre.idl.highlight { color: #708090; }
     동작이 종종 이 명세에 사용된 것과 유사항 날짜 구문을 기술하는 명세에 정의 되어 있지 않기 때문에, 
     이 명세에 요구된 것과 다른 오류 처리 동작을 구현할 수 있고, 따라서 구현자는 오류를 처리하는 
     방법에서 크게 달라지는 경향이 있습니다. </p>
-    <h4 class="heading settled" data-level="2.4.1" id="common-parser-idioms"><span class="secno">2.4.1. </span><span class="content">Common parser idioms</span><a class="self-link" href="infrastructure.html#common-parser-idioms"></a></h4>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="space-characters">space characters</dfn>, for the purposes of this specification, are U+0020 SPACE, U+0009
-  CHARACTER TABULATION (tab), U+000A LINE FEED (LF), U+000C FORM FEED (FF), and U+000D CARRIAGE
-  RETURN (CR).</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="white_space|white_space characters" data-noexport="" id="white_space">White_Space characters</dfn> are those that have the Unicode property "White_Space" in
-  the Unicode <code>PropList.txt</code> data file. <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
-    <p class="note" role="note"> This should not be confused with the "White_Space" value (abbreviated "WS") of the "Bidi_Class"
-    property in the <code>Unicode.txt</code> data file. </p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="control-characters">control characters</dfn> are those whose Unicode "General_Category" property has the
-  value "Cc" in the Unicode <code>UnicodeData.txt</code> data file. <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="uppercase-ascii-letters">uppercase ASCII letters</dfn> are the characters in the range U+0041 LATIN CAPITAL LETTER
-  A to U+005A LATIN CAPITAL LETTER Z.</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="lowercase-ascii-letters">lowercase ASCII letters</dfn> are the characters in the range U+0061 LATIN SMALL LETTER A
-  to U+007A LATIN SMALL LETTER Z.</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="ascii-digits">ASCII digits</dfn> are the characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT
-  NINE (9).</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="alphanumeric-ascii-characters">alphanumeric ASCII characters</dfn> are those that are either <a data-link-type="dfn" href="infrastructure.html#uppercase-ascii-letters" id="ref-for-uppercase-ascii-letters-1">uppercase ASCII letters</a>, <a data-link-type="dfn" href="infrastructure.html#lowercase-ascii-letters" id="ref-for-lowercase-ascii-letters-1">lowercase ASCII letters</a>, or <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-1">ASCII digits</a>.</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="ascii-hex-digits">ASCII hex digits</dfn> are the characters in the ranges U+0030 DIGIT ZERO (0) to U+0039
-  DIGIT NINE (9), U+0041 LATIN CAPITAL LETTER A to U+0046 LATIN CAPITAL LETTER F, and U+0061 LATIN
-  SMALL LETTER A to U+0066 LATIN SMALL LETTER F.</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="uppercase-ascii-hex-digits">uppercase ASCII hex digits</dfn> are the characters in the ranges U+0030 DIGIT ZERO (0)
-  to U+0039 DIGIT NINE (9) and U+0041 LATIN CAPITAL LETTER A to U+0046 LATIN CAPITAL LETTER F only.</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="lowercase-ascii-hex-digits">lowercase ASCII hex digits</dfn> are the characters in the ranges U+0030 DIGIT ZERO (0)
-  to U+0039 DIGIT NINE (9) and U+0061 LATIN SMALL LETTER A to U+0066 LATIN SMALL LETTER F only.</p>
-    <p>Some of the micro-parsers described below follow the pattern of having an <var>input</var> variable that holds the string being parsed, and having a <var>position</var> variable pointing at
-  the next character to parse in <var>input</var>.</p>
-    <p>For parsers based on this pattern, a step that requires the user agent to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="collect a sequence of characters" data-noexport="" id="collect-a-sequence-of-characters">collect a sequence
-  of characters</dfn> means that the following algorithm must be run, with <var>characters</var> being the set of characters that can be collected:</p>
+    <h4 class="heading settled" data-level="2.4.1" id="common-parser-idioms"><span class="secno">2.4.1. </span><span class="content">공통 해석기 표현</span><a class="self-link" href="infrastructure.html#common-parser-idioms"></a></h4>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="space characters" data-noexport="" id="space-characters">공백 문자</dfn>는 이 명세의 목적에 따라, U+0020 공백(space), U+0009 탭
+  문자(tab), U+000A 라인피드 (LF), U+000C 서식 문자 (FF), and U+000D 캐리지 리턴 (CR)입니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="white_space|white_space characters" data-noexport="" id="white_space">여백 문자</dfn>는 유니코드 <code>PropList.txt</code> 데이터 파일에 있는 유니코드 속성(property) "White_Space"을 가지는 문자 입니다. <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
+    <p class="note" role="note"> 이 문자는 <code>Unicode.txt</code> 데이터 파일에 "Bidi_Class" 속성(property)의 "White_Space" 값
+    (약칭 "WS")과 혼동되지 않아야(should) 합니다. </p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="control characters" data-noexport="" id="control-characters">제어 문자</dfn>는 유니코드 "General_Category" 속성(property)이 유니코드
+  유니코드 <code>UnicodeData.txt</code> 데이터 파일의 "Cc" 값을 가지는 문자입니다. <a data-link-type="biblio" href="references.html#biblio-unicode">[UNICODE]</a></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="uppercase ASCII letters" data-noexport="" id="uppercase-ascii-letters">대문자 ASCII 글자</dfn>는 U+0041 라틴 대문자 A부터 U+005A 라틴
+  대문자 Z까지 범위 내 문자입니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="lowercase ASCII letters" data-noexport="" id="lowercase-ascii-letters">소문자 ASCII 글자</dfn>는 U+0061 라틴 소문자 A부터 U+007A 라틴
+  소문자 Z까지 범위 내 문자입니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ASCII digits" data-noexport="" id="ascii-digits">ASCII 숫자</dfn>는 U+0030 숫자 0에서 U+0039 숫자 9까지 범위 내 문자입니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="alphanumeric ASCII characters" data-noexport="" id="alphanumeric-ascii-characters">영숫자 ASCII 문자</dfn>는 <a data-link-type="dfn" href="infrastructure.html#uppercase-ascii-letters" id="ref-for-uppercase-ascii-letters-1">대문자 ASCII 글자</a>,
+  또는 <a data-link-type="dfn" href="infrastructure.html#lowercase-ascii-letters" id="ref-for-lowercase-ascii-letters-1">소문자 ASCII 글자</a>, 또는 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-1">ASCII 숫자</a>입니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="ASCII hex digits" data-noexport="" id="ascii-hex-digits">ASCII 16진수</dfn>는 U+0030 숫자 0부터 U+0039 숫자9, U+0041 라틴 대문자
+  A부터 U+0046 라틴 대문자 F, U+0061 라틴 소문자 A부터 U+0066 라틴 소문자 F 범위 내 문자입니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="uppercase ASCII hex digits" data-noexport="" id="uppercase-ascii-hex-digits">대문자 ASCII 16 진수</dfn>는 U+0030 숫자 0부터 U+0039 숫자 9
+  그리고 U+0041 라틴 대문자 A부터 U+0046 라틴 대문자 F까지 범위 내 문자입니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="lowercase ASCII hex digits" data-noexport="" id="lowercase-ascii-hex-digits">소문자 ASCII 16 진수</dfn>는 U+0030 숫자 0부터 U+0039 숫자 9
+  그리고 U+0061 라틴 소문자 A부터 U+0066 라틴 소문자 F까지 범위 내 문자입니다.</p>
+    <p>아래 설명된 일부 마이크로 해석기는 문자열이 해석되고 있도록 유지하고 있는 <var>input</var> 변수와 <var>input</var>에서 해석하기 위한 다음 문자를 가리키는 <var>position</var> 변수를 가지는 패턴을
+  따릅니다.</p>
+    <p>이 패턴을 기반으로하는 해석기의 경우, 유저 에이전트가 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="collect a sequence of characters" data-noexport="" id="collect-a-sequence-of-characters">일련의 문자를 수집</dfn>하도록
+  요구하는 단계는, 수집될 수 있는 문자의 집합이 되는 <var>characters</var>를 가지고, 다음 알고리즘을 
+  수행해야(must) 함을 의미합니다:</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> and <var>position</var> be the same variables as those of the same name in
-  the algorithm that invoked these steps.</p>
+      <p><var>input</var>과 <var>position</var>를 이 단계들을 호출하는 알고리즘에 동일한 이름의 것들로서
+  같은 변수가 되도록 합니다.</p>
      </li><li data-md="">
-      <p>Let <var>result</var> be the empty string.</p>
+      <p><var>result</var>를 빈 문자열이 되게 합니다.</p>
      </li><li data-md="">
-      <p>While <var>position</var> doesn’t point past the end of <var>input</var> and the character at <var>position</var> is one of the <var>characters</var>, append that character to the end of <var>result</var> and advance <var>position</var> to the next character in <var>input</var>.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나치지 않고 <var>position</var>에 위치한 문자가 <var>characters</var>의 하나인 경우, <var>result</var>의 끝에 문자를 추가하고 <var>input</var> 내 다음 문자로 <var>position</var>을 전진시킵니다.</p>
      </li><li data-md="">
-      <p>Return <var>result</var>.</p>
+      <p><var>result</var>를 반환합니다.</p>
     </li></ol>
-    <p>The step <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="skip-whitespace">skip whitespace</dfn> means that the user agent must <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-1">collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-2">space characters</a>. The collected characters
-  are not used.</p>
-    <p>When a user agent is to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="stripped line breaks|strip line breaks" data-noexport="" id="stripped-line-breaks">strip line breaks</dfn> from a string, the user agent must remove
-  any U+000A LINE FEED (LF) and U+000D CARRIAGE RETURN (CR) characters from that string.</p>
-    <p>When a user agent is to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="strip leading and trailing whitespace|stripping leading and trailing whitespace|leading and trailing whitespace stripped" data-noexport="" id="strip-leading-and-trailing-whitespace">strip leading and trailing whitespace</dfn> from a string, the
-  user agent must remove all <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-3">space characters</a> that are at the start or end of the string.</p>
-    <p>When a user agent is to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="stripping and collapsing whitespace|strip and collapse whitespace" data-noexport="" id="stripping-and-collapsing-whitespace">strip and collapse whitespace</dfn> in a string, it must replace any
-  sequence of one or more consecutive <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-4">space characters</a> in that string with a single U+0020
-  SPACE character, and then <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-1">strip leading and trailing whitespace</a> from that string.</p>
-    <p>When a user agent has to <dfn data-dfn-type="dfn" data-lt="strictly splitting the string|strictly split a string|strictly split" data-noexport="" id="strictly-splitting-the-string">strictly split a string<a class="self-link" href="infrastructure.html#strictly-splitting-the-string"></a></dfn> on a particular delimiter character <var>delimiter</var>, it must use the following algorithm:</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="skip whitespace" data-noexport="" id="skip-whitespace">여백 문자 건너뛰기</dfn> 단계는 유저 에이전트가 <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-2">공백 문자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-1">일련의 문자를 수집</a>해야(must) 한다는 것을 의미합니다. 
+  수집 된 문자는 사용되지 않습니다.</p>
+    <p>유저 에이전트가 문자열에서 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="stripped line breaks|strip line breaks" data-noexport="" id="stripped-line-breaks">줄 바꿈을 비워낼</dfn> 경우, 유저 에이전트는 그 문자열에서 U+000A 라인피드 (LF)와 U+000D 캐리지 리턴 (CR)을 제거해야(must)
+  합니다.</p>
+    <p>유저 에이전트가 문자열에서 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="strip leading and trailing whitespace|stripping leading and trailing whitespace|leading and trailing whitespace stripped" data-noexport="" id="strip-leading-and-trailing-whitespace">앞뒤 여백 문자를 비워낼</dfn> 경우, 유저 에이전트는 문자의 시작과 끝에 있는 모든 <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-3">공백 문자</a>를 제거해야(must) 
+  합니다.</p>
+    <p>유저 에이전트가 문자열 내 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="stripping and collapsing whitespace|strip and collapse whitespace" data-noexport="" id="stripping-and-collapsing-whitespace">여백 문자를 들어내고 병합하는</dfn> 경우,
+  그 문자열 내 일련의 하나 이상의 연속적인 <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-4">공백 문자</a>를 단일 U+0020 공백 
+  문자로 바꾸고, 그 후 그 문자열에서 <a data-link-type="dfn">앞뒤 여백 문자를 비워내</a>야(must) 합니다.</p>
+    <p>유저 에이전트가 특정 구분 문자 <var>delimiter</var>로 <dfn data-dfn-type="dfn" data-lt="strictly splitting the string|strictly split a string|strictly split" data-noexport="" id="strictly-splitting-the-string">문자열을 엄격하게 분할해<a class="self-link" href="infrastructure.html#strictly-splitting-the-string"></a></dfn>야
+  하는 경우, 다음 알고리즘을 사용해야(must)합니다:</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially
-  pointing at the start of the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>tokens</var> be an ordered list of tokens, initially empty.</p>
+      <p><var>tokens</var>를 초기에 비어있는, 정렬된 토큰의 목록으로 둡니다.</p>
      </li><li data-md="">
-      <p>While <var>position</var> is not past the end of <var>input</var>:</p>
+      <p><var>position</var>가 <var>input</var>의 끝을 지나치지 않은 동안:</p>
       <ol>
        <li data-md="">
-        <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-2">Collect a sequence of characters</a> that are not the <var>delimiter</var> character.</p>
+        <p><var>delimiter</var> 문자가 아닌 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-2">일련의 문자들을 수집</a>합니다.</p>
        </li><li data-md="">
-        <p>Append the string collected in the previous step to <var>tokens</var>.</p>
+        <p>이전 단계에서 수집된 문자를 <var>tokens</var>에 추가합니다.</p>
        </li><li data-md="">
-        <p>Advance <var>position</var> to the next character in <var>input</var>.</p>
+        <p><var>input</var> 내 다음 문자로 <var>position</var>을 전진시킵니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Return <var>tokens</var>.</p>
+      <p><var>tokens</var>을 반환합니다.</p>
     </li></ol>
-    <p class="note" role="note"> For the special cases of splitting a string <a data-link-type="dfn" href="infrastructure.html#split-a-string-on-spaces" id="ref-for-split-a-string-on-spaces-1">on spaces</a> and <a data-link-type="dfn" href="infrastructure.html#split-a-string-on-commas" id="ref-for-split-a-string-on-commas-1">on commas</a>, this
-    algorithm does not apply (those algorithms also perform <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-2">whitespace trimming</a>). </p>
-    <h4 class="heading settled" data-level="2.4.2" id="sec-boolean-attributes"><span class="secno">2.4.2. </span><span class="content">Boolean attributes</span><a class="self-link" href="infrastructure.html#sec-boolean-attributes"></a></h4>
-    <p>A number of attributes are <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="boolean attribute|boolean attributes" data-noexport="" id="boolean-attribute">boolean attributes</dfn>. The presence of a boolean attribute on
-  an element represents the true value, and the absence of the attribute represents the false value.</p>
-    <p>If the attribute is present, its value must either be the empty string or a value that is an <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-1">ASCII case-insensitive</a> match for the attribute’s canonical name, with no leading or
-  trailing whitespace.</p>
-    <p class="note" role="note"> The values "true" and "false" are not allowed on <a data-link-type="dfn" href="infrastructure.html#boolean-attribute" id="ref-for-boolean-attribute-1">boolean attributes</a>. To represent a false value,
-    the attribute has to be omitted altogether. </p>
-    <div class="example" id="example-2267e227">
-     <a class="self-link" href="infrastructure.html#example-2267e227"></a> Here is an example of a checkbox that is checked and disabled. The <code>checked</code> and <code>disabled</code> attributes are the <a data-link-type="dfn" href="infrastructure.html#boolean-attribute" id="ref-for-boolean-attribute-2">boolean attributes</a>. 
+    <p class="note" role="note"> <a data-link-type="dfn" href="infrastructure.html#split-a-string-on-spaces" id="ref-for-split-a-string-on-spaces-1">공백</a>과 <a data-link-type="dfn" href="infrastructure.html#split-a-string-on-commas" id="ref-for-split-a-string-on-commas-1">쉼표</a> 문자로 분할하는 
+    특수한 경우에 대해, 이 알고리즘은 적용되지 않습니다(그러한 알고리즘은 <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-1">여백 트리밍</a> 역시 수행합니다). </p>
+    <h4 class="heading settled" data-level="2.4.2" id="sec-boolean-attributes"><span class="secno">2.4.2. </span><span class="content">불리언 속성(attribute)</span><a class="self-link" href="infrastructure.html#sec-boolean-attributes"></a></h4>
+    <p>여러 속성(attribute)들이 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="boolean attribute|boolean attributes" data-noexport="" id="boolean-attribute">불리언 속성(attribute)</dfn>입니다.
+  요소(element)에 불리언 속성(attribute)의 존재는 true 값을 나타내고, 속성(attribute)의 부재는 false 
+  값을 나타냅니다.</p>
+    <p>속성(attribute)이 존재한다면, 그 값은 빈 문자열 혹은 속성(attribute)의 정식 이름에 대해, 앞 뒤 여백
+  없이 <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-1">ASCII 대소문자 구분 없이</a> 일치하는 값이어야(must) 합니다.</p>
+    <p class="note" role="note"> "true"와 "false" 값은 <a data-link-type="dfn" href="infrastructure.html#boolean-attribute" id="ref-for-boolean-attribute-1">불리언 속성(attribute)</a>에 허용되지 않습니다.
+    false 값을 나타내려면 속성을 모두 생략해야(has to) 합니다. </p>
+    <div class="example" id="example-4100a12f">
+     <a class="self-link" href="infrastructure.html#example-4100a12f"></a> 여기 checked와 disabled인 checkbox의 예가 있습니다. <code>checked</code>와 <code>disabled</code> 속성(attribute)은 <a data-link-type="dfn" href="infrastructure.html#boolean-attribute" id="ref-for-boolean-attribute-2">불리언 속성(attribute)</a>입니다. 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">checkbox</span> <span class="na">checked</span> <span class="na">name</span><span class="o">=</span><span class="s">cheese</span> <span class="na">disabled</span><span class="p">&gt;</span> Cheese<span class="p">&lt;</span><span class="p">/</span><span class="nt">label</span><span class="p">&gt;</span></pre>
-     <p>This could be equivalently written as this:</p>
+     <p>이것은 이렇게 동동하게 작성될 수 있습니다:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">checkbox</span> <span class="na">checked</span><span class="o">=</span><span class="s">checked</span> <span class="na">name</span><span class="o">=</span><span class="s">cheese</span> <span class="na">disabled</span><span class="o">=</span><span class="s">disabled</span><span class="p">&gt;</span> Cheese<span class="p">&lt;</span><span class="p">/</span><span class="nt">label</span><span class="p">&gt;</span></pre>
-     <p>You can also mix styles; the following is still equivalent:</p>
+     <p>또한 혼합 방식도 가능합니다; 다음은 여전히 동등합니다:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">'checkbox'</span> <span class="na">checked</span> <span class="na">name</span><span class="o">=</span><span class="s">cheese</span> <span class="na">disabled</span><span class="o">=</span><span class="s">""</span><span class="p">&gt;</span> Cheese<span class="p">&lt;</span><span class="p">/</span><span class="nt">label</span><span class="p">&gt;</span></pre>
     </div>
     <h4 class="heading settled" data-level="2.4.3" id="keywords-and-enumerated-attributes"><span class="secno">2.4.3. </span><span class="content">Keywords and enumerated attributes</span><a class="self-link" href="infrastructure.html#keywords-and-enumerated-attributes"></a></h4>
@@ -4864,7 +4863,7 @@ equal to the number of seconds in <var>t</var>.</p>
      </li><li data-md="">
       <p>If <var>input</var> is the empty string, then return an error.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-3">Strip leading and trailing whitespace</a> from <var>input</var>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-2">Strip leading and trailing whitespace</a> from <var>input</var>.</p>
      </li><li data-md="">
       <p>If <var>input</var> is an <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-4">ASCII case-insensitive</a> match for the string
   "<code>transparent</code>", then return an error.</p>
@@ -4992,7 +4991,7 @@ equal to the number of seconds in <var>t</var>.</p>
      </li><li data-md="">
       <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-29">Collect a sequence of characters</a> that are not U+002C COMMA characters (,). Let <var>s</var> be the resulting sequence (which might be the empty string).</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-4">Strip leading and trailing whitespace</a> from <var>s</var>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-3">Strip leading and trailing whitespace</a> from <var>s</var>.</p>
      </li><li data-md="">
       <p>Append <var>s</var> to <var>tokens</var>.</p>
      </li><li data-md="">
@@ -5034,8 +5033,8 @@ equal to the number of seconds in <var>t</var>.</p>
   requirements in the WHATWG URL standard. <a data-link-type="biblio" href="references.html#biblio-url">[URL]</a></p>
     <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-non-empty-url">valid non-empty URL</dfn> if it is a <a data-link-type="dfn" href="infrastructure.html#valid-url" id="ref-for-valid-url-1">valid URL</a> but it is not
   the empty string.</p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-url-potentially-surrounded-by-spaces">valid URL potentially surrounded by spaces</dfn> if, after <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-5">stripping leading and trailing whitespace</a> from it, it is a <a data-link-type="dfn" href="infrastructure.html#valid-url" id="ref-for-valid-url-2">valid URL</a>.</p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-non-empty-url-potentially-surrounded-by-spaces">valid non-empty URL potentially surrounded by spaces</dfn> if, after <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-6">stripping leading and trailing whitespace</a> from it, it is a <a data-link-type="dfn" href="infrastructure.html#valid-non-empty-url" id="ref-for-valid-non-empty-url-1">valid non-empty URL</a>.</p>
+    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-url-potentially-surrounded-by-spaces">valid URL potentially surrounded by spaces</dfn> if, after <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-4">stripping leading and trailing whitespace</a> from it, it is a <a data-link-type="dfn" href="infrastructure.html#valid-url" id="ref-for-valid-url-2">valid URL</a>.</p>
+    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-non-empty-url-potentially-surrounded-by-spaces">valid non-empty URL potentially surrounded by spaces</dfn> if, after <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-5">stripping leading and trailing whitespace</a> from it, it is a <a data-link-type="dfn" href="infrastructure.html#valid-non-empty-url" id="ref-for-valid-non-empty-url-1">valid non-empty URL</a>.</p>
     <p>This specification defines the URL <dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" id="schemedef-aboutlegacy-compat"><code>about:legacy-compat</code></dfn> as a reserved,
   though unresolvable, <a data-link-type="scheme" href="infrastructure.html#schemedef-about" id="ref-for-schemedef-about-3"><code>about:</code></a> URL, for use in <a data-link-type="dfn" href="syntax.html#doctype" id="ref-for-doctype-1">DOCTYPE</a>s in <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-4">HTML documents</a> when needed for compatibility with XML tools. <a data-link-type="biblio" href="references.html#biblio-rfc6694">[RFC6694]</a></p>
     <p>This specification defines the URL <dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" id="schemedef-aboutsrcdoc"><code>about:srcdoc</code></dfn> as a reserved, though
@@ -7254,7 +7253,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="ascii-case-insensitive">
    <b><a href="infrastructure.html#ascii-case-insensitive">#ascii-case-insensitive</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-ascii-case-insensitive-1">2.4.2. Boolean attributes</a>
+    <li><a href="infrastructure.html#ref-for-ascii-case-insensitive-1">2.4.2. 불리언 속성(attribute)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-case-insensitive-2">2.4.3. Keywords and enumerated attributes</a> <a href="infrastructure.html#ref-for-ascii-case-insensitive-3">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-case-insensitive-4">2.4.6. Colors</a> <a href="infrastructure.html#ref-for-ascii-case-insensitive-5">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-case-insensitive-6">2.6.5. Extracting character encodings from meta elements</a>
@@ -7332,7 +7331,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#space-characters">#space-characters</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-space-characters-1">1.9. HTML 간단한 소개</a>
-    </li><li><a href="infrastructure.html#ref-for-space-characters-2">2.4.1. Common parser idioms</a> <a href="infrastructure.html#ref-for-space-characters-3">(2)</a> <a href="infrastructure.html#ref-for-space-characters-4">(3)</a>
+    </li><li><a href="infrastructure.html#ref-for-space-characters-2">2.4.1. 공통 해석기 표현</a> <a href="infrastructure.html#ref-for-space-characters-3">(2)</a> <a href="infrastructure.html#ref-for-space-characters-4">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-space-characters-5">2.4.4.6. Lists of floating-point numbers</a> <a href="infrastructure.html#ref-for-space-characters-6">(2)</a> <a href="infrastructure.html#ref-for-space-characters-7">(3)</a> <a href="infrastructure.html#ref-for-space-characters-8">(4)</a> <a href="infrastructure.html#ref-for-space-characters-9">(5)</a>
     </li><li><a href="infrastructure.html#ref-for-space-characters-10">2.4.4.7. Lists of dimensions</a> <a href="infrastructure.html#ref-for-space-characters-11">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-space-characters-12">2.4.5.9. Durations</a> <a href="infrastructure.html#ref-for-space-characters-13">(2)</a> <a href="infrastructure.html#ref-for-space-characters-14">(3)</a> <a href="infrastructure.html#ref-for-space-characters-15">(4)</a>
@@ -7386,7 +7385,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="uppercase-ascii-letters">
    <b><a href="infrastructure.html#uppercase-ascii-letters">#uppercase-ascii-letters</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-uppercase-ascii-letters-1">2.4.1. Common parser idioms</a>
+    <li><a href="infrastructure.html#ref-for-uppercase-ascii-letters-1">2.4.1. 공통 해석기 표현</a>
     </li><li><a href="dom.html#ref-for-uppercase-ascii-letters-2">3.2.5.9. Embedding custom non-visible data with the data-* attributes</a> <a href="dom.html#ref-for-uppercase-ascii-letters-3">(2)</a> <a href="dom.html#ref-for-uppercase-ascii-letters-4">(3)</a> <a href="dom.html#ref-for-uppercase-ascii-letters-5">(4)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-uppercase-ascii-letters-6">4.7.7. The embed element</a>
     </li><li><a href="syntax.html#ref-for-uppercase-ascii-letters-7">8.1. Writing HTML documents</a>
@@ -7414,7 +7413,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="lowercase-ascii-letters">
    <b><a href="infrastructure.html#lowercase-ascii-letters">#lowercase-ascii-letters</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-lowercase-ascii-letters-1">2.4.1. Common parser idioms</a>
+    <li><a href="infrastructure.html#ref-for-lowercase-ascii-letters-1">2.4.1. 공통 해석기 표현</a>
     </li><li><a href="dom.html#ref-for-lowercase-ascii-letters-2">3.2.5.9. Embedding custom non-visible data with the data-* attributes</a> <a href="dom.html#ref-for-lowercase-ascii-letters-3">(2)</a>
     </li><li><a href="webappapis.html#ref-for-lowercase-ascii-letters-4">7.6.1.3. Custom scheme handler: the registerProtocolHandler() method</a>
     </li><li><a href="syntax.html#ref-for-lowercase-ascii-letters-5">8.1. Writing HTML documents</a>
@@ -7436,7 +7435,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="ascii-digits">
    <b><a href="infrastructure.html#ascii-digits">#ascii-digits</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-ascii-digits-1">2.4.1. Common parser idioms</a>
+    <li><a href="infrastructure.html#ref-for-ascii-digits-1">2.4.1. 공통 해석기 표현</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-2">2.4.4.1. Signed integers</a> <a href="infrastructure.html#ref-for-ascii-digits-3">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-4">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-5">2.4.4.2. Non-negative integers</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-6">2.4.4.3. Floating-point numbers</a> <a href="infrastructure.html#ref-for-ascii-digits-7">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-8">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-9">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-10">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-11">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-12">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-13">(8)</a> <a href="infrastructure.html#ref-for-ascii-digits-14">(9)</a> <a href="infrastructure.html#ref-for-ascii-digits-15">(10)</a>
@@ -7495,7 +7494,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="collect-a-sequence-of-characters">
    <b><a href="infrastructure.html#collect-a-sequence-of-characters">#collect-a-sequence-of-characters</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-1">2.4.1. Common parser idioms</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-1">2.4.1. 공통 해석기 표현</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-3">2.4.4.1. Signed integers</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-4">2.4.4.3. Floating-point numbers</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-5">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-6">2.4.4.4. Percentages and lengths</a>
@@ -7544,16 +7543,16 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="strip-leading-and-trailing-whitespace">
    <b><a href="infrastructure.html#strip-leading-and-trailing-whitespace">#strip-leading-and-trailing-whitespace</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-1">2.4.1. Common parser idioms</a> <a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-3">2.4.6. Colors</a>
-    </li><li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-4">2.4.8. Comma-separated tokens</a>
-    </li><li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-5">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-6">(2)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-strip-leading-and-trailing-whitespace-7">4.7.4. The source element when used with the picture element</a>
-    </li><li><a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-8">4.10.5.1.4. URL state (type=url)</a>
-    </li><li><a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-9">4.10.5.1.5. E-mail state (type=email)</a> <a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-10">(2)</a> <a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-11">(3)</a>
-    </li><li><a href="interactive-elements.html#ref-for-strip-leading-and-trailing-whitespace-12">4.11.6.5. Using the option element to define a command</a>
-    </li><li><a href="semantics-scripting.html#ref-for-strip-leading-and-trailing-whitespace-13">4.12.1.1. Processing model</a>
-    </li><li><a href="webappapis.html#ref-for-strip-leading-and-trailing-whitespace-14">7.3.1. Opening the input stream</a>
+    <li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-1">2.4.1. 공통 해석기 표현</a>
+    </li><li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-2">2.4.6. Colors</a>
+    </li><li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-3">2.4.8. Comma-separated tokens</a>
+    </li><li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-4">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-5">(2)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-strip-leading-and-trailing-whitespace-6">4.7.4. The source element when used with the picture element</a>
+    </li><li><a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-7">4.10.5.1.4. URL state (type=url)</a>
+    </li><li><a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-8">4.10.5.1.5. E-mail state (type=email)</a> <a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-9">(2)</a> <a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-10">(3)</a>
+    </li><li><a href="interactive-elements.html#ref-for-strip-leading-and-trailing-whitespace-11">4.11.6.5. Using the option element to define a command</a>
+    </li><li><a href="semantics-scripting.html#ref-for-strip-leading-and-trailing-whitespace-12">4.12.1.1. Processing model</a>
+    </li><li><a href="webappapis.html#ref-for-strip-leading-and-trailing-whitespace-13">7.3.1. Opening the input stream</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="stripping-and-collapsing-whitespace">
@@ -7566,7 +7565,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="boolean-attribute">
    <b><a href="infrastructure.html#boolean-attribute">#boolean-attribute</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-boolean-attribute-1">2.4.2. Boolean attributes</a> <a href="infrastructure.html#ref-for-boolean-attribute-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-boolean-attribute-1">2.4.2. 불리언 속성(attribute)</a> <a href="infrastructure.html#ref-for-boolean-attribute-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-boolean-attribute-3">2.7.1. Reflecting content attributes in IDL attributes</a>
     </li><li><a href="grouping-content.html#ref-for-boolean-attribute-4">4.4.5. The ol element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-boolean-attribute-5">4.7.5. The img element</a>
@@ -8154,7 +8153,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="split-a-string-on-spaces">
    <b><a href="infrastructure.html#split-a-string-on-spaces">#split-a-string-on-spaces</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-split-a-string-on-spaces-1">2.4.1. Common parser idioms</a>
+    <li><a href="infrastructure.html#ref-for-split-a-string-on-spaces-1">2.4.1. 공통 해석기 표현</a>
     </li><li><a href="infrastructure.html#ref-for-split-a-string-on-spaces-2">2.7.1. Reflecting content attributes in IDL attributes</a>
     </li><li><a href="dom.html#ref-for-split-a-string-on-spaces-3">3.2.5.7. The class attribute</a>
     </li><li><a href="links.html#ref-for-split-a-string-on-spaces-4">4.8.6. Link types</a>
@@ -8179,7 +8178,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="split-a-string-on-commas">
    <b><a href="infrastructure.html#split-a-string-on-commas">#split-a-string-on-commas</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-split-a-string-on-commas-1">2.4.1. Common parser idioms</a>
+    <li><a href="infrastructure.html#ref-for-split-a-string-on-commas-1">2.4.1. 공통 해석기 표현</a>
     </li><li><a href="infrastructure.html#ref-for-split-a-string-on-commas-2">2.4.4.7. Lists of dimensions</a>
     </li><li><a href="document-metadata.html#ref-for-split-a-string-on-commas-3">4.2.5.1. Standard metadata names</a>
     </li><li><a href="sec-forms.html#ref-for-split-a-string-on-commas-4">4.10.5.1.5. E-mail state (type=email)</a> <a href="sec-forms.html#ref-for-split-a-string-on-commas-5">(2)</a>
