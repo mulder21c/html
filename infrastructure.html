@@ -1465,11 +1465,11 @@ pre.idl.highlight { color: #708090; }
        <ol class="toc">
         <li><a href="infrastructure.html#common-parser-idioms"><span class="secno">2.4.1</span> <span class="content">공통 해석기 표현</span></a>
         </li><li><a href="infrastructure.html#sec-boolean-attributes"><span class="secno">2.4.2</span> <span class="content">불리언 속성(attribute)</span></a>
-        </li><li><a href="infrastructure.html#keywords-and-enumerated-attributes"><span class="secno">2.4.3</span> <span class="content">Keywords and enumerated attributes</span></a>
+        </li><li><a href="infrastructure.html#keywords-and-enumerated-attributes"><span class="secno">2.4.3</span> <span class="content">키워드와 열거 속성(attribute)</span></a>
         </li><li>
-         <a href="infrastructure.html#numbers"><span class="secno">2.4.4</span> <span class="content">Numbers</span></a>
+         <a href="infrastructure.html#numbers"><span class="secno">2.4.4</span> <span class="content">숫자</span></a>
          <ol class="toc">
-          <li><a href="infrastructure.html#signed-integers"><span class="secno">2.4.4.1</span> <span class="content">Signed integers</span></a>
+          <li><a href="infrastructure.html#signed-integers"><span class="secno">2.4.4.1</span> <span class="content">부호있는 정수</span></a>
           </li><li><a href="infrastructure.html#non-negative-integers"><span class="secno">2.4.4.2</span> <span class="content">Non-negative integers</span></a>
           </li><li><a href="infrastructure.html#floating-point-numbers"><span class="secno">2.4.4.3</span> <span class="content">Floating-point numbers</span></a>
           </li><li><a href="infrastructure.html#percentages-and-dimensions"><span class="secno">2.4.4.4</span> <span class="content">Percentages and lengths</span></a>
@@ -3407,75 +3407,71 @@ pre.idl.highlight { color: #708090; }
      <p>또한 혼합 방식도 가능합니다; 다음은 여전히 동등합니다:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">'checkbox'</span> <span class="na">checked</span> <span class="na">name</span><span class="o">=</span><span class="s">cheese</span> <span class="na">disabled</span><span class="o">=</span><span class="s">""</span><span class="p">&gt;</span> Cheese<span class="p">&lt;</span><span class="p">/</span><span class="nt">label</span><span class="p">&gt;</span></pre>
     </div>
-    <h4 class="heading settled" data-level="2.4.3" id="keywords-and-enumerated-attributes"><span class="secno">2.4.3. </span><span class="content">Keywords and enumerated attributes</span><a class="self-link" href="infrastructure.html#keywords-and-enumerated-attributes"></a></h4>
-    <p>Some attributes are defined as taking one of a finite set of keywords. Such attributes are called <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="enumerated-attributes">enumerated attributes</dfn>. The keywords are each defined to map to a particular <em>state</em> (several keywords might map to the same state, in which case some of the keywords
-  are synonyms of each other; additionally, some of the keywords can be said to be non-conforming,
-  and are only in the specification for historical reasons). In addition, two default states can be
-  given. The first is the <dfn data-dfn-type="dfn" data-noexport="" id="invalid-value-default"><i>invalid value default</i><a class="self-link" href="infrastructure.html#invalid-value-default"></a></dfn>, the second is the <dfn data-dfn-type="dfn" data-noexport="" id="missing-value-default"><i>missing value default</i><a class="self-link" href="infrastructure.html#missing-value-default"></a></dfn>.</p>
-    <p>If an enumerated attribute is specified, the attribute’s value must be an <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-2">ASCII case-insensitive</a> match for one of the given keywords that are not said to be
-  non-conforming, with no leading or trailing whitespace.</p>
-    <p>When the attribute is specified, if its value is an <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-3">ASCII case-insensitive</a> match for one of
-  the given keywords then that keyword’s state is the state that the attribute represents. If the
-  attribute value matches none of the given keywords, but the attribute has an <i>invalid value default</i>, then the attribute represents that state. Otherwise, if the
-  attribute value matches none of the keywords but there is a <i>missing value default</i> state
-  defined, then <em>that</em> is the state represented by the attribute. Otherwise, there is no
-  default, and invalid values mean that there is no state represented.</p>
-    <p>When the attribute is <em>not</em> specified, if there is a <i>missing value default</i> state
-  defined, then that is the state represented by the (missing) attribute. Otherwise, the absence of
-  the attribute means that there is no state represented.</p>
-    <p class="note" role="note">The empty string can be a valid keyword.</p>
-    <h4 class="heading settled" data-level="2.4.4" id="numbers"><span class="secno">2.4.4. </span><span class="content">Numbers</span><a class="self-link" href="infrastructure.html#numbers"></a></h4>
-    <h5 class="heading settled" data-level="2.4.4.1" id="signed-integers"><span class="secno">2.4.4.1. </span><span class="content">Signed integers</span><a class="self-link" href="infrastructure.html#signed-integers"></a></h5>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid integer|valid integers" data-noexport="" id="valid-integer">valid integer</dfn> if it consists of one or more <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-2">ASCII digits</a>,
-  optionally prefixed with a U+002D HYPHEN-MINUS character (-).</p>
-    <p>A <a data-link-type="dfn" href="infrastructure.html#valid-integer" id="ref-for-valid-integer-3">valid integer</a> without a U+002D HYPHEN-MINUS (-) prefix represents the number that is
-  represented in base ten by that string of digits. A <a data-link-type="dfn" href="infrastructure.html#valid-integer" id="ref-for-valid-integer-4">valid integer</a> <em>with</em> a U+002D
-  HYPHEN-MINUS (-) prefix represents the number represented in base ten by the string of digits that
-  follows the U+002D HYPHEN-MINUS, subtracted from zero.</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse token as an integer|parse it as an integer|rules for parsing integers|rules for parsing integer|rules for parsing signed integers" data-noexport="" id="parse-token-as-an-integer">rules for parsing integers</dfn> are as given in the following algorithm. When
-  invoked, the steps must be followed in the order given, aborting at the first step that returns
-  a value. This algorithm will return either an integer or an error.</p>
+    <h4 class="heading settled" data-level="2.4.3" id="keywords-and-enumerated-attributes"><span class="secno">2.4.3. </span><span class="content">키워드와 열거 속성(attribute)</span><a class="self-link" href="infrastructure.html#keywords-and-enumerated-attributes"></a></h4>
+    <p>일부 속성(attribute)은 키워드의 집합에서 하나를 취하는 것으로 정의됩니다. 그러한 속성(attribute)을 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="enumerated attributes" data-noexport="" id="enumerated-attributes">열거 속성</dfn>이라고 부릅니다. 키워드는 각각 특정 <em>상태</em>에
+  매핑시키기 위해 정의됩니다 (몇몇 키워드는 동일한 상태로 매핑될 수 있고, 이 경우 일부 키워드는 서로의 
+  유의어 입니다; 추가적으로, 일부 키워드는 부적합하다 불릴 수 있고, 전통적인 이유로 이 명세에만 존재합니다.)
+  게다가, 두 기본 상태가 주어질 수 있습니다. 첫 번째는 <dfn data-dfn-type="dfn" data-lt="invalid value default" data-noexport="" id="invalid-value-default"><i>유효하지 않은 기본 값</i><a class="self-link" href="infrastructure.html#invalid-value-default"></a></dfn>,
+  두 번째는 <dfn data-dfn-type="dfn" data-lt="missing value default" data-noexport="" id="missing-value-default"><i>누락된 기본 값</i><a class="self-link" href="infrastructure.html#missing-value-default"></a></dfn>입니다.</p>
+    <p>열거 속성이 명시된다면, 속성의 값은 앞뒤 여백 없이, 부적합하다 불리지 않는 주어진 키워드 중 하나에 <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-2">ASCII 대소문자 구분 없이</a> 일치 되어야(must) 합니다.</p>
+    <p>속성이 명시되는 경우, 그 값이 주어진 키워드 중 하나에 <a data-link-type="dfn">ASCII 대소문자 구분 없이</a> 일치한다면
+  그 키워드의 상태는 속성(attribute)이 나타내는 상태입니다. 속성(attribute) 값이 주어진 키워드 중
+  일치하는 것이 없고 속성이 <i>유효하지 않은 기본 값</i>을 가진다면, 속성(attribute)은 그 상태를
+  나타냅니다. 그렇지 않고, 속성(attribute) 값이 키워드에 일치하는 것이 없고 정의된 <i>누락된 기본 값</i> 상태가 있다면, <em>그것</em>은 속성(attribute)에 의해 나타내어지는 상태 입니다. 그렇지 않으면,
+  기본 값은 없고, 유효하지 않은 값은 어떤 상태도 나타내지 않음을 의미합니다.</p>
+    <p>속성(attribute)이 명시되지 <em>않은</em> 경우, 정의된 <i>누락된 기본 값</i> 상태가 있다면, 그것은
+  (누락된) 속성(attribute)에 의해 나타내어지는 상태입니다. 그렇지 않으면, 속성(attribute)의 부재는
+  나타내어지는 상태가 없음을 의미합니다.</p>
+    <p class="note" role="note">빈 문자열은 유효한 키워드가 될 수 있습니다.</p>
+    <h4 class="heading settled" data-level="2.4.4" id="numbers"><span class="secno">2.4.4. </span><span class="content">숫자</span><a class="self-link" href="infrastructure.html#numbers"></a></h4>
+    <h5 class="heading settled" data-level="2.4.4.1" id="signed-integers"><span class="secno">2.4.4.1. </span><span class="content">부호있는 정수</span><a class="self-link" href="infrastructure.html#signed-integers"></a></h5>
+    <p>문자열이 하나 이상의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-2">ASCII 숫자</a>로 구성되고, 선택적으로 U+002D HYPHEN-MINUS
+  문자 (-)가 접두어로 붙는다면, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid integer|valid integers" data-noexport="" id="valid-integer">유효한 정수</dfn>입니다.</p>
+    <p>U+002D HYPHEN-MINUS (-) 접두어가 없는 <a data-link-type="dfn" href="infrastructure.html#valid-integer" id="ref-for-valid-integer-3">유효한 정수</a>는 그 숫자의 문자열에
+  의한 10진수 숫자를 나타냅니다. U+002D HYPHEN-MINUS (-) 접두어가 <em>있는</em> <a data-link-type="dfn" href="infrastructure.html#valid-integer" id="ref-for-valid-integer-4">유효한 정수</a>는
+  0에서 뺀, U+002D HYPHEN-MINUS 다음에 있는 숫자의 문자열에 의한 10진수 숫자를 나타냅니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse token as an integer|parse it as an integer|rules for parsing integers|rules for parsing integer|rules for parsing signed integers" data-noexport="" id="parse-token-as-an-integer">숫자 해석에 대한 규칙</dfn>은 다음 알고리즘에 주어진 것과 같습니다.
+  이 알고리즘이 호출 될 때, 단계는 값을 반환하는 첫 번째 단계에서 취소하는, 주어진 순서에 따라야(must) 
+  합니다. 이 알고리즘은 정수나 오류를 반환할 것입니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the
-  start of the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키게 하여, <var>input</var>을 가리키게 합니다.</p>
      </li><li data-md="">
-      <p>Let <var>sign</var> have the value "positive".</p>
+      <p><var>sign</var>이 "양" 값을 가지게 합니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#skip-whitespace" id="ref-for-skip-whitespace-1">Skip whitespace</a>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#skip-whitespace" id="ref-for-skip-whitespace-1">여백을 건너뜁니다</a>.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is past the end of <var>input</var>, return an error.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.</p>
      </li><li data-md="">
-      <p>If the character indicated by <var>position</var> (the first character) is a U+002D
-  HYPHEN-MINUS character (-):</p>
+      <p><var>position</var>에 의해 가리켜진 문자(첫번째 문자)가 U+002D HYPHEN-MINUS 문자 (-)라면:</p>
       <ol>
        <li data-md="">
-        <p>Let <var>sign</var> be "negative".</p>
+        <p><var>sign</var>을 "음"으로 둡니다.</p>
        </li><li data-md="">
-        <p>Advance <var>position</var> to the next character.</p>
+        <p><var>position</var>을 다음 문자로 전진시킵니다.</p>
        </li><li data-md="">
-        <p>If <var>position</var> is past the end of <var>input</var>, return an error.</p>
+        <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.</p>
       </li></ol>
-      <p>Otherwise, if the character indicated by <var>position</var> (the first character) is a
-  U+002B PLUS SIGN character (+):</p>
+      <p>그렇지 않고, <var>position</var>에 의해 가리켜진 문자(첫번째 문자)가 U+002B PLUS 부호 문자 (+)
+  라면:</p>
       <ol>
        <li data-md="">
-        <p>Advance <var>position</var> to the next character. (The "<code>+</code>" is ignored, but
-  it is not conforming.)</p>
+        <p><var>position</var>을 다음 문자로 전진시킵니다. ("<code>+</code>"는 무시되지만, 이는 부적합
+  합니다.)</p>
        </li><li data-md="">
-        <p>If <var>position</var> is past the end of <var>input</var>, return an error.</p>
+        <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>If the character indicated by <var>position</var> is not an <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-3">ASCII digit</a>, then return
-  an error.</p>
+      <p><var>position</var>에 의해 가리켜진 문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-3">ASCII 숫자</a>가 아니라면,
+  오류를 반환합니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-3">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-4">ASCII digits</a>, and interpret the
-  resulting sequence as a base-ten integer. Let <var>value</var> be that integer.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-4">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-3">일련의 문자를 수집</a>하고,
+  10진수 정수로 결과로 나온 수열을 해석합니다. <var>value</var>를 그 정수로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>sign</var> is "positive", return <var>value</var>, otherwise return the result of
-  subtracting <var>value</var> from zero.</p>
+      <p><var>sign</var>이 "양"이라면, <var>value</var>를 반환하고, 그렇지 않으면 0에서 <var>value</var>를
+  뺀 결과를 반환합니다.</p>
     </li></ol>
     <h5 class="heading settled" data-level="2.4.4.2" id="non-negative-integers"><span class="secno">2.4.4.2. </span><span class="content">Non-negative integers</span><a class="self-link" href="infrastructure.html#non-negative-integers"></a></h5>
     <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-non-negative-integer">valid non-negative integer</dfn> if it consists of one or more <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-5">ASCII digits</a>.</p>
@@ -4865,10 +4861,10 @@ equal to the number of seconds in <var>t</var>.</p>
      </li><li data-md="">
       <p><a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-2">Strip leading and trailing whitespace</a> from <var>input</var>.</p>
      </li><li data-md="">
-      <p>If <var>input</var> is an <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-4">ASCII case-insensitive</a> match for the string
+      <p>If <var>input</var> is an <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-3">ASCII case-insensitive</a> match for the string
   "<code>transparent</code>", then return an error.</p>
      </li><li data-md="">
-      <p>If <var>input</var> is an <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-5">ASCII case-insensitive</a> match for one of the <a data-link-type="dfn" href="infrastructure.html#named-color" id="ref-for-named-color-1">named colors</a>, then return the <a data-link-type="dfn" href="infrastructure.html#simple-color" id="ref-for-simple-color-5">simple color</a> corresponding to that keyword. <a data-link-type="biblio" href="references.html#biblio-css3color">[CSS3COLOR]</a></p>
+      <p>If <var>input</var> is an <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-4">ASCII case-insensitive</a> match for one of the <a data-link-type="dfn" href="infrastructure.html#named-color" id="ref-for-named-color-1">named colors</a>, then return the <a data-link-type="dfn" href="infrastructure.html#simple-color" id="ref-for-simple-color-5">simple color</a> corresponding to that keyword. <a data-link-type="biblio" href="references.html#biblio-css3color">[CSS3COLOR]</a></p>
       <p class="note" role="note"><a data-link-type="dfn" href="https://www.w3.org/TR/CSS21/ui.html#system-colors">CSS2 System Colors</a> are not recognized.</p>
      </li><li data-md="">
       <p>If <var>input</var> is four characters long, and the first character in <var>input</var> is a
@@ -5288,7 +5284,7 @@ equal to the number of seconds in <var>t</var>.</p>
   the string.</p>
      </li><li data-md="">
       <p><i>Loop</i>: Find the first seven characters in <var>s</var> after <var>position</var> that
-  are an <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-6">ASCII case-insensitive</a> match for the word "<code>charset</code>". If no such
+  are an <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-5">ASCII case-insensitive</a> match for the word "<code>charset</code>". If no such
   match is found, return nothing and abort these steps.</p>
      </li><li data-md="">
       <p>Skip any <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-23">space characters</a> that immediately follow the word "<code>charset</code>"
@@ -7254,54 +7250,54 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#ascii-case-insensitive">#ascii-case-insensitive</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-ascii-case-insensitive-1">2.4.2. 불리언 속성(attribute)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-case-insensitive-2">2.4.3. Keywords and enumerated attributes</a> <a href="infrastructure.html#ref-for-ascii-case-insensitive-3">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-case-insensitive-4">2.4.6. Colors</a> <a href="infrastructure.html#ref-for-ascii-case-insensitive-5">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-case-insensitive-6">2.6.5. Extracting character encodings from meta elements</a>
-    </li><li><a href="dom.html#ref-for-ascii-case-insensitive-7">3.2.5.3. 
-  The lang and xml:lang attributes </a> <a href="dom.html#ref-for-ascii-case-insensitive-8">(2)</a>
-    </li><li><a href="document-metadata.html#ref-for-ascii-case-insensitive-9">4.2.5. The meta element</a>
-    </li><li><a href="document-metadata.html#ref-for-ascii-case-insensitive-10">4.2.5.1. Standard metadata names</a>
-    </li><li><a href="document-metadata.html#ref-for-ascii-case-insensitive-11">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-ascii-case-insensitive-12">(2)</a> <a href="document-metadata.html#ref-for-ascii-case-insensitive-13">(3)</a>
-    </li><li><a href="document-metadata.html#ref-for-ascii-case-insensitive-14">4.2.5.5. Specifying the document’s character encoding</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-ascii-case-insensitive-15">4.7.4. The source element when used with the picture element</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-ascii-case-insensitive-16">4.7.6. The iframe element</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-ascii-case-insensitive-17">4.7.8. The object element</a>
-    </li><li><a href="links.html#ref-for-ascii-case-insensitive-18">4.8.6. Link types</a>
-    </li><li><a href="links.html#ref-for-ascii-case-insensitive-19">4.8.6.5. Link type "icon"</a> <a href="links.html#ref-for-ascii-case-insensitive-20">(2)</a> <a href="links.html#ref-for-ascii-case-insensitive-21">(3)</a>
-    </li><li><a href="sec-forms.html#ref-for-ascii-case-insensitive-22">4.10.3. The form element</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-23">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-ascii-case-insensitive-24">4.10.5.1.17. File Upload state (type=file)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-25">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-ascii-case-insensitive-26">4.10.5.3.8. The step attribute</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-27">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-ascii-case-insensitive-28">4.10.19.8.1. Autofilling form controls: the autocomplete attribute</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-29">(2)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-30">(3)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-31">(4)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-32">(5)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-33">(6)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-34">(7)</a>
-    </li><li><a href="sec-forms.html#ref-for-ascii-case-insensitive-35">4.10.19.8.2. Processing model</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-36">(2)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-37">(3)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-38">(4)</a>
-    </li><li><a href="semantics-scripting.html#ref-for-ascii-case-insensitive-39">4.12.1. The script element</a>
-    </li><li><a href="semantics-scripting.html#ref-for-ascii-case-insensitive-40">4.12.1.1. Processing model</a> <a href="semantics-scripting.html#ref-for-ascii-case-insensitive-41">(2)</a> <a href="semantics-scripting.html#ref-for-ascii-case-insensitive-42">(3)</a>
-    </li><li><a href="matching-html-elements-using-selectors.html#ref-for-ascii-case-insensitive-43">4.15.1. Case-sensitivity</a> <a href="matching-html-elements-using-selectors.html#ref-for-ascii-case-insensitive-44">(2)</a>
-    </li><li><a href="editing.html#ref-for-ascii-case-insensitive-45">5.6.1. Making document regions editable: The contenteditable content attribute</a> <a href="editing.html#ref-for-ascii-case-insensitive-46">(2)</a> <a href="editing.html#ref-for-ascii-case-insensitive-47">(3)</a>
-    </li><li><a href="editing.html#ref-for-ascii-case-insensitive-48">5.6.2. Making entire documents editable: The designMode IDL attribute</a>
-    </li><li><a href="editing.html#ref-for-ascii-case-insensitive-49">5.7.8. The dropzone attribute</a> <a href="editing.html#ref-for-ascii-case-insensitive-50">(2)</a> <a href="editing.html#ref-for-ascii-case-insensitive-51">(3)</a>
-    </li><li><a href="browsers.html#ref-for-ascii-case-insensitive-52">6.1.5. Browsing context names</a>
-    </li><li><a href="browsers.html#ref-for-ascii-case-insensitive-53">6.7.9. Navigating to a fragment identifier</a>
-    </li><li><a href="webappapis.html#ref-for-ascii-case-insensitive-54">7.3.1. Opening the input stream</a> <a href="webappapis.html#ref-for-ascii-case-insensitive-55">(2)</a> <a href="webappapis.html#ref-for-ascii-case-insensitive-56">(3)</a>
-    </li><li><a href="webappapis.html#ref-for-ascii-case-insensitive-57">7.6.1.3. Custom scheme handler: the registerProtocolHandler() method</a> <a href="webappapis.html#ref-for-ascii-case-insensitive-58">(2)</a>
-    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-59">8.1.1. The DOCTYPE</a> <a href="syntax.html#ref-for-ascii-case-insensitive-60">(2)</a> <a href="syntax.html#ref-for-ascii-case-insensitive-61">(3)</a> <a href="syntax.html#ref-for-ascii-case-insensitive-62">(4)</a>
-    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-63">8.1.2.3. Attributes</a> <a href="syntax.html#ref-for-ascii-case-insensitive-64">(2)</a>
-    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-65">8.2.4.45. Markup declaration open state</a>
-    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-66">8.2.4.55. After DOCTYPE name state</a> <a href="syntax.html#ref-for-ascii-case-insensitive-67">(2)</a>
-    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-68">8.2.5. Tree construction</a> <a href="syntax.html#ref-for-ascii-case-insensitive-69">(2)</a>
-    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-70">8.2.5.4.1. The "initial" insertion mode</a>
-    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-71">8.2.5.4.4. The "in head" insertion mode</a>
-    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-72">8.2.5.4.7. The "in body" insertion mode</a>
-    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-73">8.2.5.4.9. The "in table" insertion mode</a>
-    </li><li><a href="xhtml.html#ref-for-ascii-case-insensitive-74">9.3. Serializing XHTML fragments</a>
-    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-75">10.3.2. The page</a>
-    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-76">10.3.3. Flow content</a> <a href="rendering.html#ref-for-ascii-case-insensitive-77">(2)</a> <a href="rendering.html#ref-for-ascii-case-insensitive-78">(3)</a> <a href="rendering.html#ref-for-ascii-case-insensitive-79">(4)</a>
-    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-80">10.3.9. Tables</a> <a href="rendering.html#ref-for-ascii-case-insensitive-81">(2)</a> <a href="rendering.html#ref-for-ascii-case-insensitive-82">(3)</a> <a href="rendering.html#ref-for-ascii-case-insensitive-83">(4)</a>
-    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-84">10.3.13. The fieldset and legend elements</a>
-    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-85">10.4.3. Attributes for embedded content and images</a>
-    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-86">10.5.15. The textarea element</a>
-    </li><li><a href="obsolete.html#ref-for-ascii-case-insensitive-87">11.1. Obsolete but conforming features</a> <a href="obsolete.html#ref-for-ascii-case-insensitive-88">(2)</a>
-    </li><li><a href="obsolete.html#ref-for-ascii-case-insensitive-89">11.1.1. Warnings for obsolete but conforming features</a> <a href="obsolete.html#ref-for-ascii-case-insensitive-90">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-ascii-case-insensitive-91">Attributes</a> <a href="fullindex.html#ref-for-ascii-case-insensitive-92">(2)</a> <a href="fullindex.html#ref-for-ascii-case-insensitive-93">(3)</a> <a href="fullindex.html#ref-for-ascii-case-insensitive-94">(4)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-case-insensitive-2">2.4.3. 키워드와 열거 속성(attribute)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-case-insensitive-3">2.4.6. Colors</a> <a href="infrastructure.html#ref-for-ascii-case-insensitive-4">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-case-insensitive-5">2.6.5. Extracting character encodings from meta elements</a>
+    </li><li><a href="dom.html#ref-for-ascii-case-insensitive-6">3.2.5.3. 
+  The lang and xml:lang attributes </a> <a href="dom.html#ref-for-ascii-case-insensitive-7">(2)</a>
+    </li><li><a href="document-metadata.html#ref-for-ascii-case-insensitive-8">4.2.5. The meta element</a>
+    </li><li><a href="document-metadata.html#ref-for-ascii-case-insensitive-9">4.2.5.1. Standard metadata names</a>
+    </li><li><a href="document-metadata.html#ref-for-ascii-case-insensitive-10">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-ascii-case-insensitive-11">(2)</a> <a href="document-metadata.html#ref-for-ascii-case-insensitive-12">(3)</a>
+    </li><li><a href="document-metadata.html#ref-for-ascii-case-insensitive-13">4.2.5.5. Specifying the document’s character encoding</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-ascii-case-insensitive-14">4.7.4. The source element when used with the picture element</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-ascii-case-insensitive-15">4.7.6. The iframe element</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-ascii-case-insensitive-16">4.7.8. The object element</a>
+    </li><li><a href="links.html#ref-for-ascii-case-insensitive-17">4.8.6. Link types</a>
+    </li><li><a href="links.html#ref-for-ascii-case-insensitive-18">4.8.6.5. Link type "icon"</a> <a href="links.html#ref-for-ascii-case-insensitive-19">(2)</a> <a href="links.html#ref-for-ascii-case-insensitive-20">(3)</a>
+    </li><li><a href="sec-forms.html#ref-for-ascii-case-insensitive-21">4.10.3. The form element</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-22">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-ascii-case-insensitive-23">4.10.5.1.17. File Upload state (type=file)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-24">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-ascii-case-insensitive-25">4.10.5.3.8. The step attribute</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-26">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-ascii-case-insensitive-27">4.10.19.8.1. Autofilling form controls: the autocomplete attribute</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-28">(2)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-29">(3)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-30">(4)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-31">(5)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-32">(6)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-33">(7)</a>
+    </li><li><a href="sec-forms.html#ref-for-ascii-case-insensitive-34">4.10.19.8.2. Processing model</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-35">(2)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-36">(3)</a> <a href="sec-forms.html#ref-for-ascii-case-insensitive-37">(4)</a>
+    </li><li><a href="semantics-scripting.html#ref-for-ascii-case-insensitive-38">4.12.1. The script element</a>
+    </li><li><a href="semantics-scripting.html#ref-for-ascii-case-insensitive-39">4.12.1.1. Processing model</a> <a href="semantics-scripting.html#ref-for-ascii-case-insensitive-40">(2)</a> <a href="semantics-scripting.html#ref-for-ascii-case-insensitive-41">(3)</a>
+    </li><li><a href="matching-html-elements-using-selectors.html#ref-for-ascii-case-insensitive-42">4.15.1. Case-sensitivity</a> <a href="matching-html-elements-using-selectors.html#ref-for-ascii-case-insensitive-43">(2)</a>
+    </li><li><a href="editing.html#ref-for-ascii-case-insensitive-44">5.6.1. Making document regions editable: The contenteditable content attribute</a> <a href="editing.html#ref-for-ascii-case-insensitive-45">(2)</a> <a href="editing.html#ref-for-ascii-case-insensitive-46">(3)</a>
+    </li><li><a href="editing.html#ref-for-ascii-case-insensitive-47">5.6.2. Making entire documents editable: The designMode IDL attribute</a>
+    </li><li><a href="editing.html#ref-for-ascii-case-insensitive-48">5.7.8. The dropzone attribute</a> <a href="editing.html#ref-for-ascii-case-insensitive-49">(2)</a> <a href="editing.html#ref-for-ascii-case-insensitive-50">(3)</a>
+    </li><li><a href="browsers.html#ref-for-ascii-case-insensitive-51">6.1.5. Browsing context names</a>
+    </li><li><a href="browsers.html#ref-for-ascii-case-insensitive-52">6.7.9. Navigating to a fragment identifier</a>
+    </li><li><a href="webappapis.html#ref-for-ascii-case-insensitive-53">7.3.1. Opening the input stream</a> <a href="webappapis.html#ref-for-ascii-case-insensitive-54">(2)</a> <a href="webappapis.html#ref-for-ascii-case-insensitive-55">(3)</a>
+    </li><li><a href="webappapis.html#ref-for-ascii-case-insensitive-56">7.6.1.3. Custom scheme handler: the registerProtocolHandler() method</a> <a href="webappapis.html#ref-for-ascii-case-insensitive-57">(2)</a>
+    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-58">8.1.1. The DOCTYPE</a> <a href="syntax.html#ref-for-ascii-case-insensitive-59">(2)</a> <a href="syntax.html#ref-for-ascii-case-insensitive-60">(3)</a> <a href="syntax.html#ref-for-ascii-case-insensitive-61">(4)</a>
+    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-62">8.1.2.3. Attributes</a> <a href="syntax.html#ref-for-ascii-case-insensitive-63">(2)</a>
+    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-64">8.2.4.45. Markup declaration open state</a>
+    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-65">8.2.4.55. After DOCTYPE name state</a> <a href="syntax.html#ref-for-ascii-case-insensitive-66">(2)</a>
+    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-67">8.2.5. Tree construction</a> <a href="syntax.html#ref-for-ascii-case-insensitive-68">(2)</a>
+    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-69">8.2.5.4.1. The "initial" insertion mode</a>
+    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-70">8.2.5.4.4. The "in head" insertion mode</a>
+    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-71">8.2.5.4.7. The "in body" insertion mode</a>
+    </li><li><a href="syntax.html#ref-for-ascii-case-insensitive-72">8.2.5.4.9. The "in table" insertion mode</a>
+    </li><li><a href="xhtml.html#ref-for-ascii-case-insensitive-73">9.3. Serializing XHTML fragments</a>
+    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-74">10.3.2. The page</a>
+    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-75">10.3.3. Flow content</a> <a href="rendering.html#ref-for-ascii-case-insensitive-76">(2)</a> <a href="rendering.html#ref-for-ascii-case-insensitive-77">(3)</a> <a href="rendering.html#ref-for-ascii-case-insensitive-78">(4)</a>
+    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-79">10.3.9. Tables</a> <a href="rendering.html#ref-for-ascii-case-insensitive-80">(2)</a> <a href="rendering.html#ref-for-ascii-case-insensitive-81">(3)</a> <a href="rendering.html#ref-for-ascii-case-insensitive-82">(4)</a>
+    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-83">10.3.13. The fieldset and legend elements</a>
+    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-84">10.4.3. Attributes for embedded content and images</a>
+    </li><li><a href="rendering.html#ref-for-ascii-case-insensitive-85">10.5.15. The textarea element</a>
+    </li><li><a href="obsolete.html#ref-for-ascii-case-insensitive-86">11.1. Obsolete but conforming features</a> <a href="obsolete.html#ref-for-ascii-case-insensitive-87">(2)</a>
+    </li><li><a href="obsolete.html#ref-for-ascii-case-insensitive-88">11.1.1. Warnings for obsolete but conforming features</a> <a href="obsolete.html#ref-for-ascii-case-insensitive-89">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-ascii-case-insensitive-90">Attributes</a> <a href="fullindex.html#ref-for-ascii-case-insensitive-91">(2)</a> <a href="fullindex.html#ref-for-ascii-case-insensitive-92">(3)</a> <a href="fullindex.html#ref-for-ascii-case-insensitive-93">(4)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="compatibility-caseless">
@@ -7436,7 +7432,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#ascii-digits">#ascii-digits</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-ascii-digits-1">2.4.1. 공통 해석기 표현</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-2">2.4.4.1. Signed integers</a> <a href="infrastructure.html#ref-for-ascii-digits-3">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-4">(3)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-2">2.4.4.1. 부호있는 정수</a> <a href="infrastructure.html#ref-for-ascii-digits-3">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-4">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-5">2.4.4.2. Non-negative integers</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-6">2.4.4.3. Floating-point numbers</a> <a href="infrastructure.html#ref-for-ascii-digits-7">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-8">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-9">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-10">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-11">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-12">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-13">(8)</a> <a href="infrastructure.html#ref-for-ascii-digits-14">(9)</a> <a href="infrastructure.html#ref-for-ascii-digits-15">(10)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-16">2.4.4.4. Percentages and lengths</a> <a href="infrastructure.html#ref-for-ascii-digits-17">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-18">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-19">(4)</a>
@@ -7495,7 +7491,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#collect-a-sequence-of-characters">#collect-a-sequence-of-characters</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-1">2.4.1. 공통 해석기 표현</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-3">2.4.4.1. Signed integers</a>
+    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-3">2.4.4.1. 부호있는 정수</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-4">2.4.4.3. Floating-point numbers</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-5">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-6">2.4.4.4. Percentages and lengths</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-7">2.4.4.6. Lists of floating-point numbers</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-8">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-9">(3)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-10">(4)</a>
@@ -7518,7 +7514,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="skip-whitespace">
    <b><a href="infrastructure.html#skip-whitespace">#skip-whitespace</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-skip-whitespace-1">2.4.4.1. Signed integers</a>
+    <li><a href="infrastructure.html#ref-for-skip-whitespace-1">2.4.4.1. 부호있는 정수</a>
     </li><li><a href="infrastructure.html#ref-for-skip-whitespace-2">2.4.4.3. Floating-point numbers</a>
     </li><li><a href="infrastructure.html#ref-for-skip-whitespace-3">2.4.4.4. Percentages and lengths</a>
     </li><li><a href="infrastructure.html#ref-for-skip-whitespace-4">2.4.4.7. Lists of dimensions</a>
@@ -7625,7 +7621,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#valid-integer">#valid-integer</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-valid-integer-1">1.7.1. 이 명세를 읽는 방법</a> <a href="introduction.html#ref-for-valid-integer-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-valid-integer-3">2.4.4.1. Signed integers</a> <a href="infrastructure.html#ref-for-valid-integer-4">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-valid-integer-3">2.4.4.1. 부호있는 정수</a> <a href="infrastructure.html#ref-for-valid-integer-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-valid-integer-5">2.7.1. Reflecting content attributes in IDL attributes</a>
     </li><li><a href="grouping-content.html#ref-for-valid-integer-6">4.4.5. The ol element</a>
     </li><li><a href="grouping-content.html#ref-for-valid-integer-7">4.4.7. The li element</a>
