@@ -1470,9 +1470,9 @@ pre.idl.highlight { color: #708090; }
          <a href="infrastructure.html#numbers"><span class="secno">2.4.4</span> <span class="content">숫자</span></a>
          <ol class="toc">
           <li><a href="infrastructure.html#signed-integers"><span class="secno">2.4.4.1</span> <span class="content">부호있는 정수</span></a>
-          </li><li><a href="infrastructure.html#non-negative-integers"><span class="secno">2.4.4.2</span> <span class="content">Non-negative integers</span></a>
-          </li><li><a href="infrastructure.html#floating-point-numbers"><span class="secno">2.4.4.3</span> <span class="content">Floating-point numbers</span></a>
-          </li><li><a href="infrastructure.html#percentages-and-dimensions"><span class="secno">2.4.4.4</span> <span class="content">Percentages and lengths</span></a>
+          </li><li><a href="infrastructure.html#non-negative-integers"><span class="secno">2.4.4.2</span> <span class="content">음이 아닌 정수</span></a>
+          </li><li><a href="infrastructure.html#floating-point-numbers"><span class="secno">2.4.4.3</span> <span class="content">부동 소수점 수</span></a>
+          </li><li><a href="infrastructure.html#percentages-and-dimensions"><span class="secno">2.4.4.4</span> <span class="content">백분율과 길이</span></a>
           </li><li><a href="infrastructure.html#non-zero-percentages-and-lengths"><span class="secno">2.4.4.5</span> <span class="content">Non-zero percentages and lengths</span></a>
           </li><li><a href="infrastructure.html#lists-of-floating-point-numbers"><span class="secno">2.4.4.6</span> <span class="content">Lists of floating-point numbers</span></a>
           </li><li><a href="infrastructure.html#lists-of-dimensions"><span class="secno">2.4.4.7</span> <span class="content">Lists of dimensions</span></a>
@@ -3473,257 +3473,245 @@ pre.idl.highlight { color: #708090; }
       <p><var>sign</var>이 "양"이라면, <var>value</var>를 반환하고, 그렇지 않으면 0에서 <var>value</var>를
   뺀 결과를 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.4.2" id="non-negative-integers"><span class="secno">2.4.4.2. </span><span class="content">Non-negative integers</span><a class="self-link" href="infrastructure.html#non-negative-integers"></a></h5>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-non-negative-integer">valid non-negative integer</dfn> if it consists of one or more <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-5">ASCII digits</a>.</p>
-    <p>A <a data-link-type="dfn" href="infrastructure.html#valid-non-negative-integer" id="ref-for-valid-non-negative-integer-1">valid non-negative integer</a> represents the number that is represented in base ten by that
-  string of digits.</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse that attribute’s value|rules for parsing non-negative integers" data-noexport="" id="parse-that-attributes-value">rules for parsing non-negative integers</dfn> are as given in the following algorithm.
-  When invoked, the steps must be followed in the order given, aborting at the first step that
-  returns a value. This algorithm will return either zero, a positive integer, or an error.</p>
+    <h5 class="heading settled" data-level="2.4.4.2" id="non-negative-integers"><span class="secno">2.4.4.2. </span><span class="content">음이 아닌 정수</span><a class="self-link" href="infrastructure.html#non-negative-integers"></a></h5>
+    <p>문자열이 하나 이상의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-5">ASCII 숫자</a>로 구성된다면 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid non-negative integer" data-noexport="" id="valid-non-negative-integer">유효한 음이 아닌 정수</dfn>입니다.</p>
+    <p><a data-link-type="dfn" href="infrastructure.html#valid-non-negative-integer" id="ref-for-valid-non-negative-integer-1">유효한 음이 아닌 정수</a>는 그 숫자의 문자열에 의해 10 진수로
+  나타내어지는 숫자를 나타냅니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse that attribute’s value|rules for parsing non-negative integers" data-noexport="" id="parse-that-attributes-value">음이 아닌 정수 해석에 대한 규칙</dfn>은 다음 알고리즘에 주어진 것과 같습니다.
+  이 알고리즘이 호출될 때, 단계는 값을 반환하는 첫 번째 단계에서 중단하여, 주어진 순서에 따라야(must) 
+  합니다. 이 알고리즘은 0이나 양의 정수, 혹은 오류를 반환할 것입니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석된 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>value</var> be the result of parsing <var>input</var> using the <a data-link-type="dfn" href="infrastructure.html#parse-token-as-an-integer" id="ref-for-parse-token-as-an-integer-2">rules for parsing integers</a>.</p>
+      <p><var>value</var>를 <a data-link-type="dfn" href="infrastructure.html#parse-token-as-an-integer" id="ref-for-parse-token-as-an-integer-2">정수 해석에 대한 규칙</a>을 사용하여 <var>input</var>을 해석한 결과로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>value</var> is an error, return an error.</p>
+      <p><var>value</var>가 오류라면, 오류를 반환합니다.</p>
      </li><li data-md="">
-      <p>If <var>value</var> is less than zero, return an error.</p>
+      <p><var>value</var>가 0보다 작다면, 오류를 반환합니다.</p>
      </li><li data-md="">
-      <p>Return <var>value</var>.</p>
+      <p><var>value</var>를 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.4.3" id="floating-point-numbers"><span class="secno">2.4.4.3. </span><span class="content">Floating-point numbers</span><a class="self-link" href="infrastructure.html#floating-point-numbers"></a></h5>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-floating-point-number">valid floating-point number</dfn> if it consists of:</p>
+    <h5 class="heading settled" data-level="2.4.4.3" id="floating-point-numbers"><span class="secno">2.4.4.3. </span><span class="content">부동 소수점 수</span><a class="self-link" href="infrastructure.html#floating-point-numbers"></a></h5>
+    <p>문자열이 다음으로 구성된다면 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid floating-point number" data-noexport="" id="valid-floating-point-number">유효한 부동소수점 수</dfn>입니다:</p>
     <ol>
      <li data-md="">
-      <p>Optionally, a U+002D HYPHEN-MINUS character (-).</p>
+      <p>선택적으로, U+002D HYPHEN-MINUS 문자 (-).</p>
      </li><li data-md="">
-      <p>One or both of the following, in the given order:</p>
+      <p>주어진 순서에 따라, 다음 중 하나 혹은 모두:</p>
       <ol>
        <li data-md="">
-        <p>A series of one or more <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-6">ASCII digits</a>.</p>
+        <p>일련의 하나 이상의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-6">ASCII 숫자</a>.</p>
        </li><li data-md="">
-        <p>Both of the following, in the given order:</p>
+        <p>주어진 순서에 따라 다음 둘 모두:</p>
         <ol>
          <li data-md="">
-          <p>A single U+002E FULL STOP character (.).</p>
+          <p>단일 U+002E 마침표 문자 (.).</p>
          </li><li data-md="">
-          <p>A series of one or more <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-7">ASCII digits</a>.</p>
+          <p>일련의 하나 이상의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-7">ASCII 숫자</a>.</p>
         </li></ol>
       </li></ol>
      </li><li data-md="">
-      <p>Optionally:</p>
+      <p>선택적으로:</p>
       <ol>
        <li data-md="">
-        <p>Either a U+0065 LATIN SMALL LETTER E character (e) or a U+0045 LATIN CAPITAL LETTER E
-  character (E).</p>
+        <p>U+0065 라틴 소문자 E (e) 또는 U+0045 라틴 대문자 E (E).</p>
        </li><li data-md="">
-        <p>Optionally, a U+002D HYPHEN-MINUS character (-) or U+002B PLUS SIGN character (+).</p>
+        <p>선택적으로, U+002D HYPHEN-MINUS 문자 (-) 또는 U+002B PLUS 부호 문자 (+).</p>
        </li><li data-md="">
-        <p>A series of one or more <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-8">ASCII digits</a>.</p>
+        <p>일련의 하나 이상의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-8">ASCII 숫자</a>.</p>
       </li></ol>
     </li></ol>
-    <p>A <a data-link-type="dfn" href="infrastructure.html#valid-floating-point-number" id="ref-for-valid-floating-point-number-1">valid floating-point number</a> represents the number obtained by multiplying the significand
-  by ten raised to the power of the exponent, where the significand is the first number, interpreted
-  as base ten (including the decimal point and the number after the decimal point, if any, and
-  interpreting the significand as a negative number if the whole string starts with a U+002D
-  HYPHEN-MINUS character (-) and the number is not zero), and where the exponent is the number after
-  the E, if any (interpreted as a negative number if there is a U+002D HYPHEN-MINUS character (-)
-  between the E and the number and the number is not zero, or else ignoring a U+002B PLUS SIGN
-  character (+) between the E and the number if there is one). If there is no E, then the exponent
-  is treated as zero.</p>
-    <p class="note" role="note">The Infinity and Not-a-Number (NaN) values are not <a data-link-type="dfn" href="infrastructure.html#valid-floating-point-number" id="ref-for-valid-floating-point-number-2">valid floating-point numbers</a>.</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="best floating-point number" data-noexport="" id="best-floating-point-number">best representation of the number <var>n</var> as a floating-point number</dfn> is the
-  string obtained from running ToString(<var>n</var>). The abstract operation ToString is not
-  uniquely determined. When there are multiple possible strings that could be obtained from ToString
-  for a particular value, the user agent must always return the same string for that value (though
-  it may differ from the value used by other user agents).</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="rules-for-parsing-floating-point-number-values">rules for parsing floating-point number values</dfn> are as given in the following
-  algorithm. This algorithm must be aborted at the first step that returns something. This
-  algorithm will return either a number or an error.</p>
+    <p><a data-link-type="dfn" href="infrastructure.html#valid-floating-point-number" id="ref-for-valid-floating-point-number-1">유효한 부동소수점 수</a>는 유효숫자에 10의 지수의 거듭 제곱과
+  곱하여 얻어진 숫자를 나타내고, 여기서 유효숫자는 10진수로 해석되는 (소수점과 소수점 이후 숫자가
+  있다면 이를 포함하여, 그리고 전체 숫자가 U+002D HYPHEN-MINUS 문자 (-)로 시작하고 숫자가 0이 아니라면 
+  음수로서 유효숫자를 해석하여) 첫번째 숫자이고, 지수는 E 이후 숫자가 있다면 그 숫자 (E와 숫자 사이에 
+  U+002D HYPHEN-MINUS (-) 문자가 있고 숫자가 0이 아니라면 음수로 해석되거나, E와 숫자 사이에 U+002B
+  PLUS 부호 문자가 있다면 이를 무시하여)입니다. E가 없다면 지수는 0으로 간주됩니다.</p>
+    <p class="note" role="note">Infinity와 Not-a-Number (NaN) 값은 <a data-link-type="dfn" href="infrastructure.html#valid-floating-point-number" id="ref-for-valid-floating-point-number-2">유효한 부동소수점 수</a>가 아닙니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="best floating-point number" data-noexport="" id="best-floating-point-number">부동 소수점 수로서 숫자 <var>n</var>의 가장 잘 표현된 표현</dfn>은
+  ToString(<var>n</var>)을 수행하여 얻어진 문자열입니다. 추상 연산 ToString은 고유하게 결정되지 않습니다.
+  특정 값에 대해 ToString에서 얻어질 수 있는 가능한 여러 문자열이 있는 경우, 유저 에이전트는 항상 그
+  값에 대한 동일한 문자열을(다른 유저 에이전트에 의해 사용될 수 있는 값과 다를 수 있지만) 반환해야(must) 
+  합니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="rules for parsing floating-point number values" data-noexport="" id="rules-for-parsing-floating-point-number-values">부동 소수점 수 값 해석에 대한 규칙</dfn>은 다음 알고리즘에 주어진 것과 같습니다.
+  이 알고리즘은 무언가를 반환하는 첫 번째 단계에서 중단되어야(must) 합니다. 이 알고리즘은 숫자나 
+  오류를 반환할 것입니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-  of the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>value</var> have the value 1.</p>
+      <p><var>value</var>가 값 1을 가지게 합니다.</p>
      </li><li data-md="">
-      <p>Let <var>divisor</var> have the value 1.</p>
+      <p><var>divisor</var>가 값 1을 가지게 합니다.</p>
      </li><li data-md="">
-      <p>Let <var>exponent</var> have the value 1.</p>
+      <p><var>exponent</var>가 값 1을 가지게 합니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#skip-whitespace" id="ref-for-skip-whitespace-2">Skip whitespace</a>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#skip-whitespace" id="ref-for-skip-whitespace-2">여백을 건너뜁니다</a>.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is past the end of <var>input</var>, return an error.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.</p>
      </li><li data-md="">
-      <p>If the character indicated by <var>position</var> is a U+002D HYPHEN-MINUS character (-):</p>
+      <p><var>position</var>에 의해 가리켜진 문자가 U+002D HYPHEN-MINUS 문자 (-) 라면:</p>
       <ol>
        <li data-md="">
-        <p>Change <var>value</var> and <var>divisor</var> to -1.</p>
+        <p><var>value</var>와 <var>divisor</var>를 -1로 변경합니다.</p>
        </li><li data-md="">
-        <p>Advance <var>position</var> to the next character.</p>
+        <p><var>position</var>을 다음 문자로 전진시킵니다.</p>
        </li><li data-md="">
-        <p>If <var>position</var> is past the end of <var>input</var>, return an error.</p>
+        <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.</p>
       </li></ol>
-      <p>Otherwise, if the character indicated by <var>position</var> (the first character) is a
-  U+002B PLUS SIGN character (+):</p>
+      <p>그렇지 않고, <var>position</var>에 의해 가리켜진 문자(첫 번째 문자)가 U+002B PLUS 부호 문자 (+)
+  라면:</p>
       <ol>
        <li data-md="">
-        <p>Advance <var>position</var> to the next character. (The "<code>+</code>" is ignored, but
-  it is not conforming.)</p>
+        <p><var>position</var>을 다음 문자로 전진시킵니다. ("<code>+</code>"는 무시되지만, 이는 부적합
+  한 것입니다.)</p>
        </li><li data-md="">
-        <p>If <var>position</var> is past the end of <var>input</var>, return an error.</p>
-      </li></ol>
-     </li><li data-md="">
-      <p>If the character indicated by <var>position</var> is a U+002E FULL STOP (.), and that is not
-  the last character in <var>input</var>, and the character after the character indicated by <var>position</var> is an <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-9">ASCII digit</a>, then set <var>value</var> to zero and jump to the step labeled <i>fraction</i>.</p>
-     </li><li data-md="">
-      <p>If the character indicated by <var>position</var> is not an <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-10">ASCII digit</a>, then return
-  an error.</p>
-     </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-4">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-11">ASCII digits</a>, and interpret the
-  resulting sequence as a base-ten integer. Multiply <var>value</var> by that integer.</p>
-     </li><li data-md="">
-      <p>If <var>position</var> is past the end of <var>input</var>, jump to the step labeled <i>conversion</i>.</p>
-     </li><li data-md="">
-      <p><i>Fraction</i>: If the character indicated by <var>position</var> is a U+002E FULL STOP
-  (.), run these substeps:</p>
-      <ol>
-       <li data-md="">
-        <p>Advance <var>position</var> to the next character.</p>
-       </li><li data-md="">
-        <p>If <var>position</var> is past the end of <var>input</var>, or if the character indicated
-  by <var>position</var> is not an <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-12">ASCII digit</a>, U+0065 LATIN SMALL LETTER E (e), or
-  U+0045 LATIN CAPITAL LETTER E (E), then jump to the step labeled <i>conversion</i>.</p>
-       </li><li data-md="">
-        <p>If the character indicated by <var>position</var> is a U+0065 LATIN SMALL LETTER E
-  character (e) or a U+0045 LATIN CAPITAL LETTER E character (E), skip the remainder of
-  these substeps.</p>
-       </li><li data-md="">
-        <p><i>Fraction loop</i>: Multiply <var>divisor</var> by ten.</p>
-       </li><li data-md="">
-        <p>Add the value of the character indicated by <var>position</var>, interpreted as a
-  base-ten digit (0..9) and divided by <var>divisor</var>, to <var>value</var>.</p>
-       </li><li data-md="">
-        <p>Advance <var>position</var> to the next character.</p>
-       </li><li data-md="">
-        <p>If <var>position</var> is past the end of <var>input</var>, then jump to the step labeled <i>conversion</i>.</p>
-       </li><li data-md="">
-        <p>If the character indicated by <var>position</var> is an <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-13">ASCII digit</a>, jump back to
-  the step labeled <i>fraction loop</i> in these substeps.</p>
+        <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>If the character indicated by <var>position</var> is a U+0065 LATIN SMALL LETTER E character
-  (e) or a U+0045 LATIN CAPITAL LETTER E character (E), run these substeps:</p>
+      <p><var>position</var>에 의해 가리켜진 문자가 U+002E 마침표 문자 (.)이고, 그 문자가 <var>input</var>의
+  마지막 문자가 아니며, <var>position</var>에 의해 가리켜진 문자 이후 문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-9">ASCII 숫자</a>라면, <var>value</var>를 0으로 설정하고 <i>분수</i>로 라벨링
+  된 단계로 건너뜁니다.</p>
+     </li><li data-md="">
+      <p><var>position</var>에 의해 가리켜진 문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-10">ASCII 숫자</a>가 아니라면, 오류를
+  반환합니다.</p>
+     </li><li data-md="">
+      <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-11">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-4">일련의 문자를 수집</a>하고,
+  10 진수 정수로 결과로 나온 수열을 해석합니다. 그 정수에 <var>value</var>를 곱합니다.</p>
+     </li><li data-md="">
+      <p><var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로
+  건너뜁니다.</p>
+     </li><li data-md="">
+      <p><i>분수 </i>: <var>position</var>에 의해 가리켜진 문자가 U+002E 마침표 문자 (.) 라면, 이 하위
+  단계들을 수행합니다:</p>
       <ol>
        <li data-md="">
-        <p>Advance <var>position</var> to the next character.</p>
+        <p><var>position</var>을 다음 문자로 전진시킵니다.</p>
        </li><li data-md="">
-        <p>If <var>position</var> is past the end of <var>input</var>, then jump to the step labeled <i>conversion</i>.</p>
+        <p><var>position</var>이 <var>input</var>의 끝을 지났거나, <var>position</var>에 의해 가리켜진
+  문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-12">ASCII 숫자</a>, 혹은 U+0065 라틴 소문자 E (e), 혹은 U+0045 라틴 
+  대문자 E (E)가 아니라면, <i>변환</i>으로 라벨링 된 단계로 건너뜁니다.</p>
        </li><li data-md="">
-        <p>If the character indicated by <var>position</var> is a U+002D HYPHEN-MINUS character (-):</p>
+        <p><var>position</var>에 의해 가리켜진 문자가 U+0065 라틴 소문자 E (e) 또는 U+0045 라틴 대문자
+  E (E)라면, 이 하위 단계들의 나머지를 건너뜁니다.</p>
+       </li><li data-md="">
+        <p><i>분수 반복</i>: <var>divisor</var>에 10을 곱합니다.</p>
+       </li><li data-md="">
+        <p><var>position</var>에 의해 가리켜진 문자의 값을 10진수 숫자 (0..9)로 해석하고 <var>divisor</var>로 나누어진 값을 <var>value</var>에 추가합니다.</p>
+       </li><li data-md="">
+        <p><var>position</var>을 다음 문자로 전진시킵니다.</p>
+       </li><li data-md="">
+        <p><var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로
+  건너뜁니다.</p>
+       </li><li data-md="">
+        <p><var>position</var>에 의해 가리켜진 문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-13">ASCII 숫자</a>라면, 이 하위
+  단계 내의 <i>분수 반복</i>으로 라벨링 된 단계로 건너뜁니다.</p>
+      </li></ol>
+     </li><li data-md="">
+      <p><var>position</var>에 의해 가리켜진 문자가 U+0065 라틴 소문자 E (e) 혹은 U+0045 라틴 대문자 E
+  (E)라면, 이 하위 단계들을 수행합니다:</p>
+      <ol>
+       <li data-md="">
+        <p><var>position</var>을 다음 문자로 전진시킵니다.</p>
+       </li><li data-md="">
+        <p><var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로
+  건너뜁니다.</p>
+       </li><li data-md="">
+        <p><var>position</var>에 의해 가리켜진 문자가 U+002D HYPHEN-MINUS 문자 (-)라면:</p>
         <ol>
          <li data-md="">
-          <p>Change <var>exponent</var> to -1.</p>
+          <p><var>exponent</var>를 -1로 바꿉니다.</p>
          </li><li data-md="">
-          <p>Advance <var>position</var> to the next character.</p>
+          <p><var>position</var>을 다음 문자로 전진시킵니다.</p>
          </li><li data-md="">
-          <p>If <var>position</var> is past the end of <var>input</var>, then jump to the step
-  labeled <i>conversion</i>.</p>
+          <p><var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로
+  건너뜁니다.</p>
         </li></ol>
-        <p>Otherwise, if the character indicated by <var>position</var> is a U+002B PLUS SIGN character
-  (+):</p>
+        <p>그렇지 않고, <var>position</var>에 의해 가리켜진 문자가 U+002B PLUS 부호 문자(+) 라면:</p>
         <ol>
          <li data-md="">
-          <p>Advance <var>position</var> to the next character.</p>
+          <p><var>position</var>을 다음 문자로 전진시킵니다.</p>
          </li><li data-md="">
-          <p>If <var>position</var> is past the end of <var>input</var>, then jump to the step
-  labeled <i>conversion</i>.</p>
+          <p><var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로
+  건너뜁니다.</p>
         </li></ol>
        </li><li data-md="">
-        <p>If the character indicated by <var>position</var> is not an <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-14">ASCII digit</a>, then jump
-  to the step labeled <i>conversion</i>.</p>
+        <p><var>position</var>에 의해 가리켜진 문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-14">ASCII 숫자</a>가 아니라면, <i>변환</i>으로 라벨링 된 단계로 건너뜁니다.</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-5">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-15">ASCII digits</a>, and interpret the
-  resulting sequence as a base-ten integer. Multiply <var>exponent</var> by that integer.</p>
+        <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-15">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-5">일련의 문자를 수집</a>하고, and interpret the
+  10 진수 정수로 결과로 나온 수열을 해석합니다. 그 정수에 <var>exponent</var>를 곱합니다.</p>
        </li><li data-md="">
-        <p>Multiply <var>value</var> by ten raised to the <var>exponent</var>th power.</p>
+        <p>10의 <var>exponent</var>제곱에 <var>value</var>를 곱합니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p><i>Conversion</i>: Let <var>S</var> be the set of finite IEEE 754 double-precision
-  floating-point values except -0, but with two special values added: 2<sup>1024</sup> and -2<sup>1024</sup>.</p>
+      <p><i>변환</i>: <var>S</var>를 0을 제외한 64 비트 배정도 부동 소수점 값이고, 두 특별한 값 2<sup>1024</sup>과
+  -2<sup>1024</sup>를 포함한 IEEE 754의 집합으로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>rounded-value</var> be the number in <var>S</var> that is closest to <var>value</var>, selecting the number with an even significand if there are two equally
-  close values. (The two special values 2<sup>1024</sup> and -2<sup>1024</sup> are
-  considered to have even significands for this purpose.)</p>
+      <p><var>rounded-value</var>를, 두 개의 동일하게 가까운 값이 있다면 짝수 유효숫자를 선택하여, <var>value</var>에 가장 가까운 <var>S</var> 내의 숫자로 둡니다. (이 목적에 대해 두 개의 특별한 
+  값 2<sup>1024</sup>과 -2<sup>1024</sup>는 짝수 값을 가지는 것으로 간주됩니다.)</p>
      </li><li data-md="">
-      <p>If <var>rounded-value</var> is 2<sup>1024</sup> or -2<sup>1024</sup>, return an error.</p>
+      <p><var>rounded-value</var>가 2<sup>1024</sup>나 -2<sup>1024</sup>라면, 오류를 반환합니다.</p>
      </li><li data-md="">
-      <p>Return <var>rounded-value</var>.</p>
+      <p><var>rounded-value</var>를 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.4.4" id="percentages-and-dimensions"><span class="secno">2.4.4.4. </span><span class="content">Percentages and lengths</span><a class="self-link" href="infrastructure.html#percentages-and-dimensions"></a></h5>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="rules-for-parsing-dimension-values">rules for parsing dimension values</dfn> are as given in the following algorithm. When
-  invoked, the steps must be followed in the order given, aborting at the first step that returns
-  a value. This algorithm will return either a number greater than or equal to 0.0, or an error;
-  if a number is returned, then it is further categorized as either a percentage or a length.</p>
+    <h5 class="heading settled" data-level="2.4.4.4" id="percentages-and-dimensions"><span class="secno">2.4.4.4. </span><span class="content">백분율과 길이</span><a class="self-link" href="infrastructure.html#percentages-and-dimensions"></a></h5>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="rules for parsing dimension values" data-noexport="" id="rules-for-parsing-dimension-values">치수 값 해석에 대한 규칙</dfn>은 다음 알고리즘에 When
+  주어진 것과 같습니다. 이 알고리즘이 호출 될 때, 단계는 값을 반환하는 첫 번째 단계에서 중단하여, 
+  주어진 순서에 따라야(must) 합니다. 이 알고리즘은 0.0 이상의 숫자나 오류를 반환할 것입니다.
+  수가 반환된다면, 백분율이나 길이와 같이 좀 더 세분화 됩니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-  of the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#skip-whitespace" id="ref-for-skip-whitespace-3">Skip whitespace</a>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#skip-whitespace" id="ref-for-skip-whitespace-3">여백을 건너뜁니다</a>.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is past the end of <var>input</var>, return an error.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.</p>
      </li><li data-md="">
-      <p>If the character indicated by <var>position</var> is a U+002B PLUS SIGN character (+),
-  advance <var>position</var> to the next character.</p>
+      <p><var>position</var>에 의해 가리켜진 문자가 U+002B PLUS 부호 문자 (+)라면, <var>position</var>을
+  다음 문자로 전진시킵니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is past the end of <var>input</var>, return an error.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.</p>
      </li><li data-md="">
-      <p>If the character indicated by <var>position</var> is not an <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-16">ASCII digit</a>, then return
-  an error.</p>
+      <p><var>position</var>에 의해 가리켜진 문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-16">ASCII 숫자</a>가 아니라면, 오류를
+  반환합니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-6">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-17">ASCII digits</a>, and interpret the
-  resulting sequence as a base-ten integer. Let <var>value</var> be that number.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-17">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-6">일련의 문자를 수집</a>하고,
+  10 진수 정수로 결과로 나온 수열을 해석합니다. <var>value</var>를 그 수로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is past the end of <var>input</var>, return <var>value</var> as a
-  length.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 길이로서 <var>value</var>를 반환합니다.</p>
      </li><li data-md="">
-      <p>If the character indicated by <var>position</var> is a U+002E FULL STOP character (.):</p>
+      <p><var>position</var>에 의해 가리켜진 문자가 U+002E 마침표 문자 (.)라면:</p>
       <ol>
        <li data-md="">
-        <p>Advance <var>position</var> to the next character.</p>
+        <p><var>position</var>를 다음 문자로 전진시킵니다.</p>
        </li><li data-md="">
-        <p>If <var>position</var> is past the end of <var>input</var>, or if the character indicated
-  by <var>position</var> is not an <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-18">ASCII digit</a>, then return <var>value</var> as a
-  length.</p>
+        <p><var>position</var>이 <var>input</var>의 끝을 지났거나, <var>position</var>에 의해 가리켜진
+  문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-18">ASCII 숫자</a>가 아니라면, 길이로서 <var>value</var>를 반환합니다.</p>
        </li><li data-md="">
-        <p>Let <var>divisor</var> have the value 1.</p>
+        <p><var>divisor</var>가 값 1을 가지게 합니다.</p>
        </li><li data-md="">
-        <p><i>Fraction loop</i>: Multiply <var>divisor</var> by ten.</p>
+        <p><i>분수 반복</i>: <var>divisor</var>에 10을 곱합니다.</p>
        </li><li data-md="">
-        <p>Add the value of the character indicated by <var>position</var>, interpreted as a
-  base-ten digit (0..9) and divided by <var>divisor</var>, to <var>value</var>.</p>
+        <p><var>position</var>에 의해 가리켜진 문자의 값을 10진수 숫자 (0..9)로 해석하고 <var>divisor</var>로 나누어진 값을 <var>value</var>에 추가합니다.</p>
        </li><li data-md="">
-        <p>Advance <var>position</var> to the next character.</p>
+        <p><var>position</var>을 다음 문자로 전진시킵니다.</p>
        </li><li data-md="">
-        <p>If <var>position</var> is past the end of <var>input</var>, then return <var>value</var> as a length.</p>
+        <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 길이로서 <var>value</var>를 반환합니다.</p>
        </li><li data-md="">
-        <p>If the character indicated by <var>position</var> is an <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-19">ASCII digit</a>, return to the
-  step labeled <i>fraction loop</i> in these substeps.</p>
+        <p><var>position</var>에 의해 가리켜진 문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-19">ASCII 숫자</a>라면, 이 하위
+  단계 내의 <i>분수 반복</i>으로 라벨링 된 단계로 건너뜁니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>If <var>position</var> is past the end of <var>input</var>, return <var>value</var> as a
-  length.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 길이로서 <var>value</var>를 반환합니다.</p>
      </li><li data-md="">
-      <p>If the character indicated by <var>position</var> is a U+0025 PERCENT SIGN character (%),
-  return <var>value</var> as a percentage.</p>
+      <p><var>position</var>에 의해 가리켜진 문자가 U+0025 PERCENT 부호 문자 (%)라면, 백분율로서 <var>value</var>를 반환합니다.</p>
      </li><li data-md="">
-      <p>Return <var>value</var> as a length.</p>
+      <p>길이로서 <var>value</var>를 반환합니다.</p>
     </li></ol>
     <h5 class="heading settled" data-level="2.4.4.5" id="non-zero-percentages-and-lengths"><span class="secno">2.4.4.5. </span><span class="content">Non-zero percentages and lengths</span><a class="self-link" href="infrastructure.html#non-zero-percentages-and-lengths"></a></h5>
     <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="rules-for-parsing-non-zero-dimension-values">rules for parsing non-zero dimension values</dfn> are as given in the following
@@ -7433,9 +7421,9 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="infrastructure.html#ref-for-ascii-digits-1">2.4.1. 공통 해석기 표현</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-2">2.4.4.1. 부호있는 정수</a> <a href="infrastructure.html#ref-for-ascii-digits-3">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-4">(3)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-5">2.4.4.2. Non-negative integers</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-6">2.4.4.3. Floating-point numbers</a> <a href="infrastructure.html#ref-for-ascii-digits-7">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-8">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-9">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-10">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-11">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-12">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-13">(8)</a> <a href="infrastructure.html#ref-for-ascii-digits-14">(9)</a> <a href="infrastructure.html#ref-for-ascii-digits-15">(10)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-16">2.4.4.4. Percentages and lengths</a> <a href="infrastructure.html#ref-for-ascii-digits-17">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-18">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-19">(4)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-5">2.4.4.2. 음이 아닌 정수</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-6">2.4.4.3. 부동 소수점 수</a> <a href="infrastructure.html#ref-for-ascii-digits-7">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-8">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-9">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-10">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-11">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-12">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-13">(8)</a> <a href="infrastructure.html#ref-for-ascii-digits-14">(9)</a> <a href="infrastructure.html#ref-for-ascii-digits-15">(10)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-16">2.4.4.4. 백분율과 길이</a> <a href="infrastructure.html#ref-for-ascii-digits-17">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-18">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-19">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-20">2.4.4.6. Lists of floating-point numbers</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-21">2.4.4.7. Lists of dimensions</a> <a href="infrastructure.html#ref-for-ascii-digits-22">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-23">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-24">2.4.5. Dates and times</a>
@@ -7492,8 +7480,8 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-1">2.4.1. 공통 해석기 표현</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-3">2.4.4.1. 부호있는 정수</a>
-    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-4">2.4.4.3. Floating-point numbers</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-5">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-6">2.4.4.4. Percentages and lengths</a>
+    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-4">2.4.4.3. 부동 소수점 수</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-5">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-6">2.4.4.4. 백분율과 길이</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-7">2.4.4.6. Lists of floating-point numbers</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-8">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-9">(3)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-10">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-11">2.4.4.7. Lists of dimensions</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-12">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-13">2.4.5.1. Months</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-14">(2)</a>
@@ -7515,8 +7503,8 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#skip-whitespace">#skip-whitespace</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-skip-whitespace-1">2.4.4.1. 부호있는 정수</a>
-    </li><li><a href="infrastructure.html#ref-for-skip-whitespace-2">2.4.4.3. Floating-point numbers</a>
-    </li><li><a href="infrastructure.html#ref-for-skip-whitespace-3">2.4.4.4. Percentages and lengths</a>
+    </li><li><a href="infrastructure.html#ref-for-skip-whitespace-2">2.4.4.3. 부동 소수점 수</a>
+    </li><li><a href="infrastructure.html#ref-for-skip-whitespace-3">2.4.4.4. 백분율과 길이</a>
     </li><li><a href="infrastructure.html#ref-for-skip-whitespace-4">2.4.4.7. Lists of dimensions</a>
     </li><li><a href="infrastructure.html#ref-for-skip-whitespace-5">2.4.5.9. Durations</a> <a href="infrastructure.html#ref-for-skip-whitespace-6">(2)</a> <a href="infrastructure.html#ref-for-skip-whitespace-7">(3)</a> <a href="infrastructure.html#ref-for-skip-whitespace-8">(4)</a> <a href="infrastructure.html#ref-for-skip-whitespace-9">(5)</a> <a href="infrastructure.html#ref-for-skip-whitespace-10">(6)</a>
     </li><li><a href="infrastructure.html#ref-for-skip-whitespace-11">2.4.7. Space-separated tokens</a> <a href="infrastructure.html#ref-for-skip-whitespace-12">(2)</a>
@@ -7636,7 +7624,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#parse-token-as-an-integer">#parse-token-as-an-integer</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-parse-token-as-an-integer-1">1.7.1. 이 명세를 읽는 방법</a>
-    </li><li><a href="infrastructure.html#ref-for-parse-token-as-an-integer-2">2.4.4.2. Non-negative integers</a>
+    </li><li><a href="infrastructure.html#ref-for-parse-token-as-an-integer-2">2.4.4.2. 음이 아닌 정수</a>
     </li><li><a href="infrastructure.html#ref-for-parse-token-as-an-integer-3">2.7.1. Reflecting content attributes in IDL attributes</a>
     </li><li><a href="grouping-content.html#ref-for-parse-token-as-an-integer-4">4.4.5. The ol element</a>
     </li><li><a href="grouping-content.html#ref-for-parse-token-as-an-integer-5">4.4.7. The li element</a>
@@ -7648,7 +7636,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="valid-non-negative-integer">
    <b><a href="infrastructure.html#valid-non-negative-integer">#valid-non-negative-integer</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-valid-non-negative-integer-1">2.4.4.2. Non-negative integers</a>
+    <li><a href="infrastructure.html#ref-for-valid-non-negative-integer-1">2.4.4.2. 음이 아닌 정수</a>
     </li><li><a href="infrastructure.html#ref-for-valid-non-negative-integer-2">2.7.1. Reflecting content attributes in IDL attributes</a> <a href="infrastructure.html#ref-for-valid-non-negative-integer-3">(2)</a> <a href="infrastructure.html#ref-for-valid-non-negative-integer-4">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-valid-non-negative-integer-5">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-valid-non-negative-integer-6">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-valid-non-negative-integer-7">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-valid-non-negative-integer-8">(2)</a> <a href="semantics-embedded-content.html#ref-for-valid-non-negative-integer-9">(3)</a>
@@ -7692,7 +7680,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="valid-floating-point-number">
    <b><a href="infrastructure.html#valid-floating-point-number">#valid-floating-point-number</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-valid-floating-point-number-1">2.4.4.3. Floating-point numbers</a> <a href="infrastructure.html#ref-for-valid-floating-point-number-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-valid-floating-point-number-1">2.4.4.3. 부동 소수점 수</a> <a href="infrastructure.html#ref-for-valid-floating-point-number-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-valid-floating-point-number-3">2.4.4.6. Lists of floating-point numbers</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-valid-floating-point-number-4">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-valid-floating-point-number-5">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-valid-floating-point-number-6">4.10.5.1.12. Number state (type=number)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-7">(2)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-8">(3)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-9">(4)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-10">(5)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-11">(6)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-12">(7)</a>
