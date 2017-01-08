@@ -1784,182 +1784,168 @@
       뺀 결과를 반환합니다.
 
 
-<h5 id="non-negative-integers">Non-negative integers</h5>
+<h5 id="non-negative-integers">음이 아닌 정수</h5>
 
-  A string is a <dfn>valid non-negative integer</dfn> if it consists of one or more
-  <a>ASCII digits</a>.
+  문자열이 하나 이상의 <a lt="ASCII digits">ASCII 숫자</a>로 구성된다면 
+  <dfn lt="valid non-negative integer">유효한 음이 아닌 정수</dfn>입니다.
 
-  A <a>valid non-negative integer</a> represents the number that is represented in base ten by that
-  string of digits.
+  <a lt="valid non-negative integer">유효한 음이 아닌 정수</a>는 그 숫자의 문자열에 의해 10 진수로 
+  나타내어지는 숫자를 나타냅니다.
 
-  The <dfn lt="parse that attribute's value|rules for parsing non-negative integers">rules for parsing non-negative integers</dfn> are as given in the following algorithm.
-  When invoked, the steps must be followed in the order given, aborting at the first step that
-  returns a value. This algorithm will return either zero, a positive integer, or an error.
+  <dfn lt="parse that attribute's value|rules for parsing non-negative integers">음이 아닌 정수 해석에 대한 규칙</dfn>은 다음 알고리즘에 주어진 것과 같습니다.
+  이 알고리즘이 호출될 때, 단계는 값을 반환하는 첫 번째 단계에서 중단하여, 주어진 순서에 따라야(must) 
+  합니다. 이 알고리즘은 0이나 양의 정수, 혹은 오류를 반환할 것입니다.
 
-  1. Let <var>input</var> be the string being parsed.
-  2. Let <var>value</var> be the result of parsing <var>input</var> using the
-      <a>rules for parsing integers</a>.
-  3. If <var>value</var> is an error, return an error.
-  4. If <var>value</var> is less than zero, return an error.
-  5. Return <var>value</var>.
+  1. <var>input</var>을 해석된 문자열로 둡니다.
+  2. <var>value</var>를 <a lt="rules for parsing integers">정수 해석에 대한 규칙</a>을 사용하여 
+      <var>input</var>을 해석한 결과로 둡니다.
+  3. <var>value</var>가 오류라면, 오류를 반환합니다.
+  4. <var>value</var>가 0보다 작다면, 오류를 반환합니다.
+  5. <var>value</var>를 반환합니다.
 
-<h5 id="floating-point-numbers">Floating-point numbers</h5>
+<h5 id="floating-point-numbers">부동 소수점 수</h5>
 
-  A string is a <dfn>valid floating-point number</dfn> if it consists of:
+  문자열이 다음으로 구성된다면 <dfn lt="valid floating-point number">유효한 부동소수점 수</dfn>입니다:
 
-  1. Optionally, a U+002D HYPHEN-MINUS character (-).
-  2. One or both of the following, in the given order:
-      1. A series of one or more <a>ASCII digits</a>.
-      2. Both of the following, in the given order:
-          1. A single U+002E FULL STOP character (.).
-          2. A series of one or more <a>ASCII digits</a>.
-  3. Optionally:
-      1. Either a U+0065 LATIN SMALL LETTER E character (e) or a U+0045 LATIN CAPITAL LETTER E
-          character (E).
-      2. Optionally, a U+002D HYPHEN-MINUS character (-) or U+002B PLUS SIGN character (+).
-      3. A series of one or more <a>ASCII digits</a>.
+  1. 선택적으로, U+002D HYPHEN-MINUS 문자 (-).
+  2. 주어진 순서에 따라, 다음 중 하나 혹은 모두:
+      1. 일련의 하나 이상의 <a lt="ASCII digits">ASCII 숫자</a>.
+      2. 주어진 순서에 따라 다음 둘 모두:
+          1. 단일 U+002E 마침표 문자 (.).
+          2. 일련의 하나 이상의 <a lt="ASCII digits">ASCII 숫자</a>.
+  3. 선택적으로:
+      1. U+0065 라틴 소문자 E (e) 또는 U+0045 라틴 대문자 E (E).
+      2. 선택적으로, U+002D HYPHEN-MINUS 문자 (-) 또는 U+002B PLUS 부호 문자 (+).
+      3. 일련의 하나 이상의 <a lt="ASCII digits">ASCII 숫자</a>.
 
-  A <a>valid floating-point number</a> represents the number obtained by multiplying the significand
-  by ten raised to the power of the exponent, where the significand is the first number, interpreted
-  as base ten (including the decimal point and the number after the decimal point, if any, and
-  interpreting the significand as a negative number if the whole string starts with a U+002D
-  HYPHEN-MINUS character (-) and the number is not zero), and where the exponent is the number after
-  the E, if any (interpreted as a negative number if there is a U+002D HYPHEN-MINUS character (-)
-  between the E and the number and the number is not zero, or else ignoring a U+002B PLUS SIGN
-  character (+) between the E and the number if there is one). If there is no E, then the exponent
-  is treated as zero.
+  <a lt="valid floating-point number">유효한 부동소수점 수</a>는 유효숫자에 10의 지수의 거듭 제곱과 
+  곱하여 얻어진 숫자를 나타내고, 여기서 유효숫자는 10진수로 해석되는 (소수점과 소수점 이후 숫자가
+  있다면 이를 포함하여, 그리고 전체 숫자가 U+002D HYPHEN-MINUS 문자 (-)로 시작하고 숫자가 0이 아니라면 
+  음수로서 유효숫자를 해석하여) 첫번째 숫자이고, 지수는 E 이후 숫자가 있다면 그 숫자 (E와 숫자 사이에 
+  U+002D HYPHEN-MINUS (-) 문자가 있고 숫자가 0이 아니라면 음수로 해석되거나, E와 숫자 사이에 U+002B
+  PLUS 부호 문자가 있다면 이를 무시하여)입니다. E가 없다면 지수는 0으로 간주됩니다.
 
-  <p class="note">The Infinity and Not-a-Number (NaN) values are not <a>valid floating-point numbers</a>.</p>
+  <p class="note">Infinity와 Not-a-Number (NaN) 값은 <a lt="valid floating-point numbers">유효한 부동소수점 수</a>가 아닙니다.</p>
 
-  The <dfn lt="best floating-point number">best representation of the number <var>n</var> as a floating-point number</dfn> is the
-  string obtained from running ToString(<var>n</var>). The abstract operation ToString is not
-  uniquely determined. When there are multiple possible strings that could be obtained from ToString
-  for a particular value, the user agent must always return the same string for that value (though
-  it may differ from the value used by other user agents).
+  <dfn lt="best floating-point number">부동 소수점 수로서 숫자 <var>n</var>의 가장 잘 표현된 표현</dfn>은 
+  ToString(<var>n</var>)을 수행하여 얻어진 문자열입니다. 추상 연산 ToString은 고유하게 결정되지 않습니다.
+  특정 값에 대해 ToString에서 얻어질 수 있는 가능한 여러 문자열이 있는 경우, 유저 에이전트는 항상 그
+  값에 대한 동일한 문자열을(다른 유저 에이전트에 의해 사용될 수 있는 값과 다를 수 있지만) 반환해야(must) 
+  합니다.
 
-  The <dfn>rules for parsing floating-point number values</dfn> are as given in the following
-  algorithm. This algorithm must be aborted at the first step that returns something. This
-  algorithm will return either a number or an error.
+  <dfn lt="rules for parsing floating-point number values">부동 소수점 수 값 해석에 대한 규칙</dfn>은 다음 알고리즘에 주어진 것과 같습니다.
+  이 알고리즘은 무언가를 반환하는 첫 번째 단계에서 중단되어야(must) 합니다. 이 알고리즘은 숫자나 
+  오류를 반환할 것입니다.
 
-  1. Let <var>input</var> be the string being parsed.
-  2. Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-      of the string.
-  3. Let <var>value</var> have the value 1.
-  4. Let <var>divisor</var> have the value 1.
-  5. Let <var>exponent</var> have the value 1.
-  6. <a>Skip whitespace</a>.
-  7. If <var>position</var> is past the end of <var>input</var>, return an error.
-  8. If the character indicated by <var>position</var> is a U+002D HYPHEN-MINUS character (-):
-      1. Change <var>value</var> and <var>divisor</var> to -1.
-      2. Advance <var>position</var> to the next character.
-      3. If <var>position</var> is past the end of <var>input</var>, return an error.
+   1. <var>input</var>을 해석되는 문자열로 둡니다.
+  2. <var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.
+  3. <var>value</var>가 값 1을 가지게 합니다.
+  4. <var>divisor</var>가 값 1을 가지게 합니다.
+  5. <var>exponent</var>가 값 1을 가지게 합니다.
+  6. <a lt="Skip whitespace">여백을 건너뜁니다</a>.
+  7. <var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.
+  8. <var>position</var>에 의해 가리켜진 문자가 U+002D HYPHEN-MINUS 문자 (-) 라면:
+      1. <var>value</var>와 <var>divisor</var>를 -1로 변경합니다.
+      2. <var>position</var>을 다음 문자로 전진시킵니다.
+      3. <var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.
 
-      Otherwise, if the character indicated by <var>position</var> (the first character) is a
-      U+002B PLUS SIGN character (+):
+      그렇지 않고, <var>position</var>에 의해 가리켜진 문자(첫 번째 문자)가 U+002B PLUS 부호 문자 (+)
+      라면:
 
-      1. Advance <var>position</var> to the next character. (The "<code>+</code>" is ignored, but
-          it is not conforming.)
-      2. If <var>position</var> is past the end of <var>input</var>, return an error.
+      1. <var>position</var>을 다음 문자로 전진시킵니다. ("<code>+</code>"는 무시되지만, 이는 부적합
+          한 것입니다.)
+      2. <var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.
 
-  9. If the character indicated by <var>position</var> is a U+002E FULL STOP (.), and that is not
-      the last character in <var>input</var>, and the character after the character indicated by
-      <var>position</var> is an <a>ASCII digit</a>, then set
-      <var>value</var> to zero and jump to the step labeled <i>fraction</i>.
-  10. If the character indicated by <var>position</var> is not an <a>ASCII digit</a>, then return
-      an error.
-  11. <a>Collect a sequence of characters</a> that are <a>ASCII digits</a>, and interpret the
-      resulting sequence as a base-ten integer. Multiply <var>value</var> by that integer.
-  12. If <var>position</var> is past the end of <var>input</var>, jump to the step labeled
-      <i>conversion</i>.
-  13. <i>Fraction</i>: If the character indicated by <var>position</var> is a U+002E FULL STOP
-      (.), run these substeps:
-      1. Advance <var>position</var> to the next character.
-      2. If <var>position</var> is past the end of <var>input</var>, or if the character indicated
-          by <var>position</var> is not an <a>ASCII digit</a>, U+0065 LATIN SMALL LETTER E (e), or
-          U+0045 LATIN CAPITAL LETTER E (E), then jump to the step labeled <i>conversion</i>.
-      3. If the character indicated by <var>position</var> is a U+0065 LATIN SMALL LETTER E
-          character (e) or a U+0045 LATIN CAPITAL LETTER E character (E), skip the remainder of
-          these substeps.
-      4. <i>Fraction loop</i>: Multiply <var>divisor</var> by ten.
-      5. Add the value of the character indicated by <var>position</var>, interpreted as a
-          base-ten digit (0..9) and divided by <var>divisor</var>, to <var>value</var>.
-      6. Advance <var>position</var> to the next character.
-      7. If <var>position</var> is past the end of <var>input</var>, then jump to the step labeled
-          <i>conversion</i>.
-      8. If the character indicated by <var>position</var> is an <a>ASCII digit</a>, jump back to
-          the step labeled <i>fraction loop</i> in these substeps.
-  14. If the character indicated by <var>position</var> is a U+0065 LATIN SMALL LETTER E character
-      (e) or a U+0045 LATIN CAPITAL LETTER E character (E), run these substeps:
-      1. Advance <var>position</var> to the next character.
-      2. If <var>position</var> is past the end of <var>input</var>, then jump to the step labeled
-          <i>conversion</i>.
-      3. If the character indicated by <var>position</var> is a U+002D HYPHEN-MINUS character (-):
-          1. Change <var>exponent</var> to -1.
-          2. Advance <var>position</var> to the next character.
-          3. If <var>position</var> is past the end of <var>input</var>, then jump to the step
-              labeled <i>conversion</i>.
+  9. <var>position</var>에 의해 가리켜진 문자가 U+002E 마침표 문자 (.)이고, 그 문자가 <var>input</var>의
+      마지막 문자가 아니며, <var>position</var>에 의해 가리켜진 문자 이후 문자가 
+      <a lt="ASCII digit">ASCII 숫자</a>라면, <var>value</var>를 0으로 설정하고 <i>분수</i>로 라벨링
+      된 단계로 건너뜁니다.
+  10. <var>position</var>에 의해 가리켜진 문자가 <a lt="ASCII digit">ASCII 숫자</a>가 아니라면, 오류를
+      반환합니다.
+  11. <a lt="ASCII digits">ASCII 숫자</a>인 <a lt="Collect a sequence of characters">일련의 문자를 수집</a>하고,
+      10 진수 정수로 결과로 나온 수열을 해석합니다. 그 정수에 <var>value</var>를 곱합니다.
+  12. <var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로 
+      건너뜁니다.
+  13. <i>분수 </i>: <var>position</var>에 의해 가리켜진 문자가 U+002E 마침표 문자 (.) 라면, 이 하위  
+      단계들을 수행합니다:
+      1. <var>position</var>을 다음 문자로 전진시킵니다.
+      2. <var>position</var>이 <var>input</var>의 끝을 지났거나, <var>position</var>에 의해 가리켜진 
+          문자가 <a lt="ASCII digit">ASCII 숫자</a>, 혹은 U+0065 라틴 소문자 E (e), 혹은 U+0045 라틴 
+          대문자 E (E)가 아니라면, <i>변환</i>으로 라벨링 된 단계로 건너뜁니다.
+      3.  <var>position</var>에 의해 가리켜진 문자가 U+0065 라틴 소문자 E (e) 또는 U+0045 라틴 대문자
+          E (E)라면, 이 하위 단계들의 나머지를 건너뜁니다.
+      4. <i>분수 반복</i>: <var>divisor</var>에 10을 곱합니다.
+      5. <var>position</var>에 의해 가리켜진 문자의 값을 10진수 숫자 (0..9)로 해석하고 
+          <var>divisor</var>로 나누어진 값을 <var>value</var>에 추가합니다.
+      6. <var>position</var>을 다음 문자로 전진시킵니다.
+      7. <var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로 
+          건너뜁니다.
+      8. <var>position</var>에 의해 가리켜진 문자가 <a lt="ASCII digit">ASCII 숫자</a>라면, 이 하위 
+          단계 내의 <i>분수 반복</i>으로 라벨링 된 단계로 건너뜁니다.
+  14. <var>position</var>에 의해 가리켜진 문자가 U+0065 라틴 소문자 E (e) 혹은 U+0045 라틴 대문자 E 
+      (E)라면, 이 하위 단계들을 수행합니다:
+      1. <var>position</var>을 다음 문자로 전진시킵니다.
+      2. <var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로 
+          건너뜁니다.
+      3. <var>position</var>에 의해 가리켜진 문자가 U+002D HYPHEN-MINUS 문자 (-)라면:
+          1. <var>exponent</var>를 -1로 바꿉니다.
+          2. <var>position</var>을 다음 문자로 전진시킵니다.
+          3. <var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로 
+              건너뜁니다.
 
-          Otherwise, if the character indicated by <var>position</var> is a U+002B PLUS SIGN character
-          (+):
+          그렇지 않고, <var>position</var>에 의해 가리켜진 문자가 U+002B PLUS 부호 문자(+) 라면:
 
-          1. Advance <var>position</var> to the next character.
-          2. If <var>position</var> is past the end of <var>input</var>, then jump to the step
-              labeled <i>conversion</i>.
-      4. If the character indicated by <var>position</var> is not an <a>ASCII digit</a>, then jump
-          to the step labeled <i>conversion</i>.
-      5. <a>Collect a sequence of characters</a> that are <a>ASCII digits</a>, and interpret the
-          resulting sequence as a base-ten integer. Multiply <var>exponent</var> by that integer.
-      6. Multiply <var>value</var> by ten raised to the <var>exponent</var>th power.
-  15. <i>Conversion</i>: Let <var>S</var> be the set of finite IEEE 754 double-precision
-      floating-point values except -0, but with two special values added: 2<sup>1024</sup>
-      and -2<sup>1024</sup>.
-  16. Let <var>rounded-value</var> be the number in <var>S</var> that is closest to
-      <var>value</var>, selecting the number with an even significand if there are two equally
-      close values. (The two special values 2<sup>1024</sup> and -2<sup>1024</sup> are
-      considered to have even significands for this purpose.)
-  17. If <var>rounded-value</var> is 2<sup>1024</sup> or -2<sup>1024</sup>, return an error.
-  18. Return <var>rounded-value</var>.
+          1. <var>position</var>을 다음 문자로 전진시킵니다.
+          2. <var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로 
+              건너뜁니다.
+      4. <var>position</var>에 의해 가리켜진 문자가 <a lt="ASCII digit">ASCII 숫자</a>가 아니라면, 
+          <i>변환</i>으로 라벨링 된 단계로 건너뜁니다.
+      5. <a lt="ASCII digits">ASCII 숫자</a>인 <a lt="Collect a sequence of characters">일련의 문자를 수집</a>하고, and interpret the
+          10 진수 정수로 결과로 나온 수열을 해석합니다. 그 정수에  <var>exponent</var>를 곱합니다.
+      6. 10의 <var>exponent</var>제곱에 <var>value</var>를 곱합니다.
+  15. <i>변환</i>: <var>S</var>를 0을 제외한 64 비트 배정도 부동 소수점 값이고, 두 특별한 값 2<sup>1024</sup>과
+      -2<sup>1024</sup>를 포함한 IEEE 754의 집합으로 둡니다.
+  16. <var>rounded-value</var>를, 두 개의 동일하게 가까운 값이 있다면 짝수 유효숫자를 선택하여, 
+      <var>value</var>에 가장 가까운 <var>S</var> 내의 숫자로 둡니다. (이 목적에 대해 두 개의 특별한 
+      값 2<sup>1024</sup>과 -2<sup>1024</sup>는 짝수 값을 가지는 것으로 간주됩니다.)
+  17. <var>rounded-value</var>가 2<sup>1024</sup>나 -2<sup>1024</sup>라면, 오류를 반환합니다.
+  18. <var>rounded-value</var>를 반환합니다.
 
-<h5 id="percentages-and-dimensions">Percentages and lengths</h5>
+<h5 id="percentages-and-dimensions">백분율과 길이</h5>
 
-  The <dfn>rules for parsing dimension values</dfn> are as given in the following algorithm. When
-  invoked, the steps must be followed in the order given, aborting at the first step that returns
-  a value. This algorithm will return either a number greater than or equal to 0.0, or an error;
-  if a number is returned, then it is further categorized as either a percentage or a length.
+  <dfn lt="rules for parsing dimension values">치수 값 해석에 대한 규칙</dfn>은 다음 알고리즘에 When
+  주어진 것과 같습니다. 이 알고리즘이 호출 될 때, 단계는 값을 반환하는 첫 번째 단계에서 중단하여, 
+  주어진 순서에 따라야(must) 합니다. 이 알고리즘은 0.0 이상의 숫자나 오류를 반환할 것입니다.
+  수가 반환된다면, 백분율이나 길이와 같이 좀 더 세분화 됩니다.
 
-  1. Let <var>input</var> be the string being parsed.
-  2. Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-      of the string.
-  3. <a>Skip whitespace</a>.
-  4. If <var>position</var> is past the end of <var>input</var>, return an error.
-  5. If the character indicated by <var>position</var> is a U+002B PLUS SIGN character (+),
-      advance <var>position</var> to the next character.
-  6. If <var>position</var> is past the end of <var>input</var>, return an error.
-  7. If the character indicated by <var>position</var> is not an <a>ASCII digit</a>, then return
-      an error.
-  8. <a>Collect a sequence of characters</a> that are <a>ASCII digits</a>, and interpret the
-      resulting sequence as a base-ten integer. Let <var>value</var> be that number.
-  9. If <var>position</var> is past the end of <var>input</var>, return <var>value</var> as a
-      length.
-  10. If the character indicated by <var>position</var> is a U+002E FULL STOP character (.):
-      1. Advance <var>position</var> to the next character.
-      2. If <var>position</var> is past the end of <var>input</var>, or if the character indicated
-          by <var>position</var> is not an <a>ASCII digit</a>, then return <var>value</var> as a
-          length.
-      3. Let <var>divisor</var> have the value 1.
-      4. <i>Fraction loop</i>: Multiply <var>divisor</var> by ten.
-      5. Add the value of the character indicated by <var>position</var>, interpreted as a
-          base-ten digit (0..9) and divided by <var>divisor</var>, to <var>value</var>.
-      6. Advance <var>position</var> to the next character.
-      7. If <var>position</var> is past the end of <var>input</var>, then return <var>value</var>
-          as a length.
-      8. If the character indicated by <var>position</var> is an <a>ASCII digit</a>, return to the
-          step labeled <i>fraction loop</i> in these substeps.
-  11. If <var>position</var> is past the end of <var>input</var>, return <var>value</var> as a
-      length.
-  12. If the character indicated by <var>position</var> is a U+0025 PERCENT SIGN character (%),
-      return <var>value</var> as a percentage.
-  13. Return <var>value</var> as a length.
+  1. <var>input</var>을 해석되는 문자열로 둡니다.
+  2. <var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.
+  3. <a lt="Skip whitespace">여백을 건너뜁니다</a>.
+  4. <var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.
+  5. <var>position</var>에 의해 가리켜진 문자가 U+002B PLUS 부호 문자 (+)라면, <var>position</var>을
+      다음 문자로 전진시킵니다.
+  6. <var>position</var>이 <var>input</var>의 끝을 지났다면, 오류를 반환합니다.
+  7. <var>position</var>에 의해 가리켜진 문자가 <a lt="ASCII digit">ASCII 숫자</a>가 아니라면, 오류를
+      반환합니다.
+  8. <a lt="ASCII digits">ASCII 숫자</a>인 <a lt="Collect a sequence of characters">일련의 문자를 수집</a>하고,
+      10 진수 정수로 결과로 나온 수열을 해석합니다. <var>value</var>를 그 수로 둡니다.
+  9. <var>position</var>이 <var>input</var>의 끝을 지났다면, 길이로서 <var>value</var>를 반환합니다.
+  10. <var>position</var>에 의해 가리켜진 문자가 U+002E 마침표 문자 (.)라면:
+      1. <var>position</var>를 다음 문자로 전진시킵니다.
+      2. <var>position</var>이 <var>input</var>의 끝을 지났거나, <var>position</var>에 의해 가리켜진
+          문자가 <a lt="ASCII digits">ASCII 숫자</a>가 아니라면, 길이로서 <var>value</var>를 반환합니다.
+      3. <var>divisor</var>가 값 1을 가지게 합니다.
+      4. <i>분수 반복</i>: <var>divisor</var>에 10을 곱합니다.
+      5. <var>position</var>에 의해 가리켜진 문자의 값을 10진수 숫자 (0..9)로 해석하고 
+          <var>divisor</var>로 나누어진 값을 <var>value</var>에 추가합니다.
+      6. <var>position</var>을 다음 문자로 전진시킵니다.
+      7. <var>position</var>이 <var>input</var>의 끝을 지났다면, 길이로서 <var>value</var>를 반환합니다.
+      8. <var>position</var>에 의해 가리켜진 문자가 <a lt="ASCII digits">ASCII 숫자</a>라면, 이 하위 
+          단계 내의 <i>분수 반복</i>으로 라벨링 된 단계로 건너뜁니다.
+  11. <var>position</var>이 <var>input</var>의 끝을 지났다면, 길이로서 <var>value</var>를 반환합니다.
+  12. <var>position</var>에 의해 가리켜진 문자가 U+0025 PERCENT 부호 문자 (%)라면, 백분율로서 
+      <var>value</var>를 반환합니다.
+  13. 길이로서 <var>value</var>를 반환합니다.
 
 <h5 id="non-zero-percentages-and-lengths">Non-zero percentages and lengths</h5>
 
