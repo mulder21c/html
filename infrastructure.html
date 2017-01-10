@@ -1473,9 +1473,9 @@ pre.idl.highlight { color: #708090; }
           </li><li><a href="infrastructure.html#non-negative-integers"><span class="secno">2.4.4.2</span> <span class="content">음이 아닌 정수</span></a>
           </li><li><a href="infrastructure.html#floating-point-numbers"><span class="secno">2.4.4.3</span> <span class="content">부동 소수점 수</span></a>
           </li><li><a href="infrastructure.html#percentages-and-dimensions"><span class="secno">2.4.4.4</span> <span class="content">백분율과 길이</span></a>
-          </li><li><a href="infrastructure.html#non-zero-percentages-and-lengths"><span class="secno">2.4.4.5</span> <span class="content">Non-zero percentages and lengths</span></a>
-          </li><li><a href="infrastructure.html#lists-of-floating-point-numbers"><span class="secno">2.4.4.6</span> <span class="content">Lists of floating-point numbers</span></a>
-          </li><li><a href="infrastructure.html#lists-of-dimensions"><span class="secno">2.4.4.7</span> <span class="content">Lists of dimensions</span></a>
+          </li><li><a href="infrastructure.html#non-zero-percentages-and-lengths"><span class="secno">2.4.4.5</span> <span class="content">0이 아닌 백분율과 길이</span></a>
+          </li><li><a href="infrastructure.html#lists-of-floating-point-numbers"><span class="secno">2.4.4.6</span> <span class="content">부동 소수점 수 목록</span></a>
+          </li><li><a href="infrastructure.html#lists-of-dimensions"><span class="secno">2.4.4.7</span> <span class="content">치수 목록</span></a>
          </li></ol>
         </li><li>
          <a href="infrastructure.html#dates-and-times"><span class="secno">2.4.5</span> <span class="content">Dates and times</span></a>
@@ -3658,7 +3658,7 @@ pre.idl.highlight { color: #708090; }
       <p><var>rounded-value</var>를 반환합니다.</p>
     </li></ol>
     <h5 class="heading settled" data-level="2.4.4.4" id="percentages-and-dimensions"><span class="secno">2.4.4.4. </span><span class="content">백분율과 길이</span><a class="self-link" href="infrastructure.html#percentages-and-dimensions"></a></h5>
-    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="rules for parsing dimension values" data-noexport="" id="rules-for-parsing-dimension-values">치수 값 해석에 대한 규칙</dfn>은 다음 알고리즘에 When
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="rules for parsing dimension values" data-noexport="" id="rules-for-parsing-dimension-values">치수 값 해석에 대한 규칙</dfn>은 다음 알고리즘에
   주어진 것과 같습니다. 이 알고리즘이 호출 될 때, 단계는 값을 반환하는 첫 번째 단계에서 중단하여, 
   주어진 순서에 따라야(must) 합니다. 이 알고리즘은 0.0 이상의 숫자나 오류를 반환할 것입니다.
   수가 반환된다면, 백분율이나 길이와 같이 좀 더 세분화 됩니다.</p>
@@ -3713,131 +3713,125 @@ pre.idl.highlight { color: #708090; }
      </li><li data-md="">
       <p>길이로서 <var>value</var>를 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.4.5" id="non-zero-percentages-and-lengths"><span class="secno">2.4.4.5. </span><span class="content">Non-zero percentages and lengths</span><a class="self-link" href="infrastructure.html#non-zero-percentages-and-lengths"></a></h5>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="rules-for-parsing-non-zero-dimension-values">rules for parsing non-zero dimension values</dfn> are as given in the following
-  algorithm. When invoked, the steps must be followed in the order given, aborting at the first
-  step that returns a value. This algorithm will return either a number greater than 0.0, or an
-  error; if a number is returned, then it is further categorized as either a percentage or a
-  length.</p>
+    <h5 class="heading settled" data-level="2.4.4.5" id="non-zero-percentages-and-lengths"><span class="secno">2.4.4.5. </span><span class="content">0이 아닌 백분율과 길이</span><a class="self-link" href="infrastructure.html#non-zero-percentages-and-lengths"></a></h5>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="rules for parsing non-zero dimension values" data-noexport="" id="rules-for-parsing-non-zero-dimension-values">0이 아닌 치수 값 해석에 대한 규칙</dfn>은 다음 알고리즘에 주어진 것과 같습니다.
+  이 알고리즘이 호출 될 때, 단계는 값을 반환하는 첫 번째 단계에서 중단하여, 주어진 순서에 따라야(must) 
+  합니다. 이 알고리즘은 0.0 이상의 숫자나 오류를 반환할 것입니다. 수가 반환된다면, 백분율이나 길이와 
+  같이 좀 더 세분화 됩니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>value</var> be the result of parsing <var>input</var> using the <a data-link-type="dfn" href="infrastructure.html#rules-for-parsing-dimension-values" id="ref-for-rules-for-parsing-dimension-values-1">rules for parsing dimension values</a>.</p>
+      <p><var>value</var>를 <a data-link-type="dfn" href="infrastructure.html#rules-for-parsing-dimension-values" id="ref-for-rules-for-parsing-dimension-values-1">치수 값 해석에 대한 규칙</a>을
+  사용하여 <var>input</var>을 해석한 결과로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>value</var> is an error, return an error.</p>
+      <p><var>value</var>가 오류라면, 오류를 반환합니다.</p>
      </li><li data-md="">
-      <p>If <var>value</var> is zero, return an error.</p>
+      <p><var>value</var>가 0이라면, 오류를 반환합니다.</p>
      </li><li data-md="">
-      <p>If <var>value</var> is a percentage, return <var>value</var> as a percentage.</p>
+      <p><var>value</var>가 백분율이라면, <var>value</var>를 백분율로서 반환합니다.</p>
      </li><li data-md="">
-      <p>Return <var>value</var> as a length.</p>
+      <p><var>value</var>를 길이로서 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.4.6" id="lists-of-floating-point-numbers"><span class="secno">2.4.4.6. </span><span class="content">Lists of floating-point numbers</span><a class="self-link" href="infrastructure.html#lists-of-floating-point-numbers"></a></h5>
-    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-list-of-floating-point-numbers">valid list of floating-point numbers</dfn> is a number of <a data-link-type="dfn" href="infrastructure.html#valid-floating-point-number" id="ref-for-valid-floating-point-number-3">valid floating-point numbers</a> separated by U+002C COMMA characters, with no other characters
-  (e.g. no <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-5">space characters</a>). In addition, there might be restrictions on the number of
-  floating-point numbers that can be given, or on the range of values allowed.</p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="rules-for-parsing-a-list-of-floating-point-numbers">rules for parsing a list of floating-point numbers</dfn> are as follows:</p>
+    <h5 class="heading settled" data-level="2.4.4.6" id="lists-of-floating-point-numbers"><span class="secno">2.4.4.6. </span><span class="content">부동 소수점 수 목록</span><a class="self-link" href="infrastructure.html#lists-of-floating-point-numbers"></a></h5>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid list of floating-point numbers" data-noexport="" id="valid-list-of-floating-point-numbers">부동 소수점 수의 유효한 목록</dfn>은 다른 문자(예를
+  들어 <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-5">공백 문자</a>없이), U+002C 콤마 문자로 분리된 약간의 <a data-link-type="dfn" href="infrastructure.html#valid-floating-point-number" id="ref-for-valid-floating-point-number-3">유효한 부동 소수점 수</a>입니다. 또한, 주어질 수 있는 부동 
+  소수점 수의 개수 혹은 허용된 값의 범위에 제한이 있을 수 있습니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="rules for parsing a list of floating-point numbers" data-noexport="" id="rules-for-parsing-a-list-of-floating-point-numbers">부동 소수점 수 목록 해석에 대한 규칙</dfn>은 다음과 같습니다:</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start of
-  the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>numbers</var> be an initially empty list of floating-point numbers. This list will be
-  the result of this algorithm.</p>
+      <p><var>numbers</var>를 초기에 빈 부동 소수점 수 목록으로 둡니다. 이 목록은 이 알고리즘의 결과가
+  될 것입니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-7">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-6">space characters</a>, U+002C COMMA, or
-  U+003B SEMICOLON characters. This skips past any leading delimiters.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-6">공백 문자</a>, U+002C 콤마, U+003B 세미콜론 문자 인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-7">일련의 문자를 수집</a>합니다. 이것은 앞선 선행 구분자를 
+  건너뜁니다.</p>
      </li><li data-md="">
-      <p>While <var>position</var> is not past the end of <var>input</var>:</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나지 않은 경우:</p>
       <ol>
        <li data-md="">
-        <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-8">Collect a sequence of characters</a> that are not <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-7">space characters</a>, U+002C COMMA,
-  U+003B SEMICOLON, <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-20">ASCII digits</a>, U+002E FULL STOP, or U+002D HYPHEN-MINUS
-  characters. This skips past leading garbage.</p>
+        <p><a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-7">공백 문자</a>, U+002C 콤마, U+003B 세미콜론, <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-20">ASCII 숫자</a>,
+  U+002E 마침표, U+002D HYPHEN-MINUS 문자가 아닌 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-8">일련의 문자를 수집</a>합니다. 
+  이것은 앞선 선행 선행 가비지를 건너뜁니다.</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-9">Collect a sequence of characters</a> that are not <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-8">space characters</a>, U+002C COMMA,
-  or U+003B SEMICOLON characters, and let <var>unparsed number</var> be the result.</p>
+        <p><a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-8">공백 문자</a>, U+002C 콤마, U+003B 세미콜론 문자가 아닌 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-9">일련의 문자를 수집</a>하고, <var>unparsed number</var>를 
+  결과로 둡니다.</p>
        </li><li data-md="">
-        <p>Let <var>number</var> be the result of parsing <var>unparsed number</var> using the <a data-link-type="dfn" href="infrastructure.html#rules-for-parsing-floating-point-number-values" id="ref-for-rules-for-parsing-floating-point-number-values-1">rules for parsing floating-point number values</a>.</p>
+        <p><var>number</var>를 <a data-link-type="dfn" href="infrastructure.html#rules-for-parsing-floating-point-number-values" id="ref-for-rules-for-parsing-floating-point-number-values-1">부동 소수점 수 값 해석에 대한 규칙</a>을
+  사용하여 <var>unparsed number</var>를 해석한 결과로 둡니다.</p>
        </li><li data-md="">
-        <p>If <var>number</var> is an error, set <var>number</var> to zero.</p>
+        <p><var>number</var>가 오류라면, <var>number</var>을 0으로 설정합니다.</p>
        </li><li data-md="">
-        <p>Append <var>number</var> to <var>numbers</var>.</p>
+        <p><var>number</var>을 <var>numbers</var>에 첨부합니다.</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-10">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-9">space characters</a>, U+002C COMMA, or
-  U+003B SEMICOLON characters. This skips past the delimiter.</p>
+        <p><a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-9">공백 문자</a>, U+002C 콤마, U+003B 세미콜론 문자 인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-10">일련의 문자를 수집</a>합니다. 이것은 앞선 선행 구분자를 
+  건너뜁니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Return <var>numbers</var>.</p>
+      <p><var>numbers</var>를 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.4.7" id="lists-of-dimensions"><span class="secno">2.4.4.7. </span><span class="content">Lists of dimensions</span><a class="self-link" href="infrastructure.html#lists-of-dimensions"></a></h5>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="rules-for-parsing-a-list-of-dimensions">rules for parsing a list of dimensions</dfn> are as follows. These rules return a list
-  of zero or more pairs consisting of a number and a unit, the unit being one of <i>percentage</i>, <i>relative</i>, and <i>absolute</i>.</p>
+    <h5 class="heading settled" data-level="2.4.4.7" id="lists-of-dimensions"><span class="secno">2.4.4.7. </span><span class="content">치수 목록</span><a class="self-link" href="infrastructure.html#lists-of-dimensions"></a></h5>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="rules for parsing a list of dimensions" data-noexport="" id="rules-for-parsing-a-list-of-dimensions">치수 목록 해석에 대한 규칙</dfn>은 다음과 같습니다.
+  이 규칙들은 숫자와 단위로 구성된 0개 이상의 목록을 반환하고, 단위는 <i>percentage</i>, <i>relative</i>, <i>absolute</i>입니다.</p>
     <ol>
      <li data-md="">
-      <p>Let raw input be the string being parsed.</p>
+      <p><var>raw input</var>을 해석될 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>If the last character in <var>raw input</var> is a U+002C COMMA character (,), then remove
-  that character from <var>raw input</var>.</p>
+      <p><var>raw input</var> 내 마지막 문자가 U+002C 콤마 문자 (,) 라면, <var>raw input</var>에서 그
+  문자를 제거합니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#split-a-string-on-commas" id="ref-for-split-a-string-on-commas-2">Split the string <var>raw input</var> on commas</a>. Let <var>raw tokens</var> be the
-  resulting list of tokens.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#split-a-string-on-commas" id="ref-for-split-a-string-on-commas-2">콤마로 문자열 <var>raw input</var>를 분할</a>합니다. <var>raw tokens</var>를 결과 토큰 목록으로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>result</var> be an empty list of number/unit pairs.</p>
+      <p><var>result</var>을 숫자/단위 쌍의 빈 목록으로 둡니다.</p>
      </li><li data-md="">
-      <p>For each token in <var>raw tokens</var>, run the following substeps:</p>
+      <p><var>raw tokens</var> 내 각 토큰에 대해, 다음 하위 단계들을 수행합니다:</p>
       <ol>
        <li data-md="">
-        <p>Let <var>input</var> be the token.</p>
+        <p><var>input</var>을 토큰으로 둡니다.</p>
        </li><li data-md="">
-        <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the
-  start of the string.</p>
+        <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
        </li><li data-md="">
-        <p>Let <var>value</var> be the number 0.</p>
+        <p><var>value</var>를 숫자 0으로 둡니다.</p>
        </li><li data-md="">
-        <p>Let <var>unit</var> be <i>absolute</i>.</p>
+        <p><var>unit</var>을 <i>absolute</i>로 둡니다.</p>
        </li><li data-md="">
-        <p>If position is past the end of input, set unit to relative and jump to the last substep.</p>
+        <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 단위를 <i>relative</i>로 설정하고
+  마지막 하위단계로 건너뜁니다.</p>
        </li><li data-md="">
-        <p>If the character at <var>position</var> is an <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-21">ASCII digit</a>, <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-11">collect a sequence
-  of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-22">ASCII digits</a>, interpret the resulting sequence as an
-  integer in base ten, and increment <var>value</var> by that integer.</p>
+        <p><var>position</var>에 있는 문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-21">ASCII 숫자</a>라면, <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-22">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-11">일련의 문자를 수집</a>하고, 10진수 정수로서 결과로 
+  나온 수열을 해석하고, <var>value</var>를 그 정수만큼 증가시킵니다.</p>
        </li><li data-md="">
-        <p>If the character at <var>position</var> is a U+002E FULL STOP character (.), run these
-  substeps:</p>
+        <p><var>position</var>에 있는 문자가 U+002E 마침표 문자 (.) 라면, 이 하위 단계들을 수행합니다:</p>
         <ol>
          <li data-md="">
-          <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-12">Collect a sequence of characters</a> consisting of <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-10">space characters</a> and <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-23">ASCII digits</a>. Let <var>s</var> be the resulting sequence.</p>
+          <p><a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-10">공백 문자</a>와 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-23">ASCII 숫자</a>로 구성된 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-12">일련의 문자를 수집</a>합니다. <var>s</var>를 결과 수열로 둡니다.</p>
          </li><li data-md="">
-          <p>Remove all <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-11">space characters</a> in <var>s</var>.</p>
+          <p><var>s</var> 내 모든 <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-11">공백 문자</a>를 제거합니다.</p>
          </li><li data-md="">
-          <p>If <var>s</var> is not the empty string, run these subsubsteps:</p>
+          <p><var>s</var>가 빈 문자열이 아니라면, 이 하위 단계들을 수행합니다:</p>
           <ol>
            <li data-md="">
-            <p>Let <var>length</var> be the number of characters in <var>s</var> (after the
-  spaces were removed).</p>
+            <p><var>length</var>를 <var>s</var> 내 문자(공백이 제거된 이후)의 수로 둡니다.</p>
            </li><li data-md="">
-            <p>Let <var>fraction</var> be the result of interpreting <var>s</var> as a base-ten
-  integer, and then dividing that number by 10<sup><var>length</var></sup>.</p>
+            <p><var>fraction</var>을 10 진수 정수로 <var>s</var>를 해석하고, 그 수를
+  10<sup><var>length</var></sup>로 나눈 결과로 둡니다.</p>
            </li><li data-md="">
-            <p>Increment <var>value</var> by <var>fraction</var>.</p>
+            <p><var>value</var>를 <var>fraction</var> 만큼 증가시킵니다.</p>
           </li></ol>
         </li></ol>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="infrastructure.html#skip-whitespace" id="ref-for-skip-whitespace-4">Skip whitespace</a>.</p>
+        <p><a data-link-type="dfn" href="infrastructure.html#skip-whitespace" id="ref-for-skip-whitespace-4">여백을 건너뜁니다</a>.</p>
        </li><li data-md="">
-        <p>If the character at <var>position</var> is a U+0025 PERCENT SIGN character (%), then set <var>unit</var> to <i>percentage</i>.</p>
-        <p>Otherwise, if the character at <var>position</var> is a U+002A ASTERISK character (*),
-  then set <var>unit</var> to <i>relative</i>.</p>
+        <p><var>position</var>에 있는 문자가 U+0025 PERCENT 부호 문자 (%)라면, <var>unit</var>을 <i>percentage</i>로 설정합니다.</p>
+        <p>그렇지 않고, <var>position</var>에 있는 문자가 U+002A ASTERISK 문자 (*)라면, <var>unit</var>을 <i>relative</i>로 설정합니다.</p>
        </li><li data-md="">
-        <p>Add an entry to <var>result</var> consisting of the number given by <var>value</var> and
-  the unit given by <var>unit</var>.</p>
+        <p><var>value</var>에 의해 주어진 수와 <var>unit</var>에 의해 주어진 단위로 구성된 <var>result</var>에 항목을 추가합니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Return the list <var>result</var>.</p>
+      <p><var>result</var> 목록을 반환합니다.</p>
     </li></ol>
     <h4 class="heading settled" data-level="2.4.5" id="dates-and-times"><span class="secno">2.4.5. </span><span class="content">Dates and times</span><a class="self-link" href="infrastructure.html#dates-and-times"></a></h4>
     <div class="note" role="note">
@@ -7316,8 +7310,8 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="introduction.html#ref-for-space-characters-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="infrastructure.html#ref-for-space-characters-2">2.4.1. 공통 해석기 표현</a> <a href="infrastructure.html#ref-for-space-characters-3">(2)</a> <a href="infrastructure.html#ref-for-space-characters-4">(3)</a>
-    </li><li><a href="infrastructure.html#ref-for-space-characters-5">2.4.4.6. Lists of floating-point numbers</a> <a href="infrastructure.html#ref-for-space-characters-6">(2)</a> <a href="infrastructure.html#ref-for-space-characters-7">(3)</a> <a href="infrastructure.html#ref-for-space-characters-8">(4)</a> <a href="infrastructure.html#ref-for-space-characters-9">(5)</a>
-    </li><li><a href="infrastructure.html#ref-for-space-characters-10">2.4.4.7. Lists of dimensions</a> <a href="infrastructure.html#ref-for-space-characters-11">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-space-characters-5">2.4.4.6. 부동 소수점 수 목록</a> <a href="infrastructure.html#ref-for-space-characters-6">(2)</a> <a href="infrastructure.html#ref-for-space-characters-7">(3)</a> <a href="infrastructure.html#ref-for-space-characters-8">(4)</a> <a href="infrastructure.html#ref-for-space-characters-9">(5)</a>
+    </li><li><a href="infrastructure.html#ref-for-space-characters-10">2.4.4.7. 치수 목록</a> <a href="infrastructure.html#ref-for-space-characters-11">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-space-characters-12">2.4.5.9. Durations</a> <a href="infrastructure.html#ref-for-space-characters-13">(2)</a> <a href="infrastructure.html#ref-for-space-characters-14">(3)</a> <a href="infrastructure.html#ref-for-space-characters-15">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-space-characters-16">2.4.7. Space-separated tokens</a> <a href="infrastructure.html#ref-for-space-characters-17">(2)</a> <a href="infrastructure.html#ref-for-space-characters-18">(3)</a> <a href="infrastructure.html#ref-for-space-characters-19">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-space-characters-20">2.4.8. Comma-separated tokens</a> <a href="infrastructure.html#ref-for-space-characters-21">(2)</a>
@@ -7424,8 +7418,8 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-5">2.4.4.2. 음이 아닌 정수</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-6">2.4.4.3. 부동 소수점 수</a> <a href="infrastructure.html#ref-for-ascii-digits-7">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-8">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-9">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-10">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-11">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-12">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-13">(8)</a> <a href="infrastructure.html#ref-for-ascii-digits-14">(9)</a> <a href="infrastructure.html#ref-for-ascii-digits-15">(10)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-16">2.4.4.4. 백분율과 길이</a> <a href="infrastructure.html#ref-for-ascii-digits-17">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-18">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-19">(4)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-20">2.4.4.6. Lists of floating-point numbers</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-21">2.4.4.7. Lists of dimensions</a> <a href="infrastructure.html#ref-for-ascii-digits-22">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-23">(3)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-20">2.4.4.6. 부동 소수점 수 목록</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-21">2.4.4.7. 치수 목록</a> <a href="infrastructure.html#ref-for-ascii-digits-22">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-23">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-24">2.4.5. Dates and times</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-25">2.4.5.1. Months</a> <a href="infrastructure.html#ref-for-ascii-digits-26">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-27">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-28">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-29">2.4.5.2. Dates</a> <a href="infrastructure.html#ref-for-ascii-digits-30">(2)</a>
@@ -7482,8 +7476,8 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-3">2.4.4.1. 부호있는 정수</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-4">2.4.4.3. 부동 소수점 수</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-5">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-6">2.4.4.4. 백분율과 길이</a>
-    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-7">2.4.4.6. Lists of floating-point numbers</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-8">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-9">(3)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-10">(4)</a>
-    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-11">2.4.4.7. Lists of dimensions</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-12">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-7">2.4.4.6. 부동 소수점 수 목록</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-8">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-9">(3)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-10">(4)</a>
+    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-11">2.4.4.7. 치수 목록</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-12">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-13">2.4.5.1. Months</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-14">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-15">2.4.5.2. Dates</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-16">2.4.5.3. Yearless dates</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-17">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-18">(3)</a>
@@ -7505,7 +7499,7 @@ equal to the number of seconds in <var>t</var>.</p>
     <li><a href="infrastructure.html#ref-for-skip-whitespace-1">2.4.4.1. 부호있는 정수</a>
     </li><li><a href="infrastructure.html#ref-for-skip-whitespace-2">2.4.4.3. 부동 소수점 수</a>
     </li><li><a href="infrastructure.html#ref-for-skip-whitespace-3">2.4.4.4. 백분율과 길이</a>
-    </li><li><a href="infrastructure.html#ref-for-skip-whitespace-4">2.4.4.7. Lists of dimensions</a>
+    </li><li><a href="infrastructure.html#ref-for-skip-whitespace-4">2.4.4.7. 치수 목록</a>
     </li><li><a href="infrastructure.html#ref-for-skip-whitespace-5">2.4.5.9. Durations</a> <a href="infrastructure.html#ref-for-skip-whitespace-6">(2)</a> <a href="infrastructure.html#ref-for-skip-whitespace-7">(3)</a> <a href="infrastructure.html#ref-for-skip-whitespace-8">(4)</a> <a href="infrastructure.html#ref-for-skip-whitespace-9">(5)</a> <a href="infrastructure.html#ref-for-skip-whitespace-10">(6)</a>
     </li><li><a href="infrastructure.html#ref-for-skip-whitespace-11">2.4.7. Space-separated tokens</a> <a href="infrastructure.html#ref-for-skip-whitespace-12">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-skip-whitespace-13">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-skip-whitespace-14">(2)</a> <a href="document-metadata.html#ref-for-skip-whitespace-15">(3)</a> <a href="document-metadata.html#ref-for-skip-whitespace-16">(4)</a> <a href="document-metadata.html#ref-for-skip-whitespace-17">(5)</a> <a href="document-metadata.html#ref-for-skip-whitespace-18">(6)</a>
@@ -7681,7 +7675,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#valid-floating-point-number">#valid-floating-point-number</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-valid-floating-point-number-1">2.4.4.3. 부동 소수점 수</a> <a href="infrastructure.html#ref-for-valid-floating-point-number-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-valid-floating-point-number-3">2.4.4.6. Lists of floating-point numbers</a>
+    </li><li><a href="infrastructure.html#ref-for-valid-floating-point-number-3">2.4.4.6. 부동 소수점 수 목록</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-valid-floating-point-number-4">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-valid-floating-point-number-5">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-valid-floating-point-number-6">4.10.5.1.12. Number state (type=number)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-7">(2)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-8">(3)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-9">(4)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-10">(5)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-11">(6)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-12">(7)</a>
     </li><li><a href="sec-forms.html#ref-for-valid-floating-point-number-13">4.10.5.1.13. Range state (type=range)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-14">(2)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-15">(3)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-16">(4)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-17">(5)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-18">(6)</a> <a href="sec-forms.html#ref-for-valid-floating-point-number-19">(7)</a>
@@ -7705,7 +7699,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="rules-for-parsing-floating-point-number-values">
    <b><a href="infrastructure.html#rules-for-parsing-floating-point-number-values">#rules-for-parsing-floating-point-number-values</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-rules-for-parsing-floating-point-number-values-1">2.4.4.6. Lists of floating-point numbers</a>
+    <li><a href="infrastructure.html#ref-for-rules-for-parsing-floating-point-number-values-1">2.4.4.6. 부동 소수점 수 목록</a>
     </li><li><a href="infrastructure.html#ref-for-rules-for-parsing-floating-point-number-values-2">2.7.1. Reflecting content attributes in IDL attributes</a> <a href="infrastructure.html#ref-for-rules-for-parsing-floating-point-number-values-3">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-rules-for-parsing-floating-point-number-values-4">4.7.5. The img element</a>
     </li><li><a href="sec-forms.html#ref-for-rules-for-parsing-floating-point-number-values-5">4.10.5.1.12. Number state (type=number)</a> <a href="sec-forms.html#ref-for-rules-for-parsing-floating-point-number-values-6">(2)</a>
@@ -7718,7 +7712,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="rules-for-parsing-dimension-values">
    <b><a href="infrastructure.html#rules-for-parsing-dimension-values">#rules-for-parsing-dimension-values</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-rules-for-parsing-dimension-values-1">2.4.4.5. Non-zero percentages and lengths</a>
+    <li><a href="infrastructure.html#ref-for-rules-for-parsing-dimension-values-1">2.4.4.5. 0이 아닌 백분율과 길이</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-rules-for-parsing-dimension-values-2">4.7.5. The img element</a>
     </li><li><a href="rendering.html#ref-for-rules-for-parsing-dimension-values-3">10.2. The CSS user agent style sheet and presentational hints</a>
    </li></ul>
@@ -8163,7 +8157,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#split-a-string-on-commas">#split-a-string-on-commas</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-split-a-string-on-commas-1">2.4.1. 공통 해석기 표현</a>
-    </li><li><a href="infrastructure.html#ref-for-split-a-string-on-commas-2">2.4.4.7. Lists of dimensions</a>
+    </li><li><a href="infrastructure.html#ref-for-split-a-string-on-commas-2">2.4.4.7. 치수 목록</a>
     </li><li><a href="document-metadata.html#ref-for-split-a-string-on-commas-3">4.2.5.1. Standard metadata names</a>
     </li><li><a href="sec-forms.html#ref-for-split-a-string-on-commas-4">4.10.5.1.5. E-mail state (type=email)</a> <a href="sec-forms.html#ref-for-split-a-string-on-commas-5">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-split-a-string-on-commas-6">4.10.5.1.17. File Upload state (type=file)</a>
