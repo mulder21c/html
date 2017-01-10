@@ -1913,7 +1913,7 @@
 
 <h5 id="percentages-and-dimensions">백분율과 길이</h5>
 
-  <dfn lt="rules for parsing dimension values">치수 값 해석에 대한 규칙</dfn>은 다음 알고리즘에 When
+  <dfn lt="rules for parsing dimension values">치수 값 해석에 대한 규칙</dfn>은 다음 알고리즘에 
   주어진 것과 같습니다. 이 알고리즘이 호출 될 때, 단계는 값을 반환하는 첫 번째 단계에서 중단하여, 
   주어진 순서에 따라야(must) 합니다. 이 알고리즘은 0.0 이상의 숫자나 오류를 반환할 것입니다.
   수가 반환된다면, 백분율이나 길이와 같이 좀 더 세분화 됩니다.
@@ -1947,95 +1947,95 @@
       <var>value</var>를 반환합니다.
   13. 길이로서 <var>value</var>를 반환합니다.
 
-<h5 id="non-zero-percentages-and-lengths">Non-zero percentages and lengths</h5>
+<h5 id="non-zero-percentages-and-lengths">0이 아닌 백분율과 길이</h5>
 
-  The <dfn>rules for parsing non-zero dimension values</dfn> are as given in the following
-  algorithm. When invoked, the steps must be followed in the order given, aborting at the first
-  step that returns a value. This algorithm will return either a number greater than 0.0, or an
-  error; if a number is returned, then it is further categorized as either a percentage or a
-  length.
+  <dfn lt="rules for parsing non-zero dimension values">0이 아닌 치수 값 해석에 대한 규칙</dfn>은 다음 알고리즘에 주어진 것과 같습니다.
+  이 알고리즘이 호출 될 때, 단계는 값을 반환하는 첫 번째 단계에서 중단하여, 주어진 순서에 따라야(must) 
+  합니다. 이 알고리즘은 0.0 이상의 숫자나 오류를 반환할 것입니다. 수가 반환된다면, 백분율이나 길이와 
+  같이 좀 더 세분화 됩니다.
 
-  1. Let <var>input</var> be the string being parsed.
-  2. Let <var>value</var> be the result of parsing <var>input</var> using the
-      <a>rules for parsing dimension values</a>.
-  3. If <var>value</var> is an error, return an error.
-  4. If <var>value</var> is zero, return an error.
-  5. If <var>value</var> is a percentage, return <var>value</var> as a percentage.
-  6. Return <var>value</var> as a length.
+  1. <var>input</var>을 해석되는 문자열로 둡니다.
+  2. <var>value</var>를 <a lt="rules for parsing dimension values">치수 값 해석에 대한 규칙</a>을
+      사용하여 <var>input</var>을 해석한 결과로 둡니다.
+  3. <var>value</var>가 오류라면, 오류를 반환합니다.
+  4. <var>value</var>가 0이라면, 오류를 반환합니다.
+  5. <var>value</var>가 백분율이라면, <var>value</var>를 백분율로서 반환합니다.
+  6. <var>value</var>를 길이로서 반환합니다.
 
-<h5 id="lists-of-floating-point-numbers">Lists of floating-point numbers</h5>
+<h5 id="lists-of-floating-point-numbers">부동 소수점 수 목록</h5>
 
-  A <dfn>valid list of floating-point numbers</dfn> is a number of
-  <a>valid floating-point numbers</a> separated by U+002C COMMA characters, with no other characters
-  (e.g. no <a>space characters</a>). In addition, there might be restrictions on the number of
-  floating-point numbers that can be given, or on the range of values allowed.
+  <dfn lt="valid list of floating-point numbers">부동 소수점 수의 유효한 목록</dfn>은 다른 문자(예를
+  들어 <a lt="space characters">공백 문자</a>없이), U+002C 콤마 문자로 분리된 약간의 
+  <a lt="valid floating-point numbers">유효한 부동 소수점 수</a>입니다. 또한, 주어질 수 있는 부동 
+  소수점 수의 개수 혹은 허용된 값의 범위에 제한이 있을 수 있습니다.
 
-  The <dfn>rules for parsing a list of floating-point numbers</dfn> are as follows:
+  <dfn lt="rules for parsing a list of floating-point numbers">부동 소수점 수 목록 해석에 대한 규칙</dfn>은 다음과 같습니다:
 
-  1. Let <var>input</var> be the string being parsed.
-  2. Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start of
-      the string.
-  3. Let <var>numbers</var> be an initially empty list of floating-point numbers. This list will be
-      the result of this algorithm.
-  4. <a>Collect a sequence of characters</a> that are <a>space characters</a>, U+002C COMMA, or
-      U+003B SEMICOLON characters. This skips past any leading delimiters.
-  5. While <var>position</var> is not past the end of <var>input</var>:
-      1. <a>Collect a sequence of characters</a> that are not <a>space characters</a>, U+002C COMMA,
-          U+003B SEMICOLON, <a>ASCII digits</a>, U+002E FULL STOP, or U+002D HYPHEN-MINUS
-          characters. This skips past leading garbage.
-      2. <a>Collect a sequence of characters</a> that are not <a>space characters</a>, U+002C COMMA,
-          or U+003B SEMICOLON characters, and let <var>unparsed number</var> be the result.
-      3. Let <var>number</var> be the result of parsing <var>unparsed number</var> using the
-          <a>rules for parsing floating-point number values</a>.
-      4. If <var>number</var> is an error, set <var>number</var> to zero.
-      5. Append <var>number</var> to <var>numbers</var>.
-      6. <a>Collect a sequence of characters</a> that are <a>space characters</a>, U+002C COMMA, or
-          U+003B SEMICOLON characters. This skips past the delimiter.
-  6. Return <var>numbers</var>.
+  1. <var>input</var>을 해석되는 문자열로 둡니다
+  2. <var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.
+  3. <var>numbers</var>를 초기에 빈 부동 소수점 수 목록으로 둡니다. 이 목록은 이 알고리즘의 결과가
+      될 것입니다.
+  4. <a lt="space characters">공백 문자</a>, U+002C 콤마, U+003B 세미콜론 문자 인
+      <a lt="Collect a sequence of characters">일련의 문자를 수집</a>합니다. 이것은 앞선 선행 구분자를 
+      건너뜁니다.
+  5. <var>position</var>이 <var>input</var>의 끝을 지나지 않은 경우:
+      1. <a lt="space characters">공백 문자</a>, U+002C 콤마, U+003B 세미콜론, <a lt="ASCII digits">ASCII 숫자</a>,
+          U+002E 마침표, U+002D HYPHEN-MINUS 문자가 아닌 <a lt="Collect a sequence of characters">일련의 문자를 수집</a>합니다. 
+          이것은 앞선 선행 선행 가비지를 건너뜁니다.
+      2. <a lt="space characters">공백 문자</a>, U+002C 콤마, U+003B 세미콜론 문자가 아닌
+          <a lt="Collect a sequence of characters">일련의 문자를 수집</a>하고, <var>unparsed number</var>를 
+          결과로 둡니다.
+      3. <var>number</var>를 <a lt="rules for parsing floating-point number values">부동 소수점 수 값 해석에 대한 규칙</a>을 
+          사용하여 <var>unparsed number</var>를 해석한 결과로 둡니다.
+      4. <var>number</var>가 오류라면, <var>number</var>을 0으로 설정합니다.
+      5. <var>number</var>을 <var>numbers</var>에 첨부합니다.
+      6. <a lt="space characters">공백 문자</a>, U+002C 콤마, U+003B 세미콜론 문자 인
+          <a lt="Collect a sequence of characters">일련의 문자를 수집</a>합니다. 이것은 앞선 선행 구분자를 
+          건너뜁니다.
+  6. <var>numbers</var>를 반환합니다.
 
-<h5 id="lists-of-dimensions">Lists of dimensions</h5>
+<h5 id="lists-of-dimensions">치수 목록</h5>
 
-  The <dfn>rules for parsing a list of dimensions</dfn> are as follows. These rules return a list
-  of zero or more pairs consisting of a number and a unit, the unit being one of
-  <i>percentage</i>, <i>relative</i>, and <i>absolute</i>.
+  <dfn lt="rules for parsing a list of dimensions">치수 목록 해석에 대한 규칙</dfn>은 다음과 같습니다.
+  이 규칙들은 숫자와 단위로 구성된 0개 이상의 목록을 반환하고, 단위는 <i>percentage</i>, <i>relative</i>,
+  <i>absolute</i>입니다.
 
-  1. Let raw input be the string being parsed.
-  2. If the last character in <var>raw input</var> is a U+002C COMMA character (,), then remove
-      that character from <var>raw input</var>.
-  3. <a lt="split a string on commas">Split the string <var>raw input</var> on commas</a>. Let <var>raw tokens</var> be the
-      resulting list of tokens.
-  4. Let <var>result</var> be an empty list of number/unit pairs.
-  5. For each token in <var>raw tokens</var>, run the following substeps:
-      1. Let <var>input</var> be the token.
-      2. Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the
-          start of the string.
-      3. Let <var>value</var> be the number 0.
-      4. Let <var>unit</var> be <i>absolute</i>.
-      5. If position is past the end of input, set unit to relative and jump to the last substep.
-      6. If the character at <var>position</var> is an <a>ASCII digit</a>, <a>collect a sequence
-          of characters</a> that are <a>ASCII digits</a>, interpret the resulting sequence as an
-          integer in base ten, and increment <var>value</var> by that integer.
-      7. If the character at <var>position</var> is a U+002E FULL STOP character (.), run these
-          substeps:
-          1. <a>Collect a sequence of characters</a> consisting of <a>space characters</a> and
-              <a>ASCII digits</a>. Let <var>s</var> be the resulting sequence.
-          2. Remove all <a>space characters</a> in <var>s</var>.
-          3. If <var>s</var> is not the empty string, run these subsubsteps:
-              1. Let <var>length</var> be the number of characters in <var>s</var> (after the
-                  spaces were removed).
-              2. Let <var>fraction</var> be the result of interpreting <var>s</var> as a base-ten
-                  integer, and then dividing that number by 10<sup><var>length</var></sup>.
-              3. Increment <var>value</var> by <var>fraction</var>.
-      8. <a>Skip whitespace</a>.
-      9. If the character at <var>position</var> is a U+0025 PERCENT SIGN character (%), then set
-          <var>unit</var> to <i>percentage</i>.
+  1. <var>raw input</var>을 해석될 문자열로 둡니다.
+  2. <var>raw input</var> 내 마지막 문자가 U+002C 콤마 문자 (,) 라면, <var>raw input</var>에서 그 
+      문자를 제거합니다.
+  3. <a lt="split a string on commas">콤마로 문자열 <var>raw input</var>를 분할</a>합니다. 
+      <var>raw tokens</var>를 결과 토큰 목록으로 둡니다.
+  4. <var>result</var>을 숫자/단위 쌍의 빈 목록으로 둡니다.
+  5. <var>raw tokens</var> 내 각 토큰에 대해, 다음 하위 단계들을 수행합니다:
+      1. <var>input</var>을 토큰으로 둡니다.
+      2. <var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.
+      3. <var>value</var>를 숫자 0으로 둡니다.
+      4. <var>unit</var>을 <i>absolute</i>로 둡니다.
+      5. <var>position</var>이 <var>input</var>의 끝을 지났다면, 단위를 <i>relative</i>로 설정하고 
+          마지막 하위단계로 건너뜁니다.
+      6. <var>position</var>에 있는 문자가 <a lt="ASCII digits">ASCII 숫자</a>라면, <a lt="ASCII digits">ASCII 숫자</a>인
+          <a lt="Collect a sequence of characters">일련의 문자를 수집</a>하고, 10진수 정수로서 결과로 
+          나온 수열을 해석하고, <var>value</var>를 그 정수만큼 증가시킵니다.
+      7. <var>position</var>에 있는 문자가 U+002E 마침표 문자 (.) 라면, 이 하위 단계들을 수행합니다:
+          1. <a lt="space characters">공백 문자</a>와 <a lt="ASCII digits">ASCII 숫자</a>로 구성된 
+              <a lt="Collect a sequence of characters">일련의 문자를 수집</a>합니다. 
+              <var>s</var>를 결과 수열로 둡니다.
+          2. <var>s</var> 내 모든 <a lt="space characters">공백 문자</a>를 제거합니다.
+          3. <var>s</var>가 빈 문자열이 아니라면, 이 하위 단계들을 수행합니다:
+              1. <var>length</var>를 <var>s</var> 내 문자(공백이 제거된 이후)의 수로 둡니다.
+              2. <var>fraction</var>을 10 진수 정수로 <var>s</var>를 해석하고, 그 수를 
+                  10<sup><var>length</var></sup>로 나눈 결과로 둡니다.
+              3. <var>value</var>를 <var>fraction</var> 만큼 증가시킵니다.
+      8. <a lt="Skip whitespace">여백을 건너뜁니다</a>.
+      9. <var>position</var>에 있는 문자가 U+0025 PERCENT 부호 문자 (%)라면, <var>unit</var>을 
+          <i>percentage</i>로 설정합니다.
 
-          Otherwise, if the character at <var>position</var> is a U+002A ASTERISK character (*),
-          then set <var>unit</var> to <i>relative</i>.
+          그렇지 않고, <var>position</var>에 있는 문자가 U+002A ASTERISK 문자 (*)라면, <var>unit</var>을
+          <i>relative</i>로 설정합니다.
 
-      10. Add an entry to <var>result</var> consisting of the number given by <var>value</var> and
-          the unit given by <var>unit</var>.
-  6. Return the list <var>result</var>.
+      10. <var>value</var>에 의해 주어진 수와 <var>unit</var>에 의해 주어진 단위로 구성된 
+          <var>result</var>에 항목을 추가합니다.
+  6. <var>result</var> 목록을 반환합니다.
 
 <h4 id="dates-and-times">Dates and times</h4>
 
