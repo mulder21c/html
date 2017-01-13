@@ -1478,10 +1478,10 @@ pre.idl.highlight { color: #708090; }
           </li><li><a href="infrastructure.html#lists-of-dimensions"><span class="secno">2.4.4.7</span> <span class="content">치수 목록</span></a>
          </li></ol>
         </li><li>
-         <a href="infrastructure.html#dates-and-times"><span class="secno">2.4.5</span> <span class="content">Dates and times</span></a>
+         <a href="infrastructure.html#dates-and-times"><span class="secno">2.4.5</span> <span class="content">날짜와 시간</span></a>
          <ol class="toc">
-          <li><a href="infrastructure.html#months"><span class="secno">2.4.5.1</span> <span class="content">Months</span></a>
-          </li><li><a href="infrastructure.html#sec-dates"><span class="secno">2.4.5.2</span> <span class="content">Dates</span></a>
+          <li><a href="infrastructure.html#months"><span class="secno">2.4.5.1</span> <span class="content">월</span></a>
+          </li><li><a href="infrastructure.html#sec-dates"><span class="secno">2.4.5.2</span> <span class="content">날짜</span></a>
           </li><li><a href="infrastructure.html#yearless-dates"><span class="secno">2.4.5.3</span> <span class="content">Yearless dates</span></a>
           </li><li><a href="infrastructure.html#times"><span class="secno">2.4.5.4</span> <span class="content">Times</span></a>
           </li><li><a href="infrastructure.html#floating-dates-and-times"><span class="secno">2.4.5.5</span> <span class="content">Floating dates and times</span></a>
@@ -3468,7 +3468,7 @@ pre.idl.highlight { color: #708090; }
   오류를 반환합니다.</p>
      </li><li data-md="">
       <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-4">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-3">일련의 문자를 수집</a>하고,
-  10진수 정수로 결과로 나온 수열을 해석합니다. <var>value</var>를 그 정수로 둡니다.</p>
+  10진수 정수로 결과로 나온 시퀀스를 해석합니다. <var>value</var>를 그 정수로 둡니다.</p>
      </li><li data-md="">
       <p><var>sign</var>이 "양"이라면, <var>value</var>를 반환하고, 그렇지 않으면 0에서 <var>value</var>를
   뺀 결과를 반환합니다.</p>
@@ -3580,7 +3580,7 @@ pre.idl.highlight { color: #708090; }
   반환합니다.</p>
      </li><li data-md="">
       <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-11">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-4">일련의 문자를 수집</a>하고,
-  10 진수 정수로 결과로 나온 수열을 해석합니다. 그 정수에 <var>value</var>를 곱합니다.</p>
+  10 진수 정수로 결과로 나온 시퀀스를 해석합니다. 그 정수에 <var>value</var>를 곱합니다.</p>
      </li><li data-md="">
       <p><var>position</var>이 <var>input</var>의 끝을 지났다면, <i>변환</i>으로 라벨링 된 단계로
   건너뜁니다.</p>
@@ -3642,7 +3642,7 @@ pre.idl.highlight { color: #708090; }
         <p><var>position</var>에 의해 가리켜진 문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-14">ASCII 숫자</a>가 아니라면, <i>변환</i>으로 라벨링 된 단계로 건너뜁니다.</p>
        </li><li data-md="">
         <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-15">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-5">일련의 문자를 수집</a>하고, and interpret the
-  10 진수 정수로 결과로 나온 수열을 해석합니다. 그 정수에 <var>exponent</var>를 곱합니다.</p>
+  10 진수 정수로 결과로 나온 시퀀스를 해석합니다. 그 정수에 <var>exponent</var>를 곱합니다.</p>
        </li><li data-md="">
         <p>10의 <var>exponent</var>제곱에 <var>value</var>를 곱합니다.</p>
       </li></ol>
@@ -3681,7 +3681,7 @@ pre.idl.highlight { color: #708090; }
   반환합니다.</p>
      </li><li data-md="">
       <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-17">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-6">일련의 문자를 수집</a>하고,
-  10 진수 정수로 결과로 나온 수열을 해석합니다. <var>value</var>를 그 수로 둡니다.</p>
+  10 진수 정수로 결과로 나온 시퀀스를 해석합니다. <var>value</var>를 그 수로 둡니다.</p>
      </li><li data-md="">
       <p><var>position</var>이 <var>input</var>의 끝을 지났다면, 길이로서 <var>value</var>를 반환합니다.</p>
      </li><li data-md="">
@@ -3802,12 +3802,12 @@ pre.idl.highlight { color: #708090; }
   마지막 하위단계로 건너뜁니다.</p>
        </li><li data-md="">
         <p><var>position</var>에 있는 문자가 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-21">ASCII 숫자</a>라면, <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-22">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-11">일련의 문자를 수집</a>하고, 10진수 정수로서 결과로 
-  나온 수열을 해석하고, <var>value</var>를 그 정수만큼 증가시킵니다.</p>
+  나온 시퀀스를 해석하고, <var>value</var>를 그 정수만큼 증가시킵니다.</p>
        </li><li data-md="">
         <p><var>position</var>에 있는 문자가 U+002E 마침표 문자 (.) 라면, 이 하위 단계들을 수행합니다:</p>
         <ol>
          <li data-md="">
-          <p><a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-10">공백 문자</a>와 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-23">ASCII 숫자</a>로 구성된 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-12">일련의 문자를 수집</a>합니다. <var>s</var>를 결과 수열로 둡니다.</p>
+          <p><a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-10">공백 문자</a>와 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-23">ASCII 숫자</a>로 구성된 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-12">일련의 문자를 수집</a>합니다. <var>s</var>를 결과 시퀀스로 둡니다.</p>
          </li><li data-md="">
           <p><var>s</var> 내 모든 <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-11">공백 문자</a>를 제거합니다.</p>
          </li><li data-md="">
@@ -3833,158 +3833,155 @@ pre.idl.highlight { color: #708090; }
      </li><li data-md="">
       <p><var>result</var> 목록을 반환합니다.</p>
     </li></ol>
-    <h4 class="heading settled" data-level="2.4.5" id="dates-and-times"><span class="secno">2.4.5. </span><span class="content">Dates and times</span><a class="self-link" href="infrastructure.html#dates-and-times"></a></h4>
+    <h4 class="heading settled" data-level="2.4.5" id="dates-and-times"><span class="secno">2.4.5. </span><span class="content">날짜와 시간</span><a class="self-link" href="infrastructure.html#dates-and-times"></a></h4>
     <div class="note" role="note">
-      This specification <em>encodes</em> dates and times according to a common subset of the <a data-link-type="biblio" href="references.html#biblio-iso8601">[ISO8601]</a> standard for dates. 
-     <p>This means that encoded dates will look like 1582-03-01, 0033-03-27, or 2016-03-01, and date-times will look like
-    1929-11-13T19:00Z, 0325-06-03T00:21+10:30. The format is approximately YYYY-MM-DDTHH:MM:SS.DD±HH:MM, although some
-    parts are optional, for example to express a month and day as in a birthday, a time without time-zone information,
-    and the like.</p>
-     <p>Times are expressed using the 24-hour clock, and it is as error to express leap seconds.</p>
-     <p>Dates are expressed in the <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-calendar" id="ref-for-proleptic-gregorian-calendar-1">proleptic Gregorian calendar</a> between the proleptic year 0000, and the year</p>
-     <ol start="9999">
-      <li data-md="">
-       <p>Other years cannot be encoded.</p>
-     </li></ol>
-     <p>The <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-calendar" id="ref-for-proleptic-gregorian-calendar-2">proleptic Gregorian calendar</a> is the calendar most common globally since around 1950, and is
-    likely to be understood by almost everyone for dates between the years 1950 and 9999, and for many
-    people for dates in the last few decades or centuries.</p>
-     <p>The Gregorian calendar was adopted officially in different countries at different times, between
-    the years 1582 when it was proposed by Pope Gregory XIII as a replacement for the Julian calendar, and
-    1949 when it was adopted by the People’s republic of China.</p>
-     <p>For most practical purposes, dealing with the present, recent past, or the next few thousand years,
-    this will work without problems. For dates before the adoption of the Gregorian Calendar - for example
-    prior to 1917 in Russia or Turkey, prior to 1752 in Britain or the then British colonies of America,
-    or prior to 1582 in Spain, the Spanish colonies in America, and the rest of the world, dates will not
-    match those written at the time.</p>
-     <p>The use of the Gregorian calendar as an underlying encoding is a somewhat arbitrary choice. Many other
-    calendars were or are in use, and the interested reader should look for information on the Web.</p>
-     <p>See also the discussion of <a href="sec-forms.html#date-time-and-number-formats">date, time, and number formats</a> in forms (for authors), <a href="sec-forms.html#implementation-notes-regarding-localization-of-form-controls">implementation
-    notes regarding localization of form controls</a>, and the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-time" id="ref-for-elementdef-time-1">time</a></code> element.</p>
+      이 명세는 날짜에 대한 <a data-link-type="biblio" href="references.html#biblio-iso8601">[ISO8601]</a> 표준의 공통 부분 집합에 따라 날짜와 시간을 <em>부호화</em>합니다. 
+     <p>이는 부호화된 날짜는 1582-03-01, 0033-03-27, 2016-03-01 와 같이 보이고, 날짜-시간은 1929-11-13T19:00Z,
+    0325-06-03T00:21+10:30와 같이 보이는 것을 의미합니다. 형식은, 비록 일부분은 예를 들어 생일의 월과 
+    일, 표준 시간대 정보가 없는 시간 등과 같이 표현하기 위해 선택적이기는 하지만, 대략 
+    YYYY-MM-DDTHH:MM:SS.DD±HH:MM 입니다.</p>
+     <p>시간은 24시간제를 사용하여 표현되고, 윤초를 표현하는 것은 오류입니다.</p>
+     <p>날짜는 역산 0000년과 9999년 사이의 <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-calendar" id="ref-for-proleptic-gregorian-calendar-1">역산 그레고리력</a>으로
+    표현됩니다. 다른 해는 부호화될 수 없습니다.</p>
+     <p><a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-calendar" id="ref-for-proleptic-gregorian-calendar-2">역산 그레고리력</a>은 1950년 이후로 전 세계적으로 가장
+    일반적인 달력이고, 1950년과 9999년 사이 날짜의 모든 사람들, 그리고 지난 수십 년 또는 수세기 동안 
+    많은 사람들이 이해할 수 있습니다.</p>
+     <p>그레고리력은 교황 그레고리 13세에 의해 율리우스력에 대한 대체로서 제안된 1582년과 중국 인민
+    공화국에 의해 채택된 1947년 사이에, 다른 나라, 다른 시간에 공식적으로 채택되었습니다.</p>
+     <p>현재, 가까운 과거, 다음 몇 천년을 다루는, 대부분의 현실적인 목적을 위해, 이것은 문제없이 작동 할
+    것입니다. 그레고리력 채택 전 날짜에 대해 - 예를 들어 러시아나 터키에서 1917년에 앞선, 영국 혹은 
+    이후 아메리카 영국 식민지에서 1752년에 앞선, 스페인, 아메리카 스페인 식민지, 세계 나머지에서
+    1582년에 앞선, 날짜는 그 때 쓰여진 것들과 일치하지 않을 것입니다.</p>
+     <p>그레고리력을 기본 부호화로 사용하는 것은 다소 임의적인 선택입니다. 많은 다른 달력이 사용 되었거나
+    사용되고 있고, 관심있는 독자는 웹에 대한 정보를 찾아야(should) 합니다.</p>
+     <p>(작성자를 위한) 형식에서 <a href="sec-forms.html#date-time-and-number-formats">날짜, 시간, 숫자 형식</a>의 논의, <a href="sec-forms.html#implementation-notes-regarding-localization-of-form-controls">폼 컨트롤의 지역화에 관한 
+    구현 노트</a>, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-time" id="ref-for-elementdef-time-1">time</a></code> 요소(element) 또한 참고하세요.</p>
     </div>
-    <p>In the algorithms below, the <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="number-of-days-in-month-month-of-year-year">number of days in month <var>month</var> of year <var>year</var></dfn> is: <em>31</em> if <var>month</var> is 1, 3, 5, 7, 8, 10, or 12; <em>30</em> if <var>month</var> is 4, 6, 9, or 11; <em>29</em> if <var>month</var> is 2 and <var>year</var> is a number divisible by 400, or if <var>year</var> is a number divisible by 4 but not by 100; and <em>28</em> otherwise. This takes
-  into account leap years in the Gregorian calendar. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
-    <p>When <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-24">ASCII digits</a> are used in the date and time syntaxes defined in this section, they
-  express numbers in base ten.</p>
-    <p class="note" role="note"> While the formats described here are intended to be subsets of the corresponding ISO8601
-    formats, this specification defines parsing rules in much more detail than ISO8601.
-    Implementors are therefore encouraged to carefully examine any date parsing libraries before
-    using them to implement the parsing rules described below; ISO8601 libraries might not parse
-    dates and times in exactly the same manner. <a data-link-type="biblio" href="references.html#biblio-iso8601">[ISO8601]</a> </p>
-    <p>Where this specification refers to the <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="proleptic-gregorian-calendar">proleptic Gregorian calendar</dfn>, it means the
-  modern Gregorian calendar, extrapolated backwards to year 1. A date in the <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-calendar" id="ref-for-proleptic-gregorian-calendar-3">proleptic Gregorian calendar</a>, sometimes explicitly referred to as a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="proleptic-gregorian-date">proleptic-Gregorian date</dfn>, is one that is described using that calendar even if that
-  calendar was not in use at the time (or place) in question. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
-    <h5 class="heading settled" data-level="2.4.5.1" id="months"><span class="secno">2.4.5.1. </span><span class="content">Months</span><a class="self-link" href="infrastructure.html#months"></a></h5>
-    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="month">month</dfn> consists of a specific <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-date" id="ref-for-proleptic-gregorian-date-1">proleptic-Gregorian date</a> with no time-zone
-  information and no date information beyond a year and a month. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-month-string">valid month string</dfn> representing a year <var>year</var> and month <var>month</var> if it consists of the following components in the given order:</p>
+    <p>다음 알고리즘에서, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="number of days in month month of year year" data-noexport="" id="number-of-days-in-month-month-of-year-year"><var>year</var></dfn>년의 <var>month</var>월 내 날짜는: <var>month</var>가 1, 3, 5, 7, 8, 10, 12라면 <em>31</em>; <var>month</var>가 4, 6, 9, 11이라면 <em>30</em>; <var>month</var>가 2이고 <var>year</var>가 400으로 나누어지는 수이거나 혹은 <var>year</var>가
+  4로 나누어지지만 100으로는 나누어지지 않는 수라면 <em>29</em>; 그렇지 않으면 <em>28</em> 입니다. 
+  이것은 그레고리력에서 윤년을 고려합니다. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
+    <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-24">ASCII 숫자</a>가 이 섹션에서 정의된 날짜와 시간 구문에 사용되는 경우, 그것들은
+  10진수 숫자로 표현됩니다.</p>
+    <p class="note" role="note"> 여기에 설명된 형식은 해당하는 ISO8601의 하위 집합이 되도록 의도된 것이지만, 이 명세는 ISO8601보다
+    훨씬 더 자세히 해석 규칙을 정의합니다.
+    따라서 구현자는 아래 설명된 해석 규칙을 구현하기 위해 날짜 해석 라이브러리들을 사용하기 전에 
+    신중하게 검토할 것이 권장됩니다; ISO8601 라이브러리는 정확히 동일한 방식으로 날짜와 시간을 해석하지
+    않을 수 있습니다. <a data-link-type="biblio" href="references.html#biblio-iso8601">[ISO8601]</a> </p>
+    <p>이 명세가 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="proleptic Gregorian calendar" data-noexport="" id="proleptic-gregorian-calendar">역산 그레고리력</dfn>을 언급하는 경우, 그것은
+  거꾸로 1년까지 추론한, 현대 그레고리력을 의미합니다. <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-calendar" id="ref-for-proleptic-gregorian-calendar-3">역산 그레고리력</a>에서
+  날짜는, 때때로 명시적으로 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="proleptic-Gregorian date" data-noexport="" id="proleptic-gregorian-date">역산 그레고리 날짜</dfn>로 언급되는,
+  그 달력이 해당 시간(혹은 장소)에서 사용 중이지 않은 경우에도, 그 달력을 사용하여 설명되는 것입니다. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
+    <h5 class="heading settled" data-level="2.4.5.1" id="months"><span class="secno">2.4.5.1. </span><span class="content">월</span><a class="self-link" href="infrastructure.html#months"></a></h5>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="month" data-noexport="" id="month">월</dfn>은 표준시간대 정보가 없고 연, 월을 초과하는 날짜 정보가 없는
+  특정한 <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-date" id="ref-for-proleptic-gregorian-date-1">역산 그레고리 날짜</a>로 구성됩니다. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
+    <p>문자열은 주어진 순서에 따라 다음 구성요소로 구성된다면 <var>year</var>년과 <var>month</var>월을
+  나타내는 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid month string" data-noexport="" id="valid-month-string">유효한 월 문자열</dfn>입니다.:</p>
     <ol>
      <li data-md="">
-      <p>Four or more <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-25">ASCII digits</a>, representing <var>year</var>, where <var>year</var>&nbsp;&gt;&nbsp;0</p>
+      <p><var>year</var>&nbsp;&gt;&nbsp;0 인 경우, <var>year</var>를 나타내는, 4개 이상의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-25">ASCII 숫자</a></p>
      </li><li data-md="">
-      <p>A U+002D HYPHEN-MINUS character (-)</p>
+      <p>U+002D HYPHEN-MINUS 문자 (-)</p>
      </li><li data-md="">
-      <p>Two <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-26">ASCII digits</a>, representing the month <var>month</var>, in the range
-  1&nbsp;≤&nbsp;<var>month</var>&nbsp;≤&nbsp;12</p>
+      <p>1&nbsp;≤&nbsp;<var>month</var>&nbsp;≤&nbsp;12 범위에서, <var>month</var>월을 나타내는
+  2개의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-26">ASCII 숫자</a>.</p>
     </li></ol>
-    <p class="example" id="example-7bd28a2c"><a class="self-link" href="infrastructure.html#example-7bd28a2c"></a> For example, February 2005 is encoded 2005-02, and March of the year 33AD (as a proleptic
-    gregorian date) is encoded <code>0033-03</code>. The expression <code>325-03</code> does <em>not</em> mean March in the year 325, it is an error, because it does not have 4 digits for
-    the year. </p>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a month string|parse a month string|parsing a month" data-noexport="" id="parsing-a-month-string">parse a month string</dfn> are as follows. This will return either a year and
-  month, or nothing. If at any point the algorithm says that it "fails", this means that it is
-  aborted at that point and returns nothing.</p>
+    <p class="example" id="example-db40da0f"><a class="self-link" href="infrastructure.html#example-db40da0f"></a> 예를 들어, 2005년 2월은 2005-02로 부호화 되고, 33AD년 3월은(역산 그레고리 날짜로) <code>0033-03</code>로 부호화 됩니다. <code>325-03</code> 표현은 325년 3월을 의미하지 <em>않고</em>,
+    그것은 연도에 대해 4자리 숫자를 가지지 않기 때문에 오류입니다. </p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a month string|parse a month string|parsing a month" data-noexport="" id="parsing-a-month-string">월 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다.
+  이것은 연도와 월을 반환하거나 혹은 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 
+  "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-  of the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#parse-a-month-component" id="ref-for-parse-a-month-component-1">Parse a month component</a> to obtain <var>year</var> and <var>month</var>. If this
-  returns nothing, then fail.</p>
+      <p><var>year</var>와 <var>month</var>를 얻기 위해 <a data-link-type="dfn" href="infrastructure.html#parse-a-month-component" id="ref-for-parse-a-month-component-1">월 컴포넌트를 해석</a>합니다.
+  이것이 아무 것도 반환하지 않는다면, 실패입니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is <em>not</em> beyond the end of <var>input</var>, then fail.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나지 <em>않으</em>면, 실패입니다.</p>
      </li><li data-md="">
-      <p>Return <var>year</var> and <var>month</var>.</p>
+      <p><var>year</var>와 <var>month</var>를 반환합니다.</p>
     </li></ol>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="parse-a-month-component">parse a month component</dfn>, given an <var>input</var> string and a <var>position</var>, are as follows. This will return either a year and a month, or nothing. If
-  at any point the algorithm says that it "fails", this means that it is aborted at that point and
-  returns nothing.</p>
+    <p>주어진 <var>input</var> 문자열, <var>position</var>인 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse a month component" data-noexport="" id="parse-a-month-component">월 컴포넌트를 해석</dfn>하기
+  위한 규칙은 다음과 같습니다. 이것은 연도와 월을 반환하거나 아무 것도 반환하지 않을 것입니다. 어느 
+  시점에 알고리즘이 "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
     <ol>
      <li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-13">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-27">ASCII digits</a>. If the collected
-  sequence is not at least four characters long, then fail. Otherwise, interpret the resulting
-  sequence as a base-ten integer. Let that number be the <var>year</var>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-27">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-13">일련의 문자를 수집</a>합니다.
+  수집된 시퀀스가 최소 4 글자가 아니라면 실패입니다. 그렇지 않으면, 10 진수 정수로 결과 시퀀스를
+  해석합니다. 그 숫자를 <var>year</var>로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>year</var> is not a number greater than zero, then fail.</p>
+      <p><var>year</var>가 0보다 큰 수가 아니면, 실패입니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is beyond the end of <var>input</var> or if the character at <var>position</var> is not a U+002D HYPHEN-MINUS character, then fail. Otherwise, move <var>position</var> forwards one character.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지났거나 <var>position</var>에 있는 문자가 U+002D
+  HYPHEN-MINUS 문자가 아니라면, 실패입니다. 그렇지 않으면, <var>position</var>를 한 글자 앞으로 
+  이동합니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-14">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-28">ASCII digits</a>. If the collected
-  sequence is not exactly two characters long, then fail. Otherwise, interpret the resulting
-  sequence as a base-ten integer. Let that number be the <var>month</var>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-28">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-14">일련의 문자를 수집</a>합니다.
+  수집된 시퀀스가 정확히 2글자가 아니라면 실패입니다. 그렇지 않으면, 10 진수 정수로 결과 시퀀스를
+  해석합니다. 그 숫자를 <var>month</var>로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>month</var> is not a number in the range
-  1&nbsp;≤&nbsp;<var>month</var>&nbsp;≤&nbsp;12, then fail.</p>
+      <p><var>month</var>가 1&nbsp;≤&nbsp;<var>month</var>&nbsp;≤&nbsp;12 범위의 숫자가 아니라면,
+  실패입니다.</p>
      </li><li data-md="">
-      <p>Return <var>year</var> and <var>month</var>.</p>
+      <p><var>year</var>과 <var>month</var>를 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.5.2" id="sec-dates"><span class="secno">2.4.5.2. </span><span class="content">Dates</span><a class="self-link" href="infrastructure.html#sec-dates"></a></h5>
-    <p>A <dfn class="dfn-paneled" data-dfn-for="dates" data-dfn-type="dfn" data-lt="date|dates" data-noexport="" id="dates-date">date</dfn> consists of a specific <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-date" id="ref-for-proleptic-gregorian-date-2">proleptic-Gregorian date</a> with no time-zone
-  information, consisting of a year, a month, and a day. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-date-string">valid date string</dfn> representing a year <var>year</var>, month <var>month</var>, and day <var>day</var> if it consists of the following components in the given
-  order:</p>
+    <h5 class="heading settled" data-level="2.4.5.2" id="sec-dates"><span class="secno">2.4.5.2. </span><span class="content">날짜</span><a class="self-link" href="infrastructure.html#sec-dates"></a></h5>
+    <p><dfn class="dfn-paneled" data-dfn-for="dates" data-dfn-type="dfn" data-lt="date|dates" data-noexport="" id="dates-date">날짜</dfn>는 연, 월, 일로 구성되는 표준시간대가 없는 특정한 <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-date" id="ref-for-proleptic-gregorian-date-2">역산 그레고리 날짜</a>로 구성됩니다. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
+    <p>문자열은 나타내는 주어진 순서에 따라 다음 구성요소로 구성된다면, <var>year</var>년, <var>month</var>월, <var>day</var>일을 나타내는 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid date string" data-noexport="" id="valid-date-string">유효한 날짜 문자열</dfn>입니다:</p>
     <ol>
      <li data-md="">
-      <p>A <a data-link-type="dfn" href="infrastructure.html#valid-month-string" id="ref-for-valid-month-string-1">valid month string</a>, representing <var>year</var> and <var>month</var></p>
+      <p><var>year</var>과 <var>month</var>를 나타내는 <a data-link-type="dfn" href="infrastructure.html#valid-month-string" id="ref-for-valid-month-string-1">유효한 월 문자열</a></p>
      </li><li data-md="">
-      <p>A U+002D HYPHEN-MINUS character (-)</p>
+      <p>U+002D HYPHEN-MINUS 문자 (-)</p>
      </li><li data-md="">
-      <p>Two <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-29">ASCII digits</a>, representing <var>day</var>, in the range
-  1&nbsp;≤&nbsp;<var>day</var>&nbsp;≤&nbsp;<var>maxday</var> where <var>maxday</var> is
-  the <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-1">number of days in the month <var>month</var> and year <var>year</var></a></p>
+      <p>1&nbsp;≤&nbsp;<var>day</var>&nbsp;≤&nbsp;<var>maxday</var>범위 내의 <var>day</var>를
+  나타내는 두 개의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-29">ASCII 숫자</a>로, <var>maxday</var>는 <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-1"><var>year</var>년 <var>month</var>월의
+  날짜의 수</a>.</p>
     </li></ol>
-    <p class="example" id="example-d0ba887e"><a class="self-link" href="infrastructure.html#example-d0ba887e"></a> For example, 29 February 2016 is encoded 2016-02-29, and 3 March of the year 33AD (as a
-    proleptic gregorian date) is encoded <code>0033-03-03</code>. The expression <code>325-03-03</code> does <em>not</em> mean 3 March in the year 325, it is an error, because
-    it does not have 4 digits for the year. </p>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a date string|parse a date string|parsing a date" data-noexport="" id="parsing-a-date-string">parse a date string</dfn> are as follows. This will return either a date, or
-  nothing. If at any point the algorithm says that it "fails", this means that it is aborted at
-  that point and returns nothing.</p>
+    <p class="example" id="example-3683aa33"><a class="self-link" href="infrastructure.html#example-3683aa33"></a> 예를 들어, 2016 2월 29일은 2016-02-29로 부호화 되고, 33AD년 3월 3일(역산 그레고리 날짜 같은)은 <code>0033-03-03</code>로 부호화 됩니다. <code>325-03-03</code> 표현은 325년 3월 3일을 의미하지 <em>않고</em>, 이는 연도가 4자리 숫자를 가지지 않기 때문에 오류입니다. </p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a date string|parse a date string|parsing a date" data-noexport="" id="parsing-a-date-string">날짜 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다.
+  이것은 날짜를 반환하거나, 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 "실패"라고
+  말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-  of the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#parse-a-date-component" id="ref-for-parse-a-date-component-1">Parse a date component</a> to obtain <var>year</var>, <var>month</var>, and <var>day</var>. If this returns nothing, then fail.</p>
+      <p><var>year</var>, <var>month</var>, <var>day</var>를 얻기 위해 <a data-link-type="dfn" href="infrastructure.html#parse-a-date-component" id="ref-for-parse-a-date-component-1">날짜 컴포넌트를 해석</a>합니다.
+  이것이 아무 것도 반환하지 않는다면, 실패입니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is <em>not</em> beyond the end of <var>input</var>, then fail.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나지 <em>않으</em>면, 실패입니다.</p>
      </li><li data-md="">
-      <p>Let <var>date</var> be the date with year <var>year</var>, month <var>month</var>, and day <var>day</var>.</p>
+      <p><var>date</var>를 <var>year</var>년, <var>month</var>월, <var>day</var>일을 가지고 날짜로 둡니다.</p>
      </li><li data-md="">
-      <p>Return <var>date</var>.</p>
+      <p><var>date</var>를 반환합니다.</p>
     </li></ol>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="parse-a-date-component">parse a date component</dfn>, given an <var>input</var> string and a <var>position</var>, are as follows. This will return either a year, a month, and a day, or
-  nothing. If at any point the algorithm says that it "fails", this means that it is aborted at
-  that point and returns nothing.</p>
+    <p>주어진 <var>input</var> 문자열과 <var>position</var>인 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse a date component" data-noexport="" id="parse-a-date-component">날짜 컴포넌트를 해석</dfn>하기
+  위한 규칙은 다음과 같습니다. 이것은 연도, 월, 일을 반환하거나 아무것도 반환하지 않을 것입니다.
+  어느 시점에 알고리즘이 "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 
+  의미합니다.</p>
     <ol>
      <li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#parse-a-month-component" id="ref-for-parse-a-month-component-2">Parse a month component</a> to obtain <var>year</var> and <var>month</var>. If this
-  returns nothing, then fail.</p>
+      <p><var>year</var>와 <var>month</var>를 얻기 위해 <a data-link-type="dfn" href="infrastructure.html#parse-a-month-component" id="ref-for-parse-a-month-component-2">월 컴포넌트를 해석</a>합니다.
+  이것이 아무 것도 반환하지 않는다면, 실패입니다.</p>
      </li><li data-md="">
-      <p>Let <var>maxday</var> be the <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-2">number of days in month <var>month</var> of year <var>year</var></a>.</p>
+      <p><var>maxday</var>를 <a data-link-type="dfn"><var>year</var>년 <var>month</var>월의 날짜의 수</a>로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is beyond the end of <var>input</var> or if the character at <var>position</var> is not a U+002D HYPHEN-MINUS character, then fail. Otherwise, move <var>position</var> forwards one character.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나거나 <var>position</var>에 있는 문자가 U+002D
+  HYPHEN-MINUS 문자가 아니라면, 실패입니다. 그렇지 않으면, <var>position</var>를 한 글자 앞으로 
+  옮깁니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-15">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-30">ASCII digits</a>. If the collected
-  sequence is not exactly two characters long, then fail. Otherwise, interpret the resulting
-  sequence as a base-ten integer. Let that number be the <var>day</var>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-30">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-15">일련의 문자를 수집</a>합니다.
+  수집된 시퀀스가 정확히 두 글자가 아니라면, 실패입니다. 그렇지 않으면, 10 진수 정수로 결과 
+  시퀀스를 해석합니다. 그 숫자를 <var>day</var>로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>day</var> is not a number in the range
-  1&nbsp;≤&nbsp;<var>day</var>&nbsp;≤&nbsp;<var>maxday</var>, then fail.</p>
+      <p><var>day</var>가 1&nbsp;≤&nbsp;<var>day</var>&nbsp;≤&nbsp;<var>maxday</var> 내 범위의
+  숫자가 아니라면, 실패입니다.</p>
      </li><li data-md="">
-      <p>Return <var>year</var>, <var>month</var>, and <var>day</var>.</p>
+      <p><var>year</var>, <var>month</var>, <var>day</var>를 반환합니다.</p>
     </li></ol>
     <h5 class="heading settled" data-level="2.4.5.3" id="yearless-dates"><span class="secno">2.4.5.3. </span><span class="content">Yearless dates</span><a class="self-link" href="infrastructure.html#yearless-dates"></a></h5>
     <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="yearless-date">yearless date</dfn> consists of a Gregorian month and a
@@ -4002,7 +3999,7 @@ pre.idl.highlight { color: #708090; }
      </li><li data-md="">
       <p>Two <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-32">ASCII digits</a>, representing <var>day</var>, in the range
   1&nbsp;≤&nbsp;<var>day</var>&nbsp;≤&nbsp;<var>maxday</var> where <var>maxday</var> is
-  the <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-3">number of days</a> in the month <var>month</var> and any arbitrary leap year (e.g., 4 or
+  the <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-2">number of days</a> in the month <var>month</var> and any arbitrary leap year (e.g., 4 or
   2000)</p>
     </li></ol>
     <p class="note" role="note"> In other words, if the <var>month</var> is "<code>02</code>", meaning February, then the day can
@@ -4040,7 +4037,7 @@ pre.idl.highlight { color: #708090; }
       <p>If <var>month</var> is not a number in the range
   1&nbsp;≤&nbsp;<var>month</var>&nbsp;≤&nbsp;12, then fail.</p>
      </li><li data-md="">
-      <p>Let <var>maxday</var> be the <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-4">number of days</a> in month <var>month</var> of any arbitrary
+      <p>Let <var>maxday</var> be the <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-3">number of days</a> in month <var>month</var> of any arbitrary
   leap year (e.g., 4 or 2000).</p>
      </li><li data-md="">
       <p>If <var>position</var> is beyond the end of <var>input</var> or if the character at <var>position</var> is not a U+002D HYPHEN-MINUS character, then fail. Otherwise, move <var>position</var> forwards one character.</p>
@@ -7420,9 +7417,9 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-16">2.4.4.4. 백분율과 길이</a> <a href="infrastructure.html#ref-for-ascii-digits-17">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-18">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-19">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-20">2.4.4.6. 부동 소수점 수 목록</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-21">2.4.4.7. 치수 목록</a> <a href="infrastructure.html#ref-for-ascii-digits-22">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-23">(3)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-24">2.4.5. Dates and times</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-25">2.4.5.1. Months</a> <a href="infrastructure.html#ref-for-ascii-digits-26">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-27">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-28">(4)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-29">2.4.5.2. Dates</a> <a href="infrastructure.html#ref-for-ascii-digits-30">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-24">2.4.5. 날짜와 시간</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-25">2.4.5.1. 월</a> <a href="infrastructure.html#ref-for-ascii-digits-26">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-27">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-28">(4)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-29">2.4.5.2. 날짜</a> <a href="infrastructure.html#ref-for-ascii-digits-30">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-31">2.4.5.3. Yearless dates</a> <a href="infrastructure.html#ref-for-ascii-digits-32">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-33">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-34">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-35">2.4.5.4. Times</a> <a href="infrastructure.html#ref-for-ascii-digits-36">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-37">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-38">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-39">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-40">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-41">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-42">(8)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-43">2.4.5.6. Time zones</a> <a href="infrastructure.html#ref-for-ascii-digits-44">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-45">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-46">(4)</a>
@@ -7478,8 +7475,8 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-6">2.4.4.4. 백분율과 길이</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-7">2.4.4.6. 부동 소수점 수 목록</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-8">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-9">(3)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-10">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-11">2.4.4.7. 치수 목록</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-12">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-13">2.4.5.1. Months</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-14">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-15">2.4.5.2. Dates</a>
+    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-13">2.4.5.1. 월</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-14">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-15">2.4.5.2. 날짜</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-16">2.4.5.3. Yearless dates</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-17">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-18">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-19">2.4.5.4. Times</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-20">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-21">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-22">2.4.5.6. Time zones</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-23">(2)</a>
@@ -7746,14 +7743,14 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="number-of-days-in-month-month-of-year-year">
    <b><a href="infrastructure.html#number-of-days-in-month-month-of-year-year">#number-of-days-in-month-month-of-year-year</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-1">2.4.5.2. Dates</a> <a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-3">2.4.5.3. Yearless dates</a> <a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-4">(2)</a>
+    <li><a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-1">2.4.5.2. 날짜</a>
+    </li><li><a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-2">2.4.5.3. Yearless dates</a> <a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-3">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="proleptic-gregorian-calendar">
    <b><a href="infrastructure.html#proleptic-gregorian-calendar">#proleptic-gregorian-calendar</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-proleptic-gregorian-calendar-1">2.4.5. Dates and times</a> <a href="infrastructure.html#ref-for-proleptic-gregorian-calendar-2">(2)</a> <a href="infrastructure.html#ref-for-proleptic-gregorian-calendar-3">(3)</a>
+    <li><a href="infrastructure.html#ref-for-proleptic-gregorian-calendar-1">2.4.5. 날짜와 시간</a> <a href="infrastructure.html#ref-for-proleptic-gregorian-calendar-2">(2)</a> <a href="infrastructure.html#ref-for-proleptic-gregorian-calendar-3">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-proleptic-gregorian-calendar-4">2.4.5.7. Global dates and times</a>
     </li><li><a href="infrastructure.html#ref-for-proleptic-gregorian-calendar-5">2.4.5.8. Weeks</a> <a href="infrastructure.html#ref-for-proleptic-gregorian-calendar-6">(2)</a> <a href="infrastructure.html#ref-for-proleptic-gregorian-calendar-7">(3)</a>
    </li></ul>
@@ -7761,8 +7758,8 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="proleptic-gregorian-date">
    <b><a href="infrastructure.html#proleptic-gregorian-date">#proleptic-gregorian-date</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-1">2.4.5.1. Months</a>
-    </li><li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-2">2.4.5.2. Dates</a>
+    <li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-1">2.4.5.1. 월</a>
+    </li><li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-2">2.4.5.2. 날짜</a>
     </li><li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-3">2.4.5.5. Floating dates and times</a>
     </li><li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-4">2.4.5.7. Global dates and times</a>
    </li></ul>
@@ -7778,7 +7775,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="valid-month-string">
    <b><a href="infrastructure.html#valid-month-string">#valid-month-string</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-valid-month-string-1">2.4.5.2. Dates</a>
+    <li><a href="infrastructure.html#ref-for-valid-month-string-1">2.4.5.2. 날짜</a>
     </li><li><a href="textlevel-semantics.html#ref-for-valid-month-string-2">4.5.16. The time element</a>
     </li><li><a href="sec-forms.html#ref-for-valid-month-string-3">4.10.5.1.8. Month state (type=month)</a> <a href="sec-forms.html#ref-for-valid-month-string-4">(2)</a> <a href="sec-forms.html#ref-for-valid-month-string-5">(3)</a> <a href="sec-forms.html#ref-for-valid-month-string-6">(4)</a> <a href="sec-forms.html#ref-for-valid-month-string-7">(5)</a> <a href="sec-forms.html#ref-for-valid-month-string-8">(6)</a> <a href="sec-forms.html#ref-for-valid-month-string-9">(7)</a> <a href="sec-forms.html#ref-for-valid-month-string-10">(8)</a> <a href="sec-forms.html#ref-for-valid-month-string-11">(9)</a>
     </li><li><a href="sec-forms.html#ref-for-valid-month-string-12">4.10.19.8.1. Autofilling form controls: the autocomplete attribute</a>
@@ -7795,8 +7792,8 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="parse-a-month-component">
    <b><a href="infrastructure.html#parse-a-month-component">#parse-a-month-component</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-parse-a-month-component-1">2.4.5.1. Months</a>
-    </li><li><a href="infrastructure.html#ref-for-parse-a-month-component-2">2.4.5.2. Dates</a>
+    <li><a href="infrastructure.html#ref-for-parse-a-month-component-1">2.4.5.1. 월</a>
+    </li><li><a href="infrastructure.html#ref-for-parse-a-month-component-2">2.4.5.2. 날짜</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dates-date">
@@ -7830,7 +7827,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="parse-a-date-component">
    <b><a href="infrastructure.html#parse-a-date-component">#parse-a-date-component</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-parse-a-date-component-1">2.4.5.2. Dates</a>
+    <li><a href="infrastructure.html#ref-for-parse-a-date-component-1">2.4.5.2. 날짜</a>
     </li><li><a href="infrastructure.html#ref-for-parse-a-date-component-2">2.4.5.5. Floating dates and times</a>
     </li><li><a href="infrastructure.html#ref-for-parse-a-date-component-3">2.4.5.7. Global dates and times</a>
     </li><li><a href="infrastructure.html#ref-for-parse-a-date-component-4">2.4.5.10. Vaguer moments in time</a>
@@ -13095,7 +13092,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="elementdef-time">
    <b><a href="textlevel-semantics.html#elementdef-time">#elementdef-time</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-elementdef-time-1">2.4.5. Dates and times</a>
+    <li><a href="infrastructure.html#ref-for-elementdef-time-1">2.4.5. 날짜와 시간</a>
     </li><li><a href="dom.html#ref-for-elementdef-time-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-time-3">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-time-4">3.2.4.2.8. Palpable content</a>
