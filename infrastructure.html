@@ -1482,10 +1482,10 @@ pre.idl.highlight { color: #708090; }
          <ol class="toc">
           <li><a href="infrastructure.html#months"><span class="secno">2.4.5.1</span> <span class="content">월</span></a>
           </li><li><a href="infrastructure.html#sec-dates"><span class="secno">2.4.5.2</span> <span class="content">날짜</span></a>
-          </li><li><a href="infrastructure.html#yearless-dates"><span class="secno">2.4.5.3</span> <span class="content">Yearless dates</span></a>
-          </li><li><a href="infrastructure.html#times"><span class="secno">2.4.5.4</span> <span class="content">Times</span></a>
-          </li><li><a href="infrastructure.html#floating-dates-and-times"><span class="secno">2.4.5.5</span> <span class="content">Floating dates and times</span></a>
-          </li><li><a href="infrastructure.html#time-zones"><span class="secno">2.4.5.6</span> <span class="content">Time zones</span></a>
+          </li><li><a href="infrastructure.html#yearless-dates"><span class="secno">2.4.5.3</span> <span class="content">연도 없는 날짜</span></a>
+          </li><li><a href="infrastructure.html#times"><span class="secno">2.4.5.4</span> <span class="content">시간</span></a>
+          </li><li><a href="infrastructure.html#floating-dates-and-times"><span class="secno">2.4.5.5</span> <span class="content">변동 날짜와 시간</span></a>
+          </li><li><a href="infrastructure.html#time-zones"><span class="secno">2.4.5.6</span> <span class="content">표준 시간대</span></a>
           </li><li><a href="infrastructure.html#global-dates-and-times"><span class="secno">2.4.5.7</span> <span class="content">Global dates and times</span></a>
           </li><li><a href="infrastructure.html#weeks"><span class="secno">2.4.5.8</span> <span class="content">Weeks</span></a>
           </li><li><a href="infrastructure.html#durations"><span class="secno">2.4.5.9</span> <span class="content">Durations</span></a>
@@ -3903,7 +3903,7 @@ pre.idl.highlight { color: #708090; }
      </li><li data-md="">
       <p><var>year</var>와 <var>month</var>를 반환합니다.</p>
     </li></ol>
-    <p>주어진 <var>input</var> 문자열, <var>position</var>인 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse a month component" data-noexport="" id="parse-a-month-component">월 컴포넌트를 해석</dfn>하기
+    <p><var>input</var> 문자열, <var>position</var>이 주어진 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse a month component" data-noexport="" id="parse-a-month-component">월 컴포넌트를 해석</dfn>하기
   위한 규칙은 다음과 같습니다. 이것은 연도와 월을 반환하거나 아무 것도 반환하지 않을 것입니다. 어느 
   시점에 알고리즘이 "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
     <ol>
@@ -3959,8 +3959,8 @@ pre.idl.highlight { color: #708090; }
      </li><li data-md="">
       <p><var>date</var>를 반환합니다.</p>
     </li></ol>
-    <p>주어진 <var>input</var> 문자열과 <var>position</var>인 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse a date component" data-noexport="" id="parse-a-date-component">날짜 컴포넌트를 해석</dfn>하기
-  위한 규칙은 다음과 같습니다. 이것은 연도, 월, 일을 반환하거나 아무것도 반환하지 않을 것입니다.
+    <p><var>input</var> 문자열과 <var>position</var>가 주어진 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse a date component" data-noexport="" id="parse-a-date-component">날짜 컴포넌트를 해석</dfn>하기
+  위한 규칙은 다음과 같습니다. 이것은 연도, 월, 일을 반환하거나 아무 것도 반환하지 않을 것입니다.
   어느 시점에 알고리즘이 "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 
   의미합니다.</p>
     <ol>
@@ -3983,338 +3983,326 @@ pre.idl.highlight { color: #708090; }
      </li><li data-md="">
       <p><var>year</var>, <var>month</var>, <var>day</var>를 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.5.3" id="yearless-dates"><span class="secno">2.4.5.3. </span><span class="content">Yearless dates</span><a class="self-link" href="infrastructure.html#yearless-dates"></a></h5>
-    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="yearless-date">yearless date</dfn> consists of a Gregorian month and a
-  day within that month, but with no associated year. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-yearless-date-string">valid yearless date string</dfn> representing a month <var>month</var> and a
-  day <var>day</var> if it consists of the following components in the given order:</p>
+    <h5 class="heading settled" data-level="2.4.5.3" id="yearless-dates"><span class="secno">2.4.5.3. </span><span class="content">연도 없는 날짜</span><a class="self-link" href="infrastructure.html#yearless-dates"></a></h5>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="yearless date" data-noexport="" id="yearless-date">연도 없는 날짜</dfn>는 그레고리 월과 그 월 내의 날짜로 구성되지만, 연관된
+  연도는 없습니다. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
+    <p>문자열이 주어진 순서에 따라 다음 컴포넌트로 구성된다면, <var>month</var>월과 <var>day</var>일을
+  나타내는 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid yearless date string" data-noexport="" id="valid-yearless-date-string">유효한 연도 없는 날짜 문자열</dfn>입니다:</p>
     <ol>
      <li data-md="">
-      <p>Optionally, two U+002D HYPHEN-MINUS characters (-)</p>
+      <p>선택적으로, 두 U+002D HYPHEN-MINUS 문자 (-)</p>
      </li><li data-md="">
-      <p>Two <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-31">ASCII digits</a>, representing the month <var>month</var>, in the range
-  1&nbsp;≤&nbsp;<var>month</var>&nbsp;≤&nbsp;12</p>
+      <p>1&nbsp;≤&nbsp;<var>month</var>&nbsp;≤&nbsp;12 범위에서 <var>month</var>월을 나타내는 두 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-31">ASCII 숫자</a></p>
      </li><li data-md="">
-      <p>A U+002D HYPHEN-MINUS character (-)</p>
+      <p>U+002D HYPHEN-MINUS 문자 (-)</p>
      </li><li data-md="">
-      <p>Two <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-32">ASCII digits</a>, representing <var>day</var>, in the range
-  1&nbsp;≤&nbsp;<var>day</var>&nbsp;≤&nbsp;<var>maxday</var> where <var>maxday</var> is
-  the <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-2">number of days</a> in the month <var>month</var> and any arbitrary leap year (e.g., 4 or
-  2000)</p>
+      <p><var>maxday</var>가 <var>month</var>월과 임의의 윤년(예를 들어, 4나 2000)의 <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-2">날짜의 수</a>인, 
+  1&nbsp;≤&nbsp;<var>day</var>&nbsp;≤&nbsp;<var>maxday</var> 범위에서 <var>day</var>를 
+  나타내는 두 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-32">ASCII 숫자</a></p>
     </li></ol>
-    <p class="note" role="note"> In other words, if the <var>month</var> is "<code>02</code>", meaning February, then the day can
-    be 29, as if the year was a leap year. </p>
-    <p class="example" id="example-dcdbb829"><a class="self-link" href="infrastructure.html#example-dcdbb829"></a> For example, 29 February is encoded <code>02-29</code>, and 3 March is encoded <code>03-03</code>. </p>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a yearless date string|parse a yearless date string" data-noexport="" id="parsing-a-yearless-date-string">parse a yearless date string</dfn> are as follows. This will return either a
-  month and a day, or nothing. If at any point the algorithm says that it "fails", this means that
-  it is aborted at that point and returns nothing.</p>
+    <p class="note" role="note"> 바꿔 말하면, <var>month</var>이 2월을 의미하는 "<code>02</code>"라면, 날짜는 해가 윤년이었던 것처럼,
+    29가 될 수 있습니다. </p>
+    <p class="example" id="example-b1c60022"><a class="self-link" href="infrastructure.html#example-b1c60022"></a> 예를 들어, 2월 29일은 <code>02-29</code>로 부호화 되고, 3월 3일은 <code>03-03</code>로 부호화 됩니다. </p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a yearless date string|parse a yearless date string" data-noexport="" id="parsing-a-yearless-date-string">연도 없는 날짜 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다.
+  이것은 월과 날짜를 반환하거나 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 "실패"라고 
+  말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-  of the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#parse-a-yearless-date-component" id="ref-for-parse-a-yearless-date-component-1">Parse a yearless date component</a> to obtain <var>month</var> and <var>day</var>. If this
-  returns nothing, then fail.</p>
+      <p><var>month</var>와 <var>day</var>를 얻기 위해 <a data-link-type="dfn" href="infrastructure.html#parse-a-yearless-date-component" id="ref-for-parse-a-yearless-date-component-1">연도 없는 날짜 컴포넌트를 해석</a>합니다.
+  이것이 아무 것도 반환하지 않는다면 실패입니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is <em>not</em> beyond the end of <var>input</var>, then fail.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나지 <em>않으</em>면, 실패입니다.</p>
      </li><li data-md="">
-      <p>Return <var>month</var> and <var>day</var>.</p>
+      <p><var>month</var>와 <var>day</var>를 반환합니다.</p>
     </li></ol>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="parse-a-yearless-date-component">parse a yearless date component</dfn>, given an <var>input</var> string and a <var>position</var>, are as follows. This will return either a month and a day, or nothing. If
-  at any point the algorithm says that it "fails", this means that it is aborted at that point and
-  returns nothing.</p>
+    <p><var>input</var> 문자열과 <var>position</var>이 주어진 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse a yearless date component" data-noexport="" id="parse-a-yearless-date-component">연도 없는 날짜 컴포넌트를 해석</dfn>하기 위한 규칙은 다음과 같습니다.
+  이것은 월과 날짜를 반환하거나 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 "실패"라고 
+  말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
     <ol>
      <li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-16">Collect a sequence of characters</a> that are U+002D HYPHEN-MINUS characters (-). If the
-  collected sequence is not exactly zero or two characters long, then fail.</p>
+      <p>U+002D HYPHEN-MINUS 문자 (-)인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-16">일련의 문자를 수집</a>합니다.
+  수집된 시퀀스가 정확히 0개 혹은 두 개 글자가 아니라면, 실패입니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-17">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-33">ASCII digits</a>. If the collected
-  sequence is not exactly two characters long, then fail. Otherwise, interpret the resulting
-  sequence as a base-ten integer. Let that number be the <var>month</var>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-33">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-17">일련의 문자를 수집</a>합니다.
+  수집된 시퀀스가 정확히 두 글자가 아니라면, 실패입니다. 그렇지 않으면, 10 진수 정수로 결과
+  시퀀스를 해석합니다. 그 숫자를 <var>month</var>로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>month</var> is not a number in the range
-  1&nbsp;≤&nbsp;<var>month</var>&nbsp;≤&nbsp;12, then fail.</p>
+      <p><var>month</var>가 1&nbsp;≤&nbsp;<var>month</var>&nbsp;≤&nbsp;12 범위 내 숫자가 아니라면
+  실패입니다.</p>
      </li><li data-md="">
-      <p>Let <var>maxday</var> be the <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-3">number of days</a> in month <var>month</var> of any arbitrary
-  leap year (e.g., 4 or 2000).</p>
+      <p><var>maxday</var>를 임의의 윤년(예를 들어, 4 또는 2000)의 <var>month</var>월의 <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-3">날짜의 수</a>로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is beyond the end of <var>input</var> or if the character at <var>position</var> is not a U+002D HYPHEN-MINUS character, then fail. Otherwise, move <var>position</var> forwards one character.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나거나 <var>position</var>에 있는 문자가 U+002D
+  U+002D HYPHEN-MINUS 문자가 아니라면 실패입니다. 그렇지 않으면, <var>position</var>를 한 글자 
+  앞으로 이동합니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-18">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-34">ASCII digits</a>. If the collected
-  sequence is not exactly two characters long, then fail. Otherwise, interpret the resulting
-  sequence as a base-ten integer. Let that number be the <var>day</var>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-34">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-18">일련의 문자를 수집</a>합니다.
+  수집된 시퀀스가 정확히 두 글자가 아니라면, 실패입니다. 그렇지 않으면 10 진수 정수로 결과
+  시퀀스를 해석합니다. 그 숫자를 <var>day</var>로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>day</var> is not a number in the range
-  1&nbsp;≤&nbsp;<var>day</var>&nbsp;≤&nbsp;<var>maxday</var>, then fail.</p>
+      <p><var>day</var>가 1&nbsp;≤&nbsp;<var>day</var>&nbsp;≤&nbsp;<var>maxday</var> 범위 내 숫자가
+  아니라면 실패입니다.</p>
      </li><li data-md="">
-      <p>Return <var>month</var> and <var>day</var>.</p>
+      <p><var>month</var>와 <var>day</var>를 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.5.4" id="times"><span class="secno">2.4.5.4. </span><span class="content">Times</span><a class="self-link" href="infrastructure.html#times"></a></h5>
-    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="time">time</dfn> consists of a specific time with no time-zone information, consisting of an
-  hour, a minute, a second, and a fraction of a second.</p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-time-string">valid time string</dfn> representing an hour <var>hour</var>, a minute <var>minute</var>, and a second <var>second</var> if it consists of the following components in
-  the given order:</p>
+    <h5 class="heading settled" data-level="2.4.5.4" id="times"><span class="secno">2.4.5.4. </span><span class="content">시간</span><a class="self-link" href="infrastructure.html#times"></a></h5>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="time">time</dfn>은 시, 분, 초, 소수점 초로 구성되는, 표준 시간대 정보가 없는 특정한
+  시간으로 구성됩니다.</p>
+    <p>문자열이 주어진 순서에 따라 다음 컴포넌트로 구성된다면, <var>hour</var>시 <var>minute</var>분 <var>second</var>를 나타내는 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid time string" data-noexport="" id="valid-time-string">유효한 시간 문자열</dfn>입니다:</p>
     <ol>
      <li data-md="">
-      <p>Two <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-35">ASCII digits</a>, representing <var>hour</var>, in the range
-  0&nbsp;≤&nbsp;<var>hour</var>&nbsp;≤&nbsp;23</p>
+      <p>0&nbsp;≤&nbsp;<var>hour</var>&nbsp;≤&nbsp;23 범위의 <var>hour</var>을 나타내는 두 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-35">ASCII 숫자</a></p>
      </li><li data-md="">
-      <p>A U+003A COLON character (:)</p>
+      <p>U+003A 콜론 문자 (:)</p>
      </li><li data-md="">
-      <p>Two <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-36">ASCII digits</a>, representing <var>minute</var>, in the range
-  0&nbsp;≤&nbsp;<var>minute</var>&nbsp;≤&nbsp;59</p>
+      <p>0&nbsp;≤&nbsp;<var>minute</var>&nbsp;≤&nbsp;59 범위의 <var>minute</var>을 나타내는 두 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-36">ASCII 숫자</a></p>
      </li><li data-md="">
-      <p>If <var>second</var> is non-zero, or optionally if <var>second</var> is zero:</p>
+      <p><var>second</var>가 0가 아니거나, 선택적으로 <var>second</var>가 0이라면:</p>
       <ol>
        <li data-md="">
-        <p>A U+003A COLON character (:)</p>
+        <p>U+003A 콜론 문자 (:)</p>
        </li><li data-md="">
-        <p>Two <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-37">ASCII digits</a>, representing the integer part of <var>second</var>, in the
-  range 0&nbsp;≤&nbsp;<var>s</var>&nbsp;≤&nbsp;59</p>
+        <p>0&nbsp;≤&nbsp;<var>s</var>&nbsp;≤&nbsp;59 범위의 <var>second</var>의 정수부를 나타내는
+  두 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-37">ASCII 숫자</a></p>
        </li><li data-md="">
-        <p>If <var>second</var> is not an integer, or optionally if <var>second</var> is an integer:</p>
+        <p><var>second</var>가 정수가 아니거나, 선택적으로 <var>second</var>가 정수라면:</p>
         <ol>
          <li data-md="">
-          <p>A 002E FULL STOP character (.)</p>
+          <p>002E 마침표 문자 (.)</p>
          </li><li data-md="">
-          <p>One, two, or three <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-38">ASCII digits</a>, representing the fractional part of <var>second</var></p>
+          <p>소수점 초 <var>second</var>를 나타내는 하나, 둘, 혹은 세 개의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-38">ASCII 숫자</a></p>
         </li></ol>
       </li></ol>
     </li></ol>
-    <p class="note" role="note"> The <var>second</var> component cannot be 60 or 61; leap seconds cannot be represented. </p>
-    <p class="example" id="example-ba33dc39"><a class="self-link" href="infrastructure.html#example-ba33dc39"></a> Times are encoded using the 24 hour clock, with optional seconds, and optional decimal fractions
-  of seconds. Thus 7.45pm is encoded as <code>19:45</code>. Note that parsing that time will return
-  19:45:00, or 7.45pm and zero seconds. <code>19:45:45.456</code> is 456 thousandths of
-  a second after 7.45pm and 45 seconds. </p>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a time string|parse a time string|parsing a time" data-noexport="" id="parsing-a-time-string">parse a time string</dfn> are as follows. This will return either a time, or
-  nothing. If at any point the algorithm says that it "fails", this means that it is aborted at
-  that point and returns nothing.</p>
+    <p class="note" role="note"> <var>second</var> 컴포넌트는 60이나 61이 될 수 없습니다; 윤초는 표현될 수 없습니다. </p>
+    <p class="example" id="example-a64e35d6"><a class="self-link" href="infrastructure.html#example-a64e35d6"></a> 시간은, 선택적으로 초, 그리고 선택적으로 십진수 소수점 초를 가지고, 24시간제를 사용하여 부호화 
+  됩니다. 따라서 7.45pm은 <code>19:45</code>로 부호화 됩니다. 그 시간 해석이 19:45:00 또는 7.45pm 
+  0초를 반환 할 것이라는 것을 주목하세요. <code>19:45:45.456</code>는 7.45pm 45초 이후 456 천분의 
+  1초 입니다. </p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a time string|parse a time string|parsing a time" data-noexport="" id="parsing-a-time-string">시간 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다.
+  이것은 시간을 반환하거나 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 "실패"라고 
+  말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-  of the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#parse-a-time-component" id="ref-for-parse-a-time-component-1">Parse a time component</a> to obtain <var>hour</var>, <var>minute</var>, and <var>second</var>. If this returns nothing, then fail.</p>
+      <p><var>hour</var>, <var>minute</var>, <var>second</var>를 얻기 위해 <a data-link-type="dfn" href="infrastructure.html#parse-a-time-component" id="ref-for-parse-a-time-component-1">시간 컴포넌트를 해석</a>합니다.
+  이것이 아무 것도 반환하지 않는다면 실패입니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is <em>not</em> beyond the end of <var>input</var>, then fail.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나지 <em>않으</em>면, 실패입니다.</p>
      </li><li data-md="">
-      <p>Let <var>time</var> be the time with hour <var>hour</var>, minute <var>minute</var>, and
-  second <var>second</var>.</p>
+      <p><var>time</var>을 <var>hour</var> 시, <var>minute</var> 분, <var>second</var> 초를 가진 시간으로
+  둡니다</p>
      </li><li data-md="">
-      <p>Return <var>time</var>.</p>
+      <p><var>time</var>을 반환합니다.</p>
     </li></ol>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="parse-a-time-component">parse a time component</dfn>, given an <var>input</var> string and a <var>position</var>, are as follows. This will return either an hour, a minute, and a second, or
-  nothing. If at any point the algorithm says that it "fails", this means that it is aborted at
-  that point and returns nothing.</p>
+    <p><var>input</var>과 <var>position</var>이 주어진 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse a time component" data-noexport="" id="parse-a-time-component">시간 컴포넌트를 해석</dfn>를
+  해석하기 위한 규칙은 다음고 같습니다. 이것은 시, 분, 초를 반환하거나 아무 것도 반환하지 않을 것입니다.
+  어느 시점에 알고리즘이 "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
     <ol>
      <li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-19">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-39">ASCII digits</a>. If the
-  collected sequence is not exactly two characters long, then fail. Otherwise, interpret the
-  resulting sequence as a base-ten integer. Let that number be the <var>hour</var>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-39">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-19">일련의 문자를 수집</a>합니다.
+  수집된 시퀀스가 정확히 두 글자가 아니라면 실패입니다. 그렇지 않으면, 10진 수 정수로 결과 시퀀스를
+  해석합니다. 그 숫자를 <var>hour</var>로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>hour</var> is not a number in the range
-  0&nbsp;≤&nbsp;<var>hour</var>&nbsp;≤&nbsp;23, then fail.</p>
+      <p><var>hour</var>가 0&nbsp;≤&nbsp;<var>hour</var>&nbsp;≤&nbsp;23 범위의 숫자가 아니라면
+  실패입니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is beyond the end of <var>input</var> or if the
-  character at <var>position</var> is not a U+003A COLON character, then fail. Otherwise,
-  move <var>position</var> forwards one character.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나거나 <var>position</var>에 있는 문자가 U+003A
+  콜론 문자가 아니라면 실패입니다. 그렇지 않으면, <var>position</var>를 한 글자 앞으로 이동합니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-20">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-40">ASCII digits</a>. If the collected
-  sequence is not exactly two characters long, then fail. Otherwise, interpret the resulting
-  sequence as a base-ten integer. Let that number be the <var>minute</var>.</p>
+      <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-40">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-20">일련의 문자를 수집</a>합니다.
+  수집된 시퀀스가 정확히 두 글자가 아니라면 실패입니다. 그렇지 않으면, 10진수 정수로 결과 시퀀스를
+  해석합니다. 그 숫자를 <var>minute</var>으로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>minute</var> is not a number in the range
-  0&nbsp;≤&nbsp;<var>minute</var>&nbsp;≤&nbsp;59, then fail.</p>
+      <p><var>minute</var>이 0&nbsp;≤&nbsp;<var>minute</var>&nbsp;≤&nbsp;59 범위의 숫자가 아니라면
+  실패입니다.</p>
      </li><li data-md="">
-      <p>Let <var>second</var> be a string with the value "0".</p>
+      <p><var>second</var>를 "0" 값을 가진 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is not beyond the end of <var>input</var> and the character at <var>position</var> is a U+003A COLON, then run these substeps:</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나지 않았고 <var>position</var>에 있는 문자가
+  U+003A 콜론 이라면, 이 하위 단계들을 수행합니다:</p>
       <ol>
        <li data-md="">
-        <p>Advance <var>position</var> to the next character in <var>input</var>.</p>
+        <p><var>position</var>을 <var>input</var> 내 다음 문자로 전진시킵니다.</p>
        </li><li data-md="">
-        <p>If <var>position</var> is beyond the end of <var>input</var>, or at the last character in <var>input</var>, or if the next <em>two</em> characters in <var>input</var> starting at <var>position</var> are not both <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-41">ASCII digits</a>, then fail.</p>
+        <p><var>position</var>이 <var>input</var>의 끝 혹은 <var>input</var> 내 마지막 문자를 지나거나, <var>position</var>에서 시작하는 <var>input</var> 내 다음 <em>두</em> 문자가 모두 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-41">ASCII 숫자</a>가 아니라면, 실패입니다.</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-21">Collect a sequence of characters</a> that are either <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-42">ASCII digits</a> or U+002E
-  FULL STOP characters. If the collected sequence is three characters long, or if it is
-  longer than three characters long and the third character is not a U+002E FULL STOP
-  character, or if it has more than one U+002E FULL STOP character, then fail. Otherwise,
-  let <var>second</var> be the collected string.</p>
+        <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-42">ASCII 숫자</a> 혹은 U+002E 마침표 문자인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-21">일련의 문자를 수집</a>합니다.
+  수집된 시퀀스가 3개 문자거나, 3개 문자보다 길고 3번째 문자가 U+002E 마침표 문자가 아니거나,
+  하나보다 많은 U+002E 마침표 문자를 가진다면, 실패입니다. 그렇지 않으면, <var>second</var>를
+  수집된 문자열로 둡니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Interpret <var>second</var> as a base-ten number (possibly with a fractional part). Let <var>second</var> be that number instead of the string version.</p>
+      <p><var>second</var>를 10진수(아마도 소수부를 가진) 수로 해석합니다. <var>second</var>를 문자열
+  버전 대신에 그 숫자로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>second</var> is not a number in the range
-  0&nbsp;≤&nbsp;<var>second</var>&nbsp;&lt;&nbsp;60, then fail.</p>
+      <p><var>second</var>가 0&nbsp;≤&nbsp;<var>second</var>&nbsp;&lt;&nbsp;60 범위의 숫자가 아니라면,
+  실패입니다.</p>
      </li><li data-md="">
-      <p>Return <var>hour</var>, <var>minute</var>, and <var>second</var>.</p>
+      <p><var>hour</var>, <var>minute</var>, <var>second</var>를 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.5.5" id="floating-dates-and-times"><span class="secno">2.4.5.5. </span><span class="content">Floating dates and times</span><a class="self-link" href="infrastructure.html#floating-dates-and-times"></a></h5>
-    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="floating-date-and-time">floating date and time</dfn> consists of a specific <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-date" id="ref-for-proleptic-gregorian-date-3">proleptic-Gregorian date</a>,
-  consisting of a year, a month, and a day, and a time, consisting of an hour, a minute, a second,
-  and a fraction of a second, but expressed without a time zone. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-floating-date-and-time-string">valid floating date and time string</dfn> representing a date and time if it
-  consists of the following components in the given order:</p>
+    <h5 class="heading settled" data-level="2.4.5.5" id="floating-dates-and-times"><span class="secno">2.4.5.5. </span><span class="content">변동 날짜와 시간</span><a class="self-link" href="infrastructure.html#floating-dates-and-times"></a></h5>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="floating date and time" data-noexport="" id="floating-date-and-time">변동 날짜와 시간</dfn>은 연, 월, 일 그리고 시, 분, 초, 소수점 초로 ,
+  구성되는 시간으로 구성되는 특정한 <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-date" id="ref-for-proleptic-gregorian-date-3">역산 그레고리 날짜</a>로 구성되지만
+  표준시간대 없이 표현됩니다. <a data-link-type="biblio" href="references.html#biblio-gregorian">[GREGORIAN]</a></p>
+    <p>문자열이 주어진 순서에 따라 다음 컴포넌트들로 구성된다면 날짜와 시간을 나타내는 <dfn data-dfn-type="dfn" data-lt="valid-floating-date-and-time-string" data-noexport="" id="valid-floating-date-and-time-string">유효한 변동 날짜와 시간 문자열<a class="self-link" href="infrastructure.html#valid-floating-date-and-time-string"></a></dfn>입니다:</p>
     <ol>
      <li data-md="">
-      <p>A <a data-link-type="dfn" href="infrastructure.html#valid-date-string" id="ref-for-valid-date-string-1">valid date string</a> representing the date</p>
+      <p>날짜를 나타내는 <a data-link-type="dfn" href="infrastructure.html#valid-date-string" id="ref-for-valid-date-string-1">유효한 날짜 문자열</a></p>
      </li><li data-md="">
-      <p>A U+0054 LATIN CAPITAL LETTER T character (T) or a U+0020 SPACE character</p>
+      <p>U+0054 라틴 대문자 T 문자 (T) 혹은 U+0020 공백 문자</p>
      </li><li data-md="">
-      <p>A <a data-link-type="dfn" href="infrastructure.html#valid-time-string" id="ref-for-valid-time-string-1">valid time string</a> representing the time</p>
+      <p>시간을 나타내는 <a data-link-type="dfn" href="infrastructure.html#valid-time-string" id="ref-for-valid-time-string-1">유효한 시간 문자열</a></p>
     </li></ol>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-normalized-floating-date-and-time-string">valid normalized floating date and time string</dfn> representing a date and
-  time if it consists of the following components in the given order:</p>
+    <p>문자열이 주어진 순서에 따라 다음 컴포넌트로 구성된다면 날짜와 시간을 나타내는 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid normalized floating date and time string" data-noexport="" id="valid-normalized-floating-date-and-time-string">유효한 정규화된 변동 날짜와 시간 문자열</dfn>입니다:</p>
     <ol>
      <li data-md="">
-      <p>A <a data-link-type="dfn" href="infrastructure.html#valid-date-string" id="ref-for-valid-date-string-2">valid date string</a> representing the date</p>
+      <p>날짜를 나타내는 <a data-link-type="dfn" href="infrastructure.html#valid-date-string" id="ref-for-valid-date-string-2">유효한 날짜 문자열</a></p>
      </li><li data-md="">
-      <p>A U+0054 LATIN CAPITAL LETTER T character (T)</p>
+      <p>U+0054 라틴 대문자 T 문자 (T)</p>
      </li><li data-md="">
-      <p>A <a data-link-type="dfn" href="infrastructure.html#valid-time-string" id="ref-for-valid-time-string-2">valid time string</a> representing the time, expressed as the shortest possible string for
-  the given time (e.g., omitting the seconds component entirely if the given time is zero seconds
-  past the minute)</p>
+      <p>주어진 시간에 대해 가능한 가장 짧은 문자열로(예를 들어, 주어진 시간이 분 이후 0초라면 초 컴포넌트를
+  완전히 생략하여) 표현된 시간을 나타내는 <a data-link-type="dfn" href="infrastructure.html#valid-time-string" id="ref-for-valid-time-string-2">유효한 시간 문자열</a></p>
     </li></ol>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a floating date and time string|parse a floating date and time string|parsing a floating date and time" data-noexport="" id="parsing-a-floating-date-and-time-string">parse a floating date and time string</dfn> are as follows. This will return
-  either a date and time, or nothing. If at any point the algorithm says that it "fails", this
-  means that it is aborted at that point and returns nothing.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a floating date and time string|parse a floating date and time string|parsing a floating date and time" data-noexport="" id="parsing-a-floating-date-and-time-string">변동 날짜와 시간 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다.
+  이것은 날짜와 시간을 반환하거나 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 "실패"라고 
+  말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-  of the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#parse-a-date-component" id="ref-for-parse-a-date-component-2">Parse a date component</a> to obtain <var>year</var>, <var>month</var>, and <var>day</var>. If this returns nothing, then fail.</p>
+      <p><var>year</var>, <var>month</var>, <var>day</var>를 얻기 위해 <a data-link-type="dfn" href="infrastructure.html#parse-a-date-component" id="ref-for-parse-a-date-component-2">날짜 컴포넌트를 해석</a>합니다.
+  이것이 아무 것도 반환하지 않는다면, 실패입니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is beyond the end of <var>input</var> or if the character at <var>position</var> is neither a U+0054 LATIN CAPITAL LETTER T character (T) nor a U+0020
-  SPACE character, then fail. Otherwise, move <var>position</var> forwards one character.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지났거나 <var>position</var>에 있는 문자가
+  U+0054 라틴 대문자 T 문자 (T)나 U+0020 공백 문자가 아니라면, 실패입니다.
+  그렇지 않으면, <var>position</var>를 한 글자 앞으로 이동합니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#parse-a-time-component" id="ref-for-parse-a-time-component-2">Parse a time component</a> to obtain <var>hour</var>, <var>minute</var>, and <var>second</var>. If this returns nothing, then fail.</p>
+      <p><var>hour</var>, <var>minute</var>, <var>second</var>를 얻기 위해 <a data-link-type="dfn" href="infrastructure.html#parse-a-time-component" id="ref-for-parse-a-time-component-2">시간 컴포넌트를 해석</a>합니다.
+  이것이 아무 것도 반환하지 않는다면, 실패입니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is <em>not</em> beyond the end of <var>input</var>, then fail.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나지 <em>않으</em>면, 실패입니다.</p>
      </li><li data-md="">
-      <p>Let <var>date</var> be the date with year <var>year</var>, month <var>month</var>, and day <var>day</var>.</p>
+      <p><var>date</var>를 <var>year</var>년, <var>month</var>월, <var>day</var>일을 가진 날짜로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>time</var> be the time with hour <var>hour</var>, minute <var>minute</var>, and
-  second <var>second</var>.</p>
+      <p><var>time</var>를 <var>hour</var>시, <var>minute</var>분, <var>second</var>초를 가진 시간으로
+  둡니다.</p>
      </li><li data-md="">
-      <p>Return <var>date</var> and <var>time</var>.</p>
+      <p><var>date</var>와 <var>time</var>을 반환합니다.</p>
     </li></ol>
-    <h5 class="heading settled" data-level="2.4.5.6" id="time-zones"><span class="secno">2.4.5.6. </span><span class="content">Time zones</span><a class="self-link" href="infrastructure.html#time-zones"></a></h5>
-    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="time zone|time-zone offset" data-noexport="" id="time-zone">time-zone offset</dfn> consists of a signed number of hours and minutes.</p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-time-zone-offset-string">valid time-zone offset string</dfn> representing a time-zone offset if it
-  consists of either:</p>
+    <h5 class="heading settled" data-level="2.4.5.6" id="time-zones"><span class="secno">2.4.5.6. </span><span class="content">표준 시간대</span><a class="self-link" href="infrastructure.html#time-zones"></a></h5>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="time zone|time-zone offset" data-noexport="" id="time-zone">표준 시간대 편차</dfn>는 시간과 분의 부호화 된 숫자로 구성됩니다.</p>
+    <p>문자열이 다음으로 구성된다면, 표준 시간대 편차를 나타내는 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid time-zone offset string" data-noexport="" id="valid-time-zone-offset-string">유효한 표준 시간대 편차 문자열</dfn>입니다:</p>
     <ul>
      <li data-md="">
-      <p>A U+005A LATIN CAPITAL LETTER Z character (Z), allowed only if the time zone is UTC</p>
+      <p>시간대가 UTC인 경우에함 허용되는, U+005A 라틴 대문자 Z 문자 (Z)</p>
      </li><li data-md="">
-      <p>Or, the following components, in the given order:</p>
+      <p>혹은, 주어진 순서에 따라 다음 컴포넌트로 구성:</p>
       <ol>
        <li data-md="">
-        <p>Either a U+002B PLUS SIGN character (+) or, if the time-zone offset is not zero, a U+002D
-HYPHEN-MINUS character (-), representing the sign of the time-zone offset</p>
+        <p>표준 시간대 편차의 부호를 나타내는, U+002B PLUS 부호 문자 (+), 혹은 표준 시간대 편차가 0이
+아닌 경우 U+002D HYPHEN-MINUS 문자 (-)</p>
        </li><li data-md="">
-        <p>Two <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-43">ASCII digits</a>, representing the hours component <var>hour</var> of the
-time-zone offset, in the range 0&nbsp;≤&nbsp;<var>hour</var>&nbsp;≤&nbsp;23</p>
+        <p>0&nbsp;≤&nbsp;<var>hour</var>&nbsp;≤&nbsp;23 범위의 표준 시간대 편차의 시간 컴포넌트 <var>hour</var>를 나타내는 두 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-43">ASCII 숫자</a></p>
        </li><li data-md="">
-        <p>Optionally, a U+003A COLON character (:)</p>
+        <p>선택적으로, U+003A 콜론 문자 (:)</p>
        </li><li data-md="">
-        <p>Two <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-44">ASCII digits</a>, representing the minutes component <var>minute</var> of the
-time-zone offset, in the range 0&nbsp;≤&nbsp;<var>minute</var>&nbsp;≤&nbsp;59</p>
+        <p>0&nbsp;≤&nbsp;<var>minute</var>&nbsp;≤&nbsp;59 범위의 표준 시간대 편차의 분 컴포넌트 <var>minute</var> 나타내는 두 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-44">ASCII 숫자</a></p>
       </li></ol>
     </li></ul>
-    <p class="note" role="note"> This format allows for time-zone offsets from -23:59 to +23:59. In practice, however, right now
-    the range of offsets of actual time zones is -12:00 to +14:00, and the minutes component of
-    offsets of actual time zones is always either 00, 30, or 45. There is no guarantee that this
-    will remain so forever, however; time zones are changed by countries at will and do not follow a
-    standard. </p>
-    <p class="note" role="note"> See also the usage notes and examples in the <a data-link-type="dfn" href="infrastructure.html#global-date-and-time" id="ref-for-global-date-and-time-1">global date and time</a> section below for
-    details on using time-zone offsets with historical times that predate the formation of formal
-    time zones. </p>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a time-zone offset string|parse a time-zone offset string" data-noexport="" id="parsing-a-time-zone-offset-string">parse a time-zone offset string</dfn> are as follows. This will return either
-  a time-zone offset, or nothing. If at any point the algorithm says that it "fails", this means
-  that it is aborted at that point and returns nothing.</p>
+    <p class="note" role="note"> 이 형식은 표준 시간대 편차에 대해 -23:59에서부터 +23:59까지 허용합니다. 하지만, 실제로는, 현재
+    실제 표준 시간대의 편차의 범위는 -12:00에서 +14:00, 그리고 실제 표준 시간대의 편차의 분 컴포넌트는
+    항상 00, 또는 30, 또는 45입니다. 하지만, 이것이 영원히 지속될 것이라는 보장은 없습니다; 표준
+    시간대는 국가에 의해 변경되고 표준을 따르지 않습니다. </p>
+    <p class="note" role="note"> 공식적인 표준 시간대의 형성에 앞선 역사적인 시간을 가진 표준 시간대 편차를 사용하는 데에 대한 
+    자세한 내용은 아래 <a data-link-type="dfn" href="infrastructure.html#global-date-and-time" id="ref-for-global-date-and-time-1">세계 날짜와 시간</a>섹션의 사용법과 예제 또한 
+    참고하세요. </p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a time-zone offset string|parse a time-zone offset string" data-noexport="" id="parsing-a-time-zone-offset-string">표준 시간대 편차 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다.
+  이것은 표준 시간대 편차를 반환하거나, 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 
+  "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>input</var> be the string being parsed.</p>
+      <p><var>input</var>을 해석되는 문자열로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-  of the string.</p>
+      <p><var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.</p>
      </li><li data-md="">
-      <p><a data-link-type="dfn" href="infrastructure.html#parse-a-time-zone-offset-component" id="ref-for-parse-a-time-zone-offset-component-1">Parse a time-zone offset component</a> to obtain <var>timezone<sub>hours</sub></var> and <var>timezone<sub>minutes</sub></var>. If this returns nothing, then fail.</p>
+      <p><var>timezone<sub>hours</sub></var>와 <var>timezone<sub>minutes</sub></var>를 얻기 위해 <a data-link-type="dfn" href="infrastructure.html#parse-a-time-zone-offset-component" id="ref-for-parse-a-time-zone-offset-component-1">표준 시간대 편차 컴포넌트를 해석</a>합니다.
+  이것이 아무 것도 반환하지 않는다면, 실패입니다.</p>
      </li><li data-md="">
-      <p>If <var>position</var> is <em>not</em> beyond the end of <var>input</var>, then fail.</p>
+      <p><var>position</var>이 <var>input</var>의 끝을 지나지 <em>않으</em>면, 실패입니다.</p>
      </li><li data-md="">
-      <p>Return the time-zone offset that is <var>timezone<sub>hours</sub></var> hours and <var>timezone<sub>minutes</sub></var> minutes from UTC.</p>
+      <p>UTC로부터 <var>timezone<sub>hours</sub></var> 시간 <var>timezone<sub>minutes</sub></var> 분인 표준 시간대 편차를 반환합니다.</p>
     </li></ol>
-    <p>The rules to <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="parse-a-time-zone-offset-component">parse a time-zone offset component</dfn>, given an <var>input</var> string and
-  a <var>position</var>, are as follows. This will return either time-zone hours and time-zone
-  minutes, or nothing. If at any point the algorithm says that it "fails", this means that it is
-  aborted at that point and returns nothing.</p>
+    <p><var>input</var> 문자열과 <var>position</var>이 주어진 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parse a time-zone offset component" data-noexport="" id="parse-a-time-zone-offset-component">표준 시간대 편차 컴포넌트를 해석</dfn>하기 위한 규칙은 다음과 같습니다.
+  이것은 표진 시간대 시간과 표준 시간대 분을 반환하거나, 아무 것도 반환하지 않을 것입니다.
+  어느 시점에 알고리즘이 "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 
+  의미합니다.</p>
     <ol>
      <li data-md="">
-      <p>If the character at <var>position</var> is a U+005A LATIN CAPITAL LETTER Z character (Z), then:</p>
+      <p><var>position</var>에 있는 문자가 U+005A 라틴 대문자 Z 문자 (Z)라면:</p>
       <ol>
        <li data-md="">
-        <p>Let <var>timezone<sub>hours</sub></var> be 0.</p>
+        <p><var>timezone<sub>hours</sub></var>를 0으로 둡니다.</p>
        </li><li data-md="">
-        <p>Let <var>timezone<sub>minutes</sub></var> be 0.</p>
+        <p><var>timezone<sub>minutes</sub></var>를 0으로 둡니다.</p>
        </li><li data-md="">
-        <p>Advance <var>position</var> to the next character in <var>input</var>.</p>
+        <p><var>position</var>을 <var>input</var> 내 다음 문자로 전진시킵니다.</p>
       </li></ol>
-      <p>Otherwise, if the character at <var>position</var> is either a U+002B PLUS SIGN (+) or a
-  U+002D HYPHEN-MINUS (-), then:</p>
+      <p>그렇지 않고, <var>position</var>에 있는 문자가 U+002B PLUS 부호 (+)나 U+002D HYPHEN-MINUS (-)라면:</p>
       <ol>
        <li data-md="">
-        <p>If the character at <var>position</var> is a U+002B PLUS SIGN (+), let <var>sign</var> be
-  "positive". Otherwise, it’s a U+002D HYPHEN-MINUS (-); let <var>sign</var> be
-  "negative".</p>
+        <p><var>position</var>에 있는 문자가 U+002B PLUS 부호 (+)라면, <var>sign</var>를 "양"으로 둡니다.
+  그렇지 않고, 그것이 U+002D HYPHEN-MINUS (-)라면; <var>sign</var>을 "음"으로 둡니다.</p>
        </li><li data-md="">
-        <p>Advance <var>position</var> to the next character in <var>input</var>.</p>
+        <p><var>position</var>을 <var>input</var> 내 다음 문자로 전진시킵니다.</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-22">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-45">ASCII digits</a>. Let <var>s</var> be
-  the collected sequence.</p>
+        <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-45">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-22">일련의 문자를 수집</a>합니다. <var>s</var>를 수집된 시퀀스로 둡니다.</p>
        </li><li data-md="">
-        <p>If <var>s</var> is exactly two characters long, then run these substeps:</p>
+        <p><var>s</var>가 정확히 두 글자라면, 이 하위 단계들을 수행합니다:</p>
         <ol>
          <li data-md="">
-          <p>Interpret <var>s</var> as a base-ten integer. Let that number be the <var>timezone<sub>hours</sub></var>.</p>
+          <p><var>s</var>를 10진수 정수로 해석합니다. 그 숫자를 <var>timezone<sub>hours</sub></var>로
+  둡니다.</p>
          </li><li data-md="">
-          <p>If <var>position</var> is beyond the end of <var>input</var> or if the character at <var>position</var> is not a U+003A COLON character, then fail. Otherwise, move <var>position</var> forwards one character.</p>
+          <p><var>position</var>이 <var>input</var>의 끝을 지났거나, <var>position</var>에 있는 문자가
+  U+003A 콜론 문자가 아니라면 실패입니다. 그렇지 않으면, <var>position</var>를 한 글자
+  앞으로 이동합니다.</p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-23">Collect a sequence of characters</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-46">ASCII digits</a>. If the
-  collected sequence is not exactly two characters long, then fail. Otherwise,
-  interpret the resulting sequence as a base-ten integer. Let that number be the <var>timezone<sub>minutes</sub></var>.</p>
+          <p><a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-46">ASCII 숫자</a>인 <a data-link-type="dfn" href="infrastructure.html#collect-a-sequence-of-characters" id="ref-for-collect-a-sequence-of-characters-23">일련의 문자를 수집</a>합니다.
+  수집된 시퀀스가 정확히 두 글자가 아니라면 실패입니다. 그렇지 않으면, 10진 정수로 결과 
+  시퀀스를 해석합니다. 그 수를 <var>timezone<sub>minutes</sub></var>로 둡니다.</p>
         </li></ol>
-        <p>If <var>s</var> is exactly four characters long, then run these substeps:</p>
+        <p><var>s</var>가 정확히 4 글자가 아니라면, 이 하위 단계들을 수행합니다:</p>
         <ol>
          <li data-md="">
-          <p>Interpret the first two characters of <var>s</var> as a base-ten integer. Let that
-  number be the <var>timezone<sub>hours</sub></var>.</p>
+          <p><var>s</var>의 첫 번째 두 글자를 10진 정수로 해석합니다. 그 수를 <var>timezone<sub>hours</sub></var>로 둡니다.</p>
          </li><li data-md="">
-          <p>Interpret the last two characters of <var>s</var> as a base-ten integer. Let that
-  number be the <var>timezone<sub>minutes</sub></var>.</p>
+          <p><var>s</var>의 마지막 두 글자를 10진 정수로 해석합니다. 그 수를 <var>timezone<sub>minutes</sub></var>로 둡니다.</p>
         </li></ol>
-        <p>Otherwise, fail.</p>
+        <p>그렇지 않으면 실패입니다.</p>
        </li><li data-md="">
-        <p>If <var>timezone<sub>hours</sub></var> is not a number in the range
-  0&nbsp;≤&nbsp;<var>timezone<sub>hours</sub></var>&nbsp;≤&nbsp;23, then fail.</p>
+        <p><var>timezone<sub>hours</sub></var>가 0&nbsp;≤&nbsp;<var>timezone<sub>hours</sub></var>&nbsp;≤&nbsp;23
+  범위의 숫자가 아니라면 실패입니다.</p>
        </li><li data-md="">
-        <p>If <var>sign</var> is "negative", then negate <var>timezone<sub>hours</sub></var>.</p>
+        <p><var>sign</var>가 "음"이라면, <var>timezone<sub>hours</sub></var>를 무효화합니다.</p>
        </li><li data-md="">
-        <p>If <var>timezone<sub>minutes</sub></var> is not a number in the range
-  0&nbsp;≤&nbsp;<var>timezone<sub>minutes</sub></var>&nbsp;≤&nbsp;59, then fail.</p>
+        <p><var>timezone<sub>minutes</sub></var>가 0&nbsp;≤&nbsp;<var>timezone<sub>minutes</sub></var>&nbsp;≤&nbsp;59
+  범위의 숫자가 아니라면 실패입니다.</p>
        </li><li data-md="">
-        <p>If <var>sign</var> is "negative", then negate <var>timezone<sub>minutes</sub></var>.</p>
+        <p><var>sign</var>이 "음"이라면, <var>timezone<sub>minutes</sub></var>를 무효화합니다.</p>
       </li></ol>
-      <p>Otherwise, fail.</p>
+      <p>그렇지 않으면 실패입니다.</p>
      </li><li data-md="">
-      <p>Return <var>timezone<sub>hours</sub></var> and <var>timezone<sub>minutes</sub></var>.</p>
+      <p><var>timezone<sub>hours</sub></var>과 <var>timezone<sub>minutes</sub></var>를 반환합니다.</p>
     </li></ol>
     <h5 class="heading settled" data-level="2.4.5.7" id="global-dates-and-times"><span class="secno">2.4.5.7. </span><span class="content">Global dates and times</span><a class="self-link" href="infrastructure.html#global-dates-and-times"></a></h5>
     <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="global-date-and-time">global date and time</dfn> consists of a specific <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-date" id="ref-for-proleptic-gregorian-date-4">proleptic-Gregorian date</a>,
@@ -7420,9 +7408,9 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-24">2.4.5. 날짜와 시간</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-25">2.4.5.1. 월</a> <a href="infrastructure.html#ref-for-ascii-digits-26">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-27">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-28">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-29">2.4.5.2. 날짜</a> <a href="infrastructure.html#ref-for-ascii-digits-30">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-31">2.4.5.3. Yearless dates</a> <a href="infrastructure.html#ref-for-ascii-digits-32">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-33">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-34">(4)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-35">2.4.5.4. Times</a> <a href="infrastructure.html#ref-for-ascii-digits-36">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-37">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-38">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-39">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-40">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-41">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-42">(8)</a>
-    </li><li><a href="infrastructure.html#ref-for-ascii-digits-43">2.4.5.6. Time zones</a> <a href="infrastructure.html#ref-for-ascii-digits-44">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-45">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-46">(4)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-31">2.4.5.3. 연도 없는 날짜</a> <a href="infrastructure.html#ref-for-ascii-digits-32">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-33">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-34">(4)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-35">2.4.5.4. 시간</a> <a href="infrastructure.html#ref-for-ascii-digits-36">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-37">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-38">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-39">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-40">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-41">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-42">(8)</a>
+    </li><li><a href="infrastructure.html#ref-for-ascii-digits-43">2.4.5.6. 표준 시간대</a> <a href="infrastructure.html#ref-for-ascii-digits-44">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-45">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-46">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-47">2.4.5.8. Weeks</a> <a href="infrastructure.html#ref-for-ascii-digits-48">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-49">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-50">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-51">2.4.5.9. Durations</a> <a href="infrastructure.html#ref-for-ascii-digits-52">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-53">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-54">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-55">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-56">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-57">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-58">(8)</a> <a href="infrastructure.html#ref-for-ascii-digits-59">(9)</a> <a href="infrastructure.html#ref-for-ascii-digits-60">(10)</a>
     </li><li><a href="dom.html#ref-for-ascii-digits-61">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-ascii-digits-62">(2)</a>
@@ -7477,9 +7465,9 @@ equal to the number of seconds in <var>t</var>.</p>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-11">2.4.4.7. 치수 목록</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-12">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-13">2.4.5.1. 월</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-14">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-15">2.4.5.2. 날짜</a>
-    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-16">2.4.5.3. Yearless dates</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-17">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-18">(3)</a>
-    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-19">2.4.5.4. Times</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-20">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-21">(3)</a>
-    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-22">2.4.5.6. Time zones</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-23">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-16">2.4.5.3. 연도 없는 날짜</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-17">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-18">(3)</a>
+    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-19">2.4.5.4. 시간</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-20">(2)</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-21">(3)</a>
+    </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-22">2.4.5.6. 표준 시간대</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-23">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-24">2.4.5.8. Weeks</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-25">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-26">2.4.5.9. Durations</a> <a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-27">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-collect-a-sequence-of-characters-28">2.4.7. Space-separated tokens</a>
@@ -7744,7 +7732,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#number-of-days-in-month-month-of-year-year">#number-of-days-in-month-month-of-year-year</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-1">2.4.5.2. 날짜</a>
-    </li><li><a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-2">2.4.5.3. Yearless dates</a> <a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-2">2.4.5.3. 연도 없는 날짜</a> <a href="infrastructure.html#ref-for-number-of-days-in-month-month-of-year-year-3">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="proleptic-gregorian-calendar">
@@ -7760,7 +7748,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-1">2.4.5.1. 월</a>
     </li><li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-2">2.4.5.2. 날짜</a>
-    </li><li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-3">2.4.5.5. Floating dates and times</a>
+    </li><li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-3">2.4.5.5. 변동 날짜와 시간</a>
     </li><li><a href="infrastructure.html#ref-for-proleptic-gregorian-date-4">2.4.5.7. Global dates and times</a>
    </li></ul>
   </aside>
@@ -7808,7 +7796,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="valid-date-string">
    <b><a href="infrastructure.html#valid-date-string">#valid-date-string</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-valid-date-string-1">2.4.5.5. Floating dates and times</a> <a href="infrastructure.html#ref-for-valid-date-string-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-valid-date-string-1">2.4.5.5. 변동 날짜와 시간</a> <a href="infrastructure.html#ref-for-valid-date-string-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-valid-date-string-3">2.4.5.7. Global dates and times</a> <a href="infrastructure.html#ref-for-valid-date-string-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-valid-date-string-5">2.4.5.10. Vaguer moments in time</a>
     </li><li><a href="textlevel-semantics.html#ref-for-valid-date-string-6">4.5.16. The time element</a>
@@ -7828,7 +7816,7 @@ equal to the number of seconds in <var>t</var>.</p>
    <b><a href="infrastructure.html#parse-a-date-component">#parse-a-date-component</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-parse-a-date-component-1">2.4.5.2. 날짜</a>
-    </li><li><a href="infrastructure.html#ref-for-parse-a-date-component-2">2.4.5.5. Floating dates and times</a>
+    </li><li><a href="infrastructure.html#ref-for-parse-a-date-component-2">2.4.5.5. 변동 날짜와 시간</a>
     </li><li><a href="infrastructure.html#ref-for-parse-a-date-component-3">2.4.5.7. Global dates and times</a>
     </li><li><a href="infrastructure.html#ref-for-parse-a-date-component-4">2.4.5.10. Vaguer moments in time</a>
    </li></ul>
@@ -7855,7 +7843,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="parse-a-yearless-date-component">
    <b><a href="infrastructure.html#parse-a-yearless-date-component">#parse-a-yearless-date-component</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-parse-a-yearless-date-component-1">2.4.5.3. Yearless dates</a>
+    <li><a href="infrastructure.html#ref-for-parse-a-yearless-date-component-1">2.4.5.3. 연도 없는 날짜</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="time">
@@ -7869,7 +7857,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="valid-time-string">
    <b><a href="infrastructure.html#valid-time-string">#valid-time-string</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-valid-time-string-1">2.4.5.5. Floating dates and times</a> <a href="infrastructure.html#ref-for-valid-time-string-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-valid-time-string-1">2.4.5.5. 변동 날짜와 시간</a> <a href="infrastructure.html#ref-for-valid-time-string-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-valid-time-string-3">2.4.5.7. Global dates and times</a> <a href="infrastructure.html#ref-for-valid-time-string-4">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-valid-time-string-5">4.5.16. The time element</a>
     </li><li><a href="sec-forms.html#ref-for-valid-time-string-6">4.10.5.1.10. Time state (type=time)</a> <a href="sec-forms.html#ref-for-valid-time-string-7">(2)</a> <a href="sec-forms.html#ref-for-valid-time-string-8">(3)</a> <a href="sec-forms.html#ref-for-valid-time-string-9">(4)</a> <a href="sec-forms.html#ref-for-valid-time-string-10">(5)</a> <a href="sec-forms.html#ref-for-valid-time-string-11">(6)</a> <a href="sec-forms.html#ref-for-valid-time-string-12">(7)</a> <a href="sec-forms.html#ref-for-valid-time-string-13">(8)</a> <a href="sec-forms.html#ref-for-valid-time-string-14">(9)</a>
@@ -7886,8 +7874,8 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="parse-a-time-component">
    <b><a href="infrastructure.html#parse-a-time-component">#parse-a-time-component</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-parse-a-time-component-1">2.4.5.4. Times</a>
-    </li><li><a href="infrastructure.html#ref-for-parse-a-time-component-2">2.4.5.5. Floating dates and times</a>
+    <li><a href="infrastructure.html#ref-for-parse-a-time-component-1">2.4.5.4. 시간</a>
+    </li><li><a href="infrastructure.html#ref-for-parse-a-time-component-2">2.4.5.5. 변동 날짜와 시간</a>
     </li><li><a href="infrastructure.html#ref-for-parse-a-time-component-3">2.4.5.7. Global dates and times</a>
     </li><li><a href="infrastructure.html#ref-for-parse-a-time-component-4">2.4.5.10. Vaguer moments in time</a>
    </li></ul>
@@ -7897,14 +7885,6 @@ equal to the number of seconds in <var>t</var>.</p>
    <ul>
     <li><a href="textlevel-semantics.html#ref-for-floating-date-and-time-1">4.5.16. The time element</a>
     </li><li><a href="sec-forms.html#ref-for-floating-date-and-time-2">4.10.5.1.11. Local Date and Time state (type=datetime-local)</a> <a href="sec-forms.html#ref-for-floating-date-and-time-3">(2)</a>
-   </li></ul>
-  </aside>
-  <aside class="dfn-panel" data-for="valid-floating-date-and-time-string">
-   <b><a href="infrastructure.html#valid-floating-date-and-time-string">#valid-floating-date-and-time-string</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="textlevel-semantics.html#ref-for-valid-floating-date-and-time-string-1">4.5.16. The time element</a> <a href="textlevel-semantics.html#ref-for-valid-floating-date-and-time-string-2">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-valid-floating-date-and-time-string-3">4.10.5.1.11. Local Date and Time state (type=datetime-local)</a> <a href="sec-forms.html#ref-for-valid-floating-date-and-time-string-4">(2)</a> <a href="sec-forms.html#ref-for-valid-floating-date-and-time-string-5">(3)</a> <a href="sec-forms.html#ref-for-valid-floating-date-and-time-string-6">(4)</a>
-    </li><li><a href="fullindex.html#ref-for-valid-floating-date-and-time-string-7">Attributes</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="valid-normalized-floating-date-and-time-string">
@@ -7943,7 +7923,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="parse-a-time-zone-offset-component">
    <b><a href="infrastructure.html#parse-a-time-zone-offset-component">#parse-a-time-zone-offset-component</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-parse-a-time-zone-offset-component-1">2.4.5.6. Time zones</a>
+    <li><a href="infrastructure.html#ref-for-parse-a-time-zone-offset-component-1">2.4.5.6. 표준 시간대</a>
     </li><li><a href="infrastructure.html#ref-for-parse-a-time-zone-offset-component-2">2.4.5.7. Global dates and times</a>
     </li><li><a href="infrastructure.html#ref-for-parse-a-time-zone-offset-component-3">2.4.5.10. Vaguer moments in time</a>
    </li></ul>
@@ -7951,7 +7931,7 @@ equal to the number of seconds in <var>t</var>.</p>
   <aside class="dfn-panel" data-for="global-date-and-time">
    <b><a href="infrastructure.html#global-date-and-time">#global-date-and-time</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-global-date-and-time-1">2.4.5.6. Time zones</a>
+    <li><a href="infrastructure.html#ref-for-global-date-and-time-1">2.4.5.6. 표준 시간대</a>
     </li><li><a href="infrastructure.html#ref-for-global-date-and-time-2">2.4.5.10. Vaguer moments in time</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-date-and-time-3">4.5.16. The time element</a>
     </li><li><a href="edits.html#ref-for-global-date-and-time-4">4.6.3. Attributes common to ins and del elements</a> <a href="edits.html#ref-for-global-date-and-time-5">(2)</a> <a href="edits.html#ref-for-global-date-and-time-6">(3)</a>
