@@ -1570,7 +1570,7 @@
 
   <dfn lt="ASCII case-insensitive">ASCII 대소문자 비구분</dfn> 방법으로 두 문자열을 비교하는 것은 
   U+0041에서 U+005A까지 범위의 문자(즉, 라틴 대문자 A부터 라틴 대문자 Z까지)와 U+0061에서 U+007A까지 
-  범위에 해당하는 문자(즉, 라틴 소문자 글자 A부터 라틴 소문자 글자 Z까지)들이 모두 일치하는 것으로 
+  범위에 해당하는 문자(즉, 라틴 소문자 A부터 라틴 소문자 Z까지)들이 모두 일치하는 것으로 
   간주되는 것을 제외하고, 코드 지점에 대해 코드 지점을 정확하게 비교한다는 것을 의미합니다.
 
   <dfn lt="compatibility caseless">호환되는 대소문자 무(無)구별</dfn> 방법으로 두 문자열을 비교하는 
@@ -2042,7 +2042,7 @@
   <div class="note">
     이 명세는 날짜에 대한 [[ISO8601]] 표준의 공통 부분 집합에 따라 날짜와 시간을 <em>부호화</em>합니다.
 
-    이는 부호화된 날짜는 1582-03-01, 0033-03-27, 2016-03-01 와 같이 보이고, 날짜-시간은 1929-11-13T19:00Z,
+    이는 부호화 된 날짜는 1582-03-01, 0033-03-27, 2016-03-01 와 같이 보이고, 날짜-시간은 1929-11-13T19:00Z,
     0325-06-03T00:21+10:30와 같이 보이는 것을 의미합니다. 형식은, 비록 일부분은 예를 들어 생일의 월과 
     일, 표준 시간대 정보가 없는 시간 등과 같이 표현하기 위해 선택적이기는 하지만, 대략 
     YYYY-MM-DDTHH:MM:SS.DD±HH:MM 입니다.
@@ -2347,14 +2347,14 @@
   <dfn lt="valid-floating-date-and-time-string">유효한 변동 날짜와 시간 문자열</dfn>입니다:
 
   1. 날짜를 나타내는 <a lt="valid date string">유효한 날짜 문자열</a>
-  2. U+0054 라틴 대문자 T 문자 (T) 혹은 U+0020 공백 문자
+  2. U+0054 라틴 대문자 T (T) 혹은 U+0020 공백 문자
   3. 시간을 나타내는 <a lt="valid time string">유효한 시간 문자열</a>
 
   문자열이 주어진 순서에 따라 다음 컴포넌트로 구성된다면 날짜와 시간을 나타내는 
   <dfn lt="valid normalized floating date and time string">유효한 정규화된 변동 날짜와 시간 문자열</dfn>입니다:
 
   1. 날짜를 나타내는 <a lt="valid date string">유효한 날짜 문자열</a>
-  2. U+0054 라틴 대문자 T 문자 (T)
+  2. U+0054 라틴 대문자 T (T)
   3. 주어진 시간에 대해 가능한 가장 짧은 문자열로(예를 들어, 주어진 시간이 분 이후 0초라면 초 컴포넌트를 
       완전히 생략하여) 표현된 시간을 나타내는 <a lt="valid time string">유효한 시간 문자열</a>
 
@@ -2367,7 +2367,7 @@
   3. <var>year</var>, <var>month</var>, <var>day</var>를 얻기 위해 <a lt="Parse a date component">날짜 컴포넌트를 해석</a>합니다.
       이것이 아무 것도 반환하지 않는다면, 실패입니다.
   4. <var>position</var>이 <var>input</var>의 끝을 지났거나 <var>position</var>에 있는 문자가
-      U+0054 라틴 대문자 T 문자 (T)나 U+0020 공백 문자가 아니라면, 실패입니다.
+      U+0054 라틴 대문자 T (T)나 U+0020 공백 문자가 아니라면, 실패입니다.
       그렇지 않으면, <var>position</var>를 한 글자 앞으로 이동합니다.
   5. <var>hour</var>, <var>minute</var>, <var>second</var>를 얻기 위해 <a lt="parse a time component">시간 컴포넌트를 해석</a>합니다.
       이것이 아무 것도 반환하지 않는다면, 실패입니다.
@@ -2379,12 +2379,12 @@
 
 <h5 id="time-zones">표준 시간대</h5>
 
-  <dfn lt="time zone|time-zone offset">표준 시간대 편차</dfn>는 시간과 분의 부호화 된 숫자로 구성됩니다.
+  <dfn lt="time zone|time-zone offset">표준 시간대 편차</dfn>는 시간과 분의 부호 달린 숫자로 구성됩니다.
 
   문자열이 다음으로 구성된다면, 표준 시간대 편차를 나타내는 
   <dfn lt="valid time-zone offset string">유효한 표준 시간대 편차 문자열</dfn>입니다:
 
-  * 시간대가 UTC인 경우에함 허용되는, U+005A 라틴 대문자 Z 문자 (Z)
+  * 시간대가 UTC인 경우에함 허용되는, U+005A 라틴 대문자 Z (Z)
   * 혹은, 주어진 순서에 따라 다음 컴포넌트로 구성:
     1. 표준 시간대 편차의 부호를 나타내는, U+002B PLUS 부호 문자 (+), 혹은 표준 시간대 편차가 0이 
         아닌 경우 U+002D HYPHEN-MINUS 문자 (-)
@@ -2425,7 +2425,7 @@
   어느 시점에 알고리즘이 "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 
   의미합니다.
 
-  1. <var>position</var>에 있는 문자가 U+005A 라틴 대문자 Z 문자 (Z)라면:
+  1. <var>position</var>에 있는 문자가 U+005A 라틴 대문자 Z (Z)라면:
       1. <var>timezone<sub>hours</sub></var>를 0으로 둡니다.
       2. <var>timezone<sub>minutes</sub></var>를 0으로 둡니다.
       3. <var>position</var>을 <var>input</var> 내 다음 문자로 전진시킵니다.
@@ -2465,440 +2465,413 @@
 
   2. <var>timezone<sub>hours</sub></var>과 <var>timezone<sub>minutes</sub></var>를 반환합니다.
 
-<h5 id="global-dates-and-times">Global dates and times</h5>
+<h5 id="global-dates-and-times">세계 날짜와 시간</h5>
 
-  A <dfn>global date and time</dfn> consists of a specific <a>proleptic-Gregorian date</a>,
-  consisting of a year, a month, and a day, and a time, consisting of an hour, a minute, a second,
-  and a fraction of a second, expressed with a time-zone offset, consisting of a signed number of
-  hours and minutes. [[GREGORIAN]]
+  <dfn lt="global date and time">세계 날짜와 시간</dfn>은 시간과 분의 부호 달린 숫자로 구성되는, 
+  표준 시간대 편차로 표현된, 연, 월, 일, 그리고 시, 분, 초, 소수점 초로 구성되는 시간으로 구성되는 
+  특정한 <a lt="proleptic-Gregorian date">역산 그레고리 날짜</a>로 구성됩니다. [[GREGORIAN]]
 
-  A string is a <dfn>valid global date and time string</dfn> representing a date, time, and a
-  time-zone offset if it consists of the following components in the given order:
+  문자열이 주어진 순서에 따라 다음 컴포넌트로 구성된다면 날짜, 시간, 표준 시간대 편차를 나타내는 
+  <dfn lt="valid global date and time string">유효한 세계 날짜와 시간 문자열</dfn>입니다:
 
-  1. A <a>valid date string</a> representing the date
-  2. A U+0054 LATIN CAPITAL LETTER T character (T) or a U+0020 SPACE character
-  3. A <a>valid time string</a> representing the time
-  4. A <a>valid time-zone offset string</a> representing the time-zone offset
+  1. 날짜를 나타내는 <a lt="valid date string">유효한 날짜 문자열</a>
+  2. U+0054 라틴 대문자 T (T) 혹은 U+0020 공백 문자
+  3. 시간을 나타내는 <a lt="valid time string">유효한 시간 문자열</a>
+  4. 표준 시간대 편차를 나타내는 <a lt="valid time-zone offset string">유효한 표준 시간대 편차 문자열</a>
 
-  Times in dates before the formation of UTC in the mid twentieth century must be expressed and
-  interpreted in terms of UT1 (contemporary Earth mean solar time at the 0&deg; longitude), not UTC
-  (the approximation of UT1 that ticks in SI seconds). Time before the formation of time zones must
-  be expressed and interpreted as UT1 times with explicit time zones that approximate the
-  contemporary difference between the appropriate local time and the time observed at the location
-  of Greenwich, London.
+  20 세기 중반의 UTC 형성 이전 날짜의 시간은 UTC(SI초 단위로 측정한 UT1의 근사치)가 아니라, UT1 
+  (경도 0&deg;에서의 현대 지구 평균 태양시)으로 표현되고 해석되어야(must)합니다. 표준 시간대의 형성
+  이전 시간은 적절한 현지 시간과 런던 그리니치 지역에서 관찰된 시간 사이의 차이에 가까운 명시적인 
+  표준 시간대를 가진 UT1 시간으로 표현되고 해석되어야(must)합니다.
 
   <div class="example">
-    The following are some examples of dates written as <a>valid global date and time strings</a>.
+    다음은 <a lt="valid global date and time strings">유효한 세계 날짜와 시간 문자열</a>로 작성된 
+    날짜의 몇 가지 예입니다.
 
     : "<code>0037-12-13 00:00Z</code>"
-    :: Midnight in areas using London time on the birthday of Nero (the Roman Emperor). See below
-        for further discussion on which date this actually corresponds to.
+    :: 런던 시간 사용하는 지역에서 네로(로마 황제)의 생일의 자정. 이것이 실제로 어느 날짜에 해당하는지에 
+        대한 자세한 설명은 아래를 참고하세요.
 
     : "<code>1979-10-14T12:00:00.001-04:00</code>"
-    :: One millisecond after noon on October 14th 1979, in the time zone in use on the east coast of
-        the USA during daylight saving time.
+    :: 일광 절약 시간제 동안 미국 동부 해안에서 사용하는 표준 시간대에서, 1979년 10월 14일 정오 이후
+        1밀리 초.
 
     : "<code>8592-01-01T02:09+02:09</code>"
-    :: Midnight UTC on the 1st of January, 8592. The time zone associated with that time is two
-        hours and nine minutes ahead of UTC, which is not currently a real time zone, but is
-        nonetheless allowed.
+    :: 8598년 1월 1일 자정 UTC. 그 시간과 관련된 표준 시간대는 현재 실제 표준 시간대가 아닌, UTC보다 
+        2시간 9분 빠르지만, 그렇더라도 허용됩니다.
 
-    Several things are notable about these dates:
+    이 날짜들에 대해 몇 가지 주목할 만한 것들이 있습니다:
 
-    * Years with fewer than four digits have to be zero-padded. The date "37-12-13" would not be a
-        valid date.
-    * If the "<code>T</code>" is replaced by a space, it must be a single space character. The
-        string "<code>2001-12-21&nbsp;&nbsp;12:00Z</code>" (with two spaces between the components)
-        would not be parsed successfully.
-    * To unambiguously identify a moment in time prior to the introduction of the Gregorian calendar
-        (insofar as moments in time before the formation of UTC can be unambiguously identified),
-        the date has to be first converted to the Gregorian calendar from the calendar in use at the
-        time (e.g., from the Julian calendar). The date of Nero's birth is the 15th of December 37,
-        in the Julian Calendar, which is the 13th of December 37 in the
-        <a>proleptic Gregorian calendar</a>.
-    * The time and time-zone offset components are not optional.
-    * Dates before the year one can't be represented as a datetime in this version of HTML.
-    * Times of specific events in ancient times are, at best, approximations, since time was not
-        well coordinated or measured until relatively recent decades.
-    * Time-zone offsets differ based on daylight savings time.
+    * 4자리 숫자 이하의 연도는 0으로 채워져야(have to) 합니다. "37-12-13" 날짜는 유효한 날짜가 되지 
+        않을 것입니다.
+    * "<code>T</code>"가 공백으로 대체된다면, 이것은 하나의 공백 문자여야(must) 합니다. 
+        "<code>2001-12-21&nbsp;&nbsp;12:00Z</code>" (컴포넌트 사이에 2개의 공백이 있는) 문자열은
+        성공적으로 해석되지 않을 것입니다.
+    * 그레고리 달력의 도입에 앞선 시간의 때를 분명하게 확인하기 위해 (UTC 형성 이전 시간의 때가  
+        분명하게 식별될 수 있는 한), 날짜는 그 때 사용되는 달력으로부터(예를 들어 율리우스력으로부터) 
+        그레고리력으로 먼저 변환되어야(has to) 합니다. 네로의 생일 날짜는 율리우스력으로 37년 12월 15일이고,
+        <a lt="proleptic Gregorian calendar">역산 그레고리력</a>으로는 37년 12월 13일입니다.
+    * 시간과 표준 시간대 편차 컴포넌트는 선택 사항이 아닙니다.
+    * 1년 이전의 날짜는 HTML의 이 버전에서 일시(datetime)로 나타낼 수 없습니다.
+    * 시간은 상대적으로 최근 수십 년까지 잘 조정되거나 측정되지 않았기 때문에, 고대의 특정 사건의 
+        시간은 잘해야 근사치입니다.
+    * 표준 시간대 편차는 일광 절약 시간제에 따라 달라집니다.
   </div>
 
   <p class="note">
-    The zone offset is not a complete time zone specification. When working with real date and time
-    values, consider using a separate field for time zone, perhaps using IANA time zone IDs.
+    지역 편차는 완전한 표준 시간대 명세가 아닙니다. 실제 날짜와 시간 값으로 작업하는 경우, 아마도
+    INA 시간대 ID를 사용하여, 표준 시간대에 대한 별도의 필드를 사용하는 것을 고려하세요.
     [[TIMEZONE]]
   </p>
 
-  A string is a <dfn>valid normalized global date and time string</dfn> representing a
-  date, time, and a time-zone offset if it consists of the following components in the given order:
+  문자열이 주어진 순서에 따라 다음 컴포넌트로 구성된다면, 날짜, 시간, 표준 시간대를 나타내는 
+  <dfn lt="valid normalized global date and time string">유효한 정규화 된 세계 날짜와 시간 문자열</dfn>입니다:
 
-  1. A <a>valid date string</a> representing the date converted to the UTC time zone
-  2. A U+0054 LATIN CAPITAL LETTER T character (T)
-  3. A <a>valid time string</a> representing the time converted to the UTC time zone and expressed
-      as the shortest possible string for the given time (e.g., omitting the seconds component
-      entirely if the given time is zero seconds past the minute)
-  4. A U+005A LATIN CAPITAL LETTER Z character (Z)
+  1. UTC 표준 시간대로 변환된 날짜를 나타내는 <a lt="valid date string">유효한 날짜 문자열</a>
+  2. U+0054 라틴 대문자 T (T)
+  3.  UTC 표준 시간대로 변환되고 주어진 시간에 대해 가능한 가장 짧은 문자열로(예를 들어, 주어진
+      시간이 분 이후 0초라면 초 컴포넌트를 완전히 생략하여) 표현된 시간을 나타내는 
+      <a lt="valid time string">유효한 시간 문자열</a>
+  4. U+005A 라틴 대문자 Z (Z)
 
-  The rules to <dfn lt="parse a global date and time string|parsing a date and time">parse a global date and time string</dfn> are as follows. This will return
-  either a time in UTC, with associated time-zone offset information for round-tripping or display
-  purposes, or nothing. If at any point the algorithm says that it "fails", this means that it is
-  aborted at that point and returns nothing.
+  <dfn lt="parse a global date and time string|parsing a date and time">세계 날짜와 시간 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다. 
+  이것은 라운드 트립 혹은 표시 목적을 위해 연관된 표준 시간대 정보를 가진 UTC 시간을 반환하거나 
+  아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 "실패"라고 말한다면, 이것은 그 시점에 
+  중단되고 아무 것도 반환하지 않음을 의미합니다.
 
-  1. Let <var>input</var> be the string being parsed.
-  2. Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-      of the string.
-  3. <a>Parse a date component</a> to obtain <var>year</var>, <var>month</var>, and
-      <var>day</var>. If this returns nothing, then fail.
-  4. If <var>position</var> is beyond the end of <var>input</var> or if the character at
-      <var>position</var> is neither a U+0054 LATIN CAPITAL LETTER T character (T) nor a U+0020
-      SPACE character, then fail. Otherwise, move <var>position</var> forwards one character.
-  5. <a>Parse a time component</a> to obtain <var>hour</var>, <var>minute</var>, and
-      <var>second</var>. If this returns nothing, then fail.
-  6. If <var>position</var> is beyond the end of <var>input</var>, then fail.
-  7. <a>Parse a time-zone offset component</a> to obtain <var>timezone<sub>hours</sub></var> and
-      <var>timezone<sub>minutes</sub></var>. If this returns nothing, then fail.
-  8. If <var>position</var> is <em>not</em> beyond the end of <var>input</var>, then fail.
-  9. Let <var>time</var> be the moment in time at year <var>year</var>, month <var>month</var>,
-      day <var>day</var>, hours <var>hour</var>, minute <var>minute</var>, second
-      <var>second</var>, subtracting <var>timezone<sub>hours</sub></var> hours and
-      <var>timezone<sub>minutes</sub></var> minutes. That moment in time is a moment in the UTC
-      time zone.
-  10. Let <var>timezone</var> be <var>timezone<sub>hours</sub></var> hours and
-      <var>timezone<sub>minutes</sub></var> minutes from UTC.
-  11. Return <var>time</var> and <var>timezone</var>.
+  1. <var>input</var>을 해석되는 문자열로 둡니다.
+  2. <var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.
+  3. <var>year</var>, <var>month</var>, <var>day</var>을 얻기 위해 <a lt="parse a date component">날짜 컴포넌트를 해석</a>합니다.
+      이것이 아무 것도 반환하지 않는다면, 실패입니다.
+  4. <var>position</var>이 <var>input</var>의 끝을 지나거나 <var>position</var>에 위치한 문자가
+      U+0054 라틴 대문자 T 나 U+0020 공백문자가 아니라면, 실패입니다. 그렇지 않으면, <var>position</var>을
+      한 글자 앞으로 이동합니다.
+  5. <var>hour</var>, <var>minute</var>, <var>second</var>를 얻기 위해 <a lt="parse a time component">시간 컴포넌트를 해석</a>합니다.
+      이것이 아무 것도 반환하지 않는다면, 실패입니다.
+  6. <var>position</var>이 <var>input</var>의 끝을 지났다면 실패입니다.
+  7. <var>timezone<sub>hours</sub></var>와 <var>timezone<sub>minutes</sub></var>를 얻기 위해 
+      <a lt="Parse a time-zone offset component">표준 시간대 컴포넌트를 해석</a>합니다. 이것이 아무 
+      것도 반환하지 않는다면, 실패입니다.
+  8. <var>position</var>이 <var>input</var>의 끝을 지나지 <em>않으</em>면, 실패입니다.
+  9. <var>time</var>을 <var>timezone<sub>hours</sub></var>시간 <var>timezone<sub>minutes</sub></var>분을 
+      뺀, <var>year</var>년 <var>month</var>월 <var>day</var>일 <var>hour</var>시 <var>minute</var>분 
+      <var>second</var>초 시간의 시점으로 둡니다. 그 시간의 시점은 UTC 표준 시간대의 시점입니다.
+  10. <var>timezone</var>을 UTC로부터 <var>timezone<sub>hours</sub></var> 시간 
+      <var>timezone<sub>minutes</sub></var>분 입니다.
+  11. <var>time</var>과 <var>timezone</var>를 반환합니다.
 
-<h5 id="weeks">Weeks</h5>
+<h5 id="weeks">주(weeks)</h5>
 
-  A <dfn>week</dfn> consists of a week-year number and a week number representing a seven-day period
-  starting on a Monday. Each week-year in this calendaring system has either 52 or 53 such seven-day
-  periods, as defined below. The seven-day period starting on the Gregorian date Monday December
-  29th 1969 (1969-12-29) is defined as week number 1 in week-year 1970. Consecutive weeks are
-  numbered sequentially. The week before the number 1 week in a week-year is the last week in the
-  previous week-year, and vice versa. [[GREGORIAN]]
+  <dfn lt="week">주</dfn>는 주-해(week-year) 수와 월요일에서 시작하여 7일 주기를 나타내는 주차 수로 구성됩니다. 
+  아래 정의된 바와 같이, 이 달력 시스템에서의 각 주차-연도는 52 혹은 53개의 7일 주기를 가집니다.
+  그레고리 날짜 1969년 12월 29일 월요일((1969-12-29))에서 시작하는 7일 주기는 1970 주-해(week-year)에서의 
+  1 주차로 정의됩니다. 연속 주차는 순차적으로 숫자가 매겨집니다. 주-해(week-year)에서의 1 주차의 이전 주는
+  이전 주-해(week-year)에서의 마지막 주이고, 반대도 같습니다. [[GREGORIAN]]
 
-  A week-year with a number <var>year</var> has 53 weeks if it corresponds to either a year
-  <var>year</var> in the <a>proleptic Gregorian calendar</a> that has a Thursday as its first
-  day (January 1st), or a year <var>year</var> in the <a>proleptic Gregorian calendar</a> that has
-  a Wednesday as its first day (January 1st) and where <var>year</var> is a number divisible by 400,
-  or a number divisible by 4 but not by 100. All other week-years have 52 weeks.
+  <var>year</var> 수를 가진 주-해(week-year)는 첫 날(1월 1일)로 목요일을 가지는
+  <a lt="proleptic Gregorian calendar">역산 그레고리력</a>의 <var>year</var>년에 해당하거나 첫 날(1월 1일)로
+  수요일을 가지고 <var>year</var>가 400으로 나눌 수 있는 수이거나 4로 나눌 수 있지만 100으로 나눌 수
+  없는 수를 가지는 <a lt="proleptic Gregorian calendar">역산 그레고리력</a>의 <var>year</var>년에
+  해당한다면 53주를 가집니다. 모든 다른 주-해(week-year)들은 52 주를 가집니다.
 
-  The <dfn>week number of the last day</dfn> of a week-year with 53 weeks is 53; the week number of
-  the last day of a week-year with 52 weeks is 52.
+  53주를 가진 주-해(week-year)의 <dfn lt="week number of the last day">마지막 날의 주차 수</dfn>는 
+  53입니다; 52주를 가진 주-해(week-year)의 마지막 날의 주차 수는 52입니다.
 
   <p class="note">
-    The week-year number of a particular day can be different than the number of the year that
-    contains that day in the <a>proleptic Gregorian calendar</a>. The first week in a week-year
-    <var>y</var> is the week that contains the first Thursday of the Gregorian year <var>y</var>.
+    특정 일의 주-해(week-year) 수는 <a lt="역산 그레고리력">proleptic Gregorian calendar</a>으로
+    그 날짜를 포함하는 해의 수와 다를 수 있습니다. <var>y</var> 주-해(week-year)의 첫 주는 
+    그레고리 <var>y</var>년의 첫 번째 목요일을 포함하는 주입니다.
 
   <p class="note">
-    For modern purposes, a <a>week</a> as defined here is equivalent to ISO weeks as defined in
-    ISO 8601. [[ISO8601]]
+    현대적인 목적을 위해, 여기 정의된 <a>week</a>는 ISO 8601에 정의된 대로 ISO 주와 동등합니다.
+    [[ISO8601]]
 
-    A string is a <dfn>valid week string</dfn> representing a week-year <var>year</var> and week
-    <var>week</var> if it consists of the following components in the given order:
+    문자열이 주어진 순서에 따라 다음 컴포넌트로 구성된다면 주-해(week-year) <var>year</var>와 
+    <var>week</var> 주를 나타내는 <dfn lt="valid week string">유효한 주 문자열</dfn>입니다:
   </p>
 
-  1. Four or more <a>ASCII digits</a>, representing <var>year</var>, where
-      <var>year</var>&nbsp;&gt;&nbsp;0
-  2. A U+002D HYPHEN-MINUS character (-)
-  3. A U+0057 LATIN CAPITAL LETTER W character (W)
-  4. Two <a>ASCII digits</a>, representing the week <var>week</var>, in the range
-      1&nbsp;&le;&nbsp;<var>week</var>&nbsp;&le;&nbsp;<var>maxweek</var>, where <var>maxweek</var>
-      is the <a>week number of the last day</a> of week-year <var>year</var>
+  1. <var>year</var>&nbsp;&gt;&nbsp;0인, <var>year</var>를 나타내는 4개 이상의 <a lt="ASCII digits">ASCII 숫자</a>
+  2. U+002D HYPHEN-MINUS 문자 (-)
+  3. U+0057 라틴 대문자 W (W)
+  4. <var>maxweek</var>가 주-해(week-year) <var>year</var>의 <a lt="week number of the last day">마지막 주의 주차 수</a>인 
+      1&nbsp;&le;&nbsp;<var>week</var>&nbsp;&le;&nbsp;<var>maxweek</var> 내 범위의 <var>week</var> 
+      주를 나타내는 두 <a lt="ASCII digits">ASCII 숫자</a>
 
-  The rules to <dfn lt="parsing a week string|parse a week string|parsing a week">parse a week string</dfn> are as follows. This will return either a week-year
-  number and week number, or nothing. If at any point the algorithm says that it "fails", this
-  means that it is aborted at that point and returns nothing.
+  <dfn lt="parsing a week string|parse a week string|parsing a week">주 문자열을 해석</dfn>하기 위한 
+  규칙은 다음과 같습니다. 이것은 주-해(week-year) 수나 주차 수를 반환하거나, 아무 것도 반환하지 않을 
+  것 입니다. 어느 시점에 알고리즘이 "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지
+  않음을 의미합니다.
 
-  1. Let <var>input</var> be the string being parsed.
-  2. Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-      of the string.
-  3. <a>Collect a sequence of characters</a> that are <a>ASCII digits</a>. If the collected
-      sequence is not at least four characters long, then fail. Otherwise, interpret the resulting
-      sequence as a base-ten integer. Let that number be the <var>year</var>.
-  4. If <var>year</var> is not a number greater than zero, then fail.
-  5. If <var>position</var> is beyond the end of <var>input</var> or if the character at
-      <var>position</var> is not a U+002D HYPHEN-MINUS character, then fail. Otherwise, move
-      <var>position</var> forwards one character.
-  6. If <var>position</var> is beyond the end of <var>input</var> or if the character at
-      <var>position</var> is not a U+0057 LATIN CAPITAL LETTER W character (W), then fail.
-      Otherwise, move <var>position</var> forwards one character.
-  7. <a>Collect a sequence of characters</a> that are <a>ASCII digits</a>. If the collected
-      sequence is not exactly two characters long, then fail. Otherwise, interpret the resulting
-      sequence as a base-ten integer. Let that number be the <var>week</var>.
-  8. Let <var>maxweek</var> be the <a>week number of the last day</a> of year <var>year</var>.
-  9. If <var>week</var> is not a number in the range
-      1&nbsp;&le;&nbsp;<var>week</var>&nbsp;&le;&nbsp;<var>maxweek</var>, then fail.
-  10. If <var>position</var> is <em>not</em> beyond the end of <var>input</var>, then fail.
-  11. Return the week-year number <var>year</var> and the week number <var>week</var>.
+  1. <var>input</var>를 해석되는 문자열로 둡니다.
+  2. <var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.
+  3. <a lt="ASCII digits">ASCII 숫자</a>인 <a lt="Collect a sequence of characters">일련의 문자를 수집</a>합니다. 
+      수집된 시퀀스가 적어도 4 글자가 아니라면 실패입니다. 그렇지 않으면, 10진수 정수로 결과 시퀀스를 
+      해석합니다. 그 숫자를 <var>year</var>로 둡니다.
+  4. <var>year</var>가 0보다 큰 수가 아니라면, 실패입니다.
+  5. <var>position</var>이 <var>input</var>의 끝을 지나거나 <var>position</var>에 위치한 문자가
+      U+002D HYPHEN-MINUS 문자가 아니라면 실패입니다. 그렇지 않으면, <var>position</var>을 한 글자
+      앞으로 이동합니다.
+  6. <var>position</var>이 <var>input</var>의 끝을 지나거나 <var>position</var>에 위치한 문자가
+      U+0057 라틴 대문자 W (W)라면, 실패입니다. 그렇지 않으면 <var>position</var>을 한 글자 앞으로
+      이동합니다.
+  7. <a lt="ASCII digits">ASCII 숫자</a>인 <a lt="Collect a sequence of characters">일련의 문자를 수집</a>합니다.
+      수집된 시퀀스가 적어도 2 글자가 아니라면 실패입니다. 그렇지 않으면, 10진수 정수로 결과 시퀀스를 
+      해석합니다. 그 숫자를 <var>week</var>로 둡니다.
+  8. <var>maxweek</var>를 <var>year</var>년의 <a lt="week number of the last day">마지막 날의 주차 수</a>로 둡니다.
+  9. <var>week</var>가 1&nbsp;&le;&nbsp;<var>week</var>&nbsp;&le;&nbsp;<var>maxweek</var> 범위의 숫자가 
+      아니라면, 실패입니다.
+  10. <var>position</var>이 <var>input</var>의 끝을 지나지 <em>않으</em>면, 실패입니다.
+  11. 주-해(week-year) 수 <var>year</var>와 주차 수<var>week</var>를 반환합니다.
 
-<h5 id="durations">Durations</h5>
+<h5 id="durations">기간</h5>
 
-  A <dfn>duration</dfn> consists of a number of seconds.
+  <dfn lt="duration">기간</dfn>은 약간의 초로 구성됩니다.
 
   <p class="note">
-    Since months and seconds are not comparable (a month is not a precise number of seconds, but is
-    instead a period whose exact length depends on the precise day from which it is measured) a
-    <a>duration</a> as defined in this specification cannot include months (or years, which are
-    equivalent to twelve months). Only durations that describe a specific number of seconds can be
-    described.
+    월과 초는 비교할 수 없기 때문에 (1 개월은 정확한 수의 초가 아니고, 대신 측정된 정확한 날짜에 따른 정확한
+    길이가 정해지는 주기입니다) 이 명세에 정의된 <a lt="duration">기간</a>은 월(혹은 12월과 동일한 년)
+    을 포함할 수 없습니다. 특정한 수의 초를 기술하는 기간만이 기술 될 수 있습니다.
   </p>
 
-  A string is a <dfn>valid duration string</dfn> representing a <a>duration</a> <var>t</var> if it
-  consists of either of the following:
+  문자열이 다음 중 하나로 구성된다면 <a lt="duration">기간</a> <var>t</var>를 나타내는 
+  <dfn lt="valid duration string">유효한 기간 문자열</dfn>입니다:
 
-  * A literal U+0050 LATIN CAPITAL LETTER P character followed by one or more of the following
-    subcomponents, in the order given, where the number of days, hours, minutes, and seconds
-    corresponds to the same number of seconds as in <var>t</var>:
+  * 일, 시, 분, 초의 수가 <var>t</var>에서와 같은 초의 동일한 수에 해당하는, 주어진 순서에 따라 다음 
+    하위 컴포넌트가 하나 이상 따르는 리터럴 U+0050 라틴 대문자 P :
 
-    1. One or more <a>ASCII digits</a> followed by a U+0044 LATIN CAPITAL LETTER D character,
-        representing a number of days.
-    2. A U+0054 LATIN CAPITAL LETTER T character followed by one or more of the following
-        subcomponents, in the order given:
-        1. One or more <a>ASCII digits</a> followed by a U+0048 LATIN CAPITAL LETTER H
-            character, representing a number of hours.
-        2. One or more <a>ASCII digits</a> followed by a U+004D LATIN CAPITAL LETTER M
-            character, representing a number of minutes.
-        3. The following components:
-            1. One or more <a>ASCII digits</a>, representing a number of seconds.
-            2. Optionally, a U+002E FULL STOP character (.) followed by one, two, or three
-                <a>ASCII digits</a>, representing a fraction of a second.
-            3. A U+0053 LATIN CAPITAL LETTER S character.
+    1. 일 숫자를 나타내는, U+0044 라틴 대문자 D가 뒤따르는 하나 이상의 <a lt="ASCII digits">ASCII 숫자</a>.
+    2. 주어진 순서에 따라 다음 하위 컴포넌트들이 하나 이상 뒤따르는 U+0054 라틴 대문자 T:
+        1. 시 숫자를 나타내는, U+0048 라틴 대문자 H가 뒤따르는 하나 이상의 <a lt="ASCII digits">ASCII 숫자</a>.
+        2. 분 숫자를 나타내는, U+004D 라틴 대문자 M이 뒤따르는 하나 이상의 <a lt="ASCII digits">ASCII 숫자</a>.
+        3. 다음 컴포넌트:
+            1. 초 숫자를 나타내는 하나 이상의 <a lt="ASCII digits">ASCII 숫자</a>.
+            2. 선택적으로, 소수점 초를 나타내는 하나 혹은 둘, 혹은 세 개의 <a lt="ASCII digits">ASCII 숫자</a>가 
+                뒤따르는 U+002E 마침표 문자 (.).
+            3. U+0053 라틴 대문자 S.
 
     <p class="note">
-      This, as with a number of other date- and time-related microsyntaxes defined in this
-      specification, is based on one of the formats defined in ISO 8601. [[ISO8601]]
+      이것은, 이 명세에 정의된 날짜와 시간과 연관된 약간의 마이크로문법과 같이, ISO 8601에 정의된
+      형식의 하나에 기반 합니다. [[ISO8601]]
     </p>
 
-  * One or more <a>duration time components</a>, each with a different
-    <a>duration time component scale</a>, in any order; the sum of the represented seconds being
-    equal to the number of seconds in <var>t</var>.
+  * 순서에 상관 없이, 각각 다른 <a lt="duration time component scale">기간 시간 컴포넌트 크기</a>를 
+    가지는 하나 이상의 <a lt="duration time components">기간 시간 컴포넌트</a>; <var>t</var>에서 초의 
+    숫자와 동일하게 표현된 초의 합계.
 
-    A <dfn>duration time component</dfn> is a string consisting of the following components:
+    A <dfn lt="duration time component">기간 시간 컴포넌트</dfn>는 다음 컴포넌트로 구성되는 문자열입니다:
 
-      1. Zero or more <a>space characters</a>.
-      2. One or more <a>ASCII digits</a>, representing a number of time units, scaled by the
-          <a>duration time component scale</a> specified (see below) to represent a number of
-          seconds.
-      3. If the <a>duration time component scale</a> specified is 1 (i.e., the units are seconds),
-         then, optionally, a U+002E FULL STOP character (.) followed by one, two, or three
-         <a>ASCII digits</a>, representing a fraction of a second.
-      4. Zero or more <a>space characters</a>.
-      5. One of the following characters, representing the
-          <dfn>duration time component scale</dfn> of the time unit used in the numeric part of
-          the <a>duration time component</a>:
+      1. 0개 이상의 <a lt="space characters">공백 문자</a>.
+      2. 약간의 초를 나타내기 위해 명시된 (아래 참고) <a lt="duration time component scale">기간 시간 
+          컴포넌트 크기</a>에 의해 크기가 조정된 약간의 시간 단위를 나타내는 하나 이상의 
+          <a lt="ASCII digits">ASCII 숫자</a>.
+      3. <a lt="duration time component scale">기간 시간 컴포넌트 크기</a>가 1로 명시되었다면(즉, 
+         단위가 초), 선택적으로 소수점 초를 나타내는 하나 혹은 둘, 혹은 세 개의 <a lt="ASCII digits">ASCII 숫자</a>가 
+         뒤따르는 U+002E 마침표 문자 (.).
+      4. 0개 이상의 <a lt="space characters">공백 문자</a>.
+      5. <a lt="duration time component">기간 시간 컴포넌트</a>의 숫자 부분에 사용된 시간 단위의 
+          <dfn lt="duration time component scale">기간 시간 컴포넌트 크기</dfn>를 나타내는 다음 문자 
+          중 하나:
 
-          : U+0057 LATIN CAPITAL LETTER W character
-          : U+0077 LATIN SMALL LETTER W character
-          :: Weeks. The scale is 604800.
+          : U+0057 라틴 대문자 W
+          : U+0077 라틴 소문자 W
+          :: 주. 크기는 604800 입니다.
 
-          : U+0044 LATIN CAPITAL LETTER D character
-          : U+0064 LATIN SMALL LETTER D character
-          :: Days. The scale is 86400.
+          : U+0044 라틴 대문자 D
+          : U+0064 라틴 소문자 D
+          :: 일. 크기는 86400 입니다.
 
-          : U+0048 LATIN CAPITAL LETTER H character
-          : U+0068 LATIN SMALL LETTER H character
-          :: Hours. The scale is 3600.
+          : U+0048 라틴 대문자 H
+          : U+0068 라틴 소문자 H
+          :: 시. 크기는 3600 입니다.
 
-          : U+004D LATIN CAPITAL LETTER M character
-          : U+006D LATIN SMALL LETTER M character
-          :: Minutes. The scale is 60.
+          : U+004D 라틴 대문자 M
+          : U+006D 라틴 소문자 M
+          :: 분. 크기는 60 입니다.
 
-          : U+0053 LATIN CAPITAL LETTER S character
-          : U+0073 LATIN SMALL LETTER S character
-          :: Seconds. The scale is 1.
+          : U+0053 라틴 대문자 S
+          : U+0073 라틴 소문자 S
+          :: 초. 크기는 1 입니다.
 
-      6. Zero or more <a>space characters</a>.
+      6. 0개 이상의 <a lt="space characters">공백 문자</a>.
 
       <p class="note">
-        This is not based on any of the formats in ISO 8601. It is intended to be a more
-        human-readable alternative to the ISO 8601 duration format.
+        이것은 ISO 8601에 있는 형식에 기반되지 않습니다. 이것은 ISO 기간 형식에 대해 사람이 읽을 수 
+        있는 대안으로 의도되었습니다.
       </p>
 
-  The rules to <dfn lt="parsing a duration string|parse a duration string">parse a duration string</dfn> are as follows. This will return either a
-  <a>duration</a> or nothing. If at any point the algorithm says that it "fails", this means that
-  it is aborted at that point and returns nothing.
+  <dfn lt="parsing a duration string|parse a duration string">기간 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다. 
+  이것은 <a lt="duration">기간</a>을 반환하거나 아무 것도 반환하지 않을 것입니다. 어느 시점에 
+  알고리즘이 "실패"라고 말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.
 
-  1. Let <var>input</var> be the string being parsed.
-  2. Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-      of the string.
-  3. Let <var>months</var>, <var>seconds</var>, and <var>component count</var> all be zero.
-  4. Let <var>M-disambiguator</var> be <i>minutes</i>.
+  1. <var>input</var>을 해석되는 문자열로 둡니다.
+  2. <var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.
+  3. <var>months</var>, <var>seconds</var>, <var>component count</var>을 모두 0으로 둡니다.
+  4. <var>M-disambiguator</var>을 <i>minutes</i>로 둡니다.
       <p class="note">
-        This flag's other value is <i>months</i>. It is used to disambiguate the "M" unit in
-        ISO8601 durations, which use the same unit for months and minutes. Months are not allowed,
-        but are parsed for future compatibility and to avoid misinterpreting ISO8601 durations
-        that would be valid in other contexts.
+        이 플래그의 다른 값은 <i>months</i>입니다. 이것은 ISO8601 기간에서 월과 분에 대해 동일한 
+        단위로 사용되는 "M" 단위를 명확하게 하기 위해 사용됩니다. 월은 허용되지 않지만, 향후 호환성을 
+        위해 해석되고 다른 컨텍스트에서 유효할 수 있는 ISO8601 기간을 잘못 해석하는 것을 방지합니다.
       </p>
-  5. <a>Skip whitespace</a>.
-  6. If <var>position</var> is past the end of <var>input</var>, then fail.
-  7. If the character in <var>input</var> pointed to by <var>position</var> is a U+0050 LATIN
-      CAPITAL LETTER P character, then advance <var>position</var> to the next character, set
-      <var>M-disambiguator</var> to <i>months</i>, and <a>skip whitespace</a>.
-  8. Run the following substeps in a loop, until a step requiring the loop to be broken or the
-      entire algorithm to fail is reached:
-      1. Let <var>units</var> be undefined. It will be assigned one of the following values:
+  5. <a lt="Skip whitespace">여백을 건너뜁니다</a>.
+  6. <var>position</var>이 <var>input</var>의 끝을 지났다면, 실패입니다.
+  7. <var>position</var>에 의해 가리켜진 <var>input</var> 내의 문자가 U+0050 라틴 대문자 P라면, 
+      <var>position</var>을 다음 문자로 전진시키고, <var>M-disambiguator</var>를 <i>months</i>로 설정하고,
+      <a lt="Skip whitespace">여백을 건너뜁니다</a>.
+  8. 요구되는 반복이 끊어지거나 전체 알고리즘이 실패에 이를 때까지, 반복에서 다음 하위 단계들을 수행합니다:
+      1. <var>units</var>를 undefined로 둡니다. 그것은 다음 값들 중 하나가 할당 될 것입니다:
           <i>years</i>, <i>months</i>, <i>weeks</i>, <i>days</i>, <i>hours</i>, <i>minutes</i>,
-          and <i>seconds</i>.
-      2. Let <var>next character</var> be undefined. It is used to process characters from the
-          <var>input</var>.
-      3. If <var>position</var> is past the end of <var>input</var>, then break the loop.
-      4. If the character in <var>input</var> pointed to by <var>position</var> is a U+0054 LATIN
-          CAPITAL LETTER T character, then advance <var>position</var> to the next character, set
-          <var>M-disambiguator</var> to <i>minutes</i>, <a>skip whitespace</a>, and return to the
-          top of the loop.
-      5. Set <var>next character</var> to the character in <var>input</var> pointed to by
-          <var>position</var>.
-      6. If <var>next character</var> is a U+002E FULL STOP character (.), then let <var>N</var>
-          equal zero. (Do not advance <var>position</var>. That is taken care of below.)
+          <i>seconds</i>.
+      2. <var>next character</var>를 undefined로 둡니다. 그것은 <var>input</var>로부터 문자를 가공하는데
+          사용됩니다.
+      3. <var>position</var>이 <var>input</var>의 끝을 지났다면, 반복을 중단합니다.
+      4. <var>position</var>에 의해 가리켜진 <var>input</var> 내의 문자가 U+0054 라틴 대문자 T라면,
+          <var>position</var>을 다음 문자로 전진시키고, <var>M-disambiguator</var>를 <i>minutes</i>으로
+          설정하고, <a lt="Skip whitespace">여백을 건너뛰고</a>, 반복의 처음으로 돌아갑니다.
+      5. <var>next character</var>를 <var>position</var>에 의해 가리켜진 <var>input</var> 내의 문자로
+          둡니다.
+      6. <var>next character</var>가 U+002E 마침표 문자 (.)라면, <var>N</var>를 0으로 둡니다.
+          (<var>position</var>를 전진시키지 않습니다. 그것은 아래에서 다루어집니다.)
 
-          Otherwise, if <var>next character</var> is an <a>ASCII digit</a>, then <a>collect a
-          sequence of characters</a> that are <a>ASCII digits</a>, interpret the resulting
-          sequence as a base-ten integer, and let <var>N</var> be that number.
+          그렇지 않고, <var>next character</var>가 <a lt="ASCII digits">ASCII 숫자</a>라면, <a lt="ASCII digits">ASCII 숫자</a>인
+          <a lt="Collect a sequence of characters">일련의 문자를 수집</a>하고 10진수 정수로 결과 시퀀스를 
+          해석하고, <var>N</var>을 그 숫자로 둡니다.
 
-          Otherwise <var>next character</var> is not part of a number; fail.
+          그렇지 않으면 <var>next character</var>가 숫자 부분이 아닙니다; 실패입니다.
 
-      7. If <var>position</var> is past the end of <var>input</var>, then fail.
-      8. Set <var>next character</var> to the character in <var>input</var> pointed to by
-          <var>position</var>, and this time advance <var>position</var> to the next character.
-          (If <var>next character</var> was a U+002E FULL STOP character (.) before, it will still
-          be that character this time.)
-      9. If <var>next character</var> is a U+002E FULL STOP character (.), then run these
-          substeps:
-          1. <a>Collect a sequence of characters</a> that are <a>ASCII digits</a>. Let
-              <var>s</var> be the resulting sequence.
-          2. If <var>s</var> is the empty string, then fail.
-          3. Let <var>length</var> be the number of characters in <var>s</var>.
-          4. Let <var>fraction</var> be the result of interpreting <var>s</var> as a base-ten
-              integer, and then dividing that number by 10<sup><var>length</var></sup>.
-          5. Increment <var>N</var> by <var>fraction</var>.
-          6. <a>Skip whitespace</a>.
-          7. If <var>position</var> is past the end of <var>input</var>, then fail.
-          8. Set <var>next character</var> to the character in <var>input</var> pointed to by
-              <var>position</var>, and advance <var>position</var> to the next character.
-          9. If <var>next character</var> is neither a U+0053 LATIN CAPITAL LETTER S character nor
-              a U+0073 LATIN SMALL LETTER S character, then fail.
-          10. Set <var>units</var> to <i>seconds</i>.
+      7. <var>position</var>이 <var>input</var>의 끝을 지났다면, 실패입니다.
+      8. <var>next character</var>를 <var>position</var>에 의해 가리켜진 <var>input</var> 내의 문자로
+          설정하고, 이번에는 <var>position</var>을 다음 문자로 전진시킵니다. (<var>next character</var>가
+          이전에 U+002E 마침표 문자가 아니었다면, 이번에는 여전히 그 문자가 될 것입니다.)
+      9. <var>next character</var>가 U+002E 마침표 문자 (.)라면, 이 하위 단계들을 수행합니다:
+          1. <a lt="ASCII digits">ASCII 숫자</a>인 <a lt="Collect a sequence of characters">일련의 문자를 수집</a>합니다. 
+              <var>s</var>를 결과 시퀀스로 둡니다.
+          2. <var>s</var>가 빈 문자열이라면 실패입니다.
+          3. <var>length</var>를 <var>s</var>내 문자의 개수로 둡니다.
+          4. <var>fraction</var>을 10진수 정수로 <var>s</var>를 해석한 후, 그 숫자를 
+              10<sup><var>length</var></sup>로 나눈 결과로 둡니다.
+          5. <var>N</var>을 <var>fraction</var>만큼 증가시킵니다.
+          6. <a lt="Skip whitespace">여백을 건너뜁니다</a>.
+          7. <var>position</var>이 <var>input</var>의 끝을 지났다면, 실패입니다.
+          8. <var>next character</var>를 <var>position</var>에 의해 가리켜진 <var>input</var> 내의 
+              문자로 설정하고, <var>position</var>을 다음 문자로 전진시킵니다.
+          9. <var>next character</var>가  U+0053 라틴 대문자 S나 U+0073 라틴 소문자 S 모두 아니라면,
+              실패입니다.
+          10. <var>units</var>를 <i>seconds</i>로 설정합니다.
 
-          Otherwise, run these substeps:
+          그렇지 않으면, 이 하위 단계들을 수행합니다:
 
-          1. If <var>next character</var> is a <a>space character</a>, then
-              <a>skip whitespace</a>, set <var>next character</var> to the character in
-              <var>input</var> pointed to by <var>position</var>, and advance <var>position</var>
-              to the next character.
-          2. If <var>next character</var> is a U+0059 LATIN CAPITAL LETTER Y character, or a
-              U+0079 LATIN SMALL LETTER Y character, set <var>units</var> to <i>years</i> and set
-              <var>M-disambiguator</var> to <i>months</i>.
+          1. <var>next character</var>가 <a lt="space characters">공백 문자</a>라면, <a lt="Skip whitespace">여백을 건너뛰고</a>,
+              <var>next character</var>를 <var>position</var>에 의해 가리켜진 <var>input</var> 내의 
+              문자로 설정하고, <var>position</var>을 다음 문자로 전진시킵니다.
+          2. <var>next character</var>가 U+0059 라틴 대문자 Y나 U+0079 라틴 소문자 Y라면, <var>units</var>을
+              <i>years</i>로 설정하고 <var>M-disambiguator</var>를 <i>months</i>로 설정합니다.
 
-              If <var>next character</var> is a U+004D LATIN CAPITAL LETTER M character or a
-              U+006D LATIN SMALL LETTER M character, and <var>M-disambiguator</var> is
-              <i>months</i>, then set <var>units</var> to <i>months</i>.
+              <var>next character</var>가 U+004D 라틴 대문자 M이거나 U+006D 라틴 소문자 M이라면,
+              <var>M-disambiguator</var>는 <i>months</i>이고, <var>units</var>를 <i>months</i>로
+              설정합니다.
 
-              If <var>next character</var> is a U+0057 LATIN CAPITAL LETTER W character or a
-              U+0077 LATIN SMALL LETTER W character, set <var>units</var> to <i>weeks</i> and set
-              <var>M-disambiguator</var> to <i>minutes</i>.
+              <var>next character</var>가 U+0057 라틴 대문자 W이거나 U+0077 라틴 소문자 W라면,
+              <var>units</var>를 <i>weeks</i>로 설정하고 <var>M-disambiguator</var>를 <i>minutes</i>로
+              설정합니다.
 
-              If <var>next character</var> is a U+0044 LATIN CAPITAL LETTER D character or a
-              U+0064 LATIN SMALL LETTER D character, set <var>units</var> to <i>days</i> and set
-              <var>M-disambiguator</var> to <i>minutes</i>.
+              <var>next character</var>가 U+0044 라틴 대문자 D이거나 U+0064 라틴 소문자 D라면,
+              <var>units</var>를 <i>days</i>로 설정하고 <var>M-disambiguator</var>를 <i>minutes</i>로
+              설정합니다.
 
-              If <var>next character</var> is a U+0048 LATIN CAPITAL LETTER H character or a
-              U+0068 LATIN SMALL LETTER H character, set <var>units</var> to <i>hours</i> and set
-              <var>M-disambiguator</var> to <i>minutes</i>.
+              <var>next character</var>가 U+0048 라틴 대문자 H이거나 U+0068 라틴 소문자 H라면,
+              <var>units</var>를 <i>hours</i>로 설정하고 <var>M-disambiguator</var>를 <i>minutes</i>로
+              설정합니다.
 
-              If <var>next character</var> is a U+004D LATIN CAPITAL LETTER M character or a
-              U+006D LATIN SMALL LETTER M character, and <var>M-disambiguator</var> is
-              <i>minutes</i>, then set <var>units</var> to <i>minutes</i>.
+              <var>next character</var>가 U+004D 라틴 대문자 M이거나 U+006D 라틴 소문자 M이라면,
+              <var>M-disambiguator</var>를 <i>minutes</i>로 설정하고 <var>units</var>를 <i>minutes</i>로
+              설정합니다.
 
-              If <var>next character</var> is a U+0053 LATIN CAPITAL LETTER S character or a
-              U+0073 LATIN SMALL LETTER S character, set <var>units</var> to <i>seconds</i> and
-              set <var>M-disambiguator</var> to <i>minutes</i>.
+              <var>next character</var>가 U+0053 라틴 대문자 S이거나 U+0073 라틴 소문자 S라면,
+              <var>units</var>를 <i>seconds</i>로 설정하고 <var>M-disambiguator</var>를 <i>minutes</i>로
+              설정합니다.
 
-              Otherwise if <var>next character</var> is none of the above characters, then fail.
+              그렇지 않고 <var>next character</var>가 위 문자 중 어떠한 것도 아니라면, 실패입니다.
 
-      10. Increment <var>component count</var>.
-      11. Let <var>multiplier</var> be 1.
-      12. If <var>units</var> is <i>years</i>, multiply <var>multiplier</var> by 12 and set
-          <var>units</var> to <i>months</i>.
-      13. If <var>units</var> is <i>months</i>, add the product of <var>N</var> and
-          <var>multiplier</var> to <var>months</var>.
+      10. <var>component count</var>를 증가시킵니다.
+      11. <var>multiplier</var>를 1로 둡니다.
+      12. <var>units</var>가 <i>years</i>라면, <var>multiplier</var>에 12를 곱하고 <var>units</var>를
+          <i>months</i>로 설정합니다.
+      13. <var>units</var>가 <i>months</i>라면, <var>N</var>과 <var>multiplier</var>의 곱을
+          <var>months</var>에 더합니다.
 
-          Otherwise, run these substeps:
+          그렇지 않으면, 이 하위 단계들을 수행합니다:
 
-          1. If <var>units</var> is <i>weeks</i>, multiply <var>multiplier</var> by 7 and set
-              <var>units</var> to <i>days</i>.
-          2. If <var>units</var> is <i>days</i>, multiply <var>multiplier</var> by 24 and set
-              <var>units</var> to <i>hours</i>.
-          3. If <var>units</var> is <i>hours</i>, multiply <var>multiplier</var> by 60 and set
-              <var>units</var> to <i>minutes</i>.
-          4. If <var>units</var> is <i>minutes</i>, multiply <var>multiplier</var> by 60 and set
-              <var>units</var> to <i>seconds</i>.
-          5. Forcibly, <var>units</var> is now <i>seconds</i>. Add the product of <var>N</var> and
-              <var>multiplier</var> to <var>seconds</var>.
-      14. <a>Skip whitespace</a>.
+          1. <var>units</var>가 <i>weeks</i>라면, <var>multiplier</var>에 7을 곱하고 <var>units</var>를
+              <i>days</i>로 설정합니다.
+          2. <var>units</var>가 <i>days</i>라면, <var>multiplier</var>에 24를 곱하고 <var>units</var>를
+              <i>hours</i>로 설정합니다.
+          3. <var>units</var>가 <i>hours</i>라면, <var>multiplier</var>에 60을 곱하고 <var>units</var>를
+              <i>minutes</i>로 설정합니다.
+          4. <var>units</var>가 <i>minutes</i>라면, <var>multiplier</var>에 60을 곱하고 <var>units</var>를
+              <i>seconds</i>로 설정합니다.
+          5. 강제적으로, <var>units</var>는 이제 <i>seconds</i>입니다. <var>N</var>과 <var>multiplier</var>의
+              곱을 <var>seconds</var>에 더합니다.
+      14. <a lt="Skip whitespace">여백을 건너뜁니다</a>.
 
-  9. If <var>component count</var> is zero, fail.
-  10. If <var>months</var> is not zero, fail.
-  11. Return the <a>duration</a> consisting of <var>seconds</var> seconds.
+  9. <var>component count</var>가 0이라면, 실패입니다.
+  10. <var>months</var>가 0이라면, 실패입니다.
+  11. <var>seconds</var> 초로 구성된 <a lt="duration">기간</a>을 반환합니다.
 
-<h5 id="vaguer-moments-in-time">Vaguer moments in time</h5>
+<h5 id="vaguer-moments-in-time">시간의 모호한 때</h5>
 
-  A string is a <dfn>valid date string with optional time</dfn> if it is also one of the following:
+  문자열이 다음 중 하나라면 <dfn lt="valid date string with optional time">선택적인 시간을 가진 유효한 날짜 문자열</dfn>입니다:
 
-  * A <a>valid date string</a>
-  * A <a>valid global date and time string</a>
+  * <a lt="valid date string">유효한 날짜 문자열</a>
+  * <a lt="valid global date and time string">유효한 세계 날짜와 시간 문자열</a>
 
   <hr />
 
-  The rules to <dfn>parse a date or time string</dfn> are as follows. The algorithm will return
-  either a <a for="dates">date</a>, a <a>time</a>, a <a>global date and time</a>, or nothing. If at any point
-  the algorithm says that it "fails", this means that it is aborted at that point and returns
-  nothing.
+  <dfn lt="parse a date or time string">날짜나 시간 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다. 
+  이 알고리즘은 <a for="dates" lt="date">날짜</a>, <a lt="time">시간</a>, <a lt="global date and time">세계 날짜와 시간</a>을
+  반환하거나, 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 "실패"라고 말한다면, 이것은 
+  그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.
 
-  1. Let <var>input</var> be the string being parsed.
-  2. Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start
-      of the string.
-  3. Set <var>start position</var> to the same position as <var>position</var>.
-  4. Set the <var>date present</var> and <var>time present</var> flags to true.
-  5. <a>Parse a date component</a> to obtain <var>year</var>, <var>month</var>, and
-      <var>day</var>. If this fails, then set the <var>date present</var> flag to false.
-  6. If <var>date present</var> is true, and <var>position</var> is not beyond the end of
-      <var>input</var>, and the character at <var>position</var> is either a U+0054 LATIN CAPITAL
-      LETTER T character (T) or a U+0020 SPACE character, then advance <var>position</var> to the
-      next character in <var>input</var>.
+  1. <var>input</var>를 해석되는 문자열로 둡니다.
+  2. <var>position</var>을 초기에 문자열의 시작을 가리키는, <var>input</var>에 대한 포인터로 둡니다.
+  3. <var>start position</var>를 <var>position</var>과 동일한 위치로 둡니다.
+  4. <var>date present</var>와 <var>time present</var> 플래그를 true로 둡니다.
+  5. <var>year</var>, <var>month</var>, <var>day</var>를 얻기 위해 <a lt="parse a date component">날짜 컴포넌트를 해석</a>합니다.
+      이것이 실패한다면, <var>date present</var> 플래그를 false로 설정합니다.
+  6. <var>date present</var>이 true이고, <var>position</var>이 <var>input</var>의 끝을 지나지 않았고,
+      <var>position</var>에 있는 문자가 U+0054 라틴 대문자 T나 U+0020 공백 문자라면, <var>position</var>을
+      <var>input</var>내 다음 문자로 전진시킵니다.
 
-      Otherwise, if <var>date present</var> is true, and either <var>position</var> is beyond the
-      end of <var>input</var> or the character at <var>position</var> is neither a U+0054 LATIN
-      CAPITAL LETTER T character (T) nor a U+0020 SPACE character, then set
-      <var>time present</var> to false.
+      그렇지 않고, <var>date present</var>가 true이고, <var>position</var>이 <var>input</var>의 끝을
+      지났거나 <var>position</var>에 있는 문자가 U+0054 라틴 대문자 T나 U+0020 공백 문자가 모두 아니라면,
+      <var>time present</var>를 false로 둡니다.
 
-      Otherwise, if <var>date present</var> is false, set <var>position</var> back to the same
-      position as <var>start position</var>.
+      그렇지 않고, <var>date present</var>가 false라면, <var>position</var>를 <var>start position</var>과 
+      동일한 위치로 돌립니다.
 
-  7. If the <var>time present</var> flag is true, then <a>parse a time component</a> to obtain
-      <var>hour</var>, <var>minute</var>, and <var>second</var>. If this returns nothing, then
-      fail.
-  8. If the <var>date present</var> and <var>time present</var> flags are both true, but
-      <var>position</var> is beyond the end of <var>input</var>, then fail.
-  9. If the <var>date present</var> and <var>time present</var> flags are both true,
-      <a>parse a time-zone offset component</a> to obtain <var>timezone<sub>hours</sub></var> and
-      <var>timezone<sub>minutes</sub></var>. If this returns nothing, then fail.
-  10. If <var>position</var> is <em>not</em> beyond the end of <var>input</var>, then fail.
-  11. If the <var>date present</var> flag is true and the <var>time present</var> flag is false,
-      then let <var>date</var> be the date with year <var>year</var>, month <var>month</var>, and
-      day <var>day</var>, and return <var>date</var>.
+  7. <var>time present</var> 플래그가 true라면, <var>hour</var>, <var>minute</var>, <var>second</var>를 
+      얻기 위해 <a lt="parse a time component">시간 컴포넌트를 해석</a>합니다. 이것이 아무 것도 반환하지 
+      않는다면, 실패입니다.
+  8. <var>date present</var>과 <var>time present</var> 플래그가 모두 true이지만, <var>position</var>이
+      <var>input</var>의 끝을 지났다면, 실패입니다.
+  9. <var>date present</var>와 <var>time present</var>플래그가 모두 true라면, <var>timezone<sub>hours</sub></var>과
+      <var>timezone<sub>minutes</sub></var>를 얻기 위해 <a lt="parse a time-zone offset component">표준 시간대 편차 컴포넌트를 해석</a>합니다.
+      이것이 아무 것도 반환하지 않는다면, 실패입니다.
+  10. <var>position</var>이 <var>input</var>의 끝을 지나지 <em>않으</em>면, 실패입니다.
+  11. <var>date present</var> 플래그가 true이고 <var>time present</var> 플래그가 false라면,
+      <var>date</var>를 <var>year</var>년, <var>month</var>월, <var>day</var>일을 가진 날짜로 두고,
+      <var>date</var>를 반환합니다.
 
-      Otherwise, if the <var>time present</var> flag is true and the <var>date present</var> flag
-      is false, then let <var>time</var> be the time with hour <var>hour</var>, minute
-      <var>minute</var>, and second <var>second</var>, and return <var>time</var>.
+      그렇지 않고, <var>time present</var> 플래그가 true이고 <var>date present</var> 플래그가 false라면,
+      <var>time</var>을 <var>hour</var>시, <var>minute</var>분, <var>second</var>초를 가진 시간으로 두고
+      <var>time</var>을 반환합니다.
 
-      Otherwise, let <var>time</var> be the moment in time at year <var>year</var>, month
-      <var>month</var>, day <var>day</var>, hours <var>hour</var>, minute <var>minute</var>,
-      second <var>second</var>, subtracting <var>timezone<sub>hours</sub></var> hours and
-      <var>timezone<sub>minutes</sub></var> minutes, that moment in time being a moment in the UTC
-      time zone; let <var>timezone</var> be <var>timezone<sub>hours</sub></var> hours and
-      <var>timezone<sub>minutes</sub></var> minutes from UTC; and return <var>time</var> and
-      <var>timezone</var>.
+      그렇지 않으면, <var>time</var>을 UTC 표준 시간대 순간이 되는 시간의 순간인 
+      <var>timezone<sub>hours</sub></var>시간 <var>timezone<sub>minutes</sub></var>분을 뺀 
+      <var>year</var>년, <var>month</var>월, <var>day</var>일, <var>hour</var>시, <var>minute</var>분,
+      <var>second</var>초의 순간으로 둡니다;
+      <var>timezone</var>을 UTC로부터 <var>timezone<sub>hours</sub></var> 시
+      <var>timezone<sub>minutes</sub></var> 분으로 두고; <var>time</var>과 <var>timezone</var>를
+      반환합니다.
 
 <h4 id="colors">Colors</h4>
 
