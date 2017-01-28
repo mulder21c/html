@@ -1500,15 +1500,15 @@ pre.idl.highlight { color: #708090; }
       </li><li>
        <a href="infrastructure.html#infrastructure-urls"><span class="secno">2.5</span> <span class="content">URLs</span></a>
        <ol class="toc">
-        <li><a href="infrastructure.html#urls-terminology"><span class="secno">2.5.1</span> <span class="content">Terminology</span></a>
-        </li><li><a href="infrastructure.html#parsing-urls"><span class="secno">2.5.2</span> <span class="content">Parsing URLs</span></a>
-        </li><li><a href="infrastructure.html#dynamic-changes-to-base-urls"><span class="secno">2.5.3</span> <span class="content">Dynamic changes to base URLs</span></a>
+        <li><a href="infrastructure.html#urls-terminology"><span class="secno">2.5.1</span> <span class="content">용어</span></a>
+        </li><li><a href="infrastructure.html#parsing-urls"><span class="secno">2.5.2</span> <span class="content">URL 해석</span></a>
+        </li><li><a href="infrastructure.html#dynamic-changes-to-base-urls"><span class="secno">2.5.3</span> <span class="content">기본 URL로 동적 변경</span></a>
        </li></ol>
       </li><li>
-       <a href="infrastructure.html#fetching-resources"><span class="secno">2.6</span> <span class="content">Fetching resources</span></a>
+       <a href="infrastructure.html#fetching-resources"><span class="secno">2.6</span> <span class="content">리소스 가져오기</span></a>
        <ol class="toc">
-        <li><a href="infrastructure.html#fetching-resources-terminology"><span class="secno">2.6.1</span> <span class="content">Terminology</span></a>
-        </li><li><a href="infrastructure.html#fetching-resources-processing-model"><span class="secno">2.6.2</span> <span class="content">Processing model</span></a>
+        <li><a href="infrastructure.html#fetching-resources-terminology"><span class="secno">2.6.1</span> <span class="content">용어</span></a>
+        </li><li><a href="infrastructure.html#fetching-resources-processing-model"><span class="secno">2.6.2</span> <span class="content">처리 모델</span></a>
         </li><li><a href="infrastructure.html#encrypted-http-and-related-security-concerns"><span class="secno">2.6.3</span> <span class="content">Encrypted HTTP and related security concerns</span></a>
         </li><li><a href="infrastructure.html#content-type-sniffing"><span class="secno">2.6.4</span> <span class="content">Determining the type of a resource</span></a>
         </li><li><a href="infrastructure.html#extracting-character-encodings-from-meta-elements"><span class="secno">2.6.5</span> <span class="content">Extracting character encodings from <code><span>meta</span></code> elements</span></a>
@@ -1817,7 +1817,7 @@ pre.idl.highlight { color: #708090; }
   (예를 들어, <code><a data-link-type="element" href="grouping-content.html#elementdef-blockquote" id="ref-for-elementdef-blockquote-1">blockquote</a></code> 요소(element)의 콘텐트가 따옴표로 묶여있지 않다면 문서는 비적합 
   함에도 불구하고, 사람의 판단의 입력 없이 수행하는 적합성 검사기는 <code><a data-link-type="element" href="grouping-content.html#elementdef-blockquote" id="ref-for-elementdef-blockquote-2">blockquote</a></code> 요소(element)가 인용된 문장만을 포함함을 검사할 필요가 없습니다.)</p>
       <p>적합성 검사기는 입력 문서가 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-3">브라우징 컨텍스트</a> 없이 해석되는 경우
-  (스크립가 수행되지 않고, 해석기의 <a data-link-type="dfn" href="syntax.html#scripting-flag" id="ref-for-scripting-flag-1">scripting 플래그</a>가 비활성화 된 
+  (스크립가 수행되지 않고, 해석기의 <a data-link-type="dfn" href="syntax.html#scripting-flag" id="ref-for-scripting-flag-1">스크립팅 플래그</a>가 비활성화 된 
   것을 의미) 적합한지 검사해야(must) 하고, 또한 입력 문서가 스크립트를 수행하는 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-4">브라우징 컨텍스트</a>를 가지고 해석되는 경우 적합한지, 그리고 
   스크립트는 스크립트가 자신을 수행하는 동안 비적합 상태가 다른 것을 발생시키는 것을 야기하지 
   않음을 검사해야(should) 합니다. (이것은 불가능한 것으로 증명되었기 때문에 "SHOULD"일 뿐 
@@ -2018,7 +2018,7 @@ pre.idl.highlight { color: #708090; }
        </li><li data-md="">
         <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-domain-to-unicode">도메인을 유니코드로 변환</a> 알고리즘</p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#non-relative-flag">non-relative 플래그</a></p>
+        <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#non-relative-flag">비관련 플래그</a></p>
        </li><li data-md="">
         <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL 해석기</a>에서 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#syntax-violation">해석 오류</a></p>
       </li></ul>
@@ -2154,21 +2154,21 @@ pre.idl.highlight { color: #708090; }
          </li><li data-md="">
           <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-origin">origin</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#omit-origin-header-flag">omit-<code>Origin</code>-header 플래그</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#omit-origin-header-flag"><code>Origin</code> 헤더 생략 플래그</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#same-origin-data-url-flag">same-origin data-URL 플래그</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#same-origin-data-url-flag">동일 출처 data-URL 플래그</a></p>
          </li><li data-md="">
           <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-referrer">리퍼러(referrer)</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#synchronous-flag">synchronous 플래그</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#synchronous-flag">동기(synchronous) 플래그</a></p>
          </li><li data-md="">
           <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-mode">모드(mode)</a></p>
          </li><li data-md="">
           <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-credentials-mode">자격 증명 모드</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag">use-URL-credentials 플래그</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag">URL 크레덴셜 사용 플래그</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#unsafe-request-flag">unsafe-request 플래그</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#unsafe-request-flag">안전하지 않은 요청 플래그</a></p>
          </li><li data-md="">
           <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-cache-mode">캐시 모드</a></p>
          </li><li data-md="">
@@ -2696,7 +2696,7 @@ pre.idl.highlight { color: #708090; }
        </li><li data-md="">
         <p><code class="idl"><a data-link-type="idl" href="https://fullscreen.spec.whatwg.org/#dom-element-requestfullscreen">requestFullscreen()</a></code></p>
        </li><li data-md="">
-        <p><a data-link-type="dfn" href="https://fullscreen.spec.whatwg.org/#fullscreen-enabled-flag">fullscreen enabled 플래그</a></p>
+        <p><a data-link-type="dfn" href="https://fullscreen.spec.whatwg.org/#fullscreen-enabled-flag">풀스크린 가능 플래그</a></p>
        </li><li data-md="">
         <p><a data-link-type="dfn" href="https://fullscreen.spec.whatwg.org/#fully-exit-fullscreen">풀스크린을 완전히 나가는</a> 알고리즘</p>
       </li></ul>
@@ -4960,220 +4960,216 @@ pre.idl.highlight { color: #708090; }
     <p>문자열이 빈 문자열, 혹은 <a data-link-type="dfn" href="infrastructure.html#space-characters" id="ref-for-space-characters-22">공백 문자</a>로만 구성되는 문자열, 혹은 미디어
   쿼리 명세에 주어진 정의에 따라 사용자의 환경에 일치하는 미디어 쿼리 목록이라면, 문자열은 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="match the environment|matches the environment" data-noexport="" id="match-the-environment">사용자의 환경과 일치</dfn>합니다. <a data-link-type="biblio" href="references.html#biblio-mediaq">[MEDIAQ]</a></p>
     <h3 class="heading settled" data-level="2.5" id="infrastructure-urls"><span class="secno">2.5. </span><span class="content">URLs</span><a class="self-link" href="infrastructure.html#infrastructure-urls"></a></h3>
-    <h4 class="heading settled" data-level="2.5.1" id="urls-terminology"><span class="secno">2.5.1. </span><span class="content">Terminology</span><a class="self-link" href="infrastructure.html#urls-terminology"></a></h4>
-    <p>A <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-url">valid URL</dfn> if it conforms to the authoring conformance
-  requirements in the WHATWG URL standard. <a data-link-type="biblio" href="references.html#biblio-url">[URL]</a></p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-non-empty-url">valid non-empty URL</dfn> if it is a <a data-link-type="dfn" href="infrastructure.html#valid-url" id="ref-for-valid-url-1">valid URL</a> but it is not
-  the empty string.</p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-url-potentially-surrounded-by-spaces">valid URL potentially surrounded by spaces</dfn> if, after <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-4">stripping leading and trailing whitespace</a> from it, it is a <a data-link-type="dfn" href="infrastructure.html#valid-url" id="ref-for-valid-url-2">valid URL</a>.</p>
-    <p>A string is a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="valid-non-empty-url-potentially-surrounded-by-spaces">valid non-empty URL potentially surrounded by spaces</dfn> if, after <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-5">stripping leading and trailing whitespace</a> from it, it is a <a data-link-type="dfn" href="infrastructure.html#valid-non-empty-url" id="ref-for-valid-non-empty-url-1">valid non-empty URL</a>.</p>
-    <p>This specification defines the URL <dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" id="schemedef-aboutlegacy-compat"><code>about:legacy-compat</code></dfn> as a reserved,
-  though unresolvable, <a data-link-type="scheme" href="infrastructure.html#schemedef-about" id="ref-for-schemedef-about-3"><code>about:</code></a> URL, for use in <a data-link-type="dfn" href="syntax.html#doctype" id="ref-for-doctype-1">DOCTYPE</a>s in <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-4">HTML documents</a> when needed for compatibility with XML tools. <a data-link-type="biblio" href="references.html#biblio-rfc6694">[RFC6694]</a></p>
-    <p>This specification defines the URL <dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" id="schemedef-aboutsrcdoc"><code>about:srcdoc</code></dfn> as a reserved, though
-  unresolvable, <a data-link-type="scheme" href="infrastructure.html#schemedef-about" id="ref-for-schemedef-about-4"><code>about:</code></a> URL, that is used as <a data-link-type="dfn" href="dom.html#the-document-address" id="ref-for-the-document-address-1">the document’s address</a> of <a data-link-type="dfn" href="semantics-embedded-content.html#iframe-iframe-srcdoc-document" id="ref-for-iframe-iframe-srcdoc-document-1"><code>iframe</code> <code>srcdoc</code> documents</a>. <a data-link-type="biblio" href="references.html#biblio-rfc6694">[RFC6694]</a></p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="fallback-base-url">fallback base URL</dfn> of a <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object is the <a data-link-type="dfn">absolute URL</a> obtained by running these substeps:</p>
+    <h4 class="heading settled" data-level="2.5.1" id="urls-terminology"><span class="secno">2.5.1. </span><span class="content">용어</span><a class="self-link" href="infrastructure.html#urls-terminology"></a></h4>
+    <p><a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>이 WHATWG URL 표준의 저작 적합성 요구사항에 준하다면 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid URL" data-noexport="" id="valid-url">유효한 URL</dfn>입니다. <a data-link-type="biblio" href="references.html#biblio-url">[URL]</a></p>
+    <p>문자열이 <a data-link-type="dfn" href="infrastructure.html#valid-url" id="ref-for-valid-url-1">유효한 URL</a>이고 빈 문자열이 아니라면 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid non-empty URL" data-noexport="" id="valid-non-empty-url">유효한 비어있지 않은 URL</dfn>입니다.</p>
+    <p>문자열은, 문자열로부터 <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-4">앞뒤 여백 문자를 비워낸</a> 이후, <a data-link-type="dfn" href="infrastructure.html#valid-url" id="ref-for-valid-url-2">유효한 문자열</a>이라면, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid URL potentially surrounded by spaces" data-noexport="" id="valid-url-potentially-surrounded-by-spaces">잠정적으로 공백으로 둘러싸일 수 있는 유효한 URL</dfn> 입니다.</p>
+    <p>문자열은, 문자열로부터 <a data-link-type="dfn" href="infrastructure.html#strip-leading-and-trailing-whitespace" id="ref-for-strip-leading-and-trailing-whitespace-5">앞뒤 여백 문자를 비워낸</a> 이후, <a data-link-type="dfn" href="infrastructure.html#valid-non-empty-url" id="ref-for-valid-non-empty-url-1">유효한 비어있지 않은 URL</a>이라면, <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="valid non-empty URL potentially surrounded by spaces" data-noexport="" id="valid-non-empty-url-potentially-surrounded-by-spaces">유효한 잠정적으로 공백으로 둘러 싸일 수 있는 비어있지 않은 URL</dfn>입니다.</p>
+    <p>이 명세는 XML 도구와 호환성이 필요할 경우 <a data-link-type="dfn" href="infrastructure.html#html-document" id="ref-for-html-document-4">HTML 문서</a>의 <a data-link-type="dfn" href="syntax.html#doctype" id="ref-for-doctype-1">DOCTYPE</a>에서
+  사용을 위해 예약된, 비록 해결할 수 없지만, <a data-link-type="scheme" href="infrastructure.html#schemedef-about" id="ref-for-schemedef-about-3"><code>about:</code></a> URL과 같이 URL <dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" id="schemedef-aboutlegacy-compat"><code>about:legacy-compat</code></dfn>를 정의합니다. <a data-link-type="biblio" href="references.html#biblio-rfc6694">[RFC6694]</a></p>
+    <p>이 명세는 확인 할 수 없음에도 불구하고, 예약된 URL <a data-link-type="scheme" href="infrastructure.html#schemedef-about" id="ref-for-schemedef-about-4"><code>about:</code></a>과 같이 <a data-link-type="dfn" href="semantics-embedded-content.html#iframe-iframe-srcdoc-document" id="ref-for-iframe-iframe-srcdoc-document-1"><code>iframe</code> <code>srcdoc</code> 문서</a>의 <a data-link-type="dfn" href="dom.html#the-document-address" id="ref-for-the-document-address-1">문서의 주소</a>로 사용되는 <dfn class="dfn-paneled" data-dfn-type="scheme" data-export="" id="schemedef-aboutsrcdoc"><code>about:srcdoc</code></dfn>를 
+  정의합니다. <a data-link-type="biblio" href="references.html#biblio-rfc6694">[RFC6694]</a></p>
+    <p>객체의 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="fallback base URL" data-noexport="" id="fallback-base-url">폴백 기본 URL</dfn>은 이 하위 단계들을 수행하여 얻어지는 <a data-link-type="dfn">절대 URL</a>입니다:</p>
     <ol>
      <li data-md="">
-      <p>If <var>document</var> is <a data-link-type="dfn" href="semantics-embedded-content.html#iframe-iframe-srcdoc-document" id="ref-for-iframe-iframe-srcdoc-document-2">an <code>iframe</code> <code>srcdoc</code> document</a>,
-  then return the <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-1">document base URL</a> of the <var>Document</var>’s <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-5">browsing context</a>’s <a data-link-type="dfn" href="browsers.html#browsing-context-container" id="ref-for-browsing-context-container-1">browsing context container</a>’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>.</p>
+      <p><var>document</var>가 <a data-link-type="dfn" href="semantics-embedded-content.html#iframe-iframe-srcdoc-document" id="ref-for-iframe-iframe-srcdoc-document-2"><code>iframe</code> <code>srcdoc</code> 문서</a>라면, <var>Document</var>의 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-5">브라우징 컨텍스트</a>의 <a data-link-type="dfn" href="browsers.html#browsing-context-container" id="ref-for-browsing-context-container-1">브라우징 컨텍스트 컨테이너</a>의 <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">노드 문서</a>의 <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-1">문서 기본 URL</a>을 반환합니다.</p>
      </li><li data-md="">
-      <p>If <var>document</var>’s <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> is <code>about:blank</code>, and the <var>Document</var>’s <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-6">browsing context</a> has a <a data-link-type="dfn" href="browsers.html#creator-browsing-context" id="ref-for-creator-browsing-context-1">creator browsing context</a>, then
-  return the <a data-link-type="dfn" href="browsers.html#creator-base-url" id="ref-for-creator-base-url-1">creator base URL</a>.</p>
+      <p><var>document</var>의 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>이 <code>about:blank</code>이고, <var>document</var>의 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-6">브라우징 컨텍스트</a>가 <a data-link-type="dfn" href="browsers.html#creator-browsing-context" id="ref-for-creator-browsing-context-1">생성자 브라우징 컨텍스트</a>를
+  가진다면, <a data-link-type="dfn" href="browsers.html#creator-base-url" id="ref-for-creator-base-url-1">생성자 기본 URL</a>을 반환합니다.</p>
      </li><li data-md="">
-      <p>Return <var>document</var>’s <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>.</p>
+      <p><var>document</var>의 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>을 반환합니다.</p>
     </li></ol>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="document-base-url">document base URL</dfn> of a <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object is the <a data-link-type="dfn">absolute URL</a> obtained by running these substeps:</p>
+    <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 객체의 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="document base URL" data-noexport="" id="document-base-url">문서 기본 URL</dfn>은 이 하위 단계들을 수행하여
+  얻어지는 <a data-link-type="dfn">절대 URL</a>입니다:</p>
     <ol>
      <li data-md="">
-      <p>If there is no <code><a data-link-type="element" href="document-metadata.html#elementdef-base" id="ref-for-elementdef-base-2">base</a></code> element that has an <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-base-href" id="ref-for-element-attrdef-base-href-1">href</a></code> attribute in the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>, then the <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-2">document base URL</a> is the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>'s <a data-link-type="dfn" href="infrastructure.html#fallback-base-url" id="ref-for-fallback-base-url-1">fallback base URL</a>; abort these steps.</p>
+      <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>에 <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-base-href" id="ref-for-element-attrdef-base-href-1">href</a></code> 속성(attribute)를 가진 <code><a data-link-type="element" href="document-metadata.html#elementdef-base" id="ref-for-elementdef-base-2">base</a></code> 요소(element)가 없다면, <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-2">문서 절대 URL</a>은 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>의 <a data-link-type="dfn" href="infrastructure.html#fallback-base-url" id="ref-for-fallback-base-url-1">폴백 기본 URL</a>입니다;
+  이 단계들을 중단합니다.</p>
      </li><li data-md="">
-      <p>Otherwise, the <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-3">document base URL</a> is the <a data-link-type="dfn" href="document-metadata.html#frozen-base-url" id="ref-for-frozen-base-url-1">frozen base URL</a> of the first <code><a data-link-type="element" href="document-metadata.html#elementdef-base" id="ref-for-elementdef-base-3">base</a></code> element in the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> that has an <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-base-href" id="ref-for-element-attrdef-base-href-2">href</a></code> attribute, in <a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-3">tree order</a>.</p>
+      <p>그렇지 않으면, <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-3">문서 기본 URL</a>은 <a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-3">트리 순서</a>에
+  따라 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 내의 <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-base-href" id="ref-for-element-attrdef-base-href-2">href</a></code> 속성(attribute)을 가진 첫 번째 <code><a data-link-type="element" href="document-metadata.html#elementdef-base" id="ref-for-elementdef-base-3">base</a></code> 요소(element)의 <a data-link-type="dfn" href="document-metadata.html#frozen-base-url" id="ref-for-frozen-base-url-1">고정(frozen) 기본 URL</a>입니다.</p>
     </li></ol>
-    <h4 class="heading settled" data-level="2.5.2" id="parsing-urls"><span class="secno">2.5.2. </span><span class="content">Parsing URLs</span><a class="self-link" href="infrastructure.html#parsing-urls"></a></h4>
-    <p>Parsing a URL is the process of taking a URL string and obtaining the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL record</a> that it
-  implies. While this process is defined in the WHATWG URL standard, this specification defines a
-  wrapper for convenience. <a data-link-type="biblio" href="references.html#biblio-url">[URL]</a></p>
-    <p class="note" role="note">This wrapper is only useful when the character encoding for the URL parser has to
-  match that of the document or environment settings object for legacy reasons. When that is not the
-  case the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL parser</a> can be used directly.</p>
-    <p>To <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="reparsed|parse a URL|parse|parsing|parsing of relative urls|parsing relative urls" data-noexport="" id="reparsed">parse a URL</dfn> <var>url</var>, relative to either a <var>document</var> or <var>environment settings object</var>, the user agent must use the following steps. Parsing a URL
-  either results in failure or a <a data-link-type="dfn" href="infrastructure.html#resulting-url-string" id="ref-for-resulting-url-string-1">resulting URL string</a> and <a data-link-type="dfn" href="infrastructure.html#resulting-url-record" id="ref-for-resulting-url-record-1">resulting URL record</a>.</p>
+    <h4 class="heading settled" data-level="2.5.2" id="parsing-urls"><span class="secno">2.5.2. </span><span class="content">URL 해석</span><a class="self-link" href="infrastructure.html#parsing-urls"></a></h4>
+    <p>URL 해석은 URL 문자열을 가져오고 그것이 의미하는 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL 레코드</a>를 획득하는
+  과정입니다. 이 과정이 WAHTWG URL 표준에 정의되어 있지만, 이 명세는 편의상 래퍼를 정의합니다. <a data-link-type="biblio" href="references.html#biblio-url">[URL]</a></p>
+    <p class="note" role="note">이 래퍼는 레거시 이유로 URL 해석기에 대한 문자 인코딩이 문서나 환경 설정 객체의 
+  문자 인코딩과 일치해야(has to) 하는 경우에만 유용합니다. 문자 인코딩이 그 경우가 아닌 경우 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL 해석기</a>가 직접적으로 사용될 수 있습니다.</p>
+    <p><var>document</var>나 <var>environment settings object</var>과 관련된, <var>url</var> <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="reparsed|parse a URL|parse|parsing|parsing of relative urls|parsing relative urls" data-noexport="" id="reparsed">URL을 해석</dfn>하기 위해, 
+  유저 에이전트는 다음 단계들을 사용해야(must) 합니다. URL 해석은 실패되거나 <a data-link-type="dfn" href="infrastructure.html#resulting-url-string" id="ref-for-resulting-url-string-1">결과 URL 문자열</a>과 <a data-link-type="dfn" href="infrastructure.html#resulting-url-record" id="ref-for-resulting-url-record-1">결과 URL 레코드</a>가 됩니다.</p>
     <ol>
      <li data-md="">
-      <p>Let <var>encoding</var> be <var>document</var>’s <a data-link-type="dfn" href="infrastructure.html#character-encoding" id="ref-for-character-encoding-3">character encoding</a>, if <var>document</var> was given, and <var>environment settings object</var>’s <a data-link-type="dfn" href="webappapis.html#api-url-character-encoding" id="ref-for-api-url-character-encoding-1">API URL character encoding</a> otherwise.</p>
+      <p><var>document</var>가 주어졌고, <var>environment settings object</var>의 <a data-link-type="dfn" href="webappapis.html#api-url-character-encoding" id="ref-for-api-url-character-encoding-1">API URL 문자 인코딩</a>은 주어지지 않았다면, <var>encoding</var>을 <var>document</var>의 <a data-link-type="dfn" href="infrastructure.html#character-encoding" id="ref-for-character-encoding-3">문자 인코딩</a>으로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>baseURL</var> be <var>document</var>’s <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-4">base URL</a>, if <var>document</var> was
-  given, and <var>environment settings object</var>’s <a data-link-type="dfn" href="webappapis.html#api-base-url" id="ref-for-api-base-url-1">API base URL</a> otherwise.</p>
+      <p><var>document</var>가 주어졌고, <var>environment settings object</var>의 <var>baseURL</var>을 <a data-link-type="dfn" href="webappapis.html#api-base-url" id="ref-for-api-base-url-1">API 기본 URL</a>은 주어지지 않았다면, <var>document</var>의 <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-4">기본 URL</a>로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>urlRecord</var> be the result of applying the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL parser</a> to <var>url</var>,
-  with <var>baseURL</var> and <var>encoding</var>.</p>
+      <p><var>urlRecord</var>을 <var>baseURL</var>과 <var>encoding</var>과 함께, <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL 해석기</a>를 <var>url</var>에 적용한 결과로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>urlRecord</var> is failure, then abort these steps with an error.</p>
+      <p><var>urlRecord</var>가 실패라면, 오류와 함께 이 단계를 중단합니다.</p>
      </li><li data-md="">
-      <p>Let <var>urlString</var> be the result of applying the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-serializer">URL serializer</a> to <var>urlRecord</var>.</p>
+      <p><var>urlString</var>을 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-serializer">URL 시리얼라이저</a>를 <var>urlRecord</var>에
+  적용한 결과로 둡니다.</p>
      </li><li data-md="">
-      <p>Return <var>urlString</var> as the <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="resulting-url-string">resulting URL string</dfn> and <var>urlRecord</var> as
-  the <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="resulting URL record|resulting URL records" data-noexport="" id="resulting-url-record">resulting URL record</dfn>.</p>
+      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="resulting URL string" data-noexport="" id="resulting-url-string">결과 URL 문자열</dfn>로 <var>urlString</var>을 반환하고 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="resulting URL record|resulting URL records" data-noexport="" id="resulting-url-record">결과 URL 레코드</dfn>로 <var>urlRecord</var>를 반환합니다.</p>
     </li></ol>
-    <h4 class="heading settled" data-level="2.5.3" id="dynamic-changes-to-base-urls"><span class="secno">2.5.3. </span><span class="content">Dynamic changes to base URLs</span><a class="self-link" href="infrastructure.html#dynamic-changes-to-base-urls"></a></h4>
-    <p>When a document’s <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-5">document base URL</a> changes, all elements in that document are <a data-link-type="dfn" href="infrastructure.html#affected-by-a-base-url-change" id="ref-for-affected-by-a-base-url-change-1">affected by a base URL change</a>.</p>
-    <p>The following are <a data-link-type="dfn" href="infrastructure.html#base-url-change-steps" id="ref-for-base-url-change-steps-1">base URL change steps</a>, which run when an element is <a data-link-type="dfn" href="infrastructure.html#affected-by-a-base-url-change" id="ref-for-affected-by-a-base-url-change-2">affected by a base URL change</a> (as defined by the DOM specification):</p>
+    <h4 class="heading settled" data-level="2.5.3" id="dynamic-changes-to-base-urls"><span class="secno">2.5.3. </span><span class="content">기본 URL로 동적 변경</span><a class="self-link" href="infrastructure.html#dynamic-changes-to-base-urls"></a></h4>
+    <p>문서의 <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-5">문서 기본 URL</a>이 변경되는 경우, 그 문서 내의 모든 요소(element)들은 <a data-link-type="dfn" href="infrastructure.html#affected-by-a-base-url-change" id="ref-for-affected-by-a-base-url-change-1">습니다</a>.</p>
+    <p>다음은 요소(element)가 <a data-link-type="dfn" href="infrastructure.html#affected-by-a-base-url-change" id="ref-for-affected-by-a-base-url-change-2">기본 URL 변경에 의해 영향을 받는</a> 경우 (DOM 명세에 정의된 대로), 수행되는 <a data-link-type="dfn" href="infrastructure.html#base-url-change-steps" id="ref-for-base-url-change-steps-1">기본 URL 변경 단계</a>입니다:</p>
     <dl class="switch">
-     <dt>If the element creates a <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-2">hyperlink</a>
+     <dt>요소(element)가 <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-2">하이퍼링크</a>를 생성한다면
      </dt><dd>
-       If the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> identified by the hyperlink is being shown to the user, or if any
-      data derived from that <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> is affecting the display, then the <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-4">href</a></code> attribute should be <a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-2">reparsed</a> relative to the element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a> and the UI
-      updated appropriately. 
-      <p class="example" id="example-c59a69a9"><a class="self-link" href="infrastructure.html#example-c59a69a9"></a> For example, the CSS <code>:link</code>/<code>:visited</code> pseudo-classes might have
-        been affected. </p>
-     </dd><dt> If the element is a <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-q" id="ref-for-elementdef-q-1">q</a></code>, <code><a data-link-type="element" href="grouping-content.html#elementdef-blockquote" id="ref-for-elementdef-blockquote-3">blockquote</a></code>, <code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-1">ins</a></code>, or <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-1">del</a></code> element with a <code>cite</code> attribute 
-     </dt><dd> If the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> identified by the <code>cite</code> attribute is being shown to
-      the user, or if any data derived from that <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> is affecting the display, then
-      the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> should be <a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-3">reparsed</a> relative to the element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a> and the UI updated appropriately. 
-     </dd><dt>Otherwise
+       하이퍼링크에 의해 확인된 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>이 사용자에게 보여지거나, 그 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>로부터 
+      파생된 임의의 데이터가 표현(display)에 영향을 미치고 있다면, <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-4">href</a></code> 속성(attribute)은
+      요소(element)의 <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">노드 문서</a>와 알맞게 갱신된 UI와 관련하여 <a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-2">재해석</a> 되어야(should) 합니다. 
+      <p class="example" id="example-c9cebdc2"><a class="self-link" href="infrastructure.html#example-c9cebdc2"></a> 예를 들어, CSS <code>:link</code>/<code>:visited</code> 가상 클래스는 영향을 받았을 수 있습니다. </p>
+     </dd><dt> 요소(element)가 <code>cite</code> 속성(attribute)을 가진 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-q" id="ref-for-elementdef-q-1">q</a></code>, <code><a data-link-type="element" href="grouping-content.html#elementdef-blockquote" id="ref-for-elementdef-blockquote-3">blockquote</a></code>, <code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-1">ins</a></code>, <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-1">del</a></code>요소라면 
+     </dt><dd> <code>cite</code> 속성(attribute)에 의해 확인 된 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>이 사용자에게 보여지고 있거나,
+      그 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>로부터 파생된 임의의 데이터가 표시에 영향을 미치고 있다면, <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>은
+      요소(element)의 <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">노드 문서</a>와 알맞게 갱신된 UI와 관련하여 <a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-3">재해석</a> 되어야(should) 합니다. 
+     </dd><dt>그렇지 않으면
      </dt><dd>
-       The element is not directly affected. 
-      <p class="example" id="example-f40f8618"><a class="self-link" href="infrastructure.html#example-f40f8618"></a> For instance, changing the base URL doesn’t affect the image displayed by <code>img</code> elements, although subsequent accesses of the <code>src</code> IDL attribute from script
-        will return a new <a data-link-type="dfn">absolute URL</a> that might no longer correspond to the image being
-        shown. </p>
+       요소(element)는 직접적으로 영향을 받지 않습니다. 
+      <p class="example" id="example-72784087"><a class="self-link" href="infrastructure.html#example-72784087"></a> 예를 들어, 기본 URL을 변경하는 것은, 스크립트에서 <code>src</code> IDL 속성(attribute)의 다음 
+        접근이 보여지고 있는 이미지와 더 이상 일치하지 않을 새로운 <a data-link-type="dfn">절대 URL</a>을 
+        반환할 것이기는 하지만, <code>img</code> 요소(element)에 의해 표시된 이미지에 영향을 주지 
+        않습니다. </p>
     </dd></dl>
-    <h3 class="heading settled" data-level="2.6" id="fetching-resources"><span class="secno">2.6. </span><span class="content">Fetching resources</span><a class="self-link" href="infrastructure.html#fetching-resources"></a></h3>
-    <h4 class="heading settled" data-level="2.6.1" id="fetching-resources-terminology"><span class="secno">2.6.1. </span><span class="content">Terminology</span><a class="self-link" href="infrastructure.html#fetching-resources-terminology"></a></h4>
-    <p>User agents can implement a variety of transfer protocols, but this specification mostly defines
-  behavior in terms of HTTP. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="or equivalent|HTTP GET method" data-noexport="" id="or-equivalent">HTTP GET method</dfn> is equivalent to the default retrieval action of the protocol.
-  For example, RETR in FTP. Such actions are idempotent and safe, in HTTP terms.</p>
-    <p>The <dfn data-dfn-type="dfn" data-noexport="" id="http-response-codes">HTTP response codes<a class="self-link" href="infrastructure.html#http-response-codes"></a></dfn> are equivalent to statuses in other protocols that have the
-  same basic meanings. For example, a "file not found" error is equivalent to a 404 code, a server
-  error is equivalent to a 5xx code, and so on.</p>
-    <p>The <dfn data-dfn-type="dfn" data-noexport="" id="http-headers">HTTP headers<a class="self-link" href="infrastructure.html#http-headers"></a></dfn> are equivalent to fields in
-  other protocols that have the same basic meaning. For example, the HTTP authentication headers
-  are equivalent to the authentication aspects of the FTP protocol.</p>
-    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="referrer-source">referrer source</dfn> is either a <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> or a <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>.</p>
-    <p>To <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="creating a potential-cors request|create a potential-CORS request" data-noexport="" id="creating-a-potential-cors-request">create a potential-CORS request</dfn>, given a <var>url</var>, <var>corsAttributeState</var>, and an optional <i>same-origin fallback flag</i>, run these steps:</p>
+    <h3 class="heading settled" data-level="2.6" id="fetching-resources"><span class="secno">2.6. </span><span class="content">리소스 가져오기</span><a class="self-link" href="infrastructure.html#fetching-resources"></a></h3>
+    <h4 class="heading settled" data-level="2.6.1" id="fetching-resources-terminology"><span class="secno">2.6.1. </span><span class="content">용어</span><a class="self-link" href="infrastructure.html#fetching-resources-terminology"></a></h4>
+    <p>유저 에이전트는 다양한 전송 프로토콜을 구현할 수 있지만, 이 명세는 주로 HTTP 관점에서 동작을
+  정의합니다. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="or equivalent|HTTP GET method" data-noexport="" id="or-equivalent">HTTP GET 메서드</dfn>는 프로토콜의 기본 검색 동작과 동일합니다.
+  예를 들어, FTP에서의 RETR. 그러한 동작은 HTTP 관점에서, 멱등하고 안전합니다.</p>
+    <div class="translator-note">
+     <dl>
+      <dt>멱등(idempotent)
+      </dt><dd> 멱등성(冪等性, 영어: idempotence)은 수학이나 전산학에서 연산의 한 성질을 나타내는 것으로, 
+        연산을 여러 번 적용하더라도 결과가 달라지지 않는 성질을 의미. <br> 메서드를 여러 번 호출해서 한 번만 호출한 것과 동일한 결과가 나오는 경우 이 메서드를 
+        멱등(idempotent)이라고 할 수 있다. 예를 들어 읽기 전용 메서드와 같이 일반적으로 서버 측의 
+        어떠한 상태도 변경하지 못하는 모든 메서드는 멱등(idempotent)이다. 
+      </dd><dd> GET 방식과 POST로 데이터를 전송받은 URL을 재요청(refresh 등으로)할 경우, GET 페이지는
+	이전과 재요청 후와 동일한 결과를 응답하겠지만, POST 페이지는 재요청 시 데이터 누락으로 
+	올바르지 않은 페이지를 응답하게 되는 것. (참고 : <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">protocol spec</a>) 
+     </dd></dl>
+    </div>
+    <p><dfn data-dfn-type="dfn" data-lt="HTTP response codes" data-noexport="" id="http-response-codes">HTTP 응답 코드<a class="self-link" href="infrastructure.html#http-response-codes"></a></dfn>는 동일한 기본 의미를 갖는 다른 프로토콜에서의
+  상태와 동일합니다. 예를 들어, "file not found" 오류는 404 코드와 동일하고, 서버 오류는 5xx 코드와 
+  동일합니다.</p>
+    <p><dfn data-dfn-type="dfn" data-lt="HTTP headers" data-noexport="" id="http-headers">HTTP 헤더<a class="self-link" href="infrastructure.html#http-headers"></a></dfn>는 동일한 기본 의미를 갖는 다른 프로토콜에서의 필드와 동일합니다.
+  예를 들어, HTTP 인증 헤더는 FTP 프로토콜의 인증 측면과 동일합니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="referrer source" data-noexport="" id="referrer-source">리퍼러 소스</dfn>는 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>나 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>입니다.</p>
+    <p><var>url</var>, <var>corsAttributeState</var>, 선택적으로 <i>동일 출처 폴백 플래그</i>가 주어진 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="creating a potential-cors request|create a potential-CORS request" data-noexport="" id="creating-a-potential-cors-request">잠정적 CORS 요청을 생성</dfn>하기 위해 
+  이 단계들을 수행합니다:</p>
     <ol>
      <li data-md="">
-      <p>Let <var>mode</var> be "<code>no-cors</code>" if <var>corsAttributeState</var> is <a data-link-type="state" href="infrastructure.html#statedef-cors-no-cors" id="ref-for-statedef-cors-no-cors-1">No CORS</a>, and "<code>cors</code>" otherwise.</p>
+      <p><var>corsAttributeState</var>가 <a data-link-type="state" href="infrastructure.html#statedef-cors-no-cors" id="ref-for-statedef-cors-no-cors-1">No CORS</a>이라면 <var>mode</var>를
+  "<code>no-cors</code>"로 두고, 그렇지 않으면 "<code>cors</code>"로 둡니다.</p>
      </li><li data-md="">
-      <p>If <i>same-origin fallback flag</i> is set and <var>mode</var> is "<code>no-cors</code>", set <var>mode</var> to "<code>same-origin</code>".</p>
+      <p><i>동일 출처 폴백 플래그</i>가 설정되고 <var>mode</var>가 "<code>no-cors</code>"라면, <var>mode</var>를
+  "<code>same-origin</code>"로 설정합니다.</p>
      </li><li data-md="">
-      <p>Let <var>credentialsMode</var> be "<code>include</code>".</p>
+      <p><var>credentialsMode</var>를 "<code>include</code>"로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>corsAttributeState</var> is <a data-link-type="dfn" href="https://www.w3.org/TR/css-display-3/#anonymous">Anonymous</a>, set <var>credentialsMode</var> to
-  "<code>same-origin</code>".</p>
+      <p><var>corsAttributeState</var>가 <a data-link-type="dfn" href="https://www.w3.org/TR/css-display-3/#anonymous">익명(Anonymous)</a>이라면, <var>credentialsMode</var>를 "<code>same-origin</code>"로 설정합니다.</p>
      </li><li data-md="">
-      <p>Let <var>request</var> be a new <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request">request</a> whose <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> is <var>url</var>, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-destination">destination</a> is "<code>subresource</code>", <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-mode">mode</a> is <var>mode</var>, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-credentials-mode">credentials mode</a> is <var>credentialsMode</var>, and whose <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag">use-URL-credentials flag</a> is set.</p>
+      <p><var>request</var>를 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>이 <var>url</var>이고, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-destination">목적지</a>가
+  "<code>subresource</code>"이고, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-mode">모드</a>가 <var>mode</var>이며 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-credentials-mode">크레덴셜 모드</a>가 <var>credentialsMode</var>이고, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag">URL 크레덴셜 사용 플래그</a>가 설정된 새로운 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request">요청</a>으로 둡니다.</p>
     </li></ol>
-    <h4 class="heading settled" data-level="2.6.2" id="fetching-resources-processing-model"><span class="secno">2.6.2. </span><span class="content">Processing model</span><a class="self-link" href="infrastructure.html#fetching-resources-processing-model"></a></h4>
-    <p>When a user agent is to <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">fetch</a> a resource or <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>, optionally <strong>from</strong> an origin <i>origin</i>, optionally <strong>using</strong> a specific <a data-link-type="dfn" href="infrastructure.html#referrer-source" id="ref-for-referrer-source-1">referrer source</a> as an <i>override referrer source</i>, and optionally with any of a <i>synchronous flag</i>, a <i>manual redirect flag</i>, a <i>force same-origin flag</i>, and a <i>block cookies flag</i>, the following steps must be run. (When a <em>URL</em> is to be
-  fetched, the URL identifies a resource to be obtained.)</p>
+    <h4 class="heading settled" data-level="2.6.2" id="fetching-resources-processing-model"><span class="secno">2.6.2. </span><span class="content">처리 모델</span><a class="self-link" href="infrastructure.html#fetching-resources-processing-model"></a></h4>
+    <p>유저 에이전트가, 선택적으로 출처 <i>origin</i><strong>으로부터</strong>, 선택적으로 <i>오버라이드
+  리퍼러 소스</i>로서 특정한 <a data-link-type="dfn" href="infrastructure.html#referrer-source" id="ref-for-referrer-source-1">리퍼러 소스</a>를 <strong>사용하여</strong>, 
+  선택적으로 <i>동기(synchronous) 플래그</i>, <i>수동 리다이렉트 플래그</i>, <i>강제 동일 출처 플래그</i>, <i>쿠키 차단 플래그</i> 중 어느 것을 가진 리소스나 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>을 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">가져오는</a> 경우, 다음 단계들이 수행 되어야(must) 합니다. (<em>URL</em>을 가져올 때, URL은 얻어지는 리소스를 
+  식별합니다.)</p>
     <ol>
      <li data-md="">
-      <p>If there is a specific <i>override referrer source</i>, and it is a <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>, then let <var>referrer</var> be the <i>override referrer source</i>, and jump to the step labeled <i>clean referrer</i>.</p>
+      <p>특정 <i>오버라이드 리퍼러 리소스</i>가 있고, 그것이 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>이라면, <var>referrer</var>를 <i>오버라이드 리퍼러 리소스</i>로 두고, <i>clean referrer</i>로 라벨링 된 단계로 건너 뜁니다.</p>
      </li><li data-md="">
-      <p>Let <var>document</var> be the appropriate <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> as given by the following
-  list:</p>
+      <p><var>document</var>를 다음 목록에 의해 주어진 대로 적절한 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>로 둡니다:</p>
       <dl class="switch">
-       <dt>If there is a specific <i>override referrer source</i>
-       </dt><dd>The <i>override referrer source</i>.
-       </dd><dt>When <a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-2">navigating</a>
-       </dt><dd>The <a data-link-type="dfn" href="browsers.html#active-document" id="ref-for-active-document-1">active document</a> of the <a data-link-type="dfn" href="browsers.html#source-browsing-context" id="ref-for-source-browsing-context-1">source browsing context</a>.
-       </dd><dt>When fetching resources for an element
-       </dt><dd>The element’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>.
+       <dt>특정한 <i>오버라이드 리퍼러 리소스</i>가 있다면
+       </dt><dd><i>오버라이드 리퍼러 리소스</i>.
+       </dd><dt><a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-2">이동 중(navigating)</a>인 경우
+       </dt><dd><a data-link-type="dfn" href="browsers.html#source-browsing-context" id="ref-for-source-browsing-context-1">소스 브라우징 컨텍스트</a>의 <a data-link-type="dfn" href="browsers.html#active-document" id="ref-for-active-document-1">활성 문서</a>.
+       </dd><dt>요소(element)에 대한 리소스를 가져오는 중인 경우
+       </dt><dd>요소(element)의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>.
       </dd></dl>
      </li><li data-md="">
-      <p>While <var>document</var> is <a data-link-type="dfn" href="semantics-embedded-content.html#iframe-iframe-srcdoc-document" id="ref-for-iframe-iframe-srcdoc-document-3">an <code>iframe</code> <code>srcdoc</code> document</a>, let <var>document</var> be <var>document</var>’s <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-7">browsing context</a>’s <a data-link-type="dfn" href="browsers.html#browsing-context-container" id="ref-for-browsing-context-container-2">browsing context container</a>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> instead.</p>
+      <p><var>document</var>가 <a data-link-type="dfn" href="semantics-embedded-content.html#iframe-iframe-srcdoc-document" id="ref-for-iframe-iframe-srcdoc-document-3"><code>iframe</code> <code>srcdoc</code> 문서</a>임에도 불구하고, <var>document</var>를 대신 <var>document</var>의 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-7">브라우징 컨텍스트</a>의 <a data-link-type="dfn" href="browsers.html#browsing-context-container" id="ref-for-browsing-context-container-2">브라우징 컨텍스트 컨테이너</a>의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>로 둡니다.</p>
      </li><li data-md="">
-      <p>If the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-1">origin</a> of <var>Document</var> is not a scheme/host/port tuple, then
-  set <var>referrer</var> to the empty string and jump to the step labeled <var>Clean referrer</var>.</p>
+      <p><var>Document</var>의 <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-1">출처</a>가 scheme/host/port 튜플이 아니라면, <var>referrer</var>를 빈 문자열로 설정하고 <var>Clean referrer</var>로  라벨링 된 단계로 
+  건너뜁니다.</p>
      </li><li data-md="">
-      <p>Let <var>referrer</var> be <a data-link-type="dfn" href="dom.html#the-document-address" id="ref-for-the-document-address-2">the document’s address</a> of <var>document</var>.</p>
+      <p><var>referrer</var>를 <var>document</var>의 <a data-link-type="dfn" href="dom.html#the-document-address" id="ref-for-the-document-address-2">문서 주소</a>로 둡니다.</p>
      </li><li data-md="">
-      <p><var>Clean referrer</var>: Apply the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL parser</a> to <var>referrer</var> and let <var>parsed referrer</var> be the <a data-link-type="dfn" href="infrastructure.html#resulting-url-record" id="ref-for-resulting-url-record-2">resulting URL record</a>.</p>
+      <p><var>Clean referrer</var>: <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-parser">URL 해석기</a>를 <var>referrer</var>에 적용하고 <var>parsed referrer</var>를 <a data-link-type="dfn" href="infrastructure.html#resulting-url-record" id="ref-for-resulting-url-record-2">결과 URL 레코드</a>로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>referrer</var> be the result of applying the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-serializer">URL serializer</a> to <var>parsed referrer</var>, with the <i>exclude fragment flag</i> set.</p>
+      <p><var>referrer</var>를 <i>제외 프래그먼트 플래그</i> 세트를 가지고 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-serializer">URL 시리얼라이저</a>를 <var>parsed referrer</var>에 적용한 결과로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>referrer</var> is not the empty string, is not a <a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-3"><code>data:</code> URL</a>, and
-  is not the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> "<code>about:blank</code>", then generate the <i>address of the
-  resource from which Request-URIs are obtained</i> as required by HTTP for the <code>Referer</code> (sic) header from <var>referrer</var>. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
-      <p>Otherwise, the <code>Referer</code> (sic) header must be omitted, regardless of its value.</p>
+      <p><var>referrer</var>가 빈 문자열, <a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-3"><code>data:</code> URL</a>, <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> "<code>about:blank</code>"가 아니라면, <var>referrer</var>로부터 <code>Referer</code> (sic) 
+  헤더에 대한 HTTP에 의해 요구된 대로 <i>요청 UIR가 얻어지는 리소스의 주소</i>를 생성합니다. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
+      <p>그렇지 않으면, <code>Referer</code> (sic) 헤더는 그것의 값에 관계 없이 생략 되어야(must)합니다.</p>
      </li><li data-md="">
-      <p>If the algorithm was not invoked with the <i>synchronous flag</i>, perform the remaining
-  steps <a data-link-type="dfn" href="infrastructure.html#in-parallel" id="ref-for-in-parallel-2">in parallel</a>.</p>
+      <p>알고리즘이 <i>동기(synchronous) 플래그</i>를 가지고 작동되지 않았다면, <a data-link-type="dfn" href="infrastructure.html#in-parallel" id="ref-for-in-parallel-2">병렬로</a> 나머지 단계들을 수행합니다.</p>
      </li><li data-md="">
-      <p>If the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> with which any <a data-link-type="dfn" href="webappapis.html#tasks" id="ref-for-tasks-1">tasks</a> <a data-link-type="dfn" href="webappapis.html#queue-a-microtask" id="ref-for-queue-a-microtask-1">queued</a> by this algorithm
-  would be associated doesn’t have an associated <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-8">browsing context</a>, then abort these
-  steps.</p>
+      <p>이 알고리즘에 의해 <a data-link-type="dfn" href="webappapis.html#queue-a-microtask" id="ref-for-queue-a-microtask-1">대기 된</a> 연관될 수 있는 <a data-link-type="dfn" href="webappapis.html#tasks" id="ref-for-tasks-1">작업들</a>을 가진 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>가 연관된 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-8">브라우징 컨텍스트</a>를 가지지 않는다면, 이 
+  단계들을 중단합니다.</p>
      </li><li data-md="">
-      <p>This is the <i>main step</i>.</p>
-      <p>If the resource is to be obtained from an <a data-link-type="dfn" href="obsolete.html#application-cache-manifest" id="ref-for-application-cache-manifest-1">application cache</a>, then use the data from
-  that <a data-link-type="dfn" href="obsolete.html#application-cache-manifest" id="ref-for-application-cache-manifest-2">application cache</a>, as if it had been obtained in the manner appropriate given
-  its <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>.</p>
-      <p>If the resource is identified by an <a data-link-type="dfn">absolute URL</a>, and the resource is to be obtained
-  using an idempotent action (such as an HTTP GET <a data-link-type="dfn" href="infrastructure.html#or-equivalent" id="ref-for-or-equivalent-1">or equivalent</a>), and it is already
-  being downloaded for other reasons (e.g., another invocation of this algorithm), and this
-  request would be identical to the previous one (e.g., same <code>Accept</code> and <code>Origin</code> headers), and the user agent is configured such that it is to reuse the
-  data from the existing download instead of initiating a new one, then use the results of the
-  existing download instead of starting a new one.</p>
-      <p>Otherwise, if the resource is identified by an <a data-link-type="dfn">absolute URL</a> with a scheme that does
-  not define a mechanism to obtain the resource (e.g., it is a <code>mailto:</code> URL) or
-  that the user agent does not support, then act as if the resource was an HTTP 204 No Content
-  response with no other metadata.</p>
-      <p>Otherwise, if the resource is identified by the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> <code>about:blank</code>, then the resource is immediately available and consists
-  of the empty string, with no metadata.</p>
-      <p>Otherwise, at a time convenient to the user and the user agent, download (or otherwise
-  obtain) the resource, applying the semantics of the relevant specifications (e.g., performing
-  an HTTP GET or POST operation, or reading the file from disk, or expanding <a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-4"><code>data:</code> URLs</a>, etc).</p>
-      <p>For the purposes of the <code>Referer</code> (sic) header, use the <i>address of the resource from which Request-URIs are obtained</i> generated in the earlier
-  step.</p>
-      <p>For the purposes of the <code>Origin</code> header, if the <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">fetching algorithm</a> was
-  explicitly initiated from an <i>origin</i>, then <i>the origin that initiated the HTTP request</i> is <i>origin</i>. Otherwise, this is <i>a request from a "privacy-sensitive" context</i>. <a data-link-type="biblio" href="references.html#biblio-origin">[ORIGIN]</a></p>
+      <p>이것은 <i>main step</i>입니다.</p>
+      <p>리소스가 <a data-link-type="dfn" href="obsolete.html#application-cache-manifest" id="ref-for-application-cache-manifest-1">어플리케이션 캐시</a>로부터 얻어지는 것이라면, 마치 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>을 주어진 적절한 방법으로 얻어진 것처럼, 그 <a data-link-type="dfn" href="obsolete.html#application-cache-manifest" id="ref-for-application-cache-manifest-2">어플리케이션 캐시</a>의 데이터를 사용합니다.</p>
+      <p>리소스가 <a data-link-type="dfn">절대 URL</a>에 의해 식별되고, 리소스가 멱등 동작 (HTTP GET이나 <a data-link-type="dfn" href="infrastructure.html#or-equivalent" id="ref-for-or-equivalent-1">그와 동등한 것</a>과 같은)을 사용하여 얻어진 것이고, 이미 다른 이유로 
+  다운로드 되고 있고(예를 들어, 이 알고리즘의 다른 발동), 이 요청이 이전의 요청과 동일하고 (예를 
+  들어, 동일한 <code>Accept</code>와 <code>Origin</code>헤더), 유저 에이전트가 새로운 다운로드를 
+  개시하는 대신 기존 다운로드로부터 데이터를 다시 사용하도록 구성되어 있다면, 새로운 다운로드를 
+  시작하는 대신 기존 다운로드의 결과를 사용합니다.</p>
+      <p>그렇지 않고, 리소스가 리소스를 획득하기 위한 메커니즘을 정의하지 않는 스킴 (예를 들어, <code>mailto:</code> URL)이나 유저 에이전트가 지원하지 않는 스킴을 가진 <a data-link-type="dfn">절대 URL</a>에 의해 식별된다면, 리소스가 다른 메타데이터가 없는 HTTP 204 
+  콘텐트 없음 이었던 것 처럼 동작합니다.</p>
+      <p>그렇지 않고, 리소스가 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> <code>about:blank</code>에 의해 식별된다면, 리소스는
+  메타데이터 없이 즉시 사용가능하고 빈 문자열로 구성됩니다.</p>
+      <p>그렇지 않으면, 사용자와 유저 에이전트에게 알맞은 시간에 관련된 명세의 의미를 적용하여 (예를
+  들어, HTTP GET이나 POST 연산을 수행하여, 혹은 디스크로부터 파일을 읽어, 혹은 <a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-4"><code>data:</code> URL</a>을 확장하여, 등등) 리소스를 다운로드 (혹은 
+  그렇지 않으면 획득)합니다.</p>
+      <p><code>Referer</code> (sic) 헤더의 목적을 위해, 이전 단계에서 생성된 <i>요청 URI가 얻어지는 리소스의 주소 from which Request-URIs are obtained</i>를 사용합니다.</p>
+      <p><code>Origin</code> 헤더의 목적을 위해, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">페칭(fetching) 알고리즘</a>이 <i>origin</i>에서 명시적으로 초기화 되었다면, <i>HTTP 요청을 초기화 한 출처</i>는 <i>origin</i>입니다.
+  그렇지 않으면, 이것은 <i>"민감한 개인정보" 컨텍스트로부터의 요청</i>입니다. <a data-link-type="biblio" href="references.html#biblio-origin">[ORIGIN]</a></p>
      </li><li data-md="">
-      <p>If the algorithm was not invoked with the <i>block cookies flag</i>, and there are cookies
-  to be set, update the cookies. <a data-link-type="biblio" href="references.html#biblio-cookies">[COOKIES]</a> <a class="fingerprint" href="introduction.html#fingerprinting-vector" id="ref-for-fingerprinting-vector-4"><img alt="(This is a fingerprinting vector.)" height="21" src="images/fingerprint.png" width="15"></a></p>
+      <p>알고리즘이 <i>쿠키 차단 플래그</i>를 가지고 동작되지 않았고 쿠키가 설정되지 않았다면,
+  쿠키를 업데이트 합니다. <a data-link-type="biblio" href="references.html#biblio-cookies">[COOKIES]</a> <a class="fingerprint" href="introduction.html#fingerprinting-vector" id="ref-for-fingerprinting-vector-4"><img alt="(이것은 지문 그림입니다.)" height="21" src="images/fingerprint.png" width="15"></a></p>
      </li><li data-md="">
-      <p>If the fetched resource is an HTTP redirect <a data-link-type="dfn" href="infrastructure.html#or-equivalent" id="ref-for-or-equivalent-2">or equivalent</a>, then:</p>
+      <p>가져와진 리소스가 HTTP 리다이렉트 <a data-link-type="dfn" href="infrastructure.html#or-equivalent" id="ref-for-or-equivalent-2">혹은 그와 동등한 것</a>이라면:</p>
       <dl class="switch">
-       <dt> If the <i>force same-origin flag</i> is set and the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> of the target of the
-      redirect does not have the <a data-link-type="dfn" href="browsers.html#same-origin" id="ref-for-same-origin-1">same origin</a> as the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> for which the <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">fetch</a> algorithm was invoked 
-       </dt><dd> Abort these steps and return failure from this algorithm, as if the remote host could
-      not be contacted. 
-       </dd><dt>If the <i>manual redirect flag</i> is set
-       </dt><dd> Continue, using the fetched resource (the redirect) as the result of the algorithm. If
-      the calling algorithm subsequently requires the user agent to <dfn data-dfn-type="dfn" data-noexport="" id="transparently-follow-the-redirect">transparently follow the redirect<a class="self-link" href="infrastructure.html#transparently-follow-the-redirect"></a></dfn>, then the user agent must resume this
-      algorithm from the <i>main step</i>, but using the target of the redirect as the
-      resource to fetch, rather than the original resource. 
-       </dd><dt>Otherwise
+       <dt> <i>강제 동일 출처 플래그</i>가 설정되어 있고 리다이렉트 대상의 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>이 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">페치(fetch)</a> 알고리즘이 동작되는 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>과 같은 <a data-link-type="dfn" href="browsers.html#same-origin" id="ref-for-same-origin-1">동일 출처</a>를 가지지 않는다면 
+       </dt><dd> 원격 호스트가 연결할 수 없는 것 처럼, 이 단계들을 중단하고 이 알고리즘으로부터 실패를 
+      반환합니다. 
+       </dd><dt><i>수동 리다이렉트 플래그</i>가 설정되어 있다면
+       </dt><dd> 알고리즘의 결과로서 가져와진 리소스(리다이렉트)를 사용하여 계속합니다. 호출 알고리즘이
+      이후에 유저 에이전트가 <dfn data-dfn-type="dfn" data-lt="transparently follow the redirect" data-noexport="" id="transparently-follow-the-redirect">투명하게 리다이렉트를 따르도록<a class="self-link" href="infrastructure.html#transparently-follow-the-redirect"></a></dfn> 요구한다면,
+      유저 에이전트는 <i>main step</i>으로부터, 원래 리소스 대신에 가져오기 위한 리소스로서 
+      리다이렉트의 대상을 사용하여 이 알고리즘을 재개해야(must)합니다. 
+       </dd><dt>그렇지 않으면
        </dt><dd>
-         First, apply any relevant requirements for redirects (such as showing any appropriate
-      prompts). Then, redo <i>main step</i>, but using the target of the redirect as the
-      resource to fetch, rather than the original resource. For HTTP requests, the new request
-      must include the same headers as the original request, except for headers for which
-      other requirements are specified (such as the <code>Host</code> header). <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a> 
-        <p class="note" role="note"> The HTTP specification requires that 301, 302, and 307 redirects, when applied to
-        methods other than the safe methods, not be followed without user confirmation. That
-        would be an appropriate prompt for the purposes of the requirement in the paragraph
-        above. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a> </p>
+         먼저, 리다이렉트 관련 요구 사항(적절한 프롬프트를 표시하는 것 같은)을 적용합니다. 이후, <i>main step</i>을 원래 리소스 대신에 가져오기 위한 리소스로서 리다이렉트 대상을 사용하여 
+      다시합니다. HTTP 요청의 경우, 새로운 요청은 다른 요구사항이 명시된 헤더(<code>Host</code> 헤더 같은)를 제외하고 본래 요청과 같은 동일한 헤더를 포함해야(must) 합니다. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a> 
+        <p class="note" role="note"> HTTP 명세는 301, 302, 307 리다이렉션이 안전한 방법 이외의 방법에 적용 될 때 사용자 확인
+        없이 따르지 않을 것이 요구됩니다. 그것은 위 문단에서 요구사항의 목적을 위한 적절한 프롬프트가
+        될 것 입니다. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a> </p>
       </dd></dl>
      </li><li data-md="">
-      <p>If the algorithm was not invoked with the <i>synchronous flag</i>: When the resource is
-  available, or if there is an error of some description, <a data-link-type="dfn" href="webappapis.html#queuing" id="ref-for-queuing-1">queue a task</a> that uses the
-  resource as appropriate. If the resource can be processed incrementally, as, for instance,
-  with a progressively interlaced JPEG or an HTML file, additional tasks may be queued to
-  process the data as it is downloaded. The <a data-link-type="dfn" href="webappapis.html#task-source" id="ref-for-task-source-1">task source</a> for these <a data-link-type="dfn" href="webappapis.html#tasks" id="ref-for-tasks-2">tasks</a> is the <a data-link-type="dfn" href="webappapis.html#networking-task-source" id="ref-for-networking-task-source-1">networking task source</a>.</p>
-      <p>Otherwise, return the resource or error information to the calling algorithm.</p>
+      <p>알고리즘이 <i>동기(synchronous) 플래그</i>를 가지고 호출되지 않았다면: 리소스가 사용가능하거나,
+  어떤 설명의 오류가 있는 경우, 적절한 리소스를 사용하는 <a data-link-type="dfn" href="webappapis.html#queuing" id="ref-for-queuing-1">작업을 대기열에 넣습니다</a>.
+  예를 들어, 순차적으로 JPEG나 HTML 파일이 섞인 것 같은 리소스가 즉시 처리될 수 있다면, 그것이
+  다운로드 될 때 추가적인 작업이 데이터를 처리하기 위해 대기열에 넣어질 수 있습니다.
+  이 <a data-link-type="dfn" href="webappapis.html#tasks" id="ref-for-tasks-2">작업들</a>에 대한 <a data-link-type="dfn" href="webappapis.html#task-source" id="ref-for-task-source-1">작업 소스</a>는 <a data-link-type="dfn" href="webappapis.html#networking-task-source" id="ref-for-networking-task-source-1">네트워킹 작업 소스</a>입니다.</p>
+      <p>그렇지 않으면, 리소스나 오류 정보를 호출 알고리즘에 반환합니다.</p>
     </li></ol>
-    <p>If the user agent can determine the actual length of the resource being <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">fetched</a> for an
-  instance of this algorithm, and if that length is finite, then that length is the file’s <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="size">size</dfn>. Otherwise, the subject of the algorithm (that is, the resource being fetched)
-  has no known <a data-link-type="dfn" href="infrastructure.html#size" id="ref-for-size-1">size</a>. (For example, the HTTP <code>Content-Length</code> header might
-  provide this information.)</p>
-    <p>The user agent must also keep track of the <dfn data-dfn-type="dfn" data-noexport="" id="number-of-bytes-downloaded">number of bytes downloaded<a class="self-link" href="infrastructure.html#number-of-bytes-downloaded"></a></dfn> for each
-  instance of this algorithm. This number must exclude any out-of-band metadata, such as HTTP
-  headers.</p>
-    <p class="note" role="note"> The <a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-3">navigation</a> processing model handles redirects itself, overriding the redirection
-    handling that would be done by the <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">fetching algorithm</a>. </p>
-    <p class="note" role="note"> Whether the <a href="infrastructure.html#content-type-sniffing">type sniffing rules</a> apply to the fetched resource depends on the algorithm
-    that invokes the rules — they are not always applicable. </p>
+    <p>유저 에이전트가 이 알고리즘의 인스턴스에 대해 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">가져오는</a> 리소스의 실제 길이를
+  결정할 수 있고, 그 길이가 유한하다면, 그 길이는 파일의 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="size" data-noexport="" id="size">크기</dfn>입니다.
+  그렇지 않으면, 알고리즘의 주제(즉, 가져오는 리소스)는 알려진 <a data-link-type="dfn" href="infrastructure.html#size" id="ref-for-size-1">크기</a>를 가지지 않습니다.
+  (예를 들어, HTTP <code>Content-Length</code> 헤더가 이 정보를 제공할 수 있습니다.)</p>
+    <p>유저 에이전트는 이 알고리즘의 각 인스턴스에 대해 <dfn data-dfn-type="dfn" data-lt="number of bytes downloaded" data-noexport="" id="number-of-bytes-downloaded">다운로드 된 바이트 수<a class="self-link" href="infrastructure.html#number-of-bytes-downloaded"></a></dfn>의
+  트랙 역시 유지해야(must) 합니다. 이 수는 HTTP 헤더와 같은, 대역 외 메타 데이터를 제외해야(must) 합니다.</p>
+    <p class="note" role="note"> <a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-3">이동</a> 처리 모델은 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">페칭(fetching) 알고리즘</a>에 
+    의해 수행되는 리다이렉션 처리를 재정의 하여, 리다이렉트 자체를 처리합니다. </p>
+    <p class="note" role="note"> <a href="infrastructure.html#content-type-sniffing">유형 스니핑 규책</a>이 가져와진 리소스에 적용되는지 여부는
+    규칙을 호출하는 알고리즘에 따라 달라집니다 — 그것들이 항상 적절한 것은 아닙니다. </p>
     <h4 class="heading settled" data-level="2.6.3" id="encrypted-http-and-related-security-concerns"><span class="secno">2.6.3. </span><span class="content">Encrypted HTTP and related security concerns</span><a class="self-link" href="infrastructure.html#encrypted-http-and-related-security-concerns"></a></h4>
     <p>Anything in this specification that refers to HTTP also applies to HTTP-over-TLS, as represented
   by <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URLs</a> representing the <code>https</code> scheme. <a data-link-type="biblio" href="references.html#biblio-http">[HTTP]</a></p>
@@ -6139,7 +6135,7 @@ pre.idl.highlight { color: #708090; }
     <li><a href="introduction.html#ref-for-fingerprinting-vector-1">1.8. 개인 정보 보호</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-2">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-3">2.2.1. 적합성 종류</a>
-    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-4">2.6.2. Processing model</a>
+    </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-4">2.6.2. 처리 모델</a>
     </li><li><a href="dom.html#ref-for-fingerprinting-vector-5">3.1.2. Resource metadata management</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fingerprinting-vector-6">4.7.14.6. Offsets into the media resource</a>
     </li><li><a href="sec-forms.html#ref-for-fingerprinting-vector-7">4.10.5.1.18. Submit Button state (type=submit)</a>
@@ -6159,7 +6155,7 @@ pre.idl.highlight { color: #708090; }
     <li><a href="infrastructure.html#ref-for-html-document-1">2.1. 전문 용어</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-2">2.2.2. 의존성</a>
     </li><li><a href="infrastructure.html#ref-for-html-document-3">2.2.4. XPath와 XSLT와의 상호작용</a>
-    </li><li><a href="infrastructure.html#ref-for-html-document-4">2.5.1. Terminology</a>
+    </li><li><a href="infrastructure.html#ref-for-html-document-4">2.5.1. 용어</a>
     </li><li><a href="dom.html#ref-for-html-document-5">3.2.5. Global attributes</a>
     </li><li><a href="dom.html#ref-for-html-document-6">3.2.5.3. 
   The lang and xml:lang attributes </a> <a href="dom.html#ref-for-html-document-7">(2)</a> <a href="dom.html#ref-for-html-document-8">(3)</a>
@@ -6218,7 +6214,7 @@ pre.idl.highlight { color: #708090; }
    <ul>
     <li><a href="introduction.html#ref-for-in-parallel-1">1.9.2. 
   API 스크립팅을 사용하는 경우를 막는 일반적인 위험 </a>
-    </li><li><a href="infrastructure.html#ref-for-in-parallel-2">2.6.2. Processing model</a>
+    </li><li><a href="infrastructure.html#ref-for-in-parallel-2">2.6.2. 처리 모델</a>
     </li><li><a href="dom.html#ref-for-in-parallel-3">3.1.4. Loading XML documents</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-in-parallel-4">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-5">(2)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-6">(3)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-7">(4)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-8">(5)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-in-parallel-9">4.7.6. The iframe element</a>
@@ -6497,7 +6493,7 @@ pre.idl.highlight { color: #708090; }
    <ul>
     <li><a href="infrastructure.html#ref-for-tree-order-1">2.1.3. DOM 트리</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-2">2.4.9. 참조</a>
-    </li><li><a href="infrastructure.html#ref-for-tree-order-3">2.5.1. Terminology</a>
+    </li><li><a href="infrastructure.html#ref-for-tree-order-3">2.5.1. 용어</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-4">2.7.2.1. The HTMLAllCollection interface</a> <a href="infrastructure.html#ref-for-tree-order-5">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-6">2.7.2.2. The HTMLFormControlsCollection interface</a> <a href="infrastructure.html#ref-for-tree-order-7">(2)</a> <a href="infrastructure.html#ref-for-tree-order-8">(3)</a> <a href="infrastructure.html#ref-for-tree-order-9">(4)</a> <a href="infrastructure.html#ref-for-tree-order-10">(5)</a> <a href="infrastructure.html#ref-for-tree-order-11">(6)</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-12">2.7.2.3. The HTMLOptionsCollection interface</a> <a href="infrastructure.html#ref-for-tree-order-13">(2)</a>
@@ -6722,7 +6718,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="infrastructure.html#character-encoding">#character-encoding</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-character-encoding-1">2.2.2. 의존성</a> <a href="infrastructure.html#ref-for-character-encoding-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-character-encoding-3">2.5.2. Parsing URLs</a>
+    </li><li><a href="infrastructure.html#ref-for-character-encoding-3">2.5.2. URL 해석</a>
     </li><li><a href="document-metadata.html#ref-for-character-encoding-4">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-character-encoding-5">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-character-encoding-6">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-character-encoding-7">(2)</a> <a href="document-metadata.html#ref-for-character-encoding-8">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-character-encoding-9">4.2.5.5. Specifying the document’s character encoding</a> <a href="document-metadata.html#ref-for-character-encoding-10">(2)</a> <a href="document-metadata.html#ref-for-character-encoding-11">(3)</a>
@@ -6870,7 +6866,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="infrastructure.html#schemedef-about">#schemedef-about</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-schemedef-about-1">2.2.2. 의존성</a> <a href="infrastructure.html#ref-for-schemedef-about-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-schemedef-about-3">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-schemedef-about-4">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-schemedef-about-3">2.5.1. 용어</a> <a href="infrastructure.html#ref-for-schemedef-about-4">(2)</a>
     </li><li><a href="browsers.html#ref-for-schemedef-about-5">6.1. Browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-schemedef-about-6">6.3. The Window object</a>
     </li><li><a href="browsers.html#ref-for-schemedef-about-7">6.7.1. Navigating across documents</a>
@@ -6888,7 +6884,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="infrastructure.html#schemedef-data-url">#schemedef-data-url</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-schemedef-data-url-1">2.1.1. 리소스</a> <a href="infrastructure.html#ref-for-schemedef-data-url-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-schemedef-data-url-3">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-schemedef-data-url-4">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-schemedef-data-url-3">2.6.2. 처리 모델</a> <a href="infrastructure.html#ref-for-schemedef-data-url-4">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-schemedef-data-url-5">4.10.22.3. Form submission algorithm</a>
     </li><li><a href="semantics-scripting.html#ref-for-schemedef-data-url-6">4.12.4. The canvas element</a> <a href="semantics-scripting.html#ref-for-schemedef-data-url-7">(2)</a> <a href="semantics-scripting.html#ref-for-schemedef-data-url-8">(3)</a>
     </li><li><a href="browsers.html#ref-for-schemedef-data-url-9">6.4. Origin</a> <a href="browsers.html#ref-for-schemedef-data-url-10">(2)</a>
@@ -6968,13 +6964,13 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="base-url-change-steps">
    <b><a href="infrastructure.html#base-url-change-steps">#base-url-change-steps</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-base-url-change-steps-1">2.5.3. Dynamic changes to base URLs</a>
+    <li><a href="infrastructure.html#ref-for-base-url-change-steps-1">2.5.3. 기본 URL로 동적 변경</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="affected-by-a-base-url-change">
    <b><a href="infrastructure.html#affected-by-a-base-url-change">#affected-by-a-base-url-change</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-affected-by-a-base-url-change-1">2.5.3. Dynamic changes to base URLs</a> <a href="infrastructure.html#ref-for-affected-by-a-base-url-change-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-affected-by-a-base-url-change-1">2.5.3. 기본 URL로 동적 변경</a> <a href="infrastructure.html#ref-for-affected-by-a-base-url-change-2">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="supported-tokens">
@@ -7478,7 +7474,7 @@ pre.idl.highlight { color: #708090; }
     <li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-1">2.4.1. 공통 해석기 표현</a>
     </li><li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-2">2.4.6. 색상</a>
     </li><li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-3">2.4.8. 콤마로 분리된 토큰</a>
-    </li><li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-4">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-5">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-4">2.5.1. 용어</a> <a href="infrastructure.html#ref-for-strip-leading-and-trailing-whitespace-5">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-strip-leading-and-trailing-whitespace-6">4.7.4. The source element when used with the picture element</a>
     </li><li><a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-7">4.10.5.1.4. URL state (type=url)</a>
     </li><li><a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-8">4.10.5.1.5. E-mail state (type=email)</a> <a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-9">(2)</a> <a href="sec-forms.html#ref-for-strip-leading-and-trailing-whitespace-10">(3)</a>
@@ -8143,7 +8139,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="valid-url">
    <b><a href="infrastructure.html#valid-url">#valid-url</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-valid-url-1">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-valid-url-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-valid-url-1">2.5.1. 용어</a> <a href="infrastructure.html#ref-for-valid-url-2">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-valid-url-3">4.2.5.3. Pragma directives</a>
     </li><li><a href="sec-forms.html#ref-for-valid-url-4">4.10.5.1.4. URL state (type=url)</a> <a href="sec-forms.html#ref-for-valid-url-5">(2)</a> <a href="sec-forms.html#ref-for-valid-url-6">(3)</a>
     </li><li><a href="sec-forms.html#ref-for-valid-url-7">4.10.19.8.1. Autofilling form controls: the autocomplete attribute</a> <a href="sec-forms.html#ref-for-valid-url-8">(2)</a> <a href="sec-forms.html#ref-for-valid-url-9">(3)</a>
@@ -8153,7 +8149,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="valid-non-empty-url">
    <b><a href="infrastructure.html#valid-non-empty-url">#valid-non-empty-url</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-valid-non-empty-url-1">2.5.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-valid-non-empty-url-1">2.5.1. 용어</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-valid-non-empty-url-2">4.7.5. The img element</a>
    </li></ul>
   </aside>
@@ -8203,16 +8199,16 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="fallback-base-url">
    <b><a href="infrastructure.html#fallback-base-url">#fallback-base-url</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-fallback-base-url-1">2.5.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-fallback-base-url-1">2.5.1. 용어</a>
     </li><li><a href="document-metadata.html#ref-for-fallback-base-url-2">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-fallback-base-url-3">(2)</a> <a href="document-metadata.html#ref-for-fallback-base-url-4">(3)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="document-base-url">
    <b><a href="infrastructure.html#document-base-url">#document-base-url</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-document-base-url-1">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-document-base-url-2">(2)</a> <a href="infrastructure.html#ref-for-document-base-url-3">(3)</a>
-    </li><li><a href="infrastructure.html#ref-for-document-base-url-4">2.5.2. Parsing URLs</a>
-    </li><li><a href="infrastructure.html#ref-for-document-base-url-5">2.5.3. Dynamic changes to base URLs</a>
+    <li><a href="infrastructure.html#ref-for-document-base-url-1">2.5.1. 용어</a> <a href="infrastructure.html#ref-for-document-base-url-2">(2)</a> <a href="infrastructure.html#ref-for-document-base-url-3">(3)</a>
+    </li><li><a href="infrastructure.html#ref-for-document-base-url-4">2.5.2. URL 해석</a>
+    </li><li><a href="infrastructure.html#ref-for-document-base-url-5">2.5.3. 기본 URL로 동적 변경</a>
     </li><li><a href="document-metadata.html#ref-for-document-base-url-6">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-document-base-url-7">(2)</a> <a href="document-metadata.html#ref-for-document-base-url-8">(3)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-document-base-url-9">4.5.1. The a element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-document-base-url-10">4.7.16. The area element</a>
@@ -8225,7 +8221,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="infrastructure.html#reparsed">#reparsed</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-reparsed-1">1.9. HTML 간단한 소개</a>
-    </li><li><a href="infrastructure.html#ref-for-reparsed-2">2.5.3. Dynamic changes to base URLs</a> <a href="infrastructure.html#ref-for-reparsed-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-reparsed-2">2.5.3. 기본 URL로 동적 변경</a> <a href="infrastructure.html#ref-for-reparsed-3">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-reparsed-4">2.7.1. Reflecting content attributes in IDL attributes</a> <a href="infrastructure.html#ref-for-reparsed-5">(2)</a>
     </li><li><a href="dom.html#ref-for-reparsed-6">3.1.4. Loading XML documents</a>
     </li><li><a href="document-metadata.html#ref-for-reparsed-7">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-reparsed-8">(2)</a> <a href="document-metadata.html#ref-for-reparsed-9">(3)</a>
@@ -8263,7 +8259,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="resulting-url-string">
    <b><a href="infrastructure.html#resulting-url-string">#resulting-url-string</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-resulting-url-string-1">2.5.2. Parsing URLs</a>
+    <li><a href="infrastructure.html#ref-for-resulting-url-string-1">2.5.2. URL 해석</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-resulting-url-string-2">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-resulting-url-string-3">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-resulting-url-string-4">4.7.6. The iframe element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-resulting-url-string-5">4.7.7. The embed element</a>
@@ -8286,8 +8282,8 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="resulting-url-record">
    <b><a href="infrastructure.html#resulting-url-record">#resulting-url-record</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-resulting-url-record-1">2.5.2. Parsing URLs</a>
-    </li><li><a href="infrastructure.html#ref-for-resulting-url-record-2">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-resulting-url-record-1">2.5.2. URL 해석</a>
+    </li><li><a href="infrastructure.html#ref-for-resulting-url-record-2">2.6.2. 처리 모델</a>
     </li><li><a href="dom.html#ref-for-resulting-url-record-3">3.1.4. Loading XML documents</a>
     </li><li><a href="document-metadata.html#ref-for-resulting-url-record-4">4.2.3. The base element</a>
     </li><li><a href="document-metadata.html#ref-for-resulting-url-record-5">4.2.4. The link element</a>
@@ -8303,13 +8299,13 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="or-equivalent">
    <b><a href="infrastructure.html#or-equivalent">#or-equivalent</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-or-equivalent-1">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-or-equivalent-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-or-equivalent-1">2.6.2. 처리 모델</a> <a href="infrastructure.html#ref-for-or-equivalent-2">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="referrer-source">
    <b><a href="infrastructure.html#referrer-source">#referrer-source</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-referrer-source-1">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-referrer-source-1">2.6.2. 처리 모델</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="creating-a-potential-cors-request">
@@ -8325,7 +8321,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="size">
    <b><a href="infrastructure.html#size">#size</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-size-1">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-size-1">2.6.2. 처리 모델</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="content-type-metadata">
@@ -8412,7 +8408,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="statedef-cors-no-cors">
    <b><a href="infrastructure.html#statedef-cors-no-cors">#statedef-cors-no-cors</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-statedef-cors-no-cors-1">2.6.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-statedef-cors-no-cors-1">2.6.1. 용어</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-statedef-cors-no-cors-2">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-statedef-cors-no-cors-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-statedef-cors-no-cors-4">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-statedef-cors-no-cors-5">4.7.14.11.3. Sourcing out-of-band text tracks</a>
    </li></ul>
@@ -8813,8 +8809,8 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="the-document-address">
    <b><a href="dom.html#the-document-address">#the-document-address</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-the-document-address-1">2.5.1. Terminology</a>
-    </li><li><a href="infrastructure.html#ref-for-the-document-address-2">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-the-document-address-1">2.5.1. 용어</a>
+    </li><li><a href="infrastructure.html#ref-for-the-document-address-2">2.6.2. 처리 모델</a>
     </li><li><a href="dom.html#ref-for-the-document-address-3">3.1. Documents</a> <a href="dom.html#ref-for-the-document-address-4">(2)</a> <a href="dom.html#ref-for-the-document-address-5">(3)</a>
     </li><li><a href="dom.html#ref-for-the-document-address-6">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-the-document-address-7">(2)</a> <a href="dom.html#ref-for-the-document-address-8">(3)</a> <a href="dom.html#ref-for-the-document-address-9">(4)</a> <a href="dom.html#ref-for-the-document-address-10">(5)</a>
     </li><li><a href="document-metadata.html#ref-for-the-document-address-11">4.2.5.3. Pragma directives</a>
@@ -11191,7 +11187,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="document-metadata.html#elementdef-base">#elementdef-base</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-base-1">1.9.1. HTML로 안전한 어플리케이션 작성</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-base-2">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-elementdef-base-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-base-2">2.5.1. 용어</a> <a href="infrastructure.html#ref-for-elementdef-base-3">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-base-4">3.2.4.2.1. Metadata content</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-base-5">4.2.1. The head element</a> <a href="document-metadata.html#ref-for-elementdef-base-6">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-base-7">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-elementdef-base-8">(2)</a> <a href="document-metadata.html#ref-for-elementdef-base-9">(3)</a> <a href="document-metadata.html#ref-for-elementdef-base-10">(4)</a> <a href="document-metadata.html#ref-for-elementdef-base-11">(5)</a> <a href="document-metadata.html#ref-for-elementdef-base-12">(6)</a> <a href="document-metadata.html#ref-for-elementdef-base-13">(7)</a> <a href="document-metadata.html#ref-for-elementdef-base-14">(8)</a> <a href="document-metadata.html#ref-for-elementdef-base-15">(9)</a> <a href="document-metadata.html#ref-for-elementdef-base-16">(10)</a> <a href="document-metadata.html#ref-for-elementdef-base-17">(11)</a> <a href="document-metadata.html#ref-for-elementdef-base-18">(12)</a> <a href="document-metadata.html#ref-for-elementdef-base-19">(13)</a> <a href="document-metadata.html#ref-for-elementdef-base-20">(14)</a> <a href="document-metadata.html#ref-for-elementdef-base-21">(15)</a> <a href="document-metadata.html#ref-for-elementdef-base-22">(16)</a> <a href="document-metadata.html#ref-for-elementdef-base-23">(17)</a> <a href="document-metadata.html#ref-for-elementdef-base-24">(18)</a> <a href="document-metadata.html#ref-for-elementdef-base-25">(19)</a>
@@ -11217,7 +11213,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="element-attrdef-base-href">
    <b><a href="document-metadata.html#element-attrdef-base-href">#element-attrdef-base-href</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-element-attrdef-base-href-1">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-element-attrdef-base-href-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-element-attrdef-base-href-1">2.5.1. 용어</a> <a href="infrastructure.html#ref-for-element-attrdef-base-href-2">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-element-attrdef-base-href-3">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-element-attrdef-base-href-4">(2)</a> <a href="document-metadata.html#ref-for-element-attrdef-base-href-5">(3)</a> <a href="document-metadata.html#ref-for-element-attrdef-base-href-6">(4)</a> <a href="document-metadata.html#ref-for-element-attrdef-base-href-7">(5)</a> <a href="document-metadata.html#ref-for-element-attrdef-base-href-8">(6)</a> <a href="document-metadata.html#ref-for-element-attrdef-base-href-9">(7)</a> <a href="document-metadata.html#ref-for-element-attrdef-base-href-10">(8)</a> <a href="document-metadata.html#ref-for-element-attrdef-base-href-11">(9)</a> <a href="document-metadata.html#ref-for-element-attrdef-base-href-12">(10)</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-base-href-13">Elements</a>
    </li></ul>
@@ -11232,7 +11228,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="frozen-base-url">
    <b><a href="document-metadata.html#frozen-base-url">#frozen-base-url</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-frozen-base-url-1">2.5.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-frozen-base-url-1">2.5.1. 용어</a>
     </li><li><a href="document-metadata.html#ref-for-frozen-base-url-2">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-frozen-base-url-3">(2)</a>
    </li></ul>
   </aside>
@@ -12212,7 +12208,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="grouping-content.html#elementdef-blockquote">#elementdef-blockquote</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-elementdef-blockquote-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-blockquote-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-elementdef-blockquote-3">2.5.3. Dynamic changes to base URLs</a>
+    </li><li><a href="infrastructure.html#ref-for-elementdef-blockquote-3">2.5.3. 기본 URL로 동적 변경</a>
     </li><li><a href="dom.html#ref-for-elementdef-blockquote-4">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-blockquote-5">3.2.4.2.8. Palpable content</a>
     </li><li><a href="sections.html#ref-for-elementdef-blockquote-6">4.3.10. Headings and sections</a>
@@ -12773,7 +12769,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="elementdef-q">
    <b><a href="textlevel-semantics.html#elementdef-q">#elementdef-q</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-elementdef-q-1">2.5.3. Dynamic changes to base URLs</a>
+    <li><a href="infrastructure.html#ref-for-elementdef-q-1">2.5.3. 기본 URL로 동적 변경</a>
     </li><li><a href="dom.html#ref-for-elementdef-q-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-q-3">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-q-4">3.2.4.2.8. Palpable content</a>
@@ -13361,7 +13357,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="elementdef-ins">
    <b><a href="edits.html#elementdef-ins">#elementdef-ins</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-elementdef-ins-1">2.5.3. Dynamic changes to base URLs</a>
+    <li><a href="infrastructure.html#ref-for-elementdef-ins-1">2.5.3. 기본 URL로 동적 변경</a>
     </li><li><a href="dom.html#ref-for-elementdef-ins-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-ins-3">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-ins-4">3.2.4.2.8. Palpable content</a>
@@ -13383,7 +13379,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="elementdef-del">
    <b><a href="edits.html#elementdef-del">#elementdef-del</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-elementdef-del-1">2.5.3. Dynamic changes to base URLs</a>
+    <li><a href="infrastructure.html#ref-for-elementdef-del-1">2.5.3. 기본 URL로 동적 변경</a>
     </li><li><a href="dom.html#ref-for-elementdef-del-2">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-del-3">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-del-4">3.2.4.4. Paragraphs</a> <a href="dom.html#ref-for-elementdef-del-5">(2)</a> <a href="dom.html#ref-for-elementdef-del-6">(3)</a> <a href="dom.html#ref-for-elementdef-del-7">(4)</a> <a href="dom.html#ref-for-elementdef-del-8">(5)</a> <a href="dom.html#ref-for-elementdef-del-9">(6)</a>
@@ -14027,8 +14023,8 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="iframe-iframe-srcdoc-document">
    <b><a href="semantics-embedded-content.html#iframe-iframe-srcdoc-document">#iframe-iframe-srcdoc-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-iframe-iframe-srcdoc-document-1">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-iframe-iframe-srcdoc-document-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-iframe-iframe-srcdoc-document-3">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-iframe-iframe-srcdoc-document-1">2.5.1. 용어</a> <a href="infrastructure.html#ref-for-iframe-iframe-srcdoc-document-2">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-iframe-iframe-srcdoc-document-3">2.6.2. 처리 모델</a>
     </li><li><a href="document-metadata.html#ref-for-iframe-iframe-srcdoc-document-4">4.2.1. The head element</a>
     </li><li><a href="document-metadata.html#ref-for-iframe-iframe-srcdoc-document-5">4.2.5.5. Specifying the document’s character encoding</a> <a href="document-metadata.html#ref-for-iframe-iframe-srcdoc-document-6">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-iframe-iframe-srcdoc-document-7">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-iframe-iframe-srcdoc-document-8">(2)</a> <a href="semantics-embedded-content.html#ref-for-iframe-iframe-srcdoc-document-9">(3)</a>
@@ -16639,7 +16635,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="links.html#hyperlink">#hyperlink</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-hyperlink-1">1.9. HTML 간단한 소개</a>
-    </li><li><a href="infrastructure.html#ref-for-hyperlink-2">2.5.3. Dynamic changes to base URLs</a>
+    </li><li><a href="infrastructure.html#ref-for-hyperlink-2">2.5.3. 기본 URL로 동적 변경</a>
     </li><li><a href="document-metadata.html#ref-for-hyperlink-3">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-hyperlink-4">(2)</a> <a href="document-metadata.html#ref-for-hyperlink-5">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-hyperlink-6">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-hyperlink-7">(2)</a> <a href="document-metadata.html#ref-for-hyperlink-8">(3)</a> <a href="document-metadata.html#ref-for-hyperlink-9">(4)</a> <a href="document-metadata.html#ref-for-hyperlink-10">(5)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-hyperlink-11">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-hyperlink-12">(2)</a> <a href="textlevel-semantics.html#ref-for-hyperlink-13">(3)</a> <a href="textlevel-semantics.html#ref-for-hyperlink-14">(4)</a>
@@ -16682,7 +16678,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="links.html#element-attrdef-a-href">#element-attrdef-a-href</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-a-href-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-element-attrdef-a-href-2">(2)</a> <a href="introduction.html#ref-for-element-attrdef-a-href-3">(3)</a>
-    </li><li><a href="infrastructure.html#ref-for-element-attrdef-a-href-4">2.5.3. Dynamic changes to base URLs</a>
+    </li><li><a href="infrastructure.html#ref-for-element-attrdef-a-href-4">2.5.3. 기본 URL로 동적 변경</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-a-href-5">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-element-attrdef-a-href-6">(2)</a> <a href="dom.html#ref-for-element-attrdef-a-href-7">(3)</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-a-href-8">3.2.4.2.7. Interactive content</a>
     </li><li><a href="document-metadata.html#ref-for-element-attrdef-a-href-9">4.2.4. The link element</a>
@@ -24559,8 +24555,8 @@ pre.idl.highlight { color: #708090; }
     <li><a href="introduction.html#ref-for-browsing-context-1">1.5.1. 스크립트 실행의 직렬화</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-2">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-3">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-browsing-context-4">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-browsing-context-5">2.5.1. Terminology</a> <a href="infrastructure.html#ref-for-browsing-context-6">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-browsing-context-7">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-browsing-context-8">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-browsing-context-5">2.5.1. 용어</a> <a href="infrastructure.html#ref-for-browsing-context-6">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-browsing-context-7">2.6.2. 처리 모델</a> <a href="infrastructure.html#ref-for-browsing-context-8">(2)</a>
     </li><li><a href="dom.html#ref-for-browsing-context-9">3.1. Documents</a> <a href="dom.html#ref-for-browsing-context-10">(2)</a> <a href="dom.html#ref-for-browsing-context-11">(3)</a> <a href="dom.html#ref-for-browsing-context-12">(4)</a> <a href="dom.html#ref-for-browsing-context-13">(5)</a>
     </li><li><a href="dom.html#ref-for-browsing-context-14">3.1.2. Resource metadata management</a>
     </li><li><a href="document-metadata.html#ref-for-browsing-context-15">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-browsing-context-16">(2)</a> <a href="document-metadata.html#ref-for-browsing-context-17">(3)</a>
@@ -24651,7 +24647,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="active-document">
    <b><a href="browsers.html#active-document">#active-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-active-document-1">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-active-document-1">2.6.2. 처리 모델</a>
     </li><li><a href="dom.html#ref-for-active-document-2">3.1. Documents</a> <a href="dom.html#ref-for-active-document-3">(2)</a> <a href="dom.html#ref-for-active-document-4">(3)</a> <a href="dom.html#ref-for-active-document-5">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-active-document-6">4.2.7. Interactions of styling and scripting</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-active-document-7">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-active-document-8">(2)</a> <a href="semantics-embedded-content.html#ref-for-active-document-9">(3)</a> <a href="semantics-embedded-content.html#ref-for-active-document-10">(4)</a>
@@ -24710,7 +24706,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="creator-browsing-context">
    <b><a href="browsers.html#creator-browsing-context">#creator-browsing-context</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-creator-browsing-context-1">2.5.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-creator-browsing-context-1">2.5.1. 용어</a>
     </li><li><a href="browsers.html#ref-for-creator-browsing-context-2">6.1. Browsing contexts</a> <a href="browsers.html#ref-for-creator-browsing-context-3">(2)</a> <a href="browsers.html#ref-for-creator-browsing-context-4">(3)</a> <a href="browsers.html#ref-for-creator-browsing-context-5">(4)</a> <a href="browsers.html#ref-for-creator-browsing-context-6">(5)</a> <a href="browsers.html#ref-for-creator-browsing-context-7">(6)</a> <a href="browsers.html#ref-for-creator-browsing-context-8">(7)</a>
    </li></ul>
   </aside>
@@ -24729,7 +24725,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="creator-base-url">
    <b><a href="browsers.html#creator-base-url">#creator-base-url</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-creator-base-url-1">2.5.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-creator-base-url-1">2.5.1. 용어</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="creating-a-new-browsing-context">
@@ -24785,8 +24781,8 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="browsing-context-container">
    <b><a href="browsers.html#browsing-context-container">#browsing-context-container</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-browsing-context-container-1">2.5.1. Terminology</a>
-    </li><li><a href="infrastructure.html#ref-for-browsing-context-container-2">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-browsing-context-container-1">2.5.1. 용어</a>
+    </li><li><a href="infrastructure.html#ref-for-browsing-context-container-2">2.6.2. 처리 모델</a>
     </li><li><a href="matching-html-elements-using-selectors.html#ref-for-browsing-context-container-3">4.15.2. Pseudo-classes</a>
     </li><li><a href="editing.html#ref-for-browsing-context-container-4">5.2. Inert subtrees</a>
     </li><li><a href="editing.html#ref-for-browsing-context-container-5">5.4.2. Data model</a> <a href="editing.html#ref-for-browsing-context-container-6">(2)</a> <a href="editing.html#ref-for-browsing-context-container-7">(3)</a> <a href="editing.html#ref-for-browsing-context-container-8">(4)</a> <a href="editing.html#ref-for-browsing-context-container-9">(5)</a> <a href="editing.html#ref-for-browsing-context-container-10">(6)</a>
@@ -25458,7 +25454,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="concept-cross-origin">
    <b><a href="browsers.html#concept-cross-origin">#concept-cross-origin</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-concept-cross-origin-1">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-concept-cross-origin-1">2.6.2. 처리 모델</a>
     </li><li><a href="infrastructure.html#ref-for-concept-cross-origin-2">2.9.1. Cloneable objects</a>
     </li><li><a href="dom.html#ref-for-concept-cross-origin-3">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-concept-cross-origin-4">(2)</a>
     </li><li><a href="dom.html#ref-for-concept-cross-origin-5">3.1.4. Loading XML documents</a>
@@ -25568,7 +25564,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="same-origin">
    <b><a href="browsers.html#same-origin">#same-origin</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-same-origin-1">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-same-origin-1">2.6.2. 처리 모델</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-same-origin-2">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-same-origin-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-same-origin-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-same-origin-5">(4)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-same-origin-6">4.7.6. The iframe element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-same-origin-7">4.7.14.5. Loading the media resource</a> <a href="semantics-embedded-content.html#ref-for-same-origin-8">(2)</a> <a href="semantics-embedded-content.html#ref-for-same-origin-9">(3)</a>
@@ -26123,7 +26119,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="source-browsing-context">
    <b><a href="browsers.html#source-browsing-context">#source-browsing-context</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-source-browsing-context-1">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-source-browsing-context-1">2.6.2. 처리 모델</a>
     </li><li><a href="dom.html#ref-for-source-browsing-context-2">3.1. Documents</a> <a href="dom.html#ref-for-source-browsing-context-3">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-source-browsing-context-4">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-source-browsing-context-5">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-source-browsing-context-6">4.7.7. The embed element</a>
@@ -26141,7 +26137,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="browsers.html#navigated">#navigated</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-navigated-1">2.2.4. XPath와 XSLT와의 상호작용</a>
-    </li><li><a href="infrastructure.html#ref-for-navigated-2">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-navigated-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-navigated-2">2.6.2. 처리 모델</a> <a href="infrastructure.html#ref-for-navigated-3">(2)</a>
     </li><li><a href="dom.html#ref-for-navigated-4">3.1. Documents</a> <a href="dom.html#ref-for-navigated-5">(2)</a> <a href="dom.html#ref-for-navigated-6">(3)</a> <a href="dom.html#ref-for-navigated-7">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-navigated-8">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-navigated-9">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-navigated-10">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-navigated-11">(2)</a>
@@ -26711,14 +26707,14 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="api-url-character-encoding">
    <b><a href="webappapis.html#api-url-character-encoding">#api-url-character-encoding</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-api-url-character-encoding-1">2.5.2. Parsing URLs</a>
+    <li><a href="infrastructure.html#ref-for-api-url-character-encoding-1">2.5.2. URL 해석</a>
     </li><li><a href="browsers.html#ref-for-api-url-character-encoding-2">6.1.6. Script settings for browsing contexts</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="api-base-url">
    <b><a href="webappapis.html#api-base-url">#api-base-url</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-api-base-url-1">2.5.2. Parsing URLs</a>
+    <li><a href="infrastructure.html#ref-for-api-base-url-1">2.5.2. URL 해석</a>
     </li><li><a href="browsers.html#ref-for-api-base-url-2">6.1.6. Script settings for browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-api-base-url-3">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-api-base-url-4">(2)</a> <a href="browsers.html#ref-for-api-base-url-5">(3)</a>
     </li><li><a href="webappapis.html#ref-for-api-base-url-6">7.1.3.5. Realms, settings objects, and global objects</a>
@@ -27166,7 +27162,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="tasks">
    <b><a href="webappapis.html#tasks">#tasks</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-tasks-1">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-tasks-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-tasks-1">2.6.2. 처리 모델</a> <a href="infrastructure.html#ref-for-tasks-2">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-tasks-3">4.2.4. The link element</a>
     </li><li><a href="document-metadata.html#ref-for-tasks-4">4.2.6. The style element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-tasks-5">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-tasks-6">(2)</a> <a href="semantics-embedded-content.html#ref-for-tasks-7">(3)</a> <a href="semantics-embedded-content.html#ref-for-tasks-8">(4)</a> <a href="semantics-embedded-content.html#ref-for-tasks-9">(5)</a> <a href="semantics-embedded-content.html#ref-for-tasks-10">(6)</a> <a href="semantics-embedded-content.html#ref-for-tasks-11">(7)</a> <a href="semantics-embedded-content.html#ref-for-tasks-12">(8)</a> <a href="semantics-embedded-content.html#ref-for-tasks-13">(9)</a> <a href="semantics-embedded-content.html#ref-for-tasks-14">(10)</a> <a href="semantics-embedded-content.html#ref-for-tasks-15">(11)</a>
@@ -27210,7 +27206,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="queuing">
    <b><a href="webappapis.html#queuing">#queuing</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-queuing-1">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-queuing-1">2.6.2. 처리 모델</a>
     </li><li><a href="document-metadata.html#ref-for-queuing-2">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-queuing-3">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-queuing-4">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-queuing-5">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-queuing-6">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-queuing-7">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-8">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-9">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-10">(5)</a> <a href="semantics-embedded-content.html#ref-for-queuing-11">(6)</a> <a href="semantics-embedded-content.html#ref-for-queuing-12">(7)</a> <a href="semantics-embedded-content.html#ref-for-queuing-13">(8)</a>
@@ -27268,7 +27264,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="task-source">
    <b><a href="webappapis.html#task-source">#task-source</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-task-source-1">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-task-source-1">2.6.2. 처리 모델</a>
     </li><li><a href="document-metadata.html#ref-for-task-source-2">4.2.4. The link element</a>
     </li><li><a href="document-metadata.html#ref-for-task-source-3">4.2.6. The style element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-task-source-4">4.7.5. The img element</a>
@@ -27343,7 +27339,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="queue-a-microtask">
    <b><a href="webappapis.html#queue-a-microtask">#queue-a-microtask</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-queue-a-microtask-1">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-queue-a-microtask-1">2.6.2. 처리 모델</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-queue-a-microtask-2">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-5">(4)</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-6">(5)</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-7">(6)</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-8">(7)</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-9">(8)</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-10">(9)</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-11">(10)</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-12">(11)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-queue-a-microtask-13">4.7.7. The embed element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-queue-a-microtask-14">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-15">(2)</a> <a href="semantics-embedded-content.html#ref-for-queue-a-microtask-16">(3)</a>
@@ -27475,7 +27471,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="networking-task-source">
    <b><a href="webappapis.html#networking-task-source">#networking-task-source</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-networking-task-source-1">2.6.2. Processing model</a>
+    <li><a href="infrastructure.html#ref-for-networking-task-source-1">2.6.2. 처리 모델</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-networking-task-source-2">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-networking-task-source-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-networking-task-source-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-networking-task-source-5">(4)</a> <a href="semantics-embedded-content.html#ref-for-networking-task-source-6">(5)</a> <a href="semantics-embedded-content.html#ref-for-networking-task-source-7">(6)</a> <a href="semantics-embedded-content.html#ref-for-networking-task-source-8">(7)</a> <a href="semantics-embedded-content.html#ref-for-networking-task-source-9">(8)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-networking-task-source-10">4.7.7. The embed element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-networking-task-source-11">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-networking-task-source-12">(2)</a>
@@ -28772,7 +28768,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="doctype">
    <b><a href="syntax.html#doctype">#doctype</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-doctype-1">2.5.1. Terminology</a>
+    <li><a href="infrastructure.html#ref-for-doctype-1">2.5.1. 용어</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-doctype-2">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-doctype-3">(2)</a>
     </li><li><a href="syntax.html#ref-for-doctype-4">8.1. Writing HTML documents</a>
     </li><li><a href="syntax.html#ref-for-doctype-5">8.1.1. The DOCTYPE</a>
@@ -31531,7 +31527,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="application-cache-manifest">
    <b><a href="obsolete.html#application-cache-manifest">#application-cache-manifest</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-application-cache-manifest-1">2.6.2. Processing model</a> <a href="infrastructure.html#ref-for-application-cache-manifest-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-application-cache-manifest-1">2.6.2. 처리 모델</a> <a href="infrastructure.html#ref-for-application-cache-manifest-2">(2)</a>
     </li><li><a href="obsolete.html#ref-for-application-cache-manifest-3">11.3.4. Application caches</a> <a href="obsolete.html#ref-for-application-cache-manifest-4">(2)</a> <a href="obsolete.html#ref-for-application-cache-manifest-5">(3)</a> <a href="obsolete.html#ref-for-application-cache-manifest-6">(4)</a> <a href="obsolete.html#ref-for-application-cache-manifest-7">(5)</a> <a href="obsolete.html#ref-for-application-cache-manifest-8">(6)</a> <a href="obsolete.html#ref-for-application-cache-manifest-9">(7)</a> <a href="obsolete.html#ref-for-application-cache-manifest-10">(8)</a> <a href="obsolete.html#ref-for-application-cache-manifest-11">(9)</a> <a href="obsolete.html#ref-for-application-cache-manifest-12">(10)</a>
     </li><li><a href="obsolete.html#ref-for-application-cache-manifest-13">11.3.4.2. Downloading or updating an application cache</a> <a href="obsolete.html#ref-for-application-cache-manifest-14">(2)</a> <a href="obsolete.html#ref-for-application-cache-manifest-15">(3)</a> <a href="obsolete.html#ref-for-application-cache-manifest-16">(4)</a> <a href="obsolete.html#ref-for-application-cache-manifest-17">(5)</a> <a href="obsolete.html#ref-for-application-cache-manifest-18">(6)</a> <a href="obsolete.html#ref-for-application-cache-manifest-19">(7)</a> <a href="obsolete.html#ref-for-application-cache-manifest-20">(8)</a> <a href="obsolete.html#ref-for-application-cache-manifest-21">(9)</a> <a href="obsolete.html#ref-for-application-cache-manifest-22">(10)</a> <a href="obsolete.html#ref-for-application-cache-manifest-23">(11)</a> <a href="obsolete.html#ref-for-application-cache-manifest-24">(12)</a> <a href="obsolete.html#ref-for-application-cache-manifest-25">(13)</a> <a href="obsolete.html#ref-for-application-cache-manifest-26">(14)</a> <a href="obsolete.html#ref-for-application-cache-manifest-27">(15)</a> <a href="obsolete.html#ref-for-application-cache-manifest-28">(16)</a> <a href="obsolete.html#ref-for-application-cache-manifest-29">(17)</a> <a href="obsolete.html#ref-for-application-cache-manifest-30">(18)</a> <a href="obsolete.html#ref-for-application-cache-manifest-31">(19)</a> <a href="obsolete.html#ref-for-application-cache-manifest-32">(20)</a> <a href="obsolete.html#ref-for-application-cache-manifest-33">(21)</a> <a href="obsolete.html#ref-for-application-cache-manifest-34">(22)</a> <a href="obsolete.html#ref-for-application-cache-manifest-35">(23)</a> <a href="obsolete.html#ref-for-application-cache-manifest-36">(24)</a>
     </li><li><a href="obsolete.html#ref-for-application-cache-manifest-37">11.3.4.3. The application cache selection algorithm</a> <a href="obsolete.html#ref-for-application-cache-manifest-38">(2)</a> <a href="obsolete.html#ref-for-application-cache-manifest-39">(3)</a> <a href="obsolete.html#ref-for-application-cache-manifest-40">(4)</a> <a href="obsolete.html#ref-for-application-cache-manifest-41">(5)</a> <a href="obsolete.html#ref-for-application-cache-manifest-42">(6)</a> <a href="obsolete.html#ref-for-application-cache-manifest-43">(7)</a>
