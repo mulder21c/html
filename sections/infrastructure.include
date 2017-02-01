@@ -4075,14 +4075,13 @@
   <code>HTMLOptionsCollection</code>에 뿌리를 둔 <{select}> 요소(element)에서 동일하게 이름이 붙은
   속성(attribute)처럼 동작해야(must) 합니다.
 
-<h4 id="the-domstringmap-interface">The <code>DOMStringMap</code> interface</h4>
+<h4 id="the-domstringmap-interface"><code>DOMStringMap</code> 인터페이스</h4>
 
-  The <code>DOMStringMap</code> interface represents a set of name-value pairs. It exposes these
-  using the scripting language's native mechanisms for property access.
+  <code>DOMStringMap</code> 인터페이스는 이름-값 쌍의 세트를 나타냅니다. 이것은 속성(property) 접근을 
+  위한 스크립팅 언어의 네이티브 메커니즘을 사용하여 이것들을 노출합니다.
 
-  When a <code>DOMStringMap</code> object is instantiated, it is associated with three algorithms,
-  one for getting the list of name-value pairs, one for setting names to certain values, and one for
-  deleting names.
+  <code>DOMStringMap</code> 객체가 인스턴스화 되는 경우, 이름-값 쌍의 목록을 가져오는 것, 이름을 특정
+  값으로 설정 하는 것, 이름을 삭제하는 것, 3가지 알고리즘과 연관되어집니다.
 
   <pre class="idl" data-highlight="webidl" dfn-for="DOMStringMap">
     [OverrideBuiltins]
@@ -4093,38 +4092,37 @@
     };
   </pre>
 
-  The <a spec="webidl">supported property names</a> on a <code>DOMStringMap</code> object at any instant are the
-  names of each pair returned from the algorithm for getting the list of name-value pairs at that
-  instant, in the order returned.
+  임의의 인스턴스에 <code>DOMStringMap</code> 객체에서 
+  <a spec="webidl" lt="supported property names">지원되는 속성(property) 이름</a>은 반환되는 순서에 
+  따라, 그 인스턴스에서 이름-값 쌍의 목록을 가져오는 알고리즘으로부터 반환된 각 쌍의 이름입니다.
 
-  To <a spec="webidl">determine the value of a named property</a> <var>name</var> in a
-  {{DOMStringMap}}, the user agent must return the value component of the name-value pair
-  whose name component is <var>name</var> in the list returned by the algorithm for getting the list
-  of name-value pairs.
+  {{DOMStringMap}}에서 <a spec="webidl" lt="determine the value of a named property">명명된 속성(property) <var>name</var>의 값을 결정</a>하기   
+  위해, 유저 에이전트는 이름-값 쌍의 목록을 가져오는 알고리즘에 의해 반환된 목록에서 이름 컴포넌트가 
+  <var>name</var>인 이름-값 쌍의 값 컴포넌트를 반환해야(must) 합니다. 
 
-  To <a for="values" lt="setting">set</a> the value of a named property <var>name</var> to value <var>value</var>, the
-  algorithm for setting names to certain values must be run, passing <var>name</var> as the name and
-  <var>value</var> as the value.
+  명명된 속성(property) <var>name</var>의 값을 <var>value</var> 값으로 
+  <a for="values" lt="setting">설정</a>하기 위해, 이름을 특정한 값으로 설정하는 알고리즘은, 
+  이름으로 <var>name</var>를 그리고 값으로 <var>value</var>를 전달하여 수행해야(must) 합니다.
 
-  To <dfn>delete an existing named property</dfn> <var>name</var>, the algorithm for deleting names
-  must be run, passing <var>name</var> as the name.
+  <dfn lt="delete an existing named property">기존의 명명된 속성(property) <var>name</var>을 삭제</dfn>하기 
+  위해, 이름을 삭제하는 알고리즘은 이름으로 <var>name</var>을 전달하여 수행해야(must) 합니다.
 
   <p class="note">
-    The <code>DOMStringMap</code> interface definition here is only intended for JavaScript
-    environments. Other language bindings will need to define how <code>DOMStringMap</code> is to be
-    implemented for those languages.
+    여기 <code>DOMStringMap</code> 인터페이스 정의는 자바스크립트 환경에 대해서만 의도되었습니다.
+    다른 언어 바인딩은 <code>DOMStringMap</code>이 그 언어들에 대해 구현되는 방법을 정의할 필요가
+    있을 것입니다.
   </p>
 
 <div class="example">
-  The <code>dataset</code> attribute on elements exposes the <code>data-*</code> attributes on the
-  element.
+  요소(element)의 <code>dataset</code> 속성(attribute)은 요소(element)의 <code>data-*</code> 속성(attribute)을
+  노출합니다.
 
-  Given the following fragment and elements with similar constructions:
+  유사한 구조를 가진 다음 코드 조각과 요소(element)를 고려해 볼 때:
 
   <pre highlight="html">&lt;img class="tower" id="tower5" data-x="12" data-y="5" data-ai="robotarget" data-hp="46" data-ability="flames" src="towers/rocket.png" alt="Rocket Tower"></pre>
 
-  ...one could imagine a function <code>splashDamage()</code> that takes some arguments, the first
-  of which is the element to process:
+  ...하나는 일부 인수를 취하는 함수 <code>splashDamage()</code>를 상상해 볼 수 있고, 첫 번째 인수는 
+  처리할 요소(element)입니다:
 
   <pre highlight="javascript">
     function splashDamage(node, x, y, damage) {
@@ -4144,15 +4142,14 @@
   </pre>
 </div>
 
-<h4 id="the-domelementmap-interface">The <code>DOMElementMap</code> interface</h4>
+<h4 id="the-domelementmap-interface"><code>DOMElementMap</code> 인터페이스</h4>
 
-  The <code>DOMElementMap</code> interface represents a set of name-element mappings. It exposes
-  these using the scripting language's native mechanisms for property access.
+  <code>DOMElementMap</code> 인터페이스는 이름-요소(elememt) 매핑 세트를 나타냅니다. 이것은 속성(property)
+  접근을 위한 스크립팅 언어의 네이티브 메커니즘을 사용하여 이것들을 노출합니다.
 
 
-  When a <code>DOMElementMap</code> object is instantiated, it is associated with three algorithms,
-  one for getting the list of name-element mappings, one for mapping a name to a certain element,
-  and one for deleting mappings by name.
+  <code>DOMElementMap</code> 객체가 인스턴스화 되는 경우, 이름-요소(element) 매핑 목록을 가져오는 것, 
+  이름을 특정 요소(element)에 매핑하는 것, 이름으로 매핑을 삭제하는 것, 3가지 알고리즘과 연관되어집니다.
 
   <pre class="idl" data-highlight="webidl" dfn-for="DOMElementMap">
     interface DOMElementMap {
@@ -4162,97 +4159,99 @@
     };
   </pre>
 
-  The <a spec="webidl">supported property names</a> on a <code>DOMElementMap</code> object at any instant are the
-  names for each mapping returned from the algorithm for getting the list of name-element mappings
-  at that instant, in the order returned.
+  임의의 인스턴스에 <code>DOMElementMap</code> 객체에서 
+  <a spec="webidl" lt="supported property names">지원되는 속성(property) 이름</a>은 반환되는 순서에 
+  따라, 그 인스턴스에서 이름-요소(element) 매핑 목록을 가져오는 알고리즘으로부터 반환된 각 매핑에 
+  대한 이름입니다.
 
-  To <a spec="webidl">determine the value of a named property</a> <var>name</var> in a
-  <code>DOMElementMap</code>, the user agent must return the element component of the name-element
-  mapping whose name component is <var>name</var> in the list returned by the algorithm for getting
-  the list of name-element mappings.
+  <code>DOMElementMap</code>에서 <a spec="webidl" lt="determine the value of a named property">명명된 속성(property) <var>name</var>의 값을 결정</a>하기
+  위해, 유저 에이전트는 이름-요소(element)매핑 목록을 가져오는 알고리즘에 의해 반환된 목록에서 이름
+  컴포넌트가 <var>name</var>인 이름-요소(element) 매핑의 요소(element) 컴포넌트를 반환해야(must)
+  합니다.
 
-  To set the value of a <dfn>new</dfn> or <dfn>existing</dfn> named property <var>name</var> to
-  value <var>value</var>, the algorithm for mapping a name to a certain element must be run, passing
-  <var>name</var> as the name <var>value</var> as the element.
+  <dfn lt="new">새로운</dfn> 혹은 <dfn lt="existing">기존의</dfn> 명명된 속성(property) <var>name</var>의
+  값을 <var>value</var> 값으로 설정하기 위해, 이름을 특정 요소(element)에 매팽하기 위한 알고리즘은
+  이름을 <var>name</var> 요소(element)로 <var>value</var>를 전달하여 수행해야(must) 합니다.
 
-  To <a>delete an existing named property</a> <var>name</var>, the algorithm for deleting
-  mappings must be run, passing <var>name</var> as the name component of the mapping to be deleted.
+  <a lt="delete an existing named property">기존의 명명된 속성(property) <var>name</var>을 삭제</a>하기
+  위해, 매핑을 삭제하기 위한 알고리즘은 삭제될 매핑의 이름 컴포넌트로 <var>name</var>를 전달하여
+  수행해야(must) 합니다.
 
   <p class="note">
-    The <code>DOMElementMap</code> interface definition here is only intended for JavaScript
-    environments. Other language bindings will need to define how <code>DOMElementMap</code> is to
-    be implemented for those languages.
+    여기 <code>DOMElementMap</code> 인터페이스 정의는 자바스크립트 환경에 대해서만 의도되었습니다.
+    다른 언어 바인딩은 <code>DOMElementMap</code>이 그 언어들에 대해 구현되는 방법을 정의할 필요가
+    있을 것입니다.
   </p>
 
-<h4 id="garbage-collection">Garbage collection</h4>
+<h4 id="garbage-collection">가비지 컬렉션</h4>
 
-  There is an <dfn>implied strong reference</dfn> from any IDL attribute that returns a pre-existing
-  object to that object.
+  이미 존재하는 객체를 그 객체에 돌려주는 IDL 속성(attribute)로부터의 
+  <dfn lt="implied strong reference">암묵적인 강한 참조</dfn>가 있습니다.
 
   <div class="example">
-    For example, the <code>window.document</code> attribute on the {{Window}} object means that there is a strong reference
-    from a {{Window}} object to its {{Document}} object. Similarly, there is
-    always a strong reference from a {{Document}} to any descendant nodes, and from any
-    node to its owner <a>node document</a>.
+    예를 들어, {{Window}} 객체의 <code>window.document</code> 속성(attribute)은 {{Window}} 객체로부터
+    그것의 {{Document}} 객체로의 강한 참조가 있음을 의미합니다. 비슷하게, {{Document}}로부터 임의의
+    후손 노드로, 임의의 노드로부터 그 노드의 소유자 <a lt="node document">노드 문서</a>로의 강한 참조가
+    항상 있습니다.
   </div>
 
-<h3 id="namespaces">Namespaces</h3>
+<h3 id="namespaces">네임스페이스</h3>
 
-  The <dfn>HTML namespace</dfn> is: <code>http://www.w3.org/1999/xhtml</code>
+  <dfn lt="HTML namespace">HTML 네임스페이스</dfn>: <code>http://www.w3.org/1999/xhtml</code>
 
-  The <dfn>MathML namespace</dfn> is: <code>http://www.w3.org/1998/Math/MathML</code>
+  <dfn lt="MathML namespace">MathML 네임스페이스</dfn>: <code>http://www.w3.org/1998/Math/MathML</code>
 
-  The <dfn>SVG namespace</dfn> is: <code>http://www.w3.org/2000/svg</code>
+  <dfn lt="SVG namespace">SVG 네임스페이스</dfn>: <code>http://www.w3.org/2000/svg</code>
 
-  The <dfn>XLink namespace</dfn> is: <code>http://www.w3.org/1999/xlink</code>
+  <dfn lt="XLink namespace">XLink 네임스페이스</dfn>: <code>http://www.w3.org/1999/xlink</code>
 
-  The <dfn>XML namespace</dfn> is: <code>http://www.w3.org/XML/1998/namespace</code>
+  <dfn lt="XML namespace">XML 네임스페이스</dfn>: <code>http://www.w3.org/XML/1998/namespace</code>
 
-  The <dfn>XMLNS namespace</dfn> is: <code>http://www.w3.org/2000/xmlns/</code>
+  <dfn lt="XMLNS namespace">XMLNS 네임스페이스</dfn>: <code>http://www.w3.org/2000/xmlns/</code>
 
   <hr />
 
-  Data mining tools and other user agents that perform operations on content without running
-  scripts, evaluating CSS or XPath expressions, or otherwise exposing the resulting DOM to arbitrary
-  content, may "support namespaces" by just asserting that their DOM node analogs are in certain
-  namespaces, without actually exposing the above strings.
+  스크립트를 수행하지 않고, CSS나 XPath 표현식을 평가하지 않고, 결과 DOM을 임의의 콘텐트에 노출시키지
+  않고 콘텐트에 연산을 수행하는 데이터 마이닝 툴과 다른 유저 에이전트는 실제로 상기 문자열을 노출하지
+  않고, 그들의 DOM 노드 아날로그가 특정 네임스페이스에 있다고 당연한 것으로 가정하여 "네임스페이스를
+  지원"할 수도 있습니다.
 
   <hr />
 
   <p class="note">
-    In <a href="#syntax">the HTML syntax</a>, namespace prefixes and namespace declarations do not have the same
-    effect as in XML. For instance, the colon has no special meaning in HTML element names.
+    <a href="#syntax">HTML 구문</a>에서, 네임스페이스 접두어와 네임스페이스 선언은 XML에서와 동일한 
+    효과를 가지지 않습니다. 예를 들어, 콜론은 HTML 요소(element) 이름에 특별한 의미를 가지지 않습니다.
   </p>
 
-<h3 id="safe-passing-of-structured-data">Safe passing of structured data</h3>
+<h3 id="safe-passing-of-structured-data">구조화 된 데이터의 안전한 전달</h3>
 
-  This section uses the terminology and typographic conventions from the JavaScript specification.
-  [[ECMA-262]]
+  이 명세는 자바스크립트 명세의 용어와 표기법을 사용합니다. [[ECMA-262]]
 
-<h4 id="section-cloneable-objects"><dfn>Cloneable objects</dfn></h4>
+<h4 id="section-cloneable-objects"><dfn lt="Cloneable objects">복제 가능한 객체</dfn></h4>
 
-  <a>Cloneable objects</a> support being cloned across <a>event loops</a>. That is, they support
-  being cloned across {{Document}} and {{Worker}} boundaries, including across {{Document}}s of
-  different <a for="concept">origins</a>. Not all objects are <a>cloneable objects</a> and not all
-  aspects of objects that are <a>cloneable objects</a> are necessarily preserved when cloned.
+  <a lt="Cloneable objects">복제 가능한 객체</a>는 <a lt="event loops">이벤트 반복</a> 전반에 걸쳐 
+  복제되는 것을 지원합니다. 즉, 다른 <a for="concept" lt="origins">출처</a>의 {{Document}} 전반을 
+  포함하여 {{Document}}와 {{Worker}} 경계 전반에 걸쳐 복제되는 것을 지원합니다. 모든 객체가
+  <a lt="Cloneable objects">복제 가능한 객체</a>는 아니며 <a lt="Cloneable objects">복제 가능한 객체</a>의
+  모든 측면이 복제될 때 반드시 보존되는 것은 아닙니다.
 
-  <a>Platform objects</a> have the following internal method:
+  <a lt="Platform objects">플랫폼 객체</a>는 다음의 내부 메서드를 가집니다:
 
   [[<dfn for="structured">Clone</dfn>]] ( <var>targetRealm</var>, <var>memory</var> )
 
-  Unless specified otherwise, invoking the [[<a for="structured">Clone</a>]] internal method must
-  throw a "{{DataCloneError}}" {{DOMException}}. (By default, <a>platform objects</a> are not
-  <a>cloneable objects</a>.)
+  달리 지정하지 않는 한, [[<a for="structured">Clone</a>]] 내부 메서드를 호출하는 것은 "{{DataCloneError}}" 
+  {{DOMException}}을 던져야 합니다. (기본적으로, <a lt="Platform objects">플랫폼 객체</a>는
+  <a lt="cloneable objects">복제 가능한 객체</a>가 아닙니다.)
 
-  <a>Platform objects</a> that are <a>cloneable objects</a> have a [[<a for="structured">Clone</a>]]
-  internal method which is specified to run a series of steps. The result of running those steps
-  must be a thrown exception or a clone of <em>this</em>, created in <var>targetRealm</var>. It is
-  up such objects to define what cloning means for them.
+  <a lt="cloneable objects">복제 가능한 객체</a>인 <a lt="Platform objects">플랫폼 객체</a>는 일련의
+  단계들을 수행하도록 명시된 [[<a for="structured">Clone</a>]] 내부 메서드를 가집니다. 그 단계들을
+  수행한 결과는 <var>targetRealm</var>에 생성된, 던져진 예외나 <em>this</em>의 복제여야(must) 합니다.
+  그것은 그 객체들에게 그것들에 대해 복제가 의미하는 바를 정의하는 것입니다.
 
-  Objects defined in the JavaScript specification are handled by the <a>StructuredClone</a> abstract
-  operation directly.
+  자바스크립트 명세에 정의된 객체들은 <a lt="StructuredClone">구조화된 복제</a> 추상 연산에 의해
+  직접 처리됩니다.
 
-<h4 id="section-transferable-objects"><dfn>Transferable objects</dfn></h4>
+<h4 id="section-transferable-objects"><dfn lt="Transferable objects">Transferable objects</dfn></h4>
 
   <a>Transferable objects</a> support being transferred across <a>event loops</a>. Transferring is
   effectively recreating the object while sharing a reference to the underlying data and then
