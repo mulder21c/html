@@ -1525,15 +1525,15 @@ pre.idl.highlight { color: #708090; }
           </li><li><a href="infrastructure.html#the-htmlformcontrolscollection-interface"><span class="secno">2.7.2.2</span> <span class="content"><code>HTMLFormControlsCollection</code> 인터페이스</span></a>
           </li><li><a href="infrastructure.html#the-htmloptionscollection-interface"><span class="secno">2.7.2.3</span> <span class="content"><code>HTMLOptionsCollection</code> 인터페이스</span></a>
          </li></ol>
-        </li><li><a href="infrastructure.html#the-domstringmap-interface"><span class="secno">2.7.3</span> <span class="content">The <code>DOMStringMap</code> interface</span></a>
-        </li><li><a href="infrastructure.html#the-domelementmap-interface"><span class="secno">2.7.4</span> <span class="content">The <code>DOMElementMap</code> interface</span></a>
-        </li><li><a href="infrastructure.html#garbage-collection"><span class="secno">2.7.5</span> <span class="content">Garbage collection</span></a>
+        </li><li><a href="infrastructure.html#the-domstringmap-interface"><span class="secno">2.7.3</span> <span class="content"><code>DOMStringMap</code> 인터페이스</span></a>
+        </li><li><a href="infrastructure.html#the-domelementmap-interface"><span class="secno">2.7.4</span> <span class="content"><code>DOMElementMap</code> 인터페이스</span></a>
+        </li><li><a href="infrastructure.html#garbage-collection"><span class="secno">2.7.5</span> <span class="content">가비지 컬렉션</span></a>
        </li></ol>
-      </li><li><a href="infrastructure.html#namespaces"><span class="secno">2.8</span> <span class="content">Namespaces</span></a>
+      </li><li><a href="infrastructure.html#namespaces"><span class="secno">2.8</span> <span class="content">네임스페이스</span></a>
       </li><li>
-       <a href="infrastructure.html#safe-passing-of-structured-data"><span class="secno">2.9</span> <span class="content">Safe passing of structured data</span></a>
+       <a href="infrastructure.html#safe-passing-of-structured-data"><span class="secno">2.9</span> <span class="content">구조화 된 데이터의 안전한 전달</span></a>
        <ol class="toc">
-        <li><a href="infrastructure.html#section-cloneable-objects"><span class="secno">2.9.1</span> <span class="content"><span>Cloneable objects</span></span></a>
+        <li><a href="infrastructure.html#section-cloneable-objects"><span class="secno">2.9.1</span> <span class="content"><span>복제 가능한 객체</span></span></a>
         </li><li><a href="infrastructure.html#section-transferable-objects"><span class="secno">2.9.2</span> <span class="content"><span>Transferable objects</span></span></a>
         </li><li><a href="infrastructure.html#section-structuredclonewithtransfer"><span class="secno">2.9.3</span> <span class="content"><span>StructuredCloneWithTransfer</span> ( <var>input</var>, <var>transferList</var>, <var>targetRealm</var> )</span></a>
         </li><li><a href="infrastructure.html#section-structuredclone"><span class="secno">2.9.4</span> <span class="content"><span>StructuredClone</span> ( <var>input</var>, <var>targetRealm</var> [ , <var>memory</var> ] )</span></a>
@@ -5668,12 +5668,11 @@ pre.idl.highlight { color: #708090; }
     </li></ol>
     <p><dfn class="dfn-paneled idl-code" data-dfn-for="HTMLOptionsCollection" data-dfn-type="attribute" data-export="" id="dom-htmloptionscollection-selectedindex"><code>selectedIndex</code></dfn> IDL 속성(attribute)은 <code>HTMLOptionsCollection</code>에 뿌리를 둔 <code><a data-link-type="element" href="sec-forms.html#elementdef-select" id="ref-for-elementdef-select-10">select</a></code> 요소(element)에서 동일하게 이름이 붙은
   속성(attribute)처럼 동작해야(must) 합니다.</p>
-    <h4 class="heading settled" data-level="2.7.3" id="the-domstringmap-interface"><span class="secno">2.7.3. </span><span class="content">The <code>DOMStringMap</code> interface</span><a class="self-link" href="infrastructure.html#the-domstringmap-interface"></a></h4>
-    <p>The <code>DOMStringMap</code> interface represents a set of name-value pairs. It exposes these
-  using the scripting language’s native mechanisms for property access.</p>
-    <p>When a <code>DOMStringMap</code> object is instantiated, it is associated with three algorithms,
-  one for getting the list of name-value pairs, one for setting names to certain values, and one for
-  deleting names.</p>
+    <h4 class="heading settled" data-level="2.7.3" id="the-domstringmap-interface"><span class="secno">2.7.3. </span><span class="content"><code>DOMStringMap</code> 인터페이스</span><a class="self-link" href="infrastructure.html#the-domstringmap-interface"></a></h4>
+    <p><code>DOMStringMap</code> 인터페이스는 이름-값 쌍의 세트를 나타냅니다. 이것은 속성(property) 접근을
+  위한 스크립팅 언어의 네이티브 메커니즘을 사용하여 이것들을 노출합니다.</p>
+    <p><code>DOMStringMap</code> 객체가 인스턴스화 되는 경우, 이름-값 쌍의 목록을 가져오는 것, 이름을 특정
+  값으로 설정 하는 것, 이름을 삭제하는 것, 3가지 알고리즘과 연관되어집니다.</p>
 <pre class="idl highlight def" data-highlight="webidl">[<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#OverrideBuiltins">OverrideBuiltins</a>]
 <span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-for="DOMStringMap" data-dfn-type="interface" data-export="" id="domstringmap-domstringmap">DOMStringMap</dfn> {
   <span class="kt">getter</span> <span class="kt">DOMString</span> (<span class="kt">DOMString</span> <dfn class="nv idl-code" data-dfn-for="DOMStringMap/__getter__(name)" data-dfn-type="argument" data-export="" id="dom-domstringmap-__getter__-name-name">name<a class="self-link" href="infrastructure.html#dom-domstringmap-__getter__-name-name"></a></dfn>);
@@ -5681,26 +5680,24 @@ pre.idl.highlight { color: #708090; }
   <span class="kt">deleter</span> <span class="kt">void</span> (<span class="kt">DOMString</span> <dfn class="nv idl-code" data-dfn-for="DOMStringMap/__deleter__(name)" data-dfn-type="argument" data-export="" id="dom-domstringmap-__deleter__-name-name">name<a class="self-link" href="infrastructure.html#dom-domstringmap-__deleter__-name-name"></a></dfn>);
 };
 </pre>
-    <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">supported property names</a> on a <code>DOMStringMap</code> object at any instant are the
-  names of each pair returned from the algorithm for getting the list of name-value pairs at that
-  instant, in the order returned.</p>
-    <p>To <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-determine-the-value-of-a-named-property">determine the value of a named property</a> <var>name</var> in a <code class="idl"><a data-link-type="idl" href="infrastructure.html#domstringmap-domstringmap" id="ref-for-domstringmap-domstringmap-1">DOMStringMap</a></code>, the user agent must return the value component of the name-value pair
-  whose name component is <var>name</var> in the list returned by the algorithm for getting the list
-  of name-value pairs.</p>
-    <p>To <a data-link-type="dfn" href="infrastructure.html#values-setting" id="ref-for-values-setting-1">set</a> the value of a named property <var>name</var> to value <var>value</var>, the
-  algorithm for setting names to certain values must be run, passing <var>name</var> as the name and <var>value</var> as the value.</p>
-    <p>To <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="delete-an-existing-named-property">delete an existing named property</dfn> <var>name</var>, the algorithm for deleting names
-  must be run, passing <var>name</var> as the name.</p>
-    <p class="note" role="note"> The <code>DOMStringMap</code> interface definition here is only intended for JavaScript
-    environments. Other language bindings will need to define how <code>DOMStringMap</code> is to be
-    implemented for those languages. </p>
-    <div class="example" id="example-e1e84d85">
-     <a class="self-link" href="infrastructure.html#example-e1e84d85"></a> The <code>dataset</code> attribute on elements exposes the <code>data-*</code> attributes on the
-  element. 
-     <p>Given the following fragment and elements with similar constructions:</p>
+    <p>임의의 인스턴스에 <code>DOMStringMap</code> 객체에서 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">지원되는 속성(property) 이름</a>은 반환되는 순서에 
+  따라, 그 인스턴스에서 이름-값 쌍의 목록을 가져오는 알고리즘으로부터 반환된 각 쌍의 이름입니다.</p>
+    <p><code class="idl"><a data-link-type="idl" href="infrastructure.html#domstringmap-domstringmap" id="ref-for-domstringmap-domstringmap-1">DOMStringMap</a></code>에서 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-determine-the-value-of-a-named-property">명명된 속성(property) <var>name</var>의 값을 결정</a>하기
+  위해, 유저 에이전트는 이름-값 쌍의 목록을 가져오는 알고리즘에 의해 반환된 목록에서 이름 컴포넌트가 <var>name</var>인 이름-값 쌍의 값 컴포넌트를 반환해야(must) 합니다.</p>
+    <p>명명된 속성(property) <var>name</var>의 값을 <var>value</var> 값으로 <a data-link-type="dfn" href="infrastructure.html#values-setting" id="ref-for-values-setting-1">설정</a>하기 위해, 이름을 특정한 값으로 설정하는 알고리즘은, 
+  이름으로 <var>name</var>를 그리고 값으로 <var>value</var>를 전달하여 수행해야(must) 합니다.</p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="delete an existing named property" data-noexport="" id="delete-an-existing-named-property">기존의 명명된 속성(property) <var>name</var>을 삭제</dfn>하기
+  위해, 이름을 삭제하는 알고리즘은 이름으로 <var>name</var>을 전달하여 수행해야(must) 합니다.</p>
+    <p class="note" role="note"> 여기 <code>DOMStringMap</code> 인터페이스 정의는 자바스크립트 환경에 대해서만 의도되었습니다.
+    다른 언어 바인딩은 <code>DOMStringMap</code>이 그 언어들에 대해 구현되는 방법을 정의할 필요가
+    있을 것입니다. </p>
+    <div class="example" id="example-c759f058">
+     <a class="self-link" href="infrastructure.html#example-c759f058"></a> 요소(element)의 <code>dataset</code> 속성(attribute)은 요소(element)의 <code>data-*</code> 속성(attribute)을
+  노출합니다. 
+     <p>유사한 구조를 가진 다음 코드 조각과 요소(element)를 고려해 볼 때:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">"tower"</span> <span class="na">id</span><span class="o">=</span><span class="s">"tower5"</span> <span class="na">data-x</span><span class="o">=</span><span class="s">"12"</span> <span class="na">data-y</span><span class="o">=</span><span class="s">"5"</span> <span class="na">data-ai</span><span class="o">=</span><span class="s">"robotarget"</span> <span class="na">data-hp</span><span class="o">=</span><span class="s">"46"</span> <span class="na">data-ability</span><span class="o">=</span><span class="s">"flames"</span> <span class="na">src</span><span class="o">=</span><span class="s">"towers/rocket.png"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Rocket Tower"</span><span class="p">&gt;</span></pre>
-     <p>...one could imagine a function <code>splashDamage()</code> that takes some arguments, the first
-  of which is the element to process:</p>
+     <p>...하나는 일부 인수를 취하는 함수 <code>splashDamage()</code>를 상상해 볼 수 있고, 첫 번째 인수는
+  처리할 요소(element)입니다:</p>
 <pre class="highlight"><span class="kd">function</span> splashDamage<span class="p">(</span>node<span class="p">,</span> x<span class="p">,</span> y<span class="p">,</span> damage<span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span>node<span class="p">.</span>classList<span class="p">.</span>contains<span class="p">(</span><span class="s1">'tower'</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="c1">// checking the 'class' attribute
 </span>      node<span class="p">.</span>dataset<span class="p">.</span>x <span class="o">==</span> x <span class="o">&amp;&amp;</span> <span class="c1">// reading the 'data-x' attribute
@@ -5717,70 +5714,70 @@ pre.idl.highlight { color: #708090; }
 <span class="p">}</span>
 </pre>
     </div>
-    <h4 class="heading settled" data-level="2.7.4" id="the-domelementmap-interface"><span class="secno">2.7.4. </span><span class="content">The <code>DOMElementMap</code> interface</span><a class="self-link" href="infrastructure.html#the-domelementmap-interface"></a></h4>
-    <p>The <code>DOMElementMap</code> interface represents a set of name-element mappings. It exposes
-  these using the scripting language’s native mechanisms for property access.</p>
-    <p>When a <code>DOMElementMap</code> object is instantiated, it is associated with three algorithms,
-  one for getting the list of name-element mappings, one for mapping a name to a certain element,
-  and one for deleting mappings by name.</p>
+    <h4 class="heading settled" data-level="2.7.4" id="the-domelementmap-interface"><span class="secno">2.7.4. </span><span class="content"><code>DOMElementMap</code> 인터페이스</span><a class="self-link" href="infrastructure.html#the-domelementmap-interface"></a></h4>
+    <p><code>DOMElementMap</code> 인터페이스는 이름-요소(elememt) 매핑 세트를 나타냅니다. 이것은 속성(property)
+  접근을 위한 스크립팅 언어의 네이티브 메커니즘을 사용하여 이것들을 노출합니다.</p>
+    <p><code>DOMElementMap</code> 객체가 인스턴스화 되는 경우, 이름-요소(element) 매핑 목록을 가져오는 것,
+  이름을 특정 요소(element)에 매핑하는 것, 이름으로 매핑을 삭제하는 것, 3가지 알고리즘과 연관되어집니다.</p>
 <pre class="idl highlight def" data-highlight="webidl"><span class="kt">interface</span> <dfn class="nv idl-code" data-dfn-for="DOMElementMap" data-dfn-type="interface" data-export="" id="domelementmap-domelementmap">DOMElementMap<a class="self-link" href="infrastructure.html#domelementmap-domelementmap"></a></dfn> {
   <span class="kt">getter</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom/#interface-element">Element</a> (<span class="kt">DOMString</span> <dfn class="nv idl-code" data-dfn-for="DOMElementMap/__getter__(name)" data-dfn-type="argument" data-export="" id="dom-domelementmap-__getter__-name-name">name<a class="self-link" href="infrastructure.html#dom-domelementmap-__getter__-name-name"></a></dfn>);
   <span class="kt">setter</span> <span class="kt">creator</span> <span class="kt">void</span> (<span class="kt">DOMString</span> <dfn class="nv idl-code" data-dfn-for="DOMElementMap/__setter__(name, value)" data-dfn-type="argument" data-export="" id="dom-domelementmap-__setter__-name-value-name">name<a class="self-link" href="infrastructure.html#dom-domelementmap-__setter__-name-value-name"></a></dfn>, <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom/#interface-element">Element</a> <dfn class="nv idl-code" data-dfn-for="DOMElementMap/__setter__(name, value)" data-dfn-type="argument" data-export="" id="dom-domelementmap-__setter__-name-value-value">value<a class="self-link" href="infrastructure.html#dom-domelementmap-__setter__-name-value-value"></a></dfn>);
   <span class="kt">deleter</span> <span class="kt">void</span> (<span class="kt">DOMString</span> <dfn class="nv idl-code" data-dfn-for="DOMElementMap/__deleter__(name)" data-dfn-type="argument" data-export="" id="dom-domelementmap-__deleter__-name-name">name<a class="self-link" href="infrastructure.html#dom-domelementmap-__deleter__-name-name"></a></dfn>);
 };
 </pre>
-    <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">supported property names</a> on a <code>DOMElementMap</code> object at any instant are the
-  names for each mapping returned from the algorithm for getting the list of name-element mappings
-  at that instant, in the order returned.</p>
-    <p>To <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-determine-the-value-of-a-named-property">determine the value of a named property</a> <var>name</var> in a <code>DOMElementMap</code>, the user agent must return the element component of the name-element
-  mapping whose name component is <var>name</var> in the list returned by the algorithm for getting
-  the list of name-element mappings.</p>
-    <p>To set the value of a <dfn data-dfn-type="dfn" data-noexport="" id="new">new<a class="self-link" href="infrastructure.html#new"></a></dfn> or <dfn data-dfn-type="dfn" data-noexport="" id="existing">existing<a class="self-link" href="infrastructure.html#existing"></a></dfn> named property <var>name</var> to
-  value <var>value</var>, the algorithm for mapping a name to a certain element must be run, passing <var>name</var> as the name <var>value</var> as the element.</p>
-    <p>To <a data-link-type="dfn" href="infrastructure.html#delete-an-existing-named-property" id="ref-for-delete-an-existing-named-property-1">delete an existing named property</a> <var>name</var>, the algorithm for deleting
-  mappings must be run, passing <var>name</var> as the name component of the mapping to be deleted.</p>
-    <p class="note" role="note"> The <code>DOMElementMap</code> interface definition here is only intended for JavaScript
-    environments. Other language bindings will need to define how <code>DOMElementMap</code> is to
-    be implemented for those languages. </p>
-    <h4 class="heading settled" data-level="2.7.5" id="garbage-collection"><span class="secno">2.7.5. </span><span class="content">Garbage collection</span><a class="self-link" href="infrastructure.html#garbage-collection"></a></h4>
-    <p>There is an <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="implied-strong-reference">implied strong reference</dfn> from any IDL attribute that returns a pre-existing
-  object to that object.</p>
-    <div class="example" id="example-b96658ed"><a class="self-link" href="infrastructure.html#example-b96658ed"></a> For example, the <code>window.document</code> attribute on the <code class="idl"><a data-link-type="idl" href="browsers.html#window-window" id="ref-for-window-window-2">Window</a></code> object means that there is a strong reference
-    from a <code class="idl"><a data-link-type="idl" href="browsers.html#window-window" id="ref-for-window-window-3">Window</a></code> object to its <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object. Similarly, there is
-    always a strong reference from a <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> to any descendant nodes, and from any
-    node to its owner <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>. </div>
-    <h3 class="heading settled" data-level="2.8" id="namespaces"><span class="secno">2.8. </span><span class="content">Namespaces</span><a class="self-link" href="infrastructure.html#namespaces"></a></h3>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="html-namespace">HTML namespace</dfn> is: <code>http://www.w3.org/1999/xhtml</code></p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="mathml-namespace">MathML namespace</dfn> is: <code>http://www.w3.org/1998/Math/MathML</code></p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="svg-namespace">SVG namespace</dfn> is: <code>http://www.w3.org/2000/svg</code></p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="xlink-namespace">XLink namespace</dfn> is: <code>http://www.w3.org/1999/xlink</code></p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="xml-namespace">XML namespace</dfn> is: <code>http://www.w3.org/XML/1998/namespace</code></p>
-    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="xmlns-namespace">XMLNS namespace</dfn> is: <code>http://www.w3.org/2000/xmlns/</code></p>
+    <p>임의의 인스턴스에 <code>DOMElementMap</code> 객체에서 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">지원되는 속성(property) 이름</a>은 반환되는 순서에 
+  따라, 그 인스턴스에서 이름-요소(element) 매핑 목록을 가져오는 알고리즘으로부터 반환된 각 매핑에 
+  대한 이름입니다.</p>
+    <p><code>DOMElementMap</code>에서 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-determine-the-value-of-a-named-property">명명된 속성(property) <var>name</var>의 값을 결정</a>하기
+  위해, 유저 에이전트는 이름-요소(element)매핑 목록을 가져오는 알고리즘에 의해 반환된 목록에서 이름
+  컴포넌트가 <var>name</var>인 이름-요소(element) 매핑의 요소(element) 컴포넌트를 반환해야(must)
+  합니다.</p>
+    <p><dfn data-dfn-type="dfn" data-lt="new" data-noexport="" id="new">새로운<a class="self-link" href="infrastructure.html#new"></a></dfn> 혹은 <dfn data-dfn-type="dfn" data-lt="existing" data-noexport="" id="existing">기존의<a class="self-link" href="infrastructure.html#existing"></a></dfn> 명명된 속성(property) <var>name</var>의
+  값을 <var>value</var> 값으로 설정하기 위해, 이름을 특정 요소(element)에 매팽하기 위한 알고리즘은
+  이름을 <var>name</var> 요소(element)로 <var>value</var>를 전달하여 수행해야(must) 합니다.</p>
+    <p><a data-link-type="dfn" href="infrastructure.html#delete-an-existing-named-property" id="ref-for-delete-an-existing-named-property-1">기존의 명명된 속성(property) <var>name</var>을 삭제</a>하기
+  위해, 매핑을 삭제하기 위한 알고리즘은 삭제될 매핑의 이름 컴포넌트로 <var>name</var>를 전달하여
+  수행해야(must) 합니다.</p>
+    <p class="note" role="note"> 여기 <code>DOMElementMap</code> 인터페이스 정의는 자바스크립트 환경에 대해서만 의도되었습니다.
+    다른 언어 바인딩은 <code>DOMElementMap</code>이 그 언어들에 대해 구현되는 방법을 정의할 필요가
+    있을 것입니다. </p>
+    <h4 class="heading settled" data-level="2.7.5" id="garbage-collection"><span class="secno">2.7.5. </span><span class="content">가비지 컬렉션</span><a class="self-link" href="infrastructure.html#garbage-collection"></a></h4>
+    <p>이미 존재하는 객체를 그 객체에 돌려주는 IDL 속성(attribute)로부터의 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="implied strong reference" data-noexport="" id="implied-strong-reference">암묵적인 강한 참조</dfn>가 있습니다.</p>
+    <div class="example" id="example-3fd61ea0"><a class="self-link" href="infrastructure.html#example-3fd61ea0"></a> 예를 들어, <code class="idl"><a data-link-type="idl" href="browsers.html#window-window" id="ref-for-window-window-2">Window</a></code> 객체의 <code>window.document</code> 속성(attribute)은 <code class="idl"><a data-link-type="idl" href="browsers.html#window-window" id="ref-for-window-window-3">Window</a></code> 객체로부터
+    그것의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 객체로의 강한 참조가 있음을 의미합니다. 비슷하게, <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>로부터 임의의
+    후손 노드로, 임의의 노드로부터 그 노드의 소유자 <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">노드 문서</a>로의 강한 참조가
+    항상 있습니다. </div>
+    <h3 class="heading settled" data-level="2.8" id="namespaces"><span class="secno">2.8. </span><span class="content">네임스페이스</span><a class="self-link" href="infrastructure.html#namespaces"></a></h3>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="HTML namespace" data-noexport="" id="html-namespace">HTML 네임스페이스</dfn>: <code>http://www.w3.org/1999/xhtml</code></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="MathML namespace" data-noexport="" id="mathml-namespace">MathML 네임스페이스</dfn>: <code>http://www.w3.org/1998/Math/MathML</code></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="SVG namespace" data-noexport="" id="svg-namespace">SVG 네임스페이스</dfn>: <code>http://www.w3.org/2000/svg</code></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="XLink namespace" data-noexport="" id="xlink-namespace">XLink 네임스페이스</dfn>: <code>http://www.w3.org/1999/xlink</code></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="XML namespace" data-noexport="" id="xml-namespace">XML 네임스페이스</dfn>: <code>http://www.w3.org/XML/1998/namespace</code></p>
+    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="XMLNS namespace" data-noexport="" id="xmlns-namespace">XMLNS 네임스페이스</dfn>: <code>http://www.w3.org/2000/xmlns/</code></p>
     <hr>
-    <p>Data mining tools and other user agents that perform operations on content without running
-  scripts, evaluating CSS or XPath expressions, or otherwise exposing the resulting DOM to arbitrary
-  content, may "support namespaces" by just asserting that their DOM node analogs are in certain
-  namespaces, without actually exposing the above strings.</p>
+    <p>스크립트를 수행하지 않고, CSS나 XPath 표현식을 평가하지 않고, 결과 DOM을 임의의 콘텐트에 노출시키지
+  않고 콘텐트에 연산을 수행하는 데이터 마이닝 툴과 다른 유저 에이전트는 실제로 상기 문자열을 노출하지
+  않고, 그들의 DOM 노드 아날로그가 특정 네임스페이스에 있다고 당연한 것으로 가정하여 "네임스페이스를
+  지원"할 수도 있습니다.</p>
     <hr>
-    <p class="note" role="note"> In <a href="syntax.html#syntax">the HTML syntax</a>, namespace prefixes and namespace declarations do not have the same
-    effect as in XML. For instance, the colon has no special meaning in HTML element names. </p>
-    <h3 class="heading settled" data-level="2.9" id="safe-passing-of-structured-data"><span class="secno">2.9. </span><span class="content">Safe passing of structured data</span><a class="self-link" href="infrastructure.html#safe-passing-of-structured-data"></a></h3>
-    <p>This section uses the terminology and typographic conventions from the JavaScript specification. <a data-link-type="biblio" href="references.html#biblio-ecma-262">[ECMA-262]</a></p>
-    <h4 class="heading settled" data-level="2.9.1" id="section-cloneable-objects"><span class="secno">2.9.1. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="cloneable-objects">Cloneable objects</dfn></span><a class="self-link" href="infrastructure.html#section-cloneable-objects"></a></h4>
-    <p><a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-1">Cloneable objects</a> support being cloned across <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-3">event loops</a>. That is, they support
-  being cloned across <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/workers/#worker">Worker</a></code> boundaries, including across <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>s of
-  different <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-2">origins</a>. Not all objects are <a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-2">cloneable objects</a> and not all
-  aspects of objects that are <a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-3">cloneable objects</a> are necessarily preserved when cloned.</p>
-    <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">Platform objects</a> have the following internal method:</p>
+    <p class="note" role="note"> <a href="syntax.html#syntax">HTML 구문</a>에서, 네임스페이스 접두어와 네임스페이스 선언은 XML에서와 동일한 
+    효과를 가지지 않습니다. 예를 들어, 콜론은 HTML 요소(element) 이름에 특별한 의미를 가지지 않습니다. </p>
+    <h3 class="heading settled" data-level="2.9" id="safe-passing-of-structured-data"><span class="secno">2.9. </span><span class="content">구조화 된 데이터의 안전한 전달</span><a class="self-link" href="infrastructure.html#safe-passing-of-structured-data"></a></h3>
+    <p>이 명세는 자바스크립트 명세의 용어와 표기법을 사용합니다. <a data-link-type="biblio" href="references.html#biblio-ecma-262">[ECMA-262]</a></p>
+    <h4 class="heading settled" data-level="2.9.1" id="section-cloneable-objects"><span class="secno">2.9.1. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="Cloneable objects" data-noexport="" id="cloneable-objects">복제 가능한 객체</dfn></span><a class="self-link" href="infrastructure.html#section-cloneable-objects"></a></h4>
+    <p><a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-1">복제 가능한 객체</a>는 <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-3">이벤트 반복</a> 전반에 걸쳐
+  복제되는 것을 지원합니다. 즉, 다른 <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-2">출처</a>의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 전반을 
+  포함하여 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>와 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/workers/#worker">Worker</a></code> 경계 전반에 걸쳐 복제되는 것을 지원합니다. 모든 객체가 <a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-2">복제 가능한 객체</a>는 아니며 <a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-3">복제 가능한 객체</a>의
+  모든 측면이 복제될 때 반드시 보존되는 것은 아닙니다.</p>
+    <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">플랫폼 객체</a>는 다음의 내부 메서드를 가집니다:</p>
     <p>[[<dfn class="dfn-paneled" data-dfn-for="structured" data-dfn-type="dfn" data-noexport="" id="structured-clone">Clone</dfn>]] ( <var>targetRealm</var>, <var>memory</var> )</p>
-    <p>Unless specified otherwise, invoking the [[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-1">Clone</a>]] internal method must
-  throw a "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>. (By default, <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">platform objects</a> are not <a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-4">cloneable objects</a>.)</p>
-    <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">Platform objects</a> that are <a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-5">cloneable objects</a> have a [[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-2">Clone</a>]]
-  internal method which is specified to run a series of steps. The result of running those steps
-  must be a thrown exception or a clone of <em>this</em>, created in <var>targetRealm</var>. It is
-  up such objects to define what cloning means for them.</p>
-    <p>Objects defined in the JavaScript specification are handled by the <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-1">StructuredClone</a> abstract
-  operation directly.</p>
+    <p>달리 지정하지 않는 한, [[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-1">Clone</a>]] 내부 메서드를 호출하는 것은 "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>을 던져야 합니다. (기본적으로, <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">플랫폼 객체</a>는 <a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-4">복제 가능한 객체</a>가 아닙니다.)</p>
+    <p><a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-5">복제 가능한 객체</a>인 <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">플랫폼 객체</a>는 일련의
+  단계들을 수행하도록 명시된 [[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-2">Clone</a>]] 내부 메서드를 가집니다. 그 단계들을
+  수행한 결과는 <var>targetRealm</var>에 생성된, 던져진 예외나 <em>this</em>의 복제여야(must) 합니다.
+  그것은 그 객체들에게 그것들에 대해 복제가 의미하는 바를 정의하는 것입니다.</p>
+    <p>자바스크립트 명세에 정의된 객체들은 <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-1">구조화된 복제</a> 추상 연산에 의해
+  직접 처리됩니다.</p>
     <h4 class="heading settled" data-level="2.9.2" id="section-transferable-objects"><span class="secno">2.9.2. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="transferable-objects">Transferable objects</dfn></span><a class="self-link" href="infrastructure.html#section-transferable-objects"></a></h4>
     <p><a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-1">Transferable objects</a> support being transferred across <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-4">event loops</a>. Transferring is
   effectively recreating the object while sharing a reference to the underlying data and then
@@ -6575,7 +6572,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="values-setting">
    <b><a href="infrastructure.html#values-setting">#values-setting</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-values-setting-1">2.7.3. The DOMStringMap interface</a>
+    <li><a href="infrastructure.html#ref-for-values-setting-1">2.7.3. DOMStringMap 인터페이스</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="live">
@@ -8626,14 +8623,14 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="domstringmap-domstringmap">
    <b><a href="infrastructure.html#domstringmap-domstringmap">#domstringmap-domstringmap</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-domstringmap-domstringmap-1">2.7.3. The DOMStringMap interface</a>
+    <li><a href="infrastructure.html#ref-for-domstringmap-domstringmap-1">2.7.3. DOMStringMap 인터페이스</a>
     </li><li><a href="dom.html#ref-for-domstringmap-domstringmap-2">3.2.2. Elements in the DOM</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="delete-an-existing-named-property">
    <b><a href="infrastructure.html#delete-an-existing-named-property">#delete-an-existing-named-property</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-delete-an-existing-named-property-1">2.7.4. The DOMElementMap interface</a>
+    <li><a href="infrastructure.html#ref-for-delete-an-existing-named-property-1">2.7.4. DOMElementMap 인터페이스</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="implied-strong-reference">
@@ -8731,13 +8728,13 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="cloneable-objects">
    <b><a href="infrastructure.html#cloneable-objects">#cloneable-objects</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-cloneable-objects-1">2.9.1. Cloneable objects</a> <a href="infrastructure.html#ref-for-cloneable-objects-2">(2)</a> <a href="infrastructure.html#ref-for-cloneable-objects-3">(3)</a> <a href="infrastructure.html#ref-for-cloneable-objects-4">(4)</a> <a href="infrastructure.html#ref-for-cloneable-objects-5">(5)</a>
+    <li><a href="infrastructure.html#ref-for-cloneable-objects-1">2.9.1. 복제 가능한 객체</a> <a href="infrastructure.html#ref-for-cloneable-objects-2">(2)</a> <a href="infrastructure.html#ref-for-cloneable-objects-3">(3)</a> <a href="infrastructure.html#ref-for-cloneable-objects-4">(4)</a> <a href="infrastructure.html#ref-for-cloneable-objects-5">(5)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="structured-clone">
    <b><a href="infrastructure.html#structured-clone">#structured-clone</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-structured-clone-1">2.9.1. Cloneable objects</a> <a href="infrastructure.html#ref-for-structured-clone-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-structured-clone-1">2.9.1. 복제 가능한 객체</a> <a href="infrastructure.html#ref-for-structured-clone-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-structured-clone-3">2.9.2. Transferable objects</a>
     </li><li><a href="infrastructure.html#ref-for-structured-clone-4">2.9.4. StructuredClone ( input, targetRealm [ , memory ] )</a> <a href="infrastructure.html#ref-for-structured-clone-5">(2)</a>
    </li></ul>
@@ -8773,7 +8770,7 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="structuredclone">
    <b><a href="infrastructure.html#structuredclone">#structuredclone</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-structuredclone-1">2.9.1. Cloneable objects</a>
+    <li><a href="infrastructure.html#ref-for-structuredclone-1">2.9.1. 복제 가능한 객체</a>
     </li><li><a href="infrastructure.html#ref-for-structuredclone-2">2.9.3. StructuredCloneWithTransfer ( input, transferList, targetRealm )</a> <a href="infrastructure.html#ref-for-structuredclone-3">(2)</a> <a href="infrastructure.html#ref-for-structuredclone-4">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-structuredclone-5">2.9.4. StructuredClone ( input, targetRealm [ , memory ] )</a> <a href="infrastructure.html#ref-for-structuredclone-6">(2)</a> <a href="infrastructure.html#ref-for-structuredclone-7">(3)</a> <a href="infrastructure.html#ref-for-structuredclone-8">(4)</a> <a href="infrastructure.html#ref-for-structuredclone-9">(5)</a> <a href="infrastructure.html#ref-for-structuredclone-10">(6)</a>
     </li><li><a href="links.html#ref-for-structuredclone-11">4.8.3. API for a and area elements</a>
@@ -25139,7 +25136,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="browsers.html#window-window">#window-window</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-window-window-1">1.9.1. HTML로 안전한 어플리케이션 작성</a>
-    </li><li><a href="infrastructure.html#ref-for-window-window-2">2.7.5. Garbage collection</a> <a href="infrastructure.html#ref-for-window-window-3">(2)</a>
+    </li><li><a href="infrastructure.html#ref-for-window-window-2">2.7.5. 가비지 컬렉션</a> <a href="infrastructure.html#ref-for-window-window-3">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-window-window-4">2.9.3. StructuredCloneWithTransfer ( input, transferList, targetRealm )</a>
     </li><li><a href="document-metadata.html#ref-for-window-window-5">4.2.4. The link element</a>
     </li><li><a href="sections.html#ref-for-window-window-6">4.3.1. The body element</a>
@@ -25444,7 +25441,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="browsers.html#concept-cross-origin">#concept-cross-origin</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-concept-cross-origin-1">2.6.2. 처리 모델</a>
-    </li><li><a href="infrastructure.html#ref-for-concept-cross-origin-2">2.9.1. Cloneable objects</a>
+    </li><li><a href="infrastructure.html#ref-for-concept-cross-origin-2">2.9.1. 복제 가능한 객체</a>
     </li><li><a href="dom.html#ref-for-concept-cross-origin-3">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-concept-cross-origin-4">(2)</a>
     </li><li><a href="dom.html#ref-for-concept-cross-origin-5">3.1.4. Loading XML documents</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-concept-cross-origin-6">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-7">(2)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-8">(3)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-9">(4)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-10">(5)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-11">(6)</a>
@@ -27106,7 +27103,7 @@ pre.idl.highlight { color: #708090; }
    <ul>
     <li><a href="infrastructure.html#ref-for-event-loop-1">2.1. 전문 용어</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. XPath와 XSLT와의 상호작용</a>
-    </li><li><a href="infrastructure.html#ref-for-event-loop-3">2.9.1. Cloneable objects</a>
+    </li><li><a href="infrastructure.html#ref-for-event-loop-3">2.9.1. 복제 가능한 객체</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-4">2.9.2. Transferable objects</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-5">2.9.4. StructuredClone ( input, targetRealm [ , memory ] )</a>
     </li><li><a href="document-metadata.html#ref-for-event-loop-6">4.2.7. Interactions of styling and scripting</a> <a href="document-metadata.html#ref-for-event-loop-7">(2)</a>
