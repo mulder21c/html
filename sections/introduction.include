@@ -748,7 +748,7 @@
 
   <em>이 섹션은 비규범적입니다.</em>
 
-  작성자는 적합성 검사기(<i lt="validators">유효성 검사기</i>로 알려진)의 사용으로 일반적인 실수를 찾도록 
+  작성자는 적합성 검사기(<i>유효성 검사기</i>로 알려진)의 사용으로 일반적인 실수를 찾도록 
   권장됩니다. W3C는 <a lt="Nu Markup Validation Service">Nu Markup Validation Service</a>를 포함하여 
   다수의 온라인 유효성 서비스를 제공합니다.
 
