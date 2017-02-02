@@ -9,68 +9,67 @@
 ████████   ███████  ██     ██
 -->
 
-<h2 id="dom">Semantics, structure, and APIs of HTML documents</h2>
+<h2 id="dom">HTML 문서의 의미론, 구조, API</h2>
 
-<h3 id="documents">Documents</h3>
+<h3 id="documents">문서</h3>
 
-  Every XML and HTML document in an HTML user agent is represented by a {{Document}} object.
+  HTML 유저 에이전트에서 모든 XML과 HTML 문서는 {{Document}} 객체로 표현됩니다.
   [[!DOM]]
 
-  <dfn lt="the document address|address|the document's address|the address">The document's address</dfn> is the <i>URL associated with a {{Document}}</i> (as
-  defined in the DOM standard). It is initially set when the {{Document}} is created, but
-  that can change during the lifetime of the {{Document}}; for example, it changes when
-  the user <a>navigates</a> to a <a>fragment identifier</a> on the page and when the
-  <code>pushState()</code> method is called with a new <a for="url">URL</a>. [[!DOM]]
+  <dfn lt="the document address|address|the document's address|the address">문서의 주소</dfn>는
+  <i>{{Document}}와 연관된 URL</i>입니다(DOM 표준에 정의된 대로). 그것은 {{Document}}가 생성될 때 
+  초기에 설정되지만, {{Document}}의 수명 기간 동안 변경될 수 있습니다; 예를 들어, 사용자가 페이지의
+  <a for="url" lt="fragment">문서 조각</a>으로 <a lt="navigates">이동</a>할 때 그리고 
+  <code>pushState()</code> 메서드가 새로운 <a for="url">URL</a>을 가지고 호출 될 때 변경됩니다. [[!DOM]]
 
   <p class="warning">
-    Interactive user agents typically expose <a>the document's address</a> in their user interface.
-    This is the primary mechanism by which a user can tell if a site is attempting to impersonate
-    another.
+    대화형 유저 에이전트는 보통 유저 인터페이스에 <a lt="the document's address">문서의 주소</a>를 노출합니다.
+    이것은 사이트가 다른 사람으로 가장하려하는지를 사용자가 알 수 있는 주된 메커니즘입니다.
   </p>
 
-  When a {{Document}} is created by a <a for="concept">script</a> using the <code>createDocument()</code>
-  or <code>createHTMLDocument()</code> APIs, <a>the document's address</a> is the same as
-  <a>the document's address</a> of the <a>responsible document</a> specified by the script's
-  <a>settings object</a>, and the {{Document}} is both <a>ready for post-load tasks</a> and
-  <a>completely loaded</a> immediately.
+  {{Document}}가 <code>createDocument()</code>나 <code>createHTMLDocument()</code> API를 사용하여
+  <a for="concept" lt="script">스크립트</a>에 의해 생성되는 경우, <a lt="the document's address">문서의 주소</a>는
+  스크립트의 <a lt="settings object">설정 객체</a>에 의해 명시된 <a lt="responsible document">신뢰할 수 있는 문서</a>의
+  <a lt="the document's address">문서의 주소</a>와 동일하고, {{Document}}는 즉시 
+  <a lt="ready for post-load tasks">로딩 후 작업에 대해 준비</a>되며 <a lt="completely loaded">완전히 로드</a>됩니다.
 
-  <dfn>The document's referrer</dfn> is an <a>absolute URL</a> that can be set when the
-  {{Document}} is created. If it is not explicitly set, then its value is the empty string.
+  <dfn lt="The document's referrer">문서의 리퍼러</dfn>는 {{Document}}가 생성될 때 설정될 수 있는
+  <a lt="absolute URL">절대 URL</a>입니다. 이것이 명시적으로 설정되지 않는다면, 그 값은 빈 문자열입니다.
 
-  Each {{Document}} object has a <dfn>reload override flag</dfn> that is originally unset.
-  The flag is set by the <code>document.open()</code> and <a method lt="write()"><code>document.write()</code></a> methods in
-  certain situations. When the flag is set, the {{Document}} also has a
-  <dfn>reload override buffer</dfn> which is a Unicode string that is used as the source of the
-  document when it is reloaded.
+  각 {{Document}} 객체는 처음에는 설정되어 있지 않은 <dfn lt="reload override flag">리로드 재정의 플래그</dfn>를
+  가집니다. 이 플래그는 특정한 상황에서 <code>document.open()</code>과 <a method lt="write()"><code>document.write()</code></a> 
+  메서드에 의해 설정됩니다. 플래그가 설정 되는 경우, {{Document}}는 리로드 될 때 문서의 소스로
+  사용되는 유니코드 문자열인 <dfn lt="reload override buffer">리로드 재정의 버퍼</dfn>를 가집니다.
 
-  When the user agent is to perform <dfn lt="overridden reload|an overridden reload">an overridden reload</dfn>, given a
-  <a>source browsing context</a>, it must act as follows:
+  유저 에이전트가 <a lt="source browsing context">소스 브라우징 컨텍스트</a>가 주어진, 
+  <dfn lt="overridden reload|an overridden reload">재정의 된 리로드</dfn>를 수행하려면, 다음과 같이 
+  동작해야(must) 합니다:
 
 
-  1. Let <var>source</var> be the value of the <a>browsing context</a>'s <a>active document</a>'s
-      <a>reload override buffer</a>.
-  2. Let <var>address</var> be the <a>browsing context</a>'s <a>active document</a>'s
-      <a lt="document url">URL</a>.
-  3. Let <var>HTTPS state</var> be the <a for="document">HTTPS state</a> of the
-      <a>browsing context</a>'s <a>active document</a>.
-  4. Let <var>CSP list</var> be the <a for="document">CSP list</a> of the <a>browsing context</a>'s
-      <a>active document</a>.
-  5. <a>Navigate</a> the <a>browsing context</a> to a new <a>response</a> whose
-      <a for="response">body</a> is <var>source</var>, <a for="response">CSP list</a> is
-      <var>CSP list</var> and <a for="response">HTTPS state</a> is <var>HTTPS state</var>, with the
-      <a>exceptions enabled flag</a> and <a>replacement enabled</a>. The
-      <a>source browsing context</a> is that given to the <a>overridden reload</a> algorithm. When
-      the <a>navigate</a> algorithm creates a {{Document}} object for this purpose, set that
-      {{Document}}'s <a>reload override flag</a> and set its <a>reload override buffer</a> to
-      <var>source</var>. Rethrow any exceptions.
+  1. <var>source</var>를 <a lt="browsing context">브라우징 컨텍스트</a>의 <a lt="active document">활성 문서</a>의
+      <a lt="reload override buffer">리로드 재정의 버퍼</a>의 값으로 둡니다.
+  2. <var>address</var>를 <a lt="browsing context">브라우징 컨텍스트</a>의 <a lt="active document">활성 문서</a>의
+      <a lt="document url">URL</a>로 둡니다.
+  3. <var>HTTPS state</var>를 <a lt="browsing context">브라우징 컨텍스트</a>의 <a lt="active document">활성 문서</a>의 
+      <a for="document" lt="HTTPS state">HTTPS 상태</a>로 둡니다.
+  4. <var>CSP list</var>를 <a lt="browsing context">브라우징 컨텍스트</a>의 <a lt="active document">활성 문서</a>의 
+       <a for="document" lt="CSP list">CSP 목록</a>으로 둡니다.
+  5. <a lt="browsing context">브라우징 컨텍스트</a>를 <a lt="exceptions enabled flag">예외 활성화 플래그</a>와
+      <a lt="replacement enabled">교체 활성화</a>를 가지고 <a for="response">body</a>가 <var>source</var>이고,
+      <a for="response" lt="CSP list">CSP 목록</a>이 <var>CSP list</var>이고 <a for="response" lt="HTTPS state">HTTP 상태</a>가
+      <var>HTTPS state</var>인 새로운 <a lt="response">응답</a>으로 <a lt="Navigate">이동</a>합니다.
+      <a lt="source browsing context">소스 브라우징 컨텍스트</a> 는 <a lt="overridden reload">재정의 된 리로드</a>
+      알고리즘에 주어진 것입니다. <a lt="navigate">이동</a> 알고리즘이 이 목적을 위해 {{Document}} 
+      객체를 생성할 경우, 그 {{Document}}의 <a lt="reload override flag">리로드 재정의 플래그</a>를
+      설정하고 그것의 <a lt="reload override buffer">리로드 재정의 버퍼</a>를 <var>source</var>로
+      설정합니다. 모든 예외를 다시 던집니다.
 
-      When it comes time to <a>set the document's address</a> in the <a>navigation algorithm</a>,
-      use <var>address</var> as the <a>override URL</a>.
+      <a lt="navigation algorithm">이동 알고리즘</a>에서 <a lt="set the document's address">문서의 주소를 설정</a>할 
+      때가 되면, <a lt="override URL">재정의 URL</a>로 <var>address</var>를 사용합니다.
 
-<h4 id="the-document-object">The <dfn element>Document</dfn> object</h4>
+<h4 id="the-document-object"><dfn element>Document</dfn> 객체</h4>
 
-  The DOM specification defines a {{Document}} interface, which this specification extends
-  significantly:
+  DOM 명세는 {{Document}} 인터페이스를 정의하고, 이 명세는 이를 크게 확장합니다:
 
   <pre class="idl" data-highlight="webidl" dfn-for="Document">
     enum DocumentReadyState { "loading", "interactive", "complete" };
@@ -126,29 +125,29 @@
     Document implements DocumentAndElementEventHandlers;
   </pre>
 
-  The {{Document}} has an <dfn for="document">HTTPS state</dfn> (an <a>HTTPS state value</a>),
-  initially "<code>none</code>", which represents the security properties of the network channel
-  used to deliver the {{Document}}'s data.
+  {{Document}}는 초기에 "<code>none</code>"인 <dfn for="document" lt="HTTPS state">HTTP 상태</dfn>
+  (<a lt="HTTPS state value">HTTPS 상태 값</a>)를 가지고, 이것은 {{Document}}의 데이터를 전달하는데
+  사용된 네트워크 채널의 보안 속성(property)들을 나타냅니다.
 
-  The {{Document}} has a <dfn for="document">CSP list</dfn>, which is a list of
-  <a>Content Security Policy</a> objects active in this context. The list is empty unless otherwise
-  specified.
+  {{Document}}는 <dfn for="document" lt="CSP list">CSP 목록</dfn>을 가지고, 이것은 이 컨텍스트에서
+  <a lt="Content Security Policy">콘텐트 보안 정책</a>의 목록입니다. 달리 명시되지 않는 한 목록은
+  비어있습니다.
 
-<h4 id="resource-metadata-management">Resource metadata management</h4>
+<h4 id="resource-metadata-management">리소스 메타데이터 관리</h4>
 
   <dl class="domintro">
     <dt><var>document</var> . <code>referrer</code></dt>
     <dd>
-      Returns <a>the address</a> of the {{Document}} from which the user navigated to this one,
-      unless it was blocked or there was no such document, in which case it returns the empty
-      string.
+      사용자가 이 문서로 이동한 문서로부터, 차단되어 있거나 그러한 문서가 없지 않은 한, {{Document}}의
+      <a lt="the address">주소</a>를 반환하고, 그러한 경우에는 빈 문자열을 반환합니다.
 
-      The <code>noreferrer</code> link type can be used to block the referrer.
+      <code>noreferrer</code> 링크 유형은 리퍼러를 차단하는 데 사용될 수 있습니다.
     </dd>
   </dl>
 
   <div class="impl">
-    The <dfn attribute for="Document"><code>referrer</code></dfn> attribute must return <a>the document's referrer</a>.
+    <dfn attribute for="Document"><code>referrer</code></dfn> 속성(attribute)은 
+    <a lt="the document's referrer">문서의 리퍼러</a>를 반환해야(must) 합니다.
   </div>
 
   <hr />
@@ -156,56 +155,57 @@
   <dl class="domintro">
     <dt><var>document</var> . <code>cookie</code> [ = <var>value</var> ]</dt>
     <dd>
-      Returns the HTTP cookies that apply to the {{Document}}. If there are no cookies or cookies
-      can't be applied to this resource, the empty string will be returned.
+      {{Document}}에 적용되는 HTTP 쿠키를 반환합니다. 쿠키가 없거나 이 리소스에 쿠키가 적용될 수 없다면,
+      빈 문자열이 반환 될 것입니다.
 
-      Can be set, to add a new cookie to the element's set of HTTP cookies.
+      새로운 쿠키를 요소(element)의 HTTP 쿠키 세트에 추가하기 위해, 설정 될 수 있습니다.
 
-      If the contents are <a>sandboxed into a unique origin</a> (e.g., in an <code>iframe</code> with
-      the <{iframe/sandbox}> attribute), a "{{SecurityError}}" {{DOMException}} will be thrown on
-      getting and setting.
+     콘텐츠가 <a lt="sandboxed into a unique origin">고유 출처(origin)에 샌드박스 되었다</a>면 (예를 들어, 
+      <{iframe/sandbox}> 속성(attribute)를 가진 <code>iframe</code>안에), 가져올 때와 설정할 때
+      "{{SecurityError}}" {{DOMException}}이 던져질 것입니다.
     </dd>
   </dl>
 
-  The <dfn attribute for="Document"><code>cookie</code></dfn> attribute represents the cookies of
-  the resource identified by <a>the document's address</a>.
+  <dfn attribute for="Document"><code>cookie</code></dfn> 속성(attribute)은 
+  <a lt="the document's address">문서 주소</a>에 의해 식별되는 리소스의 쿠키를 나타냅니다.
 
-  A {{Document}} object that falls into one of the following conditions is a
-  <dfn lt="cookie-averse|sandbox cookies">cookie-averse {{Document}} object</dfn>:
+  다음 조건 중 하나로 분류되는 {{Document}} 객체는 
+  <dfn lt="cookie-averse|sandbox cookies">쿠키를 거부하는 {{Document}} 객체</dfn>입니다:
 
-  * A {{Document}} that has no <a>browsing context</a>.
+  * <a lt="browsing context">브라우징 컨텍스트</a>가 없는 {{Document}}.
 
-  * A {{Document}} whose <a>address</a> does not use a server-based naming authority.
+  * <a lt="address">주소</a>가 서버 기반 네이밍 권한을 사용하지 않는 {{Document}}.
 
-  On getting, if the document is a <a lt="cookie-averse">cookie-averse <code>Document</code> object</a>, then
-  the user agent must return the empty string. Otherwise, if the {{Document}}'s
-  <a for="concept">origin</a> is an <a>opaque origin</a>, the user agent must throw a
-  "{{SecurityError}}" {{DOMException}}. Otherwise, the user agent must return the
-  <a>cookie-string</a> for <a>the document's address</a> for a "non-HTTP" API, decoded
-  using <a>UTF-8 decode without BOM</a>.
-  [[!COOKIES]]
-  <a class="fingerprint" href="#fingerprinting-vector"><img height="21" src="images/fingerprint.png" width="15" alt="(This is a fingerprinting vector.)" /></a>
+  가져올 때, 문서가 <a lt="cookie-averse">쿠키를 거부하는 <code>Document</code> 객체</a>라면,
+  유저 에이전트는 빈 문자열을 반환해야(must) 합니다. 그렇지 않고, {{Document}}의 
+  <a for="concept">출처(origin)</a>가 <a lt="opaque origin">불분명한 출처(origin)</a>라면, 유저 
+  에이전트는 "{{SecurityError}}" {{DOMException}}를 던져야(must) 합니다. 그렇지 않으면, 유저 
+  에이전트는 "non-HTTP" API를 위해 <a lt="UTF-8 decode without BOM">BOM 없는 UTF-8 디코드</a>를 
+  사용하여 디코드 된 <a lt="the document's address">문서의 주소</a>에 대한 
+  <a lt="cookie-string">쿠키 문자열</a>을 반환해야(must) 합니다. [[!COOKIES]]
+  <a class="fingerprint" href="#fingerprinting-vector"><img height="21" src="images/fingerprint.png" width="15" alt="(이것은 지문 그림입니다.)" /></a>
 
-  On setting, if the document is a <a lt="cookie-averse">cookie-averse <code>Document</code> object</a>, then
-  the user agent must do nothing. Otherwise, if the {{Document}}'s <a for="concept">origin</a> is
-  an <a>opaque origin</a>, the user agent must throw a "{{SecurityError}}" {{DOMException}}.
-  Otherwise, the user agent must act as it would when <a>receiving a set-cookie-string</a> for <a>the document's address</a>
-  via a "non-HTTP" API, consisting of the new value <a>encoded as UTF-8</a>. [[!COOKIES]] [[!ENCODING]]
+  설정할 때, 문서가 <a lt="cookie-averse">쿠키를 거부하는 <code>Document</code> 객체</a>라면, 
+  유저 에이전트는 아무 것도 하지 않아야(must) 합니다. 그렇지 않고, {{Document}}의 <a for="concept">출처(origin)</a>가
+  <a lt="opaque origin">불분명한 출처(origin)</a>이라면, 유저 에이전트는 "{{SecurityError}}" 
+  {{DOMException}}를 던져야 합니다. 그렇지 않으면, 유저 에이전트는 <a lt="encoded as UTF-8">UTF-8로 인코드 된</a>
+  새로운 값으로 구성하여, "non-HTTP" API를 통해 <a lt="the document's address">문서의 주소</a>에 대해 
+  <a lt="receiving a set-cookie-string">설정 쿠키 문자열을 받는</a> 경우와 같이 동작해야(must) 합니다. 
+  [[!COOKIES]] [[!ENCODING]]
 
   <p class="note">
-    Since the <code>cookie</code> attribute is accessible across frames, the path restrictions on
-    cookies are only a tool to help manage which cookies are sent to which parts of the site, and
-    are not in any way a security feature.
+    <code>cookie</code> 속성(attribute)은 프레임 전반에 접근이 가능하기 때문에, 쿠키에 대한 경로 제한은
+    사이트의 어느 부분으로 어떤 쿠키가 전송되는지를 관리하는데 도움이 되는 도구일 뿐이고, 어떤 방식으로든
+    보안 기능이 아닙니다.
   </p>
 
   <p class="warning">
-    The <code>cookie</code> attribute's getter and setter synchronously access shared state. Since
-    there is no locking mechanism, other browsing contexts in a multiprocess user agent can modify
-    cookies while scripts are running. A site could, for instance, try to read a cookie, increment
-    its value, then write it back out, using the new value of the cookie as a unique identifier
-    for the session; if the site does this twice in two different browser windows at the same
-    time, it might end up using the same "unique" identifier for both sessions, with potentially
-    disastrous effects.
+    <code>cookie</code> 속성(attribute)의 getter와 setter는 동기적으로 공유 된 상태에 접근합니다.
+    잠금 매커니즘이 없기 때문에, 다중 프로세스 유저 에이전트에서 다른 브라우징 컨텍스트는 스크립트가 
+    수행되는 중에 쿠키를 수정할 수 있습니다. 예를 들어, 사이트는 쿠키 값을 읽고, 그 값을 증가시키고,
+    세션에 대한 고유 식별자로서 쿠키의 새로운 값을 사용하여, 다시 그것을 작성하는 것을 시도할 수
+    있습니다; 사이트가 동시에 두 개의 다른 브라우저에서 이것을 두 번 수행한다면, 잠재적으로 형편없는 
+    영향을 가지고, 양쪽 세션에 대해 동일한 "고유" 식별자를 사용하게 됩니다.
   </p>
 
   <hr />
@@ -213,40 +213,39 @@
   <dl class="domintro">
     <dt><var>document</var> . <code>lastModified</code></dt>
     <dd>
-      Returns the date of the last modification to the document, as reported by the server, in the
-      form "<code>MM/DD/YYYY&nbsp;hh:mm:ss</code>", in the user's local time zone.
+      사용자의 로컬 표준 시간대에 따라, "<code>MM/DD/YYYY&nbsp;hh:mm:ss</code>" 형식으로 서버에 
+      의해 보고 된 대로, 문서에 대한 마지막 수정한 날짜를 반환합니다.
 
-      If the last modification date is not known, the current time is returned instead.
+      마지막 수정 날짜가 알 수 없다면, 현재 시간이 대신 반환됩니다.
     </dd>
   </dl>
 
   <div class="impl">
-    The <dfn attribute for="Document"><code>lastModified</code></dfn> attribute, on getting, must return the date and time of
-    the {{Document}}'s source file's last modification, in the user's local time zone, in
-    the following format:
+    가져올 때, <dfn attribute for="Document"><code>lastModified</code></dfn> 속성(attribute)은 
+    사용자의 로컬 표준 시간대에 따라 {{Document}}의 소스 파일의 마지막 수정 날짜와 시간을 다음 형식
+    에 따라 반환해야(must) 합니다:
 
-    1. The month component of the date.
-    2. A U+002F SOLIDUS character (/).
-    3. The day component of the date.
-    4. A U+002F SOLIDUS character (/).
-    5. The year component of the date.
-    6. A U+0020 SPACE character.
-    7. The hours component of the time.
-    8. A U+003A COLON character (:).
-    9. The minutes component of the time.
-    10. A U+003A COLON character (:).
-    11. The seconds component of the time.
+    1. 날짜의 월 컴포넌트.
+    2. U+002F 슬래쉬 문자 (/).
+    3. 날짜의 일 컴포넌트.
+    4. U+002F 슬래쉬 문자 (/).
+    5. 날짜의 연 컴포넌트
+    6. U+0020 공백 문자.
+    7. 시간의 시 컴포넌트.
+    8. U+003A 콜론 문자 (:).
+    9. 시간의 분 컴포넌트.
+    10. U+003A 콜론 문자 (:).
+    11. 시간의 초 컴포넌트.
 
-    All the numeric components above, other than the year, must be given as two <a>ASCII digits</a>
-    representing the number in base ten, zero-padded if necessary. The year must be given as the
-    shortest possible string of four or more <a>ASCII digits</a> representing the number in base
-    ten, zero-padded if necessary.
+    연도를 제외한, 위 모든 숫자 컴포넌트는 필요하다면 0을 채워, 10 진수 숫자를 나타내는 두 
+    <a lt="ASCII digits">ASCII 숫자</a>로 주어져야(must) 합니다. 연도는 필요하다면 0을 채워, 10 진수
+    숫자를 나타내는 4개 이상의 <a lt="ASCII digits">ASCII 숫자</a>의 가능한 가장 짧은 문자열로 
+    주어져야 합니다.
 
-    The {{Document}}'s source file's last modification date and time must be derived from
-    relevant features of the networking protocols used, e.g., from the value of the HTTP
-    <code>Last-Modified</code> header of the document, or from metadata in the file system for local
-    files. If the last modification date and time are not known, the attribute must return the
-    current date and time in the above format.
+    {{Document}}의 소스 파일의 마지막 수정 날짜와 시간은 사용된 네트워크 프로토콜의 관련 기능으로부터,
+    예를 들어, 문서의 HTTP <code>Last-Modified</code> 헤더의 값으로부터, 혹은 로컬 파일에 대한 파일  
+    시스템 메타데이터로부터 얻어져야(must) 합니다. 마지막 수정 날짜와 시간을 알 수 없다면, 
+    속성(attribute)은 위 형식에 따라 현재 날짜와 시간을 반환해야(must) 합니다.
   </div>
 
   <hr />
@@ -254,30 +253,29 @@
   <dl class="domintro">
     <dt><var>document</var> . <code>readyState</code></dt>
     <dd>
-      Returns "<code>loading</code>" while the {{Document}} is loading, "<code>interactive</code>"
-      once it is finished parsing but still loading sub-resources, and "<code>complete</code>" once
-      it has loaded.
+      {{Document}}가 로딩되는 동안 "<code>loading</code>"을, 일단 해석이 끝났으나 아직 서브-리소스를
+      로딩 중에는 "<code>interactive</code>"를, 로드가 완료되었다면 "<code>complete</code>"를 
+      반환합니다.
 
-      The <code>readystatechange</code> event fires on the {{Document}} object when this value
-      changes.
+      이 값이 바뀔 경우 {{Document}} 객체에서 <code>readystatechange</code> 이벤트가 발생합니다.
     </dd>
   </dl>
 
   <div class="impl">
-    Each document has a <dfn>current document readiness</dfn>. When a {{Document}} object
-    is created, it must have its <a>current document readiness</a> set to the string
-    "<code>loading</code>" if the document is associated with an <a>HTML parser</a>, an
-    <a>XML parser</a>, or an XSLT processor, and to the string "<code>complete</code>"
-    otherwise. Various algorithms during page loading affect this value. When the value is set, the
-    user agent must <a>fire a simple event</a> named <code>readystatechange</code> at the
-    {{Document}} object.
+    각 문서는 <dfn lt="current document readiness">현재 문서 준비상태</dfn>를 가집니다. {{Document}} 
+    객체가 생성될 때, 문서가 <a lt="HTML parser">HTML 해석기</a>, <a lt="XML parser">XML 해석기</a>, 
+    혹은 XSLT 처리기와 연관된다면 {{Document}}는 문자열 "<code>loading</code>"로, 그렇지 않으면 문자열 
+    "<code>complete</code>"로 설정 된 그것의 <a lt="current document readiness">현재 문서 준비상태</a>를
+    가져야(must) 합니다. 페이지 로딩 동안 다양한 알고리즘은 이 값에 영향을 끼칩니다. 값이 설정된 경우,
+    유저 에이전트는 {{Document}} 객체에 <code>readystatechange</code>로 명명된
+    <a lt="fire a simple event">단순한 이벤트를 발생</a> 시켜야(must) 합니다.
 
-    A {{Document}} is said to have an <dfn>active parser</dfn> if it is associated with an
-    <a>HTML parser</a> or an <a>XML parser</a> that has not yet been <a>stopped</a> or
-   <a>aborted</a>.
+    {{Document}}는 아직 <a lt="stopped">멈추거나</a> <a lt="aborted">중단 되지</a> 않은 
+    <a lt="HTML parser">HTML 해석기</a>나 <a lt="XML parser">XML 해석기</a>와 연관된다면 
+    <dfn lt="active parser">활성화 해석기</dfn>를 가진다고 합니다.
 
-    The <dfn attribute for="Document"><code>readyState</code></dfn> IDL attribute must, on getting, return the <a>current
-    document readiness</a>.
+    <dfn attribute for="Document"><code>readyState</code></dfn> IDL 속성(attribute)은 가져올 때,
+    <a lt="current document readiness">현재 문서 준비상태</a>를 반환해야(must) 합니다.
   </div>
 
 <h4 id="dom-tree-accessors">DOM tree accessors</h4>
