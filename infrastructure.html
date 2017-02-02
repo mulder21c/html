@@ -1534,7 +1534,7 @@ pre.idl.highlight { color: #708090; }
        <a href="infrastructure.html#safe-passing-of-structured-data"><span class="secno">2.9</span> <span class="content">구조화 된 데이터의 안전한 전달</span></a>
        <ol class="toc">
         <li><a href="infrastructure.html#section-cloneable-objects"><span class="secno">2.9.1</span> <span class="content"><span>복제 가능한 객체</span></span></a>
-        </li><li><a href="infrastructure.html#section-transferable-objects"><span class="secno">2.9.2</span> <span class="content"><span>Transferable objects</span></span></a>
+        </li><li><a href="infrastructure.html#section-transferable-objects"><span class="secno">2.9.2</span> <span class="content"><span>전송 가능한 객체</span></span></a>
         </li><li><a href="infrastructure.html#section-structuredclonewithtransfer"><span class="secno">2.9.3</span> <span class="content"><span>StructuredCloneWithTransfer</span> ( <var>input</var>, <var>transferList</var>, <var>targetRealm</var> )</span></a>
         </li><li><a href="infrastructure.html#section-structuredclone"><span class="secno">2.9.4</span> <span class="content"><span>StructuredClone</span> ( <var>input</var>, <var>targetRealm</var> [ , <var>memory</var> ] )</span></a>
         </li><li><a href="infrastructure.html#section-idistransferable"><span class="secno">2.9.5</span> <span class="content"><span>IsTransferable</span> ( <var>O</var> )</span></a>
@@ -2155,7 +2155,7 @@ pre.idl.highlight { color: #708090; }
          </li><li data-md="">
           <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#omit-origin-header-flag"><code>Origin</code> 헤더 생략 플래그</a></p>
          </li><li data-md="">
-          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#same-origin-data-url-flag">동일 출처 data-URL 플래그</a></p>
+          <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#same-origin-data-url-flag">동일 출처(origin) data-URL 플래그</a></p>
          </li><li data-md="">
           <p><a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-referrer">리퍼러(referrer)</a></p>
          </li><li data-md="">
@@ -3833,14 +3833,14 @@ pre.idl.highlight { color: #708090; }
     </li></ol>
     <h4 class="heading settled" data-level="2.4.5" id="dates-and-times"><span class="secno">2.4.5. </span><span class="content">날짜와 시간</span><a class="self-link" href="infrastructure.html#dates-and-times"></a></h4>
     <div class="note" role="note">
-      이 명세는 날짜에 대한 <a data-link-type="biblio" href="references.html#biblio-iso8601">[ISO8601]</a> 표준의 공통 부분 집합에 따라 날짜와 시간을 <em>부호화</em>합니다. 
-     <p>이는 부호화 된 날짜는 1582-03-01, 0033-03-27, 2016-03-01 와 같이 보이고, 날짜-시간은 1929-11-13T19:00Z,
+      이 명세는 날짜에 대한 <a data-link-type="biblio" href="references.html#biblio-iso8601">[ISO8601]</a> 표준의 공통 부분 집합에 따라 날짜와 시간을 <em>인코드</em>합니다. 
+     <p>이는 인코드 된 날짜는 1582-03-01, 0033-03-27, 2016-03-01 와 같이 보이고, 날짜-시간은 1929-11-13T19:00Z,
     0325-06-03T00:21+10:30와 같이 보이는 것을 의미합니다. 형식은, 비록 일부분은 예를 들어 생일의 월과 
     일, 표준 시간대 정보가 없는 시간 등과 같이 표현하기 위해 선택적이기는 하지만, 대략 
     YYYY-MM-DDTHH:MM:SS.DD±HH:MM 입니다.</p>
      <p>시간은 24시간제를 사용하여 표현되고, 윤초를 표현하는 것은 오류입니다.</p>
      <p>날짜는 역산 0000년과 9999년 사이의 <a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-calendar" id="ref-for-proleptic-gregorian-calendar-1">역산 그레고리력</a>으로
-    표현됩니다. 다른 해는 부호화될 수 없습니다.</p>
+    표현됩니다. 다른 해는 인코드될 수 없습니다.</p>
      <p><a data-link-type="dfn" href="infrastructure.html#proleptic-gregorian-calendar" id="ref-for-proleptic-gregorian-calendar-2">역산 그레고리력</a>은 1950년 이후로 전 세계적으로 가장
     일반적인 달력이고, 1950년과 9999년 사이 날짜의 모든 사람들, 그리고 지난 수십 년 또는 수세기 동안 
     많은 사람들이 이해할 수 있습니다.</p>
@@ -3850,7 +3850,7 @@ pre.idl.highlight { color: #708090; }
     것입니다. 그레고리력 채택 전 날짜에 대해 - 예를 들어 러시아나 터키에서 1917년에 앞선, 영국 혹은 
     이후 아메리카 영국 식민지에서 1752년에 앞선, 스페인, 아메리카 스페인 식민지, 세계 나머지에서
     1582년에 앞선, 날짜는 그 때 쓰여진 것들과 일치하지 않을 것입니다.</p>
-     <p>그레고리력을 기본 부호화로 사용하는 것은 다소 임의적인 선택입니다. 많은 다른 달력이 사용 되었거나
+     <p>그레고리력을 기본 인코딩으로 사용하는 것은 다소 임의적인 선택입니다. 많은 다른 달력이 사용 되었거나
     사용되고 있고, 관심있는 독자는 웹에 대한 정보를 찾아야(should) 합니다.</p>
      <p>(작성자를 위한) 형식에서 <a href="sec-forms.html#date-time-and-number-formats">날짜, 시간, 숫자 형식</a>의 논의, <a href="sec-forms.html#implementation-notes-regarding-localization-of-form-controls">폼 컨트롤의 지역화에 관한 구현 노트</a>, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-time" id="ref-for-elementdef-time-1">time</a></code> 요소(element) 또한 참고하세요.</p>
     </div>
@@ -3882,7 +3882,7 @@ pre.idl.highlight { color: #708090; }
       <p>1&nbsp;≤&nbsp;<var>month</var>&nbsp;≤&nbsp;12 범위에서, <var>month</var>월을 나타내는
   2개의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-26">ASCII 숫자</a>.</p>
     </li></ol>
-    <p class="example" id="example-db40da0f"><a class="self-link" href="infrastructure.html#example-db40da0f"></a> 예를 들어, 2005년 2월은 2005-02로 부호화 되고, 33AD년 3월은(역산 그레고리 날짜로) <code>0033-03</code>로 부호화 됩니다. <code>325-03</code> 표현은 325년 3월을 의미하지 <em>않고</em>,
+    <p class="example" id="example-13e78d53"><a class="self-link" href="infrastructure.html#example-13e78d53"></a> 예를 들어, 2005년 2월은 2005-02로 인코드 되고, 33AD년 3월은(역산 그레고리 날짜로) <code>0033-03</code>로 인코드 됩니다. <code>325-03</code> 표현은 325년 3월을 의미하지 <em>않고</em>,
     그것은 연도에 대해 4자리 숫자를 가지지 않기 때문에 오류입니다. </p>
     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a month string|parse a month string|parsing a month" data-noexport="" id="parsing-a-month-string">월 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다.
   이것은 연도와 월을 반환하거나 혹은 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 
@@ -3937,7 +3937,7 @@ pre.idl.highlight { color: #708090; }
   나타내는 두 개의 <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-29">ASCII 숫자</a>로, <var>maxday</var>는 <a data-link-type="dfn" href="infrastructure.html#number-of-days-in-month-month-of-year-year" id="ref-for-number-of-days-in-month-month-of-year-year-1"><var>year</var>년 <var>month</var>월의
   날짜의 수</a>.</p>
     </li></ol>
-    <p class="example" id="example-3683aa33"><a class="self-link" href="infrastructure.html#example-3683aa33"></a> 예를 들어, 2016 2월 29일은 2016-02-29로 부호화 되고, 33AD년 3월 3일(역산 그레고리 날짜 같은)은 <code>0033-03-03</code>로 부호화 됩니다. <code>325-03-03</code> 표현은 325년 3월 3일을 의미하지 <em>않고</em>, 이는 연도가 4자리 숫자를 가지지 않기 때문에 오류입니다. </p>
+    <p class="example" id="example-0b8f0415"><a class="self-link" href="infrastructure.html#example-0b8f0415"></a> 예를 들어, 2016 2월 29일은 2016-02-29로 인코드 되고, 33AD년 3월 3일(역산 그레고리 날짜 같은)은 <code>0033-03-03</code>로 인코드 됩니다. <code>325-03-03</code> 표현은 325년 3월 3일을 의미하지 <em>않고</em>, 이는 연도가 4자리 숫자를 가지지 않기 때문에 오류입니다. </p>
     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a date string|parse a date string|parsing a date" data-noexport="" id="parsing-a-date-string">날짜 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다.
   이것은 날짜를 반환하거나, 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 "실패"라고
   말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
@@ -3999,7 +3999,7 @@ pre.idl.highlight { color: #708090; }
     </li></ol>
     <p class="note" role="note"> 바꿔 말하면, <var>month</var>이 2월을 의미하는 "<code>02</code>"라면, 날짜는 해가 윤년이었던 것처럼,
     29가 될 수 있습니다. </p>
-    <p class="example" id="example-b1c60022"><a class="self-link" href="infrastructure.html#example-b1c60022"></a> 예를 들어, 2월 29일은 <code>02-29</code>로 부호화 되고, 3월 3일은 <code>03-03</code>로 부호화 됩니다. </p>
+    <p class="example" id="example-ef8010c8"><a class="self-link" href="infrastructure.html#example-ef8010c8"></a> 예를 들어, 2월 29일은 <code>02-29</code>로 인코드 되고, 3월 3일은 <code>03-03</code>로 인코드 됩니다. </p>
     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a yearless date string|parse a yearless date string" data-noexport="" id="parsing-a-yearless-date-string">연도 없는 날짜 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다.
   이것은 월과 날짜를 반환하거나 아무 것도 반환하지 않을 것입니다. 어느 시점에 알고리즘이 "실패"라고 
   말한다면, 이것은 그 시점에 중단되고 아무 것도 반환하지 않음을 의미합니다.</p>
@@ -4076,8 +4076,8 @@ pre.idl.highlight { color: #708090; }
       </li></ol>
     </li></ol>
     <p class="note" role="note"> <var>second</var> 컴포넌트는 60이나 61이 될 수 없습니다; 윤초는 표현될 수 없습니다. </p>
-    <p class="example" id="example-a64e35d6"><a class="self-link" href="infrastructure.html#example-a64e35d6"></a> 시간은, 선택적으로 초, 그리고 선택적으로 십진수 소수점 초를 가지고, 24시간제를 사용하여 부호화 
-  됩니다. 따라서 7.45pm은 <code>19:45</code>로 부호화 됩니다. 그 시간 해석이 19:45:00 또는 7.45pm 
+    <p class="example" id="example-56e468c8"><a class="self-link" href="infrastructure.html#example-56e468c8"></a> 시간은, 선택적으로 초, 그리고 선택적으로 십진수 소수점 초를 가지고, 24시간제를 사용하여 인코드 
+  됩니다. 따라서 7.45pm은 <code>19:45</code>로 인코드 됩니다. 그 시간 해석이 19:45:00 또는 7.45pm 
   0초를 반환 할 것이라는 것을 주목하세요. <code>19:45:45.456</code>는 7.45pm 45초 이후 456 천분의 
   1초 입니다. </p>
     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="parsing a time string|parse a time string|parsing a time" data-noexport="" id="parsing-a-time-string">시간 문자열을 해석</dfn>하기 위한 규칙은 다음과 같습니다.
@@ -5054,14 +5054,14 @@ pre.idl.highlight { color: #708090; }
     <p><dfn data-dfn-type="dfn" data-lt="HTTP headers" data-noexport="" id="http-headers">HTTP 헤더<a class="self-link" href="infrastructure.html#http-headers"></a></dfn>는 동일한 기본 의미를 갖는 다른 프로토콜에서의 필드와 동일합니다.
   예를 들어, HTTP 인증 헤더는 FTP 프로토콜의 인증 측면과 동일합니다.</p>
     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="referrer source" data-noexport="" id="referrer-source">리퍼러 소스</dfn>는 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>나 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>입니다.</p>
-    <p><var>url</var>, <var>corsAttributeState</var>, 선택적으로 <i>동일 출처 폴백 플래그</i>가 주어진 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="creating a potential-cors request|create a potential-CORS request" data-noexport="" id="creating-a-potential-cors-request">잠정적 CORS 요청을 생성</dfn>하기 위해 
+    <p><var>url</var>, <var>corsAttributeState</var>, 선택적으로 <i>동일 출처(origin) 폴백 플래그</i>가 주어진 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="creating a potential-cors request|create a potential-CORS request" data-noexport="" id="creating-a-potential-cors-request">잠정적 CORS 요청을 생성</dfn>하기 위해 
   이 단계들을 수행합니다:</p>
     <ol>
      <li data-md="">
       <p><var>corsAttributeState</var>가 <a data-link-type="state" href="infrastructure.html#statedef-cors-no-cors" id="ref-for-statedef-cors-no-cors-1">No CORS</a>이라면 <var>mode</var>를
   "<code>no-cors</code>"로 두고, 그렇지 않으면 "<code>cors</code>"로 둡니다.</p>
      </li><li data-md="">
-      <p><i>동일 출처 폴백 플래그</i>가 설정되고 <var>mode</var>가 "<code>no-cors</code>"라면, <var>mode</var>를
+      <p><i>동일 출처(origin) 폴백 플래그</i>가 설정되고 <var>mode</var>가 "<code>no-cors</code>"라면, <var>mode</var>를
   "<code>same-origin</code>"로 설정합니다.</p>
      </li><li data-md="">
       <p><var>credentialsMode</var>를 "<code>include</code>"로 둡니다.</p>
@@ -5074,7 +5074,7 @@ pre.idl.highlight { color: #708090; }
     <h4 class="heading settled" data-level="2.6.2" id="fetching-resources-processing-model"><span class="secno">2.6.2. </span><span class="content">처리 모델</span><a class="self-link" href="infrastructure.html#fetching-resources-processing-model"></a></h4>
     <p>유저 에이전트가, 선택적으로 출처 <i>origin</i><strong>으로부터</strong>, 선택적으로 <i>오버라이드
   리퍼러 소스</i>로서 특정한 <a data-link-type="dfn" href="infrastructure.html#referrer-source" id="ref-for-referrer-source-1">리퍼러 소스</a>를 <strong>사용하여</strong>, 
-  선택적으로 <i>동기(synchronous) 플래그</i>, <i>수동 리다이렉트 플래그</i>, <i>강제 동일 출처 플래그</i>, <i>쿠키 차단 플래그</i> 중 어느 것을 가진 리소스나 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>을 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">가져오는</a> 경우, 다음 단계들이 수행 되어야(must) 합니다. (<em>URL</em>을 가져올 때, URL은 얻어지는 리소스를 
+  선택적으로 <i>동기(synchronous) 플래그</i>, <i>수동 리다이렉트 플래그</i>, <i>강제 동일 출처(origin) 플래그</i>, <i>쿠키 차단 플래그</i> 중 어느 것을 가진 리소스나 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>을 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">가져오는</a> 경우, 다음 단계들이 수행 되어야(must) 합니다. (<em>URL</em>을 가져올 때, URL은 얻어지는 리소스를 
   식별합니다.)</p>
     <ol>
      <li data-md="">
@@ -5092,7 +5092,7 @@ pre.idl.highlight { color: #708090; }
      </li><li data-md="">
       <p><var>document</var>가 <a data-link-type="dfn" href="semantics-embedded-content.html#iframe-iframe-srcdoc-document" id="ref-for-iframe-iframe-srcdoc-document-3"><code>iframe</code> <code>srcdoc</code> 문서</a>임에도 불구하고, <var>document</var>를 대신 <var>document</var>의 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-7">브라우징 컨텍스트</a>의 <a data-link-type="dfn" href="browsers.html#browsing-context-container" id="ref-for-browsing-context-container-2">브라우징 컨텍스트 컨테이너</a>의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>로 둡니다.</p>
      </li><li data-md="">
-      <p><var>Document</var>의 <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-1">출처</a>가 scheme/host/port 튜플이 아니라면, <var>referrer</var>를 빈 문자열로 설정하고 <var>Clean referrer</var>로  라벨링 된 단계로 
+      <p><var>Document</var>의 <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-1">출처(origin)</a>가 scheme/host/port 튜플이 아니라면, <var>referrer</var>를 빈 문자열로 설정하고 <var>Clean referrer</var>로  라벨링 된 단계로 
   건너뜁니다.</p>
      </li><li data-md="">
       <p><var>referrer</var>를 <var>document</var>의 <a data-link-type="dfn" href="dom.html#the-document-address" id="ref-for-the-document-address-2">문서 주소</a>로 둡니다.</p>
@@ -5125,7 +5125,7 @@ pre.idl.highlight { color: #708090; }
   들어, HTTP GET이나 POST 연산을 수행하여, 혹은 디스크로부터 파일을 읽어, 혹은 <a data-link-type="scheme" href="infrastructure.html#schemedef-data-url" id="ref-for-schemedef-data-url-4"><code>data:</code> URL</a>을 확장하여, 등등) 리소스를 다운로드 (혹은 
   그렇지 않으면 획득)합니다.</p>
       <p><code>Referer</code> (sic) 헤더의 목적을 위해, 이전 단계에서 생성된 <i>요청 URI가 얻어지는 리소스의 주소 from which Request-URIs are obtained</i>를 사용합니다.</p>
-      <p><code>Origin</code> 헤더의 목적을 위해, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">페칭(fetching) 알고리즘</a>이 <i>origin</i>에서 명시적으로 초기화 되었다면, <i>HTTP 요청을 초기화 한 출처</i>는 <i>origin</i>입니다.
+      <p><code>Origin</code> 헤더의 목적을 위해, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">페칭(fetching) 알고리즘</a>이 <i>origin</i>에서 명시적으로 초기화 되었다면, <i>HTTP 요청을 초기화 한 출처(origin)</i>는 <i>origin</i>입니다.
   그렇지 않으면, 이것은 <i>"민감한 개인정보" 컨텍스트로부터의 요청</i>입니다. <a data-link-type="biblio" href="references.html#biblio-origin">[ORIGIN]</a></p>
      </li><li data-md="">
       <p>알고리즘이 <i>쿠키 차단 플래그</i>를 가지고 동작되지 않았고 쿠키가 설정되지 않았다면,
@@ -5133,7 +5133,7 @@ pre.idl.highlight { color: #708090; }
      </li><li data-md="">
       <p>가져와진 리소스가 HTTP 리다이렉트 <a data-link-type="dfn" href="infrastructure.html#or-equivalent" id="ref-for-or-equivalent-2">혹은 그와 동등한 것</a>이라면:</p>
       <dl class="switch">
-       <dt> <i>강제 동일 출처 플래그</i>가 설정되어 있고 리다이렉트 대상의 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>이 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">페치(fetch)</a> 알고리즘이 동작되는 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>과 같은 <a data-link-type="dfn" href="browsers.html#same-origin" id="ref-for-same-origin-1">동일 출처</a>를 가지지 않는다면 
+       <dt> <i>강제 동일 출처(origin) 플래그</i>가 설정되어 있고 리다이렉트 대상의 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>이 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">페치(fetch)</a> 알고리즘이 동작되는 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>과 같은 <a data-link-type="dfn" href="browsers.html#same-origin" id="ref-for-same-origin-1">동일 출처(origin)</a>를 가지지 않는다면 
        </dt><dd> 원격 호스트가 연결할 수 없는 것 처럼, 이 단계들을 중단하고 이 알고리즘으로부터 실패를 
       반환합니다. 
        </dd><dt><i>수동 리다이렉트 플래그</i>가 설정되어 있다면
@@ -5766,7 +5766,7 @@ pre.idl.highlight { color: #708090; }
     <p>이 명세는 자바스크립트 명세의 용어와 표기법을 사용합니다. <a data-link-type="biblio" href="references.html#biblio-ecma-262">[ECMA-262]</a></p>
     <h4 class="heading settled" data-level="2.9.1" id="section-cloneable-objects"><span class="secno">2.9.1. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="Cloneable objects" data-noexport="" id="cloneable-objects">복제 가능한 객체</dfn></span><a class="self-link" href="infrastructure.html#section-cloneable-objects"></a></h4>
     <p><a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-1">복제 가능한 객체</a>는 <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-3">이벤트 반복</a> 전반에 걸쳐
-  복제되는 것을 지원합니다. 즉, 다른 <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-2">출처</a>의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 전반을 
+  복제되는 것을 지원합니다. 즉, 다른 <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-2">출처(origin)</a>의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 전반을 
   포함하여 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>와 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/workers/#worker">Worker</a></code> 경계 전반에 걸쳐 복제되는 것을 지원합니다. 모든 객체가 <a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-2">복제 가능한 객체</a>는 아니며 <a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-3">복제 가능한 객체</a>의
   모든 측면이 복제될 때 반드시 보존되는 것은 아닙니다.</p>
     <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">플랫폼 객체</a>는 다음의 내부 메서드를 가집니다:</p>
@@ -5775,329 +5775,326 @@ pre.idl.highlight { color: #708090; }
     <p><a data-link-type="dfn" href="infrastructure.html#cloneable-objects" id="ref-for-cloneable-objects-5">복제 가능한 객체</a>인 <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">플랫폼 객체</a>는 일련의
   단계들을 수행하도록 명시된 [[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-2">Clone</a>]] 내부 메서드를 가집니다. 그 단계들을
   수행한 결과는 <var>targetRealm</var>에 생성된, 던져진 예외나 <em>this</em>의 복제여야(must) 합니다.
-  그것은 그 객체들에게 그것들에 대해 복제가 의미하는 바를 정의하는 것입니다.</p>
-    <p>자바스크립트 명세에 정의된 객체들은 <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-1">구조화된 복제</a> 추상 연산에 의해
-  직접 처리됩니다.</p>
-    <h4 class="heading settled" data-level="2.9.2" id="section-transferable-objects"><span class="secno">2.9.2. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="transferable-objects">Transferable objects</dfn></span><a class="self-link" href="infrastructure.html#section-transferable-objects"></a></h4>
-    <p><a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-1">Transferable objects</a> support being transferred across <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-4">event loops</a>. Transferring is
-  effectively recreating the object while sharing a reference to the underlying data and then
-  detaching the object being transferred. This is useful to transfer ownership of expensive
-  resources. Not all objects are <a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-2">transferable objects</a> and not all aspects of objects that are <a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-3">transferable objects</a> are necessarily preserved when transferred.</p>
-    <p class="note" role="note">Transferring is an irreversible and non-idempotent operation. Once an object has
-  been transferred, it cannot be transferred, or indeed used, again.</p>
-    <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">Platform objects</a> that are <a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-4">transferable objects</a> have a [[<dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="detached">Detached</dfn>]]
-  internal slot and the following internal method:</p>
+  그것들에 대해 복제가 의미하는 바를 정의하는 것은 그 객체들에 달려있습니다.</p>
+    <p>자바스크립트 명세에 정의된 객체들은 <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-1">StructuredClone</a> 추상 연산에 의해 직접 처리됩니다.</p>
+    <h4 class="heading settled" data-level="2.9.2" id="section-transferable-objects"><span class="secno">2.9.2. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="Transferable objects" data-noexport="" id="transferable-objects">전송 가능한 객체</dfn></span><a class="self-link" href="infrastructure.html#section-transferable-objects"></a></h4>
+    <p><a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-1">전송 가능한 객체</a>는 <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-4">이벤트 반복</a> 전반에 걸쳐
+  전송 되는 것을 지원합니다. 전송은 기본 데이터로의 참조를 공유하고 전송되는 객체를 분리하는 동안
+  효과적으로 객체를 다시 생성합니다. 이것은 비용이 많이 드는 리소스의 소유권을 전송하는데 유용합니다. 
+  모든 객체가 <a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-2">전송 가능한 객체</a>는 아니며 <a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-3">전송 가능한 객체</a>의 모든 측면이 전송 될 때 반드시 보존되는 것은 아닙니다.</p>
+    <p class="note" role="note">전송은 되돌릴 수 없고 비멱등 연산입니다. 일단 객체가 전송되면, 다시 전송되거나, 
+  정말로 사용될 수 없습니다.</p>
+    <p><a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-4">전송 가능한 객체</a>인 <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">플랫폼 객체</a>는
+  [[<dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="detached">Detached</dfn>]] 내부 슬롯(slot)과 다음 내부 메서드를 가집니다:</p>
     <p>[[<dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="transfer">Transfer</dfn>]] ( <var>targetRealm</var> )</p>
-    <p class="note" role="note">Whereas all <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">platform objects</a> have a [[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-3">Clone</a>]]
-  internal method, not all have a [[<a data-link-type="dfn" href="infrastructure.html#detached" id="ref-for-detached-1">Detached</a>]] internal slot and a [[<a data-link-type="dfn" href="infrastructure.html#transfer" id="ref-for-transfer-1">Transfer</a>]]
-  internal method.</p>
-    <p><a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">Platform objects</a> that are <a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-5">transferable objects</a> must define the [[<a data-link-type="dfn" href="infrastructure.html#transfer" id="ref-for-transfer-2">Transfer</a>]]
-  internal method such that it either throws an exception or returns a clone of <em>this</em>,
-  created in <var>targetRealm</var>, with <em>this</em>’s underlying data shared with the return
-  value, and <em>this</em>’s [[<a data-link-type="dfn" href="infrastructure.html#detached" id="ref-for-detached-2">Detached</a>]] internal slot value set to true. It is up to such
-  objects to define what transfering means for them.</p>
-    <p>Objects defined in the JavaScript specification are handled by the <a data-link-type="dfn" href="infrastructure.html#structuredclonewithtransfer" id="ref-for-structuredclonewithtransfer-1">StructuredCloneWithTransfer</a> abstract operation directly. (Technically, by <a data-link-type="dfn" href="infrastructure.html#istransferable" id="ref-for-istransferable-1">IsTransferable</a> and <a data-link-type="dfn" href="infrastructure.html#transferhelper" id="ref-for-transferhelper-1">TransferHelper</a>.)</p>
+    <p class="note" role="note">모든 <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">플랫폼 객체</a>가 [[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-3">Clone</a>]] 
+  내부 메서드를 가지는 반면, 모두가 [[<a data-link-type="dfn" href="infrastructure.html#detached" id="ref-for-detached-1">Detached</a>]] 내부 슬롯(slot)과 [[<a data-link-type="dfn" href="infrastructure.html#transfer" id="ref-for-transfer-1">Transfer</a>]] 내부
+  메서드를 가지지는 않습니다.</p>
+    <p><a data-link-type="dfn" href="infrastructure.html#transferable-objects" id="ref-for-transferable-objects-5">전송 가능한 객체</a>인 <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-platform-object">플랫폼 객체</a>는
+  반환 값과 함께 공유된 <em>this</em>의 기본 데이터를 가지고 <var>targetRealm</var>에서 생성된, 
+  예외를 던지거나 <em>this</em>의 복제를 반환하는 [[<a data-link-type="dfn" href="infrastructure.html#transfer" id="ref-for-transfer-2">Transfer</a>]] 내부 메서드를 정의해야(must) 
+  하고 <em>this</em>의 [[<a data-link-type="dfn" href="infrastructure.html#detached" id="ref-for-detached-2">Detached</a>]] 내부 슬록 값을 true로 설정합니다. 그것들에 대해 전송이
+  의미하는 바를 정의하는 것은 그 객체들에 달려있습니다.</p>
+    <p>자바스크립트 명세에 정의된 객체는 <a data-link-type="dfn" href="infrastructure.html#structuredclonewithtransfer" id="ref-for-structuredclonewithtransfer-1">StructuredCloneWithTransfer</a> 추상 연산에 의해 직접 처리됩니다.
+  (기술적으로, <a data-link-type="dfn" href="infrastructure.html#istransferable" id="ref-for-istransferable-1">IsTransferable</a>과 <a data-link-type="dfn" href="infrastructure.html#transferhelper" id="ref-for-transferhelper-1">TransferHelper</a>에 의해.)</p>
     <h4 class="heading settled" data-level="2.9.3" id="section-structuredclonewithtransfer"><span class="secno">2.9.3. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="structuredclonewithtransfer">StructuredCloneWithTransfer</dfn> ( <var>input</var>, <var>transferList</var>, <var>targetRealm</var> )</span><a class="self-link" href="infrastructure.html#section-structuredclonewithtransfer"></a></h4>
     <ol>
      <li data-md="">
-      <p>Let <var>memory</var> be an empty map.</p>
-      <p class="note" role="note">The purpose of the memory map, both here and in the <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-2">StructuredClone</a> abstract operation, is to avoid cloning objects twice. This ends up preserving cycles and the
-  identity of duplicate objects in graphs.</p>
+      <p><var>memory</var>를 비어있는 맵으로 둡니다.</p>
+      <p class="note" role="note">메모리 맵의 목적은, 여기에서와 <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-2">StructuredClone</a> 추상 연산에서, 객체를 
+  두 번 복제하는 것을 방지하는 것입니다. 이것은 주기와 그래프에서 중복 된 객체의 식별을 보존하게
+  합니다.</p>
      </li><li data-md="">
-      <p>For each object <var>transferable</var> in <var>transferList</var>:</p>
+      <p><var>transferList</var>의 각 객체 <var>transferable</var>에 대해:</p>
       <ol>
        <li data-md="">
-        <p>If <a data-link-type="dfn" href="infrastructure.html#istransferable" id="ref-for-istransferable-2">IsTransferable</a>(<var>transferable</var>) is false, then throw a
-  "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>.</p>
+        <p><a data-link-type="dfn" href="infrastructure.html#istransferable" id="ref-for-istransferable-2">IsTransferable</a>(<var>transferable</var>) 가 false라면, "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>를 던집니다.</p>
        </li><li data-md="">
-        <p>Let <var>placeholder</var> be a user-agent-defined placeholder object.</p>
+        <p><var>placeholder</var>를 유저 에이전트 정의 플레이스홀더(user-agent-defined) 객체로 둡니다.</p>
        </li><li data-md="">
-        <p>Create an entry in <var>memory</var> with key <var>transferable</var> and value <var>placeholder</var>.</p>
+        <p><var>transferable</var>과 값 <var>placeholder</var>를 가지고 <var>memory</var>에 엔트리를
+  생성합니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Let <var>clone</var> be the result of ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-3">StructuredClone</a>(<var>input</var>, <var>targetRealm</var>, <var>memory</var>).</p>
+      <p><var>clone</var>을 ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-3">StructuredClone</a>(<var>input</var>, <var>targetRealm</var>, <var>memory</var>)의
+  결과로 둡니다.</p>
      </li><li data-md="">
-      <p>Let <var>outputTransferList</var> be a new empty <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a>.</p>
+      <p><var>outputTransferList</var>을 새로운 비어있는 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a>로 둡니다.</p>
      </li><li data-md="">
-      <p>For each object <var>transferable</var> in <var>transferList</var>:</p>
+      <p><var>transferList</var> 내 각 객체 <var>transferable</var>에 대해:</p>
       <ol>
        <li data-md="">
-        <p>Let <var>placeholderResult</var> be the value of the entry in <var>memory</var> whose key
-  is <var>transferable</var>.</p>
+        <p><var>placeholderResult</var>를 키가 <var>transferable</var>인 <var>memory</var> 내 엔트리의
+  값으로 둡니다.</p>
        </li><li data-md="">
-        <p>Let <var>transferResult</var> be ? <a data-link-type="dfn" href="infrastructure.html#transferhelper" id="ref-for-transferhelper-2">TransferHelper</a>(<var>transferable</var>, <var>targetRealm</var>).</p>
+        <p><var>transferResult</var>를 ? <a data-link-type="dfn" href="infrastructure.html#transferhelper" id="ref-for-transferhelper-2">TransferHelper</a>(<var>transferable</var>, <var>targetRealm</var>)로
+  둡니다.</p>
        </li><li data-md="">
-        <p>Within <var>clone</var>, replace references to <var>placeholderResult</var> with <var>transferResult</var>, such that everything holding a reference to <var>placeholderResult</var>, now holds a reference to <var>transferResult</var>.</p>
-        <p class="note" role="note">This is a rather unusual low-level operation for which no primitives are defined by JavaScript.</p>
+        <p><var>clone</var> 내에서, <var>placeholderResult</var>로의 참조를 <var>transferResult</var>로
+  교체하여, <var>placeholderResult</var>로의 참조를 보유하는 모든 것이 이제 <var>transferResult</var>로의 참조를 보유합니다.</p>
+        <p class="note" role="note">이것은 자바스크립트에 의해 정의된 프리미티브(primitive)에 대한 매우 드문
+  저수준(low-level) 연산입니다.</p>
        </li><li data-md="">
-        <p>Add <var>transferResult</var> as the last element of <var>outputTransferList</var>.</p>
+        <p><var>outputTransferList</var>의 마지막 요소(element)로 <var>transferResult</var>를 추가합니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Return { [[Clone]]: <var>clone</var>, [[<var>transferList</var>]]: <var>outputTransferList</var> }.</p>
+      <p>{ [[Clone]]: <var>clone</var>, [[<var>transferList</var>]]: <var>outputTransferList</var> }
+  를 반환합니다.</p>
     </li></ol>
-    <p class="note" role="note">Originally the <a data-link-type="dfn" href="infrastructure.html#structuredclonewithtransfer" id="ref-for-structuredclonewithtransfer-2">StructuredCloneWithTransfer</a> abstract operation was known as
-  the "structured clone" algorithm. The <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-4">StructuredClone</a> abstract operation was known as the
-  "internal structured clone" algorithm. Transferring objects, now handled by the <a data-link-type="dfn" href="infrastructure.html#structuredclonewithtransfer" id="ref-for-structuredclonewithtransfer-3">StructuredCloneWithTransfer</a> abstract operation, were formerly handled by parts of the
-  algorithm of the <code>postMessage()</code> method on the <code class="idl"><a data-link-type="idl" href="browsers.html#window-window" id="ref-for-window-window-4">Window</a></code> object and the <code>Window/postMessage()</code> method on the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/webmessaging/#messageport">MessagePort</a></code> object.</p>
+    <p class="note" role="note">본래 <a data-link-type="dfn" href="infrastructure.html#structuredclonewithtransfer" id="ref-for-structuredclonewithtransfer-2">StructuredCloneWithTransfer</a> 추상 연산은 "구조화된 복제" 알고리즘으로 
+  알려져 있습니다. <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-4">StructuredClone</a> 추상 연산은 "내부 구조화된 복제" 알고리즘으로 알려져 있습니다.
+  현재 <a data-link-type="dfn" href="infrastructure.html#structuredclonewithtransfer" id="ref-for-structuredclonewithtransfer-3">StructuredCloneWithTransfer</a> 추상 연산에 의해 처리되는, 객체 전송은 <code class="idl"><a data-link-type="idl" href="browsers.html#window-window" id="ref-for-window-window-4">Window</a></code> 객체에서의 <code>postMessage()</code> 메서드와 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/webmessaging/#messageport">MessagePort</a></code> 객체에서의 <code>Window/postMessage()</code> 메서드의 알고리즘의 일부분에 의해 이전에 처리됩니다.</p>
     <h4 class="heading settled" data-level="2.9.4" id="section-structuredclone"><span class="secno">2.9.4. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="structuredclone">StructuredClone</dfn> ( <var>input</var>, <var>targetRealm</var> [ , <var>memory</var> ] )</span><a class="self-link" href="infrastructure.html#section-structuredclone"></a></h4>
     <ol>
      <li data-md="">
-      <p>If <var>memory</var> was not supplied, let <var>memory</var> be an empty map.</p>
+      <p><var>memory</var>가 제공되지 않았다면, <var>memory</var>를 비어있는 맵으로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>memory</var> contains an entry with key <var>input</var>, then return that entry’s
-  value.</p>
+      <p><var>memory</var>가 키 <var>input</var>를 가진 엔트리를 포함한다면, 엔트리의 값을 반환합니다.</p>
      </li><li data-md="">
-      <p>If <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a>(<var>input</var>) is Undefined, Null, Boolean, String, or Number, then return <var>input</var>.</p>
+      <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a>(<var>input</var>) 이 Undefined, Null, Boolean, String, Number라면, <var>input</var>을 반환합니다.</p>
      </li><li data-md="">
-      <p>If <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a>(<var>input</var>) is Symbol, then throw a "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>.</p>
+      <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a>(<var>input</var>) 이 Symbol이라면, "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>를 던집니다.</p>
      </li><li data-md="">
-      <p>Let <var>deepClone</var> be false.</p>
+      <p><var>deepClone</var>을 false로 둡니다.</p>
      </li><li data-md="">
-      <p>If <var>input</var> has a [[BooleanData]] internal slot, then let <var>output</var> be a new
-  Boolean object in <var>targetRealm</var> whose [[BooleanData]] internal slot value is the
-  [[BooleanData]] internal slot value of <var>input</var>.</p>
+      <p><var>input</var>이 [[BooleanData]] 내부 슬롯을 가진다면, <var>output</var>을 [[BooleanData]]
+  내부 슬롯 값이 <var>input</var>의 [[BooleanData]] 내부 슬롯 값인 <var>targetRealm</var> 내의
+  새로운 Boolean 객체로 둡니다.</p>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> has a [[NumberData]] internal slot, then let <var>output</var> be a new Number object in <var>targetRealm</var> whose [NumberData]] internal slot value is
-  the [[NumberData]] internal slot value of <var>input</var>.</p>
+      <p>그렇지 않고, <var>input</var>이 [[NumberData]] 내부 슬롯을 가진다면, <var>output</var>을
+  [NumberData]] 내부 슬롯 값이 <var>input</var>의 [[NumberData]] 내부 슬롯 값인 <var>targetRealm</var> 내의 새로운 Number 객체로 둡니다.</p>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> has a [[StringData]] internal slot, then let <var>output</var> be a new String object in <var>targetRealm</var> whose [[StringData]] internal slot value is
-  the [[StringData]] internal slot value of <var>input</var>.</p>
+      <p>그렇지 않고, <var>input</var>이 [[StringData]] 내부 슬롯을 가진다면, <var>output</var>을
+  [[StringData]] 내부 슬롯 값이 <var>input</var>의 [[StringData]] 내부 슬롯 슬롯 값인 <var>targetRealm</var> 내의 새로운 String 객체로 둡니다.</p>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> has a [[DateValue]] internal slot, then let <var>output</var> be a new Date object in <var>targetRealm</var> whose [[DateValue]] internal slot value is the
-  [[DateValue]] internal slot value of <var>input</var>.</p>
+      <p>그렇지 않고, <var>input</var>이 [[DateValue]] 내부 슬롯을 가진다면, <var>output</var>을
+  [[DateValue]] 내부 슬롯 값이 <var>input</var>의 [[DateValue]] 내부 슬롯 값인 <var>targetRealm</var> 내의 새로운 Date 객체로 둡니다.</p>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> has a [[RegExpMatcher]] internal slot, then let <var>output</var> be a new RegExp object in <var>targetRealm</var> whose [[RegExpMatcher]]
-  internal slot value is the [[RegExpMatcher]] internal slot value of <var>input</var>, whose
-  [[OriginalSource]] internal slot value is the [[OriginalSource]] internal slot value of <var>input</var>, and whose whose [[OriginalFlags]] internal slot value is the
-  [[OriginalFlags]] internal slot value of <var>input</var>.</p>
+      <p>그렇지 않고, <var>input</var>이 [[RegExpMatcher]] 내부 슬롯을 가진다면, <var>output</var>을
+  [[RegExpMatcher]] 내부 슬롯 값이 <var>input</var>의 [[RegExpMatcher]] 내부 슬롯 값이고
+  [[OriginalSource]] 내부 슬롯 값이 <var>input</var>의 [[OriginalSource]] 내부 슬롯 값이며
+  [[OriginalFlags]]  내부 슬롯 값이 <var>input</var>의 [[OriginalFlags]] 내부 슬롯 값인 <var>targetRealm</var> 내의 새로운 RegExp 객체로 둡니다.</p>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> has an [[ArrayBufferData]] internal slot, then:</p>
+      <p>그렇지 않고, <var>input</var>이 [[ArrayBufferData]] 내부 슬롯을 가진다면:</p>
       <ol>
        <li data-md="">
-        <p>If <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isdetachedbuffer">IsDetachedBuffer</a>(<var>input</var>) is true, then throw a "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>.</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isdetachedbuffer">IsDetachedBuffer</a>(<var>input</var>)가 true라면, "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>를 던집니다.</p>
        </li><li data-md="">
-        <p>Let <var>outputArrayBuffer</var> be the <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-arraybuffer-constructor">%ArrayBuffer%</a> intrinsic object in <var>targetRealm</var>.</p>
+        <p><var>outputArrayBuffer</var>를 <var>targetRealm</var> 내의 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-arraybuffer-constructor">%ArrayBuffer%</a> 내장
+   객체로 둡니다.</p>
        </li><li data-md="">
-        <p>Let <var>output</var> be ? <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-clonearraybuffer">CloneArrayBuffer</a>(<var>input</var>, 0, <var>outputArrayBuffer</var>).</p>
+        <p><var>output</var>을 ? <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-clonearraybuffer">CloneArrayBuffer</a>(<var>input</var>, 0, <var>outputArrayBuffer</var>)로 둡니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> has a [[ViewedArrayBuffer]] internal slot, then:</p>
+      <p>그렇지 않고, <var>input</var>이 [[ViewedArrayBuffer]] 내부 슬롯을 가진다면:</p>
       <ol>
        <li data-md="">
-        <p>Let <var>buffer</var> be the value of <var>input</var>’s [[ViewedArrayBuffer]] internal
-   slot.</p>
+        <p><var>buffer</var>를 <var>input</var>의 [[ViewedArrayBuffer]] 내부 슬롯의 값으로 둡니다.</p>
        </li><li data-md="">
-        <p>Let <var>bufferClone</var> be ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-5">StructuredClone</a>(<var>buffer</var>, <var>targetRealm</var>, <var>memory</var>)}}.</p>
+        <p><var>bufferClone</var>을 ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-5">StructuredClone</a>(<var>buffer</var>, <var>targetRealm</var>, <var>memory</var>)}}로 둡니다.</p>
        </li><li data-md="">
-        <p>If <var>input</var> has a [[DataView]] internal slot, then let <var>output</var> be a
-   new DataView object in <var>targetRealm</var> whose [[DataView]] internal slot value is
-   true, whose [[ViewedArrayBuffer]] internal slot value is <var>bufferClone</var>, whose
-   [[ByteLength]] internal slot value is the [[ByteLength]] internal slot value of <var>input</var>, and whose [[ByteOffset]] internal slot value is the [[ByteOffset]]
-   internal slot value of <var>input</var>.</p>
+        <p><var>input</var>이 [[DataView]] 내부 슬롯을 가진다면, <var>output</var>을 [[DataView]]
+   내부 슬롯 값이 true이고, [[ViewedArrayBuffer]] 내부 슬롯 값이 <var>bufferClone</var>이고,
+   [[ByteLength]] 내부 슬롯 값이 <var>input</var>의 [[ByteLength]] 내부 슬롯 값이며,
+   [[ByteOffset]] 내부 슬롯 값이 <var>input</var>의 [[ByteOffset]] 내부 슬롯 값인 <var>targetRealm</var> 내의 새로운 DataView 객체로 둡니다.</p>
        </li><li data-md="">
-        <p>Otherwise:</p>
+        <p>그렇지 않으면</p>
         <ol>
          <li data-md="">
-          <p class="assertion">Assert: <var>input</var> has a [[TypedArrayName]] internal slot.</p>
+          <p class="assertion">Assert: <var>input</var>은 [[TypedArrayName]] 내부 슬롯을 가집니다.</p>
          </li><li data-md="">
-          <p>Let <var>constructor</var> be the intrinsic object listed in column one of <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#table-49">The TypedArray Constructors</a> table for the value of <var>input</var>’s [[TypedArrayName]] internal slot in <var>targetRealm</var>.</p>
+          <p><var>constructor</var>를 <var>targetRealm</var> 내 <var>input</var>의 [[TypedArrayName]]
+   내부 슬롯의 값에 대한 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#table-49">TypedArray 생성자</a> 표의
+   열 1에 나열된 내부 객체로 둡니다.</p>
          </li><li data-md="">
-          <p>Let <var>byteOffset</var> be <var>input</var>’s [[ByteOffset]] internal slot value.</p>
+          <p><var>byteOffset</var>를 <var>input</var>의 [[ByteOffset]] 내부 슬롯 값으로 둡니다.</p>
          </li><li data-md="">
-          <p>Let <var>length</var> be <var>input</var>’s [[ArrayLength]] internal slot value.</p>
+          <p><var>length</var>를 <var>input</var>의 [[ArrayLength]] 내부 슬롯 값으로 둡니다.</p>
          </li><li data-md="">
-          <p>Let <var>output</var> be ? <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#typedarray-create">TypedArrayCreate</a>(<var>constructor</var>,
-   « <var>bufferClone</var>, <var>byteOffset</var>, <var>length</var> »).</p>
+          <p><var>output</var>을? <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#typedarray-create">TypedArrayCreate</a>(<var>constructor</var>,
+   « <var>bufferClone</var>, <var>byteOffset</var>, <var>length</var> »)로 둡니다.</p>
         </li></ol>
       </li></ol>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> has [[MapData]] internal slot, then:</p>
+      <p>그렇지 않고, <var>input</var>이 [[MapData]] 내부 슬롯을 가진다면:</p>
       <ol>
        <li data-md="">
-        <p>Let <var>output</var> be a new Map object in <var>targetRealm</var> whose [[MapData]]
-   internal slot value is a new empty <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a>.</p>
+        <p><var>output</var>을 [[MapData]] 내부 슬롯 값이 새로운 비어있는 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a>인 <var>targetRealm</var> 내의 새로운 Map 객체로 둡니다.</p>
        </li><li data-md="">
-        <p>Set <var>deepClone</var> to true.</p>
+        <p><var>deepClone</var>를 true로 설정합니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> has [[SetData]] internal slot, then:</p>
+      <p>그렇지 않고, <var>input</var>이 [[SetData]] 내부 슬롯을 가진다면:</p>
       <ol>
        <li data-md="">
-        <p>Let <var>output</var> be a new Set object in <var>targetRealm</var> whose [[SetData]]
-   internal slot value is a new empty <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a>.</p>
+        <p><var>output</var>을 [[SetData]] 내부 슬롯 값이 새로운 비어있는 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a>인 <var>targetRealm</var> 내의 새로운 Set 객체로 둡니다.</p>
        </li><li data-md="">
-        <p>Set <var>deepClone</var> to true.</p>
+        <p><var>deepClone</var>을 true로 둡니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> is an Array exotic object, then:</p>
+      <p>그렇지 않고, <var>input</var>이 배열 외래(exotic) 객체 라면:</p>
       <ol>
        <li data-md="">
-        <p>Let <var>inputLen</var> be <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarygetownproperty">OrdinaryGetOwnProperty</a>(<var>input</var>,
-   "<code>length</code>").[[value]].</p>
+        <p><var>inputLen</var>를 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ordinarygetownproperty">OrdinaryGetOwnProperty</a>(<var>input</var>,
+   "<code>length</code>")로 둡니다.[[value]].</p>
        </li><li data-md="">
-        <p>Let <var>outputProto</var> be the <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-properties-of-the-array-prototype-object">%ArrayPrototype%</a> intrinsic object in <var>targetRealm</var>.</p>
+        <p><var>outputProto</var>를 <var>targetRealm</var> 내 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-properties-of-the-array-prototype-object">%ArrayPrototype%</a> 내장 객체로 둡니다.</p>
        </li><li data-md="">
-        <p>Let <var>output</var> be ! <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-arraycreate">ArrayCreate</a>(<var>inputLen</var>, <var>outputProto</var>).</p>
+        <p><var>output</var>을 ! <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-arraycreate">ArrayCreate</a>(<var>inputLen</var>, <var>outputProto</var>)로 둡니다.</p>
        </li><li data-md="">
-        <p>Set <var>deepClone</var> to true.</p>
+        <p><var>deepClone</var>을 true로 둡니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> has a [[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-4">Clone</a>]] internal method, then
-   let <var>output</var> be ? <var>input</var>.[[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-5">Clone</a>]](<var>targetRealm</var>, <var>memory</var>).</p>
+      <p>그렇지 않고, <var>input</var>이 [[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-4">Clone</a>]] 내부 메서드를 가진다면, <var>output</var>을 ? <var>input</var>로 둡니다. 
+   [[<a data-link-type="dfn" href="infrastructure.html#structured-clone" id="ref-for-structured-clone-5">Clone</a>]](<var>targetRealm</var>, <var>memory</var>).</p>
      </li><li data-md="">
-      <p>Otherwise, if <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-iscallable">IsCallable</a>(<var>input</var>)}} is true, then throw a
-   "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>.</p>
+      <p>그렇지 않고, <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-iscallable">IsCallable</a>(<var>input</var>)}}이 true라면, "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>을 던집니다.</p>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> has any internal slot other than [[Prototype]] or
-   [[Extensible]], then throw a "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>.</p>
-      <p class="example" id="example-37384063"><a class="self-link" href="infrastructure.html#example-37384063"></a>For instance, a [[PromiseState]] or [[WeakMapData]] internal slot.</p>
+      <p>그렇지 않고, <var>input</var>이 [[Prototype]]나 [[Extensible]] 외 다른 어떤 내부 슬롯을 가진다면
+   "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>을 던집니다.</p>
+      <p class="example" id="example-0af83f63"><a class="self-link" href="infrastructure.html#example-0af83f63"></a>예를 들어, [[PromiseState]]나 [[WeakMapData]] 내부 슬롯.</p>
      </li><li data-md="">
-      <p>Otherwise, if <var>input</var> is an exotic object, then throw a "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>.</p>
-      <p class="example" id="example-03903329"><a class="self-link" href="infrastructure.html#example-03903329"></a>For instance, a proxy object.</p>
+      <p>그렇지 않고, <var>input</var>이 외래(exotic) 객체라면, "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#datacloneerror">DataCloneError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>을
+   던집니다.</p>
+      <p class="example" id="example-90942a5e"><a class="self-link" href="infrastructure.html#example-90942a5e"></a>예를 들어, 프록시(proxy) 객체.</p>
      </li><li data-md="">
-      <p>Otherwise:</p>
+      <p>그렇지 않으면:</p>
       <ol>
        <li data-md="">
-        <p>Let <var>output</var> be a new Object in <var>targetRealm</var>.</p>
+        <p><var>output</var>을 <var>targetRealm</var> 내 새로운 객체로 둡니다.</p>
        </li><li data-md="">
-        <p>Set <var>deepClone</var> to true.</p>
+        <p><var>deepClone</var>를 true로 둡니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Create an entry in <var>memory</var> whose key is <var>input</var> and value is <var>output</var>.</p>
+      <p><var>memory</var> whose 키가 <var>input</var>이고 값이 <var>output</var>인 <var>memory</var> 내 엔트리를 생성합니다.</p>
      </li><li data-md="">
-      <p>If <var>deepClone</var> is true, then:</p>
+      <p><var>deepClone</var>이 true라면:</p>
       <ol>
        <li data-md="">
-        <p>If <var>input</var> has a [[MapData]] internal slot, then:</p>
+        <p><var>input</var> [[MapData]] 내부 슬롯이라면:</p>
         <ol>
          <li data-md="">
-          <p>Let <var>inputList</var> the value of <var>input</var>’s [[MapData]] internal slot.</p>
+          <p><var>inputList</var>을 <var>input</var>의 [[MapData]] 내부 슬롯의 값으로 둡니다.</p>
          </li><li data-md="">
-          <p>Let <var>copiedList</var> be a new empty <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a>.</p>
+          <p><var>copiedList</var>을 새로운 비어있는 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a>로 둡니다.</p>
          </li><li data-md="">
-          <p>Repeat for each <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a> { [[key]], [[value]] } <var>entry</var> that is an
-   element of <var>inputList</var>,</p>
+          <p><var>inputList</var>의 요소(element)인 각 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a> { [[key]], [[value]] } <var>entry</var>에 대해 반복하여,</p>
           <ol>
            <li data-md="">
-            <p>Let <var>copiedEntry</var> be a new <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a> { [[key]]: <var>entry</var>.[[key]], [[value]]: <var>entry</var>.[[value]] }.</p>
+            <p><var>copiedEntry</var>을 새로운 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a> { [[key]]: <var>entry</var>.[[key]], [[value]]: <var>entry</var>.[[value]] }로 둡니다.</p>
            </li><li data-md="">
-            <p>If <var>copiedEntry</var>.[[key]] is not empty, append <var>copiedEntry</var> as
-   the last element of <var>copiedList</var>.</p>
+            <p><var>copiedEntry</var>.[[key]] 가 비어있지 않다면, <var>copiedList</var>의 마지막
+   요소(element)로 <var>copiedEntry</var>를 추가(append)합니다.</p>
           </li></ol>
          </li><li data-md="">
-          <p>Let <var>outputList</var> be the value of <var>output</var>’s [[MapData]] internal
-   slot.</p>
+          <p><var>outputList</var>를 <var>output</var>의 [[MapData]] 내부 슬롯의 값으로 둡니다.</p>
          </li><li data-md="">
-          <p>For each <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a> { [[key]], [[value]] } <var>entry</var> that is an element of <var>copiedList</var>,</p>
+          <p><var>copiedList</var>의 요소(element)인 각 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a> { [[key]], [[value]] } <var>entry</var>에 대해 반복하여,</p>
           <ol>
            <li data-md="">
-            <p>Let <var>outputKey</var> be ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-6">StructuredClone</a>(<var>entry</var>.[[key]], <var>targetRealm</var>, <var>memory</var>).</p>
+            <p><var>outputKey</var>를 ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-6">StructuredClone</a>(<var>entry</var>.[[key]], <var>targetRealm</var>, <var>memory</var>)로 둡니다.</p>
            </li><li data-md="">
-            <p>Let <var>outputValue</var> be ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-7">StructuredClone</a>(<var>entry</var>.[[value]], <var>targetRealm</var>, <var>memory</var>).</p>
+            <p><var>outputValue</var>를 ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-7">StructuredClone</a>(<var>entry</var>.[[value]], <var>targetRealm</var>, <var>memory</var>)로 둡니다.</p>
            </li><li data-md="">
-            <p>Add { [[key]]: <var>outputKey</var>, [[value]]: <var>outputValue</var> } as the
-   last element of <var>outputList</var>.</p>
+            <p><var>outputList</var>의 마지막 요소(element)로
+   { [[key]]: <var>outputKey</var>, [[value]]: <var>outputValue</var> }를 추가합니다.</p>
           </li></ol>
         </li></ol>
        </li><li data-md="">
-        <p>Otherwise, if <var>input</var> has a [[SetData]] internal slot, then:</p>
+        <p>그렇지 않고, <var>input</var>이 [[SetData]] 내부 슬롯을 가진다면:</p>
         <ol>
          <li data-md="">
-          <p>Let <var>copiedList</var> be a copy of the value of <var>input</var>’s [[SetData]]
-   internal slot.</p>
+          <p><var>copiedList</var>를 <var>input</var>의 [[SetData]] 내부 슬롯의 값의 복제로 둡니다.</p>
          </li><li data-md="">
-          <p>Let <var>outputList</var> be the value of <var>output</var>’s [[SetData]] internal
-   slot.</p>
+          <p><var>outputList</var>을 <var>output</var>의 [[SetData]] 내부 슬롯의 값으로 둡니다.</p>
          </li><li data-md="">
-          <p>For each <var>entry</var> that is an element of <var>copiedList</var> that is not
-   empty,</p>
+          <p>비어있지 않은 <var>copiedList</var>의 요소(element)인 각 <var>entry</var>에 대해,</p>
           <ol>
            <li data-md="">
-            <p>Let <var>outputEntry</var> be ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-8">StructuredClone</a>(<var>entry</var>, <var>targetRealm</var>, <var>memory</var>).</p>
+            <p><var>outputEntry</var>을 ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-8">StructuredClone</a>(<var>entry</var>, <var>targetRealm</var>, <var>memory</var>)로 둡니다.</p>
            </li><li data-md="">
-            <p>Add <var>outputEntry</var> as the last element of <var>outputList</var>.</p>
+            <p><var>outputList</var>의 마지막 요소(element)로 <var>outputEntry</var>를 추가합니다.</p>
           </li></ol>
         </li></ol>
        </li><li data-md="">
-        <p>Otherwise:</p>
+        <p>그렇지 않으면:</p>
         <ol>
          <li data-md="">
-          <p>Let <var>enumerableKeys</var> be a new empty <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a>.</p>
+          <p><var>enumerableKeys</var>를 새로운 비어있는 <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a>로 둡니다.</p>
          </li><li data-md="">
-          <p>For each <var>key</var> in ! <var>input</var>.[[OwnPropertyKeys]]():</p>
+          <p>! <var>input</var>.[[OwnPropertyKeys]]() 내 각 <var>key</var> 에 대해:</p>
           <ol>
            <li data-md="">
-            <p>If <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a>(<var>key</var>) is String, then:</p>
+            <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a>(<var>key</var>)이 String이라면:</p>
             <ol>
              <li data-md="">
-              <p>Let <var>inputDesc</var> be ! <var>input</var>.[[GetOwnProperty]](<var>key</var>).</p>
+              <p><var>inputDesc</var>를 ! <var>input</var>.[[GetOwnProperty]](<var>key</var>)로 둡니다.</p>
              </li><li data-md="">
-              <p>If <var>inputDesc</var>.[[Enumerable]] is true, then add <var>key</var> as
-   the last element of <var>enumerableKeys</var>.</p>
+              <p><var>inputDesc</var>.[[Enumerable]]가 true라면, <var>enumerableKeys</var>의
+   마지막 요소(element)로 <var>key</var>를 추가합니다</p>
             </li></ol>
           </li></ol>
          </li><li data-md="">
-          <p>For each <var>key</var> in <var>enumerableKeys</var>:</p>
+          <p><var>enumerableKeys</var> 내 각 <var>key</var>에 대해:</p>
           <ol>
            <li data-md="">
-            <p>If ! <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-hasownproperty">HasOwnProperty</a>(<var>input</var>, <var>key</var>) is true, then:</p>
+            <p>! <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-hasownproperty">HasOwnProperty</a>(<var>input</var>, <var>key</var>)가 true라면:</p>
             <ol>
              <li data-md="">
-              <p>Let <var>inputValue</var> be ? <var>input</var>.[[Get]](<var>key</var>, <var>input</var>).</p>
+              <p><var>inputValue</var>를 ? <var>input</var>.[[Get]](<var>key</var>, <var>input</var>)로 둡니다.</p>
              </li><li data-md="">
-              <p>Let <var>outputValue</var> be ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-9">StructuredClone</a>(<var>inputValue</var>, <var>targetRealm</var>, <var>memory</var>).</p>
+              <p><var>outputValue</var>를 ? <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-9">StructuredClone</a>(<var>inputValue</var>, <var>targetRealm</var>, <var>memory</var>)로 둡니다.</p>
              </li><li data-md="">
-              <p>Perform ? <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-createdataproperty">CreateDataProperty</a>(<var>output</var>, <var>key</var>, <var>outputValue</var>).</p>
+              <p>? <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-createdataproperty">CreateDataProperty</a>(<var>output</var>, <var>key</var>, <var>outputValue</var>)를 수행합니다.</p>
             </li></ol>
           </li></ol>
         </li></ol>
       </li></ol>
      </li><li data-md="">
-      <p>Return <var>output</var>.</p>
+      <p><var>output</var>을 반환합니다.</p>
     </li></ol>
-    <p class="note" role="note"> In general implementations will need to use some kind of serialization and marshalling to
-    implement the creation of objects in <var>targetRealm</var>, as <var>targetRealm</var> could be
-    in a different <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-5">event loop</a> and not easily accessible to the code that invokes <a data-link-type="dfn" href="infrastructure.html#structuredclonewithtransfer" id="ref-for-structuredclonewithtransfer-4">StructuredCloneWithTransfer</a> or <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-10">StructuredClone</a>. </p>
+    <p class="note" role="note"> <var>targetRealm</var>이 다른 <a data-link-type="dfn" href="webappapis.html#event-loop" id="ref-for-event-loop-5">이벤트 반복</a>에 있을 수 있고 <a data-link-type="dfn" href="infrastructure.html#structuredclonewithtransfer" id="ref-for-structuredclonewithtransfer-4">StructuredCloneWithTransfer</a>나 <a data-link-type="dfn" href="infrastructure.html#structuredclone" id="ref-for-structuredclone-10">StructuredClone</a>을 호출하는 코드에 쉽게 접근할 수
+    없을 수 있기 때문에, 일반적인 구현에서는 <var>targetRealm</var> 내 객체의 생성을 구현하기 위해
+    일종의 직렬화와 정리하는 것을 사용하는 것이 필요할 것입니다. </p>
     <h4 class="heading settled" data-level="2.9.5" id="section-idistransferable"><span class="secno">2.9.5. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="istransferable">IsTransferable</dfn> ( <var>O</var> )</span><a class="self-link" href="infrastructure.html#section-idistransferable"></a></h4>
     <ol>
      <li data-md="">
-      <p class="assertion">Assert: <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a>(<var>O</var>) is Object.</p>
+      <p class="assertion">Assert: <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a>(<var>O</var>)은 객체입니다.</p>
      </li><li data-md="">
-      <p>If <var>O</var> has an [[ArrayBufferData]] internal slot, then:</p>
+      <p><var>O</var>가 [[ArrayBufferData]] 내부 슬롯을 가진다면:</p>
       <ol>
        <li data-md="">
-        <p>If <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isdetachedbuffer">IsDetachedBuffer</a>(<var>O</var>) is true, then return false.</p>
+        <p><a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-isdetachedbuffer">IsDetachedBuffer</a>(<var>O</var>)가 true라면, false를 반환합니다.</p>
        </li><li data-md="">
-        <p>Return true.</p>
+        <p>true를 반환합니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Otherwise, if <var>O</var> has a [[<a data-link-type="dfn" href="infrastructure.html#detached" id="ref-for-detached-3">Detached</a>]] internal slot, then:</p>
+      <p>그렇지 않고, <var>O</var>가 [[<a data-link-type="dfn" href="infrastructure.html#detached" id="ref-for-detached-3">Detached</a>]] 내부 슬롯을 가진다면:</p>
       <ol>
        <li data-md="">
-        <p>If <var>O</var>’s [[<a data-link-type="dfn" href="infrastructure.html#detached" id="ref-for-detached-4">Detached</a>]] internal slot value is true, then return false.</p>
+        <p><var>O</var>의 [[<a data-link-type="dfn" href="infrastructure.html#detached" id="ref-for-detached-4">Detached</a>]] 내부 슬롯 값이 true라면, false를 반환합니다.</p>
        </li><li data-md="">
-        <p>Return true.</p>
+        <p>true를 반환합니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Return false.</p>
+      <p>false를 반환합니다.</p>
     </li></ol>
     <h4 class="heading settled" data-level="2.9.6" id="section-transferhelper"><span class="secno">2.9.6. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="transferhelper">TransferHelper</dfn> ( <var>input</var>, <var>targetRealm</var> )</span><a class="self-link" href="infrastructure.html#section-transferhelper"></a></h4>
     <ol>
      <li data-md="">
-      <p>If <var>input</var> has an [[ArrayBufferData]] internal slot, then:</p>
+      <p><var>input</var>가 [[ArrayBufferData]] 내부 슬롯을 가진다면:</p>
       <ol>
        <li data-md="">
-        <p>Let <var>output</var> be a new <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-arraybuffer-constructor">ArrayBuffer</a></code> object in <var>targetRealm</var> whose
-  [[ArrayBufferByteLength]] internal slot value is the [[ArrayBufferByteLength]] internal
-  slot value of <var>input</var>, and whose [[ArrayBufferData]] internal slot value is the
-  [[ArrayBufferData]] internal slot value of <var>input</var>.</p>
+        <p><var>output</var>을 [[ArrayBufferByteLength]] 내부 슬롯 값이 <var>input</var>의
+  [[ArrayBufferByteLength]] 내부 슬롯 값이고 [[ArrayBufferData]] 내부 슬롯 값이 <var>input</var>의 [[ArrayBufferData]] 내부 슬롯 값인 <var>targetRealm</var>내의
+  새로운 <code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-arraybuffer-constructor">ArrayBuffer</a></code> 객체로 둡니다.</p>
        </li><li data-md="">
-        <p>Perform ! <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-detacharraybuffer">DetachArrayBuffer</a>(<var>input</var>).</p>
+        <p>! <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-detacharraybuffer">DetachArrayBuffer</a>(<var>input</var>)을 수행합니다.</p>
        </li><li data-md="">
-        <p>Return <var>output</var>.</p>
+        <p><var>output</var>을 반환합니다.</p>
       </li></ol>
      </li><li data-md="">
-      <p>Return ? <var>input</var>.[[<a data-link-type="dfn" href="infrastructure.html#transfer" id="ref-for-transfer-3">Transfer</a>]](<var>targetRealm</var>).</p>
+      <p>? <var>input</var>.[[<a data-link-type="dfn" href="infrastructure.html#transfer" id="ref-for-transfer-3">Transfer</a>]](<var>targetRealm</var>)를 반환합니다.</p>
     </li></ol>
    </section></main>
   
@@ -8735,34 +8732,34 @@ pre.idl.highlight { color: #708090; }
    <b><a href="infrastructure.html#structured-clone">#structured-clone</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-structured-clone-1">2.9.1. 복제 가능한 객체</a> <a href="infrastructure.html#ref-for-structured-clone-2">(2)</a>
-    </li><li><a href="infrastructure.html#ref-for-structured-clone-3">2.9.2. Transferable objects</a>
+    </li><li><a href="infrastructure.html#ref-for-structured-clone-3">2.9.2. 전송 가능한 객체</a>
     </li><li><a href="infrastructure.html#ref-for-structured-clone-4">2.9.4. StructuredClone ( input, targetRealm [ , memory ] )</a> <a href="infrastructure.html#ref-for-structured-clone-5">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="transferable-objects">
    <b><a href="infrastructure.html#transferable-objects">#transferable-objects</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-transferable-objects-1">2.9.2. Transferable objects</a> <a href="infrastructure.html#ref-for-transferable-objects-2">(2)</a> <a href="infrastructure.html#ref-for-transferable-objects-3">(3)</a> <a href="infrastructure.html#ref-for-transferable-objects-4">(4)</a> <a href="infrastructure.html#ref-for-transferable-objects-5">(5)</a>
+    <li><a href="infrastructure.html#ref-for-transferable-objects-1">2.9.2. 전송 가능한 객체</a> <a href="infrastructure.html#ref-for-transferable-objects-2">(2)</a> <a href="infrastructure.html#ref-for-transferable-objects-3">(3)</a> <a href="infrastructure.html#ref-for-transferable-objects-4">(4)</a> <a href="infrastructure.html#ref-for-transferable-objects-5">(5)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="detached">
    <b><a href="infrastructure.html#detached">#detached</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-detached-1">2.9.2. Transferable objects</a> <a href="infrastructure.html#ref-for-detached-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-detached-1">2.9.2. 전송 가능한 객체</a> <a href="infrastructure.html#ref-for-detached-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-detached-3">2.9.5. IsTransferable ( O )</a> <a href="infrastructure.html#ref-for-detached-4">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="transfer">
    <b><a href="infrastructure.html#transfer">#transfer</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-transfer-1">2.9.2. Transferable objects</a> <a href="infrastructure.html#ref-for-transfer-2">(2)</a>
+    <li><a href="infrastructure.html#ref-for-transfer-1">2.9.2. 전송 가능한 객체</a> <a href="infrastructure.html#ref-for-transfer-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-transfer-3">2.9.6. TransferHelper ( input, targetRealm )</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="structuredclonewithtransfer">
    <b><a href="infrastructure.html#structuredclonewithtransfer">#structuredclonewithtransfer</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-structuredclonewithtransfer-1">2.9.2. Transferable objects</a>
+    <li><a href="infrastructure.html#ref-for-structuredclonewithtransfer-1">2.9.2. 전송 가능한 객체</a>
     </li><li><a href="infrastructure.html#ref-for-structuredclonewithtransfer-2">2.9.3. StructuredCloneWithTransfer ( input, transferList, targetRealm )</a> <a href="infrastructure.html#ref-for-structuredclonewithtransfer-3">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-structuredclonewithtransfer-4">2.9.4. StructuredClone ( input, targetRealm [ , memory ] )</a>
    </li></ul>
@@ -8781,14 +8778,14 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="istransferable">
    <b><a href="infrastructure.html#istransferable">#istransferable</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-istransferable-1">2.9.2. Transferable objects</a>
+    <li><a href="infrastructure.html#ref-for-istransferable-1">2.9.2. 전송 가능한 객체</a>
     </li><li><a href="infrastructure.html#ref-for-istransferable-2">2.9.3. StructuredCloneWithTransfer ( input, transferList, targetRealm )</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="transferhelper">
    <b><a href="infrastructure.html#transferhelper">#transferhelper</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="infrastructure.html#ref-for-transferhelper-1">2.9.2. Transferable objects</a>
+    <li><a href="infrastructure.html#ref-for-transferhelper-1">2.9.2. 전송 가능한 객체</a>
     </li><li><a href="infrastructure.html#ref-for-transferhelper-2">2.9.3. StructuredCloneWithTransfer ( input, transferList, targetRealm )</a>
    </li></ul>
   </aside>
@@ -27104,7 +27101,7 @@ pre.idl.highlight { color: #708090; }
     <li><a href="infrastructure.html#ref-for-event-loop-1">2.1. 전문 용어</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-2">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-3">2.9.1. 복제 가능한 객체</a>
-    </li><li><a href="infrastructure.html#ref-for-event-loop-4">2.9.2. Transferable objects</a>
+    </li><li><a href="infrastructure.html#ref-for-event-loop-4">2.9.2. 전송 가능한 객체</a>
     </li><li><a href="infrastructure.html#ref-for-event-loop-5">2.9.4. StructuredClone ( input, targetRealm [ , memory ] )</a>
     </li><li><a href="document-metadata.html#ref-for-event-loop-6">4.2.7. Interactions of styling and scripting</a> <a href="document-metadata.html#ref-for-event-loop-7">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-event-loop-8">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-event-loop-9">(2)</a>
