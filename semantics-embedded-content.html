@@ -2105,7 +2105,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
   dimensions</a> would be 150x300.</p>
       <p>Each <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object must have a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="list-of-available-images">list of available images</dfn>. Each image
   in this list is identified by a tuple consisting of an <a data-link-type="dfn">absolute URL</a>, a <a data-link-type="dfn" href="infrastructure.html#cors-settings-attribute" id="ref-for-cors-settings-attribute-3">CORS
-  settings attribute</a> mode, and, if the mode is not <a data-link-type="state" href="infrastructure.html#statedef-cors-no-cors" id="ref-for-statedef-cors-no-cors-2">No CORS</a>, an <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-6">origin</a>.
+  settings attribute</a> mode, and, if the mode is not <a data-link-type="state" href="infrastructure.html#statedef-cors-no-cors" id="ref-for-statedef-cors-no-cors-2">No CORS</a>, an <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-4">origin</a>.
   Each image furthermore has an <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="ignore-higher-layer-caching">ignore higher-layer caching</dfn> flag.
   User agents may copy entries from one <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object’s <a data-link-type="dfn" href="semantics-embedded-content.html#list-of-available-images" id="ref-for-list-of-available-images-1">list of available images</a> to another at any time (e.g., when the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> is created, user agents can add to it all the images that are loaded in
   other <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>s), but must not change the keys of entries copied in this way when
@@ -2155,7 +2155,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
       to the element, and let the result be <var>absolute URL</var>. If that is not successful, then
       abort these inner set of steps.
          </li><li>Let <var>key</var> be a tuple consisting of the resulting <a data-link-type="dfn">absolute URL</a>, the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-53">img</a></code> element’s <code>crossorigin</code> attribute’s mode, and, if that mode is not <a data-link-type="state" href="infrastructure.html#statedef-cors-no-cors" id="ref-for-statedef-cors-no-cors-3">No CORS</a>,
-      the <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>’s <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-7">origin</a>.
+      the <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>’s <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-5">origin</a>.
          </li><li>
           <p>If the <a data-link-type="dfn" href="semantics-embedded-content.html#list-of-available-images" id="ref-for-list-of-available-images-5">list of available images</a> contains an entry for <var>key</var>, run
         these subsubsteps:</p>
@@ -2234,11 +2234,11 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
     instance of the <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">fetching</a> algorithm be associated with <var>image request</var>.</p>
         <p>The resource obtained in this fashion, if any, is <var>image request</var>’s <a data-link-type="dfn" href="semantics-embedded-content.html#image-data" id="ref-for-image-data-3">image data</a>.
     It can be either <a data-link-type="dfn" href="browsers.html#same-origin" id="ref-for-same-origin-2">CORS-same-origin</a> or <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-cors-check">CORS-cross-origin</a>; this affects
-    the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-8">origin</a> of the image itself (e.g., when used on a <code>canvas</code>).</p>
+    the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-6">origin</a> of the image itself (e.g., when used on a <code>canvas</code>).</p>
         <p>Fetching the image must <a data-link-type="dfn" href="syntax.html#delay-the-load-event" id="ref-for-delay-the-load-event-4">delay the load event</a> of the element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a> until the <a data-link-type="dfn" href="webappapis.html#tasks" id="ref-for-tasks-6">task</a> that is <a data-link-type="dfn" href="webappapis.html#queue-a-microtask" id="ref-for-queue-a-microtask-3">queued</a> by the <a data-link-type="dfn" href="webappapis.html#networking-task-source" id="ref-for-networking-task-source-2">networking task source</a> once the resource has been fetched (defined below) has been run.</p>
         <p class="warning">This, unfortunately, can be used to perform a rudimentary port scan of the
     user’s local network (especially in conjunction with scripting, though scripting isn’t actually
-    necessary to carry out such an attack). User agents may implement <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-9">cross-origin</a> access control policies that are stricter than those
+    necessary to carry out such an attack). User agents may implement <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-7">cross-origin</a> access control policies that are stricter than those
     described above to mitigate this attack, but unfortunately such policies are typically not
     compatible with existing Web content.</p>
         <p>If the resource is <a data-link-type="dfn" href="browsers.html#same-origin" id="ref-for-same-origin-3">CORS-same-origin</a>, each <a data-link-type="dfn" href="webappapis.html#tasks" id="ref-for-tasks-7">task</a> that is <a data-link-type="dfn" href="webappapis.html#queue-a-microtask" id="ref-for-queue-a-microtask-4">queued</a> by the <a data-link-type="dfn" href="webappapis.html#networking-task-source" id="ref-for-networking-task-source-3">networking task source</a> while the image is being fetched, if <var>image request</var> is the <a data-link-type="dfn" href="semantics-embedded-content.html#current-request" id="ref-for-current-request-19">current
@@ -2667,7 +2667,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
     relative to the element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>, and let <var>absolute URL</var> be the <a data-link-type="dfn" href="infrastructure.html#resulting-url-string" id="ref-for-resulting-url-string-3">resulting URL string</a>.
     If that is not successful, abort these steps.
        </li><li>⌛ Let <var>corsAttributeState</var> be the state of the element’s <code>crossorigin</code> content attribute.
-       </li><li>⌛ Let <var>origin</var> be the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-10">origin</a> of the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-88">img</a></code> element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>.
+       </li><li>⌛ Let <var>origin</var> be the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-8">origin</a> of the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-88">img</a></code> element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node document</a>.
        </li><li>⌛ Let <var>client</var> be the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-89">img</a></code> element’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">node
     document</a>’s <code>Window</code> object’s <a data-link-type="dfn" href="webappapis.html#environment-settings-object" id="ref-for-environment-settings-object-3">environment settings object</a>.
        </li><li>⌛ Let <var>key</var> be a tuple consisting of <var>absolute URL</var>, <var>corsAttributeState</var>, and, if <var>corsAttributeState</var> is not <a data-link-type="state" href="infrastructure.html#statedef-cors-no-cors" id="ref-for-statedef-cors-no-cors-4">No CORS</a>, <var>origin</var>.
@@ -2689,7 +2689,7 @@ was an English <span class="p">&lt;</span><span class="nt">a</span> <span class=
       some fatal way such that the image dimensions cannot be obtained, or if the resource type is <code>multipart/x-mixed-replace</code>, then let <a data-link-type="dfn" href="semantics-embedded-content.html#pending-request" id="ref-for-pending-request-28">pending request</a> be null and abort
       these steps.
          </li><li>Otherwise, <var>response</var>’s unsafe response is <var>image
-      request</var>’s <a data-link-type="dfn" href="semantics-embedded-content.html#image-data" id="ref-for-image-data-6">image data</a>. It can be either <a data-link-type="dfn" href="browsers.html#same-origin" id="ref-for-same-origin-5">CORS-same-origin</a> or <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-cors-check">CORS-cross-origin</a>; this affects the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-11">origin</a> of the image itself (e.g., when used on a <code>canvas</code>).
+      request</var>’s <a data-link-type="dfn" href="semantics-embedded-content.html#image-data" id="ref-for-image-data-6">image data</a>. It can be either <a data-link-type="dfn" href="browsers.html#same-origin" id="ref-for-same-origin-5">CORS-same-origin</a> or <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-cors-check">CORS-cross-origin</a>; this affects the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-9">origin</a> of the image itself (e.g., when used on a <code>canvas</code>).
         </li></ol>
        </li><li>
         <p><a data-link-type="dfn" href="webappapis.html#queuing" id="ref-for-queuing-13">Queue a task</a> to run the following substeps:</p>
@@ -3817,7 +3817,7 @@ inevitable result of using a markup generator.)</p>
        </li><li>Unset <var>child document</var>’s <a data-link-type="dfn" href="semantics-embedded-content.html#iframe-load-in-progress" id="ref-for-iframe-load-in-progress-2">iframe load in progress</a> flag.
       </li></ol>
       <p class="warning">This, in conjunction with scripting, can be used to probe the URL space of the
-  local network’s HTTP servers. User agents may implement <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-12">cross-origin</a> access control policies that are stricter than those described above to mitigate this attack, but
+  local network’s HTTP servers. User agents may implement <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-10">cross-origin</a> access control policies that are stricter than those described above to mitigate this attack, but
   unfortunately such policies are typically not compatible with existing Web content.</p>
       <p>When the <code>iframe</code>’s <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-28">browsing context</a>’s <a data-link-type="dfn" href="browsers.html#active-document" id="ref-for-active-document-14">active document</a> is
   not <a data-link-type="dfn" href="syntax.html#ready-for-post-load-tasks" id="ref-for-ready-for-post-load-tasks-2">ready for post-load tasks</a>, and when anything in the <code>iframe</code> is <a data-link-type="dfn" href="syntax.html#delay-the-load-event" id="ref-for-delay-the-load-event-5">delaying the load event</a> of the <code>iframe</code>’s <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-29">browsing context</a>’s <a data-link-type="dfn" href="browsers.html#active-document" id="ref-for-active-document-15">active document</a>, and when the <code>iframe</code>’s <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-30">browsing context</a> is in the <a data-link-type="dfn" href="browsers.html#delaying-load-events-mode" id="ref-for-delaying-load-events-mode-1">delaying <code>load</code> events
@@ -3840,7 +3840,7 @@ inevitable result of using a markup generator.)</p>
   enables a set of extra restrictions on any content hosted by the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-28">iframe</a></code>. Its value
   must be an <a data-link-type="dfn" href="infrastructure.html#unordered-set-of-unique-space-separated-tokens" id="ref-for-unordered-set-of-unique-space-separated-tokens-1">unordered set of unique space-separated tokens</a> that are <a data-link-type="dfn" href="infrastructure.html#ascii-case-insensitive" id="ref-for-ascii-case-insensitive-16">ASCII
   case-insensitive</a>. The allowed values are <code>allow-forms</code>, <code>allow-pointer-lock</code>, <code>allow-popups</code>, <code>allow-same-origin</code>, <code>allow-scripts</code>, and <code>allow-top-navigation</code>.</p>
-     <p>When the attribute is set, the content is treated as being from a unique <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-13">origin</a>,
+     <p>When the attribute is set, the content is treated as being from a unique <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-11">origin</a>,
   forms, scripts, and various potentially annoying APIs are disabled, links are prevented from
   targeting other <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-33">browsing contexts</a>, and plugins are secured.
   The <code>allow-same-origin</code> keyword causes
@@ -3956,7 +3956,7 @@ inevitable result of using a markup generator.)</p>
       <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLIFrameElement" data-dfn-type="attribute" data-export="" id="dom-htmliframeelement-allowfullscreen"><code>allowFullscreen</code></dfn> IDL attribute
   must <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-31">reflect</a> the <code>allowfullscreen</code> content attribute.</p>
       <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLIFrameElement" data-dfn-type="attribute" data-export="" id="dom-htmliframeelement-contentdocument"><code>contentDocument</code></dfn> IDL attribute must
-  return the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object of the <a data-link-type="dfn" href="browsers.html#active-document" id="ref-for-active-document-16">active document</a> of the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-46">iframe</a></code> element’s <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-20">nested browsing context</a>, if any and if its <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-14">origin</a> is the <a data-link-type="dfn" href="browsers.html#same-origin-domain" id="ref-for-same-origin-domain-1">same origin-domain</a> as the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-15">origin</a> specified by the <a data-link-type="dfn" href="webappapis.html#incumbent-settings-object" id="ref-for-incumbent-settings-object-1">incumbent settings object</a>, or null otherwise.</p>
+  return the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object of the <a data-link-type="dfn" href="browsers.html#active-document" id="ref-for-active-document-16">active document</a> of the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-46">iframe</a></code> element’s <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-20">nested browsing context</a>, if any and if its <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-12">origin</a> is the <a data-link-type="dfn" href="browsers.html#same-origin-domain" id="ref-for-same-origin-domain-1">same origin-domain</a> as the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-13">origin</a> specified by the <a data-link-type="dfn" href="webappapis.html#incumbent-settings-object" id="ref-for-incumbent-settings-object-1">incumbent settings object</a>, or null otherwise.</p>
       <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLIFrameElement" data-dfn-type="attribute" data-export="" id="dom-htmliframeelement-contentwindow"><code>contentWindow</code></dfn> IDL attribute must
   return the <code>WindowProxy</code> object of the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-47">iframe</a></code> element’s <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-21">nested browsing context</a>, if any, or null otherwise.</p>
      </div>
@@ -4220,7 +4220,7 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
      <p>The <dfn class="dfn-paneled" data-dfn-for="object" data-dfn-type="element-attr" data-export="" id="element-attrdef-object-data"><code>data</code></dfn> attribute, if present, specifies the
   address of the resource. If present, the attribute must be a <a data-link-type="dfn" href="infrastructure.html#valid-non-empty-url-potentially-surrounded-by-spaces" id="ref-for-valid-non-empty-url-potentially-surrounded-by-spaces-5">valid non-empty URL potentially
   surrounded by spaces</a>.</p>
-     <p class="warning">Authors who reference resources from other <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-16">origins</a> that they do not trust are urged to use the <code>typemustmatch</code> attribute defined below. Without that
+     <p class="warning">Authors who reference resources from other <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-14">origins</a> that they do not trust are urged to use the <code>typemustmatch</code> attribute defined below. Without that
   attribute, it is possible in certain cases for an attacker on the remote host to use the plugin
   mechanism to run arbitrary scripts, even if the author has used features such as the Flash
   "allowScriptAccess" parameter.</p>
@@ -4454,7 +4454,7 @@ attribute’s value is a type that a <a data-link-type="dfn" href="infrastructur
   content attributes of the same name. The <code class="idl"><a data-link-type="idl" href="semantics-embedded-content.html#dom-htmlobjectelement-typemustmatch" id="ref-for-dom-htmlobjectelement-typemustmatch-1">typeMustMatch</a></code> IDL attribute must <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-34">reflect</a> the <code><a data-link-type="element-sub" href="semantics-embedded-content.html#element-attrdef-object-typemustmatch" id="ref-for-element-attrdef-object-typemustmatch-1">typemustmatch</a></code> content
   attribute.</p>
       <p>The <code class="idl"><a data-link-type="idl" href="semantics-embedded-content.html#dom-htmlobjectelement-contentdocument" id="ref-for-dom-htmlobjectelement-contentdocument-1">contentDocument</a></code> IDL attribute must return the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object of the <a data-link-type="dfn" href="browsers.html#active-document" id="ref-for-active-document-21">active document</a> of the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-53">object</a></code> element’s <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-38">nested browsing context</a>, if any and if
-  its <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-17">origin</a> is the <a data-link-type="dfn" href="browsers.html#same-origin-domain" id="ref-for-same-origin-domain-2">same origin-domain</a> as the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-18">origin</a> specified by the <a data-link-type="dfn" href="webappapis.html#incumbent-settings-object" id="ref-for-incumbent-settings-object-2">incumbent settings object</a>, or null otherwise.</p>
+  its <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-15">origin</a> is the <a data-link-type="dfn" href="browsers.html#same-origin-domain" id="ref-for-same-origin-domain-2">same origin-domain</a> as the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-16">origin</a> specified by the <a data-link-type="dfn" href="webappapis.html#incumbent-settings-object" id="ref-for-incumbent-settings-object-2">incumbent settings object</a>, or null otherwise.</p>
       <p>The <code class="idl"><a data-link-type="idl" href="semantics-embedded-content.html#dom-htmlobjectelement-contentwindow" id="ref-for-dom-htmlobjectelement-contentwindow-1">contentWindow</a></code> IDL attribute must
   return the <code>WindowProxy</code> object of the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-54">object</a></code> element’s <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-39">nested browsing context</a>, if it has one; otherwise, it must return null.</p>
       <p>The <code>willValidate</code>, <code>validity</code>, and <code>validationMessage</code> attributes, and the <code>checkValidity()</code>, <code>reportValidity()</code>, and <code>setCustomValidity()</code> methods, are part of the <a data-link-type="dfn" href="sec-forms.html#constraint-validation-api" id="ref-for-constraint-validation-api-1">constraint validation API</a>. The <code>form</code> IDL attribute
@@ -9022,7 +9022,7 @@ red:89
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-2">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-3">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-fingerprinting-vector-4">2.6.2. 처리 모델</a>
-    </li><li><a href="dom.html#ref-for-fingerprinting-vector-5">3.1.2. Resource metadata management</a>
+    </li><li><a href="dom.html#ref-for-fingerprinting-vector-5">3.1.2. 리소스 메타데이터 관리</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fingerprinting-vector-6">4.7.14.6. Offsets into the media resource</a>
     </li><li><a href="sec-forms.html#ref-for-fingerprinting-vector-7">4.10.5.1.18. Submit Button state (type=submit)</a>
     </li><li><a href="sec-forms.html#ref-for-fingerprinting-vector-8">4.10.5.1.20. Reset Button state (type=reset)</a>
@@ -9482,7 +9482,7 @@ red:89
   <aside class="dfn-panel" data-for="fire">
    <b><a href="infrastructure.html#fire">#fire</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-fire-1">3.1.2. Resource metadata management</a>
+    <li><a href="dom.html#ref-for-fire-1">3.1.2. 리소스 메타데이터 관리</a>
     </li><li><a href="dom.html#ref-for-fire-2">3.1.4. Loading XML documents</a>
     </li><li><a href="document-metadata.html#ref-for-fire-3">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-fire-4">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-fire-5">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-fire-6">(2)</a>
@@ -9745,7 +9745,7 @@ red:89
    <b><a href="infrastructure.html#utf-8-decode-without-bom">#utf-8-decode-without-bom</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-utf-8-decode-without-bom-1">2.2.2. 의존성</a>
-    </li><li><a href="dom.html#ref-for-utf-8-decode-without-bom-2">3.1.2. Resource metadata management</a>
+    </li><li><a href="dom.html#ref-for-utf-8-decode-without-bom-2">3.1.2. 리소스 메타데이터 관리</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="utf-8-decode-without-bom-or-fail">
@@ -9785,7 +9785,7 @@ red:89
   <aside class="dfn-panel" data-for="cookie-string">
    <b><a href="infrastructure.html#cookie-string">#cookie-string</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-cookie-string-1">3.1.2. Resource metadata management</a>
+    <li><a href="dom.html#ref-for-cookie-string-1">3.1.2. 리소스 메타데이터 관리</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="throw">
@@ -10270,7 +10270,7 @@ red:89
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-43">2.4.5.6. 표준 시간대</a> <a href="infrastructure.html#ref-for-ascii-digits-44">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-45">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-46">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-47">2.4.5.8. 주(weeks)</a> <a href="infrastructure.html#ref-for-ascii-digits-48">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-49">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-50">(4)</a>
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-51">2.4.5.9. 기간</a> <a href="infrastructure.html#ref-for-ascii-digits-52">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-53">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-54">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-55">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-56">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-57">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-58">(8)</a> <a href="infrastructure.html#ref-for-ascii-digits-59">(9)</a> <a href="infrastructure.html#ref-for-ascii-digits-60">(10)</a>
-    </li><li><a href="dom.html#ref-for-ascii-digits-61">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-ascii-digits-62">(2)</a>
+    </li><li><a href="dom.html#ref-for-ascii-digits-61">3.1.2. 리소스 메타데이터 관리</a> <a href="dom.html#ref-for-ascii-digits-62">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-ascii-digits-63">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-ascii-digits-64">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-ascii-digits-65">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-ascii-digits-66">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-ascii-digits-67">4.5.16. The time element</a> <a href="textlevel-semantics.html#ref-for-ascii-digits-68">(2)</a>
@@ -11687,8 +11687,8 @@ red:89
    <ul>
     <li><a href="infrastructure.html#ref-for-the-document-address-1">2.5.1. 용어</a>
     </li><li><a href="infrastructure.html#ref-for-the-document-address-2">2.6.2. 처리 모델</a>
-    </li><li><a href="dom.html#ref-for-the-document-address-3">3.1. Documents</a> <a href="dom.html#ref-for-the-document-address-4">(2)</a> <a href="dom.html#ref-for-the-document-address-5">(3)</a>
-    </li><li><a href="dom.html#ref-for-the-document-address-6">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-the-document-address-7">(2)</a> <a href="dom.html#ref-for-the-document-address-8">(3)</a> <a href="dom.html#ref-for-the-document-address-9">(4)</a> <a href="dom.html#ref-for-the-document-address-10">(5)</a>
+    </li><li><a href="dom.html#ref-for-the-document-address-3">3.1. 문서</a> <a href="dom.html#ref-for-the-document-address-4">(2)</a> <a href="dom.html#ref-for-the-document-address-5">(3)</a>
+    </li><li><a href="dom.html#ref-for-the-document-address-6">3.1.2. 리소스 메타데이터 관리</a> <a href="dom.html#ref-for-the-document-address-7">(2)</a> <a href="dom.html#ref-for-the-document-address-8">(3)</a> <a href="dom.html#ref-for-the-document-address-9">(4)</a> <a href="dom.html#ref-for-the-document-address-10">(5)</a>
     </li><li><a href="document-metadata.html#ref-for-the-document-address-11">4.2.5.3. Pragma directives</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-the-document-address-12">4.7.6. The iframe element</a>
     </li><li><a href="links.html#ref-for-the-document-address-13">4.8.6.5. Link type "icon"</a>
@@ -11706,14 +11706,14 @@ red:89
   <aside class="dfn-panel" data-for="the-documents-referrer">
    <b><a href="dom.html#the-documents-referrer">#the-documents-referrer</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-the-documents-referrer-1">3.1.2. Resource metadata management</a>
+    <li><a href="dom.html#ref-for-the-documents-referrer-1">3.1.2. 리소스 메타데이터 관리</a>
     </li><li><a href="browsers.html#ref-for-the-documents-referrer-2">6.7.1. Navigating across documents</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="reload-override-flag">
    <b><a href="dom.html#reload-override-flag">#reload-override-flag</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-reload-override-flag-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-reload-override-flag-1">3.1. 문서</a>
     </li><li><a href="browsers.html#ref-for-reload-override-flag-2">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-reload-override-flag-3">(2)</a>
     </li><li><a href="webappapis.html#ref-for-reload-override-flag-4">7.3.1. Opening the input stream</a>
     </li><li><a href="webappapis.html#ref-for-reload-override-flag-5">7.3.3. document.write()</a>
@@ -11722,7 +11722,7 @@ red:89
   <aside class="dfn-panel" data-for="reload-override-buffer">
    <b><a href="dom.html#reload-override-buffer">#reload-override-buffer</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-reload-override-buffer-1">3.1. Documents</a> <a href="dom.html#ref-for-reload-override-buffer-2">(2)</a>
+    <li><a href="dom.html#ref-for-reload-override-buffer-1">3.1. 문서</a> <a href="dom.html#ref-for-reload-override-buffer-2">(2)</a>
     </li><li><a href="webappapis.html#ref-for-reload-override-buffer-3">7.3.1. Opening the input stream</a>
     </li><li><a href="webappapis.html#ref-for-reload-override-buffer-4">7.3.3. document.write()</a>
    </li></ul>
@@ -11730,7 +11730,7 @@ red:89
   <aside class="dfn-panel" data-for="overridden-reload">
    <b><a href="dom.html#overridden-reload">#overridden-reload</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-overridden-reload-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-overridden-reload-1">3.1. 문서</a>
     </li><li><a href="browsers.html#ref-for-overridden-reload-2">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-overridden-reload-3">(2)</a>
     </li><li><a href="browsers.html#ref-for-overridden-reload-4">6.7.1. Navigating across documents</a>
    </li></ul>
@@ -11738,7 +11738,7 @@ red:89
   <aside class="dfn-panel" data-for="enumdef-document-documentreadystate">
    <b><a href="dom.html#enumdef-document-documentreadystate">#enumdef-document-documentreadystate</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-enumdef-document-documentreadystate-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-enumdef-document-documentreadystate-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-dir">
@@ -11750,7 +11750,7 @@ red:89
   <aside class="dfn-panel" data-for="document-https-state">
    <b><a href="dom.html#document-https-state">#document-https-state</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-document-https-state-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-document-https-state-1">3.1. 문서</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-document-https-state-2">4.7.6. The iframe element</a>
     </li><li><a href="browsers.html#ref-for-document-https-state-3">6.1.6. Script settings for browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-document-https-state-4">6.7.1. Navigating across documents</a>
@@ -11759,40 +11759,40 @@ red:89
   <aside class="dfn-panel" data-for="document-csp-list">
    <b><a href="dom.html#document-csp-list">#document-csp-list</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-document-csp-list-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-document-csp-list-1">3.1. 문서</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-document-csp-list-2">4.7.6. The iframe element</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-referrer">
    <b><a href="dom.html#dom-document-referrer">#dom-document-referrer</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-referrer-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-referrer-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-cookie">
    <b><a href="dom.html#dom-document-cookie">#dom-document-cookie</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-cookie-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-cookie-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="cookie-averse">
    <b><a href="dom.html#cookie-averse">#cookie-averse</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-cookie-averse-1">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-cookie-averse-2">(2)</a>
+    <li><a href="dom.html#ref-for-cookie-averse-1">3.1.2. 리소스 메타데이터 관리</a> <a href="dom.html#ref-for-cookie-averse-2">(2)</a>
     </li><li><a href="browsers.html#ref-for-cookie-averse-3">6.5. Sandboxing</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-lastmodified">
    <b><a href="dom.html#dom-document-lastmodified">#dom-document-lastmodified</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-lastmodified-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-lastmodified-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="current-document-readiness">
    <b><a href="dom.html#current-document-readiness">#current-document-readiness</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-current-document-readiness-1">2.2.4. XPath와 XSLT와의 상호작용</a>
-    </li><li><a href="dom.html#ref-for-current-document-readiness-2">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-current-document-readiness-3">(2)</a>
+    </li><li><a href="dom.html#ref-for-current-document-readiness-2">3.1.2. 리소스 메타데이터 관리</a> <a href="dom.html#ref-for-current-document-readiness-3">(2)</a>
     </li><li><a href="dom.html#ref-for-current-document-readiness-4">3.1.4. Loading XML documents</a> <a href="dom.html#ref-for-current-document-readiness-5">(2)</a>
     </li><li><a href="browsers.html#ref-for-current-document-readiness-6">6.7.10. History traversal</a>
     </li><li><a href="webappapis.html#ref-for-current-document-readiness-7">7.3.1. Opening the input stream</a>
@@ -11809,68 +11809,68 @@ red:89
   <aside class="dfn-panel" data-for="dom-document-readystate">
    <b><a href="dom.html#dom-document-readystate">#dom-document-readystate</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-readystate-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-readystate-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-head">
    <b><a href="dom.html#dom-document-head">#dom-document-head</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-head-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-head-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-title">
    <b><a href="dom.html#dom-document-title">#dom-document-title</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-title-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-title-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-body">
    <b><a href="dom.html#dom-document-body">#dom-document-body</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-body-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-body-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-images">
    <b><a href="dom.html#dom-document-images">#dom-document-images</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-images-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-images-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-embeds">
    <b><a href="dom.html#dom-document-embeds">#dom-document-embeds</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-embeds-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-embeds-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-plugins">
    <b><a href="dom.html#dom-document-plugins">#dom-document-plugins</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-plugins-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-plugins-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-links">
    <b><a href="dom.html#dom-document-links">#dom-document-links</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-links-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-links-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-forms">
    <b><a href="dom.html#dom-document-forms">#dom-document-forms</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-forms-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-forms-1">3.1.1. Document 객체</a>
     </li><li><a href="sec-forms.html#ref-for-dom-document-forms-2">4.10.3. The form element</a> <a href="sec-forms.html#ref-for-dom-document-forms-3">(2)</a> <a href="sec-forms.html#ref-for-dom-document-forms-4">(3)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-scripts">
    <b><a href="dom.html#dom-document-scripts">#dom-document-scripts</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-scripts-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-scripts-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-document-currentscript">
    <b><a href="dom.html#dom-document-currentscript">#dom-document-currentscript</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-currentscript-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-currentscript-1">3.1.1. Document 객체</a>
     </li><li><a href="semantics-scripting.html#ref-for-dom-document-currentscript-2">4.12.1.1. Processing model</a> <a href="semantics-scripting.html#ref-for-dom-document-currentscript-3">(2)</a> <a href="semantics-scripting.html#ref-for-dom-document-currentscript-4">(3)</a> <a href="semantics-scripting.html#ref-for-dom-document-currentscript-5">(4)</a>
    </li></ul>
   </aside>
@@ -12037,7 +12037,7 @@ red:89
    <ul>
     <li><a href="infrastructure.html#ref-for-htmlelement-htmlelement-1">2.7.1. IDL 속성(attribute)에 콘텐트 속성(attribute) 반영하기</a> <a href="infrastructure.html#ref-for-htmlelement-htmlelement-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-htmlelement-htmlelement-3">2.7.2.3. HTMLOptionsCollection 인터페이스</a>
-    </li><li><a href="dom.html#ref-for-htmlelement-htmlelement-4">3.1.1. The Document object</a>
+    </li><li><a href="dom.html#ref-for-htmlelement-htmlelement-4">3.1.1. Document 객체</a>
     </li><li><a href="dom.html#ref-for-htmlelement-htmlelement-5">3.2.2. Elements in the DOM</a> <a href="dom.html#ref-for-htmlelement-htmlelement-6">(2)</a> <a href="dom.html#ref-for-htmlelement-htmlelement-7">(3)</a> <a href="dom.html#ref-for-htmlelement-htmlelement-8">(4)</a> <a href="dom.html#ref-for-htmlelement-htmlelement-9">(5)</a> <a href="dom.html#ref-for-htmlelement-htmlelement-10">(6)</a>
     </li><li><a href="semantics.html#ref-for-htmlelement-htmlelement-11">4.1.1. The html element</a>
     </li><li><a href="document-metadata.html#ref-for-htmlelement-htmlelement-12">4.2.1. The head element</a>
@@ -14018,7 +14018,7 @@ red:89
   <aside class="dfn-panel" data-for="htmlheadelement-htmlheadelement">
    <b><a href="document-metadata.html#htmlheadelement-htmlheadelement">#htmlheadelement-htmlheadelement</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-htmlheadelement-htmlheadelement-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-htmlheadelement-htmlheadelement-1">3.1.1. Document 객체</a>
     </li><li><a href="obsolete.html#ref-for-htmlheadelement-htmlheadelement-2">11.3.5. Other elements, attributes and APIs</a>
     </li><li><a href="fullindex.html#ref-for-htmlheadelement-htmlheadelement-3">Elements</a>
     </li><li><a href="fullindex.html#ref-for-htmlheadelement-htmlheadelement-4">Element Interfaces</a>
@@ -16950,7 +16950,7 @@ red:89
    <b><a href="semantics-embedded-content.html#element-attrdef-iframe-sandbox">#element-attrdef-iframe-sandbox</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-element-attrdef-iframe-sandbox-1">2.1.5. Plugin 콘텐트 처리기</a>
-    </li><li><a href="dom.html#ref-for-element-attrdef-iframe-sandbox-2">3.1.2. Resource metadata management</a>
+    </li><li><a href="dom.html#ref-for-element-attrdef-iframe-sandbox-2">3.1.2. 리소스 메타데이터 관리</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-3">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-4">(2)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-5">(3)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-6">(4)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-7">(5)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-8">(6)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-9">(7)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-10">(8)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-11">(9)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-12">(10)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-13">(11)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-14">(12)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-iframe-sandbox-15">(13)</a>
     </li><li><a href="browsers.html#ref-for-element-attrdef-iframe-sandbox-16">6.1.5. Browsing context names</a>
     </li><li><a href="browsers.html#ref-for-element-attrdef-iframe-sandbox-17">6.5. Sandboxing</a>
@@ -26009,7 +26009,7 @@ red:89
    <b><a href="semantics-scripting.html#htmlscriptelement-htmlscriptelement">#htmlscriptelement-htmlscriptelement</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-htmlscriptelement-htmlscriptelement-1">2.2.1. 적합성 종류</a>
-    </li><li><a href="dom.html#ref-for-htmlscriptelement-htmlscriptelement-2">3.1.1. The Document object</a>
+    </li><li><a href="dom.html#ref-for-htmlscriptelement-htmlscriptelement-2">3.1.1. Document 객체</a>
     </li><li><a href="obsolete.html#ref-for-htmlscriptelement-htmlscriptelement-3">11.3.5. Other elements, attributes and APIs</a>
     </li><li><a href="fullindex.html#ref-for-htmlscriptelement-htmlscriptelement-4">Elements</a>
     </li><li><a href="fullindex.html#ref-for-htmlscriptelement-htmlscriptelement-5">Element Interfaces</a>
@@ -26845,7 +26845,7 @@ red:89
   <aside class="dfn-panel" data-for="dom-document-hasfocus">
    <b><a href="editing.html#dom-document-hasfocus">#dom-document-hasfocus</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-hasfocus-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-hasfocus-1">3.1.1. Document 객체</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-window-focus">
@@ -27433,8 +27433,8 @@ red:89
     </li><li><a href="infrastructure.html#ref-for-browsing-context-3">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-browsing-context-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-5">2.5.1. 용어</a> <a href="infrastructure.html#ref-for-browsing-context-6">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-browsing-context-7">2.6.2. 처리 모델</a> <a href="infrastructure.html#ref-for-browsing-context-8">(2)</a>
-    </li><li><a href="dom.html#ref-for-browsing-context-9">3.1. Documents</a> <a href="dom.html#ref-for-browsing-context-10">(2)</a> <a href="dom.html#ref-for-browsing-context-11">(3)</a> <a href="dom.html#ref-for-browsing-context-12">(4)</a> <a href="dom.html#ref-for-browsing-context-13">(5)</a>
-    </li><li><a href="dom.html#ref-for-browsing-context-14">3.1.2. Resource metadata management</a>
+    </li><li><a href="dom.html#ref-for-browsing-context-9">3.1. 문서</a> <a href="dom.html#ref-for-browsing-context-10">(2)</a> <a href="dom.html#ref-for-browsing-context-11">(3)</a> <a href="dom.html#ref-for-browsing-context-12">(4)</a> <a href="dom.html#ref-for-browsing-context-13">(5)</a>
+    </li><li><a href="dom.html#ref-for-browsing-context-14">3.1.2. 리소스 메타데이터 관리</a>
     </li><li><a href="document-metadata.html#ref-for-browsing-context-15">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-browsing-context-16">(2)</a> <a href="document-metadata.html#ref-for-browsing-context-17">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-browsing-context-18">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-browsing-context-19">(2)</a> <a href="document-metadata.html#ref-for-browsing-context-20">(3)</a> <a href="document-metadata.html#ref-for-browsing-context-21">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-browsing-context-22">4.2.7. Interactions of styling and scripting</a>
@@ -27524,7 +27524,7 @@ red:89
    <b><a href="browsers.html#active-document">#active-document</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-active-document-1">2.6.2. 처리 모델</a>
-    </li><li><a href="dom.html#ref-for-active-document-2">3.1. Documents</a> <a href="dom.html#ref-for-active-document-3">(2)</a> <a href="dom.html#ref-for-active-document-4">(3)</a> <a href="dom.html#ref-for-active-document-5">(4)</a>
+    </li><li><a href="dom.html#ref-for-active-document-2">3.1. 문서</a> <a href="dom.html#ref-for-active-document-3">(2)</a> <a href="dom.html#ref-for-active-document-4">(3)</a> <a href="dom.html#ref-for-active-document-5">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-active-document-6">4.2.7. Interactions of styling and scripting</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-active-document-7">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-active-document-8">(2)</a> <a href="semantics-embedded-content.html#ref-for-active-document-9">(3)</a> <a href="semantics-embedded-content.html#ref-for-active-document-10">(4)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-active-document-11">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-active-document-12">(2)</a> <a href="semantics-embedded-content.html#ref-for-active-document-13">(3)</a> <a href="semantics-embedded-content.html#ref-for-active-document-14">(4)</a> <a href="semantics-embedded-content.html#ref-for-active-document-15">(5)</a> <a href="semantics-embedded-content.html#ref-for-active-document-16">(6)</a>
@@ -28292,7 +28292,7 @@ red:89
   <aside class="dfn-panel" data-for="windowproxy">
    <b><a href="browsers.html#windowproxy">#windowproxy</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-windowproxy-1">3.1.1. The Document object</a> <a href="dom.html#ref-for-windowproxy-2">(2)</a>
+    <li><a href="dom.html#ref-for-windowproxy-1">3.1.1. Document 객체</a> <a href="dom.html#ref-for-windowproxy-2">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-windowproxy-3">4.7.6. The iframe element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-windowproxy-4">4.7.8. The object element</a>
     </li><li><a href="browsers.html#ref-for-windowproxy-5">6.1. Browsing contexts</a> <a href="browsers.html#ref-for-windowproxy-6">(2)</a> <a href="browsers.html#ref-for-windowproxy-7">(3)</a>
@@ -28332,47 +28332,46 @@ red:89
    <ul>
     <li><a href="infrastructure.html#ref-for-concept-cross-origin-1">2.6.2. 처리 모델</a>
     </li><li><a href="infrastructure.html#ref-for-concept-cross-origin-2">2.9.1. 복제 가능한 객체</a>
-    </li><li><a href="dom.html#ref-for-concept-cross-origin-3">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-concept-cross-origin-4">(2)</a>
-    </li><li><a href="dom.html#ref-for-concept-cross-origin-5">3.1.4. Loading XML documents</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-concept-cross-origin-6">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-7">(2)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-8">(3)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-9">(4)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-10">(5)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-11">(6)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-concept-cross-origin-12">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-13">(2)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-14">(3)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-15">(4)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-concept-cross-origin-16">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-17">(2)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-18">(3)</a>
-    </li><li><a href="links.html#ref-for-concept-cross-origin-19">4.8.5. Downloading resources</a> <a href="links.html#ref-for-concept-cross-origin-20">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-concept-cross-origin-21">4.10.19.6.1. Autofocusing a form control: the autofocus attribute</a> <a href="sec-forms.html#ref-for-concept-cross-origin-22">(2)</a> <a href="sec-forms.html#ref-for-concept-cross-origin-23">(3)</a> <a href="sec-forms.html#ref-for-concept-cross-origin-24">(4)</a>
-    </li><li><a href="semantics-scripting.html#ref-for-concept-cross-origin-25">4.12.1. The script element</a>
-    </li><li><a href="semantics-scripting.html#ref-for-concept-cross-origin-26">4.12.4.3. Security with canvas elements</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-27">6.1. Browsing contexts</a> <a href="browsers.html#ref-for-concept-cross-origin-28">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-29">(3)</a> <a href="browsers.html#ref-for-concept-cross-origin-30">(4)</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-31">6.1.1.1. Navigating nested browsing contexts in the DOM</a> <a href="browsers.html#ref-for-concept-cross-origin-32">(2)</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-33">6.1.3. Security</a> <a href="browsers.html#ref-for-concept-cross-origin-34">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-35">(3)</a> <a href="browsers.html#ref-for-concept-cross-origin-36">(4)</a> <a href="browsers.html#ref-for-concept-cross-origin-37">(5)</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-38">6.1.4. Groupings of browsing contexts</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-39">6.1.6. Script settings for browsing contexts</a> <a href="browsers.html#ref-for-concept-cross-origin-40">(2)</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-41">6.2.3.2. IsPlatformObjectSameOrigin ( O )</a> <a href="browsers.html#ref-for-concept-cross-origin-42">(2)</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-43">6.2.3.3. CrossOriginGetOwnPropertyHelper ( O, P )</a> <a href="browsers.html#ref-for-concept-cross-origin-44">(2)</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-45">6.2.3.3.2. CrossOriginFunctionWrapper ( needsWrapping, functionToWrap )</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-46">6.4. Origin</a> <a href="browsers.html#ref-for-concept-cross-origin-47">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-48">(3)</a> <a href="browsers.html#ref-for-concept-cross-origin-49">(4)</a> <a href="browsers.html#ref-for-concept-cross-origin-50">(5)</a> <a href="browsers.html#ref-for-concept-cross-origin-51">(6)</a> <a href="browsers.html#ref-for-concept-cross-origin-52">(7)</a> <a href="browsers.html#ref-for-concept-cross-origin-53">(8)</a> <a href="browsers.html#ref-for-concept-cross-origin-54">(9)</a> <a href="browsers.html#ref-for-concept-cross-origin-55">(10)</a> <a href="browsers.html#ref-for-concept-cross-origin-56">(11)</a> <a href="browsers.html#ref-for-concept-cross-origin-57">(12)</a> <a href="browsers.html#ref-for-concept-cross-origin-58">(13)</a> <a href="browsers.html#ref-for-concept-cross-origin-59">(14)</a> <a href="browsers.html#ref-for-concept-cross-origin-60">(15)</a> <a href="browsers.html#ref-for-concept-cross-origin-61">(16)</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-62">6.4.1. Relaxing the same-origin restriction</a> <a href="browsers.html#ref-for-concept-cross-origin-63">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-64">(3)</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-65">6.5. Sandboxing</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-66">6.6.2. The History interface</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-67">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-concept-cross-origin-68">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-69">(3)</a> <a href="browsers.html#ref-for-concept-cross-origin-70">(4)</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-71">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-concept-cross-origin-72">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-73">(3)</a> <a href="browsers.html#ref-for-concept-cross-origin-74">(4)</a> <a href="browsers.html#ref-for-concept-cross-origin-75">(5)</a> <a href="browsers.html#ref-for-concept-cross-origin-76">(6)</a>
-    </li><li><a href="browsers.html#ref-for-concept-cross-origin-77">6.7.10. History traversal</a> <a href="browsers.html#ref-for-concept-cross-origin-78">(2)</a>
-    </li><li><a href="webappapis.html#ref-for-concept-cross-origin-79">7.1.3.1. Definitions</a>
-    </li><li><a href="webappapis.html#ref-for-concept-cross-origin-80">7.3.1. Opening the input stream</a> <a href="webappapis.html#ref-for-concept-cross-origin-81">(2)</a>
-    </li><li><a href="webappapis.html#ref-for-concept-cross-origin-82">7.5.3. Dialogs implemented using separate documents with showModalDialog()</a> <a href="webappapis.html#ref-for-concept-cross-origin-83">(2)</a> <a href="webappapis.html#ref-for-concept-cross-origin-84">(3)</a> <a href="webappapis.html#ref-for-concept-cross-origin-85">(4)</a> <a href="webappapis.html#ref-for-concept-cross-origin-86">(5)</a>
-    </li><li><a href="webappapis.html#ref-for-concept-cross-origin-87">7.6.1.3. Custom scheme handler: the registerProtocolHandler() method</a> <a href="webappapis.html#ref-for-concept-cross-origin-88">(2)</a>
-    </li><li><a href="webappapis.html#ref-for-concept-cross-origin-89">7.7. Images</a> <a href="webappapis.html#ref-for-concept-cross-origin-90">(2)</a> <a href="webappapis.html#ref-for-concept-cross-origin-91">(3)</a> <a href="webappapis.html#ref-for-concept-cross-origin-92">(4)</a> <a href="webappapis.html#ref-for-concept-cross-origin-93">(5)</a> <a href="webappapis.html#ref-for-concept-cross-origin-94">(6)</a> <a href="webappapis.html#ref-for-concept-cross-origin-95">(7)</a>
-    </li><li><a href="syntax.html#ref-for-concept-cross-origin-96">8.2.2.2. Determining the character encoding</a> <a href="syntax.html#ref-for-concept-cross-origin-97">(2)</a>
-    </li><li><a href="rendering.html#ref-for-concept-cross-origin-98">10.3.2. The page</a>
-    </li><li><a href="obsolete.html#ref-for-concept-cross-origin-99">11.3.3. Frames</a> <a href="obsolete.html#ref-for-concept-cross-origin-100">(2)</a>
-    </li><li><a href="obsolete.html#ref-for-concept-cross-origin-101">11.3.4.2. Downloading or updating an application cache</a>
-    </li><li><a href="obsolete.html#ref-for-concept-cross-origin-102">11.3.4.4. Changes to the networking model</a>
-    </li><li><a href="iana.html#ref-for-concept-cross-origin-103">12.1. text/html</a> <a href="iana.html#ref-for-concept-cross-origin-104">(2)</a>
+    </li><li><a href="dom.html#ref-for-concept-cross-origin-3">3.1.4. Loading XML documents</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-concept-cross-origin-4">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-5">(2)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-6">(3)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-7">(4)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-8">(5)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-9">(6)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-concept-cross-origin-10">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-11">(2)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-12">(3)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-13">(4)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-concept-cross-origin-14">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-15">(2)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-16">(3)</a>
+    </li><li><a href="links.html#ref-for-concept-cross-origin-17">4.8.5. Downloading resources</a> <a href="links.html#ref-for-concept-cross-origin-18">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-concept-cross-origin-19">4.10.19.6.1. Autofocusing a form control: the autofocus attribute</a> <a href="sec-forms.html#ref-for-concept-cross-origin-20">(2)</a> <a href="sec-forms.html#ref-for-concept-cross-origin-21">(3)</a> <a href="sec-forms.html#ref-for-concept-cross-origin-22">(4)</a>
+    </li><li><a href="semantics-scripting.html#ref-for-concept-cross-origin-23">4.12.1. The script element</a>
+    </li><li><a href="semantics-scripting.html#ref-for-concept-cross-origin-24">4.12.4.3. Security with canvas elements</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-25">6.1. Browsing contexts</a> <a href="browsers.html#ref-for-concept-cross-origin-26">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-27">(3)</a> <a href="browsers.html#ref-for-concept-cross-origin-28">(4)</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-29">6.1.1.1. Navigating nested browsing contexts in the DOM</a> <a href="browsers.html#ref-for-concept-cross-origin-30">(2)</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-31">6.1.3. Security</a> <a href="browsers.html#ref-for-concept-cross-origin-32">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-33">(3)</a> <a href="browsers.html#ref-for-concept-cross-origin-34">(4)</a> <a href="browsers.html#ref-for-concept-cross-origin-35">(5)</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-36">6.1.4. Groupings of browsing contexts</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-37">6.1.6. Script settings for browsing contexts</a> <a href="browsers.html#ref-for-concept-cross-origin-38">(2)</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-39">6.2.3.2. IsPlatformObjectSameOrigin ( O )</a> <a href="browsers.html#ref-for-concept-cross-origin-40">(2)</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-41">6.2.3.3. CrossOriginGetOwnPropertyHelper ( O, P )</a> <a href="browsers.html#ref-for-concept-cross-origin-42">(2)</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-43">6.2.3.3.2. CrossOriginFunctionWrapper ( needsWrapping, functionToWrap )</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-44">6.4. Origin</a> <a href="browsers.html#ref-for-concept-cross-origin-45">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-46">(3)</a> <a href="browsers.html#ref-for-concept-cross-origin-47">(4)</a> <a href="browsers.html#ref-for-concept-cross-origin-48">(5)</a> <a href="browsers.html#ref-for-concept-cross-origin-49">(6)</a> <a href="browsers.html#ref-for-concept-cross-origin-50">(7)</a> <a href="browsers.html#ref-for-concept-cross-origin-51">(8)</a> <a href="browsers.html#ref-for-concept-cross-origin-52">(9)</a> <a href="browsers.html#ref-for-concept-cross-origin-53">(10)</a> <a href="browsers.html#ref-for-concept-cross-origin-54">(11)</a> <a href="browsers.html#ref-for-concept-cross-origin-55">(12)</a> <a href="browsers.html#ref-for-concept-cross-origin-56">(13)</a> <a href="browsers.html#ref-for-concept-cross-origin-57">(14)</a> <a href="browsers.html#ref-for-concept-cross-origin-58">(15)</a> <a href="browsers.html#ref-for-concept-cross-origin-59">(16)</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-60">6.4.1. Relaxing the same-origin restriction</a> <a href="browsers.html#ref-for-concept-cross-origin-61">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-62">(3)</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-63">6.5. Sandboxing</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-64">6.6.2. The History interface</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-65">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-concept-cross-origin-66">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-67">(3)</a> <a href="browsers.html#ref-for-concept-cross-origin-68">(4)</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-69">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-concept-cross-origin-70">(2)</a> <a href="browsers.html#ref-for-concept-cross-origin-71">(3)</a> <a href="browsers.html#ref-for-concept-cross-origin-72">(4)</a> <a href="browsers.html#ref-for-concept-cross-origin-73">(5)</a> <a href="browsers.html#ref-for-concept-cross-origin-74">(6)</a>
+    </li><li><a href="browsers.html#ref-for-concept-cross-origin-75">6.7.10. History traversal</a> <a href="browsers.html#ref-for-concept-cross-origin-76">(2)</a>
+    </li><li><a href="webappapis.html#ref-for-concept-cross-origin-77">7.1.3.1. Definitions</a>
+    </li><li><a href="webappapis.html#ref-for-concept-cross-origin-78">7.3.1. Opening the input stream</a> <a href="webappapis.html#ref-for-concept-cross-origin-79">(2)</a>
+    </li><li><a href="webappapis.html#ref-for-concept-cross-origin-80">7.5.3. Dialogs implemented using separate documents with showModalDialog()</a> <a href="webappapis.html#ref-for-concept-cross-origin-81">(2)</a> <a href="webappapis.html#ref-for-concept-cross-origin-82">(3)</a> <a href="webappapis.html#ref-for-concept-cross-origin-83">(4)</a> <a href="webappapis.html#ref-for-concept-cross-origin-84">(5)</a>
+    </li><li><a href="webappapis.html#ref-for-concept-cross-origin-85">7.6.1.3. Custom scheme handler: the registerProtocolHandler() method</a> <a href="webappapis.html#ref-for-concept-cross-origin-86">(2)</a>
+    </li><li><a href="webappapis.html#ref-for-concept-cross-origin-87">7.7. Images</a> <a href="webappapis.html#ref-for-concept-cross-origin-88">(2)</a> <a href="webappapis.html#ref-for-concept-cross-origin-89">(3)</a> <a href="webappapis.html#ref-for-concept-cross-origin-90">(4)</a> <a href="webappapis.html#ref-for-concept-cross-origin-91">(5)</a> <a href="webappapis.html#ref-for-concept-cross-origin-92">(6)</a> <a href="webappapis.html#ref-for-concept-cross-origin-93">(7)</a>
+    </li><li><a href="syntax.html#ref-for-concept-cross-origin-94">8.2.2.2. Determining the character encoding</a> <a href="syntax.html#ref-for-concept-cross-origin-95">(2)</a>
+    </li><li><a href="rendering.html#ref-for-concept-cross-origin-96">10.3.2. The page</a>
+    </li><li><a href="obsolete.html#ref-for-concept-cross-origin-97">11.3.3. Frames</a> <a href="obsolete.html#ref-for-concept-cross-origin-98">(2)</a>
+    </li><li><a href="obsolete.html#ref-for-concept-cross-origin-99">11.3.4.2. Downloading or updating an application cache</a>
+    </li><li><a href="obsolete.html#ref-for-concept-cross-origin-100">11.3.4.4. Changes to the networking model</a>
+    </li><li><a href="iana.html#ref-for-concept-cross-origin-101">12.1. text/html</a> <a href="iana.html#ref-for-concept-cross-origin-102">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="opaque-origin">
    <b><a href="browsers.html#opaque-origin">#opaque-origin</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-opaque-origin-1">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-opaque-origin-2">(2)</a>
+    <li><a href="dom.html#ref-for-opaque-origin-1">3.1.2. 리소스 메타데이터 관리</a> <a href="dom.html#ref-for-opaque-origin-2">(2)</a>
     </li><li><a href="browsers.html#ref-for-opaque-origin-3">6.1. Browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-opaque-origin-4">6.4. Origin</a> <a href="browsers.html#ref-for-opaque-origin-5">(2)</a> <a href="browsers.html#ref-for-opaque-origin-6">(3)</a> <a href="browsers.html#ref-for-opaque-origin-7">(4)</a> <a href="browsers.html#ref-for-opaque-origin-8">(5)</a> <a href="browsers.html#ref-for-opaque-origin-9">(6)</a> <a href="browsers.html#ref-for-opaque-origin-10">(7)</a> <a href="browsers.html#ref-for-opaque-origin-11">(8)</a> <a href="browsers.html#ref-for-opaque-origin-12">(9)</a>
     </li><li><a href="browsers.html#ref-for-opaque-origin-13">6.4.1. Relaxing the same-origin restriction</a>
@@ -28478,7 +28477,7 @@ red:89
   <aside class="dfn-panel" data-for="dom-document-domain">
    <b><a href="browsers.html#dom-document-domain">#dom-document-domain</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-domain-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-domain-1">3.1.1. Document 객체</a>
     </li><li><a href="browsers.html#ref-for-dom-document-domain-2">6.1.4. Groupings of browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-dom-document-domain-3">6.2.2. Shared internal slot: [[CrossOriginPropertyDescriptorMap]]</a> <a href="browsers.html#ref-for-dom-document-domain-4">(2)</a> <a href="browsers.html#ref-for-dom-document-domain-5">(3)</a>
     </li><li><a href="browsers.html#ref-for-dom-document-domain-6">6.4. Origin</a>
@@ -28538,7 +28537,7 @@ red:89
   <aside class="dfn-panel" data-for="sandboxed-into-a-unique-origin">
    <b><a href="browsers.html#sandboxed-into-a-unique-origin">#sandboxed-into-a-unique-origin</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-sandboxed-into-a-unique-origin-1">3.1.2. Resource metadata management</a>
+    <li><a href="dom.html#ref-for-sandboxed-into-a-unique-origin-1">3.1.2. 리소스 메타데이터 관리</a>
     </li><li><a href="browsers.html#ref-for-sandboxed-into-a-unique-origin-2">6.4. Origin</a>
     </li><li><a href="browsers.html#ref-for-sandboxed-into-a-unique-origin-3">6.5. Sandboxing</a>
    </li></ul>
@@ -28857,7 +28856,7 @@ red:89
   <aside class="dfn-panel" data-for="dom-document-location">
    <b><a href="browsers.html#dom-document-location">#dom-document-location</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-location-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-location-1">3.1.1. Document 객체</a>
     </li><li><a href="browsers.html#ref-for-dom-document-location-2">6.6.4. The Location interface</a>
    </li></ul>
   </aside>
@@ -28871,7 +28870,7 @@ red:89
   <aside class="dfn-panel" data-for="location-location">
    <b><a href="browsers.html#location-location">#location-location</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-location-location-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-location-location-1">3.1.1. Document 객체</a>
     </li><li><a href="browsers.html#ref-for-location-location-2">6.2. Security infrastructure for Window, WindowProxy, and Location objects</a>
     </li><li><a href="browsers.html#ref-for-location-location-3">6.2.1. Integration with IDL</a>
     </li><li><a href="browsers.html#ref-for-location-location-4">6.2.2. Shared internal slot: [[CrossOriginPropertyDescriptorMap]]</a> <a href="browsers.html#ref-for-location-location-5">(2)</a>
@@ -28909,7 +28908,7 @@ red:89
   <aside class="dfn-panel" data-for="dom-location-href">
    <b><a href="browsers.html#dom-location-href">#dom-location-href</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-location-href-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-location-href-1">3.1.1. Document 객체</a>
     </li><li><a href="browsers.html#ref-for-dom-location-href-2">6.3. The Window object</a>
     </li><li><a href="browsers.html#ref-for-dom-location-href-3">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-dom-location-href-4">(2)</a>
    </li></ul>
@@ -28996,7 +28995,7 @@ red:89
    <b><a href="browsers.html#source-browsing-context">#source-browsing-context</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-source-browsing-context-1">2.6.2. 처리 모델</a>
-    </li><li><a href="dom.html#ref-for-source-browsing-context-2">3.1. Documents</a> <a href="dom.html#ref-for-source-browsing-context-3">(2)</a>
+    </li><li><a href="dom.html#ref-for-source-browsing-context-2">3.1. 문서</a> <a href="dom.html#ref-for-source-browsing-context-3">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-source-browsing-context-4">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-source-browsing-context-5">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-source-browsing-context-6">4.7.7. The embed element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-source-browsing-context-7">4.7.8. The object element</a>
@@ -29014,7 +29013,7 @@ red:89
    <ul>
     <li><a href="infrastructure.html#ref-for-navigated-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="infrastructure.html#ref-for-navigated-2">2.6.2. 처리 모델</a> <a href="infrastructure.html#ref-for-navigated-3">(2)</a>
-    </li><li><a href="dom.html#ref-for-navigated-4">3.1. Documents</a> <a href="dom.html#ref-for-navigated-5">(2)</a> <a href="dom.html#ref-for-navigated-6">(3)</a> <a href="dom.html#ref-for-navigated-7">(4)</a>
+    </li><li><a href="dom.html#ref-for-navigated-4">3.1. 문서</a> <a href="dom.html#ref-for-navigated-5">(2)</a> <a href="dom.html#ref-for-navigated-6">(3)</a> <a href="dom.html#ref-for-navigated-7">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-navigated-8">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-navigated-9">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-navigated-10">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-navigated-11">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-navigated-12">4.5.1. The a element</a>
@@ -29062,7 +29061,7 @@ red:89
   <aside class="dfn-panel" data-for="exceptions-enabled-flag">
    <b><a href="browsers.html#exceptions-enabled-flag">#exceptions-enabled-flag</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-exceptions-enabled-flag-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-exceptions-enabled-flag-1">3.1. 문서</a>
     </li><li><a href="browsers.html#ref-for-exceptions-enabled-flag-2">6.3.1. APIs for creating and navigating browsing contexts by name</a>
     </li><li><a href="browsers.html#ref-for-exceptions-enabled-flag-3">6.6.4. The Location interface</a> <a href="browsers.html#ref-for-exceptions-enabled-flag-4">(2)</a>
    </li></ul>
@@ -29108,14 +29107,14 @@ red:89
   <aside class="dfn-panel" data-for="set-the-documents-address">
    <b><a href="browsers.html#set-the-documents-address">#set-the-documents-address</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-set-the-documents-address-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-set-the-documents-address-1">3.1. 문서</a>
     </li><li><a href="browsers.html#ref-for-set-the-documents-address-2">6.7.1. Navigating across documents</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="override-url">
    <b><a href="browsers.html#override-url">#override-url</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-override-url-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-override-url-1">3.1. 문서</a>
     </li><li><a href="browsers.html#ref-for-override-url-2">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-override-url-3">(2)</a> <a href="browsers.html#ref-for-override-url-4">(3)</a>
    </li></ul>
   </aside>
@@ -29174,8 +29173,7 @@ red:89
   <aside class="dfn-panel" data-for="fragment-identifier">
    <b><a href="browsers.html#fragment-identifier">#fragment-identifier</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-fragment-identifier-1">3.1. Documents</a>
-    </li><li><a href="browsers.html#ref-for-fragment-identifier-2">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-fragment-identifier-3">(2)</a>
+    <li><a href="browsers.html#ref-for-fragment-identifier-1">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-fragment-identifier-2">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="scroll-to-the-fragment-identifier">
@@ -29225,7 +29223,7 @@ red:89
   <aside class="dfn-panel" data-for="replacement-must-be-enabled">
    <b><a href="browsers.html#replacement-must-be-enabled">#replacement-must-be-enabled</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-replacement-must-be-enabled-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-replacement-must-be-enabled-1">3.1. 문서</a>
     </li><li><a href="document-metadata.html#ref-for-replacement-must-be-enabled-2">4.2.5.3. Pragma directives</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-replacement-must-be-enabled-3">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-replacement-must-be-enabled-4">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-replacement-must-be-enabled-5">4.7.7. The embed element</a>
@@ -29397,7 +29395,7 @@ red:89
   <aside class="dfn-panel" data-for="abort-the-document">
    <b><a href="browsers.html#abort-the-document">#abort-the-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-abort-the-document-1">3.1.2. Resource metadata management</a>
+    <li><a href="dom.html#ref-for-abort-the-document-1">3.1.2. 리소스 메타데이터 관리</a>
     </li><li><a href="browsers.html#ref-for-abort-the-document-2">6.3.1. APIs for creating and navigating browsing contexts by name</a>
     </li><li><a href="browsers.html#ref-for-abort-the-document-3">6.3.4. Garbage collection and browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-abort-the-document-4">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-abort-the-document-5">(2)</a>
@@ -29450,7 +29448,7 @@ red:89
   <aside class="dfn-panel" data-for="concept-script">
    <b><a href="webappapis.html#concept-script">#concept-script</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-concept-script-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-concept-script-1">3.1. 문서</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-concept-script-2">4.7.5. The img element</a>
     </li><li><a href="semantics-scripting.html#ref-for-concept-script-3">4.12.1. The script element</a> <a href="semantics-scripting.html#ref-for-concept-script-4">(2)</a>
     </li><li><a href="browsers.html#ref-for-concept-script-5">6.3.4. Garbage collection and browsing contexts</a>
@@ -29466,7 +29464,7 @@ red:89
   <aside class="dfn-panel" data-for="settings-object">
    <b><a href="webappapis.html#settings-object">#settings-object</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-settings-object-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-settings-object-1">3.1. 문서</a>
     </li><li><a href="browsers.html#ref-for-settings-object-2">6.3.4. Garbage collection and browsing contexts</a>
     </li><li><a href="webappapis.html#ref-for-settings-object-3">7.1.3.3. Creating scripts</a>
     </li><li><a href="webappapis.html#ref-for-settings-object-4">7.1.3.4. Calling scripts</a>
@@ -29570,7 +29568,7 @@ red:89
   <aside class="dfn-panel" data-for="responsible-document">
    <b><a href="webappapis.html#responsible-document">#responsible-document</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-responsible-document-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-responsible-document-1">3.1. 문서</a>
     </li><li><a href="browsers.html#ref-for-responsible-document-2">6.1.6. Script settings for browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-responsible-document-3">6.3.4. Garbage collection and browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-responsible-document-4">6.6.2. The History interface</a>
@@ -30449,7 +30447,7 @@ red:89
   <aside class="dfn-panel" data-for="typedefdef-eventhandlernonnull-eventhandler">
    <b><a href="webappapis.html#typedefdef-eventhandlernonnull-eventhandler">#typedefdef-eventhandlernonnull-eventhandler</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-1">3.1.1. Document 객체</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-2">4.7.14.10.1. AudioTrackList and VideoTrackList objects</a> <a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-5">(4)</a> <a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-6">(5)</a> <a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-7">(6)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-8">4.7.14.11.5. Text track API</a> <a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-9">(2)</a> <a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-10">(3)</a> <a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-11">(4)</a> <a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-12">(5)</a> <a href="semantics-embedded-content.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-13">(6)</a>
     </li><li><a href="webappapis.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-14">7.1.5.1. Event handlers</a> <a href="webappapis.html#ref-for-typedefdef-eventhandlernonnull-eventhandler-15">(2)</a>
@@ -30989,7 +30987,7 @@ red:89
   <aside class="dfn-panel" data-for="globaleventhandlers-globaleventhandlers">
    <b><a href="webappapis.html#globaleventhandlers-globaleventhandlers">#globaleventhandlers-globaleventhandlers</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-globaleventhandlers-globaleventhandlers-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-globaleventhandlers-globaleventhandlers-1">3.1.1. Document 객체</a>
     </li><li><a href="dom.html#ref-for-globaleventhandlers-globaleventhandlers-2">3.2.2. Elements in the DOM</a>
     </li><li><a href="browsers.html#ref-for-globaleventhandlers-globaleventhandlers-3">6.3. The Window object</a>
    </li></ul>
@@ -31011,7 +31009,7 @@ red:89
   <aside class="dfn-panel" data-for="documentandelementeventhandlers-documentandelementeventhandlers">
    <b><a href="webappapis.html#documentandelementeventhandlers-documentandelementeventhandlers">#documentandelementeventhandlers-documentandelementeventhandlers</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-documentandelementeventhandlers-documentandelementeventhandlers-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-documentandelementeventhandlers-documentandelementeventhandlers-1">3.1.1. Document 객체</a>
     </li><li><a href="dom.html#ref-for-documentandelementeventhandlers-documentandelementeventhandlers-2">3.2.2. Elements in the DOM</a>
    </li></ul>
   </aside>
@@ -31063,7 +31061,7 @@ red:89
   <aside class="dfn-panel" data-for="dom-document-_open">
    <b><a href="webappapis.html#dom-document-_open">#dom-document-_open</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-_open-1">3.1.1. The Document object</a> <a href="dom.html#ref-for-dom-document-_open-2">(2)</a>
+    <li><a href="dom.html#ref-for-dom-document-_open-1">3.1.1. Document 객체</a> <a href="dom.html#ref-for-dom-document-_open-2">(2)</a>
     </li><li><a href="browsers.html#ref-for-dom-document-_open-3">6.1. Browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-dom-document-_open-4">6.4. Origin</a>
     </li><li><a href="webappapis.html#ref-for-dom-document-_open-5">7.1.3.1. Definitions</a>
@@ -31088,7 +31086,7 @@ red:89
   <aside class="dfn-panel" data-for="dom-document-close">
    <b><a href="webappapis.html#dom-document-close">#dom-document-close</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-close-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-close-1">3.1.1. Document 객체</a>
     </li><li><a href="webappapis.html#ref-for-dom-document-close-2">7.3.1. Opening the input stream</a> <a href="webappapis.html#ref-for-dom-document-close-3">(2)</a>
     </li><li><a href="webappapis.html#ref-for-dom-document-close-4">7.3.2. Closing the input stream</a>
    </li></ul>
@@ -31103,8 +31101,8 @@ red:89
   <aside class="dfn-panel" data-for="dom-document-write">
    <b><a href="webappapis.html#dom-document-write">#dom-document-write</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-write-1">3.1. Documents</a>
-    </li><li><a href="dom.html#ref-for-dom-document-write-2">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-write-1">3.1. 문서</a>
+    </li><li><a href="dom.html#ref-for-dom-document-write-2">3.1.1. Document 객체</a>
     </li><li><a href="semantics-scripting.html#ref-for-dom-document-write-3">4.12.1. The script element</a> <a href="semantics-scripting.html#ref-for-dom-document-write-4">(2)</a>
     </li><li><a href="webappapis.html#ref-for-dom-document-write-5">7.1.3.8. Runtime script errors</a> <a href="webappapis.html#ref-for-dom-document-write-6">(2)</a> <a href="webappapis.html#ref-for-dom-document-write-7">(3)</a>
     </li><li><a href="webappapis.html#ref-for-dom-document-write-8">7.3.1. Opening the input stream</a> <a href="webappapis.html#ref-for-dom-document-write-9">(2)</a>
@@ -31122,7 +31120,7 @@ red:89
   <aside class="dfn-panel" data-for="dom-document-writeln">
    <b><a href="webappapis.html#dom-document-writeln">#dom-document-writeln</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-dom-document-writeln-1">3.1.1. The Document object</a>
+    <li><a href="dom.html#ref-for-dom-document-writeln-1">3.1.1. Document 객체</a>
     </li><li><a href="webappapis.html#ref-for-dom-document-writeln-2">7.3.4. document.writeln()</a>
    </li></ul>
   </aside>
@@ -31875,7 +31873,7 @@ red:89
    <b><a href="syntax.html#html-parser">#html-parser</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-html-parser-1">2.2.4. XPath와 XSLT와의 상호작용</a>
-    </li><li><a href="dom.html#ref-for-html-parser-2">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-html-parser-3">(2)</a>
+    </li><li><a href="dom.html#ref-for-html-parser-2">3.1.2. 리소스 메타데이터 관리</a> <a href="dom.html#ref-for-html-parser-3">(2)</a>
     </li><li><a href="dom.html#ref-for-html-parser-4">3.2.5. Global attributes</a>
     </li><li><a href="document-metadata.html#ref-for-html-parser-5">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-html-parser-6">(2)</a> <a href="document-metadata.html#ref-for-html-parser-7">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-html-parser-8">4.2.7. Interactions of styling and scripting</a>
@@ -33160,7 +33158,7 @@ red:89
    <b><a href="syntax.html#stopped">#stopped</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-stopped-1">2.2.4. XPath와 XSLT와의 상호작용</a>
-    </li><li><a href="dom.html#ref-for-stopped-2">3.1.2. Resource metadata management</a>
+    </li><li><a href="dom.html#ref-for-stopped-2">3.1.2. 리소스 메타데이터 관리</a>
     </li><li><a href="sec-forms.html#ref-for-stopped-3">4.10.19.8.2. Processing model</a>
     </li><li><a href="browsers.html#ref-for-stopped-4">6.7.1. Navigating across documents</a>
     </li><li><a href="browsers.html#ref-for-stopped-5">6.7.2. Page load processing model for HTML files</a>
@@ -33198,7 +33196,7 @@ red:89
   <aside class="dfn-panel" data-for="ready-for-post-load-tasks">
    <b><a href="syntax.html#ready-for-post-load-tasks">#ready-for-post-load-tasks</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-ready-for-post-load-tasks-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-ready-for-post-load-tasks-1">3.1. 문서</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-ready-for-post-load-tasks-2">4.7.6. The iframe element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-ready-for-post-load-tasks-3">4.7.7. The embed element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-ready-for-post-load-tasks-4">4.7.8. The object element</a>
@@ -33212,7 +33210,7 @@ red:89
   <aside class="dfn-panel" data-for="completely-loaded">
    <b><a href="syntax.html#completely-loaded">#completely-loaded</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-completely-loaded-1">3.1. Documents</a>
+    <li><a href="dom.html#ref-for-completely-loaded-1">3.1. 문서</a>
     </li><li><a href="document-metadata.html#ref-for-completely-loaded-2">4.2.5.3. Pragma directives</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-completely-loaded-3">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-completely-loaded-4">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-completely-loaded-5">4.10.22.3. Form submission algorithm</a>
@@ -33303,7 +33301,7 @@ red:89
   <aside class="dfn-panel" data-for="xml-parser">
    <b><a href="xhtml.html#xml-parser">#xml-parser</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-xml-parser-1">3.1.2. Resource metadata management</a> <a href="dom.html#ref-for-xml-parser-2">(2)</a>
+    <li><a href="dom.html#ref-for-xml-parser-1">3.1.2. 리소스 메타데이터 관리</a> <a href="dom.html#ref-for-xml-parser-2">(2)</a>
     </li><li><a href="dom.html#ref-for-xml-parser-3">3.1.4. Loading XML documents</a>
     </li><li><a href="document-metadata.html#ref-for-xml-parser-4">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-xml-parser-5">(2)</a> <a href="document-metadata.html#ref-for-xml-parser-6">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-xml-parser-7">4.2.7. Interactions of styling and scripting</a>
