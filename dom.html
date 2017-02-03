@@ -1446,8 +1446,8 @@ pre.idl.highlight { color: #708090; }
        <ol class="toc">
         <li><a href="dom.html#the-document-object"><span class="secno">3.1.1</span> <span class="content"><span>Document</span> 객체</span></a>
         </li><li><a href="dom.html#resource-metadata-management"><span class="secno">3.1.2</span> <span class="content">리소스 메타데이터 관리</span></a>
-        </li><li><a href="dom.html#dom-tree-accessors"><span class="secno">3.1.3</span> <span class="content">DOM tree accessors</span></a>
-        </li><li><a href="dom.html#loading-xml-documents"><span class="secno">3.1.4</span> <span class="content">Loading XML documents</span></a>
+        </li><li><a href="dom.html#dom-tree-accessors"><span class="secno">3.1.3</span> <span class="content">DOM 트리 접근자</span></a>
+        </li><li><a href="dom.html#loading-xml-documents"><span class="secno">3.1.4</span> <span class="content">XML 문서 로딩</span></a>
        </li></ol>
       </li><li>
        <a href="dom.html#elements"><span class="secno">3.2</span> <span class="content">Elements</span></a>
@@ -1708,253 +1708,252 @@ pre.idl.highlight { color: #708090; }
      <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>는 아직 <a data-link-type="dfn" href="syntax.html#stopped" id="ref-for-stopped-2">멈추거나</a> <a data-link-type="dfn" href="browsers.html#abort-the-document" id="ref-for-abort-the-document-1">중단 되지</a> 않은 <a data-link-type="dfn" href="syntax.html#html-parser" id="ref-for-html-parser-3">HTML 해석기</a>나 <a data-link-type="dfn" href="xhtml.html#xml-parser" id="ref-for-xml-parser-2">XML 해석기</a>와 연관된다면 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="active parser" data-noexport="" id="active-parser">활성화 해석기</dfn>를 가진다고 합니다.</p>
      <p><dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-readystate"><code>readyState</code></dfn> IDL 속성(attribute)은 가져올 때, <a data-link-type="dfn" href="dom.html#current-document-readiness" id="ref-for-current-document-readiness-3">현재 문서 준비상태</a>를 반환해야(must) 합니다.</p>
     </div>
-    <h4 class="heading settled" data-level="3.1.3" id="dom-tree-accessors"><span class="secno">3.1.3. </span><span class="content">DOM tree accessors</span><a class="self-link" href="dom.html#dom-tree-accessors"></a></h4>
-    <p>The <code><a data-link-type="element" href="semantics.html#elementdef-html" id="ref-for-elementdef-html-3">html</a></code> element of a document is the document’s root element, if there is
-  one and it’s an <code><a data-link-type="element" href="semantics.html#elementdef-html" id="ref-for-elementdef-html-4">html</a></code> element, or null otherwise.</p>
+    <h4 class="heading settled" data-level="3.1.3" id="dom-tree-accessors"><span class="secno">3.1.3. </span><span class="content">DOM 트리 접근자</span><a class="self-link" href="dom.html#dom-tree-accessors"></a></h4>
+    <p>문서의 <code><a data-link-type="element" href="semantics.html#elementdef-html" id="ref-for-elementdef-html-3">html</a></code> 요소(element)는 문서의 루트 요소(element)가 하나 존재하고 그것이 <code><a data-link-type="element" href="semantics.html#elementdef-html" id="ref-for-elementdef-html-4">html</a></code> 요소(element)라면
+  문서의 루트 요소(element)이고, 그렇지 않으면 null입니다.</p>
     <hr>
     <dl class="domintro">
      <dt><var>document</var> . <code>head</code>
-     </dt><dd>Returns the <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-5">head</a></code> element.
+     </dt><dd><code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-5">head</a></code> 요소(element)를 반환합니다.
     </dd></dl>
-    <p>The <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-6">head</a></code> element of a document is the first <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-7">head</a></code> element that
-  is a child of the <code><a data-link-type="element" href="semantics.html#elementdef-html" id="ref-for-elementdef-html-5">html</a></code> element, if there is one, or null otherwise.</p>
-    <div class="impl"> The <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-head"><code>head</code></dfn> attribute, on getting, must return
-    the <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-8">head</a></code> element of the document (a <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-9">head</a></code> element or null). </div>
+    <p>문서의 <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-6">head</a></code> 요소(element)는 <code><a data-link-type="element" href="semantics.html#elementdef-html" id="ref-for-elementdef-html-5">html</a></code> 요소(element)의 자식인 첫 번째 <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-7">head</a></code> 요소(element)가
+  하나 존재한다면 문서의 <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-8">head</a></code> 요소(element)이고, 그렇지 않으면 null 입니다.</p>
+    <div class="impl"> <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-head"><code>head</code></dfn> 속성(attribute)은, 가져올 때, 문서의  must return <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-9">head</a></code> 요소(element) (<code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-10">head</a></code> 요소(element)나 null)를 반환해야(must) 합니다. </div>
     <hr>
     <dl class="domintro">
      <dt><var>document</var> . <code>title</code> [ = <var>value</var> ]
      </dt><dd>
-       Returns the document’s title, as given by the <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-4"><code>title</code></a> element for HTML and
-      as given by the SVG <a data-link-type="element" href="https://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements"><code>title</code></a> element for SVG. 
-      <p>Can be set, to update the document’s title. If there is no appropriate element to update, the
-      new value is ignored.</p>
+       HTML에 대해 <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-4"><code>title</code></a> 요소(element)에 의해 주어진 대로,
+      SVG에 대해 SVG <a data-link-type="element" href="https://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements"><code>title</code></a> 요소(element)에 의해 주어진 대로,
+      문서의 제목을 반환합니다. 
+      <p>문서의 제목을 업데이트하기 위해, 설정될 수 있습니다. 업데이트를 위한 적절한 요소(element)가
+      없다면, 새로운 값은 무시됩니다.</p>
     </dd></dl>
-    <p>The <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-5"><code>title</code></a> element of a document is the first <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-6"><code>title</code></a> element
-  in the document (in <a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-14">tree order</a>), if there is one, or null otherwise.</p>
+    <p>문서의 <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-5"><code>title</code></a> 요소(element)는 문서에 하나만 존재한다면
+  문서의 첫 번째 <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-6"><code>title</code></a> 요소(element)이고 
+  (<a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-14">트리 순서에 따라</a>), 그렇지 않으면 null 입니다.</p>
     <div class="impl">
-      The <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-title"><code>title</code></dfn> attribute must, on getting, run the following algorithm: 
+      <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-title"><code>title</code></dfn> 속성(attribute)은 가져올 때, 다음 알고리즘을 수행해야(must) 합니다: 
      <ol>
       <li data-md="">
-       <p>If the <a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-9">root element</a> is an <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-svg" id="ref-for-elementdef-svg-1">svg</a></code> element in the <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-1">SVG namespace</a>, then
-let <var>value</var> be a concatenation of the data of all the child <code>Text</code> nodes
-of the first <a data-link-type="element" href="https://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements"><code>title</code></a> element in the <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-2">SVG namespace</a> that is a child of the <a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-10">root element</a>. <a data-link-type="biblio" href="references.html#biblio-svg11">[SVG11]</a></p>
+       <p><a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-9">루트 요소(element)</a>가 <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-1">SVG 네임스페이스</a>에 있는 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-svg" id="ref-for-elementdef-svg-1">svg</a></code> 요소(element)라면 <var>value</var>를 <a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-10">루트 요소(element)</a>의 자식인 <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-2">SVG 네임스페이스</a>에 있는 첫 번째 <a data-link-type="element" href="https://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements"><code>title</code></a> 요소(element)의 모든 자식 <code>Text</code> 노드의 데이터의 연결로 둡니다. <a data-link-type="biblio" href="references.html#biblio-svg11">[SVG11]</a></p>
       </li><li data-md="">
-       <p>Otherwise, let <var>value</var> be a concatenation of the data of all the child <code>Text</code> nodes of the <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-7"><code>title</code></a> element, in <a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-15">tree order</a>, or
-the empty string if the <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-8"><code>title</code></a> element is null.</p>
+       <p>그렇지 않으면, <var>value</var>를 <a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-15">트리 순서에 따라</a> <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-7"><code>title</code></a> 요소(element)의 모든 자식 <code>Text</code> 노드의 데이터의 연결로 두고, <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-8"><code>title</code></a> 요소(element)가 null 
+이라면 빈 문자열로 둡니다.</p>
       </li><li data-md="">
-       <p><a data-link-type="dfn" href="infrastructure.html#stripping-and-collapsing-whitespace" id="ref-for-stripping-and-collapsing-whitespace-1">Strip and collapse whitespace</a> in <var>value</var>.</p>
+       <p><var>value</var>에서 <a data-link-type="dfn" href="infrastructure.html#stripping-and-collapsing-whitespace" id="ref-for-stripping-and-collapsing-whitespace-1">여백 문자를 들어내고 병합</a>합니다.</p>
       </li><li data-md="">
-       <p>Return <var>value</var>.</p>
+       <p><var>value</var>를 반환합니다.</p>
      </li></ol>
-     <p>On setting, the steps corresponding to the first matching condition in the following list must
-    be run:</p>
+     <p>설정할 때, 다음 목록의 처음 일치하는 조건에 해당하는 단계를 수행해야(must) 합니다:</p>
      <dl class="switch">
-      <dt> If the <a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-11">root element</a> is an <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-svg" id="ref-for-elementdef-svg-2">svg</a></code> element in the <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-3">SVG namespace</a> <a data-link-type="biblio" href="references.html#biblio-svg11">[SVG11]</a> 
+      <dt> <a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-11">루트 요소(element)</a>가 <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-3">SVG 네임스페이스</a>에 있는 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-svg" id="ref-for-elementdef-svg-2">svg</a></code> 요소(element)라면 <a data-link-type="biblio" href="references.html#biblio-svg11">[SVG11]</a> 
       </dt><dd>
        <ol>
         <li data-md="">
-         <p>Let <var>element</var> be the first <a data-link-type="element" href="https://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements"><code>title</code></a> element in the <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-4">SVG namespace</a> that is a child of the <a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-12">root element</a>, if any. If there isn’t
-one, create a <a data-link-type="element" href="https://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements"><code>title</code></a> element in the <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-5">SVG namespace</a>, insert it as the
-first child of the <a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-13">root element</a>, and let <var>element</var> be that element. <a data-link-type="biblio" href="references.html#biblio-svg11">[SVG11]</a></p>
+         <p><var>element</var>를 <a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-12">루트 요소(element)</a>의 자식인 <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-4">SVG 네임스페이스</a>에 있는 첫 번째 <a data-link-type="element" href="https://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements"><code>title</code></a> 요소(element)가 있다면, 그것으로 둡니다. 그것이 없다면, <a data-link-type="dfn" href="infrastructure.html#svg-namespace" id="ref-for-svg-namespace-5">SVG 네임스페이스</a>에 <a data-link-type="element" href="https://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements"><code>title</code></a> 요소(element)를 생성하고, <a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-13">루트 요소(element)</a>의
+첫 번째 자식으로 추가하고, <var>element</var>를 그 요소(element)로 둡니다. <a data-link-type="biblio" href="references.html#biblio-svg11">[SVG11]</a></p>
         </li><li data-md="">
-         <p>Act as if the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code> IDL attribute of <var>element</var> was set to the
-new value being assigned.</p>
+         <p><var>element</var>의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code> IDL 속성(attribute)이 할당되는 새로운 값으로
+설정된 것 처럼 동작합니다.</p>
        </li></ol>
-      </dd><dt>If the <a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-14">root element</a> is in the <a data-link-type="dfn" href="infrastructure.html#html-namespace" id="ref-for-html-namespace-7">HTML namespace</a>
+      </dd><dt><a data-link-type="dfn" href="infrastructure.html#root-element" id="ref-for-root-element-14">루트 요소(element)</a>가 <a data-link-type="dfn" href="infrastructure.html#html-namespace" id="ref-for-html-namespace-7">HTML 네임스페이스</a>에 있다면
       </dt><dd>
        <ol>
         <li data-md="">
-         <p>If the <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-9"><code>title</code></a> element is null and the <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-10">head</a></code> element
-is null, then abort these steps.</p>
+         <p><a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-9"><code>title</code></a> 요소(element)가 null이고 <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-11">head</a></code> 요소(element)가
+null이라면, 이 단계들을 중단합니다.</p>
         </li><li data-md="">
-         <p>If the <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-10"><code>title</code></a> element is null, then create a new <code>title</code> element and <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-append">append</a> it to the <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-11">head</a></code> element, and let <var>element</var> be the newly created element; otherwise, let <var>element</var> be
-the <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-11"><code>title</code></a> element.</p>
+         <p><a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-10"><code>title</code></a> 요소(element)가 null이라면, 새로운 <code>title</code> 요소(element)를 생성하고 <code><a data-link-type="element" href="document-metadata.html#elementdef-head" id="ref-for-elementdef-head-12">head</a></code> 요소(element)에 <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-node-append">추가(append)</a>하고, <var>element</var>를 새롭게 생성된 요소(element)로 둡니다; 그렇지 않으면, <var>element</var>를 <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-11"><code>title</code></a> 요소(element)로 둡니다.</p>
         </li><li data-md="">
-         <p>Act as if the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code> IDL attribute of <var>element</var> was set to the
-new value being assigned.</p>
+         <p><var>element</var>의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code> IDL 속성(attribute)이 할당되는 새로운 값으로
+설정된 것 처럼 동작합니다.</p>
        </li></ol>
-      </dd><dt>Otherwise
-      </dt><dd>Do nothing.
+      </dd><dt>그렇지 않으면
+      </dt><dd>아무 것도 하지 않습니다.
      </dd></dl>
     </div>
     <hr>
     <dl class="domintro">
      <dt><var>document</var> . <code>body</code> [ = <var>value</var> ]
      </dt><dd>
-       Returns the <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-8">body</a></code> element. 
-      <p>Can be set, to replace the <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-9">body</a></code> element.</p>
-      <p>If the new value is not a <code>body</code> or <code><a data-link-type="element" href="obsolete.html#elementdef-frameset" id="ref-for-elementdef-frameset-2">frameset</a></code> element, this will throw
-      a <code>HierarchyRequestError</code> exception.</p>
+       <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-8">body</a></code> 요소(element)를 반환합니다. 
+      <p><code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-9">body</a></code> 요소(element)를 바꾸기 위해, 설정 될 수 있습니다.</p>
+      <p>새로운 값이 <code>body</code>나 <code><a data-link-type="element" href="obsolete.html#elementdef-frameset" id="ref-for-elementdef-frameset-2">frameset</a></code> 요소(element)가 아니라면, 이것은 <code>HierarchyRequestError</code> 예외를 던질 것입니다.</p>
     </dd></dl>
-    <p>The <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-10">body</a></code> element of a document is the first child of
-  the <code><a data-link-type="element" href="semantics.html#elementdef-html" id="ref-for-elementdef-html-6">html</a></code> element that is either a <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-11">body</a></code> element or a <code><a data-link-type="element" href="obsolete.html#elementdef-frameset" id="ref-for-elementdef-frameset-3">frameset</a></code> element. If there is no such element, it is null.</p>
+    <p>문서의 <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-10">body</a></code> 요소(element)는 <code><a data-link-type="element" href="semantics.html#elementdef-html" id="ref-for-elementdef-html-6">html</a></code> 요소(element)의 첫 번째 자식인 <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-11">body</a></code> 요소(element)나 <code><a data-link-type="element" href="obsolete.html#elementdef-frameset" id="ref-for-elementdef-frameset-3">frameset</a></code> 요소(element)입니다. 그러한 요소(element)가 없다면, null입니다.</p>
     <div class="impl">
-      The <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-body"><code>body</code></dfn> attribute, on getting, must return the <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-12">body</a></code> element of
-    the document (either a <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-13">body</a></code> element, a <code><a data-link-type="element" href="obsolete.html#elementdef-frameset" id="ref-for-elementdef-frameset-4">frameset</a></code> element, or null). On
-    setting, the following algorithm must be run: 
+      <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-body"><code>body</code></dfn> 속성(attribute)은 가져올 때, 문서의 <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-12">body</a></code> 요소(<code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-13">body</a></code> 요소(element)나 <code><a data-link-type="element" href="obsolete.html#elementdef-frameset" id="ref-for-elementdef-frameset-4">frameset</a></code> 요소(element)나 null)를 반환해야 합니다.
+    설정할 때, 다음 알고리즘을 수행해야 합니다: 
      <ol>
       <li data-md="">
-       <p>If the new value is not a <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-14">body</a></code> or <code><a data-link-type="element" href="obsolete.html#elementdef-frameset" id="ref-for-elementdef-frameset-5">frameset</a></code> element, then throw a <code>HierarchyRequestError</code> exception and abort these steps.</p>
+       <p>새로운 값이 <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-14">body</a></code>나 <code><a data-link-type="element" href="obsolete.html#elementdef-frameset" id="ref-for-elementdef-frameset-5">frameset</a></code> 요소(element)가 아니라면, <code>HierarchyRequestError</code> 예외를 던지고 이 단계들을 중단합니다.</p>
       </li><li data-md="">
-       <p>Otherwise, if the new value is the same as the <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-15">body</a></code> element, do nothing. Abort these
-steps.</p>
+       <p>그렇지 않고, 새로운 값이 <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-15">body</a></code> 요소(element)와 동일하다면, 아무것도 하지 않습니다. 이
+단계들을 중단합니다.</p>
       </li><li data-md="">
-       <p>Otherwise, if the <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-16">body</a></code> element is not null, then replace that element with the new
-value in the DOM, as if the root element’s <code>replaceChild()</code> method had been
-called with the new value and the incumbent <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-17">body</a></code> element as its two arguments
-respectively, then abort these steps.</p>
+       <p>그렇지 않고, <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-16">body</a></code> 요소(element)가 null이 아니라면, 루트 요소(element)의 <code>replaceChild()</code> 메서드가 그것의 두 인자로 각각 새로운 값과 기존 <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-17">body</a></code> 요소(element)를 가지고 호출된 것 처럼,
+그 요소(element)를 DOM에 새로운 값으로 바꾸고, 이 단계들을 중단합니다.</p>
       </li><li data-md="">
-       <p>Otherwise, if there is no root element, throw a <code>HierarchyRequestError</code> exception
-and abort these steps.</p>
+       <p>그렇지 않고, 루트 요소(element)가 없다면, <code>HierarchyRequestError</code> 예외를 던지고
+이 단계들을 중단합니다.</p>
       </li><li data-md="">
-       <p>Otherwise, the <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-18">body</a></code> element is null, but there’s a root element. Append the new value
-to the root element.</p>
+       <p>그렇지 않으면, <code><a data-link-type="element" href="sections.html#elementdef-body" id="ref-for-elementdef-body-18">body</a></code> 요소(element)는 null이지만, 루트 요소(element)는 존재합니다.
+루트 요소(element)에 새로운 값을 추가(append)합니다.</p>
      </li></ol>
     </div>
     <hr>
     <dl class="domintro">
      <dt><var>document</var> . <code>images</code>
-     </dt><dd> Returns an <code>HTMLCollection</code> of the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-6">img</a></code> elements in the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>. 
+     </dt><dd> <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>에 있는 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-6">img</a></code> 요소(element)들의 <code>HTMLCollection</code>을 반환합니다. 
      </dd><dt><var>document</var> . <code>embeds</code>
      </dt><dt><var>document</var> . <code>plugins</code>
-     </dt><dd> Return an <code>HTMLCollection</code> of the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-3">embed</a></code> elements in the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>. 
+     </dt><dd> <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>에 있는 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-3">embed</a></code> 요소(element)들의 <code>HTMLCollection</code>을 반환합니다. 
      </dd><dt><var>document</var> . <code>links</code>
-     </dt><dd> Returns an <code>HTMLCollection</code> of the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-5">a</a></code> and <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-area" id="ref-for-elementdef-area-2">area</a></code> elements in
-      the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> that have <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-5">href</a></code> attributes. 
+     </dt><dd> <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>에 있는 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-5">href</a></code> 속성(attribute)을 가진 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-5">a</a></code>와 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-area" id="ref-for-elementdef-area-2">area</a></code> 요소(element)들의 <code>HTMLCollection</code>을 반환합니다. 
      </dd><dt><var>document</var> . <code>forms</code>
-     </dt><dd> Return an <code>HTMLCollection</code> of the <code><a data-link-type="element" href="sec-forms.html#elementdef-form" id="ref-for-elementdef-form-6">form</a></code> elements in the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>. 
+     </dt><dd> <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>에 있는 <code><a data-link-type="element" href="sec-forms.html#elementdef-form" id="ref-for-elementdef-form-6">form</a></code> 요소(element)들의 <code>HTMLCollection</code>을 반환합니다. 
      </dd><dt><var>document</var> . <code>scripts</code>
-     </dt><dd> Return an <code>HTMLCollection</code> of the <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-9">script</a></code> elements in the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>. 
+     </dt><dd> <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>에 있는 <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-9">script</a></code> 요소(element)들의 <code>HTMLCollection</code>을 반환합니다. 
     </dd></dl>
     <div class="impl">
-      The <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-images"><code>images</code></dfn> attribute must return an <code>HTMLCollection</code> rooted
-    at the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> node, whose filter matches only <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-7">img</a></code> elements. 
-     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-embeds"><code>embeds</code></dfn> attribute must return an <code>HTMLCollection</code> rooted
-    at the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> node, whose filter matches only <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-4">embed</a></code> elements.</p>
-     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-plugins"><code>plugins</code></dfn> attribute must return the same object as that returned by
-    the <code>embeds</code> attribute.</p>
-     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-links"><code>links</code></dfn> attribute must return an <code>HTMLCollection</code> rooted at
-    the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> node, whose filter matches only <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-6">a</a></code> elements with <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-6">href</a></code> attributes and <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-area" id="ref-for-elementdef-area-3">area</a></code> elements with <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-7">href</a></code> attributes.</p>
-     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-forms"><code>forms</code></dfn> attribute must return an <code>HTMLCollection</code> rooted at
-    the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> node, whose filter matches only <code><a data-link-type="element" href="sec-forms.html#elementdef-form" id="ref-for-elementdef-form-7">form</a></code> elements.</p>
-     <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-scripts"><code>scripts</code></dfn> attribute must return an <code>HTMLCollection</code> rooted
-    at the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> node, whose filter matches only <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-10">script</a></code> elements.</p>
+      <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-images"><code>images</code></dfn> 속성(attribute)은 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 노드에 
+    뿌리를 둔 <code>HTMLCollection</code>을 반환해야(must) 하고, 이 속성(attribute)의 필터는 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-7">img</a></code> 요소(element)들과만 일치합니다. 
+     <p><dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-embeds"><code>embeds</code></dfn> 속성(attribute)은 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 노드에
+    뿌리를 둔 <code>HTMLCollection</code>을 반환해야(must) 하고, 이 속성(attribute)의 필터는 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-4">embed</a></code> 요소(element)들과만 일치합니다.</p>
+     <p><dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-plugins"><code>plugins</code></dfn> 속성(attribute)은 <code>embeds</code> 속성(attribute)에 의해 반환된 것과 동일한 객체를 반환해야(must) 합니다.</p>
+     <p><dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-links"><code>links</code></dfn> 속성(attribute)은 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 노드에
+    뿌리를 둔 <code>HTMLCollection</code>을 반환해야(must) 하고, 이 속성(attribute)의 필터는 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-6">href</a></code> 속성(attribute)을 가진 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-6">a</a></code> 요소(element)들과 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-7">href</a></code> 속성(attribute)을 가진 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-area" id="ref-for-elementdef-area-3">area</a></code> 요소(element)들과만 일치합니다.</p>
+     <p><dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-forms"><code>forms</code></dfn> 속성(attribute)은 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 노드에
+    뿌리를 둔 <code>HTMLCollection</code>을 반환해야(must) 하고, 이 속성(attribute)의 필터는 <code><a data-link-type="element" href="sec-forms.html#elementdef-form" id="ref-for-elementdef-form-7">form</a></code> 요소(element)들과만 일치합니다.</p>
+     <p><dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-scripts"><code>scripts</code></dfn> 속성(attribute)은 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 노드에
+    뿌리를 둔 <code>HTMLCollection</code>을 반환해야(must) 하고, 이 속성(attribute)의 필터는 <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-10">script</a></code> 요소(element)들과만 일치합니다.</p>
      <hr>
     </div>
     <dl class="domintro">
      <dt> <var>collection</var> = <var>document</var> . <code>getElementsByName</code>(<var>name</var>) 
-     </dt><dd> Returns a <code>NodeList</code> of elements in the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> that have a <code>name</code> attribute with the value <var>name</var>. 
+     </dt><dd> <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>에 있는 값 <var>name</var>를 가진 <code>name</code> 속성(attribute)을 가진 
+      요소(element)들의 <code>NodeList</code>를 반환합니다. 
     </dd></dl>
-    <div class="impl"> The <dfn data-dfn-type="dfn" data-noexport="" id="getelementsbyname-name"><code>getElementsByName(<var>name</var>)</code><a class="self-link" href="dom.html#getelementsbyname-name"></a></dfn> method takes a string <var>name</var>, and must return a <a data-link-type="dfn" href="infrastructure.html#live" id="ref-for-live-2">live</a> <code>NodeList</code> containing all the <a data-link-type="dfn" href="infrastructure.html#html-element" id="ref-for-html-element-1">html elements</a> in that document that have a <code>name</code> attribute whose value is
-    equal to the <var>name</var> argument (in a <a data-link-type="dfn" href="infrastructure.html#case-sensitive" id="ref-for-case-sensitive-3">case-sensitive</a> manner), in <a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-16">tree order</a>.
-    When the method is invoked on a <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object again with the same argument, the
-    user agent may return the same as the object returned by the earlier call. In other cases, a new <code>NodeList</code> object must be returned. </div>
+    <div class="impl"> <dfn data-dfn-type="dfn" data-noexport="" id="getelementsbyname-name"><code>getElementsByName(<var>name</var>)</code><a class="self-link" href="dom.html#getelementsbyname-name"></a></dfn> 메서드는 문자열 <var>name</var>을 
+    사용하고, <a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-16">트리 순서</a>에 따라, 그 문서 내의 값이 인자 <var>name</var>과 동일한
+    (<a data-link-type="dfn" href="infrastructure.html#case-sensitive" id="ref-for-case-sensitive-3">대소문자 구분</a> 방법으로) <code>name</code> 속성(attribute)를 가진 모든 <a data-link-type="dfn" href="infrastructure.html#html-element" id="ref-for-html-element-1">html 요소(element)들</a>을 포함하는 <a data-link-type="dfn" href="infrastructure.html#live" id="ref-for-live-2">라이브</a> <code>NodeList</code>를
+    반환해야(must) 합니다. 메서드가 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 객체에서 동일한 인자를 가지고 다시 호출 되는 경우, 
+    유저 에이전트는 이전 호출에 의해 반환된 객체와 동일한 객체를 반환할 수도 있습니다. 다른 경우에는
+    새로운 <code>NodeList</code> 객체가 반환되어야(must) 합니다. </div>
     <hr>
     <dl class="domintro">
      <dt><var>document</var> . <code>currentScript</code>
      </dt><dd>
-       Returns the <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-11">script</a></code> element that is currently executing. In the case of reentrant <code>script</code> execution, returns the one that most recently started executing amongst
-      those that have not yet finished executing. 
-      <p>Returns null if the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> is not currently executing a <code>script</code> element (e.g., because the running script is an event handler, or a timeout).</p>
+       현재 실행중인 <code><a data-link-type="element" href="semantics-scripting.html#elementdef-script" id="ref-for-elementdef-script-11">script</a></code> 요소(element)를 반환합니다. 재진입 <code>script</code> 실행의 경우,
+      아직 실행을 완료하지 않은 스크립트 중에서 가장 최근에 실행이 시작된 스크립트를 반환합니다. 
+      <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>가 현재 <code>script</code> 요소(element)를 실행 중이 아니라면 (예를 들어, 수행
+      중인 스크립트가 이벤트 처리기나 타임 아웃되었기 때문에) null을 반환합니다.</p>
     </dd></dl>
-    <div class="impl"> The <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-currentscript"><code>currentScript</code></dfn> attribute, on getting, must return the value to which
-    it was most recently initialized. When the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> is created, the <code>currentScript</code> must be initialized to null. </div>
+    <div class="impl"> <dfn class="dfn-paneled idl-code" data-dfn-for="Document" data-dfn-type="attribute" data-export="" id="dom-document-currentscript"><code>currentScript</code></dfn> 속성(attribute)은 가져올 때, 
+    가장 최근에 초기화 된 값을 반환해야(must) 합니다. <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>가 생성될 때, <code>currentScript</code>는
+    null로 초기화 되어야(must) 합니다. </div>
     <div class="impl">
      <hr>
-     <p>The <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> interface <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-support-named-properties">supports named properties</a>. The <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">supported property names</a> at any moment consist of the values of the <code>name</code> content attributes of all the <code><a data-link-type="element" href="obsolete.html#elementdef-applet" id="ref-for-elementdef-applet-2">applet</a></code>, <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-1">exposed</a> <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-5">embed</a></code>, <code><a data-link-type="element" href="sec-forms.html#elementdef-form" id="ref-for-elementdef-form-8">form</a></code>, <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-6">iframe</a></code>, <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-8">img</a></code>, and <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-2">exposed</a> <code>object</code> elements in the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> that have non-empty <code>name</code> content attributes,
-    and the values of the <code>id</code> content attributes of all the <code>applet</code> and <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-3">exposed</a> <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-3">object</a></code> elements in the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> that have non-empty <code>id</code> content attributes, and the values of the <code>id</code> content attributes of
-    all the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-9">img</a></code> elements in the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> that have both non-empty <code>name</code> content attributes and non-empty <code>id</code> content attributes. The <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">supported property names</a> must be in <a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-17">tree order</a>, ignoring later duplicates, with
-    values from <code>id</code> attributes coming before values from <code>name</code> attributes
-    when the same element contributes both.</p>
-     <p>To <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-determine-the-value-of-a-named-property">determine the value of a named property</a> <var>name</var> when <dfn data-dfn-type="dfn" data-noexport="" id="the-document-object-is-indexed-for-property-retrieval">the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object is indexed for property retrieval<a class="self-link" href="dom.html#the-document-object-is-indexed-for-property-retrieval"></a></dfn>, the user agent
-    must return the value obtained using the following steps:</p>
+     <p><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 인터페이스는 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-support-named-properties">명명된 속성(property)들을
+    지원</a>합니다. 어느 순간에 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">지원되는 속성(property) 
+    이름들</a>은 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 안에 있는 비어 있지 않은 <code>name</code> 콘텐트 속성(attribute)을 
+    가진 모든 <code><a data-link-type="element" href="obsolete.html#elementdef-applet" id="ref-for-elementdef-applet-2">applet</a></code>, <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-1">노출 된</a> <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-5">embed</a></code>, <code><a data-link-type="element" href="sec-forms.html#elementdef-form" id="ref-for-elementdef-form-8">form</a></code>, <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-6">iframe</a></code>, <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-8">img</a></code>, <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-2">노출된</a> <code>object</code> 요소(element)들의 <code>name</code> 콘텐트 
+    속성(attribute)들의 값들과, <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 안에 있는 비어 있지 않은 <code>id</code> 콘텐트 
+    속성(attribute)을 가진 모든 <code>applet</code>과 <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-3">노출된</a> <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-3">object</a></code> 요소(element)들의 <code>id</code> 콘텐트 속성(attribute)들의 값들과, <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 안에 있는 비어 
+    있지 않은 <code>name</code> 콘텐트 속성(attribute)과 비어있지 않은 <code>id</code> 콘텐트 
+    속성(attribute)을 가진 모든 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-9">img</a></code> 요소(element)들의 <code>id</code> 콘텐트 속성(attribute)들의 
+    값들로 구성됩니다. <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-supported-property-names">지원되는 속성(property) 이름들</a>은 
+    동일한 요소(element)가 <code>id</code> 속성(attribute)과 <code>name</code> 속성(attribute) 모두를 
+    제공하는 경우 <code>name</code> 속성(attribute)으로부터의 값 앞에 오는 <code>id</code> 속성(attribute)의 
+    값을 가지고, 나중의 중복을 무시하여, <a data-link-type="dfn" href="infrastructure.html#tree-order" id="ref-for-tree-order-17">트리 순서</a>에 따라야(must) 합니다.</p>
+     <p><dfn data-dfn-type="dfn" data-lt="the Document object is indexed for property retrieval" data-noexport="" id="the-document-object-is-indexed-for-property-retrieval"><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 객체가 속성(property) 검색(retrieval)을 위해 인덱싱 되는<a class="self-link" href="dom.html#the-document-object-is-indexed-for-property-retrieval"></a></dfn> 경우 <a data-link-type="dfn" href="https://www.w3.org/TR/WebIDL/#dfn-determine-the-value-of-a-named-property">명명된 속성(property) <var>name</var>의 값을 결정</a>하기 위해, 유저 에이전트는 다음 단계들을 사용하여 얻어진 값을 
+    반환해야(must) 합니다:</p>
      <ol>
       <li data-md="">
-       <p>Let <var>elements</var> be the list of <a data-link-type="dfn" href="dom.html#named-elements" id="ref-for-named-elements-1">named elements</a> with the name <var>name</var> in
-the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>.</p>
-       <p class="note" role="note">There will be at least one such element, by definition.</p>
+       <p><var>elements</var>를 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>에 이름 <var>name</var>을 가진 <a data-link-type="dfn" href="dom.html#named-elements" id="ref-for-named-elements-1">명명된 요소(element)들</a>의 목록으로 둡니다.</p>
+       <p class="note" role="note">명세에 의해, 적어도 하나의 그러한 요소(element)가 존재할 것입니다.</p>
       </li><li data-md="">
-       <p>If <var>elements</var> has only one element, and that element is an <code>iframe</code> element, then return the <code>WindowProxy</code> object of the <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-1">nested browsing context</a> represented by that <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-7">iframe</a></code> element, and abort
-these steps.</p>
+       <p><var>elements</var>가 하나의 요소(element)만을 가지고, 그 요소(element)가 <code>iframe</code> 요소(element)라면, 그 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-7">iframe</a></code> 요소(element)에 의해 나타나는 <a data-link-type="dfn" href="browsers.html#nested-browsing-contexts" id="ref-for-nested-browsing-contexts-1">중첩된 브라우징 컨텍스트</a>의 <code>WindowProxy</code> 객체를 반환하고, 이 단계들을 중단합니다.</p>
       </li><li data-md="">
-       <p>Otherwise, if <var>elements</var> has only one element, return that element and abort these
-steps.</p>
+       <p>그렇지 않고, <var>elements</var>가 하나의 요소(element)만을 가진다면, 그 요소(element)를
+반환하고, 이 단계들을 중단합니다.</p>
       </li><li data-md="">
-       <p>Otherwise return an <code>HTMLCollection</code> rooted at the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> node,
-whose filter matches only <a data-link-type="dfn" href="dom.html#named-elements" id="ref-for-named-elements-2">named elements</a> with the name <var>name</var>.</p>
+       <p>그렇지 않으면 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>에 뿌리를 둔, 필터가 이름 <var>name</var>를 가진 <a data-link-type="dfn" href="dom.html#named-elements" id="ref-for-named-elements-2">명명된 요소(element)들</a>에만 일치하는 <code>HTMLCollection</code>를
+반환합니다.</p>
      </li></ol>
-     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="named-elements">Named elements</dfn> with the name <var>name</var>, for the purposes of the above
-    algorithm, are those that are either:</p>
+     <p>위 알고리즘의 목적을 위해 이름 <var>name</var>을 가진 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="Named elements" data-noexport="" id="named-elements">명명된 요소(element)들</dfn>은 다음 중 하나입니다:</p>
      <ul>
       <li data-md="">
-       <p><code><a data-link-type="element" href="obsolete.html#elementdef-applet" id="ref-for-elementdef-applet-3">applet</a></code>, <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-4">exposed</a> <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-6">embed</a></code>, <code><a data-link-type="element" href="sec-forms.html#elementdef-form" id="ref-for-elementdef-form-9">form</a></code>, <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-8">iframe</a></code>, <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-10">img</a></code>, or <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-5">exposed</a> <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-4">object</a></code> elements that
-have a <code>name</code> content attribute whose value is <var>name</var>, or</p>
+       <p>값이 <var>name</var>인 <code>name</code> 콘텐트 속성(attribute)을 가지는 <code><a data-link-type="element" href="obsolete.html#elementdef-applet" id="ref-for-elementdef-applet-3">applet</a></code>, <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-4">노출 된</a> <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-embed" id="ref-for-elementdef-embed-6">embed</a></code>, <code><a data-link-type="element" href="sec-forms.html#elementdef-form" id="ref-for-elementdef-form-9">form</a></code>, <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-iframe" id="ref-for-elementdef-iframe-8">iframe</a></code>, <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-10">img</a></code>, <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-5">노출 된</a> <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-4">object</a></code> 요소(element)들, 혹은,</p>
       </li><li data-md="">
-       <p><code>applet</code> or <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-6">exposed</a> <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-5">object</a></code> elements that have an <code>id</code> content attribute whose value is <var>name</var>, or</p>
+       <p>값이 <var>name</var>인 <code>id</code> 콘텐트 속성(attribute)을 가지는 <code>applet</code> 또는 <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-6">노출 된</a> <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-5">object</a></code> 요소(element)들</p>
       </li><li data-md="">
-       <p><code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-11">img</a></code> elements that have an <code>id</code> content attribute whose value is <var>name</var>, and that have a non-empty <code>name</code> content attribute present also.</p>
+       <p>값이 <var>name</var>인 <code>id</code> 콘텐트 속성(attribute)을 가지고,
+비어 있지 않은 <var>name</var> 콘텐트 속성(attribute)도 가지는 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-11">img</a></code> 요소(element)들</p>
      </li></ul>
-     <p>An <code>embed</code> or <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-6">object</a></code> element is said to be <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="exposed">exposed</dfn> if it has
-    no <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-7">exposed</a> <code>object</code> ancestor, and, for <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-7">object</a></code> elements, is
-    additionally either not showing its <a data-link-type="dfn" href="dom.html#fallback-content" id="ref-for-fallback-content-1">fallback content</a> or has no <code>object</code> or <code>embed</code> descendants.</p>
+     <p><code>embed</code>나 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-6">object</a></code> 요소(element)는 <a data-link-type="dfn" href="dom.html#exposed" id="ref-for-exposed-7">노출 된</a> 조상 <code>object</code>를
+    가지지 않고, <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-object" id="ref-for-elementdef-object-7">object</a></code> 요소(element)에 대해 추가적으로 요소의 <a data-link-type="dfn" href="dom.html#fallback-content" id="ref-for-fallback-content-1">폴백 콘텐트</a>가
+    보이지 않거나 후손 <code>object</code>나 <code>embed</code>를 가지지 않는다면 <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="exposed" data-noexport="" id="exposed">노출 되었다</dfn>라고 합니다.</p>
     </div>
     <hr>
-    <p class="note" role="note"> The <code>dir</code> attribute on the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> interface is defined along with the <code>dir</code> content attribute. </p>
+    <p class="note" role="note"> <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 인터페이스에서 <code>dir</code> 속성(attribute)은 <code>dir</code> 콘텐트 
+    속성(attribute)과 함께 정의됩니다. </p>
     <div class="impl">
-     <h4 class="heading settled" data-level="3.1.4" id="loading-xml-documents"><span class="secno">3.1.4. </span><span class="content">Loading XML documents</span><a class="self-link" href="dom.html#loading-xml-documents"></a></h4>
+     <h4 class="heading settled" data-level="3.1.4" id="loading-xml-documents"><span class="secno">3.1.4. </span><span class="content">XML 문서 로딩</span><a class="self-link" href="dom.html#loading-xml-documents"></a></h4>
 <pre class="idl highlight def" data-highlight="webidl"><span class="kt">partial</span> <span class="kt">interface</span> <a class="nv idl-code" data-link-type="interface" href="https://dom.spec.whatwg.org/#xmldocument">XMLDocument</a> {
   <span class="kt">boolean</span> <dfn class="nv idl-code" data-dfn-for="XMLDocument" data-dfn-type="method" data-export="" data-lt="load(url)" id="dom-xmldocument-load">load<a class="self-link" href="dom.html#dom-xmldocument-load"></a></dfn>(<span class="kt">DOMString</span> <dfn class="nv idl-code" data-dfn-for="XMLDocument/load(url)" data-dfn-type="argument" data-export="" id="dom-xmldocument-load-url-url">url<a class="self-link" href="dom.html#dom-xmldocument-load-url-url"></a></dfn>);
 };
 </pre>
-     <p>The <dfn data-dfn-type="dfn" data-noexport="" id="load-url"><code>load(<var>url</var>)</code><a class="self-link" href="dom.html#load-url"></a></dfn> method must run the following steps:</p>
+     <p><dfn data-dfn-type="dfn" data-noexport="" id="load-url"><code>load(<var>url</var>)</code><a class="self-link" href="dom.html#load-url"></a></dfn> 메서드는 다음 단계들을 수행해야(must) 합니다:</p>
      <ol>
       <li data-md="">
-       <p>Let <var>document</var> be the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#xmldocument">XMLDocument</a></code> object on which the method was
-invoked.</p>
+       <p><var>document</var>를 메서드가 호출되는 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#xmldocument">XMLDocument</a></code> 객체로 둡니다.</p>
       </li><li data-md="">
-       <p><a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-6">Parse</a> <var>url</var>, relative to the <a data-link-type="dfn" href="webappapis.html#entry-settings-object" id="ref-for-entry-settings-object-1">entry settings object</a>. If this is not
-successful, throw a "<code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-native-error-types-used-in-this-standard-syntaxerror">SyntaxError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code> and abort these steps.
-Otherwise, let <var>urlRecord</var> be the <a data-link-type="dfn" href="infrastructure.html#resulting-url-record" id="ref-for-resulting-url-record-3">resulting URL record</a>.</p>
+       <p><var>url</var>을, relative to the <a data-link-type="dfn" href="webappapis.html#entry-settings-object" id="ref-for-entry-settings-object-1">엔트리 설정 객체</a>에 관련하여 <a data-link-type="dfn" href="infrastructure.html#reparsed" id="ref-for-reparsed-6">해석</a>합니다. 이것이 성공적이지 않다면, "<code class="idl"><a data-link-type="idl" href="http://www.ecma-international.org/ecma-262/6.0/#sec-native-error-types-used-in-this-standard-syntaxerror">SyntaxError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>를 
+던지고 이 단계들을 중단합니다. 그렇지 않으면, <var>urlRecord</var>를 <a data-link-type="dfn" href="infrastructure.html#resulting-url-record" id="ref-for-resulting-url-record-3">결과 URL 레코드</a>로 둡니다.</p>
       </li><li data-md="">
-       <p>If <var>urlRecord</var>’s <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-origin">origin</a> is not the same as the <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-3">origin</a> of <var>document</var>, throw a "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#securityerror">SecurityError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code> and abort these steps.</p>
+       <p><var>urlRecord</var>의 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-origin">출처(origin)</a>가 <var>document</var>의 <a data-link-type="dfn" href="browsers.html#concept-cross-origin" id="ref-for-concept-cross-origin-3">출처(origin)</a>와 동일한 것이 아니라면, "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#securityerror">SecurityError</a></code>" <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/WebIDL-1/#idl-DOMException">DOMException</a></code>를 던지고 이 단계들을 중단합니다.</p>
       </li><li data-md="">
-       <p>Remove all child nodes of <var>document</var>, without firing any mutation events.</p>
+       <p>어떤 변경 이벤트도 발생시키지 않고, <var>document</var>의 모든 자식 노드들을 제거합니다.</p>
       </li><li data-md="">
-       <p>Set the <a data-link-type="dfn" href="dom.html#current-document-readiness" id="ref-for-current-document-readiness-4">current document readiness</a> of <var>document</var> to "<code>loading</code>".</p>
+       <p><var>document</var>의 <a data-link-type="dfn" href="dom.html#current-document-readiness" id="ref-for-current-document-readiness-4">현재 문서 준비상태</a>를
+"<code>loading</code>" 으로 설정합니다.</p>
       </li><li data-md="">
-       <p>Run the remainder of these steps <a data-link-type="dfn" href="infrastructure.html#in-parallel" id="ref-for-in-parallel-3">in parallel</a>, and return true from the method.</p>
+       <p><a data-link-type="dfn" href="infrastructure.html#in-parallel" id="ref-for-in-parallel-3">병렬로</a> 이 단계들의 나머지를 수행하고, 메서드로부터 true를 반환합니다.</p>
       </li><li data-md="">
-       <p>Let <var>result</var> be a <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> object.</p>
+       <p><var>result</var>를 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> 객체로 둡니다.</p>
       </li><li data-md="">
-       <p>Let <var>success</var> be false.</p>
+       <p><var>success</var>를 false로 둡니다.</p>
       </li><li data-md="">
-       <p>Let <var>request</var> be a new <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request">request</a> whose <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a> is <var>urlRecord</var>, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-client">client</a> is <a data-link-type="dfn" href="webappapis.html#entry-settings-object" id="ref-for-entry-settings-object-2">entry settings object</a>, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-destination">destination</a> is
-"<code>subresource</code>", <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#synchronous-flag">synchronous flag</a> is set, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-mode">mode</a> is
-"<code>same-origin</code>", <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-credentials-mode">credentials mode</a> is "<code>same-origin</code>", and whose <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag">use-URL-credentials flag</a> is set.</p>
+       <p><var>request</var>를 <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-url">URL</a>이 <var>urlRecord</var>이고 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-client">클라이언트</a>가 <a data-link-type="dfn" href="webappapis.html#entry-settings-object" id="ref-for-entry-settings-object-2">엔트리 설정 객체</a>이고, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-destination">목적지</a>가
+"<code>subresource</code>"이며, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#synchronous-flag">동기 플래그</a>가 설정되고, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-mode">모드</a>가 "<code>same-origin</code>", <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-credentials-mode">자격 증명 모드</a>가
+"<code>same-origin</code>"이고, <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag">URL 자격 증명 사용 플래그</a>가
+설정 된 새로운 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-request">요청</a>으로 둡니다</p>
       </li><li data-md="">
-       <p>Let <var>response</var> be the result of <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">fetching</a> <var>request</var>.</p>
+       <p><var>response</var>를 <var>request</var>를 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">가져 온</a> 결과로 둡니다.</p>
       </li><li data-md="">
-       <p>If <var>response</var>’s <a data-link-type="dfn" href="infrastructure.html#content-type-metadata" id="ref-for-content-type-metadata-1">Content-Type metadata</a> is an <a data-link-type="dfn" href="infrastructure.html#xml-mime-type" id="ref-for-xml-mime-type-4">XML MIME type</a>, then run
-these substeps:</p>
+       <p><var>response</var>의 <a data-link-type="dfn" href="infrastructure.html#content-type-metadata" id="ref-for-content-type-metadata-1">Content-Type 메타데이터</a>가 <a data-link-type="dfn" href="infrastructure.html#xml-mime-type" id="ref-for-xml-mime-type-4">XML MIME 타입</a>이라면, 이 하위 단계들을 수행합니다:</p>
        <ol>
         <li data-md="">
-         <p>Create a new <a data-link-type="dfn" href="xhtml.html#xml-parser" id="ref-for-xml-parser-3">XML parser</a> associated with the <var>result</var> document.</p>
+         <p><var>result</var> 문서와 연관된 새로운 <a data-link-type="dfn" href="xhtml.html#xml-parser" id="ref-for-xml-parser-3">XML 해석기</a>를 생성합니다.</p>
         </li><li data-md="">
-         <p>Pass this parser <var>response</var>’s <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-body">body</a>.</p>
+         <p>이 해석기 <var>response</var>의 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-response-body">본문</a>을 전달합니다.</p>
         </li><li data-md="">
-         <p>If there is an XML well-formedness or XML namespace well-formedness error, then remove
-all child nodes from <var>result</var>. Otherwise let <var>success</var> be true.</p>
+         <p>XML well-formedness나 XML 네임스페이스 well-formedness 오류가 있다면, <var>result</var>로부터
+모든 자식 노드들을 제거합니다. 그렇지 않으면, <var>success</var>를 true로 둡니다.</p>
        </li></ol>
       </li><li data-md="">
-       <p>Queue a task to run the following steps.</p>
+       <p>다음 단계들을 수행하기 위한 <a data-link-type="dfn" href="webappapis.html#queuing" id="ref-for-queuing-2">작업을 대기열에 넣습니다</a>.</p>
        <ol>
         <li data-md="">
-         <p>Set the <a data-link-type="dfn" href="dom.html#current-document-readiness" id="ref-for-current-document-readiness-5">current document readiness</a> of <var>document</var> to
-"<code>complete</code>".</p>
+         <p><var>document</var>의 <a data-link-type="dfn" href="dom.html#current-document-readiness" id="ref-for-current-document-readiness-5">현재 문서 준비상태</a>를
+"<code>complete</code>"로 설정합니다.</p>
         </li><li data-md="">
-         <p>Replace all the children of <var>document</var> by the children of <var>result</var> (even if it has no children), firing mutation events as if a <code>DocumentFragment</code> containing the new children had been inserted.</p>
+         <p>새로운 자식을 포함하는 <code>DocumentFragment</code>가 삽입 된 것처럼 변경 이벤트를 발생하여, <var>document</var>의 모든 자식을 <var>result</var>의 자식으로 바꿉니다 (그것이 자식을 
+가지지 않는다 하더라도).</p>
         </li><li data-md="">
-         <p><a data-link-type="dfn" href="infrastructure.html#fire" id="ref-for-fire-2">Fire a simple event</a> named <code>load</code> at <var>document</var>.</p>
+         <p><var>document</var>에 <code>load</code>라고 명명된 <a data-link-type="dfn">단순한 이벤트를 발생</a>시킵니다.</p>
        </li></ol>
      </li></ol>
     </div>
@@ -4481,7 +4480,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
     <li><a href="introduction.html#ref-for-in-parallel-1">1.9.2. 
   API 스크립팅을 사용하는 경우를 막는 일반적인 위험 </a>
     </li><li><a href="infrastructure.html#ref-for-in-parallel-2">2.6.2. 처리 모델</a>
-    </li><li><a href="dom.html#ref-for-in-parallel-3">3.1.4. Loading XML documents</a>
+    </li><li><a href="dom.html#ref-for-in-parallel-3">3.1.4. XML 문서 로딩</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-in-parallel-4">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-5">(2)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-6">(3)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-7">(4)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-8">(5)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-in-parallel-9">4.7.6. The iframe element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-in-parallel-10">4.7.14.5. Loading the media resource</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-11">(2)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-12">(3)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-13">(4)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-14">(5)</a> <a href="semantics-embedded-content.html#ref-for-in-parallel-15">(6)</a>
@@ -4600,7 +4599,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
   <aside class="dfn-panel" data-for="html-element">
    <b><a href="infrastructure.html#html-element">#html-element</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-html-element-1">3.1.3. DOM tree accessors</a>
+    <li><a href="dom.html#ref-for-html-element-1">3.1.3. DOM 트리 접근자</a>
     </li><li><a href="dom.html#ref-for-html-element-2">3.2.2. Elements in the DOM</a> <a href="dom.html#ref-for-html-element-3">(2)</a> <a href="dom.html#ref-for-html-element-4">(3)</a> <a href="dom.html#ref-for-html-element-5">(4)</a>
     </li><li><a href="dom.html#ref-for-html-element-6">3.2.3.1. Attributes</a>
     </li><li><a href="dom.html#ref-for-html-element-7">3.2.4. Content models</a> <a href="dom.html#ref-for-html-element-8">(2)</a> <a href="dom.html#ref-for-html-element-9">(3)</a>
@@ -4661,7 +4660,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <ul>
     <li><a href="introduction.html#ref-for-xml-mime-type-1">1.6. HTML vs XHTML</a>
     </li><li><a href="infrastructure.html#ref-for-xml-mime-type-2">2.1. 전문 용어</a> <a href="infrastructure.html#ref-for-xml-mime-type-3">(2)</a>
-    </li><li><a href="dom.html#ref-for-xml-mime-type-4">3.1.4. Loading XML documents</a>
+    </li><li><a href="dom.html#ref-for-xml-mime-type-4">3.1.4. XML 문서 로딩</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-xml-mime-type-5">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-xml-mime-type-6">(2)</a>
     </li><li><a href="browsers.html#ref-for-xml-mime-type-7">6.7.1. Navigating across documents</a>
     </li><li><a href="browsers.html#ref-for-xml-mime-type-8">6.7.9. Navigating to a fragment identifier</a>
@@ -4679,7 +4678,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <ul>
     <li><a href="introduction.html#ref-for-root-element-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="infrastructure.html#ref-for-root-element-2">2.1.3. DOM 트리</a> <a href="infrastructure.html#ref-for-root-element-3">(2)</a> <a href="infrastructure.html#ref-for-root-element-4">(3)</a> <a href="infrastructure.html#ref-for-root-element-5">(4)</a> <a href="infrastructure.html#ref-for-root-element-6">(5)</a> <a href="infrastructure.html#ref-for-root-element-7">(6)</a> <a href="infrastructure.html#ref-for-root-element-8">(7)</a>
-    </li><li><a href="dom.html#ref-for-root-element-9">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-root-element-10">(2)</a> <a href="dom.html#ref-for-root-element-11">(3)</a> <a href="dom.html#ref-for-root-element-12">(4)</a> <a href="dom.html#ref-for-root-element-13">(5)</a> <a href="dom.html#ref-for-root-element-14">(6)</a>
+    </li><li><a href="dom.html#ref-for-root-element-9">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-root-element-10">(2)</a> <a href="dom.html#ref-for-root-element-11">(3)</a> <a href="dom.html#ref-for-root-element-12">(4)</a> <a href="dom.html#ref-for-root-element-13">(5)</a> <a href="dom.html#ref-for-root-element-14">(6)</a>
     </li><li><a href="dom.html#ref-for-root-element-15">3.2.5.3. 
   The lang and xml:lang attributes </a>
     </li><li><a href="dom.html#ref-for-root-element-16">3.2.5.4. The translate attribute</a>
@@ -4769,7 +4768,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
     </li><li><a href="infrastructure.html#ref-for-tree-order-4">2.7.2.1. HTMLAllCollection 인터페이스</a> <a href="infrastructure.html#ref-for-tree-order-5">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-6">2.7.2.2. HTMLFormControlsCollection 인터페이스</a> <a href="infrastructure.html#ref-for-tree-order-7">(2)</a> <a href="infrastructure.html#ref-for-tree-order-8">(3)</a> <a href="infrastructure.html#ref-for-tree-order-9">(4)</a> <a href="infrastructure.html#ref-for-tree-order-10">(5)</a> <a href="infrastructure.html#ref-for-tree-order-11">(6)</a>
     </li><li><a href="infrastructure.html#ref-for-tree-order-12">2.7.2.3. HTMLOptionsCollection 인터페이스</a> <a href="infrastructure.html#ref-for-tree-order-13">(2)</a>
-    </li><li><a href="dom.html#ref-for-tree-order-14">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-tree-order-15">(2)</a> <a href="dom.html#ref-for-tree-order-16">(3)</a> <a href="dom.html#ref-for-tree-order-17">(4)</a>
+    </li><li><a href="dom.html#ref-for-tree-order-14">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-tree-order-15">(2)</a> <a href="dom.html#ref-for-tree-order-16">(3)</a> <a href="dom.html#ref-for-tree-order-17">(4)</a>
     </li><li><a href="dom.html#ref-for-tree-order-18">3.2.5.6. The dir attribute</a>
     </li><li><a href="document-metadata.html#ref-for-tree-order-19">4.2.2. The title element</a>
     </li><li><a href="document-metadata.html#ref-for-tree-order-20">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-tree-order-21">(2)</a>
@@ -4849,7 +4848,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="infrastructure.html#live">#live</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-live-1">2.7.2.2. HTMLFormControlsCollection 인터페이스</a>
-    </li><li><a href="dom.html#ref-for-live-2">3.1.3. DOM tree accessors</a>
+    </li><li><a href="dom.html#ref-for-live-2">3.1.3. DOM 트리 접근자</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-live-3">4.7.14.10. Media resources with multiple media tracks</a> <a href="semantics-embedded-content.html#ref-for-live-4">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-live-5">4.7.14.11.5. Text track API</a> <a href="semantics-embedded-content.html#ref-for-live-6">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-live-7">4.7.17.2. Processing model</a>
@@ -4863,56 +4862,55 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="infrastructure.html#fire">#fire</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="dom.html#ref-for-fire-1">3.1.2. 리소스 메타데이터 관리</a>
-    </li><li><a href="dom.html#ref-for-fire-2">3.1.4. Loading XML documents</a>
-    </li><li><a href="document-metadata.html#ref-for-fire-3">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-fire-4">(2)</a>
-    </li><li><a href="document-metadata.html#ref-for-fire-5">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-fire-6">(2)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-7">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-fire-8">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-9">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-10">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-11">(5)</a> <a href="semantics-embedded-content.html#ref-for-fire-12">(6)</a> <a href="semantics-embedded-content.html#ref-for-fire-13">(7)</a> <a href="semantics-embedded-content.html#ref-for-fire-14">(8)</a> <a href="semantics-embedded-content.html#ref-for-fire-15">(9)</a> <a href="semantics-embedded-content.html#ref-for-fire-16">(10)</a> <a href="semantics-embedded-content.html#ref-for-fire-17">(11)</a> <a href="semantics-embedded-content.html#ref-for-fire-18">(12)</a> <a href="semantics-embedded-content.html#ref-for-fire-19">(13)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-20">4.7.6. The iframe element</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-21">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-fire-22">(2)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-23">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-fire-24">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-25">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-26">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-27">(5)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-28">4.7.10. The video element</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-29">4.7.14.5. Loading the media resource</a> <a href="semantics-embedded-content.html#ref-for-fire-30">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-31">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-32">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-33">(5)</a> <a href="semantics-embedded-content.html#ref-for-fire-34">(6)</a> <a href="semantics-embedded-content.html#ref-for-fire-35">(7)</a> <a href="semantics-embedded-content.html#ref-for-fire-36">(8)</a> <a href="semantics-embedded-content.html#ref-for-fire-37">(9)</a> <a href="semantics-embedded-content.html#ref-for-fire-38">(10)</a> <a href="semantics-embedded-content.html#ref-for-fire-39">(11)</a> <a href="semantics-embedded-content.html#ref-for-fire-40">(12)</a> <a href="semantics-embedded-content.html#ref-for-fire-41">(13)</a> <a href="semantics-embedded-content.html#ref-for-fire-42">(14)</a> <a href="semantics-embedded-content.html#ref-for-fire-43">(15)</a> <a href="semantics-embedded-content.html#ref-for-fire-44">(16)</a> <a href="semantics-embedded-content.html#ref-for-fire-45">(17)</a> <a href="semantics-embedded-content.html#ref-for-fire-46">(18)</a> <a href="semantics-embedded-content.html#ref-for-fire-47">(19)</a> <a href="semantics-embedded-content.html#ref-for-fire-48">(20)</a> <a href="semantics-embedded-content.html#ref-for-fire-49">(21)</a> <a href="semantics-embedded-content.html#ref-for-fire-50">(22)</a> <a href="semantics-embedded-content.html#ref-for-fire-51">(23)</a> <a href="semantics-embedded-content.html#ref-for-fire-52">(24)</a> <a href="semantics-embedded-content.html#ref-for-fire-53">(25)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-54">4.7.14.6. Offsets into the media resource</a> <a href="semantics-embedded-content.html#ref-for-fire-55">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-56">(3)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-57">4.7.14.7. Ready states</a> <a href="semantics-embedded-content.html#ref-for-fire-58">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-59">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-60">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-61">(5)</a> <a href="semantics-embedded-content.html#ref-for-fire-62">(6)</a> <a href="semantics-embedded-content.html#ref-for-fire-63">(7)</a> <a href="semantics-embedded-content.html#ref-for-fire-64">(8)</a> <a href="semantics-embedded-content.html#ref-for-fire-65">(9)</a> <a href="semantics-embedded-content.html#ref-for-fire-66">(10)</a> <a href="semantics-embedded-content.html#ref-for-fire-67">(11)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-68">4.7.14.8. Playing the media resource</a> <a href="semantics-embedded-content.html#ref-for-fire-69">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-70">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-71">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-72">(5)</a> <a href="semantics-embedded-content.html#ref-for-fire-73">(6)</a> <a href="semantics-embedded-content.html#ref-for-fire-74">(7)</a> <a href="semantics-embedded-content.html#ref-for-fire-75">(8)</a> <a href="semantics-embedded-content.html#ref-for-fire-76">(9)</a> <a href="semantics-embedded-content.html#ref-for-fire-77">(10)</a> <a href="semantics-embedded-content.html#ref-for-fire-78">(11)</a> <a href="semantics-embedded-content.html#ref-for-fire-79">(12)</a> <a href="semantics-embedded-content.html#ref-for-fire-80">(13)</a> <a href="semantics-embedded-content.html#ref-for-fire-81">(14)</a> <a href="semantics-embedded-content.html#ref-for-fire-82">(15)</a> <a href="semantics-embedded-content.html#ref-for-fire-83">(16)</a> <a href="semantics-embedded-content.html#ref-for-fire-84">(17)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-85">4.7.14.9. Seeking</a> <a href="semantics-embedded-content.html#ref-for-fire-86">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-87">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-88">(4)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-89">4.7.14.10.1. AudioTrackList and VideoTrackList objects</a> <a href="semantics-embedded-content.html#ref-for-fire-90">(2)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-91">4.7.14.11.1. Text track model</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-92">4.7.14.11.2. Sourcing in-band text tracks</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-93">4.7.14.11.3. Sourcing out-of-band text tracks</a> <a href="semantics-embedded-content.html#ref-for-fire-94">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-95">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-96">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-97">(5)</a> <a href="semantics-embedded-content.html#ref-for-fire-98">(6)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-99">4.7.14.11.5. Text track API</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-fire-100">4.7.14.12. User interface</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-101">4.10.5.1.2. Text (type=text) state and Search state (type=search)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-102">4.10.5.1.15. Checkbox state (type=checkbox)</a> <a href="sec-forms.html#ref-for-fire-103">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-104">4.10.5.1.16. Radio Button state (type=radio)</a> <a href="sec-forms.html#ref-for-fire-105">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-106">4.10.5.1.17. File Upload state (type=file)</a> <a href="sec-forms.html#ref-for-fire-107">(2)</a> <a href="sec-forms.html#ref-for-fire-108">(3)</a> <a href="sec-forms.html#ref-for-fire-109">(4)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-110">4.10.5.1.19. Image Button state (type=image)</a> <a href="sec-forms.html#ref-for-fire-111">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-112">4.10.5.5. Common event behaviors</a> <a href="sec-forms.html#ref-for-fire-113">(2)</a> <a href="sec-forms.html#ref-for-fire-114">(3)</a> <a href="sec-forms.html#ref-for-fire-115">(4)</a> <a href="sec-forms.html#ref-for-fire-116">(5)</a> <a href="sec-forms.html#ref-for-fire-117">(6)</a> <a href="sec-forms.html#ref-for-fire-118">(7)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-119">4.10.6. The button element</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-120">4.10.7. The select element</a> <a href="sec-forms.html#ref-for-fire-121">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-122">4.10.11. The textarea element</a> <a href="sec-forms.html#ref-for-fire-123">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-124">4.10.20. APIs for text field selections</a> <a href="sec-forms.html#ref-for-fire-125">(2)</a> <a href="sec-forms.html#ref-for-fire-126">(3)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-127">4.10.21.2. Constraint validation</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-128">4.10.21.3. The constraint validation API</a> <a href="sec-forms.html#ref-for-fire-129">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-130">4.10.22.3. Form submission algorithm</a> <a href="sec-forms.html#ref-for-fire-131">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-fire-132">4.10.23. Resetting a form</a>
-    </li><li><a href="interactive-elements.html#ref-for-fire-133">4.11.1. The details element</a>
-    </li><li><a href="interactive-elements.html#ref-for-fire-134">4.11.5.2. Processing model</a> <a href="interactive-elements.html#ref-for-fire-135">(2)</a>
-    </li><li><a href="semantics-scripting.html#ref-for-fire-136">4.12.1.1. Processing model</a> <a href="semantics-scripting.html#ref-for-fire-137">(2)</a> <a href="semantics-scripting.html#ref-for-fire-138">(3)</a> <a href="semantics-scripting.html#ref-for-fire-139">(4)</a> <a href="semantics-scripting.html#ref-for-fire-140">(5)</a>
-    </li><li><a href="editing.html#ref-for-fire-141">5.4.4. Processing model</a>
-    </li><li><a href="browsers.html#ref-for-fire-142">6.3.1. APIs for creating and navigating browsing contexts by name</a>
-    </li><li><a href="browsers.html#ref-for-fire-143">6.7.10. History traversal</a> <a href="browsers.html#ref-for-fire-144">(2)</a> <a href="browsers.html#ref-for-fire-145">(3)</a>
-    </li><li><a href="browsers.html#ref-for-fire-146">6.7.11. Unloading documents</a> <a href="browsers.html#ref-for-fire-147">(2)</a>
-    </li><li><a href="browsers.html#ref-for-fire-148">6.7.12. Aborting a document load</a>
-    </li><li><a href="browsers.html#ref-for-fire-149">6.7.13. Browser state</a> <a href="browsers.html#ref-for-fire-150">(2)</a>
-    </li><li><a href="webappapis.html#ref-for-fire-151">7.5.2. Printing</a> <a href="webappapis.html#ref-for-fire-152">(2)</a>
-    </li><li><a href="webappapis.html#ref-for-fire-153">7.6.1.2. Language preferences</a>
-    </li><li><a href="syntax.html#ref-for-fire-154">8.2.6. The end</a> <a href="syntax.html#ref-for-fire-155">(2)</a> <a href="syntax.html#ref-for-fire-156">(3)</a>
-    </li><li><a href="rendering.html#ref-for-fire-157">10.5.4. The input element as a text entry widget</a>
-    </li><li><a href="rendering.html#ref-for-fire-158">10.5.15. The textarea element</a>
-    </li><li><a href="obsolete.html#ref-for-fire-159">11.3.2. The marquee element</a> <a href="obsolete.html#ref-for-fire-160">(2)</a> <a href="obsolete.html#ref-for-fire-161">(3)</a> <a href="obsolete.html#ref-for-fire-162">(4)</a>
-    </li><li><a href="obsolete.html#ref-for-fire-163">11.3.3. Frames</a> <a href="obsolete.html#ref-for-fire-164">(2)</a>
-    </li><li><a href="obsolete.html#ref-for-fire-165">11.3.4.2. Downloading or updating an application cache</a> <a href="obsolete.html#ref-for-fire-166">(2)</a> <a href="obsolete.html#ref-for-fire-167">(3)</a> <a href="obsolete.html#ref-for-fire-168">(4)</a> <a href="obsolete.html#ref-for-fire-169">(5)</a> <a href="obsolete.html#ref-for-fire-170">(6)</a> <a href="obsolete.html#ref-for-fire-171">(7)</a> <a href="obsolete.html#ref-for-fire-172">(8)</a> <a href="obsolete.html#ref-for-fire-173">(9)</a> <a href="obsolete.html#ref-for-fire-174">(10)</a> <a href="obsolete.html#ref-for-fire-175">(11)</a> <a href="obsolete.html#ref-for-fire-176">(12)</a> <a href="obsolete.html#ref-for-fire-177">(13)</a> <a href="obsolete.html#ref-for-fire-178">(14)</a> <a href="obsolete.html#ref-for-fire-179">(15)</a> <a href="obsolete.html#ref-for-fire-180">(16)</a>
+    </li><li><a href="document-metadata.html#ref-for-fire-2">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-fire-3">(2)</a>
+    </li><li><a href="document-metadata.html#ref-for-fire-4">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-fire-5">(2)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-6">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-fire-7">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-8">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-9">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-10">(5)</a> <a href="semantics-embedded-content.html#ref-for-fire-11">(6)</a> <a href="semantics-embedded-content.html#ref-for-fire-12">(7)</a> <a href="semantics-embedded-content.html#ref-for-fire-13">(8)</a> <a href="semantics-embedded-content.html#ref-for-fire-14">(9)</a> <a href="semantics-embedded-content.html#ref-for-fire-15">(10)</a> <a href="semantics-embedded-content.html#ref-for-fire-16">(11)</a> <a href="semantics-embedded-content.html#ref-for-fire-17">(12)</a> <a href="semantics-embedded-content.html#ref-for-fire-18">(13)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-19">4.7.6. The iframe element</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-20">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-fire-21">(2)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-22">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-fire-23">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-24">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-25">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-26">(5)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-27">4.7.10. The video element</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-28">4.7.14.5. Loading the media resource</a> <a href="semantics-embedded-content.html#ref-for-fire-29">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-30">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-31">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-32">(5)</a> <a href="semantics-embedded-content.html#ref-for-fire-33">(6)</a> <a href="semantics-embedded-content.html#ref-for-fire-34">(7)</a> <a href="semantics-embedded-content.html#ref-for-fire-35">(8)</a> <a href="semantics-embedded-content.html#ref-for-fire-36">(9)</a> <a href="semantics-embedded-content.html#ref-for-fire-37">(10)</a> <a href="semantics-embedded-content.html#ref-for-fire-38">(11)</a> <a href="semantics-embedded-content.html#ref-for-fire-39">(12)</a> <a href="semantics-embedded-content.html#ref-for-fire-40">(13)</a> <a href="semantics-embedded-content.html#ref-for-fire-41">(14)</a> <a href="semantics-embedded-content.html#ref-for-fire-42">(15)</a> <a href="semantics-embedded-content.html#ref-for-fire-43">(16)</a> <a href="semantics-embedded-content.html#ref-for-fire-44">(17)</a> <a href="semantics-embedded-content.html#ref-for-fire-45">(18)</a> <a href="semantics-embedded-content.html#ref-for-fire-46">(19)</a> <a href="semantics-embedded-content.html#ref-for-fire-47">(20)</a> <a href="semantics-embedded-content.html#ref-for-fire-48">(21)</a> <a href="semantics-embedded-content.html#ref-for-fire-49">(22)</a> <a href="semantics-embedded-content.html#ref-for-fire-50">(23)</a> <a href="semantics-embedded-content.html#ref-for-fire-51">(24)</a> <a href="semantics-embedded-content.html#ref-for-fire-52">(25)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-53">4.7.14.6. Offsets into the media resource</a> <a href="semantics-embedded-content.html#ref-for-fire-54">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-55">(3)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-56">4.7.14.7. Ready states</a> <a href="semantics-embedded-content.html#ref-for-fire-57">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-58">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-59">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-60">(5)</a> <a href="semantics-embedded-content.html#ref-for-fire-61">(6)</a> <a href="semantics-embedded-content.html#ref-for-fire-62">(7)</a> <a href="semantics-embedded-content.html#ref-for-fire-63">(8)</a> <a href="semantics-embedded-content.html#ref-for-fire-64">(9)</a> <a href="semantics-embedded-content.html#ref-for-fire-65">(10)</a> <a href="semantics-embedded-content.html#ref-for-fire-66">(11)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-67">4.7.14.8. Playing the media resource</a> <a href="semantics-embedded-content.html#ref-for-fire-68">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-69">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-70">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-71">(5)</a> <a href="semantics-embedded-content.html#ref-for-fire-72">(6)</a> <a href="semantics-embedded-content.html#ref-for-fire-73">(7)</a> <a href="semantics-embedded-content.html#ref-for-fire-74">(8)</a> <a href="semantics-embedded-content.html#ref-for-fire-75">(9)</a> <a href="semantics-embedded-content.html#ref-for-fire-76">(10)</a> <a href="semantics-embedded-content.html#ref-for-fire-77">(11)</a> <a href="semantics-embedded-content.html#ref-for-fire-78">(12)</a> <a href="semantics-embedded-content.html#ref-for-fire-79">(13)</a> <a href="semantics-embedded-content.html#ref-for-fire-80">(14)</a> <a href="semantics-embedded-content.html#ref-for-fire-81">(15)</a> <a href="semantics-embedded-content.html#ref-for-fire-82">(16)</a> <a href="semantics-embedded-content.html#ref-for-fire-83">(17)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-84">4.7.14.9. Seeking</a> <a href="semantics-embedded-content.html#ref-for-fire-85">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-86">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-87">(4)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-88">4.7.14.10.1. AudioTrackList and VideoTrackList objects</a> <a href="semantics-embedded-content.html#ref-for-fire-89">(2)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-90">4.7.14.11.1. Text track model</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-91">4.7.14.11.2. Sourcing in-band text tracks</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-92">4.7.14.11.3. Sourcing out-of-band text tracks</a> <a href="semantics-embedded-content.html#ref-for-fire-93">(2)</a> <a href="semantics-embedded-content.html#ref-for-fire-94">(3)</a> <a href="semantics-embedded-content.html#ref-for-fire-95">(4)</a> <a href="semantics-embedded-content.html#ref-for-fire-96">(5)</a> <a href="semantics-embedded-content.html#ref-for-fire-97">(6)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-98">4.7.14.11.5. Text track API</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-fire-99">4.7.14.12. User interface</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-100">4.10.5.1.2. Text (type=text) state and Search state (type=search)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-101">4.10.5.1.15. Checkbox state (type=checkbox)</a> <a href="sec-forms.html#ref-for-fire-102">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-103">4.10.5.1.16. Radio Button state (type=radio)</a> <a href="sec-forms.html#ref-for-fire-104">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-105">4.10.5.1.17. File Upload state (type=file)</a> <a href="sec-forms.html#ref-for-fire-106">(2)</a> <a href="sec-forms.html#ref-for-fire-107">(3)</a> <a href="sec-forms.html#ref-for-fire-108">(4)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-109">4.10.5.1.19. Image Button state (type=image)</a> <a href="sec-forms.html#ref-for-fire-110">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-111">4.10.5.5. Common event behaviors</a> <a href="sec-forms.html#ref-for-fire-112">(2)</a> <a href="sec-forms.html#ref-for-fire-113">(3)</a> <a href="sec-forms.html#ref-for-fire-114">(4)</a> <a href="sec-forms.html#ref-for-fire-115">(5)</a> <a href="sec-forms.html#ref-for-fire-116">(6)</a> <a href="sec-forms.html#ref-for-fire-117">(7)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-118">4.10.6. The button element</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-119">4.10.7. The select element</a> <a href="sec-forms.html#ref-for-fire-120">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-121">4.10.11. The textarea element</a> <a href="sec-forms.html#ref-for-fire-122">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-123">4.10.20. APIs for text field selections</a> <a href="sec-forms.html#ref-for-fire-124">(2)</a> <a href="sec-forms.html#ref-for-fire-125">(3)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-126">4.10.21.2. Constraint validation</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-127">4.10.21.3. The constraint validation API</a> <a href="sec-forms.html#ref-for-fire-128">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-129">4.10.22.3. Form submission algorithm</a> <a href="sec-forms.html#ref-for-fire-130">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-fire-131">4.10.23. Resetting a form</a>
+    </li><li><a href="interactive-elements.html#ref-for-fire-132">4.11.1. The details element</a>
+    </li><li><a href="interactive-elements.html#ref-for-fire-133">4.11.5.2. Processing model</a> <a href="interactive-elements.html#ref-for-fire-134">(2)</a>
+    </li><li><a href="semantics-scripting.html#ref-for-fire-135">4.12.1.1. Processing model</a> <a href="semantics-scripting.html#ref-for-fire-136">(2)</a> <a href="semantics-scripting.html#ref-for-fire-137">(3)</a> <a href="semantics-scripting.html#ref-for-fire-138">(4)</a> <a href="semantics-scripting.html#ref-for-fire-139">(5)</a>
+    </li><li><a href="editing.html#ref-for-fire-140">5.4.4. Processing model</a>
+    </li><li><a href="browsers.html#ref-for-fire-141">6.3.1. APIs for creating and navigating browsing contexts by name</a>
+    </li><li><a href="browsers.html#ref-for-fire-142">6.7.10. History traversal</a> <a href="browsers.html#ref-for-fire-143">(2)</a> <a href="browsers.html#ref-for-fire-144">(3)</a>
+    </li><li><a href="browsers.html#ref-for-fire-145">6.7.11. Unloading documents</a> <a href="browsers.html#ref-for-fire-146">(2)</a>
+    </li><li><a href="browsers.html#ref-for-fire-147">6.7.12. Aborting a document load</a>
+    </li><li><a href="browsers.html#ref-for-fire-148">6.7.13. Browser state</a> <a href="browsers.html#ref-for-fire-149">(2)</a>
+    </li><li><a href="webappapis.html#ref-for-fire-150">7.5.2. Printing</a> <a href="webappapis.html#ref-for-fire-151">(2)</a>
+    </li><li><a href="webappapis.html#ref-for-fire-152">7.6.1.2. Language preferences</a>
+    </li><li><a href="syntax.html#ref-for-fire-153">8.2.6. The end</a> <a href="syntax.html#ref-for-fire-154">(2)</a> <a href="syntax.html#ref-for-fire-155">(3)</a>
+    </li><li><a href="rendering.html#ref-for-fire-156">10.5.4. The input element as a text entry widget</a>
+    </li><li><a href="rendering.html#ref-for-fire-157">10.5.15. The textarea element</a>
+    </li><li><a href="obsolete.html#ref-for-fire-158">11.3.2. The marquee element</a> <a href="obsolete.html#ref-for-fire-159">(2)</a> <a href="obsolete.html#ref-for-fire-160">(3)</a> <a href="obsolete.html#ref-for-fire-161">(4)</a>
+    </li><li><a href="obsolete.html#ref-for-fire-162">11.3.3. Frames</a> <a href="obsolete.html#ref-for-fire-163">(2)</a>
+    </li><li><a href="obsolete.html#ref-for-fire-164">11.3.4.2. Downloading or updating an application cache</a> <a href="obsolete.html#ref-for-fire-165">(2)</a> <a href="obsolete.html#ref-for-fire-166">(3)</a> <a href="obsolete.html#ref-for-fire-167">(4)</a> <a href="obsolete.html#ref-for-fire-168">(5)</a> <a href="obsolete.html#ref-for-fire-169">(6)</a> <a href="obsolete.html#ref-for-fire-170">(7)</a> <a href="obsolete.html#ref-for-fire-171">(8)</a> <a href="obsolete.html#ref-for-fire-172">(9)</a> <a href="obsolete.html#ref-for-fire-173">(10)</a> <a href="obsolete.html#ref-for-fire-174">(11)</a> <a href="obsolete.html#ref-for-fire-175">(12)</a> <a href="obsolete.html#ref-for-fire-176">(13)</a> <a href="obsolete.html#ref-for-fire-177">(14)</a> <a href="obsolete.html#ref-for-fire-178">(15)</a> <a href="obsolete.html#ref-for-fire-179">(16)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dispatch">
@@ -5434,7 +5432,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <ul>
     <li><a href="infrastructure.html#ref-for-case-sensitive-1">2.3. 대소문자 구별과 문자열 비교</a>
     </li><li><a href="infrastructure.html#ref-for-case-sensitive-2">2.4.9. 참조</a>
-    </li><li><a href="dom.html#ref-for-case-sensitive-3">3.1.3. DOM tree accessors</a>
+    </li><li><a href="dom.html#ref-for-case-sensitive-3">3.1.3. DOM 트리 접근자</a>
     </li><li><a href="grouping-content.html#ref-for-case-sensitive-4">4.4.5. The ol element</a>
     </li><li><a href="tabular-data.html#ref-for-case-sensitive-5">4.9.11. Attributes common to td and th elements</a>
     </li><li><a href="sec-forms.html#ref-for-case-sensitive-6">4.10.5.1.1. Hidden state (type=hidden)</a>
@@ -5758,7 +5756,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
   <aside class="dfn-panel" data-for="stripping-and-collapsing-whitespace">
    <b><a href="infrastructure.html#stripping-and-collapsing-whitespace">#stripping-and-collapsing-whitespace</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-stripping-and-collapsing-whitespace-1">3.1.3. DOM tree accessors</a>
+    <li><a href="dom.html#ref-for-stripping-and-collapsing-whitespace-1">3.1.3. DOM 트리 접근자</a>
     </li><li><a href="sec-forms.html#ref-for-stripping-and-collapsing-whitespace-2">4.10.10. The option element</a>
    </li></ul>
   </aside>
@@ -6495,7 +6493,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
     <li><a href="introduction.html#ref-for-reparsed-1">1.9. HTML 간단한 소개</a>
     </li><li><a href="infrastructure.html#ref-for-reparsed-2">2.5.3. 기본 URL로 동적 변경</a> <a href="infrastructure.html#ref-for-reparsed-3">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-reparsed-4">2.7.1. IDL 속성(attribute)에 콘텐트 속성(attribute) 반영하기</a> <a href="infrastructure.html#ref-for-reparsed-5">(2)</a>
-    </li><li><a href="dom.html#ref-for-reparsed-6">3.1.4. Loading XML documents</a>
+    </li><li><a href="dom.html#ref-for-reparsed-6">3.1.4. XML 문서 로딩</a>
     </li><li><a href="document-metadata.html#ref-for-reparsed-7">4.2.3. The base element</a> <a href="document-metadata.html#ref-for-reparsed-8">(2)</a> <a href="document-metadata.html#ref-for-reparsed-9">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-reparsed-10">4.2.4. The link element</a>
     </li><li><a href="document-metadata.html#ref-for-reparsed-11">4.2.5.3. Pragma directives</a>
@@ -6556,7 +6554,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <ul>
     <li><a href="infrastructure.html#ref-for-resulting-url-record-1">2.5.2. URL 해석</a>
     </li><li><a href="infrastructure.html#ref-for-resulting-url-record-2">2.6.2. 처리 모델</a>
-    </li><li><a href="dom.html#ref-for-resulting-url-record-3">3.1.4. Loading XML documents</a>
+    </li><li><a href="dom.html#ref-for-resulting-url-record-3">3.1.4. XML 문서 로딩</a>
     </li><li><a href="document-metadata.html#ref-for-resulting-url-record-4">4.2.3. The base element</a>
     </li><li><a href="document-metadata.html#ref-for-resulting-url-record-5">4.2.4. The link element</a>
     </li><li><a href="document-metadata.html#ref-for-resulting-url-record-6">4.2.5.3. Pragma directives</a>
@@ -6599,7 +6597,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
   <aside class="dfn-panel" data-for="content-type-metadata">
    <b><a href="infrastructure.html#content-type-metadata">#content-type-metadata</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-content-type-metadata-1">3.1.4. Loading XML documents</a>
+    <li><a href="dom.html#ref-for-content-type-metadata-1">3.1.4. XML 문서 로딩</a>
     </li><li><a href="document-metadata.html#ref-for-content-type-metadata-2">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-content-type-metadata-3">(2)</a> <a href="document-metadata.html#ref-for-content-type-metadata-4">(3)</a> <a href="document-metadata.html#ref-for-content-type-metadata-5">(4)</a> <a href="document-metadata.html#ref-for-content-type-metadata-6">(5)</a>
     </li><li><a href="document-metadata.html#ref-for-content-type-metadata-7">4.2.5.5. Specifying the document’s character encoding</a> <a href="document-metadata.html#ref-for-content-type-metadata-8">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-content-type-metadata-9">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-content-type-metadata-10">(2)</a>
@@ -6916,7 +6914,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
     </li><li><a href="infrastructure.html#ref-for-html-namespace-3">2.1.2. XML</a> <a href="infrastructure.html#ref-for-html-namespace-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-5">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-html-namespace-6">2.2.4. XPath와 XSLT와의 상호작용</a>
-    </li><li><a href="dom.html#ref-for-html-namespace-7">3.1.3. DOM tree accessors</a>
+    </li><li><a href="dom.html#ref-for-html-namespace-7">3.1.3. DOM 트리 접근자</a>
     </li><li><a href="dom.html#ref-for-html-namespace-8">3.2.4.2.6. Embedded content</a>
     </li><li><a href="dom.html#ref-for-html-namespace-9">3.2.5. Global attributes</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-html-namespace-10">4.7.18. MathML</a> <a href="semantics-embedded-content.html#ref-for-html-namespace-11">(2)</a>
@@ -6953,7 +6951,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
   <aside class="dfn-panel" data-for="svg-namespace">
    <b><a href="infrastructure.html#svg-namespace">#svg-namespace</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-svg-namespace-1">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-svg-namespace-2">(2)</a> <a href="dom.html#ref-for-svg-namespace-3">(3)</a> <a href="dom.html#ref-for-svg-namespace-4">(4)</a> <a href="dom.html#ref-for-svg-namespace-5">(5)</a>
+    <li><a href="dom.html#ref-for-svg-namespace-1">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-svg-namespace-2">(2)</a> <a href="dom.html#ref-for-svg-namespace-3">(3)</a> <a href="dom.html#ref-for-svg-namespace-4">(4)</a> <a href="dom.html#ref-for-svg-namespace-5">(5)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-svg-namespace-6">4.7.19. SVG</a> <a href="semantics-embedded-content.html#ref-for-svg-namespace-7">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-svg-namespace-8">4.10.10. The option element</a>
     </li><li><a href="syntax.html#ref-for-svg-namespace-9">8.1.2. Elements</a>
@@ -7173,7 +7171,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <ul>
     <li><a href="infrastructure.html#ref-for-current-document-readiness-1">2.2.4. XPath와 XSLT와의 상호작용</a>
     </li><li><a href="dom.html#ref-for-current-document-readiness-2">3.1.2. 리소스 메타데이터 관리</a> <a href="dom.html#ref-for-current-document-readiness-3">(2)</a>
-    </li><li><a href="dom.html#ref-for-current-document-readiness-4">3.1.4. Loading XML documents</a> <a href="dom.html#ref-for-current-document-readiness-5">(2)</a>
+    </li><li><a href="dom.html#ref-for-current-document-readiness-4">3.1.4. XML 문서 로딩</a> <a href="dom.html#ref-for-current-document-readiness-5">(2)</a>
     </li><li><a href="browsers.html#ref-for-current-document-readiness-6">6.7.10. History traversal</a>
     </li><li><a href="webappapis.html#ref-for-current-document-readiness-7">7.3.1. Opening the input stream</a>
     </li><li><a href="syntax.html#ref-for-current-document-readiness-8">8.2.6. The end</a> <a href="syntax.html#ref-for-current-document-readiness-9">(2)</a> <a href="syntax.html#ref-for-current-document-readiness-10">(3)</a> <a href="syntax.html#ref-for-current-document-readiness-11">(4)</a>
@@ -7257,13 +7255,13 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
   <aside class="dfn-panel" data-for="named-elements">
    <b><a href="dom.html#named-elements">#named-elements</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-named-elements-1">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-named-elements-2">(2)</a>
+    <li><a href="dom.html#ref-for-named-elements-1">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-named-elements-2">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="exposed">
    <b><a href="dom.html#exposed">#exposed</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-exposed-1">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-exposed-2">(2)</a> <a href="dom.html#ref-for-exposed-3">(3)</a> <a href="dom.html#ref-for-exposed-4">(4)</a> <a href="dom.html#ref-for-exposed-5">(5)</a> <a href="dom.html#ref-for-exposed-6">(6)</a> <a href="dom.html#ref-for-exposed-7">(7)</a>
+    <li><a href="dom.html#ref-for-exposed-1">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-exposed-2">(2)</a> <a href="dom.html#ref-for-exposed-3">(3)</a> <a href="dom.html#ref-for-exposed-4">(4)</a> <a href="dom.html#ref-for-exposed-5">(5)</a> <a href="dom.html#ref-for-exposed-6">(6)</a> <a href="dom.html#ref-for-exposed-7">(7)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="represent">
@@ -8610,7 +8608,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
   <aside class="dfn-panel" data-for="fallback-content">
    <b><a href="dom.html#fallback-content">#fallback-content</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-fallback-content-1">3.1.3. DOM tree accessors</a>
+    <li><a href="dom.html#ref-for-fallback-content-1">3.1.3. DOM 트리 접근자</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fallback-content-2">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-fallback-content-3">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fallback-content-4">4.7.6. The iframe element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fallback-content-5">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-fallback-content-6">(2)</a> <a href="semantics-embedded-content.html#ref-for-fallback-content-7">(3)</a>
@@ -9308,7 +9306,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="semantics.html#elementdef-html">#elementdef-html</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-html-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-html-2">(2)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-html-3">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-html-4">(2)</a> <a href="dom.html#ref-for-elementdef-html-5">(3)</a> <a href="dom.html#ref-for-elementdef-html-6">(4)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-html-3">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-html-4">(2)</a> <a href="dom.html#ref-for-elementdef-html-5">(3)</a> <a href="dom.html#ref-for-elementdef-html-6">(4)</a>
     </li><li><a href="dom.html#ref-for-elementdef-html-7">3.2.5.3. 
   The lang and xml:lang attributes </a>
     </li><li><a href="dom.html#ref-for-elementdef-html-8">3.2.5.6. The dir attribute</a> <a href="dom.html#ref-for-elementdef-html-9">(2)</a> <a href="dom.html#ref-for-elementdef-html-10">(3)</a> <a href="dom.html#ref-for-elementdef-html-11">(4)</a>
@@ -9358,41 +9356,41 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="document-metadata.html#elementdef-head">#elementdef-head</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-head-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-head-2">(2)</a> <a href="introduction.html#ref-for-elementdef-head-3">(3)</a> <a href="introduction.html#ref-for-elementdef-head-4">(4)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-head-5">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-head-6">(2)</a> <a href="dom.html#ref-for-elementdef-head-7">(3)</a> <a href="dom.html#ref-for-elementdef-head-8">(4)</a> <a href="dom.html#ref-for-elementdef-head-9">(5)</a> <a href="dom.html#ref-for-elementdef-head-10">(6)</a> <a href="dom.html#ref-for-elementdef-head-11">(7)</a>
-    </li><li><a href="semantics.html#ref-for-elementdef-head-12">4.1.1. The html element</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-head-13">4.2.1. The head element</a> <a href="document-metadata.html#ref-for-elementdef-head-14">(2)</a> <a href="document-metadata.html#ref-for-elementdef-head-15">(3)</a> <a href="document-metadata.html#ref-for-elementdef-head-16">(4)</a> <a href="document-metadata.html#ref-for-elementdef-head-17">(5)</a> <a href="document-metadata.html#ref-for-elementdef-head-18">(6)</a> <a href="document-metadata.html#ref-for-elementdef-head-19">(7)</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-head-20">4.2.2. The title element</a> <a href="document-metadata.html#ref-for-elementdef-head-21">(2)</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-head-22">4.2.3. The base element</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-head-23">4.2.4. The link element</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-head-24">4.2.5. The meta element</a> <a href="document-metadata.html#ref-for-elementdef-head-25">(2)</a> <a href="document-metadata.html#ref-for-elementdef-head-26">(3)</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-head-27">4.2.5.1. Standard metadata names</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-head-28">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-elementdef-head-29">(2)</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-head-30">4.2.5.5. Specifying the document’s character encoding</a>
-    </li><li><a href="document-metadata.html#ref-for-elementdef-head-31">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-elementdef-head-32">(2)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-head-33">4.7.6. The iframe element</a>
-    </li><li><a href="semantics-scripting.html#ref-for-elementdef-head-34">4.12.2. The noscript element</a> <a href="semantics-scripting.html#ref-for-elementdef-head-35">(2)</a> <a href="semantics-scripting.html#ref-for-elementdef-head-36">(3)</a> <a href="semantics-scripting.html#ref-for-elementdef-head-37">(4)</a> <a href="semantics-scripting.html#ref-for-elementdef-head-38">(5)</a> <a href="semantics-scripting.html#ref-for-elementdef-head-39">(6)</a> <a href="semantics-scripting.html#ref-for-elementdef-head-40">(7)</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-head-41">6.1. Browsing contexts</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-head-42">6.6.2. The History interface</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-head-43">6.7.4. Page load processing model for text files</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-head-44">6.7.6. Page load processing model for media</a> <a href="browsers.html#ref-for-elementdef-head-45">(2)</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-head-46">6.7.7. Page load processing model for content that uses plugins</a> <a href="browsers.html#ref-for-elementdef-head-47">(2)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-48">8.1. Writing HTML documents</a> <a href="syntax.html#ref-for-elementdef-head-49">(2)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-50">8.1.2.4. Optional tags</a> <a href="syntax.html#ref-for-elementdef-head-51">(2)</a> <a href="syntax.html#ref-for-elementdef-head-52">(3)</a> <a href="syntax.html#ref-for-elementdef-head-53">(4)</a> <a href="syntax.html#ref-for-elementdef-head-54">(5)</a> <a href="syntax.html#ref-for-elementdef-head-55">(6)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-56">8.2.3.1. The insertion mode</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-57">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-58">8.2.3.4. The element pointers</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-59">8.2.5.4.3. The "before head" insertion mode</a> <a href="syntax.html#ref-for-elementdef-head-60">(2)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-61">8.2.5.4.4. The "in head" insertion mode</a> <a href="syntax.html#ref-for-elementdef-head-62">(2)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-63">8.2.5.4.5. The "in head noscript" insertion mode</a> <a href="syntax.html#ref-for-elementdef-head-64">(2)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-65">8.2.8.1. Misnested tags: &lt;b&gt;&lt;i&gt;&lt;/b&gt;&lt;/i&gt;</a> <a href="syntax.html#ref-for-elementdef-head-66">(2)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-67">8.2.8.2. Misnested tags: &lt;b&gt;&lt;p&gt;&lt;/b&gt;&lt;/p&gt;</a> <a href="syntax.html#ref-for-elementdef-head-68">(2)</a> <a href="syntax.html#ref-for-elementdef-head-69">(3)</a> <a href="syntax.html#ref-for-elementdef-head-70">(4)</a> <a href="syntax.html#ref-for-elementdef-head-71">(5)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-72">8.2.8.3. Unexpected markup in tables</a> <a href="syntax.html#ref-for-elementdef-head-73">(2)</a> <a href="syntax.html#ref-for-elementdef-head-74">(3)</a> <a href="syntax.html#ref-for-elementdef-head-75">(4)</a> <a href="syntax.html#ref-for-elementdef-head-76">(5)</a> <a href="syntax.html#ref-for-elementdef-head-77">(6)</a> <a href="syntax.html#ref-for-elementdef-head-78">(7)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-79">8.2.8.4. Scripts that modify the page as it is being parsed</a> <a href="syntax.html#ref-for-elementdef-head-80">(2)</a> <a href="syntax.html#ref-for-elementdef-head-81">(3)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-head-82">8.2.8.6. Unclosed formatting elements</a>
-    </li><li><a href="obsolete.html#ref-for-elementdef-head-83">11.2. Non-conforming features</a>
-    </li><li><a href="obsolete.html#ref-for-elementdef-head-84">11.3.5. Other elements, attributes and APIs</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-head-85">Elements</a> <a href="fullindex.html#ref-for-elementdef-head-86">(2)</a> <a href="fullindex.html#ref-for-elementdef-head-87">(3)</a> <a href="fullindex.html#ref-for-elementdef-head-88">(4)</a> <a href="fullindex.html#ref-for-elementdef-head-89">(5)</a> <a href="fullindex.html#ref-for-elementdef-head-90">(6)</a> <a href="fullindex.html#ref-for-elementdef-head-91">(7)</a> <a href="fullindex.html#ref-for-elementdef-head-92">(8)</a> <a href="fullindex.html#ref-for-elementdef-head-93">(9)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-head-94">Element Interfaces</a>
+    </li><li><a href="dom.html#ref-for-elementdef-head-5">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-head-6">(2)</a> <a href="dom.html#ref-for-elementdef-head-7">(3)</a> <a href="dom.html#ref-for-elementdef-head-8">(4)</a> <a href="dom.html#ref-for-elementdef-head-9">(5)</a> <a href="dom.html#ref-for-elementdef-head-10">(6)</a> <a href="dom.html#ref-for-elementdef-head-11">(7)</a> <a href="dom.html#ref-for-elementdef-head-12">(8)</a>
+    </li><li><a href="semantics.html#ref-for-elementdef-head-13">4.1.1. The html element</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-head-14">4.2.1. The head element</a> <a href="document-metadata.html#ref-for-elementdef-head-15">(2)</a> <a href="document-metadata.html#ref-for-elementdef-head-16">(3)</a> <a href="document-metadata.html#ref-for-elementdef-head-17">(4)</a> <a href="document-metadata.html#ref-for-elementdef-head-18">(5)</a> <a href="document-metadata.html#ref-for-elementdef-head-19">(6)</a> <a href="document-metadata.html#ref-for-elementdef-head-20">(7)</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-head-21">4.2.2. The title element</a> <a href="document-metadata.html#ref-for-elementdef-head-22">(2)</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-head-23">4.2.3. The base element</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-head-24">4.2.4. The link element</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-head-25">4.2.5. The meta element</a> <a href="document-metadata.html#ref-for-elementdef-head-26">(2)</a> <a href="document-metadata.html#ref-for-elementdef-head-27">(3)</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-head-28">4.2.5.1. Standard metadata names</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-head-29">4.2.5.3. Pragma directives</a> <a href="document-metadata.html#ref-for-elementdef-head-30">(2)</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-head-31">4.2.5.5. Specifying the document’s character encoding</a>
+    </li><li><a href="document-metadata.html#ref-for-elementdef-head-32">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-elementdef-head-33">(2)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-head-34">4.7.6. The iframe element</a>
+    </li><li><a href="semantics-scripting.html#ref-for-elementdef-head-35">4.12.2. The noscript element</a> <a href="semantics-scripting.html#ref-for-elementdef-head-36">(2)</a> <a href="semantics-scripting.html#ref-for-elementdef-head-37">(3)</a> <a href="semantics-scripting.html#ref-for-elementdef-head-38">(4)</a> <a href="semantics-scripting.html#ref-for-elementdef-head-39">(5)</a> <a href="semantics-scripting.html#ref-for-elementdef-head-40">(6)</a> <a href="semantics-scripting.html#ref-for-elementdef-head-41">(7)</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-head-42">6.1. Browsing contexts</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-head-43">6.6.2. The History interface</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-head-44">6.7.4. Page load processing model for text files</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-head-45">6.7.6. Page load processing model for media</a> <a href="browsers.html#ref-for-elementdef-head-46">(2)</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-head-47">6.7.7. Page load processing model for content that uses plugins</a> <a href="browsers.html#ref-for-elementdef-head-48">(2)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-49">8.1. Writing HTML documents</a> <a href="syntax.html#ref-for-elementdef-head-50">(2)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-51">8.1.2.4. Optional tags</a> <a href="syntax.html#ref-for-elementdef-head-52">(2)</a> <a href="syntax.html#ref-for-elementdef-head-53">(3)</a> <a href="syntax.html#ref-for-elementdef-head-54">(4)</a> <a href="syntax.html#ref-for-elementdef-head-55">(5)</a> <a href="syntax.html#ref-for-elementdef-head-56">(6)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-57">8.2.3.1. The insertion mode</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-58">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-59">8.2.3.4. The element pointers</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-60">8.2.5.4.3. The "before head" insertion mode</a> <a href="syntax.html#ref-for-elementdef-head-61">(2)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-62">8.2.5.4.4. The "in head" insertion mode</a> <a href="syntax.html#ref-for-elementdef-head-63">(2)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-64">8.2.5.4.5. The "in head noscript" insertion mode</a> <a href="syntax.html#ref-for-elementdef-head-65">(2)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-66">8.2.8.1. Misnested tags: &lt;b&gt;&lt;i&gt;&lt;/b&gt;&lt;/i&gt;</a> <a href="syntax.html#ref-for-elementdef-head-67">(2)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-68">8.2.8.2. Misnested tags: &lt;b&gt;&lt;p&gt;&lt;/b&gt;&lt;/p&gt;</a> <a href="syntax.html#ref-for-elementdef-head-69">(2)</a> <a href="syntax.html#ref-for-elementdef-head-70">(3)</a> <a href="syntax.html#ref-for-elementdef-head-71">(4)</a> <a href="syntax.html#ref-for-elementdef-head-72">(5)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-73">8.2.8.3. Unexpected markup in tables</a> <a href="syntax.html#ref-for-elementdef-head-74">(2)</a> <a href="syntax.html#ref-for-elementdef-head-75">(3)</a> <a href="syntax.html#ref-for-elementdef-head-76">(4)</a> <a href="syntax.html#ref-for-elementdef-head-77">(5)</a> <a href="syntax.html#ref-for-elementdef-head-78">(6)</a> <a href="syntax.html#ref-for-elementdef-head-79">(7)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-80">8.2.8.4. Scripts that modify the page as it is being parsed</a> <a href="syntax.html#ref-for-elementdef-head-81">(2)</a> <a href="syntax.html#ref-for-elementdef-head-82">(3)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-head-83">8.2.8.6. Unclosed formatting elements</a>
+    </li><li><a href="obsolete.html#ref-for-elementdef-head-84">11.2. Non-conforming features</a>
+    </li><li><a href="obsolete.html#ref-for-elementdef-head-85">11.3.5. Other elements, attributes and APIs</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-head-86">Elements</a> <a href="fullindex.html#ref-for-elementdef-head-87">(2)</a> <a href="fullindex.html#ref-for-elementdef-head-88">(3)</a> <a href="fullindex.html#ref-for-elementdef-head-89">(4)</a> <a href="fullindex.html#ref-for-elementdef-head-90">(5)</a> <a href="fullindex.html#ref-for-elementdef-head-91">(6)</a> <a href="fullindex.html#ref-for-elementdef-head-92">(7)</a> <a href="fullindex.html#ref-for-elementdef-head-93">(8)</a> <a href="fullindex.html#ref-for-elementdef-head-94">(9)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-head-95">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlheadelement-htmlheadelement">
@@ -9408,7 +9406,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="document-metadata.html#elementdef-title">#elementdef-title</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-title-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-title-2">(2)</a> <a href="introduction.html#ref-for-elementdef-title-3">(3)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-title-4">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-title-5">(2)</a> <a href="dom.html#ref-for-elementdef-title-6">(3)</a> <a href="dom.html#ref-for-elementdef-title-7">(4)</a> <a href="dom.html#ref-for-elementdef-title-8">(5)</a> <a href="dom.html#ref-for-elementdef-title-9">(6)</a> <a href="dom.html#ref-for-elementdef-title-10">(7)</a> <a href="dom.html#ref-for-elementdef-title-11">(8)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-title-4">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-title-5">(2)</a> <a href="dom.html#ref-for-elementdef-title-6">(3)</a> <a href="dom.html#ref-for-elementdef-title-7">(4)</a> <a href="dom.html#ref-for-elementdef-title-8">(5)</a> <a href="dom.html#ref-for-elementdef-title-9">(6)</a> <a href="dom.html#ref-for-elementdef-title-10">(7)</a> <a href="dom.html#ref-for-elementdef-title-11">(8)</a>
     </li><li><a href="dom.html#ref-for-elementdef-title-12">3.2.4.2.1. Metadata content</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-title-13">4.2.1. The head element</a> <a href="document-metadata.html#ref-for-elementdef-title-14">(2)</a> <a href="document-metadata.html#ref-for-elementdef-title-15">(3)</a> <a href="document-metadata.html#ref-for-elementdef-title-16">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-title-17">4.2.2. The title element</a> <a href="document-metadata.html#ref-for-elementdef-title-18">(2)</a> <a href="document-metadata.html#ref-for-elementdef-title-19">(3)</a> <a href="document-metadata.html#ref-for-elementdef-title-20">(4)</a> <a href="document-metadata.html#ref-for-elementdef-title-21">(5)</a> <a href="document-metadata.html#ref-for-elementdef-title-22">(6)</a>
@@ -9977,7 +9975,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="sections.html#elementdef-body">#elementdef-body</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-body-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-body-2">(2)</a> <a href="introduction.html#ref-for-elementdef-body-3">(3)</a> <a href="introduction.html#ref-for-elementdef-body-4">(4)</a> <a href="introduction.html#ref-for-elementdef-body-5">(5)</a> <a href="introduction.html#ref-for-elementdef-body-6">(6)</a> <a href="introduction.html#ref-for-elementdef-body-7">(7)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-body-8">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-body-9">(2)</a> <a href="dom.html#ref-for-elementdef-body-10">(3)</a> <a href="dom.html#ref-for-elementdef-body-11">(4)</a> <a href="dom.html#ref-for-elementdef-body-12">(5)</a> <a href="dom.html#ref-for-elementdef-body-13">(6)</a> <a href="dom.html#ref-for-elementdef-body-14">(7)</a> <a href="dom.html#ref-for-elementdef-body-15">(8)</a> <a href="dom.html#ref-for-elementdef-body-16">(9)</a> <a href="dom.html#ref-for-elementdef-body-17">(10)</a> <a href="dom.html#ref-for-elementdef-body-18">(11)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-body-8">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-body-9">(2)</a> <a href="dom.html#ref-for-elementdef-body-10">(3)</a> <a href="dom.html#ref-for-elementdef-body-11">(4)</a> <a href="dom.html#ref-for-elementdef-body-12">(5)</a> <a href="dom.html#ref-for-elementdef-body-13">(6)</a> <a href="dom.html#ref-for-elementdef-body-14">(7)</a> <a href="dom.html#ref-for-elementdef-body-15">(8)</a> <a href="dom.html#ref-for-elementdef-body-16">(9)</a> <a href="dom.html#ref-for-elementdef-body-17">(10)</a> <a href="dom.html#ref-for-elementdef-body-18">(11)</a>
     </li><li><a href="dom.html#ref-for-elementdef-body-19">3.2.5. Global attributes</a>
     </li><li><a href="semantics.html#ref-for-elementdef-body-20">4.1.1. The html element</a>
     </li><li><a href="sections.html#ref-for-elementdef-body-21">4.3.1. The body element</a> <a href="sections.html#ref-for-elementdef-body-22">(2)</a> <a href="sections.html#ref-for-elementdef-body-23">(3)</a> <a href="sections.html#ref-for-elementdef-body-24">(4)</a> <a href="sections.html#ref-for-elementdef-body-25">(5)</a> <a href="sections.html#ref-for-elementdef-body-26">(6)</a> <a href="sections.html#ref-for-elementdef-body-27">(7)</a> <a href="sections.html#ref-for-elementdef-body-28">(8)</a> <a href="sections.html#ref-for-elementdef-body-29">(9)</a> <a href="sections.html#ref-for-elementdef-body-30">(10)</a> <a href="sections.html#ref-for-elementdef-body-31">(11)</a> <a href="sections.html#ref-for-elementdef-body-32">(12)</a> <a href="sections.html#ref-for-elementdef-body-33">(13)</a> <a href="sections.html#ref-for-elementdef-body-34">(14)</a> <a href="sections.html#ref-for-elementdef-body-35">(15)</a> <a href="sections.html#ref-for-elementdef-body-36">(16)</a>
@@ -10822,7 +10820,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-a-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-elementdef-a-2">(2)</a> <a href="introduction.html#ref-for-elementdef-a-3">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-a-4">2.7.2.1. HTMLAllCollection 인터페이스</a>
-    </li><li><a href="dom.html#ref-for-elementdef-a-5">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-a-6">(2)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-a-5">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-a-6">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-a-7">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-a-8">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-a-9">3.2.4.2.7. Interactive content</a>
@@ -11793,7 +11791,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
     </li><li><a href="introduction.html#ref-for-elementdef-img-2">1.9.2. 
   API 스크립팅을 사용하는 경우를 막는 일반적인 위험 </a> <a href="introduction.html#ref-for-elementdef-img-3">(2)</a> <a href="introduction.html#ref-for-elementdef-img-4">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-img-5">2.7.2.1. HTMLAllCollection 인터페이스</a>
-    </li><li><a href="dom.html#ref-for-elementdef-img-6">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-img-7">(2)</a> <a href="dom.html#ref-for-elementdef-img-8">(3)</a> <a href="dom.html#ref-for-elementdef-img-9">(4)</a> <a href="dom.html#ref-for-elementdef-img-10">(5)</a> <a href="dom.html#ref-for-elementdef-img-11">(6)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-img-6">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-img-7">(2)</a> <a href="dom.html#ref-for-elementdef-img-8">(3)</a> <a href="dom.html#ref-for-elementdef-img-9">(4)</a> <a href="dom.html#ref-for-elementdef-img-10">(5)</a> <a href="dom.html#ref-for-elementdef-img-11">(6)</a>
     </li><li><a href="dom.html#ref-for-elementdef-img-12">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-img-13">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-img-14">3.2.4.2.6. Embedded content</a>
@@ -12220,7 +12218,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
     <li><a href="introduction.html#ref-for-elementdef-iframe-1">1.9.1. HTML로 안전한 어플리케이션 작성</a> <a href="introduction.html#ref-for-elementdef-iframe-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-iframe-3">2.1.5. Plugin 콘텐트 처리기</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-iframe-4">2.7.2.1. HTMLAllCollection 인터페이스</a> <a href="infrastructure.html#ref-for-elementdef-iframe-5">(2)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-iframe-6">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-iframe-7">(2)</a> <a href="dom.html#ref-for-elementdef-iframe-8">(3)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-iframe-6">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-iframe-7">(2)</a> <a href="dom.html#ref-for-elementdef-iframe-8">(3)</a>
     </li><li><a href="dom.html#ref-for-elementdef-iframe-9">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-iframe-10">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-iframe-11">3.2.4.2.6. Embedded content</a>
@@ -12392,7 +12390,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-embed-1">1.5.3. 확장성</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-embed-2">2.7.2.1. HTMLAllCollection 인터페이스</a>
-    </li><li><a href="dom.html#ref-for-elementdef-embed-3">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-embed-4">(2)</a> <a href="dom.html#ref-for-elementdef-embed-5">(3)</a> <a href="dom.html#ref-for-elementdef-embed-6">(4)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-embed-3">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-embed-4">(2)</a> <a href="dom.html#ref-for-elementdef-embed-5">(3)</a> <a href="dom.html#ref-for-elementdef-embed-6">(4)</a>
     </li><li><a href="dom.html#ref-for-elementdef-embed-7">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-embed-8">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-embed-9">3.2.4.2.6. Embedded content</a>
@@ -12466,7 +12464,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="semantics-embedded-content.html#elementdef-object">#elementdef-object</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-elementdef-object-1">2.7.2.1. HTMLAllCollection 인터페이스</a> <a href="infrastructure.html#ref-for-elementdef-object-2">(2)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-object-3">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-object-4">(2)</a> <a href="dom.html#ref-for-elementdef-object-5">(3)</a> <a href="dom.html#ref-for-elementdef-object-6">(4)</a> <a href="dom.html#ref-for-elementdef-object-7">(5)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-object-3">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-object-4">(2)</a> <a href="dom.html#ref-for-elementdef-object-5">(3)</a> <a href="dom.html#ref-for-elementdef-object-6">(4)</a> <a href="dom.html#ref-for-elementdef-object-7">(5)</a>
     </li><li><a href="dom.html#ref-for-elementdef-object-8">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-object-9">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-object-10">3.2.4.2.6. Embedded content</a>
@@ -14607,7 +14605,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <ul>
     <li><a href="introduction.html#ref-for-elementdef-area-1">1.10.3. 
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
-    </li><li><a href="dom.html#ref-for-elementdef-area-2">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-area-3">(2)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-area-2">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-area-3">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-area-4">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-area-5">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-area-6">3.2.5.4. The translate attribute</a> <a href="dom.html#ref-for-elementdef-area-7">(2)</a>
@@ -14800,7 +14798,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
   <aside class="dfn-panel" data-for="elementdef-svg">
    <b><a href="semantics-embedded-content.html#elementdef-svg">#elementdef-svg</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-elementdef-svg-1">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-svg-2">(2)</a>
+    <li><a href="dom.html#ref-for-elementdef-svg-1">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-svg-2">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-svg-3">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-svg-4">3.2.4.2.5. Phrasing content</a>
     </li><li><a href="dom.html#ref-for-elementdef-svg-5">3.2.4.2.6. Embedded content</a>
@@ -14935,7 +14933,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <ul>
     <li><a href="introduction.html#ref-for-element-attrdef-a-href-1">1.9. HTML 간단한 소개</a> <a href="introduction.html#ref-for-element-attrdef-a-href-2">(2)</a> <a href="introduction.html#ref-for-element-attrdef-a-href-3">(3)</a>
     </li><li><a href="infrastructure.html#ref-for-element-attrdef-a-href-4">2.5.3. 기본 URL로 동적 변경</a>
-    </li><li><a href="dom.html#ref-for-element-attrdef-a-href-5">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-element-attrdef-a-href-6">(2)</a> <a href="dom.html#ref-for-element-attrdef-a-href-7">(3)</a>
+    </li><li><a href="dom.html#ref-for-element-attrdef-a-href-5">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-element-attrdef-a-href-6">(2)</a> <a href="dom.html#ref-for-element-attrdef-a-href-7">(3)</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-a-href-8">3.2.4.2.7. Interactive content</a>
     </li><li><a href="document-metadata.html#ref-for-element-attrdef-a-href-9">4.2.4. The link element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-10">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-11">(2)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-12">(3)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-13">(4)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-14">(5)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-15">(6)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-16">(7)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-17">(8)</a>
@@ -16044,7 +16042,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-form-2">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-form-3">2.7.2.1. HTMLAllCollection 인터페이스</a> <a href="infrastructure.html#ref-for-elementdef-form-4">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-form-5">2.7.2.2. HTMLFormControlsCollection 인터페이스</a>
-    </li><li><a href="dom.html#ref-for-elementdef-form-6">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-form-7">(2)</a> <a href="dom.html#ref-for-elementdef-form-8">(3)</a> <a href="dom.html#ref-for-elementdef-form-9">(4)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-form-6">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-form-7">(2)</a> <a href="dom.html#ref-for-elementdef-form-8">(3)</a> <a href="dom.html#ref-for-elementdef-form-9">(4)</a>
     </li><li><a href="dom.html#ref-for-elementdef-form-10">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-form-11">3.2.4.2.8. Palpable content</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-form-12">4.4.1. The p element</a>
@@ -21339,7 +21337,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
     </li><li><a href="introduction.html#ref-for-elementdef-script-4">1.10.3. 
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a> <a href="introduction.html#ref-for-elementdef-script-5">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-elementdef-script-6">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-script-7">(2)</a> <a href="infrastructure.html#ref-for-elementdef-script-8">(3)</a>
-    </li><li><a href="dom.html#ref-for-elementdef-script-9">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-script-10">(2)</a> <a href="dom.html#ref-for-elementdef-script-11">(3)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-script-9">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-script-10">(2)</a> <a href="dom.html#ref-for-elementdef-script-11">(3)</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-12">3.2.4.2.1. Metadata content</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-13">3.2.4.2.2. Flow content</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-14">3.2.4.2.5. Phrasing content</a>
@@ -22995,7 +22993,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
   <aside class="dfn-panel" data-for="nested-browsing-contexts">
    <b><a href="browsers.html#nested-browsing-contexts">#nested-browsing-contexts</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-nested-browsing-contexts-1">3.1.3. DOM tree accessors</a>
+    <li><a href="dom.html#ref-for-nested-browsing-contexts-1">3.1.3. DOM 트리 접근자</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-2">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-3">(2)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-4">(3)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-5">(4)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-6">(5)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-7">(6)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-8">(7)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-9">(8)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-10">(9)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-11">(10)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-12">(11)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-13">(12)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-14">(13)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-15">(14)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-16">(15)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-17">(16)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-18">(17)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-19">(18)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-20">(19)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-21">(20)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-22">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-23">(2)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-24">(3)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-25">(4)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-26">(5)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-27">(6)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-28">(7)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-29">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-30">(2)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-31">(3)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-32">(4)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-33">(5)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-34">(6)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-35">(7)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-36">(8)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-37">(9)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-38">(10)</a> <a href="semantics-embedded-content.html#ref-for-nested-browsing-contexts-39">(11)</a>
@@ -23712,7 +23710,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <ul>
     <li><a href="infrastructure.html#ref-for-concept-cross-origin-1">2.6.2. 처리 모델</a>
     </li><li><a href="infrastructure.html#ref-for-concept-cross-origin-2">2.9.1. 복제 가능한 객체</a>
-    </li><li><a href="dom.html#ref-for-concept-cross-origin-3">3.1.4. Loading XML documents</a>
+    </li><li><a href="dom.html#ref-for-concept-cross-origin-3">3.1.4. XML 문서 로딩</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-concept-cross-origin-4">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-5">(2)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-6">(3)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-7">(4)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-8">(5)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-9">(6)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-concept-cross-origin-10">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-11">(2)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-12">(3)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-13">(4)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-concept-cross-origin-14">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-15">(2)</a> <a href="semantics-embedded-content.html#ref-for-concept-cross-origin-16">(3)</a>
@@ -25152,7 +25150,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
   <aside class="dfn-panel" data-for="entry-settings-object">
    <b><a href="webappapis.html#entry-settings-object">#entry-settings-object</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="dom.html#ref-for-entry-settings-object-1">3.1.4. Loading XML documents</a> <a href="dom.html#ref-for-entry-settings-object-2">(2)</a>
+    <li><a href="dom.html#ref-for-entry-settings-object-1">3.1.4. XML 문서 로딩</a> <a href="dom.html#ref-for-entry-settings-object-2">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-entry-settings-object-3">4.5.1. The a element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-entry-settings-object-4">4.7.16. The area element</a>
     </li><li><a href="browsers.html#ref-for-entry-settings-object-5">6.1.1.1. Navigating nested browsing contexts in the DOM</a>
@@ -25461,58 +25459,59 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="webappapis.html#queuing">#queuing</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-queuing-1">2.6.2. 처리 모델</a>
-    </li><li><a href="document-metadata.html#ref-for-queuing-2">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-queuing-3">(2)</a>
-    </li><li><a href="document-metadata.html#ref-for-queuing-4">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-queuing-5">(2)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-6">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-queuing-7">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-8">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-9">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-10">(5)</a> <a href="semantics-embedded-content.html#ref-for-queuing-11">(6)</a> <a href="semantics-embedded-content.html#ref-for-queuing-12">(7)</a> <a href="semantics-embedded-content.html#ref-for-queuing-13">(8)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-14">4.7.6. The iframe element</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-15">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-queuing-16">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-17">(3)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-18">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-queuing-19">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-20">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-21">(4)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-22">4.7.10. The video element</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-23">4.7.14.5. Loading the media resource</a> <a href="semantics-embedded-content.html#ref-for-queuing-24">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-25">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-26">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-27">(5)</a> <a href="semantics-embedded-content.html#ref-for-queuing-28">(6)</a> <a href="semantics-embedded-content.html#ref-for-queuing-29">(7)</a> <a href="semantics-embedded-content.html#ref-for-queuing-30">(8)</a> <a href="semantics-embedded-content.html#ref-for-queuing-31">(9)</a> <a href="semantics-embedded-content.html#ref-for-queuing-32">(10)</a> <a href="semantics-embedded-content.html#ref-for-queuing-33">(11)</a> <a href="semantics-embedded-content.html#ref-for-queuing-34">(12)</a> <a href="semantics-embedded-content.html#ref-for-queuing-35">(13)</a> <a href="semantics-embedded-content.html#ref-for-queuing-36">(14)</a> <a href="semantics-embedded-content.html#ref-for-queuing-37">(15)</a> <a href="semantics-embedded-content.html#ref-for-queuing-38">(16)</a> <a href="semantics-embedded-content.html#ref-for-queuing-39">(17)</a> <a href="semantics-embedded-content.html#ref-for-queuing-40">(18)</a> <a href="semantics-embedded-content.html#ref-for-queuing-41">(19)</a> <a href="semantics-embedded-content.html#ref-for-queuing-42">(20)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-43">4.7.14.6. Offsets into the media resource</a> <a href="semantics-embedded-content.html#ref-for-queuing-44">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-45">(3)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-46">4.7.14.7. Ready states</a> <a href="semantics-embedded-content.html#ref-for-queuing-47">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-48">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-49">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-50">(5)</a> <a href="semantics-embedded-content.html#ref-for-queuing-51">(6)</a> <a href="semantics-embedded-content.html#ref-for-queuing-52">(7)</a> <a href="semantics-embedded-content.html#ref-for-queuing-53">(8)</a> <a href="semantics-embedded-content.html#ref-for-queuing-54">(9)</a> <a href="semantics-embedded-content.html#ref-for-queuing-55">(10)</a> <a href="semantics-embedded-content.html#ref-for-queuing-56">(11)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-57">4.7.14.8. Playing the media resource</a> <a href="semantics-embedded-content.html#ref-for-queuing-58">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-59">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-60">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-61">(5)</a> <a href="semantics-embedded-content.html#ref-for-queuing-62">(6)</a> <a href="semantics-embedded-content.html#ref-for-queuing-63">(7)</a> <a href="semantics-embedded-content.html#ref-for-queuing-64">(8)</a> <a href="semantics-embedded-content.html#ref-for-queuing-65">(9)</a> <a href="semantics-embedded-content.html#ref-for-queuing-66">(10)</a> <a href="semantics-embedded-content.html#ref-for-queuing-67">(11)</a> <a href="semantics-embedded-content.html#ref-for-queuing-68">(12)</a> <a href="semantics-embedded-content.html#ref-for-queuing-69">(13)</a> <a href="semantics-embedded-content.html#ref-for-queuing-70">(14)</a> <a href="semantics-embedded-content.html#ref-for-queuing-71">(15)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-72">4.7.14.9. Seeking</a> <a href="semantics-embedded-content.html#ref-for-queuing-73">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-74">(3)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-75">4.7.14.10.1. AudioTrackList and VideoTrackList objects</a> <a href="semantics-embedded-content.html#ref-for-queuing-76">(2)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-77">4.7.14.11.1. Text track model</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-78">4.7.14.11.3. Sourcing out-of-band text tracks</a> <a href="semantics-embedded-content.html#ref-for-queuing-79">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-80">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-81">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-82">(5)</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-83">4.7.14.11.5. Text track API</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-84">4.7.14.12. User interface</a>
-    </li><li><a href="links.html#ref-for-queuing-85">4.8.4. Following hyperlinks</a> <a href="links.html#ref-for-queuing-86">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-queuing-87">4.10.4. The label element</a>
-    </li><li><a href="sec-forms.html#ref-for-queuing-88">4.10.5.1.2. Text (type=text) state and Search state (type=search)</a>
-    </li><li><a href="sec-forms.html#ref-for-queuing-89">4.10.5.1.17. File Upload state (type=file)</a> <a href="sec-forms.html#ref-for-queuing-90">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-queuing-91">4.10.5.1.19. Image Button state (type=image)</a> <a href="sec-forms.html#ref-for-queuing-92">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-queuing-93">4.10.5.5. Common event behaviors</a> <a href="sec-forms.html#ref-for-queuing-94">(2)</a> <a href="sec-forms.html#ref-for-queuing-95">(3)</a> <a href="sec-forms.html#ref-for-queuing-96">(4)</a> <a href="sec-forms.html#ref-for-queuing-97">(5)</a> <a href="sec-forms.html#ref-for-queuing-98">(6)</a>
-    </li><li><a href="sec-forms.html#ref-for-queuing-99">4.10.7. The select element</a>
-    </li><li><a href="sec-forms.html#ref-for-queuing-100">4.10.11. The textarea element</a> <a href="sec-forms.html#ref-for-queuing-101">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-queuing-102">4.10.19.6.1. Autofocusing a form control: the autofocus attribute</a>
-    </li><li><a href="sec-forms.html#ref-for-queuing-103">4.10.20. APIs for text field selections</a> <a href="sec-forms.html#ref-for-queuing-104">(2)</a> <a href="sec-forms.html#ref-for-queuing-105">(3)</a>
-    </li><li><a href="sec-forms.html#ref-for-queuing-106">4.10.22.3. Form submission algorithm</a>
-    </li><li><a href="interactive-elements.html#ref-for-queuing-107">4.11.1. The details element</a>
-    </li><li><a href="semantics-scripting.html#ref-for-queuing-108">4.12.1.1. Processing model</a> <a href="semantics-scripting.html#ref-for-queuing-109">(2)</a> <a href="semantics-scripting.html#ref-for-queuing-110">(3)</a>
-    </li><li><a href="semantics-scripting.html#ref-for-queuing-111">4.12.4. The canvas element</a>
-    </li><li><a href="editing.html#ref-for-queuing-112">5.7.3.2. The DataTransferItem interface</a>
-    </li><li><a href="editing.html#ref-for-queuing-113">5.7.5. Drag-and-drop processing model</a>
-    </li><li><a href="browsers.html#ref-for-queuing-114">6.3.1. APIs for creating and navigating browsing contexts by name</a>
-    </li><li><a href="browsers.html#ref-for-queuing-115">6.6.2. The History interface</a>
-    </li><li><a href="browsers.html#ref-for-queuing-116">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-queuing-117">(2)</a>
-    </li><li><a href="browsers.html#ref-for-queuing-118">6.7.2. Page load processing model for HTML files</a> <a href="browsers.html#ref-for-queuing-119">(2)</a>
-    </li><li><a href="browsers.html#ref-for-queuing-120">6.7.4. Page load processing model for text files</a> <a href="browsers.html#ref-for-queuing-121">(2)</a>
-    </li><li><a href="browsers.html#ref-for-queuing-122">6.7.10. History traversal</a> <a href="browsers.html#ref-for-queuing-123">(2)</a>
-    </li><li><a href="browsers.html#ref-for-queuing-124">6.7.12. Aborting a document load</a>
-    </li><li><a href="browsers.html#ref-for-queuing-125">6.7.13. Browser state</a> <a href="browsers.html#ref-for-queuing-126">(2)</a>
-    </li><li><a href="webappapis.html#ref-for-queuing-127">7.1.3.9. Unhandled promise rejections</a>
-    </li><li><a href="webappapis.html#ref-for-queuing-128">7.1.3.9.1. The HostPromiseRejectionTracker implementation</a>
-    </li><li><a href="webappapis.html#ref-for-queuing-129">7.1.4.2. Processing model</a>
-    </li><li><a href="webappapis.html#ref-for-queuing-130">7.4. Timers</a>
-    </li><li><a href="webappapis.html#ref-for-queuing-131">7.6.1.2. Language preferences</a>
-    </li><li><a href="syntax.html#ref-for-queuing-132">8.2.6. The end</a> <a href="syntax.html#ref-for-queuing-133">(2)</a> <a href="syntax.html#ref-for-queuing-134">(3)</a> <a href="syntax.html#ref-for-queuing-135">(4)</a> <a href="syntax.html#ref-for-queuing-136">(5)</a>
-    </li><li><a href="rendering.html#ref-for-queuing-137">10.5.4. The input element as a text entry widget</a>
-    </li><li><a href="rendering.html#ref-for-queuing-138">10.5.15. The textarea element</a>
-    </li><li><a href="obsolete.html#ref-for-queuing-139">11.3.2. The marquee element</a> <a href="obsolete.html#ref-for-queuing-140">(2)</a> <a href="obsolete.html#ref-for-queuing-141">(3)</a> <a href="obsolete.html#ref-for-queuing-142">(4)</a>
-    </li><li><a href="obsolete.html#ref-for-queuing-143">11.3.3. Frames</a> <a href="obsolete.html#ref-for-queuing-144">(2)</a>
-    </li><li><a href="obsolete.html#ref-for-queuing-145">11.3.4.2. Downloading or updating an application cache</a>
+    </li><li><a href="dom.html#ref-for-queuing-2">3.1.4. XML 문서 로딩</a>
+    </li><li><a href="document-metadata.html#ref-for-queuing-3">4.2.4. The link element</a> <a href="document-metadata.html#ref-for-queuing-4">(2)</a>
+    </li><li><a href="document-metadata.html#ref-for-queuing-5">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-queuing-6">(2)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-7">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-queuing-8">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-9">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-10">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-11">(5)</a> <a href="semantics-embedded-content.html#ref-for-queuing-12">(6)</a> <a href="semantics-embedded-content.html#ref-for-queuing-13">(7)</a> <a href="semantics-embedded-content.html#ref-for-queuing-14">(8)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-15">4.7.6. The iframe element</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-16">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-queuing-17">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-18">(3)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-19">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-queuing-20">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-21">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-22">(4)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-23">4.7.10. The video element</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-24">4.7.14.5. Loading the media resource</a> <a href="semantics-embedded-content.html#ref-for-queuing-25">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-26">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-27">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-28">(5)</a> <a href="semantics-embedded-content.html#ref-for-queuing-29">(6)</a> <a href="semantics-embedded-content.html#ref-for-queuing-30">(7)</a> <a href="semantics-embedded-content.html#ref-for-queuing-31">(8)</a> <a href="semantics-embedded-content.html#ref-for-queuing-32">(9)</a> <a href="semantics-embedded-content.html#ref-for-queuing-33">(10)</a> <a href="semantics-embedded-content.html#ref-for-queuing-34">(11)</a> <a href="semantics-embedded-content.html#ref-for-queuing-35">(12)</a> <a href="semantics-embedded-content.html#ref-for-queuing-36">(13)</a> <a href="semantics-embedded-content.html#ref-for-queuing-37">(14)</a> <a href="semantics-embedded-content.html#ref-for-queuing-38">(15)</a> <a href="semantics-embedded-content.html#ref-for-queuing-39">(16)</a> <a href="semantics-embedded-content.html#ref-for-queuing-40">(17)</a> <a href="semantics-embedded-content.html#ref-for-queuing-41">(18)</a> <a href="semantics-embedded-content.html#ref-for-queuing-42">(19)</a> <a href="semantics-embedded-content.html#ref-for-queuing-43">(20)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-44">4.7.14.6. Offsets into the media resource</a> <a href="semantics-embedded-content.html#ref-for-queuing-45">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-46">(3)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-47">4.7.14.7. Ready states</a> <a href="semantics-embedded-content.html#ref-for-queuing-48">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-49">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-50">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-51">(5)</a> <a href="semantics-embedded-content.html#ref-for-queuing-52">(6)</a> <a href="semantics-embedded-content.html#ref-for-queuing-53">(7)</a> <a href="semantics-embedded-content.html#ref-for-queuing-54">(8)</a> <a href="semantics-embedded-content.html#ref-for-queuing-55">(9)</a> <a href="semantics-embedded-content.html#ref-for-queuing-56">(10)</a> <a href="semantics-embedded-content.html#ref-for-queuing-57">(11)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-58">4.7.14.8. Playing the media resource</a> <a href="semantics-embedded-content.html#ref-for-queuing-59">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-60">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-61">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-62">(5)</a> <a href="semantics-embedded-content.html#ref-for-queuing-63">(6)</a> <a href="semantics-embedded-content.html#ref-for-queuing-64">(7)</a> <a href="semantics-embedded-content.html#ref-for-queuing-65">(8)</a> <a href="semantics-embedded-content.html#ref-for-queuing-66">(9)</a> <a href="semantics-embedded-content.html#ref-for-queuing-67">(10)</a> <a href="semantics-embedded-content.html#ref-for-queuing-68">(11)</a> <a href="semantics-embedded-content.html#ref-for-queuing-69">(12)</a> <a href="semantics-embedded-content.html#ref-for-queuing-70">(13)</a> <a href="semantics-embedded-content.html#ref-for-queuing-71">(14)</a> <a href="semantics-embedded-content.html#ref-for-queuing-72">(15)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-73">4.7.14.9. Seeking</a> <a href="semantics-embedded-content.html#ref-for-queuing-74">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-75">(3)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-76">4.7.14.10.1. AudioTrackList and VideoTrackList objects</a> <a href="semantics-embedded-content.html#ref-for-queuing-77">(2)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-78">4.7.14.11.1. Text track model</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-79">4.7.14.11.3. Sourcing out-of-band text tracks</a> <a href="semantics-embedded-content.html#ref-for-queuing-80">(2)</a> <a href="semantics-embedded-content.html#ref-for-queuing-81">(3)</a> <a href="semantics-embedded-content.html#ref-for-queuing-82">(4)</a> <a href="semantics-embedded-content.html#ref-for-queuing-83">(5)</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-84">4.7.14.11.5. Text track API</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-queuing-85">4.7.14.12. User interface</a>
+    </li><li><a href="links.html#ref-for-queuing-86">4.8.4. Following hyperlinks</a> <a href="links.html#ref-for-queuing-87">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-queuing-88">4.10.4. The label element</a>
+    </li><li><a href="sec-forms.html#ref-for-queuing-89">4.10.5.1.2. Text (type=text) state and Search state (type=search)</a>
+    </li><li><a href="sec-forms.html#ref-for-queuing-90">4.10.5.1.17. File Upload state (type=file)</a> <a href="sec-forms.html#ref-for-queuing-91">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-queuing-92">4.10.5.1.19. Image Button state (type=image)</a> <a href="sec-forms.html#ref-for-queuing-93">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-queuing-94">4.10.5.5. Common event behaviors</a> <a href="sec-forms.html#ref-for-queuing-95">(2)</a> <a href="sec-forms.html#ref-for-queuing-96">(3)</a> <a href="sec-forms.html#ref-for-queuing-97">(4)</a> <a href="sec-forms.html#ref-for-queuing-98">(5)</a> <a href="sec-forms.html#ref-for-queuing-99">(6)</a>
+    </li><li><a href="sec-forms.html#ref-for-queuing-100">4.10.7. The select element</a>
+    </li><li><a href="sec-forms.html#ref-for-queuing-101">4.10.11. The textarea element</a> <a href="sec-forms.html#ref-for-queuing-102">(2)</a>
+    </li><li><a href="sec-forms.html#ref-for-queuing-103">4.10.19.6.1. Autofocusing a form control: the autofocus attribute</a>
+    </li><li><a href="sec-forms.html#ref-for-queuing-104">4.10.20. APIs for text field selections</a> <a href="sec-forms.html#ref-for-queuing-105">(2)</a> <a href="sec-forms.html#ref-for-queuing-106">(3)</a>
+    </li><li><a href="sec-forms.html#ref-for-queuing-107">4.10.22.3. Form submission algorithm</a>
+    </li><li><a href="interactive-elements.html#ref-for-queuing-108">4.11.1. The details element</a>
+    </li><li><a href="semantics-scripting.html#ref-for-queuing-109">4.12.1.1. Processing model</a> <a href="semantics-scripting.html#ref-for-queuing-110">(2)</a> <a href="semantics-scripting.html#ref-for-queuing-111">(3)</a>
+    </li><li><a href="semantics-scripting.html#ref-for-queuing-112">4.12.4. The canvas element</a>
+    </li><li><a href="editing.html#ref-for-queuing-113">5.7.3.2. The DataTransferItem interface</a>
+    </li><li><a href="editing.html#ref-for-queuing-114">5.7.5. Drag-and-drop processing model</a>
+    </li><li><a href="browsers.html#ref-for-queuing-115">6.3.1. APIs for creating and navigating browsing contexts by name</a>
+    </li><li><a href="browsers.html#ref-for-queuing-116">6.6.2. The History interface</a>
+    </li><li><a href="browsers.html#ref-for-queuing-117">6.7.1. Navigating across documents</a> <a href="browsers.html#ref-for-queuing-118">(2)</a>
+    </li><li><a href="browsers.html#ref-for-queuing-119">6.7.2. Page load processing model for HTML files</a> <a href="browsers.html#ref-for-queuing-120">(2)</a>
+    </li><li><a href="browsers.html#ref-for-queuing-121">6.7.4. Page load processing model for text files</a> <a href="browsers.html#ref-for-queuing-122">(2)</a>
+    </li><li><a href="browsers.html#ref-for-queuing-123">6.7.10. History traversal</a> <a href="browsers.html#ref-for-queuing-124">(2)</a>
+    </li><li><a href="browsers.html#ref-for-queuing-125">6.7.12. Aborting a document load</a>
+    </li><li><a href="browsers.html#ref-for-queuing-126">6.7.13. Browser state</a> <a href="browsers.html#ref-for-queuing-127">(2)</a>
+    </li><li><a href="webappapis.html#ref-for-queuing-128">7.1.3.9. Unhandled promise rejections</a>
+    </li><li><a href="webappapis.html#ref-for-queuing-129">7.1.3.9.1. The HostPromiseRejectionTracker implementation</a>
+    </li><li><a href="webappapis.html#ref-for-queuing-130">7.1.4.2. Processing model</a>
+    </li><li><a href="webappapis.html#ref-for-queuing-131">7.4. Timers</a>
+    </li><li><a href="webappapis.html#ref-for-queuing-132">7.6.1.2. Language preferences</a>
+    </li><li><a href="syntax.html#ref-for-queuing-133">8.2.6. The end</a> <a href="syntax.html#ref-for-queuing-134">(2)</a> <a href="syntax.html#ref-for-queuing-135">(3)</a> <a href="syntax.html#ref-for-queuing-136">(4)</a> <a href="syntax.html#ref-for-queuing-137">(5)</a>
+    </li><li><a href="rendering.html#ref-for-queuing-138">10.5.4. The input element as a text entry widget</a>
+    </li><li><a href="rendering.html#ref-for-queuing-139">10.5.15. The textarea element</a>
+    </li><li><a href="obsolete.html#ref-for-queuing-140">11.3.2. The marquee element</a> <a href="obsolete.html#ref-for-queuing-141">(2)</a> <a href="obsolete.html#ref-for-queuing-142">(3)</a> <a href="obsolete.html#ref-for-queuing-143">(4)</a>
+    </li><li><a href="obsolete.html#ref-for-queuing-144">11.3.3. Frames</a> <a href="obsolete.html#ref-for-queuing-145">(2)</a>
+    </li><li><a href="obsolete.html#ref-for-queuing-146">11.3.4.2. Downloading or updating an application cache</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="task-source">
@@ -28682,7 +28681,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="xhtml.html#xml-parser">#xml-parser</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="dom.html#ref-for-xml-parser-1">3.1.2. 리소스 메타데이터 관리</a> <a href="dom.html#ref-for-xml-parser-2">(2)</a>
-    </li><li><a href="dom.html#ref-for-xml-parser-3">3.1.4. Loading XML documents</a>
+    </li><li><a href="dom.html#ref-for-xml-parser-3">3.1.4. XML 문서 로딩</a>
     </li><li><a href="document-metadata.html#ref-for-xml-parser-4">4.2.6. The style element</a> <a href="document-metadata.html#ref-for-xml-parser-5">(2)</a> <a href="document-metadata.html#ref-for-xml-parser-6">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-xml-parser-7">4.2.7. Interactions of styling and scripting</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-xml-parser-8">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-xml-parser-9">(2)</a> <a href="semantics-embedded-content.html#ref-for-xml-parser-10">(3)</a>
@@ -29351,7 +29350,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="obsolete.html#elementdef-applet">#elementdef-applet</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-elementdef-applet-1">2.7.2.1. HTMLAllCollection 인터페이스</a>
-    </li><li><a href="dom.html#ref-for-elementdef-applet-2">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-applet-3">(2)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-applet-2">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-applet-3">(2)</a>
     </li><li><a href="browsers.html#ref-for-elementdef-applet-4">6.3.3. Named access on the Window object</a> <a href="browsers.html#ref-for-elementdef-applet-5">(2)</a>
     </li><li><a href="browsers.html#ref-for-elementdef-applet-6">6.5. Sandboxing</a>
     </li><li><a href="syntax.html#ref-for-elementdef-applet-7">8.2.3.2. The stack of open elements</a> <a href="syntax.html#ref-for-elementdef-applet-8">(2)</a>
@@ -29663,7 +29662,7 @@ plaintext     = *( %x0000-2029 / %x202F-2065 / %x206A-10FFFF )
    <b><a href="obsolete.html#elementdef-frameset">#elementdef-frameset</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-elementdef-frameset-1">2.7.2.1. HTMLAllCollection 인터페이스</a>
-    </li><li><a href="dom.html#ref-for-elementdef-frameset-2">3.1.3. DOM tree accessors</a> <a href="dom.html#ref-for-elementdef-frameset-3">(2)</a> <a href="dom.html#ref-for-elementdef-frameset-4">(3)</a> <a href="dom.html#ref-for-elementdef-frameset-5">(4)</a>
+    </li><li><a href="dom.html#ref-for-elementdef-frameset-2">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-frameset-3">(2)</a> <a href="dom.html#ref-for-elementdef-frameset-4">(3)</a> <a href="dom.html#ref-for-elementdef-frameset-5">(4)</a>
     </li><li><a href="browsers.html#ref-for-elementdef-frameset-6">6.1. Browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-elementdef-frameset-7">6.3.3. Named access on the Window object</a> <a href="browsers.html#ref-for-elementdef-frameset-8">(2)</a>
     </li><li><a href="webappapis.html#ref-for-elementdef-frameset-9">7.1.5.2. Event handlers on elements, Document objects, and Window objects</a> <a href="webappapis.html#ref-for-elementdef-frameset-10">(2)</a> <a href="webappapis.html#ref-for-elementdef-frameset-11">(3)</a>
