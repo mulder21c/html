@@ -712,7 +712,7 @@
         * <a for="request" lt="destination">목적지</a>
         * <a for="request" lt="Origin">origin</a>
         * <a lt="omit-Origin-header flag"><code>Origin</code> 헤더 생략 플래그</a>
-        * <a lt="same-origin data-URL flag">동일 출처 data-URL 플래그</a>
+        * <a lt="same-origin data-URL flag">동일 출처(origin) data-URL 플래그</a>
         * <a for="request" lt="referrer">리퍼러(referrer)</a>
         * <a lt="synchronous flag">동기(synchronous) 플래그</a>
         * <a for="request" lt="mode">모드(mode)</a>
@@ -2040,9 +2040,9 @@
 <h4 id="dates-and-times">날짜와 시간</h4>
 
   <div class="note">
-    이 명세는 날짜에 대한 [[ISO8601]] 표준의 공통 부분 집합에 따라 날짜와 시간을 <em>부호화</em>합니다.
+    이 명세는 날짜에 대한 [[ISO8601]] 표준의 공통 부분 집합에 따라 날짜와 시간을 <em>인코드</em>합니다.
 
-    이는 부호화 된 날짜는 1582-03-01, 0033-03-27, 2016-03-01 와 같이 보이고, 날짜-시간은 1929-11-13T19:00Z,
+    이는 인코드 된 날짜는 1582-03-01, 0033-03-27, 2016-03-01 와 같이 보이고, 날짜-시간은 1929-11-13T19:00Z,
     0325-06-03T00:21+10:30와 같이 보이는 것을 의미합니다. 형식은, 비록 일부분은 예를 들어 생일의 월과 
     일, 표준 시간대 정보가 없는 시간 등과 같이 표현하기 위해 선택적이기는 하지만, 대략 
     YYYY-MM-DDTHH:MM:SS.DD±HH:MM 입니다.
@@ -2050,7 +2050,7 @@
     시간은 24시간제를 사용하여 표현되고, 윤초를 표현하는 것은 오류입니다.
 
     날짜는 역산 0000년과 9999년 사이의 <a lt="proleptic Gregorian calendar">역산 그레고리력</a>으로 
-    표현됩니다. 다른 해는 부호화될 수 없습니다.
+    표현됩니다. 다른 해는 인코드될 수 없습니다.
 
     <a lt="proleptic Gregorian calendar">역산 그레고리력</a>은 1950년 이후로 전 세계적으로 가장 
     일반적인 달력이고, 1950년과 9999년 사이 날짜의 모든 사람들, 그리고 지난 수십 년 또는 수세기 동안 
@@ -2064,7 +2064,7 @@
     이후 아메리카 영국 식민지에서 1752년에 앞선, 스페인, 아메리카 스페인 식민지, 세계 나머지에서
     1582년에 앞선, 날짜는 그 때 쓰여진 것들과 일치하지 않을 것입니다.
 
-    그레고리력을 기본 부호화로 사용하는 것은 다소 임의적인 선택입니다. 많은 다른 달력이 사용 되었거나
+    그레고리력을 기본 인코딩으로 사용하는 것은 다소 임의적인 선택입니다. 많은 다른 달력이 사용 되었거나
     사용되고 있고, 관심있는 독자는 웹에 대한 정보를 찾아야(should) 합니다.
 
     (작성자를 위한) 형식에서 <a href="#date-time-and-number-formats">날짜, 시간, 숫자 형식</a>의 논의,
@@ -2111,8 +2111,8 @@
       2개의 <a lt="ASCII digits">ASCII 숫자</a>.
 
   <p class="example">
-    예를 들어, 2005년 2월은 2005-02로 부호화 되고, 33AD년 3월은(역산 그레고리 날짜로) 
-    <code>0033-03</code>로 부호화 됩니다. <code>325-03</code> 표현은 325년 3월을 의미하지 <em>않고</em>,
+    예를 들어, 2005년 2월은 2005-02로 인코드 되고, 33AD년 3월은(역산 그레고리 날짜로) 
+    <code>0033-03</code>로 인코드 됩니다. <code>325-03</code> 표현은 325년 3월을 의미하지 <em>않고</em>,
     그것은 연도에 대해 4자리 숫자를 가지지 않기 때문에 오류입니다.
   </p>
 
@@ -2162,8 +2162,8 @@
       날짜의 수</a>.
 
   <p class="example">
-    예를 들어, 2016 2월 29일은 2016-02-29로 부호화 되고, 33AD년 3월 3일(역산 그레고리 날짜 같은)은
-    <code>0033-03-03</code>로 부호화 됩니다. <code>325-03-03</code> 표현은 325년 3월 3일을 의미하지
+    예를 들어, 2016 2월 29일은 2016-02-29로 인코드 되고, 33AD년 3월 3일(역산 그레고리 날짜 같은)은
+    <code>0033-03-03</code>로 인코드 됩니다. <code>325-03-03</code> 표현은 325년 3월 3일을 의미하지
     <em>않고</em>, 이는 연도가 4자리 숫자를 가지지 않기 때문에 오류입니다.
   </p>
 
@@ -2220,7 +2220,7 @@
   </p>
 
   <p class="example">
-  예를 들어, 2월 29일은 <code>02-29</code>로 부호화 되고, 3월 3일은 <code>03-03</code>로 부호화 됩니다.
+  예를 들어, 2월 29일은 <code>02-29</code>로 인코드 되고, 3월 3일은 <code>03-03</code>로 인코드 됩니다.
   </p>
 
 
@@ -2284,8 +2284,8 @@
   </p>
 
   <p class="example">
-  시간은, 선택적으로 초, 그리고 선택적으로 십진수 소수점 초를 가지고, 24시간제를 사용하여 부호화 
-  됩니다. 따라서 7.45pm은 <code>19:45</code>로 부호화 됩니다. 그 시간 해석이 19:45:00 또는 7.45pm 
+  시간은, 선택적으로 초, 그리고 선택적으로 십진수 소수점 초를 가지고, 24시간제를 사용하여 인코드 
+  됩니다. 따라서 7.45pm은 <code>19:45</code>로 인코드 됩니다. 그 시간 해석이 19:45:00 또는 7.45pm 
   0초를 반환 할 것이라는 것을 주목하세요. <code>19:45:45.456</code>는 7.45pm 45초 이후 456 천분의 
   1초 입니다.
   </p>
@@ -3219,14 +3219,14 @@
 
   <dfn lt="referrer source">리퍼러 소스</dfn>는 {{Document}}나 <a for="url">URL</a>입니다.
 
-  <var>url</var>, <var>corsAttributeState</var>, 선택적으로 <i>동일 출처 폴백 플래그</i>가 주어진
+  <var>url</var>, <var>corsAttributeState</var>, 선택적으로 <i>동일 출처(origin) 폴백 플래그</i>가 주어진
   <dfn lt="creating a potential-cors request|create a potential-CORS request">잠정적 CORS 요청을 생성</dfn>하기 위해 
   이 단계들을 수행합니다:
 
   1. <var>corsAttributeState</var>가 <a lt ="No CORS" state for="cors">No CORS</a>이라면 <var>mode</var>를 
       "<code>no-cors</code>"로 두고, 그렇지 않으면 "<code>cors</code>"로 둡니다.
 
-  2. <i>동일 출처 폴백 플래그</i>가 설정되고 <var>mode</var>가 "<code>no-cors</code>"라면, <var>mode</var>를
+  2. <i>동일 출처(origin) 폴백 플래그</i>가 설정되고 <var>mode</var>가 "<code>no-cors</code>"라면, <var>mode</var>를
       "<code>same-origin</code>"로 설정합니다.
 
   3. <var>credentialsMode</var>를 "<code>include</code>"로 둡니다.
@@ -3244,7 +3244,7 @@
 
   유저 에이전트가, 선택적으로 출처 <i>origin</i><strong>으로부터</strong>, 선택적으로 <i>오버라이드 
   리퍼러 소스</i>로서 특정한 <a lt="referrer source">리퍼러 소스</a>를 <strong>사용하여</strong>, 
-  선택적으로 <i>동기(synchronous) 플래그</i>, <i>수동 리다이렉트 플래그</i>, <i>강제 동일 출처 플래그</i>, 
+  선택적으로 <i>동기(synchronous) 플래그</i>, <i>수동 리다이렉트 플래그</i>, <i>강제 동일 출처(origin) 플래그</i>, 
   <i>쿠키 차단 플래그</i> 중 어느 것을 가진 리소스나 <a for="url">URL</a>을 <a lt="fetch">가져오는</a> 
   경우, 다음 단계들이 수행 되어야(must) 합니다. (<em>URL</em>을 가져올 때, URL은 얻어지는 리소스를 
   식별합니다.)
@@ -3266,7 +3266,7 @@
   3. <var>document</var>가 <a lt="iframe srcdoc document"><code>iframe</code> <code>srcdoc</code> 문서</a>임에도 불구하고, 
       <var>document</var>를 대신 <var>document</var>의 <a lt="browsing context">브라우징 컨텍스트</a>의
       <a lt="browsing context container">브라우징 컨텍스트 컨테이너</a>의 {{Document}}로 둡니다.
-  4. <var>Document</var>의 <a lt="origin" for="concept">출처</a>가 scheme/host/port 튜플이 아니라면, 
+  4. <var>Document</var>의 <a lt="origin" for="concept">출처(origin)</a>가 scheme/host/port 튜플이 아니라면, 
       <var>referrer</var>를 빈 문자열로 설정하고 <var>Clean referrer</var>로  라벨링 된 단계로 
       건너뜁니다.
   5. <var>referrer</var>를 <var>document</var>의 <a lt="the document's address">문서 주소</a>로 둡니다.
@@ -3314,7 +3314,7 @@
       <i>요청 URI가 얻어지는 리소스의 주소 from which Request-URIs are obtained</i>를 사용합니다.
 
       <code>Origin</code> 헤더의 목적을 위해, <a lt="fetching algorithm">페칭(fetching) 알고리즘</a>이
-      <i>origin</i>에서 명시적으로 초기화 되었다면, <i>HTTP 요청을 초기화 한 출처</i>는 <i>origin</i>입니다.
+      <i>origin</i>에서 명시적으로 초기화 되었다면, <i>HTTP 요청을 초기화 한 출처(origin)</i>는 <i>origin</i>입니다.
       그렇지 않으면, 이것은 <i>"민감한 개인정보" 컨텍스트로부터의 요청</i>입니다. [[!ORIGIN]]
   12. 알고리즘이 <i>쿠키 차단 플래그</i>를 가지고 동작되지 않았고 쿠키가 설정되지 않았다면,
       쿠키를 업데이트 합니다. [[!COOKIES]]
@@ -3323,9 +3323,9 @@
 
       <dl class="switch">
         <dt>
-          <i>강제 동일 출처 플래그</i>가 설정되어 있고 리다이렉트 대상의 <a for="url">URL</a>이 
+          <i>강제 동일 출처(origin) 플래그</i>가 설정되어 있고 리다이렉트 대상의 <a for="url">URL</a>이 
           <a lt="fetch">페치(fetch)</a> 알고리즘이 동작되는 <a for="url">URL</a>과 같은 
-          <a lt="same origin">동일 출처</a>를 가지지 않는다면
+          <a lt="same origin">동일 출처(origin)</a>를 가지지 않는다면
         </dt>
         <dd>
           원격 호스트가 연결할 수 없는 것 처럼, 이 단계들을 중단하고 이 알고리즘으로부터 실패를 
@@ -4230,7 +4230,7 @@
 <h4 id="section-cloneable-objects"><dfn lt="Cloneable objects">복제 가능한 객체</dfn></h4>
 
   <a lt="Cloneable objects">복제 가능한 객체</a>는 <a lt="event loops">이벤트 반복</a> 전반에 걸쳐 
-  복제되는 것을 지원합니다. 즉, 다른 <a for="concept" lt="origins">출처</a>의 {{Document}} 전반을 
+  복제되는 것을 지원합니다. 즉, 다른 <a for="concept" lt="origins">출처(origin)</a>의 {{Document}} 전반을 
   포함하여 {{Document}}와 {{Worker}} 경계 전반에 걸쳐 복제되는 것을 지원합니다. 모든 객체가
   <a lt="Cloneable objects">복제 가능한 객체</a>는 아니며 <a lt="Cloneable objects">복제 가능한 객체</a>의
   모든 측면이 복제될 때 반드시 보존되는 것은 아닙니다.
@@ -4246,240 +4246,227 @@
   <a lt="cloneable objects">복제 가능한 객체</a>인 <a lt="Platform objects">플랫폼 객체</a>는 일련의
   단계들을 수행하도록 명시된 [[<a for="structured">Clone</a>]] 내부 메서드를 가집니다. 그 단계들을
   수행한 결과는 <var>targetRealm</var>에 생성된, 던져진 예외나 <em>this</em>의 복제여야(must) 합니다.
-  그것은 그 객체들에게 그것들에 대해 복제가 의미하는 바를 정의하는 것입니다.
+  그것들에 대해 복제가 의미하는 바를 정의하는 것은 그 객체들에 달려있습니다.
 
-  자바스크립트 명세에 정의된 객체들은 <a lt="StructuredClone">구조화된 복제</a> 추상 연산에 의해
-  직접 처리됩니다.
+  자바스크립트 명세에 정의된 객체들은 <a>StructuredClone</a> 추상 연산에 의해 직접 처리됩니다.  
 
-<h4 id="section-transferable-objects"><dfn lt="Transferable objects">Transferable objects</dfn></h4>
+<h4 id="section-transferable-objects"><dfn lt="Transferable objects">전송 가능한 객체</dfn></h4>
 
-  <a>Transferable objects</a> support being transferred across <a>event loops</a>. Transferring is
-  effectively recreating the object while sharing a reference to the underlying data and then
-  detaching the object being transferred. This is useful to transfer ownership of expensive
-  resources. Not all objects are <a>transferable objects</a> and not all aspects of objects that are
-  <a>transferable objects</a> are necessarily preserved when transferred.
+  <a lt="Transferable objects">전송 가능한 객체</a>는 <a lt="event loops">이벤트 반복</a> 전반에 걸쳐 
+  전송 되는 것을 지원합니다. 전송은 기본 데이터로의 참조를 공유하고 전송되는 객체를 분리하는 동안
+  효과적으로 객체를 다시 생성합니다. 이것은 비용이 많이 드는 리소스의 소유권을 전송하는데 유용합니다. 
+  모든 객체가 <a lt="Transferable objects">전송 가능한 객체</a>는 아니며 
+  <a lt="Transferable objects">전송 가능한 객체</a>의 모든 측면이 전송 될 때 반드시 보존되는 것은 아닙니다.
 
-  <p class="note">Transferring is an irreversible and non-idempotent operation. Once an object has
-  been transferred, it cannot be transferred, or indeed used, again.</p>
+  <p class="note">전송은 되돌릴 수 없고 비멱등 연산입니다. 일단 객체가 전송되면, 다시 전송되거나, 
+  정말로 사용될 수 없습니다.</p>
 
-  <a>Platform objects</a> that are <a>transferable objects</a> have a [[<dfn>Detached</dfn>]]
-  internal slot and the following internal method:
+  <a lt="Transferable objects">전송 가능한 객체</a>인 <a lt="Platform objects">플랫폼 객체</a>는 
+  [[<dfn>Detached</dfn>]] 내부 슬롯(slot)과 다음 내부 메서드를 가집니다:
 
   [[<dfn>Transfer</dfn>]] ( <var>targetRealm</var> )
 
-  <p class="note">Whereas all <a>platform objects</a> have a [[<a for="structured">Clone</a>]]
-  internal method, not all have a [[<a>Detached</a>]] internal slot and a [[<a>Transfer</a>]]
-  internal method.</p>
+  <p class="note">모든 <a lt="Platform objects">플랫폼 객체</a>가 [[<a for="structured">Clone</a>]] 
+  내부 메서드를 가지는 반면, 모두가 [[<a>Detached</a>]] 내부 슬롯(slot)과 [[<a>Transfer</a>]] 내부
+  메서드를 가지지는 않습니다.</p>
 
-  <a>Platform objects</a> that are <a>transferable objects</a> must define the [[<a>Transfer</a>]]
-  internal method such that it either throws an exception or returns a clone of <em>this</em>,
-  created in <var>targetRealm</var>, with <em>this</em>'s underlying data shared with the return
-  value, and <em>this</em>'s [[<a>Detached</a>]] internal slot value set to true. It is up to such
-  objects to define what transfering means for them.
+  <a lt="Transferable objects">전송 가능한 객체</a>인 <a lt="Platform objects">플랫폼 객체</a>는 
+  반환 값과 함께 공유된 <em>this</em>의 기본 데이터를 가지고 <var>targetRealm</var>에서 생성된, 
+  예외를 던지거나 <em>this</em>의 복제를 반환하는 [[<a>Transfer</a>]] 내부 메서드를 정의해야(must) 
+  하고 <em>this</em>의 [[<a>Detached</a>]] 내부 슬록 값을 true로 설정합니다. 그것들에 대해 전송이
+  의미하는 바를 정의하는 것은 그 객체들에 달려있습니다.
 
-  Objects defined in the JavaScript specification are handled by the
-  <a>StructuredCloneWithTransfer</a> abstract operation directly. (Technically, by
-  <a>IsTransferable</a> and <a>TransferHelper</a>.)
+  자바스크립트 명세에 정의된 객체는 <a>StructuredCloneWithTransfer</a> 추상 연산에 의해 직접 처리됩니다.
+  (기술적으로, <a>IsTransferable</a>과 <a>TransferHelper</a>에 의해.)
 
 <h4 id="section-structuredclonewithtransfer"><dfn>StructuredCloneWithTransfer</dfn> ( <var>input</var>, <var>transferList</var>, <var>targetRealm</var> )</h4>
 
-  1. Let <var>memory</var> be an empty map.
-      <p class="note">The purpose of the memory map, both here and in the <a>StructuredClone</a>
-      abstract operation, is to avoid cloning objects twice. This ends up preserving cycles and the
-      identity of duplicate objects in graphs.</p>
-  2. For each object <var>transferable</var> in <var>transferList</var>:
-      1. If <a>IsTransferable</a>(<var>transferable</var>) is false, then throw a
-          "{{DataCloneError}}" {{DOMException}}.
-      2. Let <var>placeholder</var> be a user-agent-defined placeholder object.
-      3. Create an entry in <var>memory</var> with key <var>transferable</var> and value
-          <var>placeholder</var>.
-  3. Let <var>clone</var> be the result of ? <a>StructuredClone</a>(<var>input</var>,
-      <var>targetRealm</var>, <var>memory</var>).
-  4. Let <var>outputTransferList</var> be a new empty <a for="ecma">List</a>.
-  5. For each object <var>transferable</var> in <var>transferList</var>:
-      1. Let <var>placeholderResult</var> be the value of the entry in <var>memory</var> whose key
-          is <var>transferable</var>.
-      2. Let <var>transferResult</var> be ? <a>TransferHelper</a>(<var>transferable</var>,
-          <var>targetRealm</var>).
-      3. Within <var>clone</var>, replace references to <var>placeholderResult</var> with
-          <var>transferResult</var>, such that everything holding a reference to
-          <var>placeholderResult</var>, now holds a reference to <var>transferResult</var>.
+  1. <var>memory</var>를 비어있는 맵으로 둡니다.
+      <p class="note">메모리 맵의 목적은, 여기에서와 <a>StructuredClone</a> 추상 연산에서, 객체를 
+      두 번 복제하는 것을 방지하는 것입니다. 이것은 주기와 그래프에서 중복 된 객체의 식별을 보존하게
+      합니다.</p>
+  2. <var>transferList</var>의 각 객체 <var>transferable</var>에 대해:
+      1. <a>IsTransferable</a>(<var>transferable</var>) 가 false라면, "{{DataCloneError}}" 
+          {{DOMException}}를 던집니다.
+      2. <var>placeholder</var>를 유저 에이전트 정의 플레이스홀더(user-agent-defined) 객체로 둡니다.
+      3. <var>transferable</var>과 값 <var>placeholder</var>를 가지고 <var>memory</var>에 엔트리를 
+          생성합니다.
+  3. <var>clone</var>을 ? <a>StructuredClone</a>(<var>input</var>, <var>targetRealm</var>, <var>memory</var>)의
+      결과로 둡니다.
+  4. <var>outputTransferList</var>을 새로운 비어있는 <a for="ecma">List</a>로 둡니다.
+  5. <var>transferList</var> 내 각 객체 <var>transferable</var>에 대해:
+      1. <var>placeholderResult</var>를 키가 <var>transferable</var>인 <var>memory</var> 내 엔트리의 
+          값으로 둡니다.
+      2. <var>transferResult</var>를 ? <a>TransferHelper</a>(<var>transferable</var>, <var>targetRealm</var>)로
+          둡니다.
+      3. <var>clone</var> 내에서, <var>placeholderResult</var>로의 참조를 <var>transferResult</var>로 
+          교체하여, <var>placeholderResult</var>로의 참조를 보유하는 모든 것이 이제
+          <var>transferResult</var>로의 참조를 보유합니다.
 
-          <p class="note">This is a rather unusual low-level operation for which no primitives are defined by JavaScript.</p>
-      4. Add <var>transferResult</var> as the last element of <var>outputTransferList</var>.
-  6. Return { \[[Clone]]: <var>clone</var>, [[<var>transferList</var>]]:
-      <var>outputTransferList</var> }.
+          <p class="note">이것은 자바스크립트에 의해 정의된 프리미티브(primitive)에 대한 매우 드문
+          저수준(low-level) 연산입니다.</p>
+      4. <var>outputTransferList</var>의 마지막 요소(element)로 <var>transferResult</var>를 추가합니다.
+  6. { \[[Clone]]: <var>clone</var>, [[<var>transferList</var>]]: <var>outputTransferList</var> }
+      를 반환합니다.
 
-  <p class="note">Originally the <a>StructuredCloneWithTransfer</a> abstract operation was known as
-  the "structured clone" algorithm. The <a>StructuredClone</a> abstract operation was known as the
-  "internal structured clone" algorithm. Transferring objects, now handled by the
-  <a>StructuredCloneWithTransfer</a> abstract operation, were formerly handled by parts of the
-  algorithm of the <code>postMessage()</code> method on the {{Window}} object and the
-  <code>Window/postMessage()</code> method on the {{MessagePort}} object.</p>
+  <p class="note">본래 <a>StructuredCloneWithTransfer</a> 추상 연산은 "구조화된 복제" 알고리즘으로 
+  알려져 있습니다. <a>StructuredClone</a> 추상 연산은 "내부 구조화된 복제" 알고리즘으로 알려져 있습니다.
+  현재 <a>StructuredCloneWithTransfer</a> 추상 연산에 의해 처리되는, 객체 전송은 {{Window}} 객체에서의
+  <code>postMessage()</code> 메서드와 {{MessagePort}} 객체에서의 <code>Window/postMessage()</code> 
+  메서드의 알고리즘의 일부분에 의해 이전에 처리됩니다.</p>
 
 <h4 id="section-structuredclone"><dfn>StructuredClone</dfn> ( <var>input</var>, <var>targetRealm</var> [ , <var>memory</var> ] )</h4>
 
-  1. If <var>memory</var> was not supplied, let <var>memory</var> be an empty map.
-  2. If <var>memory</var> contains an entry with key <var>input</var>, then return that entry's
-      value.
-  3. If <a for="ecma">Type</a>(<var>input</var>) is Undefined, Null, Boolean, String, or Number, then return
-      <var>input</var>.
-  4. If <a for="ecma">Type</a>(<var>input</var>) is Symbol, then throw a "{{DataCloneError}}" {{DOMException}}.
-  5. Let <var>deepClone</var> be false.
-  6. If <var>input</var> has a \[[BooleanData]] internal slot, then let <var>output</var> be a new
-      Boolean object in <var>targetRealm</var> whose \[[BooleanData]] internal slot value is the
-      \[[BooleanData]] internal slot value of <var>input</var>.
-  7. Otherwise, if <var>input</var> has a \[[NumberData]] internal slot, then let <var>output</var>
-      be a new Number object in <var>targetRealm</var> whose [NumberData]] internal slot value is
-      the \[[NumberData]] internal slot value of <var>input</var>.
-  8. Otherwise, if <var>input</var> has a \[[StringData]] internal slot, then let <var>output</var>
-      be a new String object in <var>targetRealm</var> whose \[[StringData]] internal slot value is
-      the \[[StringData]] internal slot value of <var>input</var>.
-  9. Otherwise, if <var>input</var> has a \[[DateValue]] internal slot, then let <var>output</var>
-      be a new Date object in <var>targetRealm</var> whose \[[DateValue]] internal slot value is the
-      \[[DateValue]] internal slot value of <var>input</var>.
-  10. Otherwise, if <var>input</var> has a \[[RegExpMatcher]] internal slot, then let
-      <var>output</var> be a new RegExp object in <var>targetRealm</var> whose \[[RegExpMatcher]]
-      internal slot value is the \[[RegExpMatcher]] internal slot value of <var>input</var>, whose
-      \[[OriginalSource]] internal slot value is the \[[OriginalSource]] internal slot value of
-      <var>input</var>, and whose whose \[[OriginalFlags]] internal slot value is the
-      \[[OriginalFlags]] internal slot value of <var>input</var>.
-  11. Otherwise, if <var>input</var> has an \[[ArrayBufferData]] internal slot, then:
-       1. If <a>IsDetachedBuffer</a>(<var>input</var>) is true, then throw a "{{DataCloneError}}"
-           {{DOMException}}.
-       2. Let <var>outputArrayBuffer</var> be the <a>%ArrayBuffer%</a> intrinsic object in
-           <var>targetRealm</var>.
-       3. Let <var>output</var> be ? <a>CloneArrayBuffer</a>(<var>input</var>, 0,
-           <var>outputArrayBuffer</var>).
-  12. Otherwise, if <var>input</var> has a \[[ViewedArrayBuffer]] internal slot, then:
-       1. Let <var>buffer</var> be the value of <var>input</var>'s \[[ViewedArrayBuffer]] internal
-           slot.
-       2. Let <var>bufferClone</var> be ? <a>StructuredClone</a>(<var>buffer</var>,
-           <var>targetRealm</var>, <var>memory</var>)}}.
-       3. If <var>input</var> has a \[[DataView]] internal slot, then let <var>output</var> be a
-           new DataView object in <var>targetRealm</var> whose \[[DataView]] internal slot value is
-           true, whose \[[ViewedArrayBuffer]] internal slot value is <var>bufferClone</var>, whose
-           \[[ByteLength]] internal slot value is the \[[ByteLength]] internal slot value of
-           <var>input</var>, and whose \[[ByteOffset]] internal slot value is the \[[ByteOffset]]
-           internal slot value of <var>input</var>.
-       4. Otherwise:
-           1. Assert: <var>input</var> has a \[[TypedArrayName]] internal slot.
-           2. Let <var>constructor</var> be the intrinsic object listed in column one of
-               <a>The TypedArray Constructors</a> table for the value of
-               <var>input</var>'s \[[TypedArrayName]] internal slot in <var>targetRealm</var>.
-           3. Let <var>byteOffset</var> be <var>input</var>'s \[[ByteOffset]] internal slot value.
-           4. Let <var>length</var> be <var>input</var>'s \[[ArrayLength]] internal slot value.
-           5. Let <var>output</var> be ? <a>TypedArrayCreate</a>(<var>constructor</var>,
-               « <var>bufferClone</var>, <var>byteOffset</var>, <var>length</var> »).
-  13. Otherwise, if <var>input</var> has \[[MapData]] internal slot, then:
-       1. Let <var>output</var> be a new Map object in <var>targetRealm</var> whose \[[MapData]]
-           internal slot value is a new empty <a for="ecma">List</a>.
-       2. Set <var>deepClone</var> to true.
-  14. Otherwise, if <var>input</var> has \[[SetData]] internal slot, then:
-       1. Let <var>output</var> be a new Set object in <var>targetRealm</var> whose \[[SetData]]
-           internal slot value is a new empty <a for="ecma">List</a>.
-       2. Set <var>deepClone</var> to true.
-  15. Otherwise, if <var>input</var> is an Array exotic object, then:
-       1. Let <var>inputLen</var> be <a>OrdinaryGetOwnProperty</a>(<var>input</var>,
-           "<code>length</code>").\[[value]].
-       2. Let <var>outputProto</var> be the <a>%ArrayPrototype%</a> intrinsic object in
-           <var>targetRealm</var>.
-       3. Let <var>output</var> be ! <a>ArrayCreate</a>(<var>inputLen</var>,
-           <var>outputProto</var>).
-       4. Set <var>deepClone</var> to true.
-  16. Otherwise, if <var>input</var> has a [[<a for="structured">Clone</a>]] internal method, then
-       let <var>output</var> be ?
-       <var>input</var>.[[<a for="structured">Clone</a>]](<var>targetRealm</var>,
-       <var>memory</var>).
-  17. Otherwise, if <a>IsCallable</a>(<var>input</var>)}} is true, then throw a
-       "{{DataCloneError}}" {{DOMException}}.
-  18. Otherwise, if <var>input</var> has any internal slot other than \[[Prototype]] or
-       \[[Extensible]], then throw a "{{DataCloneError}}" {{DOMException}}.
-       <p class="example">For instance, a \[[PromiseState]] or \[[WeakMapData]] internal slot.</p>
-  19. Otherwise, if <var>input</var> is an exotic object, then throw a "{{DataCloneError}}"
-       {{DOMException}}.
-       <p class="example">For instance, a proxy object.</p>
-  20. Otherwise:
-       1. Let <var>output</var> be a new Object in <var>targetRealm</var>.
-       2. Set <var>deepClone</var> to true.
-  21. Create an entry in <var>memory</var> whose key is <var>input</var> and value is
-       <var>output</var>.
-  22. If <var>deepClone</var> is true, then:
-       1. If <var>input</var> has a \[[MapData]] internal slot, then:
-           1. Let <var>inputList</var> the value of <var>input</var>'s \[[MapData]] internal slot.
-           2. Let <var>copiedList</var> be a new empty <a for="ecma">List</a>.
-           3. Repeat for each <a>Record</a> { \[[key]], \[[value]] } <var>entry</var> that is an
-               element of <var>inputList</var>,
-               1. Let <var>copiedEntry</var> be a new <a>Record</a> { \[[key]]:
-                   <var>entry</var>.\[[key]], \[[value]]: <var>entry</var>.\[[value]] }.
-               2. If <var>copiedEntry</var>.\[[key]] is not empty, append <var>copiedEntry</var> as
-                   the last element of <var>copiedList</var>.
-           4. Let <var>outputList</var> be the value of <var>output</var>'s \[[MapData]] internal
-               slot.
-           5. For each <a>Record</a> { \[[key]], \[[value]] } <var>entry</var> that is an element of
-               <var>copiedList</var>,
-               1. Let <var>outputKey</var> be ? <a>StructuredClone</a>(<var>entry</var>.\[[key]],
-                   <var>targetRealm</var>, <var>memory</var>).
-               2. Let <var>outputValue</var> be ?
+  1. <var>memory</var>가 제공되지 않았다면, <var>memory</var>를 비어있는 맵으로 둡니다.
+  2. <var>memory</var>가 키 <var>input</var>를 가진 엔트리를 포함한다면, 엔트리의 값을 반환합니다.
+  3. <a for="ecma">Type</a>(<var>input</var>) 이 Undefined, Null, Boolean, String, Number라면, 
+      <var>input</var>을 반환합니다.
+  4. <a for="ecma">Type</a>(<var>input</var>) 이 Symbol이라면, "{{DataCloneError}}" {{DOMException}}를 던집니다.
+  5. <var>deepClone</var>을 false로 둡니다.
+  6. <var>input</var>이 \[[BooleanData]] 내부 슬롯을 가진다면, <var>output</var>을 \[[BooleanData]]
+      내부 슬롯 값이 <var>input</var>의 \[[BooleanData]] 내부 슬롯 값인 <var>targetRealm</var> 내의
+      새로운 Boolean 객체로 둡니다.
+  7. 그렇지 않고, <var>input</var>이 \[[NumberData]] 내부 슬롯을 가진다면, <var>output</var>을
+      [NumberData]] 내부 슬롯 값이 <var>input</var>의 \[[NumberData]] 내부 슬롯 값인 <var>targetRealm</var> 
+      내의 새로운 Number 객체로 둡니다.
+  8. 그렇지 않고, <var>input</var>이 \[[StringData]] 내부 슬롯을 가진다면, <var>output</var>을 
+      \[[StringData]] 내부 슬롯 값이 <var>input</var>의 \[[StringData]] 내부 슬롯 슬롯 값인 
+      <var>targetRealm</var> 내의 새로운 String 객체로 둡니다.
+  9. 그렇지 않고, <var>input</var>이 \[[DateValue]] 내부 슬롯을 가진다면, <var>output</var>을
+      \[[DateValue]] 내부 슬롯 값이 <var>input</var>의 \[[DateValue]] 내부 슬롯 값인
+      <var>targetRealm</var> 내의 새로운 Date 객체로 둡니다.
+  10. 그렇지 않고, <var>input</var>이 \[[RegExpMatcher]] 내부 슬롯을 가진다면, <var>output</var>을
+      \[[RegExpMatcher]] 내부 슬롯 값이 <var>input</var>의 \[[RegExpMatcher]] 내부 슬롯 값이고
+      \[[OriginalSource]] 내부 슬롯 값이 <var>input</var>의 \[[OriginalSource]] 내부 슬롯 값이며
+      \[[OriginalFlags]]  내부 슬롯 값이 <var>input</var>의 \[[OriginalFlags]] 내부 슬롯 값인
+      <var>targetRealm</var> 내의 새로운 RegExp 객체로 둡니다.
+  11. 그렇지 않고, <var>input</var>이 \[[ArrayBufferData]] 내부 슬롯을 가진다면:
+       1. <a>IsDetachedBuffer</a>(<var>input</var>)가 true라면, "{{DataCloneError}}"
+           {{DOMException}}를 던집니다.
+       2. <var>outputArrayBuffer</var>를 <var>targetRealm</var> 내의 <a>%ArrayBuffer%</a> 내장 
+           객체로 둡니다.
+       3. <var>output</var>을 ? <a>CloneArrayBuffer</a>(<var>input</var>, 0,
+           <var>outputArrayBuffer</var>)로 둡니다.
+  12. 그렇지 않고, <var>input</var>이 \[[ViewedArrayBuffer]] 내부 슬롯을 가진다면:
+       1. <var>buffer</var>를 <var>input</var>의 \[[ViewedArrayBuffer]] 내부 슬롯의 값으로 둡니다.
+       2. <var>bufferClone</var>을 ? <a>StructuredClone</a>(<var>buffer</var>,
+           <var>targetRealm</var>, <var>memory</var>)}}로 둡니다.
+       3. <var>input</var>이 \[[DataView]] 내부 슬롯을 가진다면, <var>output</var>을 \[[DataView]]
+           내부 슬롯 값이 true이고, \[[ViewedArrayBuffer]] 내부 슬롯 값이 <var>bufferClone</var>이고,
+           \[[ByteLength]] 내부 슬롯 값이 <var>input</var>의 \[[ByteLength]] 내부 슬롯 값이며,
+           \[[ByteOffset]] 내부 슬롯 값이 <var>input</var>의 \[[ByteOffset]] 내부 슬롯 값인
+           <var>targetRealm</var> 내의 새로운 DataView 객체로 둡니다.
+       4. 그렇지 않으면
+           1. Assert: <var>input</var>은 \[[TypedArrayName]] 내부 슬롯을 가집니다.
+           2. <var>constructor</var>를 <var>targetRealm</var> 내 <var>input</var>의 \[[TypedArrayName]]
+               내부 슬롯의 값에 대한 <a lt="The TypedArray Constructors">TypedArray 생성자</a> 표의
+               열 1에 나열된 내부 객체로 둡니다. 
+           3. <var>byteOffset</var>를 <var>input</var>의 \[[ByteOffset]] 내부 슬롯 값으로 둡니다.
+           4. <var>length</var>를 <var>input</var>의 \[[ArrayLength]] 내부 슬롯 값으로 둡니다.
+           5. <var>output</var>을? <a>TypedArrayCreate</a>(<var>constructor</var>,
+               « <var>bufferClone</var>, <var>byteOffset</var>, <var>length</var> »)로 둡니다.
+  13. 그렇지 않고, <var>input</var>이 \[[MapData]] 내부 슬롯을 가진다면:
+       1. <var>output</var>을 \[[MapData]] 내부 슬롯 값이 새로운 비어있는 <a for="ecma">List</a>인
+           <var>targetRealm</var> 내의 새로운 Map 객체로 둡니다.
+       2. <var>deepClone</var>를 true로 설정합니다.
+  14. 그렇지 않고, <var>input</var>이 \[[SetData]] 내부 슬롯을 가진다면:
+       1. <var>output</var>을 \[[SetData]] 내부 슬롯 값이 새로운 비어있는 <a for="ecma">List</a>인
+           <var>targetRealm</var> 내의 새로운 Set 객체로 둡니다.
+       2. <var>deepClone</var>을 true로 둡니다.
+  15. 그렇지 않고, <var>input</var>이 배열 외래(exotic) 객체 라면:
+       1. <var>inputLen</var>를 <a>OrdinaryGetOwnProperty</a>(<var>input</var>,
+           "<code>length</code>")로 둡니다.\[[value]].
+       2. <var>outputProto</var>를 <var>targetRealm</var> 내 <a>%ArrayPrototype%</a> 내장 객체로 둡니다.
+       3. <var>output</var>을 ! <a>ArrayCreate</a>(<var>inputLen</var>,
+           <var>outputProto</var>)로 둡니다.
+       4. <var>deepClone</var>을 true로 둡니다.
+  16. 그렇지 않고, <var>input</var>이 [[<a for="structured">Clone</a>]] 내부 메서드를 가진다면, 
+       <var>output</var>을 ? <var>input</var>로 둡니다. 
+       [[<a for="structured">Clone</a>]](<var>targetRealm</var>, <var>memory</var>).
+  17. 그렇지 않고, <a>IsCallable</a>(<var>input</var>)}}이 true라면, "{{DataCloneError}}" 
+       {{DOMException}}을 던집니다.
+  18. 그렇지 않고, <var>input</var>이 \[[Prototype]]나 \[[Extensible]] 외 다른 어떤 내부 슬롯을 가진다면
+       "{{DataCloneError}}" {{DOMException}}을 던집니다.
+       <p class="example">예를 들어, \[[PromiseState]]나 \[[WeakMapData]] 내부 슬롯.</p>
+  19. 그렇지 않고, <var>input</var>이 외래(exotic) 객체라면, "{{DataCloneError}}" {{DOMException}}을
+       던집니다.
+       <p class="example">예를 들어, 프록시(proxy) 객체.</p>
+  20. 그렇지 않으면:
+       1. <var>output</var>을 <var>targetRealm</var> 내 새로운 객체로 둡니다.
+       2. <var>deepClone</var>를 true로 둡니다.
+  21. <var>memory</var> whose 키가 <var>input</var>이고 값이 <var>output</var>인 <var>memory</var> 내 엔트리를 생성합니다.
+  22. <var>deepClone</var>이 true라면:
+       1. <var>input</var> \[[MapData]] 내부 슬롯이라면:
+           1. <var>inputList</var>을 <var>input</var>의 \[[MapData]] 내부 슬롯의 값으로 둡니다.
+           2. <var>copiedList</var>을 새로운 비어있는 <a for="ecma">List</a>로 둡니다.
+           3. <var>inputList</var>의 요소(element)인 각 <a>Record</a> { \[[key]], \[[value]] } 
+               <var>entry</var>에 대해 반복하여,
+               1. <var>copiedEntry</var>을 새로운 <a>Record</a> { \[[key]]:
+                   <var>entry</var>.\[[key]], \[[value]]: <var>entry</var>.\[[value]] }로 둡니다.
+               2. <var>copiedEntry</var>.\[[key]] 가 비어있지 않다면, <var>copiedList</var>의 마지막 
+                   요소(element)로 <var>copiedEntry</var>를 추가(append)합니다.
+           4. <var>outputList</var>를 <var>output</var>의 \[[MapData]] 내부 슬롯의 값으로 둡니다.
+           5. <var>copiedList</var>의 요소(element)인 각 <a>Record</a> { \[[key]], \[[value]] } 
+               <var>entry</var>에 대해 반복하여,
+               1. <var>outputKey</var>를 ? <a>StructuredClone</a>(<var>entry</var>.\[[key]],
+                   <var>targetRealm</var>, <var>memory</var>)로 둡니다.
+               2. <var>outputValue</var>를 ?
                    <a>StructuredClone</a>(<var>entry</var>.\[[value]], <var>targetRealm</var>,
-                   <var>memory</var>).
-               3. Add { \[[key]]: <var>outputKey</var>, \[[value]]: <var>outputValue</var> } as the
-                   last element of <var>outputList</var>.
-       2. Otherwise, if <var>input</var> has a \[[SetData]] internal slot, then:
-           1. Let <var>copiedList</var> be a copy of the value of <var>input</var>'s \[[SetData]]
-               internal slot.
-           2. Let <var>outputList</var> be the value of <var>output</var>'s \[[SetData]] internal
-               slot.
-           3. For each <var>entry</var> that is an element of <var>copiedList</var> that is not
-               empty,
-               1. Let <var>outputEntry</var> be ? <a>StructuredClone</a>(<var>entry</var>,
-                   <var>targetRealm</var>, <var>memory</var>).
-               2. Add <var>outputEntry</var> as the last element of <var>outputList</var>.
-       3. Otherwise:
-           1. Let <var>enumerableKeys</var> be a new empty <a for="ecma">List</a>.
-           2. For each <var>key</var> in ! <var>input</var>.\[[OwnPropertyKeys]]():
-               1. If <a for="ecma">Type</a>(<var>key</var>) is String, then:
-                   1. Let <var>inputDesc</var> be !
-                       <var>input</var>.\[[GetOwnProperty]](<var>key</var>).
-                   2. If <var>inputDesc</var>.\[[Enumerable]] is true, then add <var>key</var> as
-                       the last element of <var>enumerableKeys</var>.
-           3. For each <var>key</var> in <var>enumerableKeys</var>:
-               1. If ! <a>HasOwnProperty</a>(<var>input</var>, <var>key</var>) is true, then:
-                   1. Let <var>inputValue</var> be ? <var>input</var>.\[[Get]](<var>key</var>,
-                       <var>input</var>).
-                   2. Let <var>outputValue</var> be ? <a>StructuredClone</a>(<var>inputValue</var>,
-                       <var>targetRealm</var>, <var>memory</var>).
-                   3. Perform ? <a>CreateDataProperty</a>(<var>output</var>, <var>key</var>,
-                       <var>outputValue</var>).
-  23. Return <var>output</var>.
+                   <var>memory</var>)로 둡니다.
+               3. <var>outputList</var>의 마지막 요소(element)로 
+                   { \[[key]]: <var>outputKey</var>, \[[value]]: <var>outputValue</var> }를 추가합니다.
+       2. 그렇지 않고, <var>input</var>이 \[[SetData]] 내부 슬롯을 가진다면:
+           1. <var>copiedList</var>를 <var>input</var>의 \[[SetData]] 내부 슬롯의 값의 복제로 둡니다.
+           2. <var>outputList</var>을 <var>output</var>의 \[[SetData]] 내부 슬롯의 값으로 둡니다.
+           3. 비어있지 않은 <var>copiedList</var>의 요소(element)인 각 <var>entry</var>에 대해,
+               1. <var>outputEntry</var>을 ? <a>StructuredClone</a>(<var>entry</var>,
+                   <var>targetRealm</var>, <var>memory</var>)로 둡니다.
+               2. <var>outputList</var>의 마지막 요소(element)로 <var>outputEntry</var>를 추가합니다.
+       3. 그렇지 않으면:
+           1. <var>enumerableKeys</var>를 새로운 비어있는 <a for="ecma">List</a>로 둡니다.
+           2. ! <var>input</var>.\[[OwnPropertyKeys]]() 내 각 <var>key</var> 에 대해:
+               1. <a for="ecma">Type</a>(<var>key</var>)이 String이라면:
+                   1. <var>inputDesc</var>를 !
+                       <var>input</var>.\[[GetOwnProperty]](<var>key</var>)로 둡니다.
+                   2. <var>inputDesc</var>.\[[Enumerable]]가 true라면, <var>enumerableKeys</var>의 
+                       마지막 요소(element)로 <var>key</var>를 추가합니다
+           3. <var>enumerableKeys</var> 내 각 <var>key</var>에 대해:
+               1. ! <a>HasOwnProperty</a>(<var>input</var>, <var>key</var>)가 true라면:
+                   1. <var>inputValue</var>를 ? <var>input</var>.\[[Get]](<var>key</var>,
+                       <var>input</var>)로 둡니다.
+                   2. <var>outputValue</var>를 ? <a>StructuredClone</a>(<var>inputValue</var>,
+                       <var>targetRealm</var>, <var>memory</var>)로 둡니다.
+                   3. ? <a>CreateDataProperty</a>(<var>output</var>, <var>key</var>,
+                       <var>outputValue</var>)를 수행합니다.
+  23. <var>output</var>을 반환합니다.
 
   <p class="note">
-    In general implementations will need to use some kind of serialization and marshalling to
-    implement the creation of objects in <var>targetRealm</var>, as <var>targetRealm</var> could be
-    in a different <a>event loop</a> and not easily accessible to the code that invokes
-    <a>StructuredCloneWithTransfer</a> or <a>StructuredClone</a>.
+    <var>targetRealm</var>이 다른 <a lt="event loop">이벤트 반복</a>에 있을 수 있고 
+    <a>StructuredCloneWithTransfer</a>나 <a>StructuredClone</a>을 호출하는 코드에 쉽게 접근할 수
+    없을 수 있기 때문에, 일반적인 구현에서는 <var>targetRealm</var> 내 객체의 생성을 구현하기 위해
+    일종의 직렬화와 정리하는 것을 사용하는 것이 필요할 것입니다.
   </p>
 
 <h4 id="section-idistransferable"><dfn>IsTransferable</dfn> ( <var>O</var> )</h4>
 
-  1. Assert: <a for="ecma">Type</a>(<var>O</var>) is Object.
-  2. If <var>O</var> has an \[[ArrayBufferData]] internal slot, then:
-      1. If <a>IsDetachedBuffer</a>(<var>O</var>) is true, then return false.
-      2. Return true.
-  3. Otherwise, if <var>O</var> has a [[<a>Detached</a>]] internal slot, then:
-      1. If <var>O</var>'s [[<a>Detached</a>]] internal slot value is true, then return false.
-      2. Return true.
-  4. Return false.
+  1. Assert: <a for="ecma">Type</a>(<var>O</var>)은 객체입니다.
+  2. <var>O</var>가 \[[ArrayBufferData]] 내부 슬롯을 가진다면:
+      1. <a>IsDetachedBuffer</a>(<var>O</var>)가 true라면, false를 반환합니다.
+      2. true를 반환합니다.
+  3. 그렇지 않고, <var>O</var>가 [[<a>Detached</a>]] 내부 슬롯을 가진다면:
+      1. <var>O</var>의 [[<a>Detached</a>]] 내부 슬롯 값이 true라면, false를 반환합니다.
+      2. true를 반환합니다.
+  4. false를 반환합니다.
 
 <h4 id="section-transferhelper"><dfn>TransferHelper</dfn> ( <var>input</var>, <var>targetRealm</var> )</h4>
 
-  1. If <var>input</var> has an \[[ArrayBufferData]] internal slot, then:
-      1. Let <var>output</var> be a new {{ArrayBuffer}} object in <var>targetRealm</var> whose
-          \[[ArrayBufferByteLength]] internal slot value is the \[[ArrayBufferByteLength]] internal
-          slot value of <var>input</var>, and whose \[[ArrayBufferData]] internal slot value is the
-          \[[ArrayBufferData]] internal slot value of <var>input</var>.
-      2. Perform ! <a>DetachArrayBuffer</a>(<var>input</var>).
-      3. Return <var>output</var>.
-  2. Return ? <var>input</var>.[[<a>Transfer</a>]](<var>targetRealm</var>).
+  1. <var>input</var>가 \[[ArrayBufferData]] 내부 슬롯을 가진다면:
+      1. <var>output</var>을 \[[ArrayBufferByteLength]] 내부 슬롯 값이 <var>input</var>의
+          \[[ArrayBufferByteLength]] 내부 슬롯 값이고 \[[ArrayBufferData]] 내부 슬롯 값이
+          <var>input</var>의 \[[ArrayBufferData]] 내부 슬롯 값인 <var>targetRealm</var>내의
+          새로운 {{ArrayBuffer}} 객체로 둡니다.
+      2. ! <a>DetachArrayBuffer</a>(<var>input</var>)을 수행합니다.
+      3. <var>output</var>을 반환합니다.
+  2. ? <var>input</var>.[[<a>Transfer</a>]](<var>targetRealm</var>)를 반환합니다.
 
 </section>
