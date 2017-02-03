@@ -278,24 +278,24 @@
     <a lt="current document readiness">현재 문서 준비상태</a>를 반환해야(must) 합니다.
   </div>
 
-<h4 id="dom-tree-accessors">DOM tree accessors</h4>
+<h4 id="dom-tree-accessors">DOM 트리 접근자</h4>
 
-  The <{html}> element of a document is the document's root element, if there is
-  one and it's an <{html}> element, or null otherwise.
+  문서의 <{html}> 요소(element)는 문서의 루트 요소(element)가 하나 존재하고 그것이 <{html}> 요소(element)라면
+  문서의 루트 요소(element)이고, 그렇지 않으면 null입니다.
 
   <hr />
 
   <dl class="domintro">
     <dt><var>document</var> . <code>head</code></dt>
-    <dd>Returns the <{head}> element.</dd>
+    <dd><{head}> 요소(element)를 반환합니다.</dd>
   </dl>
 
-  The <{head}> element of a document is the first <{head}> element that
-  is a child of the <{html}> element, if there is one, or null otherwise.
+  문서의 <{head}> 요소(element)는 <{html}> 요소(element)의 자식인 첫 번째 <{head}> 요소(element)가
+  하나 존재한다면 문서의 <{head}> 요소(element)이고, 그렇지 않으면 null 입니다.
 
   <div class="impl">
-    The <dfn attribute for="Document"><code>head</code></dfn> attribute, on getting, must return
-    the <{head}> element of the document (a <{head}> element or null).
+    <dfn attribute for="Document"><code>head</code></dfn> 속성(attribute)은, 가져올 때, 문서의  must return
+    <{head}> 요소(element) (<{head}> 요소(element)나 null)를 반환해야(must) 합니다.
   </div>
 
   <hr />
@@ -303,62 +303,64 @@
   <dl class="domintro">
     <dt><var>document</var> . <code>title</code> [ = <var>value</var> ]</dt>
     <dd>
-      Returns the document's title, as given by the <a element for="html"><code>title</code></a> element for HTML and
-      as given by the SVG <a element for="svg"><code>title</code></a> element for SVG.
+      HTML에 대해 <a element for="html"><code>title</code></a> 요소(element)에 의해 주어진 대로,
+      SVG에 대해 SVG <a element for="svg"><code>title</code></a> 요소(element)에 의해 주어진 대로,
+      문서의 제목을 반환합니다.
 
-      Can be set, to update the document's title. If there is no appropriate element to update, the
-      new value is ignored.
+      문서의 제목을 업데이트하기 위해, 설정될 수 있습니다. 업데이트를 위한 적절한 요소(element)가 
+      없다면, 새로운 값은 무시됩니다.
     </dd>
   </dl>
 
-  The <a element for="html"><code>title</code></a> element of a document is the first <a element for="html"><code>title</code></a> element
-  in the document (in <a>tree order</a>), if there is one, or null otherwise.
+  문서의 <a element for="html"><code>title</code></a> 요소(element)는 문서에 하나만 존재한다면 
+  문서의 첫 번째 <a element for="html"><code>title</code></a> 요소(element)이고 
+  (<a lt="tree order">트리 순서에 따라</a>), 그렇지 않으면 null 입니다.
 
   <div class="impl">
-    The <dfn attribute for="Document"><code>title</code></dfn> attribute must, on getting, run the following algorithm:
+    <dfn attribute for="Document"><code>title</code></dfn> 속성(attribute)은 가져올 때, 다음 알고리즘을 수행해야(must) 합니다:
 
-    1. If the <a>root element</a> is an <{svg}> element in the <a>SVG namespace</a>, then
-        let <var>value</var> be a concatenation of the data of all the child <code>Text</code> nodes
-        of the first <a element for="svg"><code>title</code></a> element in the <a>SVG namespace</a> that is a child of the
-        <a>root element</a>. [[!SVG11]]
-    2. Otherwise, let <var>value</var> be a concatenation of the data of all the child
-        <code>Text</code> nodes of the <a element for="html"><code>title</code></a> element, in <a>tree order</a>, or
-        the empty string if the <a element for="html"><code>title</code></a> element is null.
-    3. <a>Strip and collapse whitespace</a> in <var>value</var>.
-    4. Return <var>value</var>.
+    1. <a lt="root element">루트 요소(element)</a>가 <a lt="SVG namespace">SVG 네임스페이스</a>에 있는
+        <{svg}> 요소(element)라면 <var>value</var>를 <a lt="root element">루트 요소(element)</a>의 자식인
+        <a lt="SVG namespace">SVG 네임스페이스</a>에 있는 첫 번째 <a element for="svg"><code>title</code></a> 
+        요소(element)의 모든 자식 <code>Text</code> 노드의 데이터의 연결로 둡니다. [[!SVG11]]
+    2. 그렇지 않으면, <var>value</var>를 <a lt="tree order">트리 순서에 따라</a> 
+        <a element for="html"><code>title</code></a> 요소(element)의 모든 자식 <code>Text</code> 
+        노드의 데이터의 연결로 두고, <a element for="html"><code>title</code></a> 요소(element)가 null 
+        이라면 빈 문자열로 둡니다.
+    3. <var>value</var>에서 <a lt="Strip and collapse whitespace">여백 문자를 들어내고 병합</a>합니다.
+    4. <var>value</var>를 반환합니다.
 
-    On setting, the steps corresponding to the first matching condition in the following list must
-    be run:
+    설정할 때, 다음 목록의 처음 일치하는 조건에 해당하는 단계를 수행해야(must) 합니다:
 
     <dl class="switch">
       <dt>
-        If the <a>root element</a> is an <{svg}> element in the <a>SVG namespace</a>
-        [[!SVG11]]
+        <a lt="root element">루트 요소(element)</a>가 <a lt="SVG namespace">SVG 네임스페이스</a>에 있는
+        <{svg}> 요소(element)라면 [[!SVG11]]
       </dt>
       <dd>
-        1. Let <var>element</var> be the first <a element for="svg"><code>title</code></a> element in the
-            <a>SVG namespace</a> that is a child of the <a>root element</a>, if any. If there isn't
-            one, create a <a element for="svg"><code>title</code></a> element in the <a>SVG namespace</a>, insert it as the
-            first child of the <a>root element</a>, and let <var>element</var> be that element.
-            [[!SVG11]]
-        2. Act as if the {{Node/textContent}} IDL attribute of <var>element</var> was set to the
-            new value being assigned.
+        1. <var>element</var>를 <a lt="root element">루트 요소(element)</a>의 자식인 
+            <a lt="SVG namespace">SVG 네임스페이스</a>에 있는 첫 번째 <a element for="svg"><code>title</code></a> 
+            요소(element)가 있다면, 그것으로 둡니다. 그것이 없다면, <a lt="SVG namespace">SVG 네임스페이스</a>에
+            <a element for="svg"><code>title</code></a> 요소(element)를 생성하고, <a lt="root element">루트 요소(element)</a>의
+            첫 번째 자식으로 추가하고, <var>element</var>를 그 요소(element)로 둡니다. [[!SVG11]]
+        2. <var>element</var>의 {{Node/textContent}} IDL 속성(attribute)이 할당되는 새로운 값으로
+            설정된 것 처럼 동작합니다.
       </dd>
 
-      <dt>If the <a>root element</a> is in the <a>HTML namespace</a></dt>
+      <dt><a lt="root element">루트 요소(element)</a>가 <a lt="HTML namespace">HTML 네임스페이스</a>에 있다면</dt>
       <dd>
-        1. If the <a element for="html"><code>title</code></a> element is null and the <{head}> element
-            is null, then abort these steps.
-        2. If the <a element for="html"><code>title</code></a> element is null, then create a new <code>title</code>
-            element and <a>append</a> it to the <{head}> element, and let
-            <var>element</var> be the newly created element; otherwise, let <var>element</var> be
-            the <a element for="html"><code>title</code></a> element.
-        3. Act as if the {{Node/textContent}} IDL attribute of <var>element</var> was set to the
-            new value being assigned.
+        1. <a element for="html"><code>title</code></a> 요소(element)가 null이고 <{head}> 요소(element)가
+            null이라면, 이 단계들을 중단합니다.
+        2. <a element for="html"><code>title</code></a> 요소(element)가 null이라면, 새로운 <code>title</code>
+            요소(element)를 생성하고 <{head}> 요소(element)에 <a lt="append">추가(append)</a>하고,
+            <var>element</var>를 새롭게 생성된 요소(element)로 둡니다; 그렇지 않으면,
+            <var>element</var>를 <a element for="html"><code>title</code></a> 요소(element)로 둡니다.
+        3. <var>element</var>의 {{Node/textContent}} IDL 속성(attribute)이 할당되는 새로운 값으로
+            설정된 것 처럼 동작합니다.
       </dd>
 
-      <dt>Otherwise</dt>
-      <dd>Do nothing.</dd>
+      <dt>그렇지 않으면</dt>
+      <dd>아무 것도 하지 않습니다.</dd>
     </dl>
   </div>
 
@@ -367,36 +369,34 @@
   <dl class="domintro">
     <dt><var>document</var> . <code>body</code> [ = <var>value</var> ]</dt>
     <dd>
-      Returns the <{body}> element.
+      <{body}> 요소(element)를 반환합니다.
 
-      Can be set, to replace the <{body}> element.
+      <{body}> 요소(element)를 바꾸기 위해, 설정 될 수 있습니다.
 
-      If the new value is not a <code>body</code> or <{frameset}> element, this will throw
-      a <code>HierarchyRequestError</code> exception.
+      새로운 값이 <code>body</code>나 <{frameset}> 요소(element)가 아니라면, 이것은
+      <code>HierarchyRequestError</code> 예외를 던질 것입니다.
     </dd>
   </dl>
 
-  The <{body}> element of a document is the first child of
-  the <{html}> element that is either a <{body}> element or a
-  <{frameset}> element. If there is no such element, it is null.
+  문서의 <{body}> 요소(element)는 <{html}> 요소(element)의 첫 번째 자식인 <{body}> 요소(element)나
+  <{frameset}> 요소(element)입니다. 그러한 요소(element)가 없다면, null입니다.
 
   <div class="impl">
-    The <dfn attribute for="Document"><code>body</code></dfn> attribute, on getting, must return the <{body}> element of
-    the document (either a <{body}> element, a <{frameset}> element, or null). On
-    setting, the following algorithm must be run:
+    <dfn attribute for="Document"><code>body</code></dfn> 속성(attribute)은 가져올 때, 문서의
+    <{body}> 요소(<{body}> 요소(element)나 <{frameset}> 요소(element)나 null)를 반환해야 합니다.
+    설정할 때, 다음 알고리즘을 수행해야 합니다:
 
-    1. If the new value is not a <{body}> or <{frameset}> element, then throw a
-        <code>HierarchyRequestError</code> exception and abort these steps.
-    2. Otherwise, if the new value is the same as the <{body}> element, do nothing. Abort these
-        steps.
-    3. Otherwise, if the <{body}> element is not null, then replace that element with the new
-        value in the DOM, as if the root element's <code>replaceChild()</code> method had been
-        called with the new value and the incumbent <{body}> element as its two arguments
-        respectively, then abort these steps.
-    4. Otherwise, if there is no root element, throw a <code>HierarchyRequestError</code> exception
-        and abort these steps.
-    5. Otherwise, the <{body}> element is null, but there's a root element. Append the new value
-        to the root element.
+    1. 새로운 값이 <{body}>나 <{frameset}> 요소(element)가 아니라면, <code>HierarchyRequestError</code>
+        예외를 던지고 이 단계들을 중단합니다.
+    2. 그렇지 않고, 새로운 값이 <{body}> 요소(element)와 동일하다면, 아무것도 하지 않습니다. 이
+        단계들을 중단합니다.
+    3. 그렇지 않고, <{body}> 요소(element)가 null이 아니라면, 루트 요소(element)의 <code>replaceChild()</code>
+        메서드가 그것의 두 인자로 각각 새로운 값과 기존 <{body}> 요소(element)를 가지고 호출된 것 처럼,
+        그 요소(element)를 DOM에 새로운 값으로 바꾸고, 이 단계들을 중단합니다.
+    4. 그렇지 않고, 루트 요소(element)가 없다면, <code>HierarchyRequestError</code> 예외를 던지고 
+        이 단계들을 중단합니다.
+    5. 그렇지 않으면, <{body}> 요소(element)는 null이지만, 루트 요소(element)는 존재합니다. 
+        루트 요소(element)에 새로운 값을 추가(append)합니다.
   </div>
 
   <hr />
@@ -404,56 +404,57 @@
   <dl class="domintro">
     <dt><var>document</var> . <code>images</code></dt>
     <dd>
-      Returns an <code>HTMLCollection</code> of the <{img}> elements in the
-      {{Document}}.
+      {{Document}}에 있는 <{img}> 요소(element)들의 <code>HTMLCollection</code>을 반환합니다.
     </dd>
 
     <dt><var>document</var> . <code>embeds</code></dt>
     <dt><var>document</var> . <code>plugins</code></dt>
     <dd>
-      Return an <code>HTMLCollection</code> of the <{embed}> elements in the
-      {{Document}}.
+      {{Document}}에 있는 <{embed}> 요소(element)들의 <code>HTMLCollection</code>을 반환합니다.
     </dd>
 
     <dt><var>document</var> . <code>links</code></dt>
     <dd>
-      Returns an <code>HTMLCollection</code> of the <{a}> and <{area}> elements in
-      the {{Document}} that have <{links/href}> attributes.
+      {{Document}}에 있는 <{links/href}> 속성(attribute)을 가진 <{a}>와 <{area}> 요소(element)들의 
+      <code>HTMLCollection</code>을 반환합니다.
     </dd>
 
     <dt><var>document</var> . <code>forms</code></dt>
     <dd>
-      Return an <code>HTMLCollection</code> of the <{form}> elements in the
-      {{Document}}.
+      {{Document}}에 있는 <{form}> 요소(element)들의 <code>HTMLCollection</code>을 반환합니다.
     </dd>
 
     <dt><var>document</var> . <code>scripts</code></dt>
     <dd>
-      Return an <code>HTMLCollection</code> of the <{script}> elements in the
-      {{Document}}.
+      {{Document}}에 있는 <{script}> 요소(element)들의 <code>HTMLCollection</code>을 반환합니다.
     </dd>
 
   </dl>
 
   <div class="impl">
-    The <dfn attribute for="Document"><code>images</code></dfn> attribute must return an <code>HTMLCollection</code> rooted
-    at the {{Document}} node, whose filter matches only <{img}> elements.
+    <dfn attribute for="Document"><code>images</code></dfn> 속성(attribute)은 {{Document}} 노드에 
+    뿌리를 둔 <code>HTMLCollection</code>을 반환해야(must) 하고, 이 속성(attribute)의 필터는 <{img}> 
+    요소(element)들과만 일치합니다.
 
-    The <dfn attribute for="Document"><code>embeds</code></dfn> attribute must return an <code>HTMLCollection</code> rooted
-    at the {{Document}} node, whose filter matches only <{embed}> elements.
+    <dfn attribute for="Document"><code>embeds</code></dfn> 속성(attribute)은 {{Document}} 노드에 
+    뿌리를 둔 <code>HTMLCollection</code>을 반환해야(must) 하고, 이 속성(attribute)의 필터는 <{embed}> 
+    요소(element)들과만 일치합니다.
 
-    The <dfn attribute for="Document"><code>plugins</code></dfn> attribute must return the same object as that returned by
-    the <code>embeds</code> attribute.
+    <dfn attribute for="Document"><code>plugins</code></dfn> 속성(attribute)은 <code>embeds</code> 
+    속성(attribute)에 의해 반환된 것과 동일한 객체를 반환해야(must) 합니다.
 
-    The <dfn attribute for="Document"><code>links</code></dfn> attribute must return an <code>HTMLCollection</code> rooted at
-    the {{Document}} node, whose filter matches only <{a}> elements with
-    <{links/href}> attributes and <{area}> elements with <{links/href}> attributes.
+    <dfn attribute for="Document"><code>links</code></dfn> 속성(attribute)은 {{Document}} 노드에 
+    뿌리를 둔 <code>HTMLCollection</code>을 반환해야(must) 하고, 이 속성(attribute)의 필터는 <{links/href}> 
+    속성(attribute)을 가진 <{a}> 요소(element)들과 <{links/href}> 속성(attribute)을 가진 <{area}> 
+    요소(element)들과만 일치합니다.
 
-    The <dfn attribute for="Document"><code>forms</code></dfn> attribute must return an <code>HTMLCollection</code> rooted at
-    the {{Document}} node, whose filter matches only <{form}> elements.
+    <dfn attribute for="Document"><code>forms</code></dfn> 속성(attribute)은 {{Document}} 노드에 
+    뿌리를 둔 <code>HTMLCollection</code>을 반환해야(must) 하고, 이 속성(attribute)의 필터는 <{form}> 
+    요소(element)들과만 일치합니다.
 
-    The <dfn attribute for="Document"><code>scripts</code></dfn> attribute must return an <code>HTMLCollection</code> rooted
-    at the {{Document}} node, whose filter matches only <{script}> elements.
+    <dfn attribute for="Document"><code>scripts</code></dfn>  속성(attribute)은 {{Document}} 노드에 
+    뿌리를 둔 <code>HTMLCollection</code>을 반환해야(must) 하고, 이 속성(attribute)의 필터는 <{script}> 
+    요소(element)들과만 일치합니다.
 
     <hr />
   </div>
@@ -463,19 +464,19 @@
       <var>collection</var> = <var>document</var> . <code>getElementsByName</code>(<var>name</var>)
     </dt>
     <dd>
-      Returns a <code>NodeList</code> of elements in the {{Document}} that have a
-      <code>name</code> attribute with the value <var>name</var>.
+      {{Document}}에 있는 값 <var>name</var>를 가진 <code>name</code> 속성(attribute)을 가진 
+      요소(element)들의 <code>NodeList</code>를 반환합니다.
     </dd>
   </dl>
 
   <div class="impl">
-    The <dfn><code>getElementsByName(<var>name</var>)</code></dfn> method takes a string
-    <var>name</var>, and must return a <a>live</a> <code>NodeList</code> containing all the
-    <a>html elements</a> in that document that have a <code>name</code> attribute whose value is
-    equal to the <var>name</var> argument (in a <a>case-sensitive</a> manner), in <a>tree order</a>.
-    When the method is invoked on a {{Document}} object again with the same argument, the
-    user agent may return the same as the object returned by the earlier call. In other cases, a new
-    <code>NodeList</code> object must be returned.
+    <dfn><code>getElementsByName(<var>name</var>)</code></dfn> 메서드는 문자열 <var>name</var>을 
+    사용하고, <a lt="tree order">트리 순서</a>에 따라, 그 문서 내의 값이 인자 <var>name</var>과 동일한
+    (<a lt="case-sensitive">대소문자 구분</a> 방법으로) <code>name</code> 속성(attribute)를 가진 모든
+    <a lt="html elements">html 요소(element)들</a>을 포함하는 <a lt="live">라이브</a> <code>NodeList</code>를
+    반환해야(must) 합니다. 메서드가 {{Document}} 객체에서 동일한 인자를 가지고 다시 호출 되는 경우, 
+    유저 에이전트는 이전 호출에 의해 반환된 객체와 동일한 객체를 반환할 수도 있습니다. 다른 경우에는
+    새로운 <code>NodeList</code> 객체가 반환되어야(must) 합니다.
   </div>
 
   <hr />
@@ -483,81 +484,83 @@
   <dl class="domintro">
     <dt><var>document</var> . <code>currentScript</code></dt>
     <dd>
-      Returns the <{script}> element that is currently executing. In the case of reentrant
-      <code>script</code> execution, returns the one that most recently started executing amongst
-      those that have not yet finished executing.
+      현재 실행중인 <{script}> 요소(element)를 반환합니다. 재진입 <code>script</code> 실행의 경우,
+      아직 실행을 완료하지 않은 스크립트 중에서 가장 최근에 실행이 시작된 스크립트를 반환합니다.
 
-      Returns null if the {{Document}} is not currently executing a <code>script</code>
-      element (e.g., because the running script is an event handler, or a timeout).
+      {{Document}}가 현재 <code>script</code> 요소(element)를 실행 중이 아니라면 (예를 들어, 수행 
+      중인 스크립트가 이벤트 처리기나 타임 아웃되었기 때문에) null을 반환합니다.
     </dd>
   </dl>
 
   <div class="impl">
-    The <dfn attribute for="Document"><code>currentScript</code></dfn> attribute, on getting, must return the value to which
-    it was most recently initialized. When the {{Document}} is created, the
-    <code>currentScript</code> must be initialized to null.
+    <dfn attribute for="Document"><code>currentScript</code></dfn> 속성(attribute)은 가져올 때, 
+    가장 최근에 초기화 된 값을 반환해야(must) 합니다. {{Document}}가 생성될 때, <code>currentScript</code>는
+    null로 초기화 되어야(must) 합니다.
   </div>
 
   <div class="impl">
     <hr />
 
-    The {{Document}} interface <a spec="webidl" lt="support named properties">supports named properties</a>. The
-    <a spec="webidl">supported property names</a> at any moment consist of the values of the <code>name</code>
-    content attributes of all the <{applet}>, <a>exposed</a> <{embed}>,
-    <{form}>, <{iframe}>, <{img}>, and <a>exposed</a> <code>object</code>
-    elements in the {{Document}} that have non-empty <code>name</code> content attributes,
-    and the values of the <code>id</code> content attributes of all the <code>applet</code> and
-    <a>exposed</a> <{object}> elements in the {{Document}} that have non-empty
-    <code>id</code> content attributes, and the values of the <code>id</code> content attributes of
-    all the <{img}> elements in the {{Document}} that have both non-empty
-    <code>name</code> content attributes and non-empty <code>id</code> content attributes. The
-    <a spec="webidl">supported property names</a> must be in <a>tree order</a>, ignoring later duplicates, with
-    values from <code>id</code> attributes coming before values from <code>name</code> attributes
-    when the same element contributes both.
+    {{Document}} 인터페이스는 <a spec="webidl" lt="support named properties">명명된 속성(property)들을 
+    지원</a>합니다. 어느 순간에 <a spec="webidl" lt="supported property names">지원되는 속성(property) 
+    이름들</a>은 {{Document}} 안에 있는 비어 있지 않은 <code>name</code> 콘텐트 속성(attribute)을 
+    가진 모든 <{applet}>, <a lt="exposed">노출 된</a> <{embed}>, <{form}>, <{iframe}>, <{img}>, 
+    <a lt="exposed">노출된</a> <code>object</code> 요소(element)들의 <code>name</code> 콘텐트 
+    속성(attribute)들의 값들과, {{Document}} 안에 있는 비어 있지 않은 <code>id</code> 콘텐트 
+    속성(attribute)을 가진 모든 <code>applet</code>과 <a lt="exposed">노출된</a> <{object}> 
+    요소(element)들의 <code>id</code> 콘텐트 속성(attribute)들의 값들과, {{Document}} 안에 있는 비어 
+    있지 않은 <code>name</code> 콘텐트 속성(attribute)과 비어있지 않은 <code>id</code> 콘텐트 
+    속성(attribute)을 가진 모든 <{img}> 요소(element)들의 <code>id</code> 콘텐트 속성(attribute)들의 
+    값들로 구성됩니다. <a spec="webidl" lt="supported property names">지원되는 속성(property) 이름들</a>은 
+    동일한 요소(element)가 <code>id</code> 속성(attribute)과 <code>name</code> 속성(attribute) 모두를 
+    제공하는 경우 <code>name</code> 속성(attribute)으로부터의 값 앞에 오는 <code>id</code> 속성(attribute)의 
+    값을 가지고, 나중의 중복을 무시하여, <a lt="tree order">트리 순서</a>에 따라야(must) 합니다.
 
-    To <a spec="webidl">determine the value of a named property</a> <var>name</var> when
-    <dfn>the {{Document}} object is indexed for property retrieval</dfn>, the user agent
-    must return the value obtained using the following steps:
+    <dfn lt="the Document object is indexed for property retrieval">{{Document}} 객체가 속성(property) 검색(retrieval)을 위해 인덱싱 되는</dfn>
+    경우 <a spec="webidl" lt="determine the value of a named property">명명된 속성(property) 
+    <var>name</var>의 값을 결정</a>하기 위해, 유저 에이전트는 다음 단계들을 사용하여 얻어진 값을 
+    반환해야(must) 합니다:
 
-    1. Let <var>elements</var> be the list of <a>named elements</a> with the name <var>name</var> in
-        the {{Document}}.
+    1. <var>elements</var>를 {{Document}}에 이름 <var>name</var>을 가진 
+        <a lt="named elements">명명된 요소(element)들</a>의 목록으로 둡니다.
 
-        <p class="note">There will be at least one such element, by definition.</p>
-    2. If <var>elements</var> has only one element, and that element is an <code>iframe</code>
-        element, then return the <code>WindowProxy</code> object of the
-        <a>nested browsing context</a> represented by that <{iframe}> element, and abort
-        these steps.
-    3. Otherwise, if <var>elements</var> has only one element, return that element and abort these
-        steps.
-    4. Otherwise return an <code>HTMLCollection</code> rooted at the {{Document}} node,
-        whose filter matches only <a>named elements</a> with the name <var>name</var>.
+        <p class="note">명세에 의해, 적어도 하나의 그러한 요소(element)가 존재할 것입니다.</p>
+    2. <var>elements</var>가 하나의 요소(element)만을 가지고, 그 요소(element)가 <code>iframe</code>
+        요소(element)라면, 그 <{iframe}> 요소(element)에 의해 나타나는 
+        <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 <code>WindowProxy</code>
+        객체를 반환하고, 이 단계들을 중단합니다.
+    3. 그렇지 않고, <var>elements</var>가 하나의 요소(element)만을 가진다면, 그 요소(element)를 
+        반환하고, 이 단계들을 중단합니다.
+    4. 그렇지 않으면 {{Document}}에 뿌리를 둔, 필터가 이름 <var>name</var>를 가진 
+        <a lt="named elements">명명된 요소(element)들</a>에만 일치하는 <code>HTMLCollection</code>를
+        반환합니다.
 
-    <dfn>Named elements</dfn> with the name <var>name</var>, for the purposes of the above
-    algorithm, are those that are either:
+    위 알고리즘의 목적을 위해 이름 <var>name</var>을 가진  
+    <dfn lt="Named elements">명명된 요소(element)들</dfn>은 다음 중 하나입니다:
 
-    * <{applet}>, <a>exposed</a> <{embed}>, <{form}>,
-        <{iframe}>, <{img}>, or <a>exposed</a> <{object}> elements that
-        have a <code>name</code> content attribute whose value is <var>name</var>, or
-    * <code>applet</code> or <a>exposed</a> <{object}> elements that have an
-        <code>id</code> content attribute whose value is <var>name</var>, or
-    * <{img}> elements that have an <code>id</code> content attribute whose value is
-        <var>name</var>, and that have a non-empty <code>name</code> content attribute present also.
+    * 값이 <var>name</var>인 <code>name</code> 콘텐트 속성(attribute)을 가지는 <{applet}>, 
+        <a lt="exposed">노출 된</a> <{embed}>, <{form}>, <{iframe}>, <{img}>, 
+        <a lt="exposed">노출 된</a> <{object}> 요소(element)들, 혹은,
+    * 값이 <var>name</var>인 <code>id</code> 콘텐트 속성(attribute)을 가지는 <code>applet</code> 또는
+        <a lt="exposed">노출 된</a> <{object}> 요소(element)들
+    * 값이 <var>name</var>인 <code>id</code> 콘텐트 속성(attribute)을 가지고, 
+        비어 있지 않은 <var>name</var> 콘텐트 속성(attribute)도 가지는 <{img}> 요소(element)들
 
-    An <code>embed</code> or <{object}> element is said to be <dfn>exposed</dfn> if it has
-    no <a>exposed</a> <code>object</code> ancestor, and, for <{object}> elements, is
-    additionally either not showing its <a>fallback content</a> or has no <code>object</code> or
-    <code>embed</code> descendants.
+    <code>embed</code>나 <{object}> 요소(element)는 <a lt="exposed">노출 된</a> 조상 <code>object</code>를
+    가지지 않고, <{object}> 요소(element)에 대해 추가적으로 요소의 <a lt="fallback content">폴백 콘텐트</a>가
+    보이지 않거나 후손 <code>object</code>나 <code>embed</code>를 가지지 않는다면 
+    <dfn lt="exposed">노출 되었다</dfn>라고 합니다.
   </div>
 
   <hr />
 
   <p class="note">
-    The <code>dir</code> attribute on the {{Document}} interface is defined along with the
-    <code>dir</code> content attribute.
+    {{Document}} 인터페이스에서 <code>dir</code> 속성(attribute)은 <code>dir</code> 콘텐트 
+    속성(attribute)과 함께 정의됩니다.
   </p>
 
   <div class="impl">
-    <h4 id="loading-xml-documents">Loading XML documents</h4>
+    <h4 id="loading-xml-documents">XML 문서 로딩</h4>
 
     <pre class="idl" data-highlight="webidl" dfn-for="XMLDocument">
       partial interface XMLDocument {
@@ -565,41 +568,42 @@
       };
     </pre>
 
-    The <dfn><code>load(<var>url</var>)</code></dfn> method must run the following steps:
+    <dfn><code>load(<var>url</var>)</code></dfn> 메서드는 다음 단계들을 수행해야(must) 합니다:
 
-    1. Let <var>document</var> be the {{XMLDocument}} object on which the method was
-        invoked.
-    2. <a>Parse</a> <var>url</var>, relative to the <a>entry settings object</a>. If this is not
-        successful, throw a "{{SyntaxError}}" {{DOMException}} and abort these steps.
-        Otherwise, let <var>urlRecord</var> be the <a>resulting URL record</a>.
-    3. If <var>urlRecord</var>'s <a for="url">origin</a> is not the same as the
-        <a for="concept">origin</a> of <var>document</var>, throw a "{{SecurityError}}"
-        {{DOMException}} and abort these steps.
-    4. Remove all child nodes of <var>document</var>, without firing any mutation events.
-    5. Set the <a>current document readiness</a> of <var>document</var> to "<code>loading</code>".
-    6. Run the remainder of these steps <a>in parallel</a>, and return true from the method.
-    7. Let <var>result</var> be a {{Document}} object.
-    8. Let <var>success</var> be false.
-    9. Let <var>request</var> be a new <a>request</a> whose <a for="url">URL</a> is
-        <var>urlRecord</var>,
-        <a>client</a> is <a>entry settings object</a>, <a>destination</a> is
-        "<code>subresource</code>", <a>synchronous flag</a> is set, <a for="request">mode</a> is
-        "<code>same-origin</code>", <a>credentials mode</a> is "<code>same-origin</code>", and whose
-        <a>use-URL-credentials flag</a> is set.
-    10. Let <var>response</var> be the result of <a>fetching</a> <var>request</var>.
-    11. If <var>response</var>'s <a>Content-Type metadata</a> is an <a>XML MIME type</a>, then run
-        these substeps:
-        1. Create a new <a>XML parser</a> associated with the <var>result</var> document.
-        2. Pass this parser <var>response</var>'s <a for="response">body</a>.
-        3. If there is an XML well-formedness or XML namespace well-formedness error, then remove
-            all child nodes from <var>result</var>. Otherwise let <var>success</var> be true.
-    12. Queue a task</a> to run the following steps.
-        1. Set the <a>current document readiness</a> of <var>document</var> to
-            "<code>complete</code>".
-        2. Replace all the children of <var>document</var> by the children of <var>result</var>
-            (even if it has no children), firing mutation events as if a
-            <code>DocumentFragment</code> containing the new children had been inserted.
-        3. <a>Fire a simple event</a> named <code>load</code> at <var>document</var>.
+    1. <var>document</var>를 메서드가 호출되는 {{XMLDocument}} 객체로 둡니다. 
+    2. <var>url</var>을, relative to the <a lt="entry settings object">엔트리 설정 객체</a>에 관련하여 
+        <a lt="parse">해석</a>합니다. 이것이 성공적이지 않다면, "{{SyntaxError}}" {{DOMException}}를 
+        던지고 이 단계들을 중단합니다. 그렇지 않으면, <var>urlRecord</var>를 
+        <a lt="resulting URL record">결과 URL 레코드</a>로 둡니다.
+    3. <var>urlRecord</var>의 <a for="url" lt="origin">출처(origin)</a>가 <var>document</var>의
+        <a for="concept" lt="origin">출처(origin)</a>와 동일한 것이 아니라면, "{{SecurityError}}"
+        {{DOMException}}를 던지고 이 단계들을 중단합니다.
+    4. 어떤 변경 이벤트도 발생시키지 않고, <var>document</var>의 모든 자식 노드들을 제거합니다.
+    5. <var>document</var>의 <a lt="current document readiness">현재 문서 준비상태</a>를 
+        "<code>loading</code>" 으로 설정합니다.
+    6. <a lt="in parallel">병렬로</a> 이 단계들의 나머지를 수행하고, 메서드로부터 true를 반환합니다.
+    7. <var>result</var>를 {{Document}} 객체로 둡니다.
+    8. <var>success</var>를 false로 둡니다.
+    9. <var>request</var>를 <a for="url">URL</a>이 <var>urlRecord</var>이고 <a lt="client">클라이언트</a>가
+        <a lt="entry settings object">엔트리 설정 객체</a>이고, <a lt="destination">목적지</a>가
+        "<code>subresource</code>"이며, <a lt="synchronous flag">동기 플래그</a>가 설정되고,
+        <a for="request" lt="mode">모드</a>가 "<code>same-origin</code>", <a lt="credentials mode">자격 증명 모드</a>가
+        "<code>same-origin</code>"이고, <a lt="use-URL-credentials flag">URL 자격 증명 사용 플래그</a>가
+        설정 된 새로운 <a lt="request">요청</a>으로 둡니다
+    10. <var>response</var>를 <var>request</var>를 <a lt="fetching">가져 온</a> 결과로 둡니다.
+    11. <var>response</var>의 <a lt="Content-Type metadata">Content-Type 메타데이터</a>가 
+        <a lt="XML MIME type">XML MIME 타입</a>이라면, 이 하위 단계들을 수행합니다:
+        1. <var>result</var> 문서와 연관된 새로운 <a lt="XML parser">XML 해석기</a>를 생성합니다.
+        2. 이 해석기 <var>response</var>의 <a for="response" lt="body">본문</a>을 전달합니다.
+        3. XML well-formedness나 XML 네임스페이스 well-formedness 오류가 있다면, <var>result</var>로부터 
+            모든 자식 노드들을 제거합니다. 그렇지 않으면, <var>success</var>를 true로 둡니다.
+    12. 다음 단계들을 수행하기 위한 <a lt="Queue a task">작업을 대기열에 넣습니다</a>.
+        1. <var>document</var>의 <a lt="current document readiness">현재 문서 준비상태</a>를
+            "<code>complete</code>"로 설정합니다.
+        2. 새로운 자식을 포함하는 <code>DocumentFragment</code>가 삽입 된 것처럼 변경 이벤트를 발생하여,
+            <var>document</var>의 모든 자식을 <var>result</var>의 자식으로 바꿉니다 (그것이 자식을 
+            가지지 않는다 하더라도).
+        3. <var>document</var>에 <code>load</code>라고 명명된 <a>단순한 이벤트를 발생</a>시킵니다.
   </div>
 
 <h3 id="elements">Elements</h3>
