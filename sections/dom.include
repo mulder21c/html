@@ -606,21 +606,21 @@
         3. <var>document</var>에 <code>load</code>라고 명명된 <a>단순한 이벤트를 발생</a>시킵니다.
   </div>
 
-<h3 id="elements">Elements</h3>
+<h3 id="elements">요소(element)</h3>
 
-<h4 id="elements-semantics">Semantics</h4>
+<h4 id="elements-semantics">의미론(semantic)</h4>
 
-  Elements, attributes, and attribute values in HTML are defined (by this specification) to have
-  certain meanings (semantics). For example, the <{ol}> element represents an ordered list,
-  and the <{global/lang}> attribute represents the language of the content.
+  HTML에서 요소(element), 속성(attribute), 속성 값(attribute value)은 정의 된 (이 명세에 의해) 특정한
+  의미(semantic)을 가집니다. 예를 들어, <{ol}> 요소(element)는 순서가 있는 목록을 나타내고, 
+  <{global/lang}> 속성(attribute)은 콘텐트의 언어를 나타냅니다.
 
-  These definitions allow HTML processors, like web browsers and search engines, to present
-  documents and applications consistently in different contexts.
+  이 정의는 웹 브라우저와 검색 엔진 같은 HTML 처리기가 다른 컨텍스트에서 문서와 어플리케이션을 
+  일관되게 표현하는 것을 허용합니다.
 
   <div class="example">
-  In this example the HTML headings may be presented as large text in a desktop browser, or standard
-  size text in bold in a mobile browser. In both cases the semantic information remains the same -
-  that the <{h1}> and <{h2}> elements represent headings.
+  이 예제에서 HTML 제목(heading)은 데스크탑 브라우저에서 큰 텍스트로, 또는 모바일 브라우저에서 굵은 일반 
+  사이즈 텍스트로 보여질 수 있습니다. 두 경우 모두에서 의미론적 정보는 모두 동일하게 남겨집니다 -  
+  <{h1}>과 <{h2}> 요소(element)들은 제목(heading)을 의미합니다.
 
     <pre highlight="html">
       &lt;!doctype html&gt;
@@ -645,21 +645,21 @@
     </pre>
   </div>
 
-  This semantic information is critical to assistive technologies. For example, a screen reader will
-  query the browser for semantic information and use that information to present the document or
-  application in synthetic speech.
+  이 의미론적 정보는 보조 기술에 있어 매우 중요합니다. 예를 들어, 스크린 리더(screen reader)는
+  브라우저에 의미론적 정보를 질의하고 음성 낭독으로 문서나 어플리케이션을 표시하기 위해 그 정보를
+  사용합니다.
 
-  In some cases assistive technologies use semantic information to provide additional functionality.
-  A speech recognition tool might provide a voice command for moving focus to the start of the
-  <{main}> element for example.
+  어떤 경우에 보조 기술은 추가적인 기능을 제공하기 위해 의미론적인 정보를 사용합니다. 
+  음성 인식 도구는 예를 들어 <{main}> 요소(element)의 시작 지점으로 초점을 이동하기 위한 음성 명령을
+  제공 할 수 있습니다.
 
-  When the appropriate HTML element or attribute is not used, it deprives HTML processors of
-  valuable semantic information.
+  적절한 HTML 요소(element)나 속성(attribute)가 사용되지 않는 경우, HTML 처리기에 가치 있는 의미론적 
+  정보를 주지 않게 됩니다.
 
   <div class="example">
-  In this example styling may be used to create a visual representation of headings and other
-  components, but because the appropriate HTML elements have not been used there is little semantic
-  information available to web browsers, search engines and assistive technologies.
+  이 예제에서 스타일링은 제목(heading)과 다른 컴포넌트의 시각적 표현을 생성하는데 사용될 수 있지만,
+  적절한 HTML 요소(element)가 사용 되지 않았기 때문에 웹 브라우저, 검색 엔진, 보저 기술에 사용 가능한
+  의미론적 정보가 거의 존재하지 않습니다.
 
     <pre highlight="html">
       &lt;!doctype html&gt;
@@ -684,38 +684,37 @@
     </pre>
   </div>
 
-  A document can change dynamically while it is being processed. Scripting and other mechanisms can
-  be used to change attribute values, text, or the entire document structure. The semantics of a
-  document are therefore based on the document's state at a particular instance in time, but may
-  also change in response to external events. User agents must update their presentation of the
-  document to reflect these changes.
+  문서는 그것이 처리되는 동안 동적으로 변경될 수 있습니다. 스크립팅과 다른 메커니즘은 속성(tattribute) 
+  값, 텍스트, 전체 문서 구조를 변경하는데 사용될 수 있습니다. 따라서 문서의 의미론은 특정 시점의 
+  문서의 상태에 기반하지만, 외부 이벤트에 대한 응답으로 변경될 수도 있습니다. 유저 에이전트는
+  이러한 변경을 반영하기 위해 문서의 표현을 업데이트 해야(must) 합니다.
 
   <div class="example">
-  In this example the <{audio}> element is used to play a music track. The
-  <dfn attribute for="Document"><code>controls</code></dfn> attribute is used to show the user
-  agent player, and as the music plays the controls are updated to indicate progress. The available
-  semantic information is updated in response to these changes.
+  이 예제에서 <{audio}> 요소(element)는 음악 트랙을 재생하는데 사용됩니다. 
+  <dfn attribute for="Document"><code>controls</code></dfn> 속성(attribute)은 유저 에이전트 플레이어를 
+  보여주는데 사용되고, 음악이 재생하는 동안 진행을 나타내기 위해 컨트롤이 업데이트 됩니다. 사용 가능한
+  의미론적 정보는 이러한 변경에 대한 응답으로 업데이트 됩니다.
 
   <pre highlight="html">
     &lt;audio src="comfortablynumb.mp3" controls&gt;
   </pre>
   </div>
 
-<h4 id="elements-in-the-dom">Elements in the DOM</h4>
+<h4 id="elements-in-the-dom">DOM에서의 요소(Element)</h4>
 
-  The nodes representing <a>html elements</a> in the DOM <span class="impl">must</span> implement,
-  and expose to scripts, the interfaces listed for them in the relevant sections of this
-  specification. This includes <a>html elements</a> in <a>XML documents</a>, even when those
-  documents are in another context (e.g., inside an XSLT transform).
+  DOM에서 <a lt="html elements">HTML 요소(element)들</a>을 나타내는 노드는 이 명세의 관련 명세에 
+  그것들에 대해 나열된 인터페이스를 구현해야(must) 하고 스크립트에 노출해야(must) 합니다. 여기에는
+  문서가 다른 컨텍스트(예를 들어, XSLT 변환 내부)에 있는 문서라 하더라도,  
+  <a lt="XML documents">XML 문서들</a>의 <a lt="html elements">HTML 요소(element)들</a>이 포함됩니다. 
 
-  Elements in the DOM <dfn>represent</dfn> things; that is, they have intrinsic <em>meaning</em>,
-  also known as semantics.
+  DOM의 요소(element)들은 상황(things)을 <dfn lt="represent">나타냅니다</dfn>; 즉, DOM의 요소
+  (element)들은 의미론(semantic)으로 알려진, 고유한 <em>의미</em>를 가집니다. 
 
-  <p class="example">For example, an <{ol}> element represents an ordered list.</p>
+  <p class="example">예를 들어, <{ol}> 요소(element)는 순서가 있는 목록을 나타냅니다.</p>
 
-  The basic interface, from which all the <a>html elements</a>' interfaces inherit,
-  <span class="impl">and which must be used by elements that have no additional requirements,</span>
-  is the {{HTMLElement}} interface.
+  모든 <a lt="html elements">HTML 요소(element)들</a>의 인터페이스가 상속 받 <span class="impl">고,
+  추가적인 요구사항이 없는 요소(element)들을 사용해야(must) 하</span>는 기본 인터페이스는 {{HTMLElement}}
+  인터페이스 입니다.
 
   <pre class="idl" data-highlight="webidl" dfn-for="HTMLElement">
     interface HTMLElement : Element {
@@ -748,111 +747,108 @@
     interface HTMLUnknownElement : HTMLElement { };
   </pre>
 
-  The {{HTMLElement}} interface holds methods and attributes related to a number of
-  disparate features, and the members of this interface are therefore described in various different
-  sections of this specification.
+  {{HTMLElement}} 인터페이스는 다수의 상이한 기능과 관련된 메서드와 속성(attribtue)들을 보유하고,
+  따라서 이 인터페이스의 멤버들은 이 명세의 다양한 다른 섹션에서 설명됩니다.
 
   <div class="impl">
-    The {{HTMLUnknownElement}} interface must be used for <a>html elements</a> that are not
-    defined by this specification (or <a lt="applicable specification">other applicable specifications</a>).
+    {{HTMLUnknownElement}} 인터페이스는 이 명세(또는 <a lt="applicable specification">다른 적용 
+    가능한 명세</a>)에 정의되지 않은 <a lt="html elements">HTML 요소(element)들</a>에 사용되어야(must) 
+    합니다. 
   </div>
 
-<h4 id="element-definitions">Element definitions</h4>
+<h4 id="element-definitions">요소(element) 정의</h4>
 
-  Each element in this specification has a definition that includes the following information:
+  이 명세에서 각 요소(element)는 다음 정보를 포함하는 정의를 가집니다:
 
-  : <dfn>Categories</dfn>
-  :: A list of <a>categories</a> to which the element belongs. These are used when defining the
-      <a>content models</a> for each element.
-  : <dfn>Contexts in which this element can be used</dfn>
-  :: A <em>non-normative</em> description of where the element can be used. This information is
-      redundant with the content models of elements that allow this one as a child, and is provided
-      only as a convenience.
+  : <dfn lt="categories">카테고리</dfn>
+  :: 요소(element)가 속하는 <a lt="categories">카테고리</a>의 목록. 이것들은 각 요소(element)에 대해
+      <a lt="content models">콘텐트 모델</a>을 정의할 때 사용됩니다.
+  : <dfn lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</dfn>
+  :: 요소(element)가 사용될 수 있는 곳의 <em>비 규범적</em> 설명. 이 정보는 자식으로서 이것을 허용하는
+      요소의 콘텐트 모델과 중복되고, 편의상으로만 제공됩니다.
       <p class="note">
-        For simplicity, only the most specific expectations are listed. For example, an element that
-        is both <a>flow content</a> and <a>phrasing content</a> can be used anywhere that either
-        <a>flow content</a> or <a>phrasing content</a> is expected, but since anywhere that
-        <a>flow content</a> is expected, <a>phrasing content</a> is also expected (since all
-        <a>phrasing content</a> is <a>flow content</a>), only "where <a>phrasing content</a> is
-        expected" will be listed.
+        간결함을 위해, 가장 구체적인 예상되는 것들만 언급됩니다. 예를 들어, 
+        <a lt="flow content">흐름(flow) 콘텐트</a>이면서 <a lt="phrasing content">어구(phrasing) 콘텐트</a>인
+        요소(element)는 <a lt="phrasing content">어구(phrasing) 콘텐트</a>가 예상되는 어느 곳에서나
+        사용될 수 있지만, <a lt="flow content">흐름(flow) 콘텐트</a>가 예상되는 곳은 
+        <a lt="phrasing content">어구(phrasing) 콘텐트</a>도 예상되기 때문에 (모든 
+        <a lt="phrasing content">어구(phrasing) 콘텐트</a>는 <a lt="flow content">흐름(flow) 콘텐트</a>이기 
+        때문에), "<a lt="phrasing content">어구(phrasing) 콘텐트</a>가 예상되는 곳"만 언급 될 것입니다.
       </p>
-  : <dfn>Content model</dfn>
-  :: A normative description of what content must be included as children and descendants of the
-      element.
-  : <dfn>Tag omission in text/html</dfn>
-  :: A <em>non-normative</em> description of whether, in the <a href="#text-html"><code>text/html</code></a> syntax, the
-      <a lt="start tag">start</a> and <a lt="end tag">end</a> tags can be omitted. This information is redundant with the
-      normative requirements given in the <a lt="omitted">optional tags</a> section, and is provided in the
-      element definitions only as a convenience.
-  : <dfn lt="content attribute|content attributes">Content attributes</dfn>
-  :: A normative list of attributes that may be specified on the element (except where otherwise
-      disallowed), along with non-normative descriptions of those attributes. (The content to the
-      left of the dash is normative, the content to the right of the dash is not.)
-  : Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values
-  :: A normative list of <a href="#aria-role-attribute">ARIA role attribute</a> values that may be specified on the element
-      (except where otherwise disallowed). Each value is linked to a non normative description.
-  : Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>
-  :: Links to the <a>Global aria-* attributes</a> list and the
-      <a href="#allowed-aria-roles-states-and-properties">allowed roles, states and properties</a> table.
-  : <dfn>DOM interface</dfn>
-  :: A normative definition of a DOM interface that such elements must implement.
+  : <dfn lt="content model">콘텐트 모델</dfn>
+  :: 요소(element)의 자식과 후손으로 포함되어야(must) 하는 콘텐트의 규범적 설명.
+  : <dfn lt="tag omission in text/html">text/html에서 태그 생략</dfn>
+  :: <a href="#text-html"><code>text/html</code></a> 구문에서, <a lt="start tag">시작</a> 태그와
+      <a lt="end tag">종료 태그</a>가 생략될 수 있는지 여부의 <em>비규범적</em> 설명. 이 정보는
+      <a lt="omitted">선택적 태그</a> 섹션에 주어진 규범적인 요구 사항과 중복되고, 요소(element)
+      정의에 편의상으로만 제공됩니다.
+  : <dfn lt="content attribute|content attributes">콘텐트 속성(attribute)</dfn>
+  :: 요소(element)에 명시될 수 있는 속성(attribute)의 규범적 목록과 (달리 허용되지 않는 경우를 제외하고)
+      그 속성(attribute)들의 비 규범적인 설명. (대시의 왼쪽의 콘텐트는 규범적이고, 대시 오른쪽의 
+      콘텐트는 규범적이지 않습니다.)
+  : 허용된 <a href="#aria-role-attribute">ARIA 역학(role) 속성(attribute)</a> 값
+  :: 요소에 명시될 수 있는 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들의
+      규범적 목록(달리 허용되지 않는 경우를 제외하고). 각 값은 비 규범적 설명에 연결됩니다.
+  : 허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>
+  :: <a lt="Global aria-* attributes">범용 aria-* 속성(attribute)</a> 목록과
+      <a href="#allowed-aria-roles-states-and-properties">허용된 역할(role), 상태(state), 속성(property)</a> 
+      표로의 링크
+  : <dfn>DOM 인터페이스</dfn>
+  :: 그 요소(element)가 구현해야(must)하는 DOM 인터페이스의 규범적 정의
 
-  This is then followed by a description of what the element <a>represents</a>, along with any
-  additional normative conformance criteria that may apply to authors
-  <span class="impl"> and implementations</span>. Examples are sometimes also included.
+  이것은 요소가 작성자<span class="impl">와 구현</span>에 적용할 수 있는 추가적인 규범적 적합성 기준과
+  함께, 무엇을 <a lt="represents">나타내는지</a>의 설명이 이후에 따라옵니다. 예제도 때때로 포함됩니다.
 
-<h5 id="element-definitions-attributes">Attributes</h5>
+<h5 id="element-definitions-attributes">속성(attribute)</h5>
 
-  Except where otherwise specified, attributes on <a>html elements</a> may have any string value,
-  including the empty string. Except where explicitly stated, there is no restriction on what text
-  can be specified in such attributes.
+  달리 명시되지 않는 한, <a lt="html elements">HTML 요소(element)</a>의 속성(attribute)은 빈 문자열을
+  포함하여 임의의 문자열 값을 가질 수 있습니다. 명시적으로 정해지지 않는 한, 그러한 속성(attribute)에
+  명시 될 수 있는 텍스트에 대한 제약 사항은 없습니다.
 
-<h4 id="content-models">Content models</h4>
+<h4 id="content-models">콘텐트 모델(Content model)</h4>
 
-  Each element defined in this specification has a content model: a description of the element's
-  expected <a lt='html-contents'>contents</a>. An <a>HTML element</a> must have contents that match the requirements
-  described in the element's content model. The <dfn lt='html-contents'>contents</dfn> of an element are its children
-  in the DOM, except for <{template}> elements, where the children are those in the
-  <a>template contents</a> (a separate <code>DocumentFragment</code> assigned to the element when
-  the element is created).
+  이 명세에 정의된 각 요소(element)는 콘텐트 모델을 가집니다: 요소의 예상되는 <a lt='html-contents'>콘텐츠</a>의 설명.
+  <a lt="HTML element">HTML 요소(element)</a>는 요소(element)의 콘텐트 모델에 기술된 요구사항에
+  일치하는 콘텐트를 가져야(must) 합니다. 요소(element)의 <dfn lt='html-contents'>콘텐트</dfn>는 자식이
+  <a lt="template contents">템플릿 콘텐트</a>에 있는 <{template}> 요소(element)를 (요소가 생성될 때
+  요소에 대입되는 별도의 <code>DocumentFragment</code>) 제외하고, DOM에서 그것의 자식입니다.
 
-  The <a>space characters</a> are always allowed between elements. User agents represent these
-  characters between elements in the source markup as <code>Text</code> nodes in the DOM. Empty
-  <code>Text</code> nodes and <code>Text</code> nodes consisting of just sequences of those
-  characters are considered <dfn>inter-element whitespace</dfn>.
+  <a lt="space characters">공백 문자들</a>은 항상 요소(element)들 사이에 허용됩니다. 유저 에이전트는
+  소스 마크업에서 요소(element)들 사이의 이 문자들을 DOM 에서 <code>Text</code> 노드로 나타냅니다.
+  일련의 그 문자로만 구성되는 빈 <code>Text</code> 노드와 <code>Text</code> 노드는
+  <dfn lt="inter-element whitespace">요소(element) 간 여백</dfn>으로 간주됩니다.
 
-  <a>Inter-element whitespace</a>, comment nodes, and processing instruction nodes must be ignored
-  when establishing whether an element's contents match the element's content model or not, and must
-  be ignored when following algorithms that define document and element semantics.
+  <a lt="inter-element whitespace">요소 간 여백</a>, 주석 노드, 처리 지시 노드는 요소(element)의
+  콘텐트가 요소(element)의 콘텐트 모델과 일치하는지 아닌지의 여부가 수립 될 때 무시되어야(must) 하고,
+  문서와 요소(element) 의미론을 정의하는 알고리즘을 따를 때 무시되어야(must) 합니다.
 
   <p class="note">
-    Thus, an element <var>A</var> is said to be <i>preceded or followed</i> by a second element
-    <var>B</var> if <var>A</var> and <var>B</var> have the same parent node and there are no other
-    element nodes or <code>Text</code> nodes (other than <a>inter-element whitespace</a>) between
-    them. Similarly, a node is the <i>only child</i> of an element if that element contains no other
-    nodes other than <a>inter-element whitespace</a>, comment nodes, and processing instruction
-    nodes.
+    따라서, <var>A</var> and <var>B</var>가 동일한 부모 노드를 가지고 둘 사이에 다른 요소(element)
+    노드나 <code>Text</code> 노드(<a lt="inter-element whitespace">요소(element) 간 여백</a> 외)가
+    없다면 요소(element) <var>A</var>는 두 번째 요소(element) <var>B</var>보다 <i>앞서거나 
+    <var>B</var>가 뒤따른다</i>고 합니다. 마찬가지로, 요소(element)가 
+    <a lt="inter-element whitespace">요소(element) 간 여백</a>, 주석 노드, 처리 지시 노드 외 다른
+    노드를 포함하지 않는다면 이 노드는 그 요소(element)의 <i>유일한 자식</i>입니다.
   </p>
 
-  Authors must not use <a>html elements</a> anywhere except where they are explicitly allowed, as
-  defined for each element, or as explicitly required by other specifications. For XML compound
-  documents, these contexts could be inside elements from other namespaces, if those elements are
-  defined as providing the relevant contexts.
+  작성자는 <a lt="html elements">HTML 요소(element)들</a>을 각 요소(element)들에 대해 정의 된대로
+  혹은 다른 명세에 의해 명시적으로 요구 된 대로 그것들이 명시적으로 허용된 곳을 제외한 다른 어떤
+  곳에도 사용하지 않아야(must) 합니다. XML 복합 문서에 대해, 그 요소(element)들이 관련 컨텍스트를
+  제공하도록 정의되었다면, 이 상황들은 다른 네임스페이스의 내부 요소(element)가 될 수 있습니다. 
 
   <div class="example">
-    For example, the Atom specification defines a <code>content</code> element. When its
-    <code>type</code> attribute has the value <code>xhtml</code>, the Atom specification requires
-    that it contain a single HTML <{div}> element. Thus, a <{div}> element is
-    allowed in that context, even though this is not explicitly normatively stated by this
-    specification. [[RFC4287]]
+    예를 들어, 아톰(Atom) 명세는 <code>content</code> 요소(element)를 정의합니다. 그것의 <code>type</code>
+    속성(attribute)이 <code>xhtml</code> 값을 가지는 경우, 아톰(Atom) 명세는 단일 HTML <{div}>
+    요소(element)를 포함하도록 요구합니다. 따라서, <{div}> 요소(element)는 비록 이 명세에 의해
+    명시적으로 규범적으로 지정되지 않았지만 그 컨텍스트에서는 허용됩니다. [[RFC4287]]
   </div>
 
-  In addition, <a>html elements</a> may be orphan nodes (i.e., without a parent node).
+  추가적으로, <a lt="html elements">HTML 요소(element)들</a>은 고아 노드(즉, 부모 노드가 없는)가 될 
+  수 있습니다.
 
   <div class="example">
-    For example, creating a <{td}> element and storing it in a global variable in a
-    script is conforming, even though <{td}> elements are otherwise only supposed to be
-    used inside <{tr}> elements.
+    예를 들어, <{td}> 요소(element)가 <{tr}> 요소(element) 내부에만 사용되도록 되어있다 하더라도,
+    스크립트에서 <{td}> 요소(element)를 생성하고 전역 변수에 저장하는 것은 적합합니다.
 
     <pre highlight="javascript">
       var data = {
@@ -862,21 +858,22 @@
     </pre>
   </div>
 
-<h5 id="the-nothing-content-model">The "nothing" content model</h5>
+<h5 id="the-nothing-content-model">"없는(nothing)" 콘텐트 모델</h5>
 
-  When an element's content model is <dfn>nothing</dfn>, the element must contain no
-  <code>Text</code> nodes (other than <a>inter-element whitespace</a>) and no element nodes.
+  요소(element)의 콘텐트 모델이 <dfn lt="nothing">없는</dfn> 경우, 요소(element)는 <code>Text</code> 
+  노드 (<a lt="inter-element whitespace">요소(element)간 공백</a> 외)와 요소(element) 노드를 포함하지
+  않아야(must) 합니다.
 
   <p class="note">
-    Most HTML elements whose content model is "nothing" are also, for convenience,
-    <a>void elements</a> (elements that have no <a>end tag</a> in the <a href="#syntax">HTML syntax</a>). However,
-    these are entirely separate concepts.
+    콘텐트 모델이 "없는" 대부분 HTML 요소(element)들은 편의상 <a lt="void elements">텅 빈 요소(element)</a>
+    (<a href="#syntax">HTML 문법</a>에 따라 <a lt="end tag">종료 태그</a>를 가지지 않는 요소(element)). 
+    하지만, 이것들은 완전히 분리된 개념입니다.
   </p>
 
-<h5 id="kinds-of-content">Kinds of content</h5>
+<h5 id="kinds-of-content">콘텐트의 종류</h5>
 
-  Each element in HTML falls into zero or more <dfn lt="content categories|conent category">categories</dfn> that group elements with
-  similar characteristics together. The following broad categories are used in this specification:
+  HTML에서 각 요소(element)는 서로 유사한 특성을 가진 요소(element)를 분류한 0개 이상의
+  <dfn lt="content categories|conent category">카테고리</dfn>에 속합니다:
 
   <ul class="brief category-list">
     <li>[[#kinds-of-content-metadata-content]]</li>
@@ -889,28 +886,26 @@
   </ul>
 
   <p class="note">
-    Some elements also fall into other categories, which are defined in other parts of this
-    specification.
+    어떤 요소들은 이 명세에서 다른 부분에 정의된 다른 카테고리에도 해당됩니다.
   </p>
 
-  These categories are related as follows:
+  이 카테고리들은 다음과 같이 관련됩니다:
 
   <object width="1000" height="288" data="images/content-venn.svg"><img src="images/content-venn.png" alt="" width="512" height="288" /></object>
 
-  Sectioning content, heading content, phrasing content, embedded content, and interactive content
-  are all types of flow content. Metadata is sometimes flow content. Metadata and interactive
-  content are sometimes phrasing content. Embedded content is also a type of phrasing content, and
-  sometimes is interactive content.
+  섹션화(sectioning) 콘텐트, 제목(heading) 콘텐트, 어구(phrasing) 콘텐트, 삽입(embedded) 콘텐트,
+  대화형(interactive) 콘텐트는 흐름(flow) 콘텐트의 모든 유형입니다. 메타데이터는 때때로 흐름(flow)
+  콘텐트 입니다. 메타데이터와 대화형(interactive) 콘텐트는 때때로 어구(phrasing) 콘텐트 입니다.
+  삽입(embedded) 콘텐트는 또한 어구(phrasing) 콘텐트이 유형이고, 때때로 대화형(interactive) 콘텐트입니다.
 
-  Other categories are also used for specific purposes, e.g., form controls are specified using a
-  number of categories to define common requirements. Some elements have unique requirements and do
-  not fit into any particular category.
+  다른 카테고리들은 특정 목적을 위해서도 사용됩니다, 예를 들어, 양식(form) 컨트롤들은 공통 요구사항을
+  정의하기 위해 여러 가지 카테고리를 사용하여 명시됩니다. 일부 요소(element)들은 고유의 요구사항을 
+  가지고 특정 카테고리에 맞지 않습니다.
 
-<h6 id="kinds-of-content-metadata-content">Metadata content</h6>
+<h6 id="kinds-of-content-metadata-content">메타데이터 콘텐트</h6>
 
-  <dfn lt="metadata content">Metadata content</dfn> is content that sets up the presentation or behavior of the rest of
-  the content, or that sets up the relationship of the document with other documents, or that
-  conveys other "out of band" information.
+  <dfn lt="metadata content">메타데이터 콘텐트</dfn>는 콘텐트 나머지의 표현이나 동작을 설정하거나,
+  다른 문서와 문서의 관계를 설정하거나, 다른 "대역 외" 정보를 전달하는 콘텐트 입니다.
 
   <ul class="brief category-list">
     <li><{base}></li>
@@ -923,16 +918,16 @@
     <li><a element for="html"><code>title</code></a></li>
   </ul>
 
-<h6 id="kinds-of-content-flow-content">Flow content</h6>
+<h6 id="kinds-of-content-flow-content">흐름(flow) 콘텐트</h6>
 
-  Most elements that are used in the body of documents and applications are categorized as
-  <dfn lt="flow content">flow content</dfn>.
+  문서와 어플리케이션의 본문에 사용되는 대부분 요소(element)는 <dfn lt="flow content">흐름(flow) 콘텐트</dfn>로
+  분류됩니다.
 
   <ul class="brief category-list">
     <li><{a}></li>
     <li><{abbr}></li>
     <li><{address}></li>
-    <li><{area}> (if it is a descendant of a <{map}> element)</li>
+    <li><{area}> (<{map}> 요소(element)의 후손이라면)</li>
     <li><{article}></li>
     <li><{aside}></li>
     <li><{audio}></li>
@@ -1011,14 +1006,14 @@
     <li><{var}></li>
     <li><{video}></li>
     <li><{wbr}></li>
-    <li><a>Text</a></li>
+    <li><a lt="Text">텍스트</a></li>
   </ul>
 
 
-<h6 id="kinds-of-content-sectioning-content">Sectioning content</h6>
+<h6 id="kinds-of-content-sectioning-content">그룹화(sectioning) 콘텐트</h6>
 
-  <dfn lt="sectioning content">Sectioning content</dfn> is content that defines the scope of <a>headings</a> and
-  <a element lt="footer">footers</a>.
+  <dfn lt="sectioning content">그룹화(sectioning) 콘텐트</dfn>는 <a lt="headings">제목(heading)</a>과
+  <a element lt="footer">바닥글(footer)</a>들의 범위를 정의하는 콘텐트 입니다.
 
   <ul class="brief category-list">
     <li><{article}></li>
@@ -1027,18 +1022,21 @@
     <li><{section}></li>
   </ul>
 
-  Each <a>sectioning content</a> element potentially has a heading and an <a>outline</a>. See the
-  section on [[#headings-and-sections]] for further details.
+  각 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>는 잠재적으로 제목(heading)과
+  <a lt="outline">개요(outline)</a>를 가집니다. 더 자세한 내용을 위해 [[#headings-and-sections]]의 
+  섹션을 참고하세요.
 
   <p class="note">
-    There are also certain elements that are <a>sectioning roots</a>. These are distinct from
-    <a>sectioning content</a>, but they can also have an <a>outline</a>.
+    <a lt="sectioning roots">섹션화(sectioning) 루트</a>인 특정 요소(element)들도 있습니다. 
+    이것들은 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>와 구별되지만, 
+    이들도 <a lt="outline">개요(outline)</a>를 가질 수 있습니다.
   </p>
 
-<h6 id="kinds-of-content-heading-content">Heading content</h6>
+<h6 id="kinds-of-content-heading-content">제목(heading) 콘텐트</h6>
 
-  <dfn lt="heading content|headings">Heading content</dfn> defines the header of a section (whether explicitly marked up using
-  <a>sectioning content</a> elements, or implied by the heading content itself).
+  <dfn lt="heading content|headings">제목(heading) 콘텐트</dfn>는 (<a lt="sectioning content">섹션화(sectioning)
+  콘텐트</a> 요소(element)를 사용하여 명시적으로 마크업했거나, 제목(heading) 콘텐트 자체로 나타내어)
+  섹션의 헤더를 정의합니다.
 
   <ul class="brief category-list">
     <li><{h1}></li>
@@ -1049,15 +1047,16 @@
     <li><{h6}></li>
   </ul>
 
-<h6 id="kinds-of-content-phrasing-content">Phrasing content</h6>
+<h6 id="kinds-of-content-phrasing-content">어구(phrasing) 콘텐트</h6>
 
-  <dfn lt="phrasing content">Phrasing content</dfn> is the text of the document, as well as elements that mark up that
-  text at the intra-paragraph level. Runs of <a>phrasing content</a> form <a>paragraphs</a>.
+  <dfn lt="phrasing content">어구(phrasing) 콘텐트</dfn>는 문서의 텍스트 뿐만 아니라 문단 내부(intra-paragraph)
+  레벨에서 텍스트를 마크업 하는 요소(element) 입니다. <a lt="paragraphs">문단</a>에서의 연속 된
+  <a lt="phrasing content">어구(phrasing) 콘텐트</a>.
 
   <ul class="brief category-list">
     <li><{a}></li>
     <li><{abbr}></li>
-    <li><{area}> (if it is a descendant of a <{map}> element)</li>
+    <li><{area}> (<{map}> 요소(element)의 후손이라면)</li>
     <li><{audio}></li>
     <li><{b}></li>
     <li><{bdi}></li>
@@ -1109,37 +1108,40 @@
     <li><{var}></li>
     <li><{video}></li>
     <li><{wbr}></li>
-    <li><a>Text</a></li>
+    <li><a lt="Text">텍스트</a></li>
   </ul>
 
   <p class="note">
-    Most elements that are categorized as phrasing content can only contain elements that are
-    themselves categorized as phrasing content, not any flow content.
+    어구(phrasing) 콘텐트로 분류된 대부분 요소(element)들은 흐름(flow) 콘텐트가 아닌 어구(phrasing)
+    컨텐트로 분류된 자기 자신인 요소(element)만을 포함 할 수 있습니다.
   </p>
 
-  <dfn lt="Text|Text content">Text</dfn>, in the context of content models, means either nothing, or
-  <code>Text</code> nodes. <a>Text</a> is sometimes used as a content model on its own, but is also
-  <a>phrasing content</a>, and can be <a>inter-element whitespace</a> (if the <code>Text</code>
-  nodes are empty or contain just <a>space characters</a>).
+  콘텐트 모델의 맥락에서 <dfn lt="Text|Text content">텍스트</dfn>는 아무 것도 의미하지 않거나 <code>Text</code>
+  노드를 의미합니다. <a lt="Text">텍스트</a>는 때때로 그 자체로 콘텐트 모델로 사용되지만,
+  <a lt="phrasing content">어구(phrasing) 콘텐트</a>이기도 하며, 
+  <a lt="inter-element whitespace">요소 (element)간 공백</a>이 될 수 있습니다(<code>Text</code> 노드가
+  비어있거나 <a lt="space characters">공백 문자들</a>만을 포함한다면).
 
-  <code>Text</code> nodes and attribute values must consist of <a>Unicode characters</a>, must not
-  contain U+0000 characters, must not contain permanently undefined Unicode characters
-  (noncharacters), and must not contain <a>control characters</a> other than
-  <a>space characters</a>.
+  <code>Text</code> 노드와 속성(attribute) 값은 <a lt="Unicode characters">유니코드 문자들</a>로
+  구성되어야(must) 하고, U+0000 문자는 포함하지 않아야(must) 하고, 영구적으로 정의되지 않은 유니코드
+  문자(비문자)를 포함하지 않아야(must) 하고, <a lt="space characters">공백 문자들</a> 외
+  <a lt="control characters">제어 문자</a>를 포함하지 않아야(must) 합니다.
 
-  This specification includes extra constraints on the exact value of <code>Text</code> nodes and
-  attribute values depending on their precise context.
+  이 명세는 정확한 컨텍스트에 따른 <code>Text</code> 노드의 정확한 값과 속성(attribtue) 값에 추가 
+  제한 사항들을 포함합니다.
 
-  For elements in HTML, the constraints of the <a>Text</a> <a>content model</a> also depends on the
-  <a>kind of element</a>. For instance, an "<code>&lt;</code>" inside a <{textarea}> element does
-  not need to be escaped in HTML because <{textarea}> is an <a>escapable raw text</a> element.
-  (This does not apply to XHTML. In XHTML, the <a>kind of element</a> doesn't affect the constraints
-  of <a>content model</a>: <a>Text</a>.)
+  HTML에서 요소(element)들에 대해, <a lt="Text">텍스트</a> <a lt="content model">콘텐트 모델</a>의
+  제한 사항도 <a lt="kind of element">요소(element)의 종류</a>에 따릅니다. 예를 들어, <{textarea}>
+  요소(element) 안에 "<code>&lt;</code>"는 <{textarea}>가 <a lt="escapable raw text">이스케이프 될 
+  수 있는 원시 텍스트</a> 요소(element)이기 때문에  HTML에서 이스케이프 될 필요가 없습니다. (이것은
+  XHTML에 적용하지 않습니다. XHTML에서, <a lt="kind of element">요소(element)의 종류</a>는 
+  <a lt="content model">콘텐트 모델</a>: <a lt="Text">텍스트</a>의 제한 사항에 영향을 주지 않습니다.)
 
-<h6 id="kinds-of-content-embedded-content">Embedded content</h6>
+<h6 id="kinds-of-content-embedded-content">삽입(embedded) 콘텐트</h6>
 
-  <dfn lt="embedded content">Embedded content</dfn> is content that imports another
-  resource into the document, or content from another vocabulary that is <a for="document">inserted into the document</a>.
+  <dfn lt="embedded content">삽입(embedded) 콘텐트</dfn>는 문서에 다른 리소스를 불러오는 콘텐트, 혹은
+  <a for="document" lt="inserted into the document">문서에 삽입 된</a> 다른 표현 형식으로부터의 콘텐트 
+  입니다.
 
   <ul class="brief category-list">
     <li><{audio}></li>
@@ -1154,39 +1156,39 @@
     <li><{video}></li>
   </ul>
 
-  Elements that are from namespaces other than the <a>HTML namespace</a> and that convey content but
-  not metadata, are <a>embedded content</a> for the purposes of the content models defined in this
-  specification. (For example, MathML, or SVG.)
+  <a lt="HTML namespace">HTML 네임스페이스</a>와 다른 네임스페이스이고 콘텐트를 전달하지만 메타데이터는
+  전달하지 않는 요소(element)는 이 명세에 정의된 콘텐트 모델의 목적에 대한 
+  <a lt="embedded content">삽입(embedded) 콘텐트</a> 입니다. (예를 들어, MathML 혹은 SVG.)
 
-  Some embedded content elements can have <dfn>fallback content</dfn>: content that is to be used
-  when the external resource cannot be used (e.g., because it is of an unsupported format). The
-  element definitions state what the fallback is, if any.
+  일부 삽입(embedded) 콘텐트 요소(element)들은 <dfn lt="fallback content">폴백 콘텐트</dfn>를 가질 수
+  있습니다: 외부 리소스가 사용될 수 없는 경우 (예를 들어, 지원되지 않는 형식의 콘텐트이기 때문에)
+  사용되는 콘텐트. 폴백이 있다면 요소(element) 정의는 폴백이 무엇인지 지정합니다.
 
-<h6 id="kinds-of-content-interactive-content">Interactive content</h6>
+<h6 id="kinds-of-content-interactive-content">대화형(interactive) 콘텐트</h6>
 
-  <dfn lt="interactive content">Interactive content</dfn> is content that is specifically intended
-  for user interaction.
+  <dfn lt="interactive content">대화형(interactive) 콘텐트</dfn>는 유저 인터랙션을 위해 특별히 의도된
+  콘텐트 입니다.
 
   <ul class="brief category-list">
-    <li><{a}> (if the <{a/href}> attribute is present)</li>
-    <li><{audio}> (if the <{audio/controls}> attribute is present)</li>
+    <li><{a}> (<{a/href}> 속성(attribute)이 존재한다면)</li>
+    <li><{audio}> (<{audio/controls}> 속성(attribute)이 존재한다면)</li>
     <li><{button}></li>
     <li><{details}></li>
     <li><{embed}></li>
     <li><{iframe}></li>
-    <li><{img}> (if the <{img/usemap}> attribute is present)</li>
+    <li><{img}> (<{img/usemap}> 속성(attribute)이 존재한다면)</li>
     <li>
-      <{input}> (if the <{input/type}> attribute is <em>not</em> in the <a>Hidden</a>
-      state)
+      <{input}> (<{input/type}> 속성(attribute)이 <a lt="Hidden">숨김</a> 상태가 <em>아니</em>라면)
     </li>
     <li><{keygen}></li>
     <li><{label}></li>
     <li><{select}></li>
     <li><{textarea}></li>
-    <li><{video}> (if the <{video/controls}> attribute is present)</li>
+    <li><{video}> (<{video/controls}> 속성(attribute)이 존재한다면)</li>
   </ul>
 
-  The <code>tabindex</code> attribute can also make any element into <a>interactive content</a>.
+  <code>tabindex</code> 속성(attribute)은 모든 요소(element)를
+  <a lt="interactive content">대화형(interactive) 콘텐트</a>로 만들 수 있습니다.
 
 <h6 id="sec-palpable-content">Palpable content</h6>
 
