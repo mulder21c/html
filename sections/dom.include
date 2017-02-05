@@ -178,7 +178,7 @@
 
   가져올 때, 문서가 <a lt="cookie-averse">쿠키를 거부하는 <code>Document</code> 객체</a>라면,
   유저 에이전트는 빈 문자열을 반환해야(must) 합니다. 그렇지 않고, {{Document}}의 
-  <a for="concept">출처(origin)</a>가 <a lt="opaque origin">불분명한 출처(origin)</a>라면, 유저 
+  <a for="concept" lt="origin">출처(origin)</a>가 <a lt="opaque origin">불분명한 출처(origin)</a>라면, 유저 
   에이전트는 "{{SecurityError}}" {{DOMException}}를 던져야(must) 합니다. 그렇지 않으면, 유저 
   에이전트는 "non-HTTP" API를 위해 <a lt="UTF-8 decode without BOM">BOM 없는 UTF-8 디코드</a>를 
   사용하여 디코드 된 <a lt="the document's address">문서의 주소</a>에 대한 
@@ -186,7 +186,7 @@
   <a class="fingerprint" href="#fingerprinting-vector"><img height="21" src="images/fingerprint.png" width="15" alt="(이것은 지문 그림입니다.)" /></a>
 
   설정할 때, 문서가 <a lt="cookie-averse">쿠키를 거부하는 <code>Document</code> 객체</a>라면, 
-  유저 에이전트는 아무 것도 하지 않아야(must) 합니다. 그렇지 않고, {{Document}}의 <a for="concept">출처(origin)</a>가
+  유저 에이전트는 아무 것도 하지 않아야(must) 합니다. 그렇지 않고, {{Document}}의 <a for="concept" lt="origin">출처(origin)</a>가
   <a lt="opaque origin">불분명한 출처(origin)</a>이라면, 유저 에이전트는 "{{SecurityError}}" 
   {{DOMException}}를 던져야 합니다. 그렇지 않으면, 유저 에이전트는 <a lt="encoded as UTF-8">UTF-8로 인코드 된</a>
   새로운 값으로 구성하여, "non-HTTP" API를 통해 <a lt="the document's address">문서의 주소</a>에 대해 
@@ -603,7 +603,7 @@
         2. 새로운 자식을 포함하는 <code>DocumentFragment</code>가 삽입 된 것처럼 변경 이벤트를 발생하여,
             <var>document</var>의 모든 자식을 <var>result</var>의 자식으로 바꿉니다 (그것이 자식을 
             가지지 않는다 하더라도).
-        3. <var>document</var>에 <code>load</code>라고 명명된 <a>단순한 이벤트를 발생</a>시킵니다.
+        3. <var>document</var>에 <code>load</code>라고 명명된 <a lt="fire a simple event">단순한 이벤트를 발생</a>시킵니다.
   </div>
 
 <h3 id="elements">요소(element)</h3>
@@ -1190,28 +1190,28 @@
   <code>tabindex</code> 속성(attribute)은 모든 요소(element)를
   <a lt="interactive content">대화형(interactive) 콘텐트</a>로 만들 수 있습니다.
 
-<h6 id="sec-palpable-content">Palpable content</h6>
+<h6 id="sec-palpable-content">분명한(palpable) 콘텐트</h6>
 
-  As a general rule, elements whose content model allows any <a>flow content</a> or
-  <a>phrasing content</a> should have at least one node in its <a lt='html-contents'>contents</a> that is
-  <a>palpable content</a> and that does not have the <code>hidden</code> attribute specified.
+  일반적인 규칙으로, 콘텐트 모델이 <a lt="flow content">흐름(flow) 콘텐트</a>나 
+  <a lt="phrasing content">어구(phrasing) 콘텐트</a>를 허용하는 요소(element)는 
+  <a lt="palpable content">분명한(palpable) 콘텐트</a>이고 명시된 <code>hidden</code> 속성(attribute)을
+  가지지 않는 그것의 <a lt='html-contents'>contents</a>에 적어도 하나의 노드를 가져야(should) 합니다.
 
   <p class="note">
-    <dfn lt="palpable content">Palpable content</dfn> makes an element non-empty by providing either some descendant non-empty
-    <a>text</a>, or else something users can hear (<{audio}> elements) or view
-    (<{video}> or <{img}> or <{canvas}> elements) or otherwise interact
-    with (for example, interactive form controls).
+    <dfn lt="palpable content">분명한(palpable) 콘텐트</dfn>는 일부 비어 있지 않은 후손 <a lt="text">텍스트</a>를
+    제공하거나, 사용자가 들을 수 있거나(<{audio}> 요소(element)들) 볼 수 있거나 (<{video}> 나 <{img}>
+    혹은 <{canvas}> 요소(element)들) 혹은 상호 작용 할 수 있는 (예를 들어, 대화형 양식(form) 컨트롤들)
+    것을 제공하여 요소를 비어 있지 않게 만듭니다.
   </p>
 
-  This requirement is not a hard requirement, however, as there are many cases where an element can
-  be empty legitimately, for example when it is used as a placeholder which will later be filled in
-  by a script, or when the element is part of a template and would on most pages be filled in but on
-  some pages is not relevant.
+  하지만, 요소가 타당하게 비어 있을 수 있는 많은 경우, 예를 들어 스크립트에 의해 나중에 채워질
+  플레이스홀더로 사용되거나, 요소가 템플릿의 일부이고 일부 페이지에서는 아니지만 대다수 페이지에서
+  채워지는 경우가 있기 때문에 이 요구사항은 견고한 요구 사항이 아닙니다.
 
-  Conformance checkers are encouraged to provide a mechanism for authors to find elements that fail
-  to fulfill this requirement, as an authoring aid.
+  적합성 검사기는 작성 보조 도구로서, 작성자에게 이 요구 사항을 충족하는데 실패한 요소(element)들을
+  찾기 위한 메커니즘을 제공하도록 권장됩니다.
 
-  The following elements are palpable content:
+  다음 요소(element)들은 분명한(palpable) 콘텐트입니다:
 
   <ul class="brief category-list">
     <li><{a}></li>
@@ -1219,7 +1219,7 @@
     <li><{address}></li>
     <li><{article}></li>
     <li><{aside}></li>
-    <li><{audio}> (if the <code>controls</code> attribute is present)</li>
+    <li><{audio}> (<code>controls</code> 속성(attribute)이 존재한다면)</li>
     <li><{b}></li>
     <li><{bdi}></li>
     <li><{bdo}></li>
@@ -1232,7 +1232,7 @@
     <li><{details}></li>
     <li><{dfn}></li>
     <li><{div}></li>
-    <li><{dl}> (if the element's children include at least one name-value group)</li>
+    <li><{dl}> (요소(element)의 자식이 적어도 하나의 이름-값 그룹을 포함한다면)</li>
     <li><{em}></li>
     <li><{embed}></li>
     <li><{fieldset}></li>
@@ -1250,8 +1250,8 @@
     <li><{iframe}></li>
     <li><{img}></li>
     <li>
-      <{input}> (if the <code>type</code> attribute is <em>not</em> in the <a element-state for="input">Hidden</a>
-      state)
+      <{input}> (<code>type</code> 속성(attribute)이 <a element-state for="input" lt="Hidden">숨김</a> 상태에
+      있지 <em>않는</em>다면)
     </li>
     <li><{ins}></li>
     <li><{kbd}></li>
@@ -1265,7 +1265,7 @@
     <li><{nav}></li>
     <li><{object}></li>
     <li>
-      <{ol}> (if the element's children include at least one <{li}> element)
+      <{ol}> (요소(element)의 자식이 적어도 하나의 <{li}> 요소(element)를 포함한다면)
     </li>
     <li><{output}></li>
     <li><{p}></li>
@@ -1288,80 +1288,80 @@
     <li><{time}></li>
     <li><{u}></li>
     <li>
-      <{ul}> (if the element's children include at least one <{li}> element)
+      <{ul}> (요소(element)의 자식이 적어도 하나의 <{li}> 요소(element)를 포함한다면)
     </li>
     <li><{var}></li>
     <li><{video}></li>
-    <li><a>Text</a> that is not <a>inter-element whitespace</a></li>
+    <li><a lt="inter-element whitespace">요소(element) 간 여백</a>이 아닌 <a lt="Text">텍스트</a></li>
   </ul>
 
-<h6 id="sec-script-supporting-elements">Script-supporting elements</h6>
+<h6 id="sec-script-supporting-elements">스크립트 지원 요소(element)</h6>
 
-  <dfn lt="Script-supporting element|Script-supporting elements">Script-supporting elements</dfn> are those that do not <a>represent</a> anything themselves
-  (i.e., they are not rendered), but are used to support scripts, e.g., to provide functionality for
-  the user.
+  <dfn lt="Script-supporting element|Script-supporting elements">스크립트 지원 요소(element)</dfn>는
+  스스로 아무 것도 <a lt="represent">나타내지</a> 않지만(즉, 렌더링 되지 않습니다), 스크립트를 
+  지원하는데, 예를 들어 사용자를 위한 기능적 제공을 위해 사용됩니다.
 
-  The following elements are script-supporting elements:
+  다음 요소(element)들은 스크립트 지원 요소(element)들 입니다:
 
   <ul class="brief category-list">
     <li><{script}></li>
     <li><{template}></li>
   </ul>
 
-<h5 id="transparent-content-models">Transparent content models</h5>
+<h5 id="transparent-content-models">투명 콘텐트 모델</h5>
 
-  Some elements are described as <dfn>transparent</dfn>; they have "transparent" in the description
-  of their content model. The content model of a <a>transparent</a> element is derived from the
-  content model of its parent element: the elements required in the part of the content model that
-  is "transparent" are the same elements as required in the part of the content model of the parent
-  of the transparent element in which the transparent element finds itself.
+  일부 요소(element)들은 <dfn lt="transparent">투명</dfn>으로 기술됩니다; 그것들은 콘텐트 모델의 설명에
+  "투명"을 가집니다. <a lt="transparent">투명</a> 요소(element)의 콘텐트 모델은 부모 요소의 콘텐트
+  모델에서 유래됩니다: "투명"인 콘텐트 모델의 부분에 요구되는 요소(element)들은 투명 요소(element)가
+  자신을 발견하는 투명 요소(element)의 부모 요소의 콘텐트 모델의 부분에 요구되는 것과 같은
+  요소(element)입니다.
 
   <div class="example">
-    For instance, an <{ins}> element inside a <{ruby}> element cannot contain an
-    <{rt}> element, because the part of the <{ruby}> element's content model that
-    allows <{ins}> elements is the part that allows <a>phrasing content</a>, and the
-    <{rt}> element is not <a>phrasing content</a>.
+    예를 들어, <{ruby}> 요소(element) 안의 <{ins}> 요소(element)는, <{ins}> 요소(element)를 허용하는 
+    <{ruby}> 요소(element)의 콘텐트 모델의 부분은 <a lt="phrasing content">어구(phrasing) 콘텐트</a>를
+    허용하는 부분이고, <{rt}> 요소(element)는 <a lt="phrasing content">어구(phrasing) 콘텐트</a>가
+    아니기 때문에, <{rt}> 요소(element)를 포함할 수 없습니다.
   </div>
 
   <p class="note">
-    In some cases, where transparent elements are nested in each other, the process has to be
-    applied iteratively.
+    어떤 경우에, 투명 요소(element)가 서로 중첩되는 경우, 반복적으로 처리가 적용되어야(has to) 합니다.
   </p>
 
   <div class="example">
-    Consider the following markup fragment:
+    다음 마크업 코드 조각을 고려해보세요:
 
     <pre highlight="html">&lt;p>&lt;object>&lt;param>&lt;ins>&lt;map>&lt;a href="/">Apples&lt;/a>&lt;/map>&lt;/ins>&lt;/object>&lt;/p></pre>
 
-    To check whether "Apples" is allowed inside the <{a}> element, the content models are
-    examined. The <{a}> element's content model is transparent, as is the <{map}>
-    element's, as is the <{ins}> element's, as is the part of the <{object}>
-    element's in which the <{ins}> element is found. The <{object}> element is
-    found in the <{p}> element, whose content model is <a>phrasing content</a>. Thus,
-    "Apples" is allowed, as text is phrasing content.
+    "Apples"가 <{a}> 요소(element) 안에 허용되는지를 확인하기 위해, 콘텐트 모델이 검사됩니다. <{a}>
+    요소(element)의 콘텐트 모델은 투명이고, <{map}> 요소(element)의 콘텐트 모델도, <{ins}> 요소(element)의
+    콘텐트 모델도, <{ins}> 요소(element)가 발견되는 <{object}> 요소의 부분도 마찬가지입니다. <{object}>
+    요소(element)는 콘텐트 모델이 <a lt="phrasing content">어구(phrasing) 콘텐트</a>인 <{p}> 요소(element)
+    안에서 발견되어집니다. 따라서, 텍스트는 <a lt="phrasing content">어구(phrasing) 콘텐트</a>이기
+    때문에, "Apples"는 허용됩니다. 
   </div>
 
-  When a transparent element has no parent, then the part of its content model that is "transparent"
-  must instead be treated as accepting any <a>flow content</a>.
+  투명 요소(element)가 부모가 없는 경우, "transparent"인 그것의 콘텐트 모델의 부분은 대신 모든
+  <a lt="flow content">흐름(flow) 콘텐트</a>를 허용하는 것으로 취급되어야(must) 합니다.
 
-<h5 id="paragraphs">Paragraphs</h5>
+<h5 id="paragraphs">문단(paragraphs)</h5>
 
   <p class="note">
-    The term <a>paragraph</a> as defined in this section is used for more than just the definition
-    of the <{p}> element. The <a>paragraph</a> concept defined here is used to describe how
-    to interpret documents. The <{p}> element is merely one of several ways of marking up a
-    <a>paragraph</a>.
+    이 섹션에 정의된 용어 <a lt="paragraph">문단</a>은 <{p}> 요소(element)의 정의 이상으로 사용됩니다.
+    여기에 정의 된 <a lt="paragraph">문단</a> 개념은 문서를 해석하는 방법을 기술하는데 사용됩니다.
+    <{p}> 요소(element)는 <a lt="paragraph">문단</a>을 마크업하는 몇 가지 방법 중 단지 한 가지일 
+    뿐입니다.
   </p>
 
-  A <dfn lt="paragraph|paragraphs|implied paragraph|paragraphing|implied|implied paragraphs">paragraph</dfn> is typically a run of <a>phrasing content</a> that forms a block of text
-  with one or more sentences that discuss a particular topic, as in typography, but can also be used
-  for more general thematic grouping. For instance, an address is also a paragraph, as is a part of
-  a form, a byline, or a stanza in a poem.
+  <dfn lt="paragraph|paragraphs|implied paragraph|paragraphing|implied|implied paragraphs">문단</dfn>은
+  일반적으로 타이포그라피에서와 같이, 특정 주제에 관해 논하는 하나 이상의 문장들을 가진 텍스트 블럭을
+  구성하거나, 좀 더 일반적인 주제 그룹에 사용될 수 있는 <a lt="phrasing content">어구(phrasing) 콘텐트</a>의
+  연속입니다. 예를 들어, 주소도 문단이고, 시(詩)의 양식의 일부나, 필자 이름을 적은 행, 혹은 연(聯)도
+  그러합니다.
 
   <div class="example">
-    In the following example, there are two paragraphs in a section. There is also a heading,
-    which contains phrasing content that is not a paragraph. Note how the comments and
-    <a>inter-element whitespace</a> do not form paragraphs.
+    다음 예제에서, 섹션에 두 개의 문단이 존재합니다. 문단이 아닌 어구(phrasing) 콘텐트를 포함하는 
+    제목(heading)도 존재합니다. 주석과 <a lt="inter-element whitespace">요소(element) 간 여백</a>이 
+    문단을 구성하지 않는 방식에 주목하세요.
 
     <pre highlight="html">
       &lt;section>
@@ -1373,23 +1373,22 @@
     </pre>
   </div>
 
-  Paragraphs in <a>flow content</a> are defined relative to what the document looks like without the
-  <{a}>, <{ins}>, <{del}>, and <{map}> elements complicating
-  matters, since those elements, with their hybrid content models, can straddle paragraph
-  boundaries, as shown in the first two examples below.
+  <a lt="flow content">흐름(flow) 콘텐트</a> 안의 문단은 문서가 문제를 복잡하게 만드는 <{a}>, <{ins}>,
+  <{del}>, <{map}> 요소(element)들은 그들의 혼합 콘텐트 모델을 가지고 아래 처음 두 예제에서 보이는 
+  것과 같이 문단 경계를 모호하게 할 수 있기 때문에, 이 요소(element)들이 없는 것 같이 보이는 것에
+  관련하여 정의됩니다.
 
   <p class="note">
-    Generally, having elements straddle paragraph boundaries is best avoided. Maintaining such
-    markup can be difficult.
+    일반적으로, 문단 경계를 모호하게 하는 요소(element)를 가지는 것을 방지하는 것이 가장 좋습니다. 
+    그러한 마크업을 유지보수 하는 것은 어렵게 만들 수 있습니다.
   </p>
 
   <div class="example">
-    The following example takes the markup from the earlier example and puts <{ins}> and
-    <{del}> elements around some of the markup to show that the text was changed (though in
-    this case, the changes admittedly don't make much sense). Notice how this example has exactly
-    the same paragraphs as the previous one, despite the <{ins}> and <{del}>
-    elements &mdash; the <{ins}> element straddles the heading and the first paragraph, and
-    the <{del}> element straddles the boundary between the two paragraphs.
+    다음 예제는 이전 예제에서 마크업을 가져와서 텍스트가 변경되었음을 나타내기 위해 (이 경우에서 
+    이기는 하지만, 변경 사항은 확실히 말이 안 되기는 합니다) 일부 마크업 주변에 <{ins}>와 <{del}>
+    요소(element)를 넣습니다. 이 예제가 <{ins}>과 <{del}> 요소(element)에도 불구하고, 이전의 것과
+    정확히 동일한 문단을 가지는 방식에 주목하세요 &mdash; <{ins}> 요소(element)는 제목(heading)과
+    첫 번째 문단을 모호하게 하고, <{del}> 요소(element)는 두 문단 사이 경계를 모호하게 합니다.
 
     <pre highlight="html">
       &lt;section>
@@ -1402,34 +1401,33 @@
   </div>
 
   <div class="impl">
-    Let <var>view</var> be a view of the DOM that replaces all <{a}>, <{ins}>,
-    <{del}>, and <{map}> elements in the document with their
-    <a lt='html-contents'>contents</a>. Then, in <var>view</var>, for each run of sibling <a>phrasing content</a>
-    nodes uninterrupted by other types of content, in an element that accepts content other than
-    <a>phrasing content</a> as well as <a>phrasing content</a>, let <var>first</var> be the first
-    node of the run, and let <var>last</var> be the last node of the run. For each such run that
-    consists of at least one node that is neither <a>embedded content</a> nor
-    <a>inter-element whitespace</a>, a paragraph exists in the original DOM from immediately before
-    <var>first</var> to immediately after <var>last</var>. (Paragraphs can thus span across
-    <{a}>, <{ins}>, <{del}>, and <{map}> elements.)
+    <var>view</var>를 문서의 모든 <{a}>, <{ins}>, <{del}>, <{map}> 요소(element)를 그들의 
+    <a lt='html-contents'>콘텐츠</a>로 바꾸는 DOM의 뷰로 둡니다. 그 후, <var>view</var>에서, 콘텐트의
+    다른 유형에 의해 연속 된 각 일련의 <a lt="phrasing content">어구(phrasing) 콘텐트</a> 형제 노드에
+    대해, <a lt="phrasing content">어구(phrasing) 콘텐트</a> 뿐 아니라 <a lt="phrasing content">어구(phrasing) 콘텐트</a>
+    외 다른 콘텐트를 허용하는 요소(element) 내에서, <var>first</var>를 연속의 첫 번째 노드로 두고,
+    <var>last</var>를 연속의 마지막 노드로 둡니다. <a lt="embedded content">삽입(embedded) 콘텐트</a>나
+    <a lt="inter-element whitespace">요소(element) 간 여백</a>이 아닌 적어도 하나의 노드로 구성되는 
+    그 각 연속에 대해, 문단은 <var>first</var> 바로 전부터 <var>last</var> 바로 이후까지 본래의 DOM에
+    존재합니다. (따라서 문단은 <{a}>, <{ins}>, <{del}>, <{map}> 요소(element)들 전반에 걸쳐질 수 
+    있습니다.)
 
-    Conformance checkers may warn authors of cases where they have paragraphs that overlap each
-    other (this can happen with <{object}>, <{video}>, <{audio}>, and
-    <{canvas}> elements, and indirectly through elements in other namespaces that allow
-    HTML to be further embedded therein, like <{svg}> or <{math}>).
+    적합성 검사기는 서로 겹치는 문단을 가지는 경우의 작성자에게 경고할 수 있습니다 (이것은 <{object}>,
+    <{video}>, <{audio}>, <{canvas}> 요소(element))들에 발생될 수 있고, HTML 안에 추가적으로 삽입되는
+    것을 허용하는 다른 네임스페이스에 있는 요소(element)들을, <{svg}> <{math}> 같은, 통해 간접적으로
+    발생될 수 있습니다).
   </div>
 
-  A <a>paragraph</a> is also formed explicitly by <{p}> elements.
+  <a lt="paragraph">문단</a>은 또한 명식적으로 <{p}> 요소(element)에 의해 구성 될 수 있습니다.
 
   <p class="note">
-    The <{p}> element can be used to wrap individual paragraphs when there would otherwise
-    not be any content other than phrasing content to separate the paragraphs from each other.
+    <{p}> 요소(element)는 서로 문단을 구분하기 위한 어구(phrasing) 콘텐트외 다른 어떤 콘텐트도
+    존재하지 않을 경우 각각의 문단을 감싸는데 사용 될 수 있습니다.
   </p>
 
   <div class="example">
-    In the following example, the link spans half of the first paragraph, all of the heading
-    separating the two paragraphs, and half of the second paragraph. It straddles the paragraphs and
-    the heading.
+    다음 예제에서, 링크가 첫 번째 문단의 반, 두 번째 문단을 구분하는 제목(heading) 전부, 두 번째 
+    문단의 반에 걸쳐 있습니다. 이는 문단과 헤딩을 모호하게 합니다.
 
     <pre highlight="html">
       &lt;header>
@@ -1443,8 +1441,8 @@
       &lt;/header>
     </pre>
 
-    Here is another way of marking this up, this time showing the paragraphs explicitly, and
-    splitting the one link element into three:
+    여기, 이번에는 명시적으로 문단을 보여주고, 한 개 링크 요소(element)를 세개로 분할하여 이를
+    마크업하는 다른 방법이 있습니다:
 
     <pre highlight="html">
       &lt;header>
@@ -1458,8 +1456,8 @@
   </div>
 
   <div class="example">
-    It is possible for paragraphs to overlap when using certain elements that define fallback
-    content. For example, in the following section:
+    폴백 콘텐트를 정의하는 특정 요소(element)를 사용하는 경우 문단이 중첩되는 것이 가능합니다. 예를 
+    들어, 다음 섹션에서:
 
     <pre highlight="html">
       &lt;section>
@@ -1477,22 +1475,21 @@
       &lt;/section>
     </pre>
 
-    There are five paragraphs:
+    다섯 개의 문단이 있습니다:
 
-    1. The paragraph that says "You can play with my cat simulator. <i>object</i> I'm quite proud of
-        it.", where <i>object</i> is the <{object}> element.
-    2. The paragraph that says "To see the cat simulator, use one of the following links:".
-    3. The paragraph that says "Download simulator file".
-    4. The paragraph that says "Use online simulator".
-    5. The paragraph that says "Alternatively, upgrade to the Mellblom Browser.".
+    1. <i>object</i>가 <{object}> 요소(element)인 "You can play with my cat simulator. <i>object</i> I'm quite proud of
+        it." 라고 말하는 문단.
+    2. "To see the cat simulator, use one of the following links:" 라고 말하는 문단.
+    3. "Download simulator file" 라고 말하는 문단.
+    4. "Use online simulator" 라고 말하는 문단.
+    5. "Alternatively, upgrade to the Mellblom Browser." 라고 말하는 문단.
 
-    The first paragraph is overlapped by the other four. A user agent that supports the "cats.sim"
-    resource will only show the first one, but a user agent that shows the fallback will confusingly
-    show the first sentence of the first paragraph as if it was in the same paragraph as the second
-    one, and will show the last paragraph as if it was at the start of the second sentence of the
-    first paragraph.
+    첫 번째 문단은 다른 네 개의 문단에 의해 중첩됩니다. "cats.sim" 리소스를 지원하는 유저 에이전트는
+    첫 번째 문단만을 보여줄 것이지만, 폴백 컨텐트를 보여주는 유저 에이전트는 혼란스럽게 첫 번째 
+    문단의 첫 번째 문장을 두 번째 문장으로서 동일한 문단에 있었던 것 처럼 보여줄 것이고, 마지막
+    문단을 첫 번째 문단의 두 번째 문장의 시작에 있었던 것 처럼 보여줄 것입니다.
 
-    To avoid this confusion, explicit <{p}> elements can be used. For example:
+    이 혼란을 방지하기 위해, 명시적인 <{p}> 요소(element)가 사용될 수 있습니다. 예를 들어:
 
     <pre highlight="html">
       &lt;section>
@@ -1512,10 +1509,10 @@
   </div>
 
 
-<h4 id="sec-global-attributes"><dfn>Global attributes</dfn></h4>
+<h4 id="sec-global-attributes"><dfn lt="Global attributes">범용 속성(attribute)</dfn></h4>
 
-  The following attributes are common to and may be specified on all <a>html elements</a>
-  <span class="impl"> (even those not defined in this specification)</span>:
+  다음 속성(attribute)들은 모든 <a lt="html elements">HTML 요소(element)들</a>에 정의될 수 있습니다 
+  <span class="impl"> (심지어 이 명세에 정의되어 있지 않더라도)</span>:
 
   * <{global/accesskey}>
   * <code>class</code>
@@ -1534,16 +1531,17 @@
   * <code>translate</code>
 
   <div class="impl">
-  These attributes are only defined by this specification as attributes for <a>HTML elements</a>. When this specification refers to elements having these attributes, elements from
-  namespaces that are not defined as having these attributes must not be considered as being
-  elements with these attributes.
+  이 속성(attribute)들은 <a lt="HTML elements">HTML 요소(element)들</a>에 대한 속성(attribute)들로서
+  이 명세에 의해서만 정의됩니다. 이 명세가 이 속성(attribute)들을 가지는 요소(element)에 참조하는 
+  경우, 이 속성(attribute)들을 가지는 것으로 정의되지 않은 네임스페이스의 요소(element)들은 이
+  속성(attribute)들을 가진 요소(element)들이 되는 것으로 간주되지 않아야(must) 합니다.
 
   <div class="example">
-    For example, in the following XML fragment, the "<code>bogus</code>" element does not have a
-    <{global/dir}> attribute as defined in this specification, despite having an attribute with
-    the literal name "<{global/dir}>". Thus, <a>the directionality</a> of the inner-most
-    <{span}> element is &quot;<a attr-value for="global/dir"><code>rtl</code></a>&quot;, inherited from the <{div}> element
-    indirectly through the "<code>bogus</code>" element.
+    예를 들어, 다음 XML 코드 조각에서, "<code>bogus</code>" 요소(element)는 리터럴 이름 
+    "<{global/dir}>"을 가진 속성(attribute)을 가짐에도 불구하고, 이 명세에 정의된 대로 <{global/dir}>
+    속성(attribute)을 가지지 않습니다. 따라서, 가장 안쪽 <{span}> 요소(element)의 <a lt="the directionality">방향성</a>은
+    간접적으로 "<code>bogus</code>" 요소(element)를 통해 <{div}> 요소(element)로부터 상속 된, 
+    &quot;<a attr-value for="global/dir"><code>rtl</code></a>&quot;입니다.
 
     <pre class="bad">
       &lt;div xmlns="https://www.w3.org/1999/xhtml" dir="rtl">
@@ -1559,14 +1557,14 @@
 
   <hr />
 
-  To enable assistive technology products to expose a more fine-grained interface than is otherwise
-  possible with HTML elements and attributes, a set of
-  annotations for assistive technology products can be specified (the ARIA <code>role</code>
-  and <code>aria-*</code> attributes). [[!WAI-ARIA]]
+  보조 기술 제품이 HTML 요소(element)와 속성(attribute)으로 가능한 것보다 좀 더 세밀한 인터페이스를 
+  노출할 수 있게 하기 위해, 보조 기술 제품을 위한 주석(annotation)의 세트가 명시될 수 있습니다 (ARIA 
+  <code>role</code>과 <code>aria-*</code> 속성(attribute)들). [[!WAI-ARIA]]
 
   <hr />
 
-  The following <a>event handler content attributes</a> may be specified on any <a>HTML element</a>:
+  다음 <a lt="event handler content attributes">이벤트 처리기 콘텐트 속성(attribute)들</a>은 모든
+  <a lt="HTML element">HTML 요소(element)</a>에 명시될 수 있습니다:
 
   * <code>onabort</code>
   * <code>onblur</code>*
@@ -1633,50 +1631,53 @@
   * <code>onwaiting</code>
 
   <p class="note">
-    The attributes marked with an asterisk have a different meaning when specified on
-    <{body}> elements as those elements expose <a>event handlers</a> of the
-    <code>Window</code> object with the same names.
+    별표로 표기 된 속성(attribute)들은 <{body}> 요소(element)들에 명시되었을 경우 그 요소(element)들이
+    동일한 이름을 가지고 <code>Window</code> 객체의 <a lt="event handlers">이벤트 처리기</a>를 노출하기
+    때문에 다른 의미를 가집니다.
   </p>
 
   <p class="note">
-    While these attributes apply to all elements, they are not useful on all elements. For example,
-    only <a>media elements</a> will ever receive a
-    <a event for="media"><code>volumechange</code></a> event fired by the user agent.
-  </p>
-
-  <hr />
-
-  <a>Custom data attributes</a> (e.g., <code>data-foldername</code> or <code>data-msgid</code>) can
-  be specified on any <a>HTML element</a>, to store custom data specific to the page.
-
-  <hr />
-
-  In <a>HTML documents</a>, elements in the <a>HTML namespace</a> may have an <code>xmlns</code>
-  attribute specified, if, and only if, it has the exact value
-  "<code>https://www.w3.org/1999/xhtml</code>". This does not apply to <a>XML documents</a>.
-
-  <p class="note">
-    In HTML, the <code>xmlns</code> attribute has absolutely no effect. It is basically a talisman.
-    It is allowed merely to make migration to and from XHTML mildly easier. When parsed by an
-    <a>HTML parser</a>, the attribute ends up in no namespace, not the
-    "<code>https://www.w3.org/2000/xmlns/</code>" namespace like namespace declaration attributes in
-    XML do.
-  </p>
-
-  <p class="note">
-    In XML, an <code>xmlns</code> attribute is part of the namespace declaration mechanism, and an
-    element cannot actually have an <code>xmlns</code> attribute in no namespace specified.
+    이 속성(attribute)들이 모든 요소(element)들에 적용되는데 반해, 그것들이 모든 요소(element)에 
+    쓸모있는 것은 아닙니다. 예를 들어 <a lt="media elements">미디어 요소(element)들</a>만이 유저 
+    에이전트에 의해 발생된 <a event for="media"><code>volumechange</code></a> 이벤트를 받을 것입니다. 
   </p>
 
   <hr />
 
-  The XML specification also allows the use of the <code>xml:space</code> attribute in the
-  <a>XML namespace</a> on any element in an <a>XML document</a>. This attribute has no effect on
-  <a>html elements</a>, as the default behavior in HTML is to preserve whitespace. [[!XML]]
+  <a lt="Custom data attributes">커스텀 데이터 속성(attribute)들</a>은 (예를 들어, 
+  <code>data-foldername</code>나 <code>data-msgid</code>) 모든 <a lt="HTML element">HTML 요소(element)</a>에
+  페이지에 특수한 커스텀 데이터를 저장하기 위해 명시 될 수 있습니다.
+
+  <hr />
+
+  <a lt="HTML documents">HTML 문서들</a>에, <a lt="HTML namespace">HTML 네임스페이스</a> 안에 있는
+  요소(element)들은 명시된 <code>xmlns</code> 속성(attribute)을 가질 수 있고, 이 속성(attribute)을 
+  가진 경우에만, 정확한 값 "<code>https://www.w3.org/1999/xhtml</code>"을 가집니다. 이것은
+  <a lt="XML documents">XML 문서들</a>에는 적용되지 않습니다.
 
   <p class="note">
-    There is no way to serialize the <code>xml:space</code> attribute on <a>html elements</a> in the
-    <a href="#text-html"><code>text/html</code></a> syntax.
+    HTML에서, <code>xmlns</code> 속성(attribute)은 전혀 영향을 가지지 않습니다. 이것은 기본적으로 
+    마스코트 같은 것 입니다. 단지 XHTML로 그리고 XHTML로부터 약간 쉽게 마이그레이션 할 수 있도록 
+    허용된 것입니다. <a lt="HTML parser">HTML 해석기</a>에 의해 해석된 경우, 속성(attribute)은
+    XML에서 네임스페이스 선언 속성(attribute)과 같은 "<code>https://www.w3.org/2000/xmlns/</code>"
+    네임스페이스가 아닌, 어떤 네임스페이스에도 없게 됩니다.
+  </p>
+
+  <p class="note">
+    XML에서, <code>xmlns</code> 속성(attribute)은 네임스페이스 선언 메커니즘의 일부이고, 요소(element)는
+    실제로 명시된 네임스페이스가 없는 <code>xmlns</code> 속성(attribute)을 가질 수 없습니다.
+  </p>
+
+  <hr />
+
+  XML 명세는 또한 <a lt="XML document">XML 문서</a>에 있는 모든 요소에 <a lt="XML namespace">XML 네임스페이스</a>에
+  있는 <code>xml:space</code> 속성(attribute)의 사용을 허용합니다. 이 속성(attribute)은 HTML에서 기본
+  동작이 여백을 유지하는 것이기 때문에, <a lt="html elements">HTML 요소(element)들</a>에 어떤 영향도 
+  가지지 않습니다. [[!XML]]
+
+  <p class="note">
+    <a href="#text-html"><code>text/html</code></a> 문법에서 <a lt="html elements">HTML 요소(element)들</a>에
+    <code>xml:space</code> 속성(attribute)을 직렬화 하는 방법은 없습니다.
   </p>
 
 <h5 id="the-id-attribute">The <dfn element-attr for="global"><code>id</code></dfn> attribute</h5>
