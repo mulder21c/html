@@ -1,41 +1,42 @@
 <section>
 
-<h3 id="document-metadata">Document metadata</h3>
+<h3 id="document-metadata">문서 메타데이터</h3>
 
-<h4 id="the-head-element">The <dfn element><code>head</code></dfn> element</h4>
+<h4 id="the-head-element"><dfn element><code>head</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd>None.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>As the first element in an <{html}> element.</dd>
-    <dt><a>Content model</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd>없음.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><{html}> 요소(element) 내 첫 번째 요소(element).</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
     <dd>
-      If the document is <a lt="iframe srcdoc document">an <code>iframe</code> <code>srcdoc</code> document</a> or if title
-      information is available from a higher-level protocol: Zero or more elements of
-      <a>metadata content</a>, of which no more than one is a <a element for="html"><code>title</code></a> element and no more
-      than one is a <{base}> element.
+      문서가 <a lt="iframe srcdoc document"><code>iframe</code> <code>srcdoc</code> 문서</a>이거나 
+      제목(title) 정보가 상위 프로토콜에서 사용 가능하다면: <a element for="html"><code>title</code></a> 
+      요소(element)가 한 개를 초과하지 않고 <{base}> 요소(element)가 한 개를 초과하지 않는, 
+      <a lt="metadata content">메타데이터 콘텐트</a>의 0개 이상의 요소(element).
     </dd>
     <dd>
-      Otherwise: One or more elements of <a>metadata content</a>, of which exactly one is a
-      <a element for="html"><code>title</code></a> element and no more than one is a <{base}> element.
+      그렇지 않으면: 정확히 하나가 <a element for="html"><code>title</code></a> 요소(element)와
+      <{base}> 요소(element)가 한 개를 초과하지 않는, <a lt="metadata content">메타데이터 콘텐트</a>의 
+      한 개 이상의 요소(element).
     </dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
     <dd>
-      A <{head}> element's <a>start tag</a> may be omitted if the element is empty, or if
-      the first thing inside the <{head}> element is an element.
+      <{head}> 요소(element)의 <a lt="start tag">시작 태그</a>는 요소(element)가 비어있거나 <{head}>
+      요소(element) 내의 첫 번째 것이 요소(element)라면 생략될 수 있습니다.
     </dd>
     <dd>
-      A <{head}> element's <a>end tag</a> may be omitted if the <{head}> element
-      is not immediately followed by a <a>space character</a> or a <a>comment</a>.
+      <{head}> 요소(element)의 <a lt="end tag">종료 태그</a>는 <{head}> 요소(element)에 <a lt="space character">공백 문자</a>나
+      <a lt="comment">주석</a>이 즉시 따르지 않는다면 생략될 수 있습니다.
     </dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd>None</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd>없음</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLHeadElement">
         interface HTMLHeadElement : HTMLElement {};
@@ -43,11 +44,11 @@
     </dd>
   </dl>
 
-  The <{head}> element <a>represents</a> a collection of metadata for the {{Document}}.
+  <{head}> 요소(element)는 {{Document}}에 대한 메타데이터의 컬렉션을 <a lt="represents">나타냅니다</a>.
 
   <div class="example">
-    The collection of metadata in a <{head}> element can be large or small. Here is an
-    example of a very short one:
+    <{head}> 요소(element) 내 메타데이터의 컬렉션은 많거나 적을 수 있습니다. 여기 매우 짧은 것의 
+    예가 있습니다:
 
     <pre highlight="html">
       &lt;!doctype html>
@@ -59,7 +60,7 @@
           ...
     </pre>
 
-    Here is an example of a longer one:
+    여기 긴 것의 예가 있습니다:
 
     <pre highlight="html">
       &lt;!DOCTYPE HTML>
@@ -79,35 +80,36 @@
   </div>
 
   <p class="note">
-    The <a element for="html"><code>title</code></a> element is a required child in most situations, but when a higher-level
-    protocol provides title information, e.g., in the Subject line of an e-mail when HTML is used as
-    an e-mail authoring format, the <a element for="html"><code>title</code></a> element can be omitted.
+    <a element for="html"><code>title</code></a> 요소(element)는 대부분 상황에서 요구된 자식이지만, 
+    상위 레벨 프로토콜이 제목(title) 정보를 제공하는 경우, 예를 들어 HTML이 이메일 작성 서식으로 
+    사용되는 경우 이메일의 제목 줄에, <a element for="html"><code>title</code></a> 요소(element)는
+    생략 될 수 있습니다.
   </p>
 
   <p class="note">
-    It is recommended to keep the usage of attributes and their values defined on the <{head}>
-    element to a minimum to allow for proper detection of the <a>character encoding declaration</a>
-    within the first 1024 bytes.
+    처음 1024바이트 내에서 <a lt="character encoding declaration">문자 인코딩 선언</a>의 적절한 감지를
+    허용하기 위해 <{head}> 요소(element)에 정의된 속성(attribute)들과 그 값들의 사용을 최소한으로
+    유지하는 것이 권장됩니다.
   </p>
 
-<h4 id="the-title-element">The <dfn element><code>title</code></dfn> element</h4>
+<h4 id="the-title-element"><dfn element><code>title</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Metadata content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>In a <{head}> element containing no other <a element for="html"><code>title</code></a> elements.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Text</a> that is not <a>inter-element whitespace</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible.</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd>None</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="Metadata content">메타데이터 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd>다른 <a element for="html"><code>title</code></a> 요소(element)를 포함하지 않는 <{head}>요소(element) 안.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="inter-element whitespace">요소(element) 간 여백</a>이 아닌 <a lt="Text">텍스트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd>없음</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a></a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-hightlight="webidl" dfn-for="HTMLTitleElement">
         interface HTMLTitleElement : HTMLElement {
@@ -117,38 +119,40 @@
     </dd>
   </dl>
 
-  The <a element for="html"><code>title</code></a> element <a>represents</a> the document's title or name. Authors should use
-  titles that identify their documents even when they are used out of context, for example in a
-  user's history or bookmarks, or in search results. The document's title is often different from
-  its first heading, since the first heading does not have to stand alone when taken out of context.
+  <a element for="html"><code>title</code></a> 요소(element)는 문서의 제목(title)이나 이름을 
+  <a lt="represents">나타냅니다</a>. 작성자는 문서가 문맥 밖에서, 예를 들어 사용자의 방문 기록이나 
+  북마크에 혹은 검색 결과에 사용될 때 조차도 문서를 알아보게 하는 제목을 사용해야(should) 합니다. 
+  문서의 첫 번째 제목(heading)은 문맥에서 벗어날 경우 혼자 있을 필요가 없기 때문에, 문서의 제목(title)은
+  종종 문서의 첫 번째 제목(heading)과 다릅니다.
 
-  There must be no more than one <a element for="html"><code>title</code></a> element per document.
+  문서 당 하나의 <a element for="html"><code>title</code></a> 요소(element)만 있어야(must) 합니다.
 
   <p class="note">
-    If it's reasonable for the {{Document}} to have no title, then the <code>title</code>
-    element is probably not required. See the <{head}> element's content model for a
-    description of when the element is required.
+    {{Document}}가 제목을 가지 않는 것이 타당하다면, <code>title</code> 요소(element)는 아마도 요구 
+    되지 않습니다. 요소(element)가 요구되는 경우의 설명에 대한 <{head}> 요소(element)의 콘텐트 모델을 
+    참고하세요.
   </p>
 
   <dl class="domintro">
     <dt><var>title</var> . <code>text</code> [ = <var>value</var> ]</dt>
     <dd>
-      Returns the contents of the element, ignoring child nodes that aren't <code>Text</code> nodes.
+      <code>Text</code> 노드가 아닌 자식 노드들을 무시하여, 요소(element)의 콘텐트를 반환합니다.
 
-      Can be set, to replace the element's children with the given value.
+      주어진 값으로 요소(element)의 자식을 바꾸기 위해, 설정 될 수 있습니다.
     </dd>
   </dl>
 
   <div class="impl">
-    The IDL attribute <dfn attribute for="HTMLTitleElement"><code>text</code></dfn> must return a concatenation of the contents of
-    all the <code>Text</code> nodes that are children of the <a element for="html"><code>title</code></a> element (ignoring
-    any other nodes such as comments or elements), in <a>tree order</a>. On setting, it must act the
-    same way as the {{Node/textContent}} IDL attribute.
+    IDL 속성(attribute) <dfn attribute for="HTMLTitleElement"><code>text</code></dfn>는 
+    <a lt="tree order">트리 순서</a>에 따라 <a element for="html"><code>title</code></a> 요소(element)의 
+    자식인 (주석이나 요소(element) 같은 다른 노드들은 무시하여) 모든 <code>Text</code> 노드의 콘텐트의 
+    연결을 반환해야(must) 합니다. 설정할 때, {{Node/textContent}} IDL 속성(attribute)과 동일한 
+    방법으로 동작해야(must) 합니다.
   </div>
 
   <div class="example">
-    Here are some examples of appropriate titles, contrasted with the top-level headings that
-    might be used on those same pages.
+    여기 최상위 동일한 페이지에 사용될 수 있는 제목(heading)과 대조되는 적절한 제목의 몇 가지 예가 
+    있습니다.
 
     <pre highlight="html">
       &lt;title>Introduction to The Mating Rituals of Bees&lt;/title>
@@ -158,9 +162,9 @@
       &lt;cite>Introduction to Medieval Bee-Keeping&lt;/cite> book is...
     </pre>
 
-    The next page might be a part of the same site. Note how the title describes the subject matter
-    unambiguously, while the first heading assumes the reader knows what the context is and
-    therefore won't wonder if the dances are Salsa or Waltz:
+    다음 페이지는 동일한 사이트의 일부입니다. 첫 번째 제목(heading)이 독자가 문맥이 무엇인지 알고
+    따라서 춤이 살사인지 알츠인지 궁금해하지 않는다고 가정하면서 제목(title)이 주제를 분명하게 
+    설명하는 방법에 주목하세요:
 
     <pre highlight="html">
       &lt;title>Dances used during bee mating rituals&lt;/title>
@@ -169,39 +173,39 @@
     </pre>
   </div>
 
-  The string to use as the document's title is given by the <code>document.title</code> IDL
-  attribute.
+  문서의 제목(title)로 사용하기 위한 문자열은 <code>document.title</code> IDL 속성(attribute)에 의해
+  주어집니다.
 
   <div class="impl">
-    User agents should use the document's title when referring to the document in their user
-    interface. When the contents of a <a element for="html"><code>title</code></a> element are used in this way,
-    <a>the directionality</a> of that <a element for="html"><code>title</code></a> element should be used to set the
-    directionality of the document's title in the user interface.
+    유저 에이전트는 유저 인터페이스에서 문서로 참조할 때 문서의 제목(title)을 사용해야(should) 합니다.
+    <a element for="html"><code>title</code></a> 요소(element)의 콘텐트가 이 방법으로 사용되는 경우,
+    그 <a element for="html"><code>title</code></a> 요소(element)의 <a lt="the directionality">방향성</a>은
+    유저 인터페이스에서 문서의 제목(title)의 방향성을 설정하는데 사용되어야(should) 합니다.
   </div>
 
-<h4 id="the-base-element">The <dfn element><code>base</code></dfn> element</h4>
+<h4 id="the-base-element"><dfn element><code>base</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Metadata content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>In a <{head}> element containing no other <{base}> elements.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Nothing</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>No end tag.</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>href</code> — <a>Document base URL</a></dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="Metadata content">메타데이터 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd>다른 <{base}> 요소(element)들을 포함하지 않는 <{head}> 요소(element) 안.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Nothing">없음</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd><a lt="end tag">종료 태그</a> 없음.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>href</code> — <a lt="Document base URL">문서 기본 URL</a></dd>
     <dd>
-      <code>target</code> — Default <a>browsing context</a> for <a>hyperlink</a> <a>navigation</a>
-      and [[#forms-form-submission]]
+      <code>target</code> — <a lt="hyperlink">하이퍼링크</a> <a lt="navigation">탐색(navigation)</a>과 
+      [[#forms-form-submission]]에 대한 기본 <a lt="browsing context">브라우징 컨텍스트</a>
     </dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd>None</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd>없음</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a>.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLBaseElement">
         interface HTMLBaseElement : HTMLElement {
@@ -212,89 +216,100 @@
     </dd>
   </dl>
 
-  The <{base}> element allows authors to specify the <a>document base URL</a> for the
-  purposes of <a>parsing relative URLs</a>, and the name of the default <a>browsing context</a>
-  for the purposes of <a>following hyperlinks</a>. The element does not <a>represent</a> any content
-  beyond this information.
+  <{base}> 요소(element)는 작성자가 <a lt="parsing relative URLs">상대 URL들 해석</a>의 목적에 대한
+  <a lt="document base URL">문서 기본 URL</a>과 <a lt="following hyperlinks">하이퍼링크들을 따라가는 것</a>의
+  목적에 대한 기본 <a lt="browsing context">브라우징 컨텍스트</a>의 이름을 명시하는 것을 허용합니다.
+  요소(element)는 이 정보를 넘어 어떤 컨텐트도 <a lt="represent">나타내지</a> 않습니다.
 
-  There must be no more than one <{base}> element per document.
+  문서 당 하나의 <{base}> 요소(element)만 있어야(must) 합니다.
 
-  A <{base}> element must have either an <{base/href}> attribute, a <code>target</code>
-  attribute, or both.
+  <{base}> 요소(element)는 <{base/href}> 속성(attribute)이나 <code>target</code> 속성(attribute), 
+  혹은 둘 모두를 가져야(must) 합니다.
 
-  The <dfn element-attr for="base"><code>href</code></dfn> content attribute, if specified, must
-  contain a <a>valid URL potentially surrounded by spaces</a>.
+  <dfn element-attr for="base"><code>href</code></dfn> 콘텐트 속성(attribute)이 명시되었다면, 이 
+  속성(attribute)은 <a lt="valid URL potentially surrounded by spaces">유효한 잠정적으로 공백으로 
+  둘러 싸일 수 있는 비어있지 않은 URL</a>을 포함해야(must) 합니다.
 
-  A <{base}> element, if it has an <{base/href}> attribute, must come before any other elements in
-  the tree that have attributes defined as taking <a for="url">URLs</a> except the <{html}> element.
+  <{base}> 요소(element)가 <{base/href}> 속성(attribute)을 가진다면 <{base}> 요소(element)는 <{html}> 
+  요소를 제외하고 <a for="url" lt="URLs">URL들</a>을 취하는 것으로 정의된 속성을 가지는 트리 내의 
+  다른 요소들(element) 앞에 와야(must) 합니다.
 
   <div class="impl">
     <p class="note">
-      If there are multiple <{base}> elements with <{base/href}> attributes, all but
-      the first are ignored.
+      <{base/href}> 속성(attribute)들을 가진 여러 개의 <{base}> 요소(element)들이 있다면, 첫 번째를
+      제외하고 모두 무시됩니다.
     </p>
   </div>
 
-  The <dfn element-attr for="base"><code>target</code></dfn> attribute, if specified, must contain a <a>valid browsing
-  context name or keyword</a>, which specifies which <a>browsing context</a> is to be used as the
-  default when <a>hyperlinks</a> and <a>forms</a> in the {{Document}} cause
-  <a>navigation</a>.
+  <dfn element-attr for="base"><code>target</code></dfn> 속성(attribute)가 명시되었다면, 이 속성은 
+  {{Document}}의 <a lt="hyperlinks">하이퍼링크</a>들과 <a lt="forms">양식들</a>이 
+  <a lt="navigation">탐색(navigation)</a>을 야기하는 경우 어느 
+  <a lt="browsing context">브라우징 컨텍스트</a>가 기본으로 사용되는지를 명시하는 
+  <a lt="valid browsing context name or keyword">유효한 브라우징 컨텍스트 이름이나 키워드</a>를 
+  포함해야(must) 합니다.
 
-  A <{base}> element, if it has a <code>target</code> attribute, must come before any
-  elements in the tree that represent <a>hyperlinks</a>.
+  <{base}> 요소(element)가 <code>target</code> 속성(attribute)을 가진다면 <{base}> 요소(element)는 
+  elements in the tree that represent <a lt="hyperlinks">하이퍼링크들</a>을 나타내는 트리 내 모든 
+  요소(element)들 앞에 와야(must) 합니다.
 
   <div class="impl">
     <p class="note">
-      If there are multiple <{base}> elements with <code>target</code> attributes, all but
-      the first are ignored.
+      <code>target</code> 속성(attribute)들을 가진 여러 개의 <{base}> 요소(element)들이 있다면, 첫 번째를
+      제외하고 모두 무시됩니다.
     </p>
 
-    A <{base}> element that is the first <{base}> element with an
-    <{base/href}> content attribute in a particular {{Document}} has a
-    <dfn>frozen base URL</dfn>. The <a>frozen base URL</a> must be <a>immediately</a>
-    <a lt="set the frozen base URL">set</a> for an element whenever any of the following situations
-    occur:
+    특정 {{Document}}의 <{base/href}> 콘텐트 속성(attribute)을 가진 첫 번째 <{base}> 요소(element)인
+    <{base}> 요소(element)는 <dfn lt="frozen base URL">고정(frozen) 기본 URL</dfn>을 가집니다.
+    <a lt="frozen base URL">고정(frozen) 기본 URL</a>은 다음 상황의 어떤 것이 발생될 때에든지
+    요소(element)에 대해 <a lt="immediately">즉시</a> <a lt="set the frozen base URL">설정</a>되어야(must)
+    합니다:
 
-    * The <{base}> element becomes the first <{base}> element in <a>tree order</a>
-        with an <{base/href}> content attribute in its {{Document}}.
-    * The <{base}> element is the first <{base}> element in <a>tree order</a> with
-        an <{base/href}> content attribute in its {{Document}}, and its
-        <{base/href}> content attribute is changed.
+    * <{base}> 요소(element)가 그것의 {{Document}}에 <a lt="tree order">트리 순서</a>에 따라
+        <{base/href}> 콘텐트 속성(attribute)을 가진 첫 번째 <{base}> 요소(element)가 되는 경우.
+    * <{base}> 요소(element)가 그것의 {{Document}}에 <a lt="tree order">트리 순서</a>에 따라 
+        <{base/href}> 콘텐트 속성(attribute)을 가진 첫 번째 <{base}> 요소(element)이고, 그것의
+        <{base/href}>콘텐트 속성(attribute)이 변경되는 경우.
 
-    To <dfn>set the frozen base URL</dfn>, for an element <var>element</var>:
+    요소(element) <var>element</var>에 대해, 
+	<dfn lt="set the frozen base URL">고정(frozen) 기본 URL을 설정</dfn>하기 위해:
 
-    1. Let <var>document</var> be <var>element</var>'s <a>node document</a>.
-    2. Let <var>urlRecord</var> be the result of <a>parsing</a> the value of
-        <var>element</var>'s <{base/href}> content attribute with <var>document</var>'s
-        <a>fallback base URL</a>, and <var>document</var>'s <a>character encoding</a>. (Thus the
-        <{base}> element isn't affected by itself.)
-    3. Set <var>elements</var>'s <a>frozen base URL</a> to <var>document</var>'s
-        <a>fallback base URL</a>, if <var>urlRecord</var> is failure or running
-        <a>Is base allowed for Document?</a> on the <a>resulting URL record</a> and
-        <var>document</var> returns "<code>Blocked</code>", and to <var>urlRecord</var> otherwise.
+    1. <var>document</var>를 <var>element</var>의 <a lt="node document">노드 문서</a>로 둡니다.
+    2. <var>urlRecord</var>를 <var>element</var>의 <var>document</var>의
+        <a lt="fallback base URL">폴백 기본 URL</a>과 <var>document</var>의 
+        <a lt="character encoding">문자 인코딩</a>을 가진 <{base/href}> 콘텐트 속성(attribute)의 값을 
+        <a lt="parsing">해석</a>한 결과로 둡니다. (따라서 <{base}> 요소(element)는 자신에 의해 영향을 
+        받지 않습니다.)
+    3. <var>elements</var>의 <a lt="frozen base URL">고정(frozen) 기본 URL</a>을 <var>urlRecord</var>이
+        실패하거나 <a lt="resulting URL record">결과 URL 레코드</a>에
+        <a lt="Is base allowed for Document?">기본(base)이 문서에 대해 허용되는가?</a>를 실행 중이고
+        <var>document</var>가 "<code>Blocked</code>"를 반환한다면 <var>document</var>의
+        <a lt="fallback base URL">폴백 기본 URL</a>로 설정하고, 그렇지 않으면 <var>urlRecord</var>로
+        설정합니다.
 
-    The <dfn attribute for="HTMLBaseElement"><code>href</code></dfn> IDL attribute, on getting, must
-    return the result of running the following algorithm:
+    <dfn attribute for="HTMLBaseElement"><code>href</code></dfn> IDL 속성(attribute)은 가져올 때
+    다음 알고리즘을 수행한 결과를 반환해야(must) 합니다:
 
-    1. Let <var>document</var> be <var>element</var>'s <a>node document</a>.
-    2. Let <var>url</var> be the value of the <{base/href}> attribute of the <{base}> element, if it
-        has one, and the empty string otherwise.
-    3. Let <var>urlRecord</var> be the result of <a>parsing</a> <var>url</var> with
-        <var>document</var>'s <a>fallback base url</a>, and <var>document</var>'s
-        <a>character encoding</a>. (Thus, the <{base}> element isn't affected by other <{base}>
-        elements or itself).
-    4. If <var>urlRecord</var> is failure, return <var>url</var>.
-    5. Return the <a for="url">serialization</a> of <var>urlRecord</var>.
+    1. <var>document</var>를 <var>element</var>의 <a lt="node document">노드 문서</a>로 둡니다.
+    2. <var>url</var>을 <{base}> 요소(element)의 <{base/href}> 속성(attribute)의 값을 가진다면
+        그 값으로 두고, 그렇지 않으면 빈 문자열로 둡니다.
+    3. <var>urlRecord</var>를 <var>url</var>을 <var>document</var>의 
+        <a lt="fallback base url">폴백 기본 URL</a>과 <var>document</var>의 
+        <a lt="character encoding">문자 인코딩</a>을 가지고 <a lt="parsing">해석</a>한 결과로 둡니다. 
+        (따라서, <{base}> 요소(element)는 다른 <{base}> 요소(element)나 자신에 의해서 영향을 받지 
+        않습니다.)
+    4. <var>urlRecord</var>이 실패라면, <var>url</var>을 반환합니다.
+    5. <var>urlRecord</var>의 <a for="url" lt="serialization">직렬화</a>를 반환합니다.
 
-    The {{HTMLBaseElement/href}} IDL attribute, on setting, must set the <{base/href}> content
-    attribute to the given new value.
+    {{HTMLBaseElement/href}} IDL 속성(attribute)은 설정할 때 <{base/href}> 콘텐트 속성(attribute)을 
+    주어진 새로운 값으로 설정해야(must) 합니다.
 
-    The <dfn attribute for="HTMLBaseElement"><code>target</code></dfn> IDL attribute must
-    <a>reflect</a> the content attribute of the same name.
+    <dfn attribute for="HTMLBaseElement"><code>target</code></dfn> IDL 속성(attribute)은 동일한 
+    이름의 콘텐트 속성(attribute)을 <a lt="reflect">반영</a>해야(must) 합니다.
   </div>
 
   <div class="example">
-    In this example, a <{base}> element is used to set the <a>document base URL</a>:
+    이 예제에서, <{base}> 요소(element)는 <a lt="document base URL">문서 기본 URL</a>을 설정하는데 
+    사용됩니다:
 
     <pre highlight="html">
       &lt;!DOCTYPE html>
@@ -309,43 +324,42 @@
       &lt;/html>
     </pre>
 
-    The link in the above example would be a link to
-    "<code>https://www.example.com/news/archives.html</code>".
+    위 예제에서 링크는 "<code>https://www.example.com/news/archives.html</code>"로의 링크가 될 것입니다.
   </div>
 
-<h4 id="the-link-element">The <dfn element><code>link</code></dfn> element</h4>
+<h4 id="the-link-element"><dfn element><code>link</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Metadata content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>metadata content</a> is expected.</dd>
-    <dd>In a <{noscript}> element that is a child of a <{head}> element.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Nothing</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>No <a>end tag</a>.</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>href</code> — Address of the <a>hyperlink</a></dd>
-    <dd><code>crossorigin</code> — How the element handles crossorigin requests</dd>
-    <dd><{link/rel}> — Relationship of this document (or subsection/topic) to the destination resource</dd>
-    <dd><{link/rev}> — <a>Reverse link</a> relationship of the destination resource to this document (or subsection/topic)</dd>
-    <dd><code>media</code> — Applicable media</dd>
-    <dd><code>hreflang</code> — Language of the linked resource</dd>
-    <dd><code>type</code> — Hint for the type of the referenced resource</dd>
-    <dd><code>sizes</code> — Sizes of the icons (for <{link/rel}>="<code>icon</code>")</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="Metadata content">메타데이터 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="metadata content">메타데이터 콘텐트</a>가 기대되는 곳.</dd>
+    <dd><{head}> 요소(element)의 자식인 <{noscript}> 요소(element) 내.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Nothing">없음</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd><a lt="end tag">종료 태그</a> 없음.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>href</code> — <a lt="hyperlink">하이퍼링크</a>의 주소</dd>
+    <dd><code>crossorigin</code> — 요소(element)가 교차출처(crossorigin) 요청들을 처리하는 방법</dd>
+    <dd><{link/rel}> — 이 문서 (또는 하위 섹션/주제)에서 목적지 리소스로의 관계</dd>
+    <dd><{link/rev}> — 목적지 리소스에서 이 문서 (또는 하위 섹션/주제)로의 <a lt="Reverse link">역방향 링크</a> 관계</dd>
+    <dd><code>media</code> — 적용가능한 매체</dd>
+    <dd><code>hreflang</code> — 연결된 리소스의 언어</dd>
+    <dd><code>type</code> — 참조된 리소스의 유형에 대한 힌트</dd>
+    <dd><code>sizes</code> — 아이콘의 (for <{link/rel}>="<code>icon</code>"에 대한) 크기</dd>
     <dd>
-      Also, the <{link/title}> attribute has special semantics on this element:  Title of the
-      link; alternative style sheet set name.
+      또한, <{link/title}> 속성(attribute)은 이 요소(elemnt)에 특별한 의미를 가집니다: 링크의 제목(title);
+      ; 대체 스타일 시트의 이름을 설정합니다.
     </dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a><code>link</code></a> (default - <a><em>do not set</em></a>).</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dd>For <code>role</code> value </dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a><code>link</code></a> (기본 값 - <a lt="do not set"><em>설정 하지 마세요</em></a>).</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dd><code>role</code> 값에 대한 </dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLLinkElement">
         interface HTMLLinkElement : HTMLElement {
@@ -364,89 +378,88 @@
     </dd>
   </dl>
 
-  The <{link}> element allows authors to link their document to other resources.
+  <{link}> 요소(element)는 작성자가 그들의 문서를 다른 리소스들에 연결시키는 것을 허용합니다.
 
-  The destination of the link(s) is given by the <dfn element-attr for="link"><code>href</code></dfn> attribute, which must
-  be present and must contain a <a>valid non-empty URL potentially surrounded by spaces</a>.
-  <span class="impl">If the <{link/href}> attribute is absent, then the element does not define
-  a link.</span>
+  링크(들)의 목적지는 <dfn element-attr for="link"><code>href</code></dfn> 속성(attribute)에 의해 
+  주어지고, 이 속성(attribute)는 존재해야(must) 하고 
+  <a lt="valid non-empty URL potentially surrounded by spaces">유효한 잠정적으로 공백으로 둘러 싸일 수 있는 비어있지 않은 URL</a>을 
+  포함해야(must) 합니다. <span class="impl"><{link/href}> 속성이 존재하지 않ㄴ흔다면, 요소(element)는 
+  링크를 정의하지 않습니다.</span>
 
-  A <{link}> element must have a <{link/rel}> attribute.
+  <{link}> 요소(element)는 <{link/rel}> 속성(attribute)을 가져야(must) 합니다.
 
   <p class="note">
-    If the <{link/rel}> attribute is used, the element is restricted to the <code>head</code>
-    element.
+    <{link/rel}> 속성(attribute)이 사용되었다면, 요소(element)는 <code>head</code> 요소(element)에 
+    제한됩니다.
   </p>
 
-  The types of link indicated (the relationships) are given by the value of the
-  <dfn element-attr for="link"><code>rel</code></dfn> attribute, which, if present, must have a
-  value that is a <a>set of space-separated tokens</a>. The <a>allowed keywords and their
-  meanings</a> are defined in a later section. If the <{link/rel}> attribute is absent, has no
-  keywords, or if none of the keywords used are allowed according to the definitions in this
-  specification, then the element does not create any links.
+  표현된 링크의 유형 (관계)는 <dfn element-attr for="link"><code>rel</code></dfn> 속성(attribute)의 
+  값에 의해 주어지고, 이것이 존재한다면, <a lt="set of space-separated tokens">공백으로 분리된 토큰 집합</a>인
+  값을 가져야(must) 합니다. <a lt="allowed keywords and their meanings">허용된 키워드와 그것들의 의미</a>는
+  이후 섹션에서 정의됩니다.  <{link/rel}> 속성(attribute)이 존재하지 않는다면 키워드를 가지지 않거나,
+  사용된 어떤 키워드도 이 명세에서의 정의를 따라 허용된 것이 아니라면, 요소(element)는 어떤 연결도 
+  생성하지 않습니다.
 
-  Two categories of links can be created using the <{link}> element:
-  <a>Links to external resources</a> and <a>hyperlinks</a>. The [[#sec-link-types]] section defines
-  whether a particular link type is an external resource or a hyperlink. One <code>link</code>
-  element can create multiple links (of which some might be external resource links and some might
-  be hyperlinks); exactly which and how many links are created depends on the keywords given in the
-  <{link/rel}> attribute. User agents must process the links on a per-link
-  basis, not a per-element basis.
+  링크의 두 카테고리들은 <{link}> 요소(element)를 사용하여 생성될 수 있습니다:
+  <a lt="Links to external resources">외부 리소스들로의 링크들</a>과 <a lt="hyperlinks">하이퍼링크들</a>.
+  [[#sec-link-types]] 섹션은 특정 링크 유형이 외부 리소스인지 하이퍼링크인지를 정의합니다.
+  한 개 <code>link</code> 요소(element)는 여러 개의 링크들을 (일부는 외부 리소스 링크일 수 있고
+  일부는 하이퍼링크일 수 있습니다) 생성할 수 있습니다; 정확히 어떤 그리고 몇 개의 링크들이 생성 되는지는
+  <{link/rel}> 속성(attribute)에 주어진 키워드에 달려 있습니다. 유저 에이전트는 요소(element) 단위가 
+  아닌 링크 단위로 처리해야(must) 합니다.
 
   <p class="note">
-    Each link created for a <{link}> element is handled separately. For instance, if there
-    are two <{link}> elements with <code>rel="stylesheet"</code>, they each count as a
-    separate external resource, and each is affected by its own attributes independently. Similarly,
-    if a single <{link}> element has a <{link/rel}> attribute with the value
-    <code>next stylesheet</code>, it creates both a <a>hyperlink</a> (for the <code>next</code>
-    keyword) and an <a>external resource link</a> (for the <code>stylesheet</code> keyword), and
-    they are affected by other attributes (such as <code>media</code> or <code>title</code>)
-    differently.
+    <{link}> 요소(element)에 대해 생성 된 각 링크는 별도로 처리됩니다. 예를 들어, <code>rel="stylesheet"</code>를
+    가진 두 개의 <{link}> 요소(element)가 있따면, 각각은 독립적으로 자신의 속성(attbribute)에 의해
+    영향을 받습니다. 마찬가지로, <code>next stylesheet</code> 값을 가진 <{link/rel}> 속성(attribute)을
+    가진 단일 <{link}> 요소(element)가 있다면, 이것은 (<code>next</code> 키워드에 대한) <a lt="hyperlink">하이퍼링크</a>와
+    (<code>stylesheet</code> 키워드에 대한) <a lt="external resource link">외부 리소스 링크</a>를 
+    생성하고, 그것들은 다른 속성(attribute)들에 의해 (<code>media</code>나 <code>title</code> 같은)
+    다르게 영향을 받습니다.
   </p>
 
   <div class="example">
-    For example, the following <{link}> element creates two hyperlinks (to the same page):
+    예를 들어, 다음 <{link}> 요소(element)는 두 하이퍼링크들을 (동일한 페이지에 대한) 생성합니다 :
 
     <pre highlight="html">&lt;link rel="author license" href="/about"></pre>
 
-    The two links created by this element are one whose semantic is that the target page has
-    information about the current page's author, and one whose semantic is that the target page has
-    information regarding the license under which the current page is provided.
+    이 요소(element)에 의해 생성된 두 링크들은 의미가 현재 페이지의 작성자에 대한 정보를 가진 대상 
+    페이지인 하나와, 의미가 현재 페이지가 어떤 라이센스 하에 제공되는지에 관한 정보를 가지는 대상
+    페이지인 하나입니다.
   </div>
 
-  <{link}> and <{a}> elements may also have a
-  <dfn element-attr for="a,link,links"><code>rev</code></dfn> attribute, which is used to describe
-  a <a>reverse link</a> relationship from the resource specified by the <{links/href}> to the
-  current document. If present, the value of this attribute must be a <a>set of space-separated
-  tokens</a>. Like the <{links/rel}> attribute, [[#sec-link-types]] describes the <a>allowed
-  keywords and their meanings</a> for the <{links/rev}> attribute. Both the <{links/rel}> and
-  <{links/rev}> attributes may be present on the same element.
+  <{link}>와 <{a}> 요소(element)들은 <{links/href}>에 의해 명시된 리소스로부터 현재 문서로의
+  <a lt="reverse link">역방향 연결</a> 관계를 설명하는데 사용되는 
+  <dfn element-attr for="a,link,links"><code>rev</code></dfn> 속성(attribute)도 가질 수 있습니다.
+  이것이 존재한다면 이 속성(attribute)의 값은
+  <a lt="set of space-separated tokens">공백으로 분리된 토큰 집합</a>이어야 합니다. <{links/rel}> 
+  속성(attribute)처럼, [[#sec-link-types]]은 <{links/rev}> 속성(attribute)에 대한
+  <a lt="allowed keywords and their meanings">허용된 키워드와 그것들의 의미</a>를 설명합니다.
+  <{links/rel}>과 <{links/rev}> 속성(attribute)들은 동일 요소(element)에 모두 존재할 수 있습니다.
 
-  <dfn lt="reverse link|Reverse links">Reverse links</dfn> are a way to express the reverse
-  directional relationship of a link. In contrast to the <{links/rel}> attribute, whose value
-  conveys a forward directional relationship ("how is the link related to me"), the <{links/rev}>
-  attribute allows for similiar relationships to be expressed in the reverse direction ("how am I
-  related to this link"). These values can enable user agents to build a more comprehensive map of
-  linked documents.
+  <dfn lt="reverse link|Reverse links">역방향 링크</dfn>는 링크의 역방향 관계를 나타내는 방법입니다.
+  값이 정방향 관계를 ("링크가 나에게 관계되는 방법") 전달하는 <{links/rel}> 속성(attribute)과는
+  대조적으로, <{links/rev}> 속성(attribute)은 유사한 관계들이 역방향으로 ("내가 이 링크에 관계되는 
+  방법") 노출되도록 허용합니다. 이 값들은 유저 에이전트가 연결된 문서의 보다 포괄적인 지도를 만들 수 
+  있게 할 수 있습니다.
 
-  <div class="example">Given two documents, each containing a chapter of a book, the links between
-  them could be described with the <{link/rel}> and <{links/rev}> attributes as follows:
+  <div class="example">책의 챕터를 각각 포함하는 두 개의 문서가 주어지면, 그것들 사이의 링크는 다음과
+  같이 <{link/rel}>과 <{links/rev}> 속성(attribute)들을 가지고 기술될 수 있습니다:
 
-  Document with URL "chapter1.html"
+  "chapter1.html" URL를 가진 문서
   <pre highlight="html">&lt;link href="chapter2.html" rel="next" rev="prev"&gt;</pre>
 
-  Document with URL "chapter2.html"
+  "chapter2.html" URL를 가진 문서
   <pre highlight="html">
 &lt;link href="chapter1.html" rel="prev" rev="next"&gt;
 &lt;link href="chapter3.html" rel="next" rev="prev"&gt;</pre>
 
-  From chapter1.html, the link to chapter2.html is the "<code>next</code>" chapter in the series in the
-  forward direction, and the "<code>previous</code>" chapter in the reverse diretion (from
-  chapter2.html to chapter1.html).
+  chapter1.html에서 chapter2.html로의 연결은  정방향으로 시리즈에서 "<code>next</code>" 챕터이고,
+  역방향으로는 (chapter2.html에서 chapter1.html으로) "<code>previous</code>" 챕터 입니다.
   </div>
 
-  <div class="example">The links in a table of contents document might be described using
-  <{links/rel}> and <{links/rev}> as follows:
+  <div class="example">콘텐트 목록 문서에서 링크들은 <{links/rel}>과 <{links/rev}>를 사용하여
+  다음과 같이 기술 될 수 있습니다:
   <pre highlight="html">
   &lt;ol&gt;
     &lt;li&gt;&lt;a href="chapter1.html" rev="toc" rel="next"&gt;chapter 1&lt;/a&gt;&lt;/li&gt;
@@ -455,155 +468,160 @@
   &lt;/ol&gt;
   </pre>
 
-  From the table of contents, the "<code>next</code>" logical path is to the first chapter,
-  expressed using <{links/rel}>. Each chapter link has a "<code>toc</code>" <{links/rev}> value
-  which indicates that the current document is the table of contents document for every chapter.
+  콘텐트 목록에서 "<code>next</code>" 논리 경로는 <{links/rel}>을 사용하여 노출 된 첫 번째 챕터 입니다.
+  각 챕터 링크는 현재 문서가 매 챕터에 대한 콘텐트 목록 문서 임을 나타내는 "<code>toc</code>"
+  <{links/rev}> 값을 가집니다.
 
   </div>
 
-  The <dfn element-attr for="link"><code>crossorigin</code></dfn> attribute is a <a>CORS settings attribute</a>. It is
-  intended for use with external resource links.
+  <dfn element-attr for="link"><code>crossorigin</code></dfn> 속성(attribute)은 
+  <a lt="CORS settings attribute">CORS 설정 속성(attribute)</a>입니다. 이것은 외부 리소스 링크와 
+  함께 사용하도록 의도된 것입니다.
 
-  The exact behavior for links to external resources depends on the exact relationship, as defined
-  for the relevant link type. Some of the attributes control whether or not the external resource is
-  to be applied (as defined below).
+  외부 리소스로의 링크에 대한 정확한 동작은 관련 링크 유형에 대해 정의된 정확한 관계에 달려있습니다.
+  일부 속성(attribute)들은 외부 리소스가 적용 될지 (아래 정의된 대로) 여부를 제어합니다.
 
-  For external resources that are represented in the DOM (for example, style sheets), the DOM
-  representation must be made available (modulo cross-origin restrictions) even if the resource is
-  not applied. To <dfn lt="obtain|obtain the resource">obtain the resource</dfn>, the user agent must
-  run the following steps:
+  DOM에 표현되는 외부 리소스에 대해 (예를 들어, 스타일시트), DOM 표현은 리스소가 적용 되지 않는다
+  하더라도 사용 가능 하게 되어야(must) 합니다 (모듈 교차 출처 제한).
+  <dfn lt="obtain|obtain the resource">리소스를 획득</dfn>하기 위해, 유저 에이전트는 다음 단계들을 
+  수행해야(must) 합니다:
 
 
-  1. If the <{link/href}> attribute's value is the empty string, then abort these steps.
-  2. <a>Parse</a> the <a for="url">URL</a> given by the <{link/href}> attribute, relative to the
-      element's <a>node document</a>. If that fails, then abort these steps. Otherwise, let
-      <var>url</var> be the <a>resulting URL record</a>.
-  3. Let <var>corsAttributeState</var> be the current state of the element's <{link/crossorigin}>
-      content attribute.
-  4. Let <var>request</var> be the result of <a>creating a potential-CORS request</a> given
-      <var>url</var> and <var>corsAttributeState</var>.
-  5. Set <var>request</var>'s <a>client</a> to the <{link}> element's <a>node document</a>'s
-      {{Window}} object's <a>environment settings object</a>.
-  6. <a>Fetch</a> <var>request</var>.
+  1. <{link/href}> 속성(attribute)의 값이 빈 문자열이라면, 이 단계들을 중단합니다.
+  2. 요소(element)의 <a lt="node document">노드 문서</a>에 관련하여, <{link/href}> 속성(attribute)에
+      의해 주어진 <a for="url">URL</a>을 <a lt="parse">해석</a>합니다. 그것이 실패한다면, 이 단계들을
+      중단합니다. 그렇지 않으면, <var>url</var>을 <a lt="resulting URL record">결과 URL 레코드</a>로 
+      둡니다.
+  3. <var>corsAttributeState</var>를 요소(element)의 <{link/crossorigin}> 콘텐트 속성(attribute)의 
+      현재 상태로 둡니다.
+  4. <var>request</var>를 <var>url</var>과 <var>corsAttributeState</var>가 주어진 
+      <a lt="creating a potential-CORS request">잠재적 CORS 요청 생성</a>의 결과로 둡니다.
+  5. <var>request</var>의 <a lt="client">클라이언트</a>를 <{link}> 요소(element)의
+      <a lt="node document">노드 문서</a>의 {{Window}} 객체의 
+      <a lt="environment settings object">환경 설정 객체</a>로 둡니다.
+  6. <var>request</var>를 <a lt="fetch">가져옵니다</a>.
 
-  User agents may opt to only try to obtain such resources when they are needed, instead of
-  pro-actively fetching all the external resources that are not applied.
+  유저 에이전트는 적용되지 않은 모든 리소스들을 능동적으로 가져오는 대신, 그것들이 필요할 경우 그
+  리소스를 얻기 위해 시도하기로 선택할 수 있습니다.
 
-  The semantics of the protocol used (e.g., HTTP) must be followed when fetching external
-  resources. (For example, redirects will be followed and 404 responses will cause the external
-  resource to not be applied.)
+  외부 리소스를 가져올 때 사용된 프로토콜의 (예를 들어, HTTP) 의미를 따라야(must) 합니다. (예를 들어,
+  리다이렉트가 뒤따르는 것과 404 응답은 외부 리소스가 적용되지 않는 것을 야기합니다.)
 
-  Once the attempts to obtain the resource and its <a>critical subresources</a> are complete, the
-  user agent must, if the loads were successful, <a>queue a task</a> to <a>fire a simple event</a>
-  named <code>load</code> at the <{link}> element, or, if the resource or one of its
-  <a>critical subresources</a> failed to completely load for any reason (e.g., DNS error, HTTP 404
-  response, a connection being prematurely closed, unsupported Content-Type), <a>queue a task</a>
-  to <a>fire a simple event</a> named <code>error</code> at the <{link}> element.
-  Non-network errors in processing the resource or its subresources (e.g., CSS parse errors, PNG
-  decoding errors) are not failures for the purposes of this paragraph.
+  일단 리소스를 얻으려는 시도와 그것의 <a lt="critical subresources">중요한 하위 리소스들</a>이 완료되면,
+  유저 에이전트는 로드가 성공적이었다면, <{link}> 요소(element)에 <code>load</code>라고 이름이
+  붙은 <a lt="fire a simple event">단순 이벤트를 발생</a>시키기 위한 <a lt="queue a task">작업을 대기열에 넣거나</a>,
+  리소스나 그것의 <a lt="critical subresources">중요한 하위 리소스들</a>의 하나가 어떤 이유로
+  (예를 들어, DNS 오류, HTTP 404 응답, 너무 빨리 닫히는 연결, 지원되지 않은 Content-Type) 완전한
+  로드가 실패되었다면, <{link}> 요소(element)에 <code>error</code>라고 이름이 붙은
+  <a lt="fire a simple event">단순 이벤트를 발생</a>시키기 위한 <a lt="queue a task">작업을 대기열에 넣습니다</a>.
+  리소스나 하위 리소스들 처리에 비 네트워크 오류들은 (예를 들어, CSS 해석 오류, PNG 디코딩 오류)
+  이 문단의 목적을 위한 실패가 아닙니다.
 
-  The <a>task source</a> for these <a>tasks</a> is the <a>DOM manipulation task source</a>.
+  이 <a lt="tasks">작업들</a>에 대한 <a lt="task source">작업 소스</a>는 
+  <a lt="DOM manipulation task source">DOM 조작 작업 소스</a>입니다.
 
-  The element must <a>delay the load event</a> of the element's <a>node document</a> until all the
-  attempts to obtain the resource and its <a>critical subresources</a> are complete. (Resources
-  that the user agent has not yet attempted to obtain, e.g., because it is waiting for the resource
-  to be needed, do not <a>delay the load event</a>.)
+  요소(element)는 리소스와 그것의 <a lt="critical subresources">중요한 하위 리소스들</a>을 얻기 위한 
+  모든 시도가 완료될 때까지 요소(element)의 <a lt="node document">노드 문서</a>의
+  <a lt="delay the load event">로드 이벤트를 지연</a>시켜야(must) 합니다. (유저 에이전트가 아직 얻으려고
+  시도하지 않은 리소스는, 예를 들어 리소스가 필요하기를 기다리고 있기 때문에,
+  <a lt="delay the load event">로드 이벤트를 지연</a>시키지 않습니다.)
 
   <hr />
 
-  Interactive user agents may provide users with a means to <a>follow the hyperlinks</a> created
-  using the <{link}> element, somewhere within their user interface. The exact interface
-  is not defined by this specification, but it could include the following information (obtained
-  from the element's attributes, again as defined below), in some form or another (possibly
-  simplified), for each hyperlink created with each <{link}> element in the document:
+  대화형 유저 에이전트는 유저 인터페이스의 어딘가에서 <{link}> 요소(element)를 사용하여 생성된
+  <a lt="follow the hyperlinks">하이퍼링크들을 따르기</a> 위한 방법을 사용자에게 제공할 수 있습니다.
+  정확한 인터페이스는 이 명세에 정의되지 않지만, 문서 내 각 <{link}> 요소(element)를 가지고 생성된 각
+  하이퍼링크에 대해, 일부 형식이나 다른 것에서 (아마도 간소화 된), 다음 정보를 (아래 정의된 대로,
+  요소(element)의 속성으로부터 얻어진) 포함할 수 있습니다.
 
-  * The relationship between this document and the resource (given by the <{link/rel}>
-      attribute)
-  * The title of the resource (given by the <code>title</code> attribute).
-  * The address of the resource (given by the <{link/href}> attribute).
-  * The language of the resource (given by the <code>hreflang</code> attribute).
-  * The optimum media for the resource (given by the <code>media</code> attribute).
+  * 이 문서와 리소스 (<{link/rel}> 속성(attribute)에 의해 주어진) 사이의 관계
+  * 리소스의 제목 (<code>title</code> 속성(attribute)에 의해 주어진).
+  * 리소스의 주소 (<{link/href}> 속성(attribute)에 의해 주어진).
+  * 리소스의 언어 (<code>hreflang</code> 속성(attribute)에 의해 주어진).
+  * 리소스에 대한 최고의 매체 (<code>media</code> 속성(attribute)에 의해 주어진).
 
-  User agents could also include other information, such as the type of the resource (as given by
-  the <code>type</code> attribute).
+  유저 에이전트는 리소스의 유형과 같은 (<code>type</code> 속성(attribute)에 의해 주어진), 다른 
+  정보를 포함할 수 있습니다.
 
   <p class="note">
-    Hyperlinks created with the <{link}> element and its <{link/rel}> attribute apply
-    to the whole page. This contrasts with the <{links/rel}> attribute of <{a}> and
-    <{area}> elements, which indicates the type of a link whose context is given by the
-    link's location within the document.
+    <{link}> 요소(element)와 그것의 <{link/rel}> 속성(attribute)을 가지고 생성된 하이퍼링크들은 전체 
+    페이지에 적용됩니다. 이것은 컨텍스트가 문서 안의 링크의 위치에 의해 주어진 위치인 링크의 유형을
+    나타내는, <{a}>와 <{area}> 요소(element)의 <{link/rel}> 속성(attribute)과 대조를 이룹니다.
   </p>
 
-  The <dfn element-attr for="link"><code>media</code></dfn> attribute says which media the resource applies to. The value
-  must be a <a>valid media query list</a>.
+  <dfn element-attr for="link"><code>media</code></dfn> 속성(attribute)은 리소스가 적용될 매체를 말해줍니다.
+  값은 <a lt="valid media query list">유효한 미디어 쿼리 목록</a>이어야(must) 합니다.
 
   <div class="impl">
-    If the link is a <a>hyperlink</a> then the <code>media</code> attribute is purely advisory, and
-    describes for which media the document in question was designed.
+    링크가 <a lt="hyperlink">하이퍼링크</a>라면 <code>media</code> 속성(attribute)은 순수하게 조언적이고, and
+    문제의 문서가 어떤 매체에 대해 설계되었는지를 설명합니다.
 
-    However, if the link is an <a>external resource link</a>, then the <code>media</code> attribute
-    is prescriptive. The user agent must apply the external resource when the <code>media</code>
-    attribute's value <a>matches the environment</a> and the other relevant conditions apply, and
-    must not apply it otherwise.
+    하지만, 링크가 <a lt="external resource link">외부 리소스 링크</a>라면, <code>media</code> 
+    속성(attribute)은 지시적인 것입니다. 유저 에이전트는 <code>media</code> 속성(attribute)의 값이
+    <a lt="matches the environment">환경과 일치</a>하고 다른 관련 조건들이 적용되는 경우 외부 리소스를 
+    적용해야(must)하고, 그렇지 않으면 적용하지 않아야(must) 합니다.
 
     <p class="note">
-      The external resource might have further restrictions defined within that limit its
-      applicability. For example, a CSS style sheet might have some <code>@media</code> blocks. This
-      specification does not override such further restrictions or requirements.
+      외부 리소스는 그것의 적용 가능성 제한 내에서 정의된 추가 제한 사항을 가질 수 있습니다. 
+      예를 들어, CSS 스타일 시트는 일부 <code>@media</code> 블럭을 가질 수 있습니다. 이 명세는 
+      그러한 추가 제한 사항이나 요구사항을 재정의 하지 않습니다.
     </p>
   </div>
 
-  The default, if the <code>media</code> attribute is omitted, is "<code>all</code>", meaning that
-  by default links apply to all media.
+  <code>media</code> 속성(attribute)이 생력되었다면 기본 값은 기본값에 의해 링크가 모든 매체에
+  적용 됨을 의미하는 "<code>all</code>" 입니다.
 
-  The <dfn element-attr for="link"><code>hreflang</code></dfn> attribute on the <{link}> element has the same
-  semantics as the <code>hreflang</code> attribute on the <{a}> element.
+  <{link}> 요소(element)의 <dfn element-attr for="link"><code>hreflang</code></dfn> 속성(attribute)은 
+  <{a}> 요소(element)의 <code>hreflang</code> 속성(attribute)과 동일한 의미를 가집니다.
 
-  The <dfn element-attr for="link"><code>type</code></dfn> attribute gives the <a>MIME type</a> of the linked resource. It
-  is purely advisory. The value must be a <a>valid mime type</a>.
+  <dfn element-attr for="link"><code>type</code></dfn> 속성(attribute)은 링크되는 리소스의 
+  <a lt="MIME type">MIME 타입</a>을 제공합니다. 이것은 순수하게 조언적입니다. 값은 
+  <a lt="valid mime type">유효한 MIME 타입</a>이어야(must) 합니다.
 
-  For <a>external resource links</a>, the <code>type</code> attribute is used as a hint to user
-  agents so that they can avoid fetching resources they do not support. <span class="impl">If the
-  attribute is present, then the user agent must assume that the resource is of the given type (even
-  if that is not a <a>valid mime type</a>, e.g., the empty string). If the attribute is omitted, but
-  the external resource link type has a default type defined, then the user agent must assume that
-  the resource is of that type. If the user agent does not support the given <a>MIME type</a> for the given
-  link relationship, then the user agent should not <a>obtain</a> the resource; if the user agent does support the
-  given <a>MIME type</a> for the given link relationship, then the user agent should <a>obtain</a> the
-  resource at the appropriate time as specified for the <a>external resource link</a>'s particular
-  type. If the attribute is omitted, and the external resource link type does not have a default
-  type defined, but the user agent would <a>obtain</a> the resource if the type was known and
-  supported, then the user agent should <a>obtain</a> the resource under the assumption that it will
-  be supported.</span>
+  <a lt="external resource links">외부 리소스 링크</a>에 대해, <code>type</code> 속성(attribute)은 
+  유저 에이전트가 지원하지 않는 리소스를 가져오는 것을 방지할 수 있도록 유저 에이전트에 대한 힌트로
+  사용됩니다. <span class="impl">속성(attribute)이 존재하지 않는다면, 유저 에이전트는 (그것이
+  <a lt="valid mime type">유효한 MIME 타입</a>, 예를 들어, 빈 문자열이라 하더라도) 리소스가 주어진 
+  유형의 것으로 추정해야(must) 합니다. 속성(attribute)이 생략되었고, 외부 리소스 링크 유형이 정의된 
+  기본 유형을 가진다면, 유저 에이전트는 리소스를 그 유형의 것으로 추정해야(must) 합니다. 유저 에이전트가
+  주어진 링크 관계에 대해 주어진 <a lt="MIME type">MIME 타입</a>을 지원하지 않는다면, 유저 에이전트는
+  리소스를 <a lt="obtain">획득</a>하지 않아야(should) 합니다; 유저 에이전트가 주어진 링크 관계에
+  대해 주어진 <a lt="MIME type">MIME 타입</a>을 지원하지 않는다면, 유저 에이전트는
+  <a lt="external resource link">외부 리소스 링크</a>의 특정 유형에 대해  명시된 대로 적절한 시간에
+  리소스를 <a lt="obtain">획득</a>해야(should) 합니다. 속성(attribute)이 생략되었고, 외부 리소스 링크
+  유형이 정의된 기본 유형을 가지지 않고, 유형이 알려져 있고 지원되는 경우 유저 에이전트가 리소스를
+  <a lt="obtain">획득</a> 한다면, 유저 에이전트는 그것이 지원된다는 가정 하에 리소스를
+  <a lt="obtain">획득</a> 해야(should) 합니다.</span>
 
   <div class="impl">
-    User agents must not consider the <code>type</code> attribute authoritative &mdash; upon
-    fetching the resource, user agents must not use the <code>type</code> attribute to determine its
-    actual type. Only the actual type (as defined in the next paragraph) is used to determine
-    whether to <em>apply</em> the resource, not the aforementioned assumed type.
+    유저 에이전트는 <code>type</code> 속성(attribute)을 믿을만한 것으로 간주하지 않아야(must) 합니다 
+    &mdash; 리소스를 가져오는데에, 유저 에이전트는 <code>type</code> 속성(attribute)을 그것의 실제 
+    유형을 결정하기 위해 사용하지 않아야(must) 합니다. 오직 실제 유형은 (다음 문단에 정의된 것과 같이)
+    리소스에 <em>적용</em> 할지 여부를 결정짓기 위해서 사용되는 것이지, 앞서 언급된 가정된 유형이 
+    아닙니다.
 
-    <dfn lt="determining the type of the resource"></dfn>If the external resource link type defines rules for processing the resource's
-    <a>Content-Type metadata</a>, then those rules apply. Otherwise, if the resource is expected to
-    be an image, user agents may apply the <a>image sniffing rules</a>, with the
-    <var>official type</var> being the type determined from the resource's
-    <a>Content-Type metadata</a>, and use the resulting <a>computed type of the resource</a> as if it was
-    the actual type. Otherwise, if neither of these conditions apply or if the user agent opts not
-    to apply the image sniffing rules, then the user agent must use the resource's
-    <a>Content-Type metadata</a> to determine the type of the resource. If there is no type
-    metadata, but the external resource link type has a default type defined, then the user agent
-    must assume that the resource is of that type.
+    <dfn lt="determining the type of the resource"></dfn>외부 리소스 링크 유형이 리소스의 
+    <a lt="Content-Type metadata">Content-Type 메타데이터</a> 처리에 대한 규칙을 정의한다면, 그 
+    규칙은 적용됩니다. 그렇지 않고, 리소스가 이미지가 예상된다면, 유저 에이전트는 리소스의
+    <a lt="Content-Type metadata">Content-Type 메타데이터</a>로부터 유형이 결정된 
+    <var>official type</var>을 가지고 <a lt="image sniffing rules">이미지 스니핑 규칙들</a>을 적용할 
+    수 있고, 결과로 나온 <a lt="computed type of the resource">계산 된 리소스의 유형</a>을 그것이
+    실제 유형인것 처럼 사용할 수 있습니다. 그렇지 않고, 이 조건들을 적용하거나 유저 에이전트가 이미지
+    스니핑 규칙을 적용하지 않기로 한다면, 유저 에이전트는 리소스의 유형을 결정하기 위해 리소스의
+    <a lt="Content-Type metadata">Content-Type 메타데이터</a>를 사용해야(must) 합니다. 유형
+    메타데이터가 없고 외부 리소스 링크 유형이 정의된 기본 유형을 가진다면, 유저 에이전트는 리소스를 
+    그 유형의 것으로 추정해야(must) 합니다.
 
     <p class="note">
-      The <code>stylesheet</code> link type defines rules for processing the resource's
-      <a>Content-Type metadata</a>.
+      <code>stylesheet</code> 링크 유형은 리소스의 
+      <a lt="Content-Type metadata">Content-Type 메타데이터</a> 처리에 대한 규칙을 정의합니다.
     </p>
 
-    Once the user agent has established the type of the resource, the user agent must apply the
-    resource if it is of a supported type and the other relevant conditions apply, and must ignore
-    the resource otherwise.
+    유저 에이전트가 리소스의 유형을 설정 할 때, 유저 에이전트는 지원되는 유형의 것이고 다른 관련 
+    조건이 적용된다면 리소스를 적용해야(must)하고, 그렇지 않으면 리소스를 무시해야(must) 합니다.
 
     <div class="example">
-      If a document contains style sheet links labeled as follows:
+      문서가 다음과 같이 라벨링 된 스타일 시트 링크를 포함한다면:
 
       <pre highlight="html">
         &lt;link rel="stylesheet" href="A" type="text/plain"&gt;
@@ -611,86 +629,85 @@
         &lt;link rel="stylesheet" href="C"&gt;
       </pre>
 
-     ...then a compliant user agent that supported only CSS style sheets would fetch the B and C files, and
-     skip the A file (since <code>text/plain</code> is not the <a>MIME type</a> for CSS style
-     sheets).
+     ...CSS 스타일 시트만을 지원하는 호환 유저 에이전트는 B와 C파일을 가져오고, A파일은 생략할 
+     것입니다 (<code>text/plain</code>은 CSS 스타일 시트에 대한 <a lt="MIME type">MIME 타입</a>이 
+     아니기 때문에).
 
-     For files B and C, it would then check the actual types returned by the server. For those that
-     are sent as <code>text/css</code>, it would apply the styles, but for those labeled as
-     <code>text/plain</code>, or any other type, it would not.
+     B와 C 파일에 대해, 이것은 이후 서버에 의해 반환된 실제 유형을 검사할 것입니다. 
+     <code>text/css</code>로 보내어진 것들에 대해, 이것은 스타일 시트를 적용할 것이지만, 
+     <code>text/plain</code>으로 라벨링 된 것들에 대해 혹은 다른 유형에 대해서는 그렇지 않을 것입니다.
 
-     If one of the two files was returned without a <a>Content-Type</a> metadata, or with a
-     syntactically incorrect type like <code>Content-Type:&nbsp;"null"</code>, then the default type
-     for <code>stylesheet</code> links would kick in. Since that default type is
-     <code>text/css</code>, the style sheet <em>would</em> nonetheless be applied.
+     두 파일 중 하나가  <a>Content-Type</a> 메타데이터 없이 혹은, 
+     <code>Content-Type:&nbsp;"null"</code>과 같은 구문적으로 틀린 유형을 가지고 반환된다면, 
+     <code>stylesheet</code> 링크들에 대한 기본 유형이 효과를 낼 것입니다. 그 기본 유형이 
+     <code>text/css</code>이기 때문에, 스타일 시트는 그럼에도 불구하고 적용 <em>될</em> 것입니다.
     </div>
   </div>
 
-  The <dfn element-attr for="link"><code>title</code></dfn> attribute gives the title of the link. With one exception, it is
-  purely advisory. The value is text. The exception is for style sheet links, where the
-  <code>title</code> attribute defines <a>alternative style sheet sets</a>.
+  <dfn element-attr for="link"><code>title</code></dfn> 속성(attribute)은 링크의 제목(title)을 
+  제공합니다. 한 가지 예외를 가지고, 이것은 순수하게 조언적입니다. 값은 텍스트입니다. 예외 사항은 
+  <code>title</code> 속성(attribute)이 <a lt="alternative style sheet sets">대체 스타일 시트 세트</a>를 
+  정의하는 스타일 시트에 대한 것입니다.
 
   <p class="note">
-    The <code>title</code> attribute on <{link}> elements differs from the global
-    <code>title</code> attribute of most other elements in that a link without a title does not
-    inherit the title of the parent element: it merely has no title.
+    <{link}> 요소(element)들의 <code>title</code> 속성(attribute)은 제목이 부모 요소(element)의 
+    제목을 상속 받지 않는 링크라는 점에서 대다수 다른 요소(element)들의 범용 <code>title</code> 
+    속성(attribute)과는 차이가 있습니다: 그것은 단지 제목을 가지지 않습니다.
   </p>
 
-  The <code>sizes</code> attribute is used with the <code>icon</code> link type. The attribute must
-  not be specified on <{link}> elements that do not have a <{link/rel}> attribute that
-  specifies the <code>icon</code> keyword.
+  <code>sizes</code> 속성(attribute)은 <code>icon</code> 링크 유형과 함께 사용됩니다. 
+  속성(attribute)은 <code>icon</code> 키워드를 명시한 <{link/rel}> 속성(attribute)을 가지지 않는 
+  <{link}> 요소(element)들에 명시되지 않아야(must) 합니다.
 
   <div class="impl">
-    The <a>activation behavior</a> of <code>link</code> elements that create <a>hyperlinks</a> is to
-    run the following steps:
+    <a lt="hyperlinks">하이퍼링크</a>들을 생성하는 <code>link</code> 요소(element)들의 
+    <a lt="activation behavior">활성화 동작</a>은 다음 단계들을 수행하는 것입니다:
 
-    1. If the <{link}> element's <a>node document</a> is not <a>fully active</a>, then
-        abort these steps.
-    2. <a>Follow the hyperlink</a> created by the<code>link</code> element.
+    1. <{link}> 요소(element)의 <a lt="node document">노드 문서</a>가, 
+        <a lt="fully active">완전히 활성화</a>가 아니라면, 이 단계들을 중단합니다.
+    2. <code>link</code> 요소(element)에 의해 생성된 <a lt="follow the hyperlink">하이퍼링크를 따라갑니다</a>.
 
-    HTTP <code>Link:</code> headers, if supported, must be assumed to come before any links in the
-    document, in the order that they were given in the HTTP message. These headers are to be
-    processed according to the rules given in the relevant specifications. [[!HTTP]] [[!RFC5988]]
+    HTTP <code>Link:</code> 헤더가 지원된다면, HTTP 메세지에 주어진 순서에 따라, 문서 내 모든 
+    링크들 앞에 오는 것으로 추정되어야(must) 합니다. 이 헤더들은 관련 명세에 주어진 규칙을 따라 처리 
+    됩니다. [[!HTTP]] [[!RFC5988]]
 
     <p class="note">
-      Registration of relation types in HTTP Link: headers is distinct from <a>HTML link types</a>,
-      and thus their semantics can be different from same-named HTML types.
+      HTTP 링크의 등록 관계 유형: 헤더는 <a lt="HTML link types">HTML 링크 유형들</a>과 구별되고, 
+      따라서 그것들의 의미는 동일한 이름의 HTML 유형들과 다를 수 있습니다.
     </p>
 
-    The IDL attributes <dfn attribute for="HTMLLinkElement"><code>href</code></dfn>, <dfn attribute for="HTMLLinkElement"><code>rel</code></dfn>,
-    <dfn attribute for="HTMLLinkElement"><code>rev</code></dfn>, <dfn attribute for="HTMLLinkElement"><code>media</code></dfn>, <dfn attribute for="HTMLLinkElement"><code>hreflang</code></dfn>,
-    <dfn attribute for="HTMLLinkElement"><code>type</code></dfn>, and <dfn attribute for="HTMLLinkElement"><code>sizes</code></dfn> each must <a>reflect</a> the
-    respective content attributes of the same name.
+    IDL 속성(attribute)들 <dfn attribute for="HTMLLinkElement"><code>href</code></dfn>, <dfn attribute for="HTMLLinkElement"><code>rel</code></dfn>,
+	<dfn attribute for="HTMLLinkElement"><code>rev</code></dfn>, <dfn attribute for="HTMLLinkElement"><code>media</code></dfn>, <dfn attribute for="HTMLLinkElement"><code>hreflang</code></dfn>,
+    <dfn attribute for="HTMLLinkElement"><code>type</code></dfn>, <dfn attribute for="HTMLLinkElement"><code>sizes</code></dfn>는 동일한 이름의 각 콘텐트 속성(attribute)들을 
+	<a lt="reflect">반영</a>해야(must) 합니다.
 
-    The <dfn attribute for="HTMLLinkElement"><code>crossOrigin</code></dfn> IDL attribute must <a>reflect</a> the
-    <code>crossorigin</code> content attribute.
+    <dfn attribute for="HTMLLinkElement"><code>crossOrigin</code></dfn> IDL 속성(attribute)은
+    콘텐트 속성(attribute)을 <a lt="reflect">반영</a>해야(must) 합니다.
 
-    The IDL attribute <dfn attribute for="HTMLLinkElement"><code>relList</code></dfn> <span class="impl">must</span> <a>reflect</a>
-    the <{link/rel}> content attribute.
+    IDL 속성(attribute) <dfn attribute for="HTMLLinkElement"><code>relList</code></dfn>은 
+    <{link/rel}> 콘텐트 속성을 <a lt="reflect">반영</a> <span class="impl">해야(must)</span> 합니다.
 
-    <code>relList</code>'s <code>DOMTokenList</code>'s <a>supported tokens</a> are the keywords
-    defined in <a>HTML link types</a> which are allowed on <code>link</code> elements and supported
-    by the user agent.
+    <code>relList</code>의 <code>DOMTokenList</code>의 <a lt="supported tokens">지원되는 토큰들</a>은 
+    <code>link</code> 요소(element)들에 허용되고 유저 에이전트에 의해 지원된 
+    <a lt="HTML link types">HTML 링크 유형들</a>에 정의된 키워드들입니다.
 
-    <{link/rel}>'s
-    <a>supported tokens</a> are the keywords defined in
-    <a>HTML link types</a> which are allowed on <code>link</code> elements, impact
-    the processing model, and are supported by the user agent. The possible supported tokens are
-    <code>alternate</code>, <a>dns-prefetch</a>, <code>icon</code>, <a>preconnect</a>, <a>prefetch</a>,
-    <a>prerender</a>, and <code>stylesheet</code>.
-    <{link/rel}>'s <a>supported tokens</a> must only include the tokens from
-    this list that the user agent implements the processing model for.
+    <{link/rel}>의 <a lt="supported tokens">지원되는 토큰들</a>은 <code>link</code> 
+    요소(element)들에 허용되고, 처리 모델에 영향을 주고, 유저 에이전트에 의해 지원되는
+    <a lt="HTML link types">HTML 링크 유형들</a>에 정의된 키워드들입니다. 가능한 지원되는 토큰들은
+    <code>alternate</code>, <a>dns-prefetch</a>, <code>icon</code>, <a>preconnect</a>,
+    <a>prefetch</a>, <a>prerender</a>, <code>stylesheet</code> 입니다. <{link/rel}>의
+    <a lt="supported tokens">지원되는 토큰들</a>은 유저 에이전트가 처리 모델에 대해 구현하는
+    이 목록의 토큰들을 포함해야(must) 합니다.
 
-    Other specifications may add <a>HTML link types</a> as
-    defined in <a>Other link types</a>, such as [[!RESOURCE-HINTS]]. These specifications may require
-    that their link types be included in <{link/rel}>'s supported
-    tokens.
+    다른 명세들은 [[!RESOURCE-HINTS]]과 같은, <a lt="Other link types">다른 링크 유형들</a>에 정의 
+    된 <a lt="HTML link types">HTML 링크 유형들</a>을 추가할 수 있습니다. 이 명세들은 그들의 링크 
+    유형들이 <{link/rel}>의 지원되는 토큰들에 포함되도록 요구할 수 있습니다.
   </div>
 
-  The <code>LinkStyle</code> interface is also implemented by this element. [[!CSSOM]]
+  <code>LinkStyle</code> 인터페이스는 또한 이 요소(element)에 의해 구현됩니다. [[!CSSOM]]
 
   <div class="example">
-    Here, a set of <{link}> elements provide some style sheets:
+    여기, <{link}> 요소(element)들의 세트가 일부 스타일 시트들을 제공합니다:
 
     <pre highlight="html">
       &lt;!-- a persistent style sheet -->
@@ -707,8 +724,8 @@
   </div>
 
   <div class="example">
-    The following example shows how you can specify versions of the page that use alternative
-    formats, are aimed at other languages, and that are intended for other media:
+    다음 예제는 대체 형식을 사용하고 다른 언어를 대상으로하며 다른 매체에 대해 의도된 페이지의 
+    버전을 지정할 수 있는 방법을 보여줍니다:
 
     <pre highlight="html">
       &lt;link rel=alternate href="/en/html" hreflang=en type=text/html title="English HTML">
@@ -723,9 +740,9 @@
 <h4 id="the-meta-element">The <dfn element><code>meta</code></dfn> element</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
     <dd><a>Metadata content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
     <dd>
       If the <code>charset</code> attribute is present, or if the element's <code>http-equiv</code>
       attribute is in the <a state for="http-equiv">encoding declaration state</a>: in a <{head}> element.
@@ -742,21 +759,21 @@
     <dd>
       If the <code>name</code> attribute is present: where <a>metadata content</a> is expected.
     </dd>
-    <dt><a>Content model</a>:</dt>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
     <dd><a>Nothing</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
     <dd>No <a>end tag</a>.</dd>
-    <dt><a>Content attributes</a>:</dt>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
     <dd><a>Global attributes</a></dd>
     <dd><code>name</code> — Metadata name</dd>
     <dd><code>http-equiv</code> — Pragma directive</dd>
     <dd><code>content</code> — Value of the element</dd>
     <dd><code>charset</code> — <a>Character encoding declaration</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>None</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLMetaElement">
         interface HTMLMetaElement : HTMLElement {
@@ -1415,9 +1432,9 @@
 <h4 id="the-style-element">The <dfn element><code>style</code></dfn> element</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
     <dd><a>Metadata content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
     <dd>
       Where <a>metadata content</a> is expected.
     </dd>
@@ -1425,14 +1442,14 @@
       In a <{noscript}> element that is a
       child of a <{head}> element.
     </dd>
-    <dt><a>Content model</a>:</dt>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
     <dd>
       Depends on the value of the <code>type</code> attribute, but must match requirements described
       in prose below.
     </dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
     <dd>Neither tag is omissible.</dd>
-    <dt><a>Content attributes</a>:</dt>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
     <dd><a>Global attributes</a></dd>
     <dd><code>media</code> — Applicable media</dd>
     <dd><{style/nonce}> - Cryptographic nonce used in <em>Content Security Policy</em> checks [[CSP3]]</dd>
@@ -1441,11 +1458,11 @@
       Also, the <{style/title}> attribute has special semantics on this element: Alternative
       style sheet set name.
     </dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>None</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLStyleElement">
         interface HTMLStyleElement : HTMLElement {

@@ -9,7 +9,7 @@
  ██████  ████████ ██     ██ ██     ██ ██    ██    ██    ████  ██████   ██████
 -->
 
-<h2 id="semantics">The elements of HTML</h2>
+<h2 id="semantics">HTML의 요소(element)들</h2>
 
 <pre class="include">
 path: sections/semantics-root.include

@@ -1,33 +1,33 @@
 <section>
 
-<h3 id="the-root-element">The root element</h3>
+<h3 id="the-root-element">루트 요소(root element)</h3>
 
-<h4 id="the-html-element">The <dfn element><code>html</code></dfn> element</h4>
+<h4 id="the-html-element"><dfn element><code>html</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd>None.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>As the root element of a document.</dd>
-    <dd>Wherever a subdocument fragment is allowed in a compound document.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd>A <{head}> element followed by a <{body}> element.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd>없음.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd>문서의 루트 요소(element)로서.</dd>
+    <dd>복합 문서에 하위 문서 조각이 허용되는 곳.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
+    <dd><{body}> 요소(element)가 뒤따르는 <{head}> 요소(element).</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
     <dd>
-      An <{html}> element's <a>start tag</a> can be omitted if the first thing inside the
-      <{html}> element is not a <a>comment</a>.
+      <{html}> 요소(element)의 <a lt="start tag">시작 태그</a>는 <{html}> 요소(element) 안의 첫 번째 
+       것이 <a lt="comment">주석</a>이 아니라면 생략될 수 있습니다.
     </dd>
     <dd>
-      An <{html}> element's <a>end tag</a> can be omitted if the <{html}> element
-      is not immediately followed by a <a>comment</a>.
+      <{html}> 요소(element)의 <a lt="end tag">종료 태그</a>는 <{html}> 요소(element)가 
+      <a lt="comment">주석</a>이 즉시 뒤따르지 않는다면 생략될 수 있습니다.
     </dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd>None</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd>없음</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLHtmlElement">
         interface HTMLHtmlElement : HTMLElement {};
@@ -35,21 +35,20 @@
     </dd>
   </dl>
 
-  The <{html}> element <a>represents</a> the root of an HTML document.
+  <{html}> 요소(element)는 HTML 문서의 루트를 <a lt="represents">나타냅니다</a>.
 
-  Authors are encouraged to specify a <{global/lang}> attribute on the root <{html}> element, giving
-  the document's language. This aids speech synthesis tools to determine what pronunciations to use,
-  translation tools to determine what rules to use, and so forth.
+  작성자들은 루트 <{html}> 요소(element)에 문서의 언어를 제공하는 <{global/lang}> 속성(attribute)을 
+  명시하도록 권장됩니다. 이것은 음성 합성 도구가 사용할 발음을 결정하는 것, 번역 도구가 사용하는 
+  규칙을 결정하는 것 등등을 지원합니다.
 
   <p class="note">
-    It is recommended to keep the usage of attributes and their values defined on the <{html}>
-    element to a minimum to allow for proper detection of the <a>character encoding declaration</a>
-    within the first 1024 bytes.
+    처음 1024바이트 내에서 <a lt="character encoding declaration">문자 인코딩 선언</a>의 적절한 감지를
+    허용하기 위해 <{html}> 요소(element)에 정의된 속성(attribute)들과 그 값들의 사용을 최소한으로
+    유지하는 것이 권장됩니다.
   </p>
 
   <div class="example">
-    The <{html}> element in the following example declares that the document's language is
-    English.
+    다음 예제에서 <{html}> 요소(element)는 문서의 언어를 영어로 선언합니다.
 
     <pre highlight="html">
       &lt;!DOCTYPE html>
