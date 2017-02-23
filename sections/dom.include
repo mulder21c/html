@@ -23,8 +23,8 @@
   <code>pushState()</code> 메서드가 새로운 <a for="url">URL</a>을 가지고 호출 될 때 변경됩니다. [[!DOM]]
 
   <p class="warning">
-    대화형 유저 에이전트는 보통 유저 인터페이스에 <a lt="the document's address">문서의 주소</a>를 노출합니다.
-    이것은 사이트가 다른 사람으로 가장하려하는지를 사용자가 알 수 있는 주된 메커니즘입니다.
+    대화형 유저 에이전트들은 보통 유저 인터페이스에 <a lt="the document's address">문서의 주소</a>를 
+    노출합니다. 이것은 사이트가 다른 사람으로 가장하려하는지를 사용자가 알 수 있는 주된 메커니즘입니다.
   </p>
 
   {{Document}}가 <code>createDocument()</code>나 <code>createHTMLDocument()</code> API를 사용하여
@@ -620,7 +620,7 @@
   <div class="example">
   이 예제에서 HTML 제목(heading)은 데스크탑 브라우저에서 큰 텍스트로, 또는 모바일 브라우저에서 굵은 일반 
   사이즈 텍스트로 보여질 수 있습니다. 두 경우 모두에서 의미론적 정보는 모두 동일하게 남겨집니다 -  
-  <{h1}>과 <{h2}> 요소(element)들은 제목(heading)을 의미합니다.
+  <{h1}>과 <{h2}> 요소(element)들은 제목(heading)을 나타냅니다.
 
     <pre highlight="html">
       &lt;!doctype html&gt;
@@ -686,7 +686,7 @@
 
   문서는 그것이 처리되는 동안 동적으로 변경될 수 있습니다. 스크립팅과 다른 메커니즘은 속성(tattribute) 
   값, 텍스트, 전체 문서 구조를 변경하는데 사용될 수 있습니다. 따라서 문서의 의미론은 특정 시점의 
-  문서의 상태에 기반하지만, 외부 이벤트에 대한 응답으로 변경될 수도 있습니다. 유저 에이전트는
+  문서의 상태에 기반하지만, 외부 이벤트에 대한 응답으로 변경될 수도 있습니다. 유저 에이전트들은
   이러한 변경을 반영하기 위해 문서의 표현을 업데이트 해야(must) 합니다.
 
   <div class="example">
@@ -708,7 +708,7 @@
   <a lt="XML documents">XML 문서들</a>의 <a lt="html elements">html 요소(element)들</a>이 포함됩니다. 
 
   DOM의 요소(element)들은 상황(things)을 <dfn lt="represent">나타냅니다</dfn>; 즉, DOM의 요소
-  (element)들은 의미론(semantic)으로 알려진, 고유한 <em>의미</em>를 가집니다. 
+  (element)들은 의미론(semantic)으로 알려진, 고유한 <em>의미(meaning)</em>를 가집니다. 
 
   <p class="example">예를 들어, <{ol}> 요소(element)는 순서가 있는 목록을 나타냅니다.</p>
 
@@ -813,7 +813,7 @@
   <a lt="template contents">템플릿 콘텐트</a>에 있는 <{template}> 요소(element)를 (요소가 생성될 때
   요소에 대입되는 별도의 <code>DocumentFragment</code>) 제외하고, DOM에서 그것의 자식입니다.
 
-  <a lt="space characters">공백 문자들</a>은 항상 요소(element)들 사이에 허용됩니다. 유저 에이전트는
+  <a lt="space characters">공백 문자들</a>은 항상 요소(element)들 사이에 허용됩니다. 유저 에이전트들은
   소스 마크업에서 요소(element)들 사이의 이 문자들을 DOM 에서 <code>Text</code> 노드로 나타냅니다.
   일련의 그 문자로만 구성되는 빈 <code>Text</code> 노드와 <code>Text</code> 노드는
   <dfn lt="inter-element whitespace">요소(element) 간 여백</dfn>으로 간주됩니다.
@@ -1633,7 +1633,7 @@
   <p class="note">
     별표로 표기 된 속성(attribute)들은 <{body}> 요소(element)들에 명시되었을 경우 그 요소(element)들이
     동일한 이름을 가지고 <code>Window</code> 객체의 <a lt="event handlers">이벤트 처리기</a>를 노출하기
-    때문에 다른 의미를 가집니다.
+    때문에 다른 의미(meaning)를 가집니다.
   </p>
 
   <p class="note">
@@ -1682,7 +1682,8 @@
 
 <h5 id="the-id-attribute"><dfn element-attr for="global"><code>id</code></dfn> 속성(attribute)</h5>
 
-  <code>id</code> 속성(attribute)은 그 요소(element)의 <a lt="id">고유 식별자 (ID)</a>를 명시합니다. [[!DOM]]
+  <code>id</code> 속성(attribute)은 그 요소(element)의 <a lt="id">고유 식별자 (ID)</a>를 명시합니다. 
+  [[!DOM]]
 
   값은 요소(element)의 <a lt="home subtree">홈 하위 트리</a>에 있는 모든 <a lt="IDs">ID들</a> 중 
   고유해야(must) 하고 적어도 하나의 문자를 포함해야(must) 합니다. 값은 어떠한 
@@ -1700,8 +1701,8 @@
   </p>
 
   <div class="impl">
-    식별자는 분명하지 않은 문자열입니다. 특별한 의미가 <code>id</code> 속성(attribute)의 값으로부터
-    파생되지 않아야(should) 합니다.
+    식별자는 분명하지 않은 문자열입니다. 특별한 의미(meanings)가 <code>id</code> 속성(attribute)의 
+    값으로부터 파생되지 않아야(should) 합니다.
   </div>
 
 <h5 id="the-title-attribute"><code>title</code> 속성(attribute)</h5>
@@ -1748,8 +1749,8 @@
     </p>
   </div>
 
-  <{link}>, <{abbr}>, <{input}> 같은 어떤 요소(element)들은 위에서 설명된 의미 이외에 
-  <code>title</code> 속성(attribute)에 대한 추가적인 의미를 정의합니다.
+  <{link}>, <{abbr}>, <{input}> 같은 어떤 요소(element)들은 위에서 설명된 의미(semantics) 이외에 
+  <code>title</code> 속성(attribute)에 대한 추가적인 의미(semantics)를 정의합니다.
 
   <div class="impl">
     요소(element)의 <dfn lt="advisory information">조언 정보</dfn>는 일단 값이 반환되면 알고리즘이 
@@ -1764,8 +1765,8 @@
         <a lt="advisory information">조언 정보</a>를 반환합니다.
     4. 그렇지 않으면, 빈 문자열을 반환합니다.
 
-    유저 에이전트는 요소(element)가 <a lt="advisory information">조언 정보</a>를 가지는 경우, 사용자에게 
-    알려야(should) 하고, 그렇지 않으면 정보는 인지될 수 없을 것입니다.
+    유저 에이전트들은 요소(element)가 <a lt="advisory information">조언 정보</a>를 가지는 경우,  
+    사용자에게 알려야(should) 하고, 그렇지 않으면 정보는 인지될 수 없을 것입니다.
 
     <hr />
 
@@ -1818,7 +1819,7 @@
   <p class="warning" id="lang-warning">
   <a lt="HTML documents">HTML 문서들</a>의 언어는 (문서의 주 언어를 나타내기 위해 <{HTML}> 요소(element)
   자신에, 언어의 변경을 나타내기 위해 각 요소(element)들에) <{global/lang}> 속성(attribute)을
-  사용하여 나타납니다. 그것은 콘텐트의 언어에 대해 유저 에이전트에 명시적인 표시를 제공하기 때문에,
+  사용하여 나타납니다. 그것은 콘텐트의 언어에 대해 유저 에이전트들에 명시적인 표시를 제공하기 때문에,
   적절한 언어 사전이 사용될 수 있고, 스크린 리더와 음성 출력을 가진 비슷한 보조 기술의 경우에, 
   콘텐트는 올바른 음성 / 언어 라이브러리를 (사용 가능한 경우) 사용하여 발음됩니다. <strong>문서나
   문서 일부의 언어와 일치하지 않는 <{global/lang}> 속성(attribute)을 사용하여 언어를 설정하는 것은 
@@ -1828,14 +1829,14 @@
   <div class="impl">
     <hr />
 
-    노드의 <dfn lt="language">언어</dfn>를 결정하기 위해, 유저 에이전트는 
+    노드의 <dfn lt="language">언어</dfn>를 결정하기 위해, 유저 에이전트들은 
     <a lt="XML namespace">XML 네임스페이스</a>에 있는 <{global/lang}> 속성(attribute) 세트를 가지거나 
     네임스페이스가 없는 <{global/lang}> 속성(attribute) 세트를 가진 <a lt="HTML element">HTML 요소(element)</a>인 
     가장 가까운 조상 요소(element)를 (노드가 요소(element)라면 그 요소(element)를 포함하여) 고려해야(must)
     합니다. 그 속성(attribute)은 노드의 언어를 명시합니다(그 값에 상관하지 않고). 
 
     네임 스페이스가 없는 <{global/lang}> 속성(attribute)과 <a lt="XML namespace">XML 네임스페이스</a>에
-    있는 <{global/lang}> 속성(attribute)이 둘 모두 요소(element)에 설정된 경우, 유저 에이전트는 
+    있는 <{global/lang}> 속성(attribute)이 둘 모두 요소(element)에 설정된 경우, 유저 에이전트들은 
     <a lt="XML namespace">XML 네임스페이스</a>에 있는 <{global/lang}> 속성(attribute)을 사용해야(must)하고,
     네임 스페이스가 없는 <{global/lang}> 속성(attribute)은 요소(element)의 언어 결정의 목적에 대해 
     <a lt="ignored">무시</a>되어야(must) 합니다.
@@ -1859,7 +1860,7 @@
 
     결과 값이 알려진 언어 태그가 아니라면, 모든 다른 언어들와 별개의, 주어진 언어 태그를 가지는
     알 수 없는 언어로 취급되어야(must) 합니다. 언어 태그를 기대하는 다른 서비스와 왕복하거나 
-    통신하는 목적을 위해,  유저 에이전트는 BCP 47 언어 태그가 되도록 태그 되고, 수정되지 않은 채로
+    통신하는 목적을 위해,  유저 에이전트들은 BCP 47 언어 태그가 되도록 태그 되고, 수정되지 않은 채로
     알 수 없는 언어를 전달해야(should) 하기 때문에, 차후 서비스들은 언어 설명의 다른 유형으로
     데이터를 해석하지 않습니다. [[!BCP47]]
 
@@ -1881,7 +1882,7 @@
 
     <hr />
 
-    유저 에이전트는 요소의 언어를 적절한 처리나 렌더링을 결정하는데 사용할 수 있습니다 (예를 들어,
+    유저 에이전트들은 요소의 언어를 적절한 처리나 렌더링을 결정하는데 사용할 수 있습니다 (예를 들어,
     적절한 폰트나 발음의 선택으로, 혹은 사전 선택을 위해, 혹은 날짜 선택기 같은 양식 컨트롤의
     유저 인터페이스를 위해).
 
@@ -2243,7 +2244,7 @@
   세트를 가질 수 있습니다. 이것은 CSS 스타일링 속성(attribute) 구문 명세에 의해 정의된 <a lt="CSS styling attribute">CSS 스타일링 속성(attribute)</a>입니다. 
   [[!CSS-STYLE-ATTR]]
 
-    CSS를 지원하는 유저 에이전트에서, 속성(attribute)의 값은 속성(attribute)이 추가되거나 그 값이
+    CSS를 지원하는 유저 에이전트들에서, 속성(attribute)의 값은 속성(attribute)이 추가되거나 그 값이
     변경되는 경우, <a lt="CSS styling attributes">CSS 스타일링 속성(attribute)</a>에 대해 주어진 
     규칙을 따라 해석되어야(must) 합니다. [[!CSS-STYLE-ATTR]]
 
@@ -2256,9 +2257,9 @@
   경우에도 여전히 이해될 수 있고 사용될 수 있어야(must) 합니다.
 
   <p class="note">
-    특히, 콘텐트를 숨기고 보여주기 위해, 혹은 문서에 포함되지 않은 의미를 전달하기 위해 <{global/style}>
-    속성(attribute)을 사용하는 것은 적합하지 않습니다. (콘텐트를 숨기고 보여주기 위해서는, <code>hidden</code>
-    속성(attribute)을 사용하세요.)
+    특히, 콘텐트를 숨기고 보여주기 위해, 혹은 문서에 포함되지 않은 의미(meaning)를 전달하기 위해 
+    <{global/style}> 속성(attribute)을 사용하는 것은 적합하지 않습니다. (콘텐트를 숨기고 보여주기 
+    위해서는, <code>hidden</code> 속성(attribute)을 사용하세요.)
   </p>
 
   <hr />
@@ -2427,8 +2428,8 @@
   이러한 확장을 신중하게 설계해야 합니다.
 
   <div class="impl">
-    유저에이전트는 이 속성(attribute)들이나 값들로부터 구현 행동을 파생하지 않아야(must) 합니다.
-    유저 에이전트를 위해 의도된 명세는 이 속성(attribute)들이 의미있는 값을 가지도록 정의하지
+    유저에이전트들은 이 속성(attribute)들이나 값들로부터 구현 행동을 파생하지 않아야(must) 합니다.
+    유저 에이전트들을 위해 의도된 명세는 이 속성(attribute)들이 의미있는 값을 가지도록 정의하지
     않아야(must) 합니다.
   </div>
 
@@ -2542,7 +2543,7 @@
   <div class="impl">
     <h5 id="user-agent-conformance-criteria">유저 에이전트 적합 기준</h5>
 
-    유저 에이전트는 문서와 문서의 일부를 렌더링 할 때 문자의 적절한 순서를 결정하기 위해 유니코드 
+    유저 에이전트들은 문서와 문서의 일부를 렌더링 할 때 문자의 적절한 순서를 결정하기 위해 유니코드 
     양방향성 알고리즘을 구현해야 합니다. [[!BIDI]]
 
     HTML의 유니코드 양방향 알고리즘으로의 매핑은 3가지 방법 중 하나로 수행 되어야(must) 합니다. 유저 
@@ -2551,13 +2552,14 @@
     속성(property)들을 사용하는 규칙을 가져야(must) 하거나, 혹은 그 대신에, 유저 에이전트는 앞서 언급된
     속성(property)들이 구현되고 모든 앞서 언급된 규칙들을 포함하는 유저 에이전트 스타일 시트를 가지면서
     문서에 명시된 스타일 시트가 그것들을 재정의 하도록 두지 않는 것 처럼 동작해야(must) 하거나, 혹은
-    그 대신에, 유저 에이전트는 동등한 의미를 가진 다른 스타일링 언어를 구현해야(must) 합니다.
+    그 대신에, 유저 에이전트는 동등한 의미(semantics)를 가진 다른 스타일링 언어를 구현해야(must) 합니다.
     [[CSS-WRITING-MODES-3]] [[CSS3-CONTENT]]    
 
     <p id="bidireq">
       다음 요소(element)들과 속성(attribute)들은 [[#rendering]] 섹션에 의해 정의된, 이 섹션의 요구사항
-      때문에 모든 유저 에이전트에 대한 요구사항인 (<a lt="support the suggested default rendering">제안된 기본 렌더링을 지원</a>하는
-      것 뿐아니라), 요구사항을 가집니다:
+      때문에 모든 유저 에이전트들에 대한 요구사항인 
+      (<a lt="support the suggested default rendering">제안된 기본 렌더링을 지원</a>하는 것뿐 
+      아니라), 요구사항을 가집니다:
     </p>
 
     * <{global/dir}> 속성(attribute)
@@ -2580,9 +2582,9 @@
   [[!WAI-ARIA]]
 
  <p class="note" id="aria-usage-note">
-   <dfn lt="do not set"></dfn> 대부분의 경우에 기본 암묵적 ARIA 의미에 매칭하는 ARIA <code>role</code>과/혹은
-   <code>aria-*</code> 속성(attribute)을 설정하는 것은 불필요하고 이 속성(property)들은 이미 브라우저에
-   의해 설정되어 있기 때문에 권장되지 않습니다.
+   <dfn lt="do not set"></dfn> 대부분의 경우에 기본 암묵적 ARIA 의미(semantics)에 일치하는 ARIA 
+   <code>role</code>과/혹은 <code>aria-*</code> 속성(attribute)을 설정하는 것은 불필요하고 이 
+   속성(property)들은 이미 브라우저에 의해 설정되어 있기 때문에 권장되지 않습니다.
  </p>
 
   <div class="note">
@@ -2606,10 +2608,10 @@
   <section class="impl">
   <h5 id='user-agent-requirements'>유저 에이전트 구현 요구사항들</h5>
   <div>
-    <p>유저 에어전트는 ARAI 명세 [[!WAI-ARIA]]와
+    <p>유저 에어전트들은 ARAI 명세 [[!WAI-ARIA]]와
   <a href="https://w3c.github.io/aria/core-aam/core-aam.html">[core-aam-1.1]</a>에 정의된 대로,
   모든 <a lt="HTML elements">HTML 요소(element)들</a>에 ARIA 의미론을 구현하도록 요구됩니다. </p>
-    <p>유저 에이전트는 HTML 접근성 API 매핑 명세
+    <p>유저 에어전트들은 HTML 접근성 API 매핑 명세
   <a href="https://w3c.github.io/aria/html-aam/html-aam.html">[html-aam-1.0]</a>에 정의된 대로,
   모든 <a lt="HTML elements">HTML 요소(element)들</a>에 접근성 API 의미론을 구현하도록 요구됩니다.</p>
     <p>ARIA 명세에 정의된 ARIA 속성(attribute)들은 CSS 가상 클래스 매칭이나, 보조 기술을 사용하지 
@@ -2642,7 +2644,7 @@
   혹은 속성(property)에 대한 정의의 "Value" 필드에 있는 ARIA 값 유형인 값을 가져야(must) 합니다.
 
   ARIA 상태(State)와 속성(Property) 속성(attribute)들은 모든 요소(element)에 사용될 수 있습니다. 
-  하지만, 그것들이 항상 의미있는 것은 아니며, 그러한 경우 유저 에이전트는 DOM에 그것들을 포함하는
+  하지만, 그것들이 항상 의미있는 것은 아니며, 그러한 경우 유저 에어전트들은 DOM에 그것들을 포함하는
   것과 별개로 처리하는 것을 수행하지 않을 수 있습니다. 상태(State)와 속성(Property) 속성(attribute)들은
   [[!WAI-ARIA]] 뿐만 아니라 HTML 접근성 API 매핑 명세 <a href="https://w3c.github.io/aria/html-aam/html-aam.html">[html-aam-1.0]</a>의 
   요구사항, 그리고 ARIA 명세들 [[!WAI-ARIA]]과 <a href="https://w3c.github.io/aria/core-aam/core-aam.html">[core-aam-1.1]</a>에 
@@ -3168,7 +3170,7 @@
       <tr>
         <td><code>presentation</code></td>
         <td>
-          암묵적 네이티브 역할(role) 의미가 접근성 API에 매핑되지 않는 요소(element)
+          암묵적 네이티브 역할(role) 의미(semantics)가 접근성 API에 매핑되지 않는 요소(element)
         </td>
         <td>없음</td>
         <td></td>

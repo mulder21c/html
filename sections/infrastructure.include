@@ -59,7 +59,7 @@
   알고리즘 B가 다른 알고리즘 A로 돌아간다 말하는 경우, A가 B를 호출했음을 의미합니다. A로 돌아가면,
   구현은 B의 호출에서 멈춘 곳에서부터 계속 진행해야 합니다. 일부 알고리즘은 
   <dfn lt="in parallel">병렬로</dfn> 수행합니다; 이것은 알고리즘의 다음 단계가 명세 내 다른 로직과 
-  동시에 (예를 들어, <a lt="event loop">이벤트 반복</a>이 동시에) 잇따라서 수행됨을 의미합니다. 이 
+  동시에 (예를 들어, <a lt="event loop">이벤트 반복</a>이 동시에) 잇따라서 수행 됨을 의미합니다. 이 
   명세는 다른 하이퍼쓰레드, 코어, CPU, 기계 등을 사용하여 시분할 다중 작업, fibers, 프로세스가 
   달성되는 정밀한 메커니즘을 정의하지 않습니다. 그와 대조적으로, <dfn lt="immediately">즉시</dfn> 
   수행하기 위한 작업은 현재 수행 중인 작업을 중단하고 수행해야 하며, 그후 이전에 수행 작업을 
@@ -69,7 +69,7 @@
 
 <h4 id="resources">리소스</h4>
 
-  유저 에이전트가 외부 리소스의 의미를 디코딩할 수 있는 구현을 가지는지를 지칭하는 경우 명세는 
+  유저 에이전트가 외부 리소스의 의미(semantics)를 디코딩할 수 있는 구현을 가지는지를 지칭하는 경우 명세는 
   <dfn lt="supported">지원된다</dfn>라는 용어를 사용합니다. 형식(format)이나 유형(type)은 구현이 
   외부 리소스의 중요한 측면이 무시되지 않고 그 형식(foramt)이나 유형(type)의 리소스를 처리할 수 
   있다면 <i>지원된다</i>고 불립니다. 특정 리소스가 <i>지원되는</i>지 여부는 리소스의 형식이 사용되는 
@@ -113,7 +113,7 @@
 
 <h4 id="xml">XML</h4>
 
-  HTML에서 XHTML로 쉽게 마이그레이션 하기 위해, 이 명세를 따르는 유저 에이전트는 적어도 DOM과 CSS의 
+  HTML에서 XHTML로 쉽게 마이그레이션 하기 위해, 이 명세를 따르는 유저 에이전트들은 적어도 DOM과 CSS의 
   용도를 위해 <code>https://www.w3.org/1999/xhtml</code> 네임스페이스의 HTML에 요소(element)들을 
   위치시킬 것입니다. "<dfn lt="html element|html elements">HTML 요소</dfn>"라는 용어는 이 명세에서 
   사용될 경우, 그 네임스페이스의 요소를 지칭하고, 따라서 HTML과 XHTML 요소들 모두를 지칭합니다.
@@ -239,14 +239,14 @@
 
   <p class="note">
     이 명세는 <a lt="plugins">플러그인</a>이 유저 에이전트와 플랫폼 종속인 것으로 예상되기 때문에 
-    <a lt="plugins">플러그인</a>과 상호작용에 대한 메커니즘을 정의하지 않습니다. 일부 유저 에이전트는
+    <a lt="plugins">플러그인</a>과 상호작용에 대한 메커니즘을 정의하지 않습니다. 일부 유저 에이전트들은
     넷스케이프 플러그인 API와 같은 플러그인 메커니즘을 지원하는 것을 선택할 수 있습니다; 또 어떤 것들은
     원격 콘텐트 변환기를 사용하거나 특정 유형에 대한 내장 지원을 가질 수도 있습니다. 실제로, 이 명세는
-    <a lt="plugins">플러그인</a>을 지원하는 유저 에이전트가 전혀 필요하지 않습니다. [[NPAPI]]
+    <a lt="plugins">플러그인</a>을 지원하는 유저 에이전트들이 전혀 필요하지 않습니다. [[NPAPI]]
   </p>
 
-  플러그인은 <{iframe/sandbox}> 속성(attribute)의 의미를 만족하면 <dfn lt="secured">보호</dfn> 될 수
-  있습니다.
+  플러그인은 <{iframe/sandbox}> 속성(attribute)의 의미(semantics)를 만족하면 
+  <dfn lt="secured">보호</dfn> 될 수 있습니다.
 
   <p class="example">
     예를 들어, 보호된 플러그인은 플러그인이 샌드박스 된 <{iframe}> 안에서 인스턴스화 된 경우 콘텐트가 
@@ -261,7 +261,7 @@
   </p>
 
   다른 <a lt="plugins">plugins</a> 세트를 가지는 다른 사용자는 사용자를 유일하게 식별되게 하는 기회를 
-  증가시키는 지문 그림을 제공하기 때문에, 유저 에이전트는 각 사용자에 대해 정확히 동일한 
+  증가시키는 지문 그림을 제공하기 때문에, 유저 에이전트들은 각 사용자에 대해 정확히 동일한 
   <a lt="plugins">플러그인</a> 세트를 지원하도록 권장 됩니다.
   <a class="fingerprint" href="#fingerprinting-vector"><img height="21" src="images/fingerprint.png" width="15" alt="(이것은 지문 그림입니다.)" /></a>
 
@@ -329,7 +329,7 @@
 
   알고리즘의 일부분으로 명령조로 표현된 요구사항들은("선두의 모든 공백 문자를 제거"나 "false를 
   반환하고 이 단계들을 중단" 같은) 알고리즘 도입에 사용되는 키워드("must", "should", "may", 등등)의 
-  의미로 해석되어야 합니다.
+  의미(meaning)로 해석되어야 합니다.
 
   <div class="example">
     예를 들어, 다음과 같은 명세가 있었다면:
@@ -361,14 +361,14 @@
 
 <h4 id="conformance-classes">적합성 종류</h4>
 
-  이 명세는 유저 에이전트(구현자에 관련된)와 문서(작성자와 작성 도구 구현자에 관련된) 대한 적합성 
-  기준을 설명합니다.
+  이 명세는 유저 에이전트들과 (구현자에 관련된) 문서에 (작성자와 작성 도구 구현자에 관련된) 대한  
+  적합성 기준을 설명합니다.
 
   <dfn lt="conforming document|conforming documents">적합한 문서</dfn>는 문서에 대한 모든 적합성 
   기준을 따르는 문서입니다. 가독성을 위해, 이 적합성 요구사항의 일부는 작성자에 대한 적합성 
   요구사항으로 표현됩니다; 그 요구사항들은 암묵적으로 문서에 대한 요구사항입니다: 정의에 의해, 모든
   문서들은 작성자가 있었다고 가정됩니다. (어떤 경우, 그 작성자는 유저 에이전트 자체가 될 수 있습니다.
-  &mdash; 그러한 유저 에이전트는 아래 설명된 대로, 추가적인 규칙의 적용을 받습니다.)
+  &mdash; 그러한 유저 에이전트들은 아래 설명된 대로, 추가적인 규칙의 적용을 받습니다.)
 
   <p class="example">
     예를 들어, 요구사항이 "작성자는 <code>foobar</code> 요소(element)를 사용하지 않아야(must not) 
@@ -384,11 +384,11 @@
 
   유저 에이전트는 서로 다른 적합성 요구사항을 가진 몇 가지 범주에 (중복하여) 속합니다. 
 
-  : 웹 브라우저와 다른 인터랙티브 유저 에이전트
+  : 웹 브라우저와 다른 인터랙티브 유저 에이전트들
   :: <a href="#xhtml">XHTML 구문</a>을 지원하는 웹 브라우저는 이 명세에 설명된 대로 XML 문서에서 
       찾아지는 <a lt="HTML namespace">HTML 네임스페이스</a>의 요소(element)와 속성(attribute)을 처리 
-      해야(must)하기 때문에, 그 요소의 의미가 다른 명세에 의해 재정의되지 않는 한 사용자는 그것들을 
-      가지고 상호작용 할 수 있습니다.
+      해야(must)하기 때문에, 그 요소들의 의미(semantics)가 다른 명세에 의해 재정의되지 않는 한  
+      사용자는 그것들을 가지고 상호작용 할 수 있습니다.
 
       <p class="example">
         적합한 HTML 처리기는, XHTML 문서에서 XHTML <{script}> 요소(element)를 찾자마자, 그 요소에  
@@ -401,23 +401,23 @@
       <a lt="HTML MIME type">HTML MIME 타입</a>으로 라벨링 된 문서를 처리해야(must) 하기 때문에, 
       사용자는 그 문서와 상호작용 할 수 있습니다.
 
-      스크립팅을 지원하는 유저 에이전트는 또한 웹 IDL 명세에 정의된 대로, 이 명세의 IDL 코드 조각의 
+      스크립팅을 지원하는 유저 에이전트들은 또한 웹 IDL 명세에 정의된 대로, 이 명세의 IDL 코드 조각의 
       구현이 준수되어야(must) 합니다. [[!WEBIDL]]
 
       <p class="note">
-        명시적으로 명시되지 않은 한, HTML 요소(element)의 의미를 재정의 하는 명세는 그 요소(element)를
-        나타내는 DOM 객체에서의 요구사항을 재정의 하지 않습니다. 예를 들어, 위 예제에서 <{script}> 
-        요소(element)는 여전히 {{HTMLScriptElement}} 인터페이스를 구현합니다.
+        명시적으로 명시되지 않은 한, HTML 요소(element)들의 의미(semantics)를 재정의 하는 명세는 
+        그 요소(element)들을 나타내는 DOM 객체에서의 요구사항을 재정의 하지 않습니다. 예를 들어, 위 
+        예제에서 <{script}> 요소(element)는 여전히 {{HTMLScriptElement}} 인터페이스를 구현합니다.
       </p>
 
-  : 비상호작용 프리젠테이션 유저 에이전트
+  : 비상호작용 프리젠테이션 유저 에이전트들
   :: 순수하게 HTML과 XHTML 문서의 비상호작용 버전을 렌더링하기 위해 문서를 처리하는 유저 에이전트는,
       사용자 인터랙션에 관하여 요구사항이 면제되는 것을 제외하고, 웹 브라우저 같이 동일한 적합성 
       기준을 따라야(must) 합니다. 
 
       <p class="note">
-        비상호작용 유저 에이전트의 전형적인 예는 프린터(정적 유저 에이전트)와 오버헤드 디스플레이(동적
-        유저 에이전트)입니다. 대부분의 정적 비상호작용 프리젠테이션 유저 에이전트도 
+        비상호작용 유저 에이전트의 전형적인 예는 프린터(정적 유저 에이전트들)와 오버헤드 디스플레이(동적
+        유저 에이전트들)입니다. 대부분의 정적 비상호작용 프리젠테이션 유저 에이전트도 
         <a lt="lack scripting support">스크립팅 지원을 필요로</a> 하기로 선택할 것이 예상됩니다. 
       </p>
 
@@ -427,7 +427,7 @@
         개념이 상관없기 때문에, 유저 에이전트는 포커스 관련 DOM API를 지원할 필요가 없습니다.
       </p>
 
-  : <dfn for="rendering" lt="support the suggested default rendering|supporting the suggested default rendering|Visual user agents that support the suggested default rendering">제안된 기본 렌더링을 지원하는 시각적 유저 에이전트</dfn>
+  : <dfn for="rendering" lt="support the suggested default rendering|supporting the suggested default rendering|Visual user agents that support the suggested default rendering">제안된 기본 렌더링을 지원하는 시각적 유저 에이전트들</dfn>
   :: 유저 에이전트는, 상호작용이든 아니든, 이 명세에 정의된  
       <a lt="supporting the suggested default rendering">제안된 기본 렌더링을 지원하는 것</a>으로 
       (아마도 사용자 옵션으로) 지정됩니다.
@@ -441,7 +441,7 @@
       지정된 유저 에이전트는, 그렇게 지정된 동안, [[#rendering]] 섹션 내 규칙을 구현해야(must) 합니다. 
       그 섹션은 유저에이전트가 구현할 것으로 <em>기대되는</em> 행동을 정의합니다.
 
-  : <dfn lt="lack scripting support|User agents with no scripting support|do not support scripting">스크립트를 지원하지 않는 유저 에이전트</dfn>
+  : <dfn lt="lack scripting support|User agents with no scripting support|do not support scripting">스크립트를 지원하지 않는 유저 에이전트들</dfn>
   :: 스크립팅을 지원하지 않는(혹은 스크립트 기능이 완전히 비활성화 된) 구현은 이벤트와 이 명세에서 
       언급된 DOM 인터페이스 지원이 면제됩니다. 이벤트 모델의 측면이나 DOM의 측면에서 정의된 이 명세의 
       일부에 대해, 그런 유저 에이전트는 여전히 이벤트와 DOM이 지원된 것처럼 수행해야 합니다.
@@ -487,7 +487,7 @@
 
   : 데이터 마이닝 도구
   :: 문서를 렌더링 하거나 적합성에 대해 검사를 하는 것 외에 다른 이유로 HTML과 XHTML 문서를 처리하는 
-      어플리케이션과 도구들은 그들이 처리하는 문서의 의미에 부합하게 수행해야(should) 합니다.
+      어플리케이션과 도구들은 그들이 처리하는 문서의 의미(semantics)에 부합하게 수행해야(should) 합니다.
 
       <p class="example">
         <a lt="outline">문서 아웃라인</a>을 생성하지만 각 문단에 대한 중첩 레벨을 증가시키고 각 
@@ -1441,13 +1441,14 @@
   문서에 대한 적합성 용어는 그러한 적용 가능한 명세에 의해 도입된 변경 사항과 문서의 콘텐트와 
   의도된 해석에 따라 달라집니다.
   적용 가능한 명세는 새로운 문서 콘텐트(예를 들어 foobar 요소)를 정의하거나, 다른 특정 적합한 
-  콘텐트를 금지하거나(예를 들어, &lt;table>s의 사용을 금지), 의미, DOM 매핑, 이 명세에 정의된 
-  콘텐트에 대한 처리 규칙을 변경할 수도 있습니다. 문서가 
+  콘텐트를 금지하거나(예를 들어, &lt;table>s의 사용을 금지), 의미(semantics), DOM 매핑, 이 명세에 
+  정의된 콘텐트에 대한 처리 규칙을 변경할 수도 있습니다. 문서가 
   <a lt="conforming document">적합한 HTML 문서</a>인지 아닌지는 적용 가능한 명세의 사용에 따르지 
-  않습니다: 주어진 <a lt="conforming document">적합한 HTML 문서</a>의 구문과 의미가 적용 가능한 
-  명세(들)의 사용에 의해 변경되지 않는다면, 그 문서는 여전히 <a lt="conforming document">적합한 HTML 문서</a>
-  입니다. 주어진 (다른 적합한) 문서의 의미와 처리가 적용 가능한 명세(들)의 사용에 의해 변경된다면, 
-  그것은 <a lt="conforming document">적합한 HTML 문서</a>가 아닙니다. 그러한 경우에 대해, 적용 가능한
+  않습니다: 주어진 <a lt="conforming document">적합한 HTML 문서</a>의 구문과 의미(semantics)가 적용  
+  가능한 명세(들)의 사용에 의해 변경되지 않는다면, 그 문서는 여전히 
+  <a lt="conforming document">적합한 HTML 문서</a> 입니다. 주어진 (다른 적합한) 문서의 의미(semantics)나 
+  처리가 적용 가능한 명세(들)의 사용에 의해 변경된다면, 그것은 
+  <a lt="conforming document">적합한 HTML 문서</a>가 아닙니다. 그러한 경우에 대해, 적용 가능한 
   명세는 적합성 용어를 정의해야(SHOULD) 합니다.
 
   <p class="note">
@@ -1467,7 +1468,7 @@
 
   유저 에이전트는 구문적으로 중립적인 것으로 이해할 수 없는 요소(element)와 속성(attribute)를 
   처리해야(must) 합니다; DOM에 그것들을 두고(DOM 처리기에 대해), CSS를 따라 스타일링 하지만 (CSS
-  처리기에 대해), 그것들로부터 어떠한 의미도 끌어내지 않습니다.
+  처리기에 대해), 그것들로부터 어떠한 의미(meaning)도 끌어내지 않습니다.
 
   기능에 대한 지원이 비활성 된 경우 (예를 들어, 보안 문제를 완화시키기 위해, 혹은 개발 지원을 위해, 
   혹은 성능 이유로 긴급한 조치로서), 유저 에이전트는 어떤 기능에 대해서도 지원이 없었던 것 처럼, 
@@ -3210,12 +3211,12 @@
     </dl>
   </div>
 
-  <dfn lt="HTTP response codes">HTTP 응답 코드</dfn>는 동일한 기본 의미를 갖는 다른 프로토콜에서의 
-  상태와 동일합니다. 예를 들어, "file not found" 오류는 404 코드와 동일하고, 서버 오류는 5xx 코드와 
-  동일합니다.
+  <dfn lt="HTTP response codes">HTTP 응답 코드</dfn>는 동일한 기본 의미(meanings)를 갖는 다른 
+  프로토콜에서의 상태와 동일합니다. 예를 들어, "file not found" 오류는 404 코드와 동일하고, 서버 
+  오류는 5xx 코드와 동일합니다.
 
-  <dfn lt="HTTP headers">HTTP 헤더</dfn>는 동일한 기본 의미를 갖는 다른 프로토콜에서의 필드와 동일합니다.
-  예를 들어, HTTP 인증 헤더는 FTP 프로토콜의 인증 측면과 동일합니다.
+  <dfn lt="HTTP headers">HTTP 헤더</dfn>는 동일한 기본 의미(meanings)를 갖는 다른 프로토콜에서의 
+  필드와 동일합니다. 예를 들어, HTTP 인증 헤더는 FTP 프로토콜의 인증 측면과 동일합니다.
 
   <dfn lt="referrer source">리퍼러 소스</dfn>는 {{Document}}나 <a for="url">URL</a>입니다.
 
@@ -3305,8 +3306,8 @@
       그렇지 않고, 리소스가 <a for="url">URL</a> <code>about:blank</code>에 의해 식별된다면, 리소스는
       메타데이터 없이 즉시 사용가능하고 빈 문자열로 구성됩니다.
 
-      그렇지 않으면, 사용자와 유저 에이전트에게 알맞은 시간에 관련된 명세의 의미를 적용하여 (예를 
-      들어, HTTP GET이나 POST 연산을 수행하여, 혹은 디스크로부터 파일을 읽어, 혹은 
+      그렇지 않으면, 사용자와 유저 에이전트에게 알맞은 시간에 관련된 명세의 의미(semantics)를 
+      적용하여 (예를 들어, HTTP GET이나 POST 연산을 수행하여, 혹은 디스크로부터 파일을 읽어, 혹은 
       <a scheme lt="data:"><code>data:</code> URL</a>을 확장하여, 등등) 리소스를 다운로드 (혹은 
       그렇지 않으면 획득)합니다.
 
@@ -4220,7 +4221,8 @@
 
   <p class="note">
     <a href="#syntax">HTML 구문</a>에서, 네임스페이스 접두어와 네임스페이스 선언은 XML에서와 동일한 
-    효과를 가지지 않습니다. 예를 들어, 콜론은 HTML 요소(element) 이름에 특별한 의미를 가지지 않습니다.
+    효과를 가지지 않습니다. 예를 들어, 콜론은 HTML 요소(element) 이름에 특별한 의미(meaning)를 
+    가지지 않습니다.
   </p>
 
 <h3 id="safe-passing-of-structured-data">구조화 된 데이터의 안전한 전달</h3>
@@ -4273,7 +4275,7 @@
   <a lt="Transferable objects">전송 가능한 객체</a>인 <a lt="Platform objects">플랫폼 객체</a>는 
   반환 값과 함께 공유된 <em>this</em>의 기본 데이터를 가지고 <var>targetRealm</var>에서 생성된, 
   예외를 던지거나 <em>this</em>의 복제를 반환하는 [[<a>Transfer</a>]] 내부 메서드를 정의해야(must) 
-  하고 <em>this</em>의 [[<a>Detached</a>]] 내부 슬록 값을 true로 설정합니다. 그것들에 대해 전송이
+  하고 <em>this</em>의 [[<a>Detached</a>]] 내부 슬롯 값을 true로 설정합니다. 그것들에 대해 전송이
   의미하는 바를 정의하는 것은 그 객체들에 달려있습니다.
 
   자바스크립트 명세에 정의된 객체는 <a>StructuredCloneWithTransfer</a> 추상 연산에 의해 직접 처리됩니다.

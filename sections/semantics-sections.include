@@ -1,28 +1,27 @@
 <section>
 
-<h3 id="sections">Sections</h3>
-<h4 id="the-body-element">The <dfn element><code>body</code></dfn> element</h4>
+<h3 id="sections">섹션</h3>
+<h4 id="the-body-element"><dfn element><code>body</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Sectioning root</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>As the second element in an <{html}> element.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="Sectioning root">섹션화(sectioning) 루트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><{html}> 요소(element) 내의 두 번째 요소(element)로서.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
     <dd>
-      A <{body}> element's <a>start tag</a> may be omitted if the element is empty, or if
-      the first thing inside the <{body}> element is not a <a>space character</a> or a
-      <a>comment</a>, except if the first thing inside the <{body}> element is a
-      <{meta}>, <{link}>, <{script}>, <{style}>, or
-      <{template}> element.</dd>
+      <{body}> 요소(element)의 <a lt="start tag">시작 태그</a>는 요소(element)가 비어있거나 <{body}> 
+      요소(element) 안의 첫 번째 것이 <{meta}>, <{link}>, <{script}>, <{style}>, <{template}>를 
+      제외하고, <a lt="space character">공백 문자</a>나 <a lt="comment">주석</a>이 아니라면 생략될 
+      수 있습니다.</dd>
     <dd>
-      A <{body}> element's <a>end tag</a> may be omitted if the <{body}> element
-      is not immediately followed by a <a>comment</a>.
+      <{body}> 요소(element)의 <a lt="end tag">종료 태그</a>는 <{body}> 요소(element)에 
+      <a lt="comment">주석</a>이 즉시 뒤따르지 않는다면 생략될 수 있습니다.
     </dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
     <dd><code>onafterprint</code></dd>
     <dd><code>onbeforeprint</code></dd>
     <dd><code>onbeforeunload</code></dd>
@@ -38,15 +37,15 @@
     <dd><code>onstorage</code></dd>
     <dd><code>onunhandledrejection</code></dd>
     <dd><code>onunload</code></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>
-      <a value for="role"><code>document</code></a> role (default - <a><em>do not set</em></a>),
+      <a value for="role"><code>document</code></a> 역할(role) (기본 값 - <a lt="do not set"><em>설정하지 마세요</em></a>),
       <a value for="role"><code>application</code></a>.
     </dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLBodyElement">
         interface HTMLBodyElement : HTMLElement {
@@ -56,43 +55,44 @@
     </dd>
   </dl>
 
-  The <{body}> element <a>represents</a> the content of the document.
+  <{body}> 요소(element)는 문서의 콘텐트를 <a lt="represents">나타냅니다</a>.
 
-  In <a lt="conforming document">conforming documents</a>, there is only one <{body}> element. The
-  <code>document.body</code> IDL attribute provides scripts with easy access to a document's
-  <{body}> element.
+  <a lt="conforming document">적합한 문서들</a>에서, <{body}> 요소(element)는 오직 하나만 존재합니다. 
+  <code>document.body</code> IDL 속성은 문서의 <{body}> 요소(element)로의 쉬운 접근을 가진 스크립트를 
+  제공합니다.
 
   <p class="note">
-    Some DOM operations (for example, parts of the <a href="#drag-and-drop">drag and drop</a> model) are defined in terms
-    of "<a href="#the-body-element">the <code>body</code> element</a>". This refers to a particular element in the DOM, as per the
-    definition of the term, and not any arbitrary <{body}> element.
+    일부 DOM 연산들은 (예를 들어 <a href="#drag-and-drop">드래그 앤 드랍</a> 모델의 일부) "<a href="#the-body-element"><code>body</code> 요소(element)</a>"의 측면에서 정의됩니다. 이것은 
+    독단적인 <{body}> 요소(element)가 아니라 용어의 정의마다, DOM의 특정 요소(element)를 참조합니다.
   </p>
 
-  The <{body}> element exposes as <a>event handler content attributes</a> a number of the
-  <a>event handlers</a> of the <code>Window</code> object. It also mirrors their
-  <a>event handler IDL attributes</a>.
+  <{body}> 요소(element)는 <a lt="event handler content attributes">이벤트 처리기 콘텐트 
+  속성(attribute)들</a>로서 <code>Window</code> 객체의 많은 
+  <a lt="event handlers">이벤트 처리기들</a>을 노출시킵니다. 그것은 또한 그것들의 
+  <a lt="event handler IDL attributes">이벤트 처리기 IDL 속성(attribute)들</a>을 반영합니다.
 
-  The <code>onblur</code>, <code>onerror</code>, <code>onfocus</code>, <a attribute for="GlobalEventHandlers"><code>onload</code></a>,
-  <code>onresize</code>, and <code>onscroll</code> <a>event handlers</a> of the <code>Window</code>
-  object, exposed on the <{body}> element, replace the generic <a>event handlers</a> with
-  the same names normally supported by <a>html elements</a>.
+  <{body}> 요소(element)에 노출된 <code>Window</code> 객체의 <code>onblur</code>, 
+  <code>onerror</code>, <code>onfocus</code>, <a attribute for="GlobalEventHandlers"><code>onload</code></a>, 
+  <code>onresize</code>, <code>onscroll</code> <a lt="event handlers">이벤트 처리기들</a>은 일반적인 
+  <a lt="event handlers">이벤트 처리기들</a>을 보통 <a lt="html elements">html 요소(element)들</a>에 
+  의해 지원되는 동일한 이름으로 교체합니다.
 
   <p class="example">
-    Thus, for example, a bubbling <code>error</code> event dispatched on a child of
-    <a href="#the-body-element">the <code>body</code> element</a> of a {{Document}} would first trigger the <code>onerror</code>
-    <a>event handler content attributes</a> of that element, then that of the root <code>html</code>
-    element, and only <em>then</em> would it trigger the <code>onerror</code> <a>event handler
-    content attribute</a> on the <{body}> element. This is because the event would bubble
-    from the target, to the <{body}>, to the <{html}>, to the
-    {{Document}}, to the {{Window}}, and the <a>event handler</a> on the
-    <{body}> is watching the <code>Window</code> not the <{body}>. A regular event
-    listener attached to the <{body}> using <code>addEventListener()</code>, however, would
-    be run when the event bubbled through the <code>body</code> and not when it reaches the
-    <code>Window</code> object.
+    따라서, 예를 들어, {{Document}}의 <a href="#the-body-element"><code>body</code> 
+    요소(element)</a>의 자식에서 보내진 버블링 <code>error</code> 이벤트는 처음 그 요소(element)의 
+    <code>onerror</code> <a lt="event handler content attributes">이벤트 처리기 콘텐트 속성(attribute)들</a>을 
+    작동시키고, 이후 루트 <code>html</code> 요소(element)의 그것을 작동시키고, 그 <em>이후</em>에야 
+    <{body}> 요소(element)에서 <code>onerror</code> 
+    <a lt="event handler content attribute">이벤트 처리기 콘텐트 속성(attribute)</a>을 작동 시킬 
+    것입니다. 이것은 이벤트가 대상으로부터 <{body}>로, <{html}>로, {{Document}}로, {{Window}}로 
+    버블되고, <{body}>의 <a lt="event handler">이벤트 처리기</a>가 <{body}>가 아닌 
+    <code>Window</code>를 바라보고 있기 때문입니다. 하지만, <code>addEventListener()</code>를 
+    사용하여 <{body}>에 할당 된 보통의 이벤트 리스너는  이벤트가 <code>Window</code> 객체에 도달했을 
+    때가 아닌 <code>body</code>를 통해 버블되었을 때 수행될 것입니다. 
   </p>
 
   <div class="example">
-    This page updates an indicator to show whether or not the user is online:
+    이 페이지는 사용자가 온라인인지 아닌 지를 보여주는 표시기를 갱신합니다:
 
     <pre highlight="html">
       &lt;!DOCTYPE HTML&gt;
@@ -115,58 +115,58 @@
     </pre>
   </div>
 
-<h4 id="the-article-element">The <dfn element><code>article</code></dfn> element</h4>
+<h4 id="the-article-element"><dfn element><code>article</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>, but with no <{main}> element descendants.</dd>
-    <dd><a>Sectioning content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>flow content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><{main}> 요소(element) 후손들이 없는 <a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="Sectioning content">섹션화(sectioning) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>가 예상 되는 곳.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>
-      <a value for="role"><code>article</code></a> (default - <a><em>do not set</em></a>),
-      <a value for="role"><code>application</code></a>, <a value for="role"><code>document</code></a> or <a value for="role"><code>main</code></a>.
+      <a value for="role"><code>article</code></a> (기본 값 - <a lt="do not set"><em>설정하지 마세요</em></a>),
+      <a value for="role"><code>application</code></a>, <a value for="role"><code>document</code></a>나 <a value for="role"><code>main</code></a>.
     </dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용합니다.</dd>
   </dl>
 
-  The <{article}> element <a>represents</a> a complete, or self-contained, composition in a document,
-  page, application, or site. This could be a magazine, newspaper, technical or
-  scholarly article, an essay or report, a blog or other social media post.
+  <{article}> 요소(element)는 완전한 혹은 독립적인 문서, 페이지, 어플리케이션, 혹은 사이트 내의 
+  구성요소를 <a lt="represents">나타냅니다</a>. 이것은 잡지, 뉴스, 기술적 혹은 전문적 아티클, 
+  에세이나 보고서, 블로그나 다른 소셜 미디어 포스트 일 수 있습니다.
 
-  A general rule is that the <{article}> element is appropriate only if the element's
-  contents would be listed explicitly in the document's outline. Each <{article}> should be
-  identified, typically by including a heading(<{h1}>-<{h6}> element) as a child of the <{article}>
-  element.
+  일반적인 규칙은 <{article}> 요소(element)가 요소(element)의 콘텐트가 문서의 아웃라인 내에 
+  명시적으로 나열되는 경우에만 적절하다는 것입니다. 각 <{article}>은 일반적으로 <{article}> 
+  요소(element)의 자식으로 제목(heading)(<{h1}>-<{h6}> 요소(element))을 포함하는 것에 의해 
+  식별되어야(should) 합니다.
 
-  <p>Assistive Technology may convey the semantics of the <{article}> to users. This
-  information can provide a hint to users as to the type of content. For example the <code>role</code> of
-  the element, which in this case matches the element name "article", can be announced by
-  screen reader software when a user navigates to an <{article}> element. User Agents
-  may also provide methods to navigate to <{article}> elements.</p>
+  <p>보조 기술은 <{article}>의 의미를 사용자에게 전달 할 수 있습니다. 이 정보는 콘텐트의 유형으로 
+  사용자에게 힌트를 제공할 수 있습니다. 예를 들어 사용자가 <{article}> 요소(element)로 탐색할 경우, 
+  요소(element) 이름 "article"에 일치하는 요소(element)의 <code>role</code>은 스크린리더 소프트웨어에 
+  의해 알려질 수 있습니다. 유저 에이전트들은 또한 <{article}> 요소(element)로 탐색하기 위한 메서드들을 
+  제공할 수 있습니다.</p>
 
-  When <{article}> elements are nested, the inner <{article}> elements represent
-  articles that are in principle related to the contents of the outer article. For instance, a blog
-  entry on a site could consist of summaries of other blog entries in <{article}> elements nested
-  within the <{article}> element for the blog entry.
+  <{article}> 요소(element)들이 중첩되는 경우, 내부 <{article}> 요소(element)들은 원칙적으로 바깥 
+  아티클의 콘텐츠와 연관된 아티클들임을 의미합니다. 예를 들어, 사이트의 블로그 항목은 블로그 항목에 
+  대한 <{article}> 요소(element) 내에 중첩 된 <{article}> 요소들(element)에 다른 블로그 항목들의 
+  요약들로 구성될 수 있습니다.
 
-  Author information associated with an <{article}> element (q.v. the <code>address</code>
-  element) does not apply to nested <{article}> elements.
+  <{article}> 요소(element)와 연관된 작성자 정보는 (참조. <code>address</code> 요소(element)) 
+  중첩된 <{article}> 요소(element) 들에 적용되지 않습니다.
 
   <div class="example">
- <p>The following is an example of a blog post extract, marked up using the <{article}> element:</p>
+ <p>다음은 <{article}> 요소(element)를 사용하여 마크업 된, 블로그 포스트 발췌의 예입니다:</p>
  <pre highlight="html">
  &lt;article&gt;
   &lt;header&gt;
@@ -183,13 +183,13 @@
  &lt;/article&gt;</pre>
  </div>
 
- <p class="note">The schema.org  vocabulary can be used to provide more granular information about
-  the type of article, using the <a href="https://schema.org/Article">CreativeWork - Article</a>
-  subtypes, other information such as the publication date for the article can also be provided.</p>
+ <p class="note">schema.org 표현 형식은 <a href="https://schema.org/Article">창작 - 아티클</a> 하위 
+  유형을 사용하여 아티클의 유형에 대한 좀 더 세밀한 정보를 제공하는데 사용될 수 있고, 아티클에 대한 
+  발행 날짜와 같은 다른 정보들도 역시 제공될 수 있습니다.</p>
 
   <div class="example">
-  <p>This example shows a blog post using the <code>article</code> element, with some schema.org
-  annotations: </p>
+  <p>이 예제는 일부 schema.org 주석을 가지고 <code>article</code> 요소(element)를 사용하여 
+  블로그 포스트를 보여줍니다: </p>
   <pre highlight="html">
       &lt;article itemscope <mark>itemtype="https://schema.org/BlogPosting"</mark>&gt;
         &lt;header&gt;
@@ -205,7 +205,7 @@
       &lt;/article&gt;
     </pre>
 
-    <p>Here is that same blog post, but showing some of the comments: </p>
+    <p>여기 동일한 포스트이지만, 댓글들의 일부를 보여주는 것이 있습니다: </p>
   <pre highlight="html">     &lt;article itemscope itemtype="https://schema.org/BlogPosting"&gt;
         &lt;header&gt;
           &lt;h2 itemprop="headline"&gt;The Very First Rule of Life&lt;/h2&gt;
@@ -235,78 +235,76 @@
       &lt;/article&gt;
     </pre>
 
-    <p>Notice the use of an ordered list <code>ol</code> to organize the comments. Also note the
-  comments are a subsection of the article, identified using a <code>section</code> element.</p>
+    <p>댓글들을 구조화하기 위한 순서가 있는 목록 <code>ol</code>의 사용에 주목하세요. 또한 
+  댓글들이 <code>section</code> 요소(element)를 사용하여 식별된 아티클의 하위 섹션임을 참고하세요.</p>
 </div>
 
 
-<h4 id="the-section-element">The <dfn element><code>section</code></dfn> element</h4>
+<h4 id="the-section-element"><dfn element><code>section</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Sectioning content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>flow content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="Flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="Sectioning content">섹션화(sectioning) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>가 기대 되는 곳.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>
-      <a value for="role"><code>region</code></a> role (default - <a><em>do not set</em></a>),
+      <a value for="role"><code>region</code></a> 역할(role) (기본 값 - <a lt="do not set"><em>설정하지 마세요</em></a>),
       <a value for="role"><code>alert</code></a>, <a value for="role"><code>alertdialog</code></a>, <a value for="role"><code>application</code></a>,
       <a value for="role"><code>contentinfo</code></a>, <a value for="role"><code>dialog</code></a>, <a value for="role"><code>document</code></a>,
       <a value for="role"><code>log</code></a>, <a value for="role"><code>main</code></a>, <a value for="role"><code>marquee</code></a>,
-      <a value for="role"><code>presentation</code></a>, <a value for="role"><code>search</code></a> or <a value for="role"><code>status</code></a>.
+      <a value for="role"><code>presentation</code></a>, <a value for="role"><code>search</code></a>, <a value for="role"><code>status</code></a>.
     </dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용합니다.</dd>
   </dl>
 
-  The <a element>section</a> element <a>represents</a> a generic section of a document or application.
-  A section, in this context, is a thematic grouping of content. Each <code>section</code> should be
-  identified, typically by including a heading (<code>h1</code>-<code>h6</code> element) as a child
-  of the <a element>section</a> element.
+  <a element>section</a> 요소(element)는 문서나 어플리케이션의 일반적인 섹션을 
+  <a lt="represents">나타냅니다</a>. 이 맥락에서, 섹션은 콘텐트의 주제별 그룹 입니다. 각 
+  <code>section</code>은 일반적으로 <a element>section</a> 요소(element)의 자식으로 제목(heading)을 
+  (<code>h1</code>-<code>h6</code> 요소(element)) 포함하는 것으로 식별되어야(should) 합니다.
 
   <p class="example">
-    Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the
-    numbered sections of a thesis. A Web site's home page could be split into sections for an
-    introduction, news items, and contact information.
+    섹센의 예제들은 챕터들, 탭 대화상자의 여러 탭 페이지들, 논문의 번호가 매겨진 섹션들이 될 것입니다. 
+    웹 사이트의 홈페이지는 소개, 뉴스 항목들, 연락 정보에 대한 섹션들로 분할 될 수 있습니다.
   </p>
 
   <p class="note">
-    Authors are encouraged to use the <{article}> element instead of the
-    <{section}> element when the content is complete, or self-contained, composition.
+    작성자들은 콘텐트가 완전하거나 독립적인 구성 요소인 경우 <{section}> 요소(element) 대신 
+    <{article}> 요소(element)를 사용하도록 권장됩니다. 
   </p>
 
   <p class="note">
-    The <{section}> element is not a generic container element. When an element is needed
-    only for styling purposes or as a convenience for scripting, authors are encouraged to use the
-    <{div}> element instead. A general rule is that the <{section}> element is
-    appropriate only if the element's contents would be listed explicitly in the document's
-    <a>outline</a>.
+    <{section}> 요소(element)는 일반적인 컨테이너 요소(element)가 아닙니다. 요소(element)가 단지 
+    스타일링 목적이나 스크립팅을 위한 편의로 요구되는 경우, 작성자는 대신 <{div}> 요소(element)를 
+    사용하도록 권장됩니다. 일반적인 규칙은 <{section}> 요소(element)는 요소(element)의 콘텐트가 
+    문서의 <a lt="outline">개요(outline)</a>에 명시적으로 나열되는 경우에만 적절합니다.
   </p>
 
-  <p>Assistive Technology may convey the semantics of the <{section}> to users when
-  the element has an explicit label. This information can provide a hint to users as to the type of content.
-  For example the <code>role</code> of the element, which in this case is "region",
-  can be announced by screen reader software when a user navigates to an <{section}> element. User Agents
-  may also provide methods to navigate to <{section}> elements.</p>
+  <p>보조 기술은 요소(element)가 명시적인 레이블을 가지는 경우 사용자들에게 <{section}>의 의미를 
+  전달 할 수 있습니다. 이 정보는 사용자에게 콘텐트의 유형에 관하여 힌트를 제공할 수 있습니다. 예를  
+  들어 이 경우에 "region"인 요소(element)의 <code>role</code>은 사용자가 <{section}> 요소(element)로 
+  탐색할 때 스크린리더 소프트웨어에 의해 알려질 수 있습니다. 유저 에이전트들은 또한 <{section}> 
+  요소(element)들에 탐색하기 위한 메서드들을 제공할 수 있습니다.</p>
 
   <div class="example">
-    In the following example, we see an article (part of a larger Web page) about apples,
-    containing two short sections.
+    다음 예제에서, 우리는 두 개의 짧은 섹션들을 포함하는 사과에 대한 
+    아티클(큰 웹 페이지의 부분)을 볼 수 있습니다.
 
-  <p class="note">The <{section}> has an <code>aria-label</code> attribute providing a brief description of
-  the contents. Assistive technology may convey the <a value for="role"><code>region</code></a> role
-  along with the <code>aria-label</code> value as a hint to users.</p>
+  <p class="note"><{section}>은 콘텐츠의 간단한 설명을 제공하는 <code>aria-label</code> 
+  속성(attribute)을 가집니다. 보조 기술은 사용자들에게 힌트로서 <code>aria-label</code> 값과 
+  마찬가지로 <a value for="role"><code>region</code></a> 역할(role)을 전달할 수 있습니다.</p>
 
     <pre highlight="html">
       &lt;article&gt;
@@ -331,9 +329,10 @@
   </div>
 
   <div class="example">
-    Here is a graduation program with two sections, one for the list of people graduating, and
-    one for the description of the ceremony. (The markup in this example features an uncommon style
-    sometimes used to minimize the amount of <a>inter-element whitespace</a>.)
+    여기 하나는 졸업하는 사람들의 목록이고, 다른 하나는 식의 설명인, 두 개의 섹션들을 가진 졸업식 
+    프로그램이 있습니다. (이 예제에서 마크업은 대부분의 
+    <a lt="inter-element whitespace">요소(element) 간 여백</a>을 최소화하는데 종종 사용되는 흔하지 
+    않은 스타일을 특징으로 합니다.)
 
     <pre highlight="html">
       &lt;!DOCTYPE Html&gt;
@@ -383,10 +382,9 @@
   </div>
 
   <div class="example">
-    In this example, a book author has marked up some sections as chapters and some as appendices,
-    and uses CSS to style the headers in these two classes of section differently. The whole book is
-    wrapped in an <{article}> element as part of an even larger document containing other
-    books.
+    이 예에서, 책 저자는 챕터와 일부 부록으로 몇 개의 섹션들을 마크업했고, 이 두 종류의 섹션에 
+    제목들을 다르게 하기 위해 CSS를 사용합니다. 책 전체는 아른 책들을 포함하는 큰 문서의 일부로서 
+    <{article}> 요소(element)로 감싸집니다.
 
     <pre highlight="html">
       &lt;style&gt;
@@ -431,66 +429,65 @@
 
   </div>
 
-<h4 id="the-nav-element">The <dfn element><code>nav</code></dfn> element</h4>
+<h4 id="the-nav-element"><dfn element><code>nav</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Sectioning content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>flow content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Flow content</a>, but with no <{main}> element descendants.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="Flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="Sectioning content">섹션화(sectioning) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="Flow content">흐름(flow) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
+    <dd>후손 <{main}> 요소(element)가 없는 <a lt="Flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>
-      <a value for="role"><code>navigation</code></a> role (default - <a><em>do not set</em></a>) or
+      <a value for="role"><code>navigation</code></a> 역할(role) (기본 값 - <a lt="do not set"><em>설정하지 마세요</em></a>) 혹은
       <a value for="role"><code>presentation</code></a>.
     </dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용합니다.</dd>
   </dl>
 
-  The <{nav}> element <a>represents</a> a section of a page that links to other pages or to
-  parts within the page: a section with navigation links.
+  <{nav}> 요소(element)는 다른 페이지들이나 페이지 내의 부분으로 연결하는 페이지의 섹션을 
+  <a lt="represents">나타냅니다</a>: 탐색 링크들을 가진 섹션.
 
-   <p>Assistive Technology may convey the semantics of the <{nav}> to users.
-   This information can provide a hint to users as to the type of content.  For example the <code>role</code>
-   of the element, which in this case is "navigation", can be announced by screen reader software when a
-   user navigates to an <{nav}> element. User Agents may also provide methods to navigate to
-   <{nav}> elements.</p>
+   <p>보조 기술은 사용자에게 <{nav}>의 의미(semantic)를 전달 할 수 있습니다. 이 정보는 사용자에게  
+   콘텐트의 유형에 관하여 힌트를 제공할 수 있습니다. 예를 들어 이 경우에 "navigation"인,  
+   요소(element)의 <code>role</code>은 사용자가 <{nav}> 요소(element)로 탐색할 때 스크린리더 
+   소프트웨어에 의해 알려질 수 있습니다. 유저 에이전트들은 또한 <{nav}> 요소(element)들로 탐색하기  
+   위한 메서드들을 제공할 수 있습니다.</p>
 
   <p class="note">
-    In cases where the content of a <{nav}> element represents a list of items, use list
-    markup to aid understanding and navigation.
+    <{nav}> 요소(element)의 콘텐트가 항목들의 목록을 나타내는 경우, 이해와 탐색을 돕기 위해 목록 
+    마크업을 사용하세요.
   </p>
 
   <p class="note">
-    Not all groups of links on a page need to be in a <{nav}> element — the element is
-    primarily intended for sections that consist of major navigation blocks. In particular, it is
-    common for footers to have a short list of links to various pages of a site, such as the terms
-    of service, the home page, and a copyright page. The <{footer}> element alone is
-    sufficient for such cases; while a <{nav}> element can be used in such cases, it is
-    usually unnecessary.
+    페이지의 모든 링크 그룹들이 <{nav}> 요소(element)에 요구되지 않습니다 — 요소(element)는 주로 
+    주요한 탐색 블럭으로 구성되는 섹션들을 위해 의도된 것입니다. 특히, 서비스 약관, 홈페이지, 
+    저작권 페이지과 같은 사이트의 다양한 페이지로의 링크들의 짧은 목록을 가지는 푸터가 일반적입니다. 
+    <{footer}> 요소(element)만으로도 그러한 경우에 충분합니다; 그러한 경우에 <{nav}> 요소(element)가 
+    사용될 수 있지만, 일반적으로는 불필요합니다.
   </p>
 
   <p class="note">
-    User agents (such as screen readers) that are targeted at users who can benefit from navigation
-    information being omitted in the initial rendering, or who can benefit from navigation
-    information being immediately available, can use this element as a way to determine what content
-    on the page to initially skip or provide on request (or both).
+    최초 렌더링에서 생략되는 탐색 정보로부터 혜택을 받을 수 있는 사용자 혹은 즉시 사용 가능한 탐색 
+    정보로부터 혜택을 받을 수 있는 사용자를 대상으로 하는, 유저 에이전트들은 (스크린 리더들 같은) 
+    페이지의 콘텐트가 초기에 건너 뛸지 혹은 요청 할 때 제공할지 (혹은 둘 다일지)를 결정하기 위한 
+    방법으로 이 요소(element)를 사용할 수 있습니다.
   </p>
 
   <div class="example">
-    In the following example, there are two <{nav}> elements, one for primary navigation
-    around the site, and one for secondary navigation around the page itself.
+    다음 예제에서 기본적으로 사이트 주변 탐색과, 부차적으로 페이지 자체 주변 탐색, 
+    두 개의 <{nav}> 요소(element)들이 있습니다.
 
     <pre highlight="html">
       &lt;body&gt;
@@ -537,8 +534,8 @@
   </div>
 
   <div class="example">
-    In the following example, the page has several places where links are present, but only one of
-    those places is considered a navigation section.
+    다음 예제에서, 페이지는 링크가 존재하는 여러 위치를 가지지만, 그 위치 중 하나만 탐색 섹션으로 
+    간주됩니다.
 
     <pre highlight="html">
       &lt;body typeof="schema:Blog"&gt;
@@ -584,16 +581,16 @@
       &lt;/body&gt;
     </pre>
 
-    Notice the <{main}> element being used to wrap the main content of the page. In this
-    case, all content other than the page header and footer.
+    <{main}> 요소(element)가 페이지의 주요 콘텐트를 감싸기 위해 사용되는 것에 주목하세요. 이 경우, 
+    페이지 헤더와 푸터와 다른 모든 콘텐트입니다.
 
-    You can also see microdata annotations in the above example that use the schema.org vocabulary
-    to provide the publication date and other metadata about the blog post.
+    블로그 포스트에 대한 발행 날짜와 다른 메타데이터를 제공하기 위해 schema.org 표현 형식을 사용하는 
+    위 예제의 마이크로데이터 주석을 볼 수 있습니다.
   </div>
 
   <div class="example">
-    A <{nav}> element doesn't have to contain a list, it can contain other kinds of content
-    as well. In this navigation block, links are provided in prose:
+    <{nav}> 요소(element)는 목록을 포함할 필요가 없고, 그것은 다른 종류의 콘텐트도 포함할 수 
+    없습니다. 이 탐색 블럭에서, 링크들은 본문에 제공됩니다:
 
     <pre highlight="html">
       &lt;nav&gt;
@@ -617,8 +614,7 @@
   </div>
 
   <div class="example">
-    In this example, <{nav}> is used in an e-mail application, to let the user switch
-    folders:
+    이 예제에서, <{nav}>는 사용자가 폴더를 전환하도록, 이메일 어플리케이션에서 사용됩니다:
 
     <pre highlight="html">
       &lt;p&gt;&lt;input type=button value="Compose" onclick="compose()"&gt;&lt;/p&gt;
@@ -636,56 +632,56 @@
 
   </div>
 
-<h4 id="the-aside-element">The <dfn element><code>aside</code></dfn> element</h4>
+<h4 id="the-aside-element"><dfn element><code>aside</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Sectioning content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>flow content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Flow content</a>, but with no <{main}> element descendants.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="Flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="Sectioning content">섹션화(sectioning) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
+    <dd>후손 <{main}> 요소(element)가 없는 <a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>
-      <a value for="role"><code>complementary</code></a> role (default - <a><em>do not set</em></a>),
-      <a value for="role"><code>note</code></a>, <a value for="role"><code>search</code></a> or <a value for="role"><code>presentation</code></a>.
+      <a value for="role"><code>complementary</code></a> 역할(role) (기본 값 - <a lt="do not set">설정하지 마세요<em></em></a>),
+      <a value for="role"><code>note</code></a>, <a value for="role"><code>search</code></a>, <a value for="role"><code>presentation</code></a>.
     </dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용합니다.</dd>
   </dl>
 
-  The <{aside}> element <a>represents</a> a section of a page that consists of content that
-  is tangentially related to the content of the parenting <a>sectioning content</a>, and which
-  could be considered separate from that content. Such sections are often represented as sidebars
-  in printed typography.
+  <{aside}> 요소(element)는 부모 위치의 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>의 
+  콘텐트에 별로 관계 없이 관련되고, 그 콘텐트와 별개로 간주 될 수 있는 콘텐트로 구성되는 페이지의 
+  섹션을 <a lt="represents">나타냅니다</a>. 그 섹션들은 종종 인쇄된 표기법에서 사이드바(sidebar)들로 
+  표현됩니다.
 
-  The element can be used for typographical effects like pull quotes or sidebars, for advertising,
-  for groups of <{nav}> elements, and for other content that is considered separate from
-  the main content of the nearest ancestor <a>sectioning content</a>.
+  요소(element)는 발췌한 인용구나 사이드바 같은 인쇄 효과, 광고, <{nav}> 요소(element)들의 그룹, 
+  가장 가까운 조상 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>의 주요 콘텐트에서 독립된 
+  것으로 간주되는 다른 콘텐트로 사용될 수 있습니다.
 
-   <p>Assistive Technology may convey the semantics of the <{aside}> to users. This
-   information can provide a hint to users as to the type of content. For example the <code>role</code> of
-   the element, which in this case is "complementary", can be announced by screen reader software when a user
-   navigates to an <{aside}> element. User Agents may also provide methods to navigate to <{aside}>
-   elements.</p>
+   <p>보조 기술은 사용자에게 <{aside}>의 의미(semantic)를 전달 할 수 있습니다. 이 정보는 콘텐트의 유형에 
+   관하여 사용자에게 힌트를 전달 할 수 있습니다. 예를 들어 이 경우에 "complementary"인 
+   요소(element)의 <code>role</code>은 사용자가 <{aside}> 요소(element)로 탐색할 때 스크린리더 
+   소프트웨어에 의해 알려질 수 있습니다. 유저 에이전트들은 또한 <{aside}> 요소(element)들로 탐색하기 
+   위한 메서드들을 제공할 수 있습니다.</p>
 
   <p class="note">
-    It's not appropriate to use the <{aside}> element just for parentheticals, since those
-    are part of the main flow of the document.
+    단순히 삽입구에 <{aside}> 요소(element)를 사용하는 것은, 그것이 문서의 주요 흐름의 부분이기 
+    때문에 적절하지 않습니다.
   </p>
 
   <div class="example">
-    The following example shows how an aside is used to mark up background material on Switzerland
-    in a much longer news story on Europe.
+    다음 예제는 유럽에서 훨씬 더 긴 뉴스 기사에서 스위스의 배경 자료를 마크업하는데 aside가 사용되는 
+    방법을 보여줍니다.
 
     <pre highlight="html">
       &lt;aside&gt;
@@ -698,7 +694,7 @@
   </div>
 
   <div class="example">
-    The following example shows how an aside is used to mark up a pull quote in a longer article.
+    다음 예제는 긴 기사에 인용구를 마크업하기 위해 aside가 어떻게 사용되는지를 보여줍니다.
 
     <pre highlight="html">
       ...
@@ -724,8 +720,7 @@
   </div>
 
   <div class="example">
-    The following extract shows how <{aside}> can be used for blogrolls and other side
-    content on a blog:
+    다음 발췌는 <{aside}>가 블로그의 블로그롤(blogroll)들과 기타 부수 콘텐트에 어떻게 사용되는지를 보여줍니다:
 
     <pre highlight="html">
       &lt;body&gt;
@@ -799,34 +794,34 @@
   </div>
 
 <h4 id="the-h1-h2-h3-h4-h5-and-h6-elements">
-  The <dfn element><code>h1</code></dfn>, <dfn element><code>h2</code></dfn>,
+  <dfn element><code>h1</code></dfn>, <dfn element><code>h2</code></dfn>,
   <dfn element><code>h3</code></dfn>, <dfn element><code>h4</code></dfn>,
-  <dfn element><code>h5</code></dfn>, and <dfn element><code>h6</code></dfn>
-  elements
+  <dfn element><code>h5</code></dfn>, <dfn element><code>h6</code></dfn>
+  요소(element)들
 </h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Heading content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>flow content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="heading content">제목(heading) 콘텐트</a>.</dd>
+    <dd><a lt="palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>
-      <a value for="role"><code>heading</code></a> role (default - <a><em>do not set</em></a>),
-      <a value for="role"><code>tab</code></a> or <a value for="role"><code>presentation</code></a>.
+      <a value for="role"><code>heading</code></a> 역할(role) (기본 값 - <a lt="do not set"><em>설정하지 마세요</em></a>),
+      <a value for="role"><code>tab</code></a> 또는 <a value for="role"><code>presentation</code></a>.
     </dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들..</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLHeadingElement">
         interface HTMLHeadingElement : HTMLElement {};
@@ -834,16 +829,16 @@
     </dd>
   </dl>
 
-  These elements <a>represent</a> headings for their sections.
+  이 요소(element)들은 그들의 섹션들의 제목(heading)들을 <a lt="represent">나타냅니다</a>.
 
-  These elements have a <dfn>rank</dfn> given by the number in their name. The <code>h1</code>
-  element has the highest rank, the <code>h6</code> element has the lowest rank, and two
-  elements with the same name have equal rank.
+  이 요소(element)들은 그들의 이름에 숫자로 주어진 <dfn lt="rank">등급</dfn>을 가집니다. 
+  <code>h1</code> 요소(element)는 가장 상위 등급을 가지고, <code>h6</code> 요소(element)는 가장 낮은 
+  등급을 가지며, 동일한 이름을 가진 두 요소(element)들은 동일한 등급을 가집니다.
 
-  Use the <a>rank</a> of heading elements to create the document outline.
+  문서 개요(outline)을 생성하기 위해 제목(heading) 요소(element)들의 <a lt="rank">등급</a>을 사용하세요.
 
   <div class="example">
-  The following code shows how to mark up a document outline with six levels of headings.
+  다음 코드는 제목(heading)들의 6개 수준들을 가진 문서 개요(outline)을 마크업하는 방법을 보여줍니다.
   <pre highlight="html">
   &lt;body&gt;
   &lt;h1&gt;top level heading&lt;/h1&gt;
@@ -859,23 +854,24 @@
   &lt;/section&gt;
   &lt;/body&gt;
   </pre>
-  <p class="note">The document outline would be the same if the <{section}> elements were not used.</p>
+  <p class="note">문서 개요(outline)은 <{section}> 요소(element)가 사용되지 않았다면 동일할 것입니다.</p>
   </div>
 
-  <code>h2</code>–<code>h6</code> elements must not be used to markup subheadings, subtitles,
-  alternative titles and taglines unless intended to be the heading for a new section or subsection.
-  Instead use the markup patterns in the [[#common-idioms-without-dedicated-elements]] section of
-  the specification.
+  <code>h2</code>–<code>h6</code> 요소(element)들은 새로운 섹션이나 하위 섹션에 대한 
+  제목(heading)으로 의도되지 않은 한, 하위 제목(subheading)들, 부제(subtitle)들, 대체 
+  제목(alternative title)들, 태그 라인들을 마크업하는데 사용되지 않아야(must) 합니다. 대신 명세의 
+  [[#common-idioms-without-dedicated-elements]] 섹션의 마크업 패턴을 사용하세요.
 
-  <p>Assistive technology often announces the presence and level of a heading to users, as a hint
-  to understand the structure of a document and construct a 'mental model' of its outline. For example
-  the <code>role</code> of the element, which in this case is "heading" and the heading level "1" to "6", can be
-   announced by screen reader software when a user navigates to an <code>h1</code>–<code>h6</code> element.
-   User Agents may also provide methods to navigate to <code>h1</code>–<code>h6</code> elements.</p>
+  <p>보조 기술은 종종 사용자에게 문서의 구조를 이해하고 그것의 개요(ouline)의 
+  '심적 모형(metal model)'을 구성하기 위해 힌트로서, 제목(heading)의 존재와 수준을 알립니다. 예를 
+  들어, 이 경우에 "heading"이고 제목(heading) 수준 "1"부터 "6"까지인, 요소(element)의 
+   <code>role</code>은 사용자가 <code>h1</code>–<code>h6</code> 요소(element)로 탐색할 때 
+   스크린리더 소프트웨어에 의해 알려질 수 있습니다. 유저 에이전트들은 또한 
+   <code>h1</code>–<code>h6</code> 요소(element)로 탐색하기 위한 메서드들을 제공할 수 있습니다.</p>
 
   <div class="example">
-    As far as their respective document outlines (their heading and section structures) are
-    concerned, these two snippets are semantically equivalent:
+    그들의 각 문서 개요(outline)들이 (그들의 제목(heading)과 섹션 구조들) 영향을 미치는 한, 이 두 
+    코드 조각들은 의미적으로 동등합니다:
 
     <pre highlight="html">
       &lt;body&gt;
@@ -909,69 +905,76 @@
       &lt;/body&gt;
     </pre>
 
-    Authors might prefer the former style for its terseness, or the latter style for its convenience
-    in the face of heavy editing; which is best is purely an issue of preferred authoring style.
+    작성자들은 그것의 간결성을 위해 전자의 스타일이나, 혹은 많은 편집에도 불구하고 그것의 편의를 
+    위해 후자의 스타일을 선호할 수 있습니다; 무엇이 가장 좋으냐는 순수하게 선호되는 작성자 스타일의 
+    문제입니다.
 
-    The two styles can be combined, for compatibility with legacy tools while still future-proofing
-    for when that compatibility is no longer needed.
+    레거시 도구와의 호환성을 위해 두 스타일들은 결합될 수 있는 동시에 그 호환성이 더 이상 요구되지 
+    않는 경우를 위해 여전히 미래를 보장할 수 있습니다.
 
   </div>
 
- <p class="note">The semantics and meaning of the <code>h1</code>–<code>h6</code> elements are further
- detailed in the section on [[#headings-and-sections]].</p>
+ <p class="note"><code>h1</code>–<code>h6</code> 요소(element)들의 의미론과 의미는 
+ [[#headings-and-sections]]의 섹션에서 더 자세히 설명됩니다.</p>
 
-<h4 id="the-header-element">The <dfn element><code>header</code></dfn> element</h4>
+<h4 id="the-header-element"><dfn element><code>header</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>flow content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
     <dd>
-      <a>Flow content</a>, but with no <{main}> element descendants, or <{header}>, <{footer}> elements
-    that are not descendants of <a>sectioning content</a> which is a descendant of the <{header}>.
+      후손 <{main}> 요소(element) 혹은 <{header}>의 후손인 
+    <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>의 후손들이 아닌 <{header}>, <{footer}> 
+	요소(element)들이 없는 <a lt="flow content">흐름(flow) 콘텐트</a>.
     </dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>
-      <a value for="role"><code>banner</code></a> role (default - <a><em>do not set</em></a>) or
+      <a value for="role"><code>banner</code></a> 역할(role) (기본 값 - <a lt="do not set"><em>설정하지 마세요</em></a>) 혹은
       <a value for="role"><code>presentation</code></a>.
     </dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용합니다.</dd>
   </dl>
 
-  The <{header}> element <a>represents</a> introductory content for its nearest ancestor
-  <a>sectioning content</a> or <a>sectioning root</a> element. A <code>header</code> typically
-  contains a group of introductory or navigational aids.
+  <{header}> 요소(element)는 그것의 가장 가까운 조상 
+  <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>나 
+  <a lt="sectioning root">섹션화(sectioning) 루트</a> 요소(element)에 대한 서두의 콘텐트를 
+  <a lt="represents">나타냅니다</a>. <code>header</code>는 일반적으로 서두 혹은 탐색 도구의 그룹을 
+  포함합니다.
 
-  When the nearest ancestor <a>sectioning content</a> or <a>sectioning root</a> element is
-  <a href="#the-body-element">the <code>body</code> element</a>, then it applies to the whole page.
+  가장 가까운 조상 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>나 
+  <a lt="sectioning root">섹션화(sectioning) 루트</a> 요소(element)가 
+  <a href="#the-body-element"><code>body</code> 요소(element)</a>인 경우, 그것은 전체 페이지에 
+  적용됩니다.
 
   <p class="note">
-    A <{header}> element is intended to usually contain the section's heading (an
-    <code>h1</code>–<code>h6</code> element), but this is not required. The <code>header</code>
-    element can also be used to wrap a section's table of contents, a search form, or any relevant
-    logos.
+    <{header}> 요소(element)는 보통 섹션의 제목(heading)을 (<code>h1</code>–<code>h6</code> 
+    요소(element)) 포함하도록 의도되지만, 이것은 필수는 아닙니다. <code>header</code> 요소(element)는 
+    또한 섹션의 콘텐츠 목차, 검색 양식, 관련 로고들을 감싸는데 사용될 수 있습니다.
   </p>
 
- <p>Assistive Technology may convey the semantics of the <{header}> to users when the
- nearest ancestor <a>sectioning content</a> or <a>sectioning root</a> element is the <{body}> element.
-   This information can provide a hint to users as to the type of content.  For example the <code>role</code>
-   of the element, which in this case is "banner", can be announced by screen reader software when a
-   user navigates to an <{header}> element that is scoped to the <{body}> element. User Agents may
-   also provide methods to navigate to <{header}> elements scoped to the <{body}> element.</p>
+ <p>가장 가까운 조상 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>나 
+ <a lt="sectioning root">섹션화(sectioning) 루트</a> 요소(element)가 <{body}> 요소(element)인 경우 
+   보조 기술은 사용자들에게 <{header}>의 의미(semantic)를 전달할 수 있습니다. 이 정보는 콘텐트의 
+   유형에 관하여 사용자에게 힌트를 제공할 수 있습니다. 예를 들어 이 경우에 "banner"인, 요소(element)의 
+   <code>role</code>은 사용자가 범위를 <{body}> 요소(element)로 하는 <{header}> 요소(element)들로 
+   탐색할 때 스크린리더 소프트웨어에 의해 알려질 수 있습니다. 유저 에이전트들은 또한 범위를 
+   <{body}> 요소(element)로 하는 <{header}> 요소(element)들로 탐색 하기 위한 메서드들을 제공할 수 
+   있습니다.</p>
 
   <div class="example">
-    Here are some sample headers. This first one is for a game:
+    여기 일부 샘플 헤더들이 있습니다. 이 첫 번째 것은 게임에 대한 것입니다:
 
     <pre highlight="html">
       &lt;header&gt;
@@ -980,8 +983,7 @@
       &lt;/header&gt;
     </pre>
 
-    The following snippet shows how the element can be used to mark
-    up a specification's header:
+    다음 코드 조각은 요소(element)가 명세의 헤더를 마크업하는데 사용될 수 있는 방법을 보여줍니다:
 
     <pre highlight="html">
       &lt;header&gt;
@@ -1008,16 +1010,16 @@
   </div>
 
   <p class="note">
-    The <{header}> element is not <a>sectioning content</a>; it doesn't introduce a new
-    section.
+    <{header}> 요소(element)는 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>가 아닙니다; 
+    이것은 새로운 섹션을 도입시키지 않습니다.
   </p>
 
   <div class="example">
-  In this example, the page has a page heading given by the <code>h1</code> element, and two
-  subsections whose headings are given by <code>h2</code> elements. The content after the
-  <{header}> element is still part of the last subsection started in the
-  <{header}> element, because the <{header}> element doesn't take part in the
-  <a>outline</a> algorithm.
+  이 예제에서, 페이지는 <code>h1</code> 요소(element)에 의해 주어진 페이지 제목(heading)과, 
+  <code>h2</code> 요소(element)들에 의해 주어지는 제목(heading)의 두 하위 섹션들을 가집니다. 
+  <{header}> 요소(element) 이후의 콘텐트는 <{header}> 요소(element)가 
+  <a lt="outline">개요(outline)</a> 알고리즘에 참여하지 않기 때문에, 여전히 <{header}> 요소(element) 
+  내에서 시작된 마지막 하위 섹션의 일부입니다.
 
   <pre highlight="html">
     &lt;body&gt;
@@ -1041,15 +1043,16 @@
   </pre>
   </div>
   <p class="note">
-    For cases where an developer wants to nest a <code>header</code> or <code>footer</code> within
-  another <code>header</code>: The <{header}> element can only contain a <{header}> or <{footer}>
-  if they are themselves contained within <a>sectioning content</a>.
+    개발자가 다른 <code>header</code> 안에 <code>header</code>나 <code>footer</code>를 중첩시키기 
+  원하는 경우들에 대해: <{header}> 요소(element)는 <{header}>나 <{footer}>가 
+  <a lt="sectioning content">섹션화(sectioning) 콘텐트</a> 내에 포함된 것들인 경우에만 
+  <{header}>나 <{footer}>를 포함할 수 있습니다.
   </p>
 
   <div class="example">
-  <p>In this example, the <{article}> has a <{header}> which contains an <code>aside</code>
-  which itself contains a <{header}>. This is conforming as the descendant <code>header</code> is contained
-  within the <{aside}> element.</p>
+  <p>이 예제에서, <{article}>은 <{header}>를 포함하는 <code>aside</code>를 포함한 <{header}>를 
+  가집니다. 후손 <code>header</code>가 <{aside}> 요소(element) 내에 포함되기 때문에 이것은 
+  적합합니다.</p>
 
   <pre highlight="html">
     &lt;article&gt;
@@ -1069,70 +1072,75 @@
   </pre>
   </div>
 
-<h4 id="the-footer-element">The <dfn element><code>footer</code></dfn> element</h4>
+<h4 id="the-footer-element"><dfn element><code>footer</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>flow content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
     <dd>
-      <a>Flow content</a>, but with no <{main}> element descendants, or <{header}>, <{footer}> elements
-    that are not descendants of <a>sectioning content</a> which is a descendant of the <{footer}>.
+      후손 <{main}> 요소(element) 혹은 <{footer}>의 후손인 
+    <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>의 후손들이 아닌 <{header}>, <{footer}> 
+    요소(element)들이 없는 <a lt="flow content">흐름(flow) 콘텐트</a>.
     </dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>
-      <a value for="role"><code>contentinfo</code></a> role (default - <a><em>do not set</em></a>) or
+      <a value for="role"><code>contentinfo</code></a> 역할(role) (기본 값 - <a lt="do not set"><em>설정하지 마세요</em></a>) 또는
       <a value for="role"><code>presentation</code></a>.
     </dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용합니다.</dd>
   </dl>
 
-  The <{footer}> element <a>represents</a> a footer for its nearest ancestor
-  <a>sectioning content</a> or <a>sectioning root</a> element. A footer typically contains
-  information about its section such as who wrote it, links to related documents, copyright data,
-  and the like.
+  <{footer}> 요소(element)는 가장 가까운 조상 
+  <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>나 
+  <a lt="sectioning root">섹션화(sectioning) 루트</a>에 대한 푸터를 <a lt="represents">나타냅니다</a>. 
+  푸터는 일반적으로 누가 작성하였는지, 관련된 문서로의 링크, 저작권 데이터 등과 같은 그것의 섹션에 
+  대한 정보를 포함합니다.
 
-  When the <{footer}> element contains entire sections, they <a>represent</a> appendices,
-  indexes, long colophons, verbose license agreements, and other such content.
+  <{footer}> 요소(element)가 전체 섹션들을 포함할 경우, 그것들은 부록, 색인, 긴 출판사 이름들, 
+  장황한 사용권 동의서들, 기타 그러한 콘텐트들을 <a lt="represent">나타냅니다</a>.
 
-  <p>Assistive Technology may convey the semantics of the <{footer}> to users when the
- nearest ancestor <a>sectioning content</a> or <a>sectioning root</a> element is the <{body}> element.
-   This information can provide a hint to users as to the type of content.  For example the <code>role</code>
-   of the element, which in this case is "content information", can be announced by screen reader software when a
-   user navigates to an <{footer}> element that is scoped to the <{body}> element. User Agents may
-   also provide methods to navigate to <{footer}> elements scoped to the <{body}> element.</p>
+  <p>가장 가까운 조상 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>나 
+   <a lt="sectioning root">섹션화(sectioning) 루트</a>가 <{body}> 요소(element)인 경우 보조 기술은    
+   사용자에게 <{footer}>의 의미(semantic)를 전달할 수 있습니다. 이 정보는 콘텐트의 유형에 관하여 
+   사용자에게 힌트로 제공할 수 있습니다. 예를 들어, 이 경우 "콘텐트 정보"인 요소(element)의 
+   <code>role</code>은 사용자가 범위를 <{body}> 요소(element)로 하는 <{footer}> 요소(element)로 
+   탐색할 때 스크린리더 소프트웨어에 의해 알려질 수 있습니다. 유저 에이전트들은 또한 범위를 <{body}> 
+   요소(element)로 하는 <{footer}> 요소(element)들로 탐색하기 위한 메서드들을 제공할 수 있습니다.</p>
 
   <p class="note">
-    Contact information for the author or editor of a section belongs in an <code>address</code>
-    element, possibly itself inside a <{footer}>. Bylines and other information that could
-    be suitable for both a <code>header</code> or a <code>footer</code> can be placed in either (or
-    neither). The primary purpose of these elements is merely to help the author write
-    self-explanatory markup that is easy to maintain and style; they are not intended to impose
-    specific structures on authors.
+    섹션의 작성자나 편집자에 대한 연락 정보는 아마도 <{footer}> 내부에 있는, <code>address</code> 
+    요소(element)에 속합니다. <code>header</code>나 <code>footer</code> 모두에 적합할 수 있는 
+    필자의 이름을 적은 행들과 다른 정보는 둘 중 하나에 배치 될 수 (혹은 둘 중 어디에도 배치되지 
+    않을 수) 있습니다. 이 요소(element)들의 주된 목적은 단순히 작성자가 유지보수와 스타일이 쉬운 
+    자명한 마크업을 작성하는 것을 돕는 것입니다; 그것들은 작성자에게 특정한 구조들을 강요하기 위한 
+    것이 아닙니다.
   </p>
 
-  Footers don't necessarily have to appear at the <em>end</em> of a section, though they usually do.
+  푸터들은 보통 그렇기는 하지만, 섹션의 <em>끝</em>에 나타날 필요는 없습니다.
 
-  When the nearest ancestor <a>sectioning content</a> or <a>sectioning root</a> element is <a href="#the-body-element">the <code>body</code> element</a>, then it applies to the whole page.
+  가장 가까운 조상 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>나 
+  <a lt="sectioning root">섹션화(sectioning) 루트</a> 요소(element)가 <code>body</code> 인 경우, 
+  그것은 전체 페이지에 적용됩니다.
 
   <p class="note">
-    The <{footer}> element is not <a>sectioning content</a>; it doesn't introduce a new
-    section.
+    <{footer}> 요소(element)는 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>가 아닙니다; 
+    그것은 새로운 섹션을 도입하지 않습니다.
   </p>
 
   <div class="example">
-    Here is a page with two footers, one at the top and one at the bottom, with the same content:
+    여기 동일한 컨텐트를 가진 상단과 바닥에 있는 두 개의 푸터들을 가진 페이지가 있습니다:
 
     <pre highlight="html">
       &lt;body&gt;
@@ -1154,8 +1162,8 @@
   </div>
 
   <div class="example">
-    Here is an example which shows the <{footer}> element being used both for a site-wide
-    footer and for a section footer.
+    여기 사이트 전반 푸터와 섹션 푸터 둘 모두에 사용되는 <{footer}> 요소(element)를 보여주는 
+    예가 있습니다.
 
     <pre highlight="html">
       &lt;!DOCTYPE HTML&gt;
@@ -1197,11 +1205,11 @@
   </div>
 
   <div class="example">
-    Some site designs have what is sometimes referred to as "fat footers" — footers that contain a
-    lot of material, including images, links to other articles, links to pages for sending feedback,
-    special offers... in some ways, a whole "front page" in the footer.
+    일부 사이트 디자인들은 "넓은 푸터들" — 이미지, 다른 아티클들로의 링크, 피드백을 보내기 위한 
+    페이지로의 링크, 특별한 제안... 어떤 점에서는 푸터 내 전체 "프론트 페이지"를 포함하는 많은 
+    자료들을 포함하는 푸터들 같은 것에 종종 참조되는 것을 가집니다.
 
-    This fragment shows the bottom of a page on a site with a "fat footer":
+    이 코드 조각은 "넓은 푸터"를 가진 사이트의 페이지의 바닥을 보여줍니다:
 
     <pre highlight="html">
       ...
@@ -1234,39 +1242,38 @@
     </pre>
   </div>
 
-<h4 id="the-address-element">The <dfn element><code>address</code></dfn> element</h4>
+<h4 id="the-address-element"><dfn element><code>address</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>flow content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Flow content</a>, but with no <a>heading
-    content</a> descendants, no <a>sectioning content</a>
-    descendants, and no <{header}>, <{footer}>, or
-    <{address}> element descendants.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a value for="role"><code>contentinfo</code></a> role.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="Content model">콘텐트 모델</a>:</dt>
+    <dd>후손 <a lt="heading content">제목(heading) 콘텐트</a>들을 가지지 않고, 후손 
+    <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>들을 가지지 않으며, 후손 <{header}>, 
+    <{footer}> 혹은 <{address}> 요소(element)를 가지지 않는 
+    <a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a value for="role"><code>contentinfo</code></a> 역할(role).</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용합니다.</dd>
   </dl>
 
-  The <{address}> element <a>represents</a> the contact information for its nearest
-    <{article}> or <{body}> element ancestor. If that is <a href="#the-body-element">the <code>body</code> element</a>,
-    then the contact information applies to the document as a whole.
+  <{address}> 요소(element)는 가장 가까운 조상 <{article}>이나 <{body}> 요소(element)에 대한 연락 
+    정보를 <a lt="represents">나타냅니다</a>. 그것이 <a href="#the-body-element"><code>body</code> 
+    요소(element)</a>라면 연락 정보는 전체 문서에 적용됩니다.
 
   <div class="example">
-    For example, a page at the W3C Web site related to HTML might include the following contact
-    information:
+    예를 들어, HTML에 관련된 W3C 웹 사이트에 있는 페이지는 다음 연락 정보를 포함할 수 있습니다:
 
     <pre highlight="html">
       &lt;ADDRESS&gt;
@@ -1277,57 +1284,56 @@
     </pre>
   </div>
 
-  The <{address}> element must not be used to represent arbitrary addresses (e.g., postal
-  addresses), unless those addresses are in fact the relevant contact information. (The
-  <{p}> element is the appropriate element for marking up postal addresses in general.)
+  <{address}> 요소(element)는 그 주소들이 실제로 관련 연락 정보가 아닌 한, 임의의 주소를 (예를 들어, 
+  우편 주소들) 나타내는데 사용되지 않아야(must) 합니다. (일반적으로 <{p}> 요소(element)가 우편 
+  주소들을 마크업하기 위한 적절한 요소(element)입니다.)
 
-  The <{address}> element must not contain information other than contact information.
+  <{address}> 요소(element)는 연락 정보 외 다른 정보를 포함하야 않아야(must) 합니다. 
 
   <div class="example">
-    For example, the following is non-conforming use of the <{address}> element:
+    예를 들어, 다음은 <{address}> 요소(element) 사용의 부적합한 사용입니다:
 
     <pre class="bad" highlight="html">&lt;ADDRESS&gt;Last Modified: 1999/12/24 23:37:50&lt;/ADDRESS&gt;</pre>
   </div>
 
-  Typically, the <{address}> element would be included along with other information in a
-  <{footer}> element.
+  일반적으로, <{address}> 요소(element)는 <{footer}> 요소(element)에 다른 정보와 함께 포함될 것입니다.
 
   <div class="impl">
-    The contact information for a node <var>node</var> is a collection of <code>address</code>
-    elements defined by the first applicable entry from the following list:
+    노드 <var>node</var>에 대한 연락 정보는 다음 목록 중 첫 번째 적용가능한 항목에 의해 정의된 
+    <code>address</code> 요소(element)들의 컬렉션입니다:
 
     <dl class="switch">
-      <dt>If <var>node</var> is an <{article}> element</dt>
-      <dt>If <var>node</var> is a <{body}> element</dt>
+      <dt><var>node</var>가 <{article}> 요소(element)라면</dt>
+      <dt><var>node</var>가 <{body}> 요소(element)라면 </dt>
       <dd>
-        The contact information consists of all the <{address}> elements that have
-        <var>node</var> as an ancestor and do not have another <code>body</code> or
-        <{article}> element ancestor that is a descendant of <var>node</var>.
+        연락 정보는 조상으로 <var>node</var>를 가지고 <var>node</var>의 후손인 다른 조상 
+        <code>body</code>나 <{article}> 요소(element)를 가지지 않는 모든 <{address}> 
+        요소(element)들로 구성됩니다.
       </dd>
 
-      <dt>If <var>node</var> has an ancestor element that is an <{article}> element</dt>
-      <dt>If <var>node</var> has an ancestor element that is a <{body}> element</dt>
+      <dt><var>node</var>가 <{article}> 요소(element)인 조상 요소(element)를 가진다면</dt>
+      <dt><var>node</var>가 <{body}>  요소(element)인 조상 요소(element)를 가진다면</dt>
       <dd>
-        The contact information of <var>node</var> is the same as the contact information of the
-        nearest <{article}> or <{body}> element ancestor, whichever is nearest.
+        <var>node</var>의 연락 정보는 가장 가까운 조상 <{article}>나 <{body}> 요소(element) 중 
+        가장 가까운 것의 연락 정보와 동일합니다.
       </dd>
 
-      <dt>If <var>node</var>'s <a>node document</a> has a <{body}> element</dt>
+      <dt><var>node</var>의 <a lt="node document">노드 문서</a>가 <{body}> 요소(element)를 가진다면</dt>
       <dd>
-        The contact information of <var>node</var> is the same as the contact information of
-        <a href="#the-body-element">the <code>body</code> element</a> of the {{Document}}.
+        <var>node</var>의 연락 정보는 {{Document}}의 <a href="#the-body-element"><code>body</code> 
+        요소(element)</a>의 연락 정보와 동일합니다.
       </dd>
 
-      <dt>Otherwise</dt>
-      <dd> There is no contact information for <var>node</var>.</dd>
+      <dt>그렇지 않으면</dt>
+      <dd> <var>node</var>에 대한 연락 정보는 없습니다.</dd>
     </dl>
 
-    User agents may expose the contact information of a node to the user, or use it for other
-    purposes, such as indexing sections based on the sections' contact information.
+    유저 에이전트들은 사용자에게 노드의 연락 정보를 노출하거나, 섹션의 연락 정보를 기반으로 섹션들을 
+    색인하는 것 같은 다른 목적으로 사용할 수 있습니다.
   </div>
 
   <div class="example">
-    In this example the footer contains contact information and a copyright notice.
+    이 예제에서 푸터는 연락 정보와 저작권 공고를 포함합니다.
 
     <pre highlight="html">
       &lt;footer&gt;
@@ -1340,24 +1346,26 @@
     </pre>
   </div>
 
-<h4 id="headings-and-sections">Headings and sections</h4>
+<h4 id="headings-and-sections">제목(heading)들과 섹션들</h4>
 
-  The <code>h1</code>–<code>h6</code> elements are headings.
+  <code>h1</code>–<code>h6</code> 요소(element)들은 제목(heading)들입니다.
 
-  The first element of <a>heading content</a> in an element of <a>sectioning content</a>
-  <a>represents</a> the heading for that section. Subsequent headings of equal or higher <a>rank</a>
-  start new (implied) sections, headings of lower <a>rank</a> start implied subsections that are
-  part of the previous one. In both cases, the element <a>represents</a> the heading of the implied
-  section.
+  <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>의 요소(element) 내 
+  <a lt="heading content">제목(heading) 콘텐트</a>의 첫 번째 요소(element)는 그 섹션에 대한 
+  제목(heading)을 <a lt="represents">나타냅니다</a>. 동일한 혹은 상위 <a lt="rank">등급</a>의 다음 
+  제목(heading)들은 새로운 (암묵적인) 섹션들을 시작하고, 하위 <a lt="rank">등급</a>의 
+  제목(heading)들은 이전 것의 일부인 암묵적인 하위 섹션들을 시작합니다. 두 경우에, 요소(element)는 
+  암묵적인 섹션의 제목(heading)을 <a lt="represents">나타냅니다</a>.
 
-  <code>h1</code>–<code>h6</code> elements must not be used to markup subheadings, subtitles,
-  alternative titles and taglines unless intended to be the heading for a new section or subsection.
-  Instead use the markup patterns in the [[#common-idioms-without-dedicated-elements]] section of
-  the specification.
+  <code>h1</code>–<code>h6</code> 요소(element)들은 새로운 섹션이나 하위 섹션에 대한 
+  제목(heading)으로 의도되지 않은 한, 하위 제목(subheading)들, 부제(subtitle)들, 대체 
+  제목(alternative title)들, 태그 라인들을 마크업하는데 사용되지 않아야(must) 합니다. 대신 명세의 
+  [[#common-idioms-without-dedicated-elements]] 섹션의 마크업 패턴을 사용하세요.
 
-  Certain elements are said to be <dfn>sectioning roots</dfn>, including <code>blockquote</code> and
-  <{td}> elements. These elements can have their own outlines, but the sections and
-  headings inside these elements do not contribute to the outlines of their ancestors.
+  특정 요소(element)들은 <code>blockquote</code>와 <{td}> 요소(element)들을 포함하여, 
+  <dfn lt="sectioning roots">섹션화(sectioning) 루트들</dfn>로 불립니다. 이 요소(element)들은 그들 
+  자신의 개요(outline)들을 가질 수 있지만, 이 요소(element)들 안의 섹션들과 제목(heading)들은 그들 
+  조상들의 개요(outline)들에 영향을 주지 않습니다.
 
   <ul class="brief category-list">
     <li><{blockquote}></li>
@@ -1368,12 +1376,13 @@
     <li><{td}></li>
   </ul>
 
-  <a>Sectioning content</a> elements are always considered subsections of their nearest ancestor
-  <a>sectioning root</a> or their nearest ancestor element of <a>sectioning content</a>, whichever
-  is nearest, regardless of what implied sections other headings may have created.
+  <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>는, 다른 제목(heading)들이 생성할 수 있는 
+  암묵적 섹션에 상관없이, 항상 그들의 가장 가까운 조상 <a lt="sectioning root">섹션화(sectioning) 
+  루트</a>나 그들의 가장 가까운 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>의 중 가장 
+  가까운 것의 하위 섹션들로 간주됩니다.
 
   <div class="example">
-    For the following fragment:
+    다음 코드 조각에 대한:
 
     <pre highlight="html">
       &lt;body&gt;
@@ -1391,26 +1400,28 @@
       &lt;/body&gt;
     </pre>
 
-    ...the structure would be:
+    ...구조는 이러할 것입니다:
 
-    1. Foo (heading of explicit <code>body</code> section, containing the "Grunt" paragraph)
-        1. Bar (heading starting implied section, containing a block quote and the "Baz" paragraph)
-        2. Quux (heading starting implied section with no content other than the heading itself)
-        3. Thud (heading of explicit <code>section</code> section)
+    1. Foo ("Grunt" 문단을 포함하는, 명시적인 <code>body</code> 섹션의 제목(heading))
+        1. Bar (인용구와 "Baz" 문단을 포함하는, 암묵적 섹션을 시작하는 제목(heading))
+        2. Quux (제목(heading) 자체 외 다른 콘텐트가 없는 암묵적 세션을 시작하는 제목(heading))
+        3. Thud (명시적인 <code>section</code> 섹션의 제목(heading))
 
-    Notice how the <code>section</code> ends the earlier implicit section so that a later paragraph
-    ("Grunt") is back at the top level.
+    <code>section</code>이 이전의 암묵적 섹션을 종료하기 때문에 마지막 문단("Grunt")이 최 상위 
+    수준으로 돌아가는 방식에 주목하세요.
   </div>
 
-  Sections may contain headings of a <a>rank</a> equal to their section nesting level. Authors should use
-  headings of the appropriate <a>rank</a> for the section's nesting level.
+  섹션들은 그들의 섹션 중첩 수준과 동일한 <a lt="rank">등급</a>의 제목(heading)들을 포함할 수 
+  있습니다. 작성자들은 섹션의 중첩 수준에 대한 적절한 <a lt="rank">등급</a>의 제목(heading)들을 
+  사용해야(should) 합니다.
 
-  Authors are also encouraged to explicitly wrap sections in elements of <a>sectioning content</a>,
-  instead of relying on the implicit sections generated by having multiple headings in one element
-  of <a>sectioning content</a>.
+  작성자들은 또한 하나의 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>의 요소(element)에 
+  여러 제목(heading)들을 가지는 것에 의해 생성되는 암묵적 섹션들에 의존하는 대신, 
+  <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>의 요소(element)들 안의 섹션들을 
+  명시적으로 감싸도록 권장됩니다.
 
   <div class="example">
-    For example, the following is correct:
+    예를 들어, 다음은 정확합니다:
 
     <pre highlight="html">
       &lt;body&gt;
@@ -1427,7 +1438,7 @@
       &lt;/body&gt;
     </pre>
 
-    However, the same document would be more clearly expressed as:
+    하지만, 동일한 문서가 다음과 같이 좀 더 명확하게 표현될 수 있습니다:
 
     <pre highlight="html">
       &lt;body&gt;
@@ -1448,40 +1459,42 @@
       &lt;/body&gt;
     </pre>
 
-    Both of the documents above are semantically identical and would produce the same outline in
-    compliant user agents.
+    위 문서들 모두 의미론적으로 동일하고 규칙을 준수하는 유저 에이전트들에서 동일한 개요(outline)를 
+    생성할 것입니다.
   </div>
 
-<h5 id="creating-an-outline">Creating an outline</h5>
+<h5 id="creating-an-outline">개요(outline) 생성</h5>
 
   <p class="warning">
-    There are currently no known native implementations of the outline algorithm in graphical browsers or
-    assistive technology user agents, although the algorithm is implemented in other software such
-    as conformance checkers and browser extensions. Therefore the <a>outline</a> algorithm
-  cannot be relied upon to convey document structure to users. Authors should use heading <a>rank</a>
-    (<code>h1</code>-<code>h6</code>) to convey document structure.
+    개요(outline) 알고리즘이 적합성 검사기들과 브라우저 확장들 같은 다른 소프트웨어에 구현되기는 
+    하지만, 그래픽 브라우저들이나 보조 도구 유저 에이전트들에 현재 알려진 개요(outline) 알고리즘의 
+    네이티브 구현은 없습니다. 따라서 <a lt="outline">개요</a> 알고리즘은 사용자들에게 문서 구조를 
+    전달하는데 신뢰될 수 없습니다. 작성자들은 문서 구조를 전달하기 위해 제목(heading) 
+    <a lt="rank">등급</a>을 (<code>h1</code>-<code>h6</code>) 사용해야(should) 합니다.
   </p>
-<p><em>This section is non-normative</em></p>
+<p><em>이 섹션은 비 규범적입니다.</em></p>
   <div class="impl">
-    This section defines an algorithm for creating an outline for a <a>sectioning content</a>
-    element or a <a>sectioning root</a> element. It is defined in terms of a walk over the nodes
-    of a DOM tree, in <a>tree order</a>, with each node being visited when it is <i>entered</i> and
-    when it is <i>exited</i> during the walk.
+    이 섹션은 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a> 요소(element)나 
+    <a lt="sectioning root">섹션화(sectioning) 루트</a>에 대한 개요(outline) 생성을 위한 알고리즘을 
+    정의합니다. 이것은 순회 하는 동안 <i>입장</i>할 때와 <i>퇴장</i>할 때 방문되는 각 노드들을 가지고, 
+    <a lt="tree order">트리 순서</a>에 따라 DOM 트리의 노드들을 순회하는 측면에서 정의됩니다.
   </div>
 
-  The <dfn>outline</dfn> for a <a>sectioning content</a> element or a <a>sectioning root</a> element
-  consists of a list of one or more potentially nested <a>sections</a>. The element for which an
-  <a>outline</a> is created is said to be <dfn>the outline's owner</dfn>.
+  <a lt="sectioning content">섹션화(sectioning) 콘텐트</a> 요소(element)나 
+  <a lt="sectioning root">섹션화(sectioning) 루트</a> 요소(element)에 대한 
+  <dfn lt="outline">개요(outline)</dfn>는 하나 이상의 잠재적으로 중첩되는 
+  <a lt="sections">섹션들</a>의 목록으로 구성됩니다. <a lt="outline">개요(outline)</a>이 생성되는 
+  요소(element)는 <dfn lt="the outline's owner">개요(outline)의 소유자</dfn>라고 합니다.
 
-  A <dfn>section</dfn> is a container that corresponds to some nodes in the original DOM tree. Each
-  section can have one heading associated with it, and can contain any number of further nested
-  sections. <span class="impl">The algorithm for the outline also associates each node in the DOM
-  tree with a particular section and potentially a heading.</span> (The sections in the outline
-  aren't <a element>section</a> elements, though some may correspond to such elements — they are
-  merely conceptual sections.)
+  <dfn lt="section">섹션</dfn>은 원래 DOM 트리의 일부 노드에 해당하는 컨테이너 입니다. 각 섹션은 
+  그것에 연관된 제목(heading)을 가질 수 있고, 추가적인 중첩된 섹션들을 얼마든지 포함할 수 있습니다. 
+  <span class="impl">개요(outline)에 대한 알고리즘은 또한 특정 섹션과 잠재적으로 제목(heading)을 
+  가진 DOM 트리의 각 노드를 연관시킵니다.</span> (개요(outline)의 섹션들은
+  <a element lt="section">섹션</a> 요소(element)들에 해당 할 수 있기는 하지만 
+  <a element lt="section">섹션</a> 요소(element)들은 아닙니다 — 그것들은 단지 개념적인 섹션들입니다.)
 
   <div class="example">
-    The following markup fragment:
+    다음 마크업 조각은:
 
     <pre highlight="html">
       &lt;body&gt;
@@ -1494,208 +1507,219 @@
       &lt;/body&gt;
     </pre>
 
-    ...results in the following outline being created for the <code>body</code> node (and thus the
-    entire document):
+    ...<code>body</code> 노드에 대해 (그리고 따라서 전체 문서에 대해) 생성되는 다음 개요(outline)를 
+    낳습니다:
 
-    1. Section created for <code>body</code> node. Associated with heading "A". Also associated with
-        paragraph "B". Nested sections:
-        1. Section implied for first <code>h2</code> element. Associated with heading "C". Also
-            associated with paragraph "D". No nested sections.
-        2. Section implied for second <code>h2</code> element. Associated with heading "E". Also
-            associated with paragraph "F". No nested sections.
+    1. <code>body</code> 노드에 대해 생성된 섹션. 제목(heading) "A"와 연관됨. 또한 문단 "B"와 연관됨. 
+        중첩된 섹션들:
+        1. 첫 번째 <code>h2</code> 요소(element)에 대한 암묵적 섹션. 제목(heading) "C"와 연관됨. 
+            또한 문단 "D"와 연관됨. 중첩된 섹션들 없음.
+        2. 두 번째 <code>h2</code> 요소(element)에 대한 암묵적 섹션. 제목(heading) "E"와 연관됨. 
+            또한 문단 "F"와 연관됨. 중첩된 섹션들 없음.
   </div>
 
   <div class="impl">
-    The algorithm that must be followed during a walk of a DOM subtree rooted at a
-    <a>sectioning content</a> element or a <a>sectioning root</a> element to determine that
-    element's <a>outline</a> is as follows:
+    요소(element)의 <a lt="outline">개요(outline)</a>를 결정하기 위해 
+    <a lt="sectioning content">섹션화(sectioning) 콘텐트</a> 요소(element)나 
+    <a lt="sectioning root">섹션화(sectioning) 루트</a>에 뿌리를 둔 DOM 하위트리의 순회 동안 
+    따라야(must)하는 알고리즘은 다음과 같습니다:
 
-    1. Let <var>current outline target</var> be null. (It holds the element whose <a>outline</a> is
-        being created.)
-    2. Let <var>current section</var> be null. (It holds a pointer to a <a>section</a>, so that
-        elements in the DOM can all be associated with a section.)
-    3. Create a stack to hold elements, which is used to handle nesting. Initialize this stack to
-        empty.
-    4. Walk over the DOM in <a>tree order</a>, starting with the <a>sectioning content</a> element
-        or <a>sectioning root</a> element at the root of the subtree for which an outline is to be
-        created, and trigger the first relevant step below for each element as the walk enters and
-        exits it.
+    1. <var>current outline target</var>를 null로 둡니다. (이것은 생성 되는 중인
+        <a lt="outline">개요(outline)</a>의 요소(element)를 보유합니다.)
+    2. <var>current section</var>를 null로 둡니다. (이것은 <a lt="section">섹션</a>에 대한 포인터를 
+        보유하고, 따라서 DOM의 요소(element)들은 모두 섹션에 연관될 수 있습니다.)
+    3. 중첩을 처리하는데 사용되는 요소(element)들을 보유하기 위한 스택을 생성합니다. 이 스택을 빈 
+        것으로 초기화 합니다.
+    4. 개요(outline)가 생성되는 하위 트리의 루트에 있는 
+        <a lt="sectioning content">섹션화(sectioning) 콘텐트</a> 요소(element)나 
+        <a lt="sectioning root">섹션화(sectioning) 루트</a>를 가지고 시작하여 
+        <a lt="tree order">트리 순서</a>에 따라 DOM을 순회하고, 입장하고 퇴장할 때 각 요소(element)에 
+        대해 아래 첫 번째 관련 단계를 작동시킵니다.
 
         <dl class="switch">
-          <dt>When exiting an element, if that element is the element at the top of the stack</dt>
+          <dt>요소를 퇴장 중일때, 그 요소(element)가 스택의 최 상단에 있는 요소(element)라면</dt>
           <dd>
             <p class="note">
-              The element being exited is a <a>heading content</a> element or an element with a
-              <code>hidden</code> attribute.
+              퇴장 되는 중인 요소(element)는 <a lt="heading content">제목(heading) 콘텐트</a> 
+              요소(element)나 <code>hidden</code> 속성(attribute)을 가진 요소(element)입니다.
             </p>
 
-            Pop that element from the stack.
+            스택으로부터 그 요소(element)를 꺼냅니다.
           </dd>
 
           <dt>
-            If the top of the stack is a <a>heading content</a> element or an element with a
-            <code>hidden</code> attribute
+            스택의 최 상단이 <a lt="heading content">제목(heading) 콘텐트</a> 요소나 
+            <code>hidden</code> 속성(attribute)을 가진 요소(element)입니다.
           </dt>
-          <dd>Do nothing.</dd>
+          <dd>아무 것도 하지 않습니다.</dd>
 
-          <dt>When entering an element with a <code>hidden</code> attribute</dt>
+          <dt><code>hidden</code> 속성(attribute)를 가진 요소(element)를 입장 중일 때</dt>
           <dd>
-            Push the element being entered onto the stack. (This causes the algorithm to skip that
-            element and any descendants of the element.)
+            스택에 입장 되는 중인 요소(element)를 넣습니다. (이것은 그 요소(element)와 
+            요소(element)의 모든 후손들을 건너 뛰기 위한 알고리즘을 발생시킵니다.)
           </dd>
 
-          <dt>When entering a <a>sectioning content</a> element</dt>
+          <dt><a lt="sectioning content">섹션화(sectioning) 콘텐트</a> 요소(element)에 입장 중일 때</dt>
           <dd>
-            Run these steps:
-            1. If <var>current outline target</var> is not null, run these substeps:
-                1. If the <var>current section</var> has no heading, create an implied heading and
-                    let that be the heading for the <var>current section</var>.
-                2. Push <var>current outline target</var> onto the stack.
-            2. Let <var>current outline target</var> be the element that is being entered.
-            3. Let <var>current section</var> be a newly created <a>section</a> for the
-                <var>current outline target</var> element.
-            4. Associate <var>current outline target</var> with <var>current section</var>.
-            5. Let there be a new <a>outline</a> for the new <var>current outline target</var>,
-                initialized with just the new <var>current section</var> as the only <a>section</a>
-                in the outline.
+            이 단계들을 수행합니다:
+            1. <var>current outline target</var>가 null이 아니라면, 이 단계들을 수행합니다:
+                1. <var>current section</var>가 제목(heading)을 가지지 않는다면, 암묵적 
+                    제목(heading)을 생성하고 그것을 <var>current section</var>에 대한 
+                    제목(heading)으로 둡니다.
+                2. 스택에 <var>current outline target</var>를 넣습니다.
+            2. <var>current outline target</var>를 입장 되는 중인 요소(element)로 둡니다.
+            3. <var>current section</var>를 <var>current outline target</var> 요소(element)에 대해 
+                새롭게 생성된 <a lt="section">섹션</a>으로 둡니다.
+            4. <var>current outline target</var>를 <var>current section</var>과 연관시킵니다.
+            5. 개요(outline)의 유일한 <a lt="section">섹션</a>으로서 새로운 
+                <var>current section</var>으로 초기화 된, 새로운 <var>current outline target</var>에 
+                대한 새로운 <a lt="outline">개요(outline)</a>이 있게 합니다.
           </dd>
 
-          <dt>When exiting a <a>sectioning content</a> element, if the stack is not empty</dt>
+          <dt><a lt="sectioning content">섹션화(sectioning) 콘텐트</a> 요소(element)를 퇴장 중일 때, 
+            스택이 비어있지 않다면</dt>
           <dd>
-            Run these steps:
-            1. If the <var>current section</var> has no heading, create an implied heading and let
-                that be the heading for the <var>current section</var>.
-            2. Pop the top element from the stack, and let the <var>current outline target</var> be
-                that element.
-            3. Let <var>current section</var> be the last section in the <a>outline</a> of the
-                <var>current outline target</var> element.
-            4. Append the <a>outline</a> of the <a>sectioning content</a> element being exited to
-                the <var>current section</var>. (This does not change which section is the last
-                section in the <a>outline</a>.)
+            이 단계들을 수행합니다:
+            1. <var>current section</var>가 제목(heading)을 가지지 않는다면, 암묵적 제목(heading)을 
+                생성하고 그것을 <var>current section</var>에 대한 제목(heading)으로 둡니다.
+            2. 스택으로부터 최 상단 요소(element)를 꺼내고, <var>current outline target</var>를 
+                그 요소(element)로 둡니다.
+            3. <var>current section</var>를 <var>current outline target</var> 요소(element)의 
+                <a lt="outline">개요(outline)</a> 내의 마지막 섹션으로 둡니다.
+            4. 퇴장하는 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a> 요소(element)의 
+                <a lt="outline">개요(outline)</a>을 <var>current section</var>에 추가(append)합니다. 
+                (이것은 어떤 섹션이 <a lt="outline">개요(outline)</a> 내의 마지막 섹션인지를 
+                변경하지 않습니다.)
           </dd>
 
-          <dt>When entering a <a>sectioning root</a> element</dt>
+          <dt><a lt="sectioning root">섹션화(sectioning) 루트</a> 요소(element)를 입장 중일 때</dt>
           <dd>
-            Run these steps:
-            1. If <var>current outline target</var> is not null, push
-                <var>current outline target</var> onto the stack.
-            2. Let <var>current outline target</var> be the element that is being entered.
-            3. Let <var>current outline target</var>'s <i>parent section</i> be
-                <var>current section</var>.
-            4. Let <var>current section</var> be a newly created <a>section</a> for the
-                <var>current outline target</var> element.
-            5. Let there be a new <a>outline</a> for the new <var>current outline target</var>,
-                initialized with just the new <var>current section</var> as the only <a>section</a>
-                in the outline.
+            이 단계들을 수행합니다:
+            1. <var>current outline target</var>가 null이 아니라면, 스택에 
+                <var>current outline target</var>를 넣습니다.
+            2. <var>current outline target</var>를 입장하는 요소(element)로 둡니다.
+            3. <var>current outline target</var>의 <i>부모 섹션</i>을 <var>current section</var>로
+                둡니다.
+            4. <var>current section</var>를 <var>current outline target</var> 요소(element)에 대해 
+                새롭게 생성된 <a lt="section">섹션</a>으로 둡니다.
+            5. 개요(outline)의 유일한 <a lt="section">섹션</a>으로서 새로운 
+                <var>current section</var>으로 초기화 된, 새로운 <var>current outline target</var>에 
+                대한 새로운 <a lt="outline">개요(outline)</a>를 있게 합니다.
           </dd>
 
-          <dt>When exiting a <a>sectioning root</a> element, if the stack is not empty</dt>
+          <dt><a lt="sectioning root">섹션화(sectioning) 루트</a> 요소(element)를 퇴장 중일 때,  
+            스택이 비어있지 않다면</dt>
           <dd>
-            Run these steps:
-            1. If the <var>current section</var> has no heading, create an implied heading and let
-                that be the heading for the <var>current section</var>.
-            2. Let <var>current section</var> be <var>current outline target</var>'s
-                <i>parent section</i>.
-            3. Pop the top element from the stack, and let the <var>current outline target</var> be
-                that element.
+            이 단계들을 수행합니다:
+            1. <var>current section</var>가 제목(heading)을 가지지 않는다면, 암묵적 제목(heading)을 
+                생성하고 그것을 <var>current section</var>에 대한 제목(heading)으로 둡니다.
+            2. <var>current section</var>를 <var>current outline target</var>의 
+                <i>부모 섹션</i>으로 둡니다.
+            3. 스택에서 최 상단 요소(element)를 꺼내고, <var>current outline target</var>를 
+                그 요소(element)로 둡니다.
           </dd>
 
           <dt>
-            When exiting a <a>sectioning content</a> element or a <a>sectioning root</a> element
-            (when the stack is empty)
+            <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>나 
+            <a lt="sectioning root">섹션화(sectioning) 루트</a> 요소(element)를 퇴장 중일 때 
+            (스택이 비어있는 경우)
           </dt>
           <dd>
             <p class="note">
-              The <var>current outline target</var> is the element being exited, and it is the
-              <a>sectioning content</a> element or a <a>sectioning root</a> element at the root of
-              the subtree for which an outline is being generated.
+              <var>current outline target</var>는 퇴장되는 중인 요소(element)이고, 그것은 개요(outline)가 
+              생성되는 하위 트리의 루트에 있는 <a lt="sectioning content">섹션화(sectioning) 콘텐트</a>나 
+              <a lt="sectioning root">섹션화(sectioning) 루트</a> 요소(element)입니다.
             </p>
 
-            If the <var>current section</var> has no heading, create an implied heading and
-            let that be the heading for the <var>current section</var>.
+            <var>current section</var>가 제목(heading)을 가지지 않는다면, 암묵적 제목(heading)을 
+            생성하고 그것을 <var>current section</var>에 대한 제목(heading)으로 둡니다.
 
-            Skip to the next step in the overall set of steps. (The walk is over.)
+            전체 단계들의 세트의 다음 단계들로 건너뜁니다. (순회가 끝납니다.)
           </dd>
 
-          <dt>When entering a <a>heading content</a> element</dt>
+          <dt><a lt="heading content">제목(heading) 콘텐트</a> 요소(element)로 입장 중일 때</dt>
           <dd>
-            If the <var>current section</var> has no heading, let the element being entered be the
-            heading for the <var>current section</var>.
+            <var>current section</var>가 제목(heading)을 가지지 않는다면, 입장 되는 중인 
+            요소(element)를 <var>current section</var>에 대한 제목(heading)으로 둡니다.
 
-            Otherwise, if the element being entered has a <a>rank</a> equal to or higher than the
-            heading of the last section of the <a>outline</a> of the
-            <var>current outline target</var>, or if the heading of the last section of the
-            <a>outline</a> of the <var>current outline target</var> is an implied heading, then
-            create a new <a>section</a> and append it to the <a>outline</a> of the
-            <var>current outline target</var> element, so that this new section is the new last
-            section of that outline. Let <var>current section</var> be that new section. Let the
-            element being entered be the new heading for the <var>current section</var>.
+            그렇지 않고, 입장 되는 중인 요소(element)가 <var>current outline target</var>의 
+            <a lt="outline">개요(outline)</a>의 마지막 섹션의 제목(heading)과 동일하거나 상위 
+            <a lt="rank">등급</a>을 가지거나, <var>current outline target</var>의 
+            <a lt="outline">개요(outline)</a>의 마지막 섹션의 제목(heading)이 암묵적 
+            제목(heading)이라면, 새로운 <a lt="section">섹션</a>을 생성하고 
+            <var>current outline target</var> 요소(element)를 추가(append)하며, 따라서 이 새로운 
+            섹션은 그 개요(outline)의 새로운 마지막 섹션입니다. <var>current section</var>를 그 
+            새로운 섹션으로 둡니다. 입장하는 요소(element)를 <var>current section</var>에 대한 
+            새로운 제목(heading)으로 둡니다.
 
-            Otherwise, run these substeps:
-            1. Let <var>candidate section</var> be <var>current section</var>.
-            2. <i>Heading loop</i>: If the element being entered has a <a>rank</a> lower than the
-                <a>rank</a> of the heading of the <var>candidate section</var>, then create a new
-                <a>section</a>, and append it to <var>candidate section</var>. (This does not change
-                which section is the last section in the outline.) Let <var>current section</var> be
-                this new section. Let the element being entered be the new heading for the
-                <var>current section</var>. Abort these substeps.
-            3. Let <var>new candidate section</var> be the <a>section</a> that contains
-                <var>candidate section</var> in the <a>outline</a> of
-                <var>current outline target</var>.
-            4. Let <var>candidate section</var> be <var>new candidate section</var>.
-            5. Return to the step labeled <i>heading loop</i>.
+            그렇지 않으면, 이 하위 단계들을 수행합니다:
+            1. <var>candidate section</var>를 <var>current section</var>로 둡니다.
+            2. <i>Heading loop</i>: 입장 되는 중인 요소(element)가 <var>candidate section</var>의 
+                제목(heading)의 <a lt="rank">등급</a>보다 낮은 <a lt="rank">등급</a>을 가진다면, 
+                새로운 <a lt="section">섹션</a>을 생성하고, <var>candidate section</var>에 그것을 
+                추가(append) 합니다. (이것은 개요(outline)의 마지막 섹션이 어떤 섹션인지를 변경하지 
+                않습니다.) <var>current section</var>를 이 새로운 섹션으로 둡니다. 입장 되는 중인 
+                요소(element)를 <var>current section</var>에 대한 새로운 제목(heading)으로 둡니다. 
+                이 하위 단계들을 중단합니다.
+            3. <var>new candidate section</var>를 <var>current outline target</var>의 
+                <a lt="outline">개요(outline)</a> 내의 <var>candidate section</var>를 포함하는 
+                <a lt="section">섹션</a>으로 둡니다.
+            4. <var>candidate section</var>를 <var>new candidate section</var>로 둡니다.
+            5. <i>heading loop</i>로 라벨링 된 단계로 돌아갑니다.
 
-            Push the element being entered onto the stack. (This causes the algorithm to skip any
-            descendants of the element.)
+            입장 되는 중인 요소(element)를 스택에 넣습니다. (이것은 요소(element)의 모든 후손들을 
+            건너 뛰기 위한 알고리즘을 발생시킵니다.)
 
             <p class="note">
-              Recall that <code>h1</code> has the <em>highest</em> rank, and <code>h6</code> has the
-              lowest rank.
+              <code>h1</code>이 <em>가장 상위</em> 등급을 가지고, <code>h6</code>가 가장 하위 등급을 
+              가진다는 것을 상기하세요.
             </p>
           </dd>
 
-          <dt>Otherwise</dt>
-          <dd>Do nothing.</dd>
+          <dt>그렇지 않으면</dt>
+          <dd>아무 것도 하지 않습니다.</dd>
         </dl>
 
-        In addition, whenever the walk exits a node, after doing the steps above, if the node is not
-        associated with a <a>section</a> yet, <dfn lt="associate section">associate the node with the <a>section</a></dfn>
-        <var>current section</var>.
+        덧붙여, 순회를 종료 할 때마다, 위 단계들을 수행 한 뒤, 노드가 아직 
+        <a lt="section">섹션</a>과 연관된 것이 아니라면, <var>current section</var> 
+        <dfn lt="associate section"><a lt="section">섹션</a>과 노드를 연관시킵니다</dfn>.
 
-    5. Associate all non-element nodes that are in the subtree for which an outline is being created
-        with the <a>section</a> with which their parent element is associated.
-    6. Associate all nodes in the subtree with the heading of the <a>section</a> with which they are
-        associated, if any.
+    5. 개요(outline)가 생성되는 하위 트리에 있는 모든 비 요소(non-element) 노드들은 부모 
+        요소(element)가 연관된 <a lt="section">섹션</a>과 연관시킵니다.
+    6. 하위 트리의 모든 노드들을 그것들이 연관된 <a lt="section">섹션</a>의 제목(heading)이 있다면 
+        그것들과 연관시킵니다.
 
-    The tree of sections created by the algorithm above, or a proper subset thereof, must be used
-    when generating document outlines, for example when generating tables of contents.
+    위 알고리즘에 의해 생성된 섹션들의 트리나 그것의 올바른 하위 세트는 문서 개요(outline)들을 
+    생성할 때, 예를 들어 콘텐츠 목차를 생성할 때, 사용되어야(must) 합니다. 
 
-    The outline created for <a href="#the-body-element">the <code>body</code> element</a> of a {{Document}} is the <a>outline</a>
-      of the entire document.
+    {{Document}}의 <a href="#the-body-element"><code>body</code> 요소(element)</a>에 대해 생성된 
+      개요(outline)은 전체 문서의 <a lt="outline">개요(outline)</a>입니다.
 
-    When creating an interactive table of contents, entries should jump the user to the relevant
-    <a>sectioning content</a> element, if the <a>section</a> was created for a real element in the
-    original document, or to the relevant <a>heading content</a> element, if the <a>section</a> in
-    the tree was generated for a heading in the above process.
+    콘텐츠의 상호 작용 목차를 생성할 경우, <a lt="section">섹션</a>이 원본 문서의 실제 
+    요소(element)에 대해 생성되었다면 항목들은 관련 <a lt="sectioning content">섹션화(sectioning) 
+    콘텐트</a>로, 또는 트리 내 <a lt="section">섹션</a>이 위 프로세스에서 제목(heading)에 대해 
+    생성되었다면 관련 <a lt="heading content">제목(heading) 콘텐트</a> 요소(element)로 사용자를 
+    건너뛰게 해야(should) 합니다.
 
     <p class="note">
-      Selecting the first <a>section</a> of the document therefore always takes the user to the top
-      of the document, regardless of where the first heading in the <code>body</code> is to be
-      found.
+      따라서 문서의 첫 번째 <a lt="section">섹션</a>을 선택하는 것은 <code>body</code> 내 첫 번째 
+      제목(heading)이 발견되는 곳에 상관없이, 항상 사용자를 문서의 최 상단으로 데려갑니다.
     </p>
 
-    The <dfn>outline depth</dfn> of a <a>heading content</a> element associated with a
-    <a>section</a> <var>section</var> is the number of <a>sections</a> that are ancestors of
-    <var>section</var> in the outermost <a>outline</a> that <var>section</var> finds itself in when
-    the <a>outlines</a> of its {{Document}}'s elements are created, plus 1. The
-    <a>outline depth</a> of a <a>heading content</a> element not associated with a <a>section</a>
-    is 1.
+    <a lt="section">섹션</a> <var>section</var>과 연관된 
+    <a lt="heading content">제목(heading) 콘텐트</a> 요소(element)의 
+    <dfn lt="outline depth">개요 깊이(outline depth)</dfn>는 <var>section</var>이 그것의 
+    {{Document}}의 요소(element)들의 <a lt="outlines">개요(outline)들</a>이 생성될 때 자신을 
+    발견하는 가장 바깥쪽의 <a lt="outline">개요(outline)</a> 내의 <var>section</var>의 조상들인 
+    <a lt="sections">섹션들</a>의 수에 1을 더한 것입니다. <a lt="section">섹션</a>과 연관되지 않은 
+    <a lt="heading content">제목(heading) 콘텐트</a> 요소(element)의 
+    <a lt="outline depth">개요 깊이(outline depth)</a>는 1입니다.
 
-    User agents should provide default headings for sections that do not have explicit section
-    headings.
+    유저 에이전트는 명시적인 섹션 제목(heading)을 가지지 않는 섹션들에 대한 기본 제목(heading)들을 
+    제공해야(should) 합니다.
 
     <div class="example">
-      Consider the following snippet:
+      다음 코드 조각을 고려해보세요:
 
       <pre highlight="html">
         &lt;body&gt;
@@ -1709,25 +1733,25 @@
         &lt;/body&gt;
       </pre>
 
-      Although it contains no headings, this snippet has three sections: a document (the
-      <{body}>) with two subsections (a <{nav}> and an <{aside}>). A user
-      agent could present the outline as follows:
+      비록 제목(heading)들을 포함하지 않지만, 이 코드 조각은 세 개의 섹션들을 가집니다: 두 하위 
+      섹션을 (<{nav}>와 <{aside}>) 가진 문서 (<{body}>). 유저 에이전트는 다음과 같이 개요(outline)을 
+      표현할 수 있습니다:
 
       1. Untitled document
           1. Navigation
           2. Sidebar
 
-      These default headings ("Untitled document", "Navigation", "Sidebar") are not specified by
-      this specification, and might vary with the user's language, the page's language, the user's
-      preferences, the user agent implementor's preferences, etc.
+      이 기본 제목(heading)들은 ("Untitled document", "Navigation", "Sidebar")은 이 명세에 의해 
+      명시되지 않고, 사용자의 언어, 페이지의 언어, 사용자의 환경 설정, 유저 에어전트 구현자의 
+      선호도 등등에 의해 변할 수 있습니다.
     </div>
 
     <div class="note">
-      The following JavaScript function shows how the tree walk could be implemented. The
-      <var>root</var> argument is the root of the tree to walk (either a <a>sectioning content</a>
-      element or a <a>sectioning root</a> element), and the <var>enter</var> and <var>exit</var>
-      arguments are callbacks that are called with the nodes as they are entered and exited.
-      [[!ECMA-262]]
+      다음 자바스크립트 함수는 트리 순회가 구현될 수 있는 방법을 보여줍니다. <var>root</var> 인수는 
+      순회하기 위한 트리의 루트 (<a lt="sectioning content">섹션화(sectioning) 콘텐트</a> 
+      요소(element)나 <a lt="sectioning root">섹션화(sectioning) 루트</a> 요소(element)), 
+      <var>enter</var>와 <var>exit</var> 인수들은 입장 되고 퇴장 될 때 노드들을 가지고 호출되는 
+      콜백 함수들 입니다. [[!ECMA-262]]
 
       <pre highlight="javascript">
         function (root, enter, exit) {
@@ -1755,18 +1779,18 @@
     </div>
   </div>
 
-<h4 id="sections-usage-summary">Usage summary</h4>
+<h4 id="sections-usage-summary">사용법 요약</h4>
 
-  <em>This section is non-normative.</em>
+  <em>이 섹션은 비 규범적입니다.</em>
 
   <table class="vertical-summary-table">
     <thead>
       <tr>
-        <th rowspan="2">Element</th>
-        <th>Purpose</th>
+        <th rowspan="2">요소(element)</th>
+        <th>용도(purpose)</th>
       </tr>
       <tr>
-        <th>Example</th>
+        <th>예시</th>
       </tr>
     </thead>
     <tbody>
@@ -1857,7 +1881,7 @@
       </tr>
       <tr>
         <td rowspan="2"><{h1}>–<code>h6</code></td>
-        <td>A section heading</td>
+        <td>섹션 제목(heading)</td>
       </tr>
       <tr>
         <td>
@@ -1923,21 +1947,21 @@
 
 <h5 id="article-or-section">Article or section?</h5>
 
-  <em>This section is non-normative.</em>
+  <em>이 섹션은 비 규범적입니다.</em>
 
-  A <{section}> forms part of something else. An <{article}> is its own thing. But
-  how does one know which is which? Mostly the real answer is "it depends on author intent".
+  <{section}>은 다른 무언가의 일부를 구성합니다. <{article}>은 그 자체의 것입니다. 하지만 어떤 것이 
+  어떤 것인지 어떻게 알까요? 대부분 실제 대답은 "그것은 작성자 의도에 달려있다"입니다.
 
-  For example, one could imagine a book with a "Granny Smith" chapter that just said "These juicy,
-  green apples make a great filling for apple pies."; that would be a <{section}> because
-  there'd be lots of other chapters on (maybe) other kinds of apples.
+  예를 들어, "이 과즙이 풍부한 초록 사과는 사과 파이를 꽉 채웁니다."라고 말하는 "Granny Smith" 
+  챕터를 가진 책을 떠올릴 수 있습니다; 그것은 사과들의 다른 종류에 (아마도) 다른 많은 챕터가 있을 
+  것이기 때문에 <{section}>이 될 수 있습니다.
 
-  On the other hand, one could imagine a tweet or tumblr post or newspaper
-  classified ad that just said "Granny Smith. These juicy, green apples make a great filling for
-  apple pies."; it would then be <{article}>s because that was the whole thing.
+  반면에, "그래니 스미스. 이 과즙이 풍부한 초록 사과는 사과 파이를 꽉 채웁니다."라고 말하는 트윗이나 
+  텀블러 포스트 혹은 신문 광고를 연상할 수 있습니다; 그것은 그것이 전부였기 때문에 <{article}>들 일 
+  것입니다.
 
-  Comments on an article are not part of the <{article}> on which they are commenting, but are 
-  related, therefore may be contained in their own nested <{article}>.
+  아티클의 댓글들은 댓글을 달고 있는 <{article}>의 일부가 아니지만 관련된 것이므로 그것들 자신의 
+  중첩 된 <{article}>에 포함 될 수 있습니다.
   
   
 

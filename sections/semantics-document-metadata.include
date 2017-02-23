@@ -177,7 +177,7 @@
   주어집니다.
 
   <div class="impl">
-    유저 에이전트는 유저 인터페이스에서 문서로 참조할 때 문서의 제목(title)을 사용해야(should) 합니다.
+    유저 에이전트들은 유저 인터페이스에서 문서로 참조할 때 문서의 제목(title)을 사용해야(should) 합니다.
     <a element for="html"><code>title</code></a> 요소(element)의 콘텐트가 이 방법으로 사용되는 경우,
     그 <a element for="html"><code>title</code></a> 요소(element)의 <a lt="the directionality">방향성</a>은
     유저 인터페이스에서 문서의 제목(title)의 방향성을 설정하는데 사용되어야(should) 합니다.
@@ -350,8 +350,8 @@
     <dd><code>type</code> — 참조된 리소스의 유형에 대한 힌트</dd>
     <dd><code>sizes</code> — 아이콘의 (for <{link/rel}>="<code>icon</code>"에 대한) 크기</dd>
     <dd>
-      또한, <{link/title}> 속성(attribute)은 이 요소(elemnt)에 특별한 의미를 가집니다: 링크의 제목(title);
-      ; 대체 스타일 시트의 이름을 설정합니다.
+      또한, <{link/title}> 속성(attribute)은 이 요소(elemnt)에 특별한 의미(semantics)를 가집니다: 
+      링크의 제목(title); 대체 스타일 시트의 이름을 설정합니다.
     </dd>
     <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd><a><code>link</code></a> (기본 값 - <a lt="do not set"><em>설정 하지 마세요</em></a>).</dd>
@@ -395,7 +395,7 @@
 
   표현된 링크의 유형 (관계)는 <dfn element-attr for="link"><code>rel</code></dfn> 속성(attribute)의 
   값에 의해 주어지고, 이것이 존재한다면, <a lt="set of space-separated tokens">공백으로 분리된 토큰 집합</a>인
-  값을 가져야(must) 합니다. <a lt="allowed keywords and their meanings">허용된 키워드와 그것들의 의미</a>는
+  값을 가져야(must) 합니다. <a lt="allowed keywords and their meanings">허용된 키워드와 그것들의 의미(meanings)</a>는
   이후 섹션에서 정의됩니다.  <{link/rel}> 속성(attribute)이 존재하지 않는다면 키워드를 가지지 않거나,
   사용된 어떤 키워드도 이 명세에서의 정의를 따라 허용된 것이 아니라면, 요소(element)는 어떤 연결도 
   생성하지 않습니다.
@@ -405,7 +405,7 @@
   [[#sec-link-types]] 섹션은 특정 링크 유형이 외부 리소스인지 하이퍼링크인지를 정의합니다.
   한 개 <code>link</code> 요소(element)는 여러 개의 링크들을 (일부는 외부 리소스 링크일 수 있고
   일부는 하이퍼링크일 수 있습니다) 생성할 수 있습니다; 정확히 어떤 그리고 몇 개의 링크들이 생성 되는지는
-  <{link/rel}> 속성(attribute)에 주어진 키워드에 달려 있습니다. 유저 에이전트는 요소(element) 단위가 
+  <{link/rel}> 속성(attribute)에 주어진 키워드에 달려 있습니다. 유저 에이전트들은 요소(element) 단위가 
   아닌 링크 단위로 처리해야(must) 합니다.
 
   <p class="note">
@@ -423,9 +423,9 @@
 
     <pre highlight="html">&lt;link rel="author license" href="/about"></pre>
 
-    이 요소(element)에 의해 생성된 두 링크들은 의미가 현재 페이지의 작성자에 대한 정보를 가진 대상 
-    페이지인 하나와, 의미가 현재 페이지가 어떤 라이센스 하에 제공되는지에 관한 정보를 가지는 대상
-    페이지인 하나입니다.
+    이 요소(element)에 의해 생성된 두 링크들은 의미(semantic)가 현재 페이지의 작성자에 대한 정보를 
+    가진 대상 페이지인 하나와, 의미(semantic)가 현재 페이지가 어떤 라이센스 하에 제공되는지에 관한  
+    정보를 가지는 대상 페이지인 하나입니다.
   </div>
 
   <{link}>와 <{a}> 요소(element)들은 <{links/href}>에 의해 명시된 리소스로부터 현재 문서로의
@@ -434,13 +434,13 @@
   이것이 존재한다면 이 속성(attribute)의 값은
   <a lt="set of space-separated tokens">공백으로 분리된 토큰 집합</a>이어야 합니다. <{links/rel}> 
   속성(attribute)처럼, [[#sec-link-types]]은 <{links/rev}> 속성(attribute)에 대한
-  <a lt="allowed keywords and their meanings">허용된 키워드와 그것들의 의미</a>를 설명합니다.
+  <a lt="allowed keywords and their meanings">허용된 키워드와 그것들의 의미(meanings)</a>를 설명합니다.
   <{links/rel}>과 <{links/rev}> 속성(attribute)들은 동일 요소(element)에 모두 존재할 수 있습니다.
 
   <dfn lt="reverse link|Reverse links">역방향 링크</dfn>는 링크의 역방향 관계를 나타내는 방법입니다.
   값이 정방향 관계를 ("링크가 나에게 관계되는 방법") 전달하는 <{links/rel}> 속성(attribute)과는
   대조적으로, <{links/rev}> 속성(attribute)은 유사한 관계들이 역방향으로 ("내가 이 링크에 관계되는 
-  방법") 노출되도록 허용합니다. 이 값들은 유저 에이전트가 연결된 문서의 보다 포괄적인 지도를 만들 수 
+  방법") 노출되도록 허용합니다. 이 값들은 유저 에이전트들이 연결된 문서의 보다 포괄적인 지도를 만들 수 
   있게 할 수 있습니다.
 
   <div class="example">책의 챕터를 각각 포함하는 두 개의 문서가 주어지면, 그것들 사이의 링크는 다음과
@@ -501,11 +501,11 @@
       <a lt="environment settings object">환경 설정 객체</a>로 둡니다.
   6. <var>request</var>를 <a lt="fetch">가져옵니다</a>.
 
-  유저 에이전트는 적용되지 않은 모든 리소스들을 능동적으로 가져오는 대신, 그것들이 필요할 경우 그
+  유저 에이전트들은 적용되지 않은 모든 리소스들을 능동적으로 가져오는 대신, 그것들이 필요할 경우 그
   리소스를 얻기 위해 시도하기로 선택할 수 있습니다.
 
-  외부 리소스를 가져올 때 사용된 프로토콜의 (예를 들어, HTTP) 의미를 따라야(must) 합니다. (예를 들어,
-  리다이렉트가 뒤따르는 것과 404 응답은 외부 리소스가 적용되지 않는 것을 야기합니다.)
+  외부 리소스를 가져올 때 사용된 프로토콜의 (예를 들어, HTTP) 의미(semantics)를 따라야(must) 합니다. 
+  (예를 들어, 리다이렉트가 뒤따르는 것과 404 응답은 외부 리소스가 적용되지 않는 것을 야기합니다.)
 
   일단 리소스를 얻으려는 시도와 그것의 <a lt="critical subresources">중요한 하위 리소스들</a>이 완료되면,
   유저 에이전트는 로드가 성공적이었다면, <{link}> 요소(element)에 <code>load</code>라고 이름이
@@ -528,7 +528,7 @@
 
   <hr />
 
-  대화형 유저 에이전트는 유저 인터페이스의 어딘가에서 <{link}> 요소(element)를 사용하여 생성된
+  대화형 유저 에이전트들은 유저 인터페이스의 어딘가에서 <{link}> 요소(element)를 사용하여 생성된
   <a lt="follow the hyperlinks">하이퍼링크들을 따르기</a> 위한 방법을 사용자에게 제공할 수 있습니다.
   정확한 인터페이스는 이 명세에 정의되지 않지만, 문서 내 각 <{link}> 요소(element)를 가지고 생성된 각
   하이퍼링크에 대해, 일부 형식이나 다른 것에서 (아마도 간소화 된), 다음 정보를 (아래 정의된 대로,
@@ -540,7 +540,7 @@
   * 리소스의 언어 (<code>hreflang</code> 속성(attribute)에 의해 주어진).
   * 리소스에 대한 최고의 매체 (<code>media</code> 속성(attribute)에 의해 주어진).
 
-  유저 에이전트는 리소스의 유형과 같은 (<code>type</code> 속성(attribute)에 의해 주어진), 다른 
+  유저 에이전트들은 리소스의 유형과 같은 (<code>type</code> 속성(attribute)에 의해 주어진), 다른 
   정보를 포함할 수 있습니다.
 
   <p class="note">
@@ -594,15 +594,15 @@
   <a lt="obtain">획득</a> 해야(should) 합니다.</span>
 
   <div class="impl">
-    유저 에이전트는 <code>type</code> 속성(attribute)을 믿을만한 것으로 간주하지 않아야(must) 합니다 
-    &mdash; 리소스를 가져오는데에, 유저 에이전트는 <code>type</code> 속성(attribute)을 그것의 실제 
+    유저 에이전트들은 <code>type</code> 속성(attribute)을 믿을만한 것으로 간주하지 않아야(must) 합니다 
+    &mdash; 리소스를 가져오는데에, 유저 에이전트들은 <code>type</code> 속성(attribute)을 그것의 실제 
     유형을 결정하기 위해 사용하지 않아야(must) 합니다. 오직 실제 유형은 (다음 문단에 정의된 것과 같이)
     리소스에 <em>적용</em> 할지 여부를 결정짓기 위해서 사용되는 것이지, 앞서 언급된 가정된 유형이 
     아닙니다.
 
     <dfn lt="determining the type of the resource"></dfn>외부 리소스 링크 유형이 리소스의 
     <a lt="Content-Type metadata">Content-Type 메타데이터</a> 처리에 대한 규칙을 정의한다면, 그 
-    규칙은 적용됩니다. 그렇지 않고, 리소스가 이미지가 예상된다면, 유저 에이전트는 리소스의
+    규칙은 적용됩니다. 그렇지 않고, 리소스가 이미지가 예상된다면, 유저 에이전트들은 리소스의
     <a lt="Content-Type metadata">Content-Type 메타데이터</a>로부터 유형이 결정된 
     <var>official type</var>을 가지고 <a lt="image sniffing rules">이미지 스니핑 규칙들</a>을 적용할 
     수 있고, 결과로 나온 <a lt="computed type of the resource">계산 된 리소스의 유형</a>을 그것이
@@ -853,12 +853,12 @@
 
       <div class="impl">
         제목(title)은 어플리케이션의 이름이 되는 것 대신에 특정 순간의 상태 메세지와 페이지의
-        상태와 유사한 것을 포함할 수 있기 때문에, 유저 에이전트는 페이지의 
+        상태와 유사한 것을 포함할 수 있기 때문에, 유저 에이전트들은 페이지의 
         <a element for="html"><code>title</code></a>보다 우선적으로 UI에서 어플리케이션 이름을 
         사용할 수 있습니다.
 
         주어진 언어의 정렬된 목록을 (예를 들어, 영국 영어, 미국 영어, 영어) 사용하기 위한 
-        어플리케이션 이름을 찾기 위해, 유저 에이전트는 다음 단계들을 수행해야(must) 합니다:
+        어플리케이션 이름을 찾기 위해, 유저 에이전트들은 다음 단계들을 수행해야(must) 합니다:
 
         1. <var>languages</var>를 언어의 목록으로 둡니다.
         2. <var>default language</var>를 {{Document}}의 <a lt="root element">루트 요소(element)</a>의 
@@ -944,7 +944,8 @@
         4. <var>keywords</var>를 반환합니다. 이것은 작성자가 페이지에 적절한 것으로 명시한 키워드의 
             목록입니다.
 
-        유저 에이전트는 값의 신뢰성에 대한 확신이 불충분 할 경우 이 정보를 사용하지 않아야(should)합니다.
+        유저 에이전트들은 값의 신뢰성에 대한 확신이 불충분 할 경우 이 정보를 사용하지 않아야(should) 
+        합니다.
 
         <p class="example">
           예를 들어, 사이트 별 검색 엔진의 색인을 덧붙이기 위해 시스템에 페이지의 키워드 정보를 
@@ -976,7 +977,7 @@
 
   : 동의어(synonyms)
   :: 정확히 동일한 처리 요구사항을 가지는 다른 이름들의 목록. 작성자는 동의어로 정의된 이름을 
-      사용하지 않아야(should)합니다. 그것들은 유저 에이전트가 레거시 콘텐트를 지원하는 것을 
+      사용하지 않아야(should)합니다. 그것들은 유저 에이전트들이 레거시 콘텐트를 지원하는 것을 
       허용하도록 의도되었을 뿐입니다. 누구나 실제로 사용되지 않는 동의어를 제거 할 수 있습니다; 
       레거시 콘텐트와 호환성을 위한 동의어로서 처리되도록 요구되는 이름들만 이 방법으로 등록됩니다.
 
@@ -1331,7 +1332,7 @@
   요구하지 않는 선처리(Pragma) 지시자들은 등록되지 않아야(must) 합니다; 대신에, 
   <a lt="metadata names">메타데이터 이름들</a>을 사용하세요. HTTP 처리 모델에 (예를 들어, 캐싱) 
   영향을 주는 헤더에 해당하는 선처리(Pragma) 지시자들은 그것들은 HTTP 수준 동작에서 HTML을 구현하는 
-  유저 에이전트와 그렇지 않은 유저 에이전트에 차이가 발생될 것이기 때문에, 등록되지 않아야(must) 
+  유저 에이전트들과 그렇지 않은 유저 에이전트들에 차이가 발생될 것이기 때문에, 등록되지 않아야(must) 
   합니다.
 
   누구든지 이 조건들을 만족하는 선처리(pragma) 지시자를 추가하기 위해 언제든지 
@@ -1494,7 +1495,7 @@
   "<code>text/css</code>"입니다. [[!RFC2318]]
 
   <div class="impl">
-    언어를 지원하는지를 결정하기 위해 유형들을 검토할 경우, 유저 에이전트는 알려지지 않은 MIME 
+    언어를 지원하는지를 결정하기 위해 유형들을 검토할 경우, 유저 에이전트들은 알려지지 않은 MIME 
     파라미터들을 무시하지 않아야(must) 합니다 — 알려지지 않은 파라미터들을 가진 유현들은 지원되지 
     않는 것으로 간주되어야(must) 합니다. <code>charset</code> 파라미터는 여기 
     <a lt="MIME types">MIME 타입들</a>과 비교할 목적을 위해 알려져지 않은 파라미터로 취급되어야(must) 
