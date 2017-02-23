@@ -1436,7 +1436,7 @@ pre.idl.highlight { color: #708090; }
   
   
   
-  <nav data-fill-with="table-of-contents" id="toc"><p class="prev_next">← <a href="semantics.html#semantics"><span class="secno">4</span> <span class="content">HTML의 요소(element)들</span></a> — <a href="index.html#contents">Table of contents</a> — <a href="sections.html#sections"><span class="secno">4.3</span> <span class="content">Sections</span></a> →</p>
+  <nav data-fill-with="table-of-contents" id="toc"><p class="prev_next">← <a href="semantics.html#semantics"><span class="secno">4</span> <span class="content">HTML의 요소(element)들</span></a> — <a href="index.html#contents">Table of contents</a> — <a href="sections.html#sections"><span class="secno">4.3</span> <span class="content">섹션</span></a> →</p>
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory"><li>
        <a href="document-metadata.html#document-metadata"><span class="secno">4.2</span> <span class="content">문서 메타데이터</span></a>
@@ -1580,7 +1580,7 @@ pre.idl.highlight { color: #708090; }
      </div>
      <p>문서의 제목(title)로 사용하기 위한 문자열은 <code>document.title</code> IDL 속성(attribute)에 의해
   주어집니다.</p>
-     <div class="impl"> 유저 에이전트는 유저 인터페이스에서 문서로 참조할 때 문서의 제목(title)을 사용해야(should) 합니다. <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-21"><code>title</code></a> 요소(element)의 콘텐트가 이 방법으로 사용되는 경우,
+     <div class="impl"> 유저 에이전트들은 유저 인터페이스에서 문서로 참조할 때 문서의 제목(title)을 사용해야(should) 합니다. <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-21"><code>title</code></a> 요소(element)의 콘텐트가 이 방법으로 사용되는 경우,
     그 <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-22"><code>title</code></a> 요소(element)의 <a data-link-type="dfn" href="dom.html#directionality" id="ref-for-directionality-19">방향성</a>은
     유저 인터페이스에서 문서의 제목(title)의 방향성을 설정하는데 사용되어야(should) 합니다. </div>
      <h4 class="heading settled" data-level="4.2.3" id="the-base-element"><span class="secno">4.2.3. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-base"><code>base</code></dfn> 요소(element)</span><a class="self-link" href="document-metadata.html#the-base-element"></a></h4>
@@ -1712,8 +1712,8 @@ pre.idl.highlight { color: #708090; }
       </dd><dd><code>hreflang</code> — 연결된 리소스의 언어
       </dd><dd><code>type</code> — 참조된 리소스의 유형에 대한 힌트
       </dd><dd><code>sizes</code> — 아이콘의 (for <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-link-rel" id="ref-for-element-attrdef-link-rel-3">rel</a></code>="<code>icon</code>"에 대한) 크기
-      </dd><dd> 또한, <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-link-title" id="ref-for-element-attrdef-link-title-1">title</a></code> 속성(attribute)은 이 요소(elemnt)에 특별한 의미를 가집니다: 링크의 제목(title);
-      ; 대체 스타일 시트의 이름을 설정합니다. 
+      </dd><dd> 또한, <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-link-title" id="ref-for-element-attrdef-link-title-1">title</a></code> 속성(attribute)은 이 요소(elemnt)에 특별한 의미(semantics)를 가집니다: 
+      링크의 제목(title); 대체 스타일 시트의 이름을 설정합니다. 
       </dd><dt>허용된 <a href="dom.html#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:
       </dt><dd><a data-link-type="dfn" href="editing.html#link0" id="ref-for-link0-1"><code>link</code></a> (기본 값 - <a data-link-type="dfn" href="dom.html#do-not-set" id="ref-for-do-not-set-1"><em>설정 하지 마세요</em></a>).
       </dd><dt>허용된 <a href="dom.html#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:
@@ -1746,13 +1746,13 @@ pre.idl.highlight { color: #708090; }
     제한됩니다. </p>
      <p>표현된 링크의 유형 (관계)는 <dfn class="dfn-paneled" data-dfn-for="link" data-dfn-type="element-attr" data-export="" id="element-attrdef-link-rel"><code>rel</code></dfn> 속성(attribute)의
   값에 의해 주어지고, 이것이 존재한다면, <a data-link-type="dfn" href="infrastructure.html#set-of-space-separated-tokens" id="ref-for-set-of-space-separated-tokens-7">공백으로 분리된 토큰 집합</a>인
-  값을 가져야(must) 합니다. <a data-link-type="dfn" href="links.html#allowed-keywords-and-their-meanings" id="ref-for-allowed-keywords-and-their-meanings-1">허용된 키워드와 그것들의 의미</a>는
+  값을 가져야(must) 합니다. <a data-link-type="dfn" href="links.html#allowed-keywords-and-their-meanings" id="ref-for-allowed-keywords-and-their-meanings-1">허용된 키워드와 그것들의 의미(meanings)</a>는
   이후 섹션에서 정의됩니다. <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-link-rel" id="ref-for-element-attrdef-link-rel-6">rel</a></code> 속성(attribute)이 존재하지 않는다면 키워드를 가지지 않거나,
   사용된 어떤 키워드도 이 명세에서의 정의를 따라 허용된 것이 아니라면, 요소(element)는 어떤 연결도 
   생성하지 않습니다.</p>
      <p>링크의 두 카테고리들은 <code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-6">link</a></code> 요소(element)를 사용하여 생성될 수 있습니다: <a data-link-type="dfn" href="links.html#external-resource-link" id="ref-for-external-resource-link-1">외부 리소스들로의 링크들</a>과 <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-7">하이퍼링크들</a>. <a href="links.html#sec-link-types">§4.8.6 Link types</a> 섹션은 특정 링크 유형이 외부 리소스인지 하이퍼링크인지를 정의합니다.
   한 개 <code>link</code> 요소(element)는 여러 개의 링크들을 (일부는 외부 리소스 링크일 수 있고
-  일부는 하이퍼링크일 수 있습니다) 생성할 수 있습니다; 정확히 어떤 그리고 몇 개의 링크들이 생성 되는지는 <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-link-rel" id="ref-for-element-attrdef-link-rel-7">rel</a></code> 속성(attribute)에 주어진 키워드에 달려 있습니다. 유저 에이전트는 요소(element) 단위가 
+  일부는 하이퍼링크일 수 있습니다) 생성할 수 있습니다; 정확히 어떤 그리고 몇 개의 링크들이 생성 되는지는 <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-link-rel" id="ref-for-element-attrdef-link-rel-7">rel</a></code> 속성(attribute)에 주어진 키워드에 달려 있습니다. 유저 에이전트들은 요소(element) 단위가 
   아닌 링크 단위로 처리해야(must) 합니다.</p>
      <p class="note" role="note"> <code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-7">link</a></code> 요소(element)에 대해 생성 된 각 링크는 별도로 처리됩니다. 예를 들어, <code>rel="stylesheet"</code>를
     가진 두 개의 <code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-8">link</a></code> 요소(element)가 있따면, 각각은 독립적으로 자신의 속성(attbribute)에 의해
@@ -1761,19 +1761,19 @@ pre.idl.highlight { color: #708090; }
     (<code>stylesheet</code> 키워드에 대한) <a data-link-type="dfn" href="links.html#external-resource-link" id="ref-for-external-resource-link-2">외부 리소스 링크</a>를 
     생성하고, 그것들은 다른 속성(attribute)들에 의해 (<code>media</code>나 <code>title</code> 같은)
     다르게 영향을 받습니다. </p>
-     <div class="example" id="example-7d691fcb">
-      <a class="self-link" href="document-metadata.html#example-7d691fcb"></a> 예를 들어, 다음 <code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-10">link</a></code> 요소(element)는 두 하이퍼링크들을 (동일한 페이지에 대한) 생성합니다 : 
+     <div class="example" id="example-c69be3ab">
+      <a class="self-link" href="document-metadata.html#example-c69be3ab"></a> 예를 들어, 다음 <code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-10">link</a></code> 요소(element)는 두 하이퍼링크들을 (동일한 페이지에 대한) 생성합니다 : 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"author license"</span> <span class="na">href</span><span class="o">=</span><span class="s">"/about"</span><span class="p">&gt;</span></pre>
-      <p>이 요소(element)에 의해 생성된 두 링크들은 의미가 현재 페이지의 작성자에 대한 정보를 가진 대상
-    페이지인 하나와, 의미가 현재 페이지가 어떤 라이센스 하에 제공되는지에 관한 정보를 가지는 대상
-    페이지인 하나입니다.</p>
+      <p>이 요소(element)에 의해 생성된 두 링크들은 의미(semantic)가 현재 페이지의 작성자에 대한 정보를
+    가진 대상 페이지인 하나와, 의미(semantic)가 현재 페이지가 어떤 라이센스 하에 제공되는지에 관한  
+    정보를 가지는 대상 페이지인 하나입니다.</p>
      </div>
      <p><code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-11">link</a></code>와 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-17">a</a></code> 요소(element)들은 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-9">href</a></code>에 의해 명시된 리소스로부터 현재 문서로의 <a data-link-type="dfn" href="document-metadata.html#reverse-link" id="ref-for-reverse-link-2">역방향 연결</a> 관계를 설명하는데 사용되는 <dfn class="dfn-paneled" data-dfn-for="a,link,links" data-dfn-type="element-attr" data-export="" id="element-attrdef-a-rev"><code>rev</code></dfn> 속성(attribute)도 가질 수 있습니다.
-  이것이 존재한다면 이 속성(attribute)의 값은 <a data-link-type="dfn" href="infrastructure.html#set-of-space-separated-tokens" id="ref-for-set-of-space-separated-tokens-8">공백으로 분리된 토큰 집합</a>이어야 합니다. <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-1">rel</a></code> 속성(attribute)처럼, <a href="links.html#sec-link-types">§4.8.6 Link types</a>은 <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-2">rev</a></code> 속성(attribute)에 대한 <a data-link-type="dfn" href="links.html#allowed-keywords-and-their-meanings" id="ref-for-allowed-keywords-and-their-meanings-2">허용된 키워드와 그것들의 의미</a>를 설명합니다. <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-2">rel</a></code>과 <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-3">rev</a></code> 속성(attribute)들은 동일 요소(element)에 모두 존재할 수 있습니다.</p>
+  이것이 존재한다면 이 속성(attribute)의 값은 <a data-link-type="dfn" href="infrastructure.html#set-of-space-separated-tokens" id="ref-for-set-of-space-separated-tokens-8">공백으로 분리된 토큰 집합</a>이어야 합니다. <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-1">rel</a></code> 속성(attribute)처럼, <a href="links.html#sec-link-types">§4.8.6 Link types</a>은 <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-2">rev</a></code> 속성(attribute)에 대한 <a data-link-type="dfn" href="links.html#allowed-keywords-and-their-meanings" id="ref-for-allowed-keywords-and-their-meanings-2">허용된 키워드와 그것들의 의미(meanings)</a>를 설명합니다. <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-2">rel</a></code>과 <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-3">rev</a></code> 속성(attribute)들은 동일 요소(element)에 모두 존재할 수 있습니다.</p>
      <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="reverse link|Reverse links" data-noexport="" id="reverse-link">역방향 링크</dfn>는 링크의 역방향 관계를 나타내는 방법입니다.
   값이 정방향 관계를 ("링크가 나에게 관계되는 방법") 전달하는 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-3">rel</a></code> 속성(attribute)과는
   대조적으로, <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-4">rev</a></code> 속성(attribute)은 유사한 관계들이 역방향으로 ("내가 이 링크에 관계되는 
-  방법") 노출되도록 허용합니다. 이 값들은 유저 에이전트가 연결된 문서의 보다 포괄적인 지도를 만들 수 
+  방법") 노출되도록 허용합니다. 이 값들은 유저 에이전트들이 연결된 문서의 보다 포괄적인 지도를 만들 수 
   있게 할 수 있습니다.</p>
      <div class="example" id="example-d7caaa31">
       <a class="self-link" href="document-metadata.html#example-d7caaa31"></a>책의 챕터를 각각 포함하는 두 개의 문서가 주어지면, 그것들 사이의 링크는 다음과
@@ -1823,10 +1823,10 @@ pre.idl.highlight { color: #708090; }
       </li><li data-md="">
        <p><var>request</var>를 <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-fetch">가져옵니다</a>.</p>
      </li></ol>
-     <p>유저 에이전트는 적용되지 않은 모든 리소스들을 능동적으로 가져오는 대신, 그것들이 필요할 경우 그
+     <p>유저 에이전트들은 적용되지 않은 모든 리소스들을 능동적으로 가져오는 대신, 그것들이 필요할 경우 그
   리소스를 얻기 위해 시도하기로 선택할 수 있습니다.</p>
-     <p>외부 리소스를 가져올 때 사용된 프로토콜의 (예를 들어, HTTP) 의미를 따라야(must) 합니다. (예를 들어,
-  리다이렉트가 뒤따르는 것과 404 응답은 외부 리소스가 적용되지 않는 것을 야기합니다.)</p>
+     <p>외부 리소스를 가져올 때 사용된 프로토콜의 (예를 들어, HTTP) 의미(semantics)를 따라야(must) 합니다.
+  (예를 들어, 리다이렉트가 뒤따르는 것과 404 응답은 외부 리소스가 적용되지 않는 것을 야기합니다.)</p>
      <p>일단 리소스를 얻으려는 시도와 그것의 <a data-link-type="dfn" href="infrastructure.html#critical-subresource" id="ref-for-critical-subresource-1">중요한 하위 리소스들</a>이 완료되면,
   유저 에이전트는 로드가 성공적이었다면, <code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-13">link</a></code> 요소(element)에 <code>load</code>라고 이름이
   붙은 <a data-link-type="dfn" href="infrastructure.html#fire" id="ref-for-fire-3">단순 이벤트를 발생</a>시키기 위한 <a data-link-type="dfn" href="webappapis.html#queuing" id="ref-for-queuing-3">작업을 대기열에 넣거나</a>,
@@ -1840,7 +1840,7 @@ pre.idl.highlight { color: #708090; }
   모든 시도가 완료될 때까지 요소(element)의 <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-node-document">노드 문서</a>의 <a data-link-type="dfn" href="syntax.html#delay-the-load-event" id="ref-for-delay-the-load-event-1">로드 이벤트를 지연</a>시켜야(must) 합니다. (유저 에이전트가 아직 얻으려고
   시도하지 않은 리소스는, 예를 들어 리소스가 필요하기를 기다리고 있기 때문에, <a data-link-type="dfn" href="syntax.html#delay-the-load-event" id="ref-for-delay-the-load-event-2">로드 이벤트를 지연</a>시키지 않습니다.)</p>
      <hr>
-     <p>대화형 유저 에이전트는 유저 인터페이스의 어딘가에서 <code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-15">link</a></code> 요소(element)를 사용하여 생성된 <a data-link-type="dfn" href="links.html#follow-hyperlinks" id="ref-for-follow-hyperlinks-2">하이퍼링크들을 따르기</a> 위한 방법을 사용자에게 제공할 수 있습니다.
+     <p>대화형 유저 에이전트들은 유저 인터페이스의 어딘가에서 <code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-15">link</a></code> 요소(element)를 사용하여 생성된 <a data-link-type="dfn" href="links.html#follow-hyperlinks" id="ref-for-follow-hyperlinks-2">하이퍼링크들을 따르기</a> 위한 방법을 사용자에게 제공할 수 있습니다.
   정확한 인터페이스는 이 명세에 정의되지 않지만, 문서 내 각 <code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-16">link</a></code> 요소(element)를 가지고 생성된 각
   하이퍼링크에 대해, 일부 형식이나 다른 것에서 (아마도 간소화 된), 다음 정보를 (아래 정의된 대로,
   요소(element)의 속성으로부터 얻어진) 포함할 수 있습니다.</p>
@@ -1856,7 +1856,7 @@ pre.idl.highlight { color: #708090; }
       </li><li data-md="">
        <p>리소스에 대한 최고의 매체 (<code>media</code> 속성(attribute)에 의해 주어진).</p>
      </li></ul>
-     <p>유저 에이전트는 리소스의 유형과 같은 (<code>type</code> 속성(attribute)에 의해 주어진), 다른
+     <p>유저 에이전트들은 리소스의 유형과 같은 (<code>type</code> 속성(attribute)에 의해 주어진), 다른
   정보를 포함할 수 있습니다.</p>
      <p class="note" role="note"> <code><a data-link-type="element" href="document-metadata.html#elementdef-link" id="ref-for-elementdef-link-17">link</a></code> 요소(element)와 그것의 <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-link-rel" id="ref-for-element-attrdef-link-rel-11">rel</a></code> 속성(attribute)을 가지고 생성된 하이퍼링크들은 전체 
     페이지에 적용됩니다. 이것은 컨텍스트가 문서 안의 링크의 위치에 의해 주어진 위치인 링크의 유형을
@@ -1887,13 +1887,13 @@ pre.idl.highlight { color: #708090; }
   리소스를 <a data-link-type="dfn" href="document-metadata.html#obtain" id="ref-for-obtain-2">획득</a>해야(should) 합니다. 속성(attribute)이 생략되었고, 외부 리소스 링크
   유형이 정의된 기본 유형을 가지지 않고, 유형이 알려져 있고 지원되는 경우 유저 에이전트가 리소스를 <a data-link-type="dfn" href="document-metadata.html#obtain" id="ref-for-obtain-3">획득</a> 한다면, 유저 에이전트는 그것이 지원된다는 가정 하에 리소스를 <a data-link-type="dfn" href="document-metadata.html#obtain" id="ref-for-obtain-4">획득</a> 해야(should) 합니다.</span></p>
      <div class="impl">
-       유저 에이전트는 <code>type</code> 속성(attribute)을 믿을만한 것으로 간주하지 않아야(must) 합니다 
-    — 리소스를 가져오는데에, 유저 에이전트는 <code>type</code> 속성(attribute)을 그것의 실제 
+       유저 에이전트들은 <code>type</code> 속성(attribute)을 믿을만한 것으로 간주하지 않아야(must) 합니다 
+    — 리소스를 가져오는데에, 유저 에이전트들은 <code>type</code> 속성(attribute)을 그것의 실제 
     유형을 결정하기 위해 사용하지 않아야(must) 합니다. 오직 실제 유형은 (다음 문단에 정의된 것과 같이)
     리소스에 <em>적용</em> 할지 여부를 결정짓기 위해서 사용되는 것이지, 앞서 언급된 가정된 유형이 
     아닙니다. 
       <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="determining the type of the resource" data-noexport="" id="determining-the-type-of-the-resource"></dfn>외부 리소스 링크 유형이 리소스의 <a data-link-type="dfn" href="infrastructure.html#content-type-metadata" id="ref-for-content-type-metadata-2">Content-Type 메타데이터</a> 처리에 대한 규칙을 정의한다면, 그 
-    규칙은 적용됩니다. 그렇지 않고, 리소스가 이미지가 예상된다면, 유저 에이전트는 리소스의 <a data-link-type="dfn" href="infrastructure.html#content-type-metadata" id="ref-for-content-type-metadata-3">Content-Type 메타데이터</a>로부터 유형이 결정된 <var>official type</var>을 가지고 <a data-link-type="dfn" href="infrastructure.html#image-sniffing-rules" id="ref-for-image-sniffing-rules-1">이미지 스니핑 규칙들</a>을 적용할 
+    규칙은 적용됩니다. 그렇지 않고, 리소스가 이미지가 예상된다면, 유저 에이전트들은 리소스의 <a data-link-type="dfn" href="infrastructure.html#content-type-metadata" id="ref-for-content-type-metadata-3">Content-Type 메타데이터</a>로부터 유형이 결정된 <var>official type</var>을 가지고 <a data-link-type="dfn" href="infrastructure.html#image-sniffing-rules" id="ref-for-image-sniffing-rules-1">이미지 스니핑 규칙들</a>을 적용할 
     수 있고, 결과로 나온 <a data-link-type="dfn" href="infrastructure.html#computed-type-of-the-resource" id="ref-for-computed-type-of-the-resource-1">계산 된 리소스의 유형</a>을 그것이
     실제 유형인것 처럼 사용할 수 있습니다. 그렇지 않고, 이 조건들을 적용하거나 유저 에이전트가 이미지
     스니핑 규칙을 적용하지 않기로 한다면, 유저 에이전트는 리소스의 유형을 결정하기 위해 리소스의 <a data-link-type="dfn" href="infrastructure.html#content-type-metadata" id="ref-for-content-type-metadata-4">Content-Type 메타데이터</a>를 사용해야(must) 합니다. 유형
@@ -2051,10 +2051,10 @@ pre.idl.highlight { color: #708090; }
   존재하지 않아야(must) 합니다.</p>
        <div class="impl">
          제목(title)은 어플리케이션의 이름이 되는 것 대신에 특정 순간의 상태 메세지와 페이지의
-    상태와 유사한 것을 포함할 수 있기 때문에, 유저 에이전트는 페이지의 <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-24"><code>title</code></a>보다 우선적으로 UI에서 어플리케이션 이름을 
+    상태와 유사한 것을 포함할 수 있기 때문에, 유저 에이전트들은 페이지의 <a data-link-type="element" href="document-metadata.html#elementdef-title" id="ref-for-elementdef-title-24"><code>title</code></a>보다 우선적으로 UI에서 어플리케이션 이름을 
     사용할 수 있습니다. 
         <p>주어진 언어의 정렬된 목록을 (예를 들어, 영국 영어, 미국 영어, 영어) 사용하기 위한
-    어플리케이션 이름을 찾기 위해, 유저 에이전트는 다음 단계들을 수행해야(must) 합니다:</p>
+    어플리케이션 이름을 찾기 위해, 유저 에이전트들은 다음 단계들을 수행해야(must) 합니다:</p>
         <ol>
          <li data-md="">
           <p><var>languages</var>를 언어의 목록으로 둡니다.</p>
@@ -2134,7 +2134,8 @@ pre.idl.highlight { color: #708090; }
           <p><var>keywords</var>를 반환합니다. 이것은 작성자가 페이지에 적절한 것으로 명시한 키워드의
 목록입니다.</p>
         </li></ol>
-        <p>유저 에이전트는 값의 신뢰성에 대한 확신이 불충분 할 경우 이 정보를 사용하지 않아야(should)합니다.</p>
+        <p>유저 에이전트들은 값의 신뢰성에 대한 확신이 불충분 할 경우 이 정보를 사용하지 않아야(should)
+    합니다.</p>
         <p class="example" id="example-8630ac16"><a class="self-link" href="document-metadata.html#example-8630ac16"></a> 예를 들어, 사이트 별 검색 엔진의 색인을 덧붙이기 위해 시스템에 페이지의 키워드 정보를 
       사용하기 위한 콘텐츠 관리 시스템은 타당할 것이지만, 이 정보를 사용하는 대규모 콘텐트 제공 
       웹사이트는 특정 사용자가 부적절한 키워드의 사용을 통해 랭킹 메커니즘을 희롱하는 시도를 
@@ -2165,7 +2166,7 @@ pre.idl.highlight { color: #708090; }
        <p>동의어(synonyms)</p>
       </dt><dd data-md="">
        <p>정확히 동일한 처리 요구사항을 가지는 다른 이름들의 목록. 작성자는 동의어로 정의된 이름을
-  사용하지 않아야(should)합니다. 그것들은 유저 에이전트가 레거시 콘텐트를 지원하는 것을 
+  사용하지 않아야(should)합니다. 그것들은 유저 에이전트들이 레거시 콘텐트를 지원하는 것을 
   허용하도록 의도되었을 뿐입니다. 누구나 실제로 사용되지 않는 동의어를 제거 할 수 있습니다; 
   레거시 콘텐트와 호환성을 위한 동의어로서 처리되도록 요구되는 이름들만 이 방법으로 등록됩니다.</p>
       </dd><dt data-md="">
@@ -2502,7 +2503,7 @@ U+0022 따옴표 문자 (")로 시작하지 않는 <a data-link-type="dfn" href=
      <p>메타데이터를 설명하는 헤더에 해당하는 선처리(Pragma) 지시자들이나, 특정 유저 에이전트 처리를
   요구하지 않는 선처리(Pragma) 지시자들은 등록되지 않아야(must) 합니다; 대신에, <a data-link-type="dfn" href="document-metadata.html#register-the-names" id="ref-for-register-the-names-2">메타데이터 이름들</a>을 사용하세요. HTTP 처리 모델에 (예를 들어, 캐싱) 
   영향을 주는 헤더에 해당하는 선처리(Pragma) 지시자들은 그것들은 HTTP 수준 동작에서 HTML을 구현하는 
-  유저 에이전트와 그렇지 않은 유저 에이전트에 차이가 발생될 것이기 때문에, 등록되지 않아야(must) 
+  유저 에이전트들과 그렇지 않은 유저 에이전트들에 차이가 발생될 것이기 때문에, 등록되지 않아야(must) 
   합니다.</p>
      <p>누구든지 이 조건들을 만족하는 선처리(pragma) 지시자를 추가하기 위해 언제든지 <a data-link-type="dfn" href="https://wiki.whatwg.org/wiki/PragmaExtensions#content">WHATWG Wiki PragmaExtensions 페이지</a>를 자유롭게 
   수정할 수 있습니다. 그 등록들은 다음 정보를 명시해야(must) 합니다:</p>
@@ -2611,7 +2612,7 @@ U+0022 따옴표 문자 (")로 시작하지 않는 <a data-link-type="dfn" href=
   타입</a>이어야(must) 합니다. <code>charset</code> 파라미터는 명시되지 않아야(must) 합니다. 
   속성(attribute)이 존재하지 않는다면 사용되는 <code>type</code> 속성(attribute)에 대한 기본 값은
   "<code>text/css</code>"입니다. <a data-link-type="biblio" href="references.html#biblio-rfc2318">[RFC2318]</a></p>
-     <div class="impl"> 언어를 지원하는지를 결정하기 위해 유형들을 검토할 경우, 유저 에이전트는 알려지지 않은 MIME 
+     <div class="impl"> 언어를 지원하는지를 결정하기 위해 유형들을 검토할 경우, 유저 에이전트들은 알려지지 않은 MIME 
     파라미터들을 무시하지 않아야(must) 합니다 — 알려지지 않은 파라미터들을 가진 유현들은 지원되지 
     않는 것으로 간주되어야(must) 합니다. <code>charset</code> 파라미터는 여기 <a data-link-type="dfn" href="infrastructure.html#mime-type" id="ref-for-mime-type-11">MIME 타입들</a>과 비교할 목적을 위해 알려져지 않은 파라미터로 취급되어야(must) 
     합니다. </div>
@@ -3027,7 +3028,7 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-html-element-43">3.2.7.1. ARIA 작성 요구사항들</a>
     </li><li><a href="dom.html#ref-for-html-element-44">3.2.7.2. 적합성 검사기 구현 요구사항들</a>
     </li><li><a href="dom.html#ref-for-html-element-45">3.2.7.3. 유저 에이전트 구현 요구사항들</a> <a href="dom.html#ref-for-html-element-46">(2)</a>
-    </li><li><a href="sections.html#ref-for-html-element-47">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-html-element-47">4.3.1. body 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-html-element-48">4.4.1. The p element</a>
     </li><li><a href="matching-html-elements-using-selectors.html#ref-for-html-element-49">4.15.1. Case-sensitivity</a> <a href="matching-html-elements-using-selectors.html#ref-for-html-element-50">(2)</a> <a href="matching-html-elements-using-selectors.html#ref-for-html-element-51">(3)</a> <a href="matching-html-elements-using-selectors.html#ref-for-html-element-52">(4)</a> <a href="matching-html-elements-using-selectors.html#ref-for-html-element-53">(5)</a>
     </li><li><a href="matching-html-elements-using-selectors.html#ref-for-html-element-54">4.15.2. Pseudo-classes</a>
@@ -3183,7 +3184,7 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-tree-order-20">4.2.3. base 요소(element)</a> <a href="document-metadata.html#ref-for-tree-order-21">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-tree-order-22">4.2.5.1. 표준 메타데이터 이름들</a>
     </li><li><a href="document-metadata.html#ref-for-tree-order-23">4.2.6. style 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-tree-order-24">4.3.10.1. Creating an outline</a> <a href="sections.html#ref-for-tree-order-25">(2)</a>
+    </li><li><a href="sections.html#ref-for-tree-order-24">4.3.10.1. 개요(outline) 생성</a> <a href="sections.html#ref-for-tree-order-25">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-tree-order-26">4.4.5. The ol element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-tree-order-27">4.5.16. The time element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-tree-order-28">4.7.8. The object element</a>
@@ -3479,7 +3480,7 @@ c-end         = "--&gt;"
     <li><a href="introduction.html#ref-for-conforming-document-1">1.10. 작성자를 위한 적합성 요구사항</a>
     </li><li><a href="infrastructure.html#ref-for-conforming-document-2">2.2.1. 적합성 종류</a>
     </li><li><a href="infrastructure.html#ref-for-conforming-document-3">2.2.3. 확장성</a> <a href="infrastructure.html#ref-for-conforming-document-4">(2)</a> <a href="infrastructure.html#ref-for-conforming-document-5">(3)</a> <a href="infrastructure.html#ref-for-conforming-document-6">(4)</a> <a href="infrastructure.html#ref-for-conforming-document-7">(5)</a> <a href="infrastructure.html#ref-for-conforming-document-8">(6)</a>
-    </li><li><a href="sections.html#ref-for-conforming-document-9">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-conforming-document-9">4.3.1. body 요소(element)</a>
     </li><li><a href="semantics-scripting.html#ref-for-conforming-document-10">4.12.2. The noscript element</a>
    </li></ul>
   </aside>
@@ -3952,7 +3953,7 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-space-characters-29">3.2.5.1. id 속성(attribute)</a>
     </li><li><a href="document-metadata.html#ref-for-space-characters-30">4.2.1. head 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-space-characters-31">4.2.5.3. 선처리(pragma) 지시자들</a> <a href="document-metadata.html#ref-for-space-characters-32">(2)</a> <a href="document-metadata.html#ref-for-space-characters-33">(3)</a> <a href="document-metadata.html#ref-for-space-characters-34">(4)</a>
-    </li><li><a href="sections.html#ref-for-space-characters-35">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-space-characters-35">4.3.1. body 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-space-characters-36">4.7.4. The source element when used with the picture element</a> <a href="semantics-embedded-content.html#ref-for-space-characters-37">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-space-characters-38">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-space-characters-39">(2)</a> <a href="semantics-embedded-content.html#ref-for-space-characters-40">(3)</a> <a href="semantics-embedded-content.html#ref-for-space-characters-41">(4)</a> <a href="semantics-embedded-content.html#ref-for-space-characters-42">(5)</a> <a href="semantics-embedded-content.html#ref-for-space-characters-43">(6)</a> <a href="semantics-embedded-content.html#ref-for-space-characters-44">(7)</a> <a href="semantics-embedded-content.html#ref-for-space-characters-45">(8)</a> <a href="semantics-embedded-content.html#ref-for-space-characters-46">(9)</a> <a href="semantics-embedded-content.html#ref-for-space-characters-47">(10)</a> <a href="semantics-embedded-content.html#ref-for-space-characters-48">(11)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-space-characters-49">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-space-characters-50">(2)</a> <a href="semantics-embedded-content.html#ref-for-space-characters-51">(3)</a>
@@ -5686,20 +5687,20 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-represent-7">4.2.3. base 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-represent-8">4.2.5. meta 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-represent-9">4.2.6. style 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-represent-10">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-represent-11">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-represent-12">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-represent-13">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-represent-14">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-represent-10">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-represent-11">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-represent-12">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-represent-13">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-represent-14">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-represent-15">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-represent-16">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-represent-17">4.3.8. The footer element</a> <a href="sections.html#ref-for-represent-18">(2)</a>
-    </li><li><a href="sections.html#ref-for-represent-19">4.3.9. The address element</a>
-    </li><li><a href="sections.html#ref-for-represent-20">4.3.10. Headings and sections</a> <a href="sections.html#ref-for-represent-21">(2)</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-represent-16">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-represent-17">4.3.8. footer 요소(element)</a> <a href="sections.html#ref-for-represent-18">(2)</a>
+    </li><li><a href="sections.html#ref-for-represent-19">4.3.9. address 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-represent-20">4.3.10. 제목(heading)들과 섹션들</a> <a href="sections.html#ref-for-represent-21">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-represent-22">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-represent-23">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-represent-24">4.4.3. The pre element</a>
@@ -5834,19 +5835,19 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-htmlelement-htmlelement-15">4.2.4. link 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-htmlelement-htmlelement-16">4.2.5. meta 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-htmlelement-htmlelement-17">4.2.6. style 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-18">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-19">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-20">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-21">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-22">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-18">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-19">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-20">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-21">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-22">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-23">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-24">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-25">4.3.8. The footer element</a>
-    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-26">4.3.9. The address element</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-24">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-25">4.3.8. footer 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-htmlelement-htmlelement-26">4.3.9. address 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-htmlelement-htmlelement-27">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-htmlelement-htmlelement-28">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-htmlelement-htmlelement-29">4.4.3. The pre element</a>
@@ -5976,19 +5977,19 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-categories-6">4.2.4. link 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-categories-7">4.2.5. meta 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-categories-8">4.2.6. style 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-categories-9">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-categories-10">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-categories-11">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-categories-12">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-categories-13">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-categories-9">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-categories-10">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-categories-11">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-categories-12">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-categories-13">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-categories-14">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-categories-15">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-categories-16">4.3.8. The footer element</a>
-    </li><li><a href="sections.html#ref-for-categories-17">4.3.9. The address element</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-categories-15">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-categories-16">4.3.8. footer 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-categories-17">4.3.9. address 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-categories-18">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-categories-19">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-categories-20">4.4.3. The pre element</a>
@@ -6093,19 +6094,19 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-contexts-in-which-this-element-can-be-used-5">4.2.4. link 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-contexts-in-which-this-element-can-be-used-6">4.2.5. meta 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-contexts-in-which-this-element-can-be-used-7">4.2.6. style 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-8">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-9">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-10">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-11">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-12">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-8">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-9">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-10">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-11">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-12">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-13">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-14">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-15">4.3.8. The footer element</a>
-    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-16">4.3.9. The address element</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-14">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-15">4.3.8. footer 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-contexts-in-which-this-element-can-be-used-16">4.3.9. address 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-contexts-in-which-this-element-can-be-used-17">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-contexts-in-which-this-element-can-be-used-18">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-contexts-in-which-this-element-can-be-used-19">4.4.3. The pre element</a>
@@ -6212,19 +6213,19 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-content-model-8">4.2.4. link 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-content-model-9">4.2.5. meta 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-content-model-10">4.2.6. style 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-content-model-11">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-content-model-12">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-content-model-13">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-content-model-14">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-content-model-15">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-content-model-11">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-model-12">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-model-13">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-model-14">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-model-15">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-content-model-16">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-content-model-17">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-content-model-18">4.3.8. The footer element</a>
-    </li><li><a href="sections.html#ref-for-content-model-19">4.3.9. The address element</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-content-model-17">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-model-18">4.3.8. footer 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-model-19">4.3.9. address 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-content-model-20">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-content-model-21">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-content-model-22">4.4.3. The pre element</a>
@@ -6331,19 +6332,19 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-tag-omission-in-text-html-5">4.2.4. link 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-tag-omission-in-text-html-6">4.2.5. meta 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-tag-omission-in-text-html-7">4.2.6. style 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-8">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-9">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-10">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-11">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-12">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-8">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-9">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-10">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-11">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-12">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-13">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-14">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-15">4.3.8. The footer element</a>
-    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-16">4.3.9. The address element</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-14">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-15">4.3.8. footer 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-tag-omission-in-text-html-16">4.3.9. address 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-tag-omission-in-text-html-17">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-tag-omission-in-text-html-18">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-tag-omission-in-text-html-19">4.4.3. The pre element</a>
@@ -6449,19 +6450,19 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-content-attribute-6">4.2.4. link 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-content-attribute-7">4.2.5. meta 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-content-attribute-8">4.2.6. style 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-content-attribute-9">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-content-attribute-10">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-content-attribute-11">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-content-attribute-12">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-content-attribute-13">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-content-attribute-9">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-attribute-10">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-attribute-11">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-attribute-12">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-attribute-13">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-content-attribute-14">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-content-attribute-15">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-content-attribute-16">4.3.8. The footer element</a>
-    </li><li><a href="sections.html#ref-for-content-attribute-17">4.3.9. The address element</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-content-attribute-15">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-attribute-16">4.3.8. footer 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-content-attribute-17">4.3.9. address 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-content-attribute-18">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-content-attribute-19">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-content-attribute-20">4.4.3. The pre element</a>
@@ -6576,7 +6577,7 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-inter-element-whitespace-6">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-inter-element-whitespace-7">3.2.4.4. 문단(paragraphs)</a> <a href="dom.html#ref-for-inter-element-whitespace-8">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-inter-element-whitespace-9">4.2.2. title 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-inter-element-whitespace-10">4.3.3. The section element</a>
+    </li><li><a href="sections.html#ref-for-inter-element-whitespace-10">4.3.3. section 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-inter-element-whitespace-11">4.5.10. The ruby element</a> <a href="textlevel-semantics.html#ref-for-inter-element-whitespace-12">(2)</a> <a href="textlevel-semantics.html#ref-for-inter-element-whitespace-13">(3)</a> <a href="textlevel-semantics.html#ref-for-inter-element-whitespace-14">(4)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-inter-element-whitespace-15">4.5.13. The rtc element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-inter-element-whitespace-16">4.7.5. The img element</a>
@@ -6632,19 +6633,19 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-flow-content-6">3.2.4.4. 문단(paragraphs)</a>
     </li><li><a href="dom.html#ref-for-flow-content-7">3.2.6.1. 
   양방향 알고리즘 서식 문자에 대한 작성 적합성 기준 </a>
-    </li><li><a href="sections.html#ref-for-flow-content-8">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-flow-content-9">4.3.2. The article element</a> <a href="sections.html#ref-for-flow-content-10">(2)</a> <a href="sections.html#ref-for-flow-content-11">(3)</a>
-    </li><li><a href="sections.html#ref-for-flow-content-12">4.3.3. The section element</a> <a href="sections.html#ref-for-flow-content-13">(2)</a> <a href="sections.html#ref-for-flow-content-14">(3)</a>
-    </li><li><a href="sections.html#ref-for-flow-content-15">4.3.4. The nav element</a> <a href="sections.html#ref-for-flow-content-16">(2)</a> <a href="sections.html#ref-for-flow-content-17">(3)</a>
-    </li><li><a href="sections.html#ref-for-flow-content-18">4.3.5. The aside element</a> <a href="sections.html#ref-for-flow-content-19">(2)</a> <a href="sections.html#ref-for-flow-content-20">(3)</a>
+    </li><li><a href="sections.html#ref-for-flow-content-8">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-flow-content-9">4.3.2. article 요소(element)</a> <a href="sections.html#ref-for-flow-content-10">(2)</a> <a href="sections.html#ref-for-flow-content-11">(3)</a>
+    </li><li><a href="sections.html#ref-for-flow-content-12">4.3.3. section 요소(element)</a> <a href="sections.html#ref-for-flow-content-13">(2)</a> <a href="sections.html#ref-for-flow-content-14">(3)</a>
+    </li><li><a href="sections.html#ref-for-flow-content-15">4.3.4. nav 요소(element)</a> <a href="sections.html#ref-for-flow-content-16">(2)</a> <a href="sections.html#ref-for-flow-content-17">(3)</a>
+    </li><li><a href="sections.html#ref-for-flow-content-18">4.3.5. aside 요소(element)</a> <a href="sections.html#ref-for-flow-content-19">(2)</a> <a href="sections.html#ref-for-flow-content-20">(3)</a>
     </li><li><a href="sections.html#ref-for-flow-content-21">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a> <a href="sections.html#ref-for-flow-content-22">(2)</a>
-    </li><li><a href="sections.html#ref-for-flow-content-23">4.3.7. The header element</a> <a href="sections.html#ref-for-flow-content-24">(2)</a> <a href="sections.html#ref-for-flow-content-25">(3)</a>
-    </li><li><a href="sections.html#ref-for-flow-content-26">4.3.8. The footer element</a> <a href="sections.html#ref-for-flow-content-27">(2)</a> <a href="sections.html#ref-for-flow-content-28">(3)</a>
-    </li><li><a href="sections.html#ref-for-flow-content-29">4.3.9. The address element</a> <a href="sections.html#ref-for-flow-content-30">(2)</a> <a href="sections.html#ref-for-flow-content-31">(3)</a>
+  h5, h6
+  요소(element)들 </a> <a href="sections.html#ref-for-flow-content-22">(2)</a>
+    </li><li><a href="sections.html#ref-for-flow-content-23">4.3.7. header 요소(element)</a> <a href="sections.html#ref-for-flow-content-24">(2)</a> <a href="sections.html#ref-for-flow-content-25">(3)</a>
+    </li><li><a href="sections.html#ref-for-flow-content-26">4.3.8. footer 요소(element)</a> <a href="sections.html#ref-for-flow-content-27">(2)</a> <a href="sections.html#ref-for-flow-content-28">(3)</a>
+    </li><li><a href="sections.html#ref-for-flow-content-29">4.3.9. address 요소(element)</a> <a href="sections.html#ref-for-flow-content-30">(2)</a> <a href="sections.html#ref-for-flow-content-31">(3)</a>
     </li><li><a href="grouping-content.html#ref-for-flow-content-32">4.4.1. The p element</a> <a href="grouping-content.html#ref-for-flow-content-33">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-flow-content-34">4.4.2. The hr element</a> <a href="grouping-content.html#ref-for-flow-content-35">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-flow-content-36">4.4.3. The pre element</a> <a href="grouping-content.html#ref-for-flow-content-37">(2)</a>
@@ -6733,15 +6734,15 @@ c-end         = "--&gt;"
    <ul>
     <li><a href="dom.html#ref-for-sectioning-content-1">3.2.4.2.3. 그룹화(sectioning) 콘텐트</a> <a href="dom.html#ref-for-sectioning-content-2">(2)</a>
     </li><li><a href="dom.html#ref-for-sectioning-content-3">3.2.4.2.4. 제목(heading) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-sectioning-content-4">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-sectioning-content-5">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-sectioning-content-6">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-sectioning-content-7">4.3.5. The aside element</a> <a href="sections.html#ref-for-sectioning-content-8">(2)</a> <a href="sections.html#ref-for-sectioning-content-9">(3)</a>
-    </li><li><a href="sections.html#ref-for-sectioning-content-10">4.3.7. The header element</a> <a href="sections.html#ref-for-sectioning-content-11">(2)</a> <a href="sections.html#ref-for-sectioning-content-12">(3)</a> <a href="sections.html#ref-for-sectioning-content-13">(4)</a> <a href="sections.html#ref-for-sectioning-content-14">(5)</a> <a href="sections.html#ref-for-sectioning-content-15">(6)</a>
-    </li><li><a href="sections.html#ref-for-sectioning-content-16">4.3.8. The footer element</a> <a href="sections.html#ref-for-sectioning-content-17">(2)</a> <a href="sections.html#ref-for-sectioning-content-18">(3)</a> <a href="sections.html#ref-for-sectioning-content-19">(4)</a> <a href="sections.html#ref-for-sectioning-content-20">(5)</a>
-    </li><li><a href="sections.html#ref-for-sectioning-content-21">4.3.9. The address element</a>
-    </li><li><a href="sections.html#ref-for-sectioning-content-22">4.3.10. Headings and sections</a> <a href="sections.html#ref-for-sectioning-content-23">(2)</a> <a href="sections.html#ref-for-sectioning-content-24">(3)</a> <a href="sections.html#ref-for-sectioning-content-25">(4)</a> <a href="sections.html#ref-for-sectioning-content-26">(5)</a>
-    </li><li><a href="sections.html#ref-for-sectioning-content-27">4.3.10.1. Creating an outline</a> <a href="sections.html#ref-for-sectioning-content-28">(2)</a> <a href="sections.html#ref-for-sectioning-content-29">(3)</a> <a href="sections.html#ref-for-sectioning-content-30">(4)</a> <a href="sections.html#ref-for-sectioning-content-31">(5)</a> <a href="sections.html#ref-for-sectioning-content-32">(6)</a> <a href="sections.html#ref-for-sectioning-content-33">(7)</a> <a href="sections.html#ref-for-sectioning-content-34">(8)</a> <a href="sections.html#ref-for-sectioning-content-35">(9)</a> <a href="sections.html#ref-for-sectioning-content-36">(10)</a> <a href="sections.html#ref-for-sectioning-content-37">(11)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-content-4">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-content-5">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-content-6">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-content-7">4.3.5. aside 요소(element)</a> <a href="sections.html#ref-for-sectioning-content-8">(2)</a> <a href="sections.html#ref-for-sectioning-content-9">(3)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-content-10">4.3.7. header 요소(element)</a> <a href="sections.html#ref-for-sectioning-content-11">(2)</a> <a href="sections.html#ref-for-sectioning-content-12">(3)</a> <a href="sections.html#ref-for-sectioning-content-13">(4)</a> <a href="sections.html#ref-for-sectioning-content-14">(5)</a> <a href="sections.html#ref-for-sectioning-content-15">(6)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-content-16">4.3.8. footer 요소(element)</a> <a href="sections.html#ref-for-sectioning-content-17">(2)</a> <a href="sections.html#ref-for-sectioning-content-18">(3)</a> <a href="sections.html#ref-for-sectioning-content-19">(4)</a> <a href="sections.html#ref-for-sectioning-content-20">(5)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-content-21">4.3.9. address 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-content-22">4.3.10. 제목(heading)들과 섹션들</a> <a href="sections.html#ref-for-sectioning-content-23">(2)</a> <a href="sections.html#ref-for-sectioning-content-24">(3)</a> <a href="sections.html#ref-for-sectioning-content-25">(4)</a> <a href="sections.html#ref-for-sectioning-content-26">(5)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-content-27">4.3.10.1. 개요(outline) 생성</a> <a href="sections.html#ref-for-sectioning-content-28">(2)</a> <a href="sections.html#ref-for-sectioning-content-29">(3)</a> <a href="sections.html#ref-for-sectioning-content-30">(4)</a> <a href="sections.html#ref-for-sectioning-content-31">(5)</a> <a href="sections.html#ref-for-sectioning-content-32">(6)</a> <a href="sections.html#ref-for-sectioning-content-33">(7)</a> <a href="sections.html#ref-for-sectioning-content-34">(8)</a> <a href="sections.html#ref-for-sectioning-content-35">(9)</a> <a href="sections.html#ref-for-sectioning-content-36">(10)</a> <a href="sections.html#ref-for-sectioning-content-37">(11)</a>
     </li><li><a href="grouping-content.html#ref-for-sectioning-content-38">4.4.9. The dt element</a>
     </li><li><a href="grouping-content.html#ref-for-sectioning-content-39">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-sectioning-content-40">(2)</a>
     </li><li><a href="tabular-data.html#ref-for-sectioning-content-41">4.9.10. The th element</a>
@@ -6754,13 +6755,13 @@ c-end         = "--&gt;"
    <ul>
     <li><a href="dom.html#ref-for-heading-content-1">3.2.4.2.3. 그룹화(sectioning) 콘텐트</a>
     </li><li><a href="sections.html#ref-for-heading-content-2">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-heading-content-3">4.3.9. The address element</a>
-    </li><li><a href="sections.html#ref-for-heading-content-4">4.3.10. Headings and sections</a>
-    </li><li><a href="sections.html#ref-for-heading-content-5">4.3.10.1. Creating an outline</a> <a href="sections.html#ref-for-heading-content-6">(2)</a> <a href="sections.html#ref-for-heading-content-7">(3)</a> <a href="sections.html#ref-for-heading-content-8">(4)</a> <a href="sections.html#ref-for-heading-content-9">(5)</a> <a href="sections.html#ref-for-heading-content-10">(6)</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-heading-content-3">4.3.9. address 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-heading-content-4">4.3.10. 제목(heading)들과 섹션들</a>
+    </li><li><a href="sections.html#ref-for-heading-content-5">4.3.10.1. 개요(outline) 생성</a> <a href="sections.html#ref-for-heading-content-6">(2)</a> <a href="sections.html#ref-for-heading-content-7">(3)</a> <a href="sections.html#ref-for-heading-content-8">(4)</a> <a href="sections.html#ref-for-heading-content-9">(5)</a> <a href="sections.html#ref-for-heading-content-10">(6)</a>
     </li><li><a href="grouping-content.html#ref-for-heading-content-11">4.4.9. The dt element</a>
     </li><li><a href="tabular-data.html#ref-for-heading-content-12">4.9.10. The th element</a>
     </li><li><a href="interactive-elements.html#ref-for-heading-content-13">4.11.2. The summary element</a>
@@ -6781,10 +6782,10 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-phrasing-content-18">3.2.6.1. 
   양방향 알고리즘 서식 문자에 대한 작성 적합성 기준 </a>
     </li><li><a href="sections.html#ref-for-phrasing-content-19">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
+  h5, h6
+  요소(element)들 </a>
     </li><li><a href="grouping-content.html#ref-for-phrasing-content-20">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-phrasing-content-21">4.4.3. The pre element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-22">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-23">(2)</a>
@@ -6941,18 +6942,18 @@ c-end         = "--&gt;"
    <b><a href="dom.html#palpable-content">#palpable-content</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="dom.html#ref-for-palpable-content-1">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-palpable-content-2">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-palpable-content-3">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-palpable-content-4">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-palpable-content-5">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-palpable-content-2">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-palpable-content-3">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-palpable-content-4">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-palpable-content-5">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-palpable-content-6">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-palpable-content-7">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-palpable-content-8">4.3.8. The footer element</a>
-    </li><li><a href="sections.html#ref-for-palpable-content-9">4.3.9. The address element</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-palpable-content-7">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-palpable-content-8">4.3.8. footer 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-palpable-content-9">4.3.9. address 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-palpable-content-10">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-palpable-content-11">4.4.3. The pre element</a>
     </li><li><a href="grouping-content.html#ref-for-palpable-content-12">4.4.4. The blockquote element</a>
@@ -7076,19 +7077,19 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-global-attributes-5">4.2.4. link 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-global-attributes-6">4.2.5. meta 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-global-attributes-7">4.2.6. style 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-global-attributes-8">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-global-attributes-9">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-global-attributes-10">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-global-attributes-11">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-global-attributes-12">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-global-attributes-8">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-attributes-9">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-attributes-10">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-attributes-11">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-attributes-12">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-global-attributes-13">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-global-attributes-14">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-global-attributes-15">4.3.8. The footer element</a>
-    </li><li><a href="sections.html#ref-for-global-attributes-16">4.3.9. The address element</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-global-attributes-14">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-attributes-15">4.3.8. footer 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-attributes-16">4.3.9. address 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-global-attributes-17">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-global-attributes-18">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-global-attributes-19">4.4.3. The pre element</a>
@@ -7411,18 +7412,18 @@ c-end         = "--&gt;"
    <b><a href="dom.html#do-not-set">#do-not-set</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="document-metadata.html#ref-for-do-not-set-1">4.2.4. link 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-do-not-set-2">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-do-not-set-3">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-do-not-set-4">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-do-not-set-5">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-do-not-set-6">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-do-not-set-2">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-do-not-set-3">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-do-not-set-4">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-do-not-set-5">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-do-not-set-6">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-do-not-set-7">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-do-not-set-8">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-do-not-set-9">4.3.8. The footer element</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-do-not-set-8">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-do-not-set-9">4.3.8. footer 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-do-not-set-10">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-do-not-set-11">4.4.5. The ol element</a>
     </li><li><a href="grouping-content.html#ref-for-do-not-set-12">4.4.6. The ul element</a>
@@ -7468,19 +7469,19 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-global-aria--attributes-7">4.2.4. link 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-global-aria--attributes-8">4.2.5. meta 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-global-aria--attributes-9">4.2.6. style 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-global-aria--attributes-10">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-global-aria--attributes-11">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-global-aria--attributes-12">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-global-aria--attributes-13">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-global-aria--attributes-14">4.3.5. The aside element</a>
+    </li><li><a href="sections.html#ref-for-global-aria--attributes-10">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-aria--attributes-11">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-aria--attributes-12">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-aria--attributes-13">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-aria--attributes-14">4.3.5. aside 요소(element)</a>
     </li><li><a href="sections.html#ref-for-global-aria--attributes-15">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-global-aria--attributes-16">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-global-aria--attributes-17">4.3.8. The footer element</a>
-    </li><li><a href="sections.html#ref-for-global-aria--attributes-18">4.3.9. The address element</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-global-aria--attributes-16">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-aria--attributes-17">4.3.8. footer 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-global-aria--attributes-18">4.3.9. address 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-global-aria--attributes-19">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-global-aria--attributes-20">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-global-aria--attributes-21">4.4.3. The pre element</a>
@@ -7606,7 +7607,7 @@ c-end         = "--&gt;"
     </li><li><a href="semantics.html#ref-for-elementdef-html-12">4.1.1. html 요소(element)</a> <a href="semantics.html#ref-for-elementdef-html-13">(2)</a> <a href="semantics.html#ref-for-elementdef-html-14">(3)</a> <a href="semantics.html#ref-for-elementdef-html-15">(4)</a> <a href="semantics.html#ref-for-elementdef-html-16">(5)</a> <a href="semantics.html#ref-for-elementdef-html-17">(6)</a> <a href="semantics.html#ref-for-elementdef-html-18">(7)</a> <a href="semantics.html#ref-for-elementdef-html-19">(8)</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-html-20">4.2.1. head 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-html-21">4.2.3. base 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-html-22">4.3.1. The body element</a> <a href="sections.html#ref-for-elementdef-html-23">(2)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-html-22">4.3.1. body 요소(element)</a> <a href="sections.html#ref-for-elementdef-html-23">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-html-24">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-html-25">(2)</a>
     </li><li><a href="browsers.html#ref-for-elementdef-html-26">6.1. Browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-elementdef-html-27">6.7.6. Page load processing model for media</a> <a href="browsers.html#ref-for-elementdef-html-28">(2)</a>
@@ -7807,7 +7808,7 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-elementdef-link-24">4.2.5.2. 다른 메타데이터 이름들</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-link-25">4.2.6. style 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-link-26">4.2.7. 스타일링과 스크립팅의 상호작용</a> <a href="document-metadata.html#ref-for-elementdef-link-27">(2)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-link-28">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-elementdef-link-28">4.3.1. body 요소(element)</a>
     </li><li><a href="links.html#ref-for-elementdef-link-29">4.8.1. Introduction</a> <a href="links.html#ref-for-elementdef-link-30">(2)</a> <a href="links.html#ref-for-elementdef-link-31">(3)</a>
     </li><li><a href="links.html#ref-for-elementdef-link-32">4.8.6. Link types</a>
     </li><li><a href="links.html#ref-for-elementdef-link-33">4.8.6.1. Link type "alternate"</a> <a href="links.html#ref-for-elementdef-link-34">(2)</a> <a href="links.html#ref-for-elementdef-link-35">(3)</a>
@@ -8001,7 +8002,7 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-elementdef-meta-24">4.2.5.2. 다른 메타데이터 이름들</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-meta-25">4.2.5.3. 선처리(pragma) 지시자들</a> <a href="document-metadata.html#ref-for-elementdef-meta-26">(2)</a> <a href="document-metadata.html#ref-for-elementdef-meta-27">(3)</a> <a href="document-metadata.html#ref-for-elementdef-meta-28">(4)</a> <a href="document-metadata.html#ref-for-elementdef-meta-29">(5)</a> <a href="document-metadata.html#ref-for-elementdef-meta-30">(6)</a> <a href="document-metadata.html#ref-for-elementdef-meta-31">(7)</a> <a href="document-metadata.html#ref-for-elementdef-meta-32">(8)</a> <a href="document-metadata.html#ref-for-elementdef-meta-33">(9)</a> <a href="document-metadata.html#ref-for-elementdef-meta-34">(10)</a> <a href="document-metadata.html#ref-for-elementdef-meta-35">(11)</a> <a href="document-metadata.html#ref-for-elementdef-meta-36">(12)</a> <a href="document-metadata.html#ref-for-elementdef-meta-37">(13)</a> <a href="document-metadata.html#ref-for-elementdef-meta-38">(14)</a> <a href="document-metadata.html#ref-for-elementdef-meta-39">(15)</a> <a href="document-metadata.html#ref-for-elementdef-meta-40">(16)</a> <a href="document-metadata.html#ref-for-elementdef-meta-41">(17)</a> <a href="document-metadata.html#ref-for-elementdef-meta-42">(18)</a> <a href="document-metadata.html#ref-for-elementdef-meta-43">(19)</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-meta-44">4.2.5.5. 문서의 문자 인코딩 명시하기</a> <a href="document-metadata.html#ref-for-elementdef-meta-45">(2)</a> <a href="document-metadata.html#ref-for-elementdef-meta-46">(3)</a> <a href="document-metadata.html#ref-for-elementdef-meta-47">(4)</a> <a href="document-metadata.html#ref-for-elementdef-meta-48">(5)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-meta-49">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-elementdef-meta-49">4.3.1. body 요소(element)</a>
     </li><li><a href="semantics-scripting.html#ref-for-elementdef-meta-50">4.12.2. The noscript element</a> <a href="semantics-scripting.html#ref-for-elementdef-meta-51">(2)</a> <a href="semantics-scripting.html#ref-for-elementdef-meta-52">(3)</a>
     </li><li><a href="syntax.html#ref-for-elementdef-meta-53">8.1.2. Elements</a>
     </li><li><a href="syntax.html#ref-for-elementdef-meta-54">8.1.2.4. Optional tags</a>
@@ -8154,7 +8155,7 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-elementdef-style-6">4.2.5. meta 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-style-7">4.2.6. style 요소(element)</a> <a href="document-metadata.html#ref-for-elementdef-style-8">(2)</a> <a href="document-metadata.html#ref-for-elementdef-style-9">(3)</a> <a href="document-metadata.html#ref-for-elementdef-style-10">(4)</a> <a href="document-metadata.html#ref-for-elementdef-style-11">(5)</a> <a href="document-metadata.html#ref-for-elementdef-style-12">(6)</a> <a href="document-metadata.html#ref-for-elementdef-style-13">(7)</a> <a href="document-metadata.html#ref-for-elementdef-style-14">(8)</a> <a href="document-metadata.html#ref-for-elementdef-style-15">(9)</a> <a href="document-metadata.html#ref-for-elementdef-style-16">(10)</a> <a href="document-metadata.html#ref-for-elementdef-style-17">(11)</a> <a href="document-metadata.html#ref-for-elementdef-style-18">(12)</a> <a href="document-metadata.html#ref-for-elementdef-style-19">(13)</a> <a href="document-metadata.html#ref-for-elementdef-style-20">(14)</a> <a href="document-metadata.html#ref-for-elementdef-style-21">(15)</a> <a href="document-metadata.html#ref-for-elementdef-style-22">(16)</a> <a href="document-metadata.html#ref-for-elementdef-style-23">(17)</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-style-24">4.2.7. 스타일링과 스크립팅의 상호작용</a> <a href="document-metadata.html#ref-for-elementdef-style-25">(2)</a> <a href="document-metadata.html#ref-for-elementdef-style-26">(3)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-style-27">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-elementdef-style-27">4.3.1. body 요소(element)</a>
     </li><li><a href="semantics-scripting.html#ref-for-elementdef-style-28">4.12.2. The noscript element</a> <a href="semantics-scripting.html#ref-for-elementdef-style-29">(2)</a> <a href="semantics-scripting.html#ref-for-elementdef-style-30">(3)</a>
     </li><li><a href="syntax.html#ref-for-elementdef-style-31">8.1.2. Elements</a>
     </li><li><a href="syntax.html#ref-for-elementdef-style-32">8.1.2.4. Optional tags</a>
@@ -8271,47 +8272,47 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-elementdef-body-8">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-elementdef-body-9">(2)</a> <a href="dom.html#ref-for-elementdef-body-10">(3)</a> <a href="dom.html#ref-for-elementdef-body-11">(4)</a> <a href="dom.html#ref-for-elementdef-body-12">(5)</a> <a href="dom.html#ref-for-elementdef-body-13">(6)</a> <a href="dom.html#ref-for-elementdef-body-14">(7)</a> <a href="dom.html#ref-for-elementdef-body-15">(8)</a> <a href="dom.html#ref-for-elementdef-body-16">(9)</a> <a href="dom.html#ref-for-elementdef-body-17">(10)</a> <a href="dom.html#ref-for-elementdef-body-18">(11)</a>
     </li><li><a href="dom.html#ref-for-elementdef-body-19">3.2.5. 범용 속성(attribute)</a>
     </li><li><a href="semantics.html#ref-for-elementdef-body-20">4.1.1. html 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-body-21">4.3.1. The body element</a> <a href="sections.html#ref-for-elementdef-body-22">(2)</a> <a href="sections.html#ref-for-elementdef-body-23">(3)</a> <a href="sections.html#ref-for-elementdef-body-24">(4)</a> <a href="sections.html#ref-for-elementdef-body-25">(5)</a> <a href="sections.html#ref-for-elementdef-body-26">(6)</a> <a href="sections.html#ref-for-elementdef-body-27">(7)</a> <a href="sections.html#ref-for-elementdef-body-28">(8)</a> <a href="sections.html#ref-for-elementdef-body-29">(9)</a> <a href="sections.html#ref-for-elementdef-body-30">(10)</a> <a href="sections.html#ref-for-elementdef-body-31">(11)</a> <a href="sections.html#ref-for-elementdef-body-32">(12)</a> <a href="sections.html#ref-for-elementdef-body-33">(13)</a> <a href="sections.html#ref-for-elementdef-body-34">(14)</a> <a href="sections.html#ref-for-elementdef-body-35">(15)</a> <a href="sections.html#ref-for-elementdef-body-36">(16)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-body-37">4.3.7. The header element</a> <a href="sections.html#ref-for-elementdef-body-38">(2)</a> <a href="sections.html#ref-for-elementdef-body-39">(3)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-body-40">4.3.8. The footer element</a> <a href="sections.html#ref-for-elementdef-body-41">(2)</a> <a href="sections.html#ref-for-elementdef-body-42">(3)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-body-43">4.3.9. The address element</a> <a href="sections.html#ref-for-elementdef-body-44">(2)</a> <a href="sections.html#ref-for-elementdef-body-45">(3)</a> <a href="sections.html#ref-for-elementdef-body-46">(4)</a> <a href="sections.html#ref-for-elementdef-body-47">(5)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-body-48">4.3.10. Headings and sections</a>
-    </li><li><a href="sections.html#ref-for-elementdef-body-49">4.3.10.1. Creating an outline</a>
-    </li><li><a href="sections.html#ref-for-elementdef-body-50">4.3.11. Usage summary</a>
-    </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-body-51">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-body-52">(2)</a>
-    </li><li><a href="editing.html#ref-for-elementdef-body-53">5.2. Inert subtrees</a> <a href="editing.html#ref-for-elementdef-body-54">(2)</a>
-    </li><li><a href="editing.html#ref-for-elementdef-body-55">5.4.4. Processing model</a>
-    </li><li><a href="editing.html#ref-for-elementdef-body-56">5.4.6. Focus management APIs</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-body-57">6.1. Browsing contexts</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-body-58">6.7.6. Page load processing model for media</a> <a href="browsers.html#ref-for-elementdef-body-59">(2)</a>
-    </li><li><a href="browsers.html#ref-for-elementdef-body-60">6.7.7. Page load processing model for content that uses plugins</a> <a href="browsers.html#ref-for-elementdef-body-61">(2)</a>
-    </li><li><a href="webappapis.html#ref-for-elementdef-body-62">7.1.5.1. Event handlers</a>
-    </li><li><a href="webappapis.html#ref-for-elementdef-body-63">7.1.5.2. Event handlers on elements, Document objects, and Window objects</a> <a href="webappapis.html#ref-for-elementdef-body-64">(2)</a> <a href="webappapis.html#ref-for-elementdef-body-65">(3)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-body-66">8.1. Writing HTML documents</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-body-67">8.1.2.4. Optional tags</a> <a href="syntax.html#ref-for-elementdef-body-68">(2)</a> <a href="syntax.html#ref-for-elementdef-body-69">(3)</a> <a href="syntax.html#ref-for-elementdef-body-70">(4)</a> <a href="syntax.html#ref-for-elementdef-body-71">(5)</a> <a href="syntax.html#ref-for-elementdef-body-72">(6)</a> <a href="syntax.html#ref-for-elementdef-body-73">(7)</a> <a href="syntax.html#ref-for-elementdef-body-74">(8)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-body-75">8.2.3.1. The insertion mode</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-body-76">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-body-77">8.2.5.4.7. The "in body" insertion mode</a> <a href="syntax.html#ref-for-elementdef-body-78">(2)</a> <a href="syntax.html#ref-for-elementdef-body-79">(3)</a> <a href="syntax.html#ref-for-elementdef-body-80">(4)</a> <a href="syntax.html#ref-for-elementdef-body-81">(5)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-body-82">8.2.8.1. Misnested tags: &lt;b&gt;&lt;i&gt;&lt;/b&gt;&lt;/i&gt;</a> <a href="syntax.html#ref-for-elementdef-body-83">(2)</a> <a href="syntax.html#ref-for-elementdef-body-84">(3)</a> <a href="syntax.html#ref-for-elementdef-body-85">(4)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-body-86">8.2.8.2. Misnested tags: &lt;b&gt;&lt;p&gt;&lt;/b&gt;&lt;/p&gt;</a> <a href="syntax.html#ref-for-elementdef-body-87">(2)</a> <a href="syntax.html#ref-for-elementdef-body-88">(3)</a> <a href="syntax.html#ref-for-elementdef-body-89">(4)</a> <a href="syntax.html#ref-for-elementdef-body-90">(5)</a> <a href="syntax.html#ref-for-elementdef-body-91">(6)</a> <a href="syntax.html#ref-for-elementdef-body-92">(7)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-body-93">8.2.8.3. Unexpected markup in tables</a> <a href="syntax.html#ref-for-elementdef-body-94">(2)</a> <a href="syntax.html#ref-for-elementdef-body-95">(3)</a> <a href="syntax.html#ref-for-elementdef-body-96">(4)</a> <a href="syntax.html#ref-for-elementdef-body-97">(5)</a> <a href="syntax.html#ref-for-elementdef-body-98">(6)</a> <a href="syntax.html#ref-for-elementdef-body-99">(7)</a> <a href="syntax.html#ref-for-elementdef-body-100">(8)</a> <a href="syntax.html#ref-for-elementdef-body-101">(9)</a> <a href="syntax.html#ref-for-elementdef-body-102">(10)</a> <a href="syntax.html#ref-for-elementdef-body-103">(11)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-body-104">8.2.8.4. Scripts that modify the page as it is being parsed</a> <a href="syntax.html#ref-for-elementdef-body-105">(2)</a> <a href="syntax.html#ref-for-elementdef-body-106">(3)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-body-107">8.2.8.6. Unclosed formatting elements</a>
-    </li><li><a href="rendering.html#ref-for-elementdef-body-108">10.3.2. The page</a> <a href="rendering.html#ref-for-elementdef-body-109">(2)</a> <a href="rendering.html#ref-for-elementdef-body-110">(3)</a> <a href="rendering.html#ref-for-elementdef-body-111">(4)</a> <a href="rendering.html#ref-for-elementdef-body-112">(5)</a> <a href="rendering.html#ref-for-elementdef-body-113">(6)</a> <a href="rendering.html#ref-for-elementdef-body-114">(7)</a> <a href="rendering.html#ref-for-elementdef-body-115">(8)</a> <a href="rendering.html#ref-for-elementdef-body-116">(9)</a> <a href="rendering.html#ref-for-elementdef-body-117">(10)</a> <a href="rendering.html#ref-for-elementdef-body-118">(11)</a> <a href="rendering.html#ref-for-elementdef-body-119">(12)</a> <a href="rendering.html#ref-for-elementdef-body-120">(13)</a> <a href="rendering.html#ref-for-elementdef-body-121">(14)</a> <a href="rendering.html#ref-for-elementdef-body-122">(15)</a> <a href="rendering.html#ref-for-elementdef-body-123">(16)</a> <a href="rendering.html#ref-for-elementdef-body-124">(17)</a> <a href="rendering.html#ref-for-elementdef-body-125">(18)</a> <a href="rendering.html#ref-for-elementdef-body-126">(19)</a> <a href="rendering.html#ref-for-elementdef-body-127">(20)</a> <a href="rendering.html#ref-for-elementdef-body-128">(21)</a> <a href="rendering.html#ref-for-elementdef-body-129">(22)</a>
-    </li><li><a href="rendering.html#ref-for-elementdef-body-130">10.3.10. Margin collapsing quirks</a> <a href="rendering.html#ref-for-elementdef-body-131">(2)</a>
-    </li><li><a href="obsolete.html#ref-for-elementdef-body-132">11.2. Non-conforming features</a> <a href="obsolete.html#ref-for-elementdef-body-133">(2)</a> <a href="obsolete.html#ref-for-elementdef-body-134">(3)</a> <a href="obsolete.html#ref-for-elementdef-body-135">(4)</a> <a href="obsolete.html#ref-for-elementdef-body-136">(5)</a> <a href="obsolete.html#ref-for-elementdef-body-137">(6)</a> <a href="obsolete.html#ref-for-elementdef-body-138">(7)</a> <a href="obsolete.html#ref-for-elementdef-body-139">(8)</a> <a href="obsolete.html#ref-for-elementdef-body-140">(9)</a> <a href="obsolete.html#ref-for-elementdef-body-141">(10)</a> <a href="obsolete.html#ref-for-elementdef-body-142">(11)</a> <a href="obsolete.html#ref-for-elementdef-body-143">(12)</a>
-    </li><li><a href="obsolete.html#ref-for-elementdef-body-144">11.3.3. Frames</a>
-    </li><li><a href="obsolete.html#ref-for-elementdef-body-145">11.3.5. Other elements, attributes and APIs</a> <a href="obsolete.html#ref-for-elementdef-body-146">(2)</a> <a href="obsolete.html#ref-for-elementdef-body-147">(3)</a> <a href="obsolete.html#ref-for-elementdef-body-148">(4)</a> <a href="obsolete.html#ref-for-elementdef-body-149">(5)</a> <a href="obsolete.html#ref-for-elementdef-body-150">(6)</a> <a href="obsolete.html#ref-for-elementdef-body-151">(7)</a> <a href="obsolete.html#ref-for-elementdef-body-152">(8)</a> <a href="obsolete.html#ref-for-elementdef-body-153">(9)</a> <a href="obsolete.html#ref-for-elementdef-body-154">(10)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-body-155">Elements</a> <a href="fullindex.html#ref-for-elementdef-body-156">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-body-157">Element content categories</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-body-158">Attributes</a> <a href="fullindex.html#ref-for-elementdef-body-159">(2)</a> <a href="fullindex.html#ref-for-elementdef-body-160">(3)</a> <a href="fullindex.html#ref-for-elementdef-body-161">(4)</a> <a href="fullindex.html#ref-for-elementdef-body-162">(5)</a> <a href="fullindex.html#ref-for-elementdef-body-163">(6)</a> <a href="fullindex.html#ref-for-elementdef-body-164">(7)</a> <a href="fullindex.html#ref-for-elementdef-body-165">(8)</a> <a href="fullindex.html#ref-for-elementdef-body-166">(9)</a> <a href="fullindex.html#ref-for-elementdef-body-167">(10)</a> <a href="fullindex.html#ref-for-elementdef-body-168">(11)</a> <a href="fullindex.html#ref-for-elementdef-body-169">(12)</a> <a href="fullindex.html#ref-for-elementdef-body-170">(13)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-body-171">Element Interfaces</a>
+    </li><li><a href="sections.html#ref-for-elementdef-body-21">4.3.1. body 요소(element)</a> <a href="sections.html#ref-for-elementdef-body-22">(2)</a> <a href="sections.html#ref-for-elementdef-body-23">(3)</a> <a href="sections.html#ref-for-elementdef-body-24">(4)</a> <a href="sections.html#ref-for-elementdef-body-25">(5)</a> <a href="sections.html#ref-for-elementdef-body-26">(6)</a> <a href="sections.html#ref-for-elementdef-body-27">(7)</a> <a href="sections.html#ref-for-elementdef-body-28">(8)</a> <a href="sections.html#ref-for-elementdef-body-29">(9)</a> <a href="sections.html#ref-for-elementdef-body-30">(10)</a> <a href="sections.html#ref-for-elementdef-body-31">(11)</a> <a href="sections.html#ref-for-elementdef-body-32">(12)</a> <a href="sections.html#ref-for-elementdef-body-33">(13)</a> <a href="sections.html#ref-for-elementdef-body-34">(14)</a> <a href="sections.html#ref-for-elementdef-body-35">(15)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-body-36">4.3.7. header 요소(element)</a> <a href="sections.html#ref-for-elementdef-body-37">(2)</a> <a href="sections.html#ref-for-elementdef-body-38">(3)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-body-39">4.3.8. footer 요소(element)</a> <a href="sections.html#ref-for-elementdef-body-40">(2)</a> <a href="sections.html#ref-for-elementdef-body-41">(3)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-body-42">4.3.9. address 요소(element)</a> <a href="sections.html#ref-for-elementdef-body-43">(2)</a> <a href="sections.html#ref-for-elementdef-body-44">(3)</a> <a href="sections.html#ref-for-elementdef-body-45">(4)</a> <a href="sections.html#ref-for-elementdef-body-46">(5)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-body-47">4.3.10. 제목(heading)들과 섹션들</a>
+    </li><li><a href="sections.html#ref-for-elementdef-body-48">4.3.10.1. 개요(outline) 생성</a>
+    </li><li><a href="sections.html#ref-for-elementdef-body-49">4.3.11. 사용법 요약</a>
+    </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-body-50">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-body-51">(2)</a>
+    </li><li><a href="editing.html#ref-for-elementdef-body-52">5.2. Inert subtrees</a> <a href="editing.html#ref-for-elementdef-body-53">(2)</a>
+    </li><li><a href="editing.html#ref-for-elementdef-body-54">5.4.4. Processing model</a>
+    </li><li><a href="editing.html#ref-for-elementdef-body-55">5.4.6. Focus management APIs</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-body-56">6.1. Browsing contexts</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-body-57">6.7.6. Page load processing model for media</a> <a href="browsers.html#ref-for-elementdef-body-58">(2)</a>
+    </li><li><a href="browsers.html#ref-for-elementdef-body-59">6.7.7. Page load processing model for content that uses plugins</a> <a href="browsers.html#ref-for-elementdef-body-60">(2)</a>
+    </li><li><a href="webappapis.html#ref-for-elementdef-body-61">7.1.5.1. Event handlers</a>
+    </li><li><a href="webappapis.html#ref-for-elementdef-body-62">7.1.5.2. Event handlers on elements, Document objects, and Window objects</a> <a href="webappapis.html#ref-for-elementdef-body-63">(2)</a> <a href="webappapis.html#ref-for-elementdef-body-64">(3)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-body-65">8.1. Writing HTML documents</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-body-66">8.1.2.4. Optional tags</a> <a href="syntax.html#ref-for-elementdef-body-67">(2)</a> <a href="syntax.html#ref-for-elementdef-body-68">(3)</a> <a href="syntax.html#ref-for-elementdef-body-69">(4)</a> <a href="syntax.html#ref-for-elementdef-body-70">(5)</a> <a href="syntax.html#ref-for-elementdef-body-71">(6)</a> <a href="syntax.html#ref-for-elementdef-body-72">(7)</a> <a href="syntax.html#ref-for-elementdef-body-73">(8)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-body-74">8.2.3.1. The insertion mode</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-body-75">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-body-76">8.2.5.4.7. The "in body" insertion mode</a> <a href="syntax.html#ref-for-elementdef-body-77">(2)</a> <a href="syntax.html#ref-for-elementdef-body-78">(3)</a> <a href="syntax.html#ref-for-elementdef-body-79">(4)</a> <a href="syntax.html#ref-for-elementdef-body-80">(5)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-body-81">8.2.8.1. Misnested tags: &lt;b&gt;&lt;i&gt;&lt;/b&gt;&lt;/i&gt;</a> <a href="syntax.html#ref-for-elementdef-body-82">(2)</a> <a href="syntax.html#ref-for-elementdef-body-83">(3)</a> <a href="syntax.html#ref-for-elementdef-body-84">(4)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-body-85">8.2.8.2. Misnested tags: &lt;b&gt;&lt;p&gt;&lt;/b&gt;&lt;/p&gt;</a> <a href="syntax.html#ref-for-elementdef-body-86">(2)</a> <a href="syntax.html#ref-for-elementdef-body-87">(3)</a> <a href="syntax.html#ref-for-elementdef-body-88">(4)</a> <a href="syntax.html#ref-for-elementdef-body-89">(5)</a> <a href="syntax.html#ref-for-elementdef-body-90">(6)</a> <a href="syntax.html#ref-for-elementdef-body-91">(7)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-body-92">8.2.8.3. Unexpected markup in tables</a> <a href="syntax.html#ref-for-elementdef-body-93">(2)</a> <a href="syntax.html#ref-for-elementdef-body-94">(3)</a> <a href="syntax.html#ref-for-elementdef-body-95">(4)</a> <a href="syntax.html#ref-for-elementdef-body-96">(5)</a> <a href="syntax.html#ref-for-elementdef-body-97">(6)</a> <a href="syntax.html#ref-for-elementdef-body-98">(7)</a> <a href="syntax.html#ref-for-elementdef-body-99">(8)</a> <a href="syntax.html#ref-for-elementdef-body-100">(9)</a> <a href="syntax.html#ref-for-elementdef-body-101">(10)</a> <a href="syntax.html#ref-for-elementdef-body-102">(11)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-body-103">8.2.8.4. Scripts that modify the page as it is being parsed</a> <a href="syntax.html#ref-for-elementdef-body-104">(2)</a> <a href="syntax.html#ref-for-elementdef-body-105">(3)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-body-106">8.2.8.6. Unclosed formatting elements</a>
+    </li><li><a href="rendering.html#ref-for-elementdef-body-107">10.3.2. The page</a> <a href="rendering.html#ref-for-elementdef-body-108">(2)</a> <a href="rendering.html#ref-for-elementdef-body-109">(3)</a> <a href="rendering.html#ref-for-elementdef-body-110">(4)</a> <a href="rendering.html#ref-for-elementdef-body-111">(5)</a> <a href="rendering.html#ref-for-elementdef-body-112">(6)</a> <a href="rendering.html#ref-for-elementdef-body-113">(7)</a> <a href="rendering.html#ref-for-elementdef-body-114">(8)</a> <a href="rendering.html#ref-for-elementdef-body-115">(9)</a> <a href="rendering.html#ref-for-elementdef-body-116">(10)</a> <a href="rendering.html#ref-for-elementdef-body-117">(11)</a> <a href="rendering.html#ref-for-elementdef-body-118">(12)</a> <a href="rendering.html#ref-for-elementdef-body-119">(13)</a> <a href="rendering.html#ref-for-elementdef-body-120">(14)</a> <a href="rendering.html#ref-for-elementdef-body-121">(15)</a> <a href="rendering.html#ref-for-elementdef-body-122">(16)</a> <a href="rendering.html#ref-for-elementdef-body-123">(17)</a> <a href="rendering.html#ref-for-elementdef-body-124">(18)</a> <a href="rendering.html#ref-for-elementdef-body-125">(19)</a> <a href="rendering.html#ref-for-elementdef-body-126">(20)</a> <a href="rendering.html#ref-for-elementdef-body-127">(21)</a> <a href="rendering.html#ref-for-elementdef-body-128">(22)</a>
+    </li><li><a href="rendering.html#ref-for-elementdef-body-129">10.3.10. Margin collapsing quirks</a> <a href="rendering.html#ref-for-elementdef-body-130">(2)</a>
+    </li><li><a href="obsolete.html#ref-for-elementdef-body-131">11.2. Non-conforming features</a> <a href="obsolete.html#ref-for-elementdef-body-132">(2)</a> <a href="obsolete.html#ref-for-elementdef-body-133">(3)</a> <a href="obsolete.html#ref-for-elementdef-body-134">(4)</a> <a href="obsolete.html#ref-for-elementdef-body-135">(5)</a> <a href="obsolete.html#ref-for-elementdef-body-136">(6)</a> <a href="obsolete.html#ref-for-elementdef-body-137">(7)</a> <a href="obsolete.html#ref-for-elementdef-body-138">(8)</a> <a href="obsolete.html#ref-for-elementdef-body-139">(9)</a> <a href="obsolete.html#ref-for-elementdef-body-140">(10)</a> <a href="obsolete.html#ref-for-elementdef-body-141">(11)</a> <a href="obsolete.html#ref-for-elementdef-body-142">(12)</a>
+    </li><li><a href="obsolete.html#ref-for-elementdef-body-143">11.3.3. Frames</a>
+    </li><li><a href="obsolete.html#ref-for-elementdef-body-144">11.3.5. Other elements, attributes and APIs</a> <a href="obsolete.html#ref-for-elementdef-body-145">(2)</a> <a href="obsolete.html#ref-for-elementdef-body-146">(3)</a> <a href="obsolete.html#ref-for-elementdef-body-147">(4)</a> <a href="obsolete.html#ref-for-elementdef-body-148">(5)</a> <a href="obsolete.html#ref-for-elementdef-body-149">(6)</a> <a href="obsolete.html#ref-for-elementdef-body-150">(7)</a> <a href="obsolete.html#ref-for-elementdef-body-151">(8)</a> <a href="obsolete.html#ref-for-elementdef-body-152">(9)</a> <a href="obsolete.html#ref-for-elementdef-body-153">(10)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-body-154">Elements</a> <a href="fullindex.html#ref-for-elementdef-body-155">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-body-156">Element content categories</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-body-157">Attributes</a> <a href="fullindex.html#ref-for-elementdef-body-158">(2)</a> <a href="fullindex.html#ref-for-elementdef-body-159">(3)</a> <a href="fullindex.html#ref-for-elementdef-body-160">(4)</a> <a href="fullindex.html#ref-for-elementdef-body-161">(5)</a> <a href="fullindex.html#ref-for-elementdef-body-162">(6)</a> <a href="fullindex.html#ref-for-elementdef-body-163">(7)</a> <a href="fullindex.html#ref-for-elementdef-body-164">(8)</a> <a href="fullindex.html#ref-for-elementdef-body-165">(9)</a> <a href="fullindex.html#ref-for-elementdef-body-166">(10)</a> <a href="fullindex.html#ref-for-elementdef-body-167">(11)</a> <a href="fullindex.html#ref-for-elementdef-body-168">(12)</a> <a href="fullindex.html#ref-for-elementdef-body-169">(13)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-body-170">Element Interfaces</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlbodyelement-htmlbodyelement">
    <b><a href="sections.html#htmlbodyelement-htmlbodyelement">#htmlbodyelement-htmlbodyelement</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="sections.html#ref-for-htmlbodyelement-htmlbodyelement-1">4.3.1. The body element</a>
+    <li><a href="sections.html#ref-for-htmlbodyelement-htmlbodyelement-1">4.3.1. body 요소(element)</a>
     </li><li><a href="obsolete.html#ref-for-htmlbodyelement-htmlbodyelement-2">11.3.5. Other elements, attributes and APIs</a>
     </li><li><a href="fullindex.html#ref-for-htmlbodyelement-htmlbodyelement-3">Elements</a>
     </li><li><a href="fullindex.html#ref-for-htmlbodyelement-htmlbodyelement-4">Element Interfaces</a>
@@ -8323,11 +8324,11 @@ c-end         = "--&gt;"
     <li><a href="dom.html#ref-for-elementdef-article-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-article-2">3.2.4.2.3. 그룹화(sectioning) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-article-3">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-article-4">4.3.2. The article element</a> <a href="sections.html#ref-for-elementdef-article-5">(2)</a> <a href="sections.html#ref-for-elementdef-article-6">(3)</a> <a href="sections.html#ref-for-elementdef-article-7">(4)</a> <a href="sections.html#ref-for-elementdef-article-8">(5)</a> <a href="sections.html#ref-for-elementdef-article-9">(6)</a> <a href="sections.html#ref-for-elementdef-article-10">(7)</a> <a href="sections.html#ref-for-elementdef-article-11">(8)</a> <a href="sections.html#ref-for-elementdef-article-12">(9)</a> <a href="sections.html#ref-for-elementdef-article-13">(10)</a> <a href="sections.html#ref-for-elementdef-article-14">(11)</a> <a href="sections.html#ref-for-elementdef-article-15">(12)</a> <a href="sections.html#ref-for-elementdef-article-16">(13)</a> <a href="sections.html#ref-for-elementdef-article-17">(14)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-article-18">4.3.3. The section element</a> <a href="sections.html#ref-for-elementdef-article-19">(2)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-article-20">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-elementdef-article-21">4.3.9. The address element</a> <a href="sections.html#ref-for-elementdef-article-22">(2)</a> <a href="sections.html#ref-for-elementdef-article-23">(3)</a> <a href="sections.html#ref-for-elementdef-article-24">(4)</a> <a href="sections.html#ref-for-elementdef-article-25">(5)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-article-26">4.3.11. Usage summary</a>
+    </li><li><a href="sections.html#ref-for-elementdef-article-4">4.3.2. article 요소(element)</a> <a href="sections.html#ref-for-elementdef-article-5">(2)</a> <a href="sections.html#ref-for-elementdef-article-6">(3)</a> <a href="sections.html#ref-for-elementdef-article-7">(4)</a> <a href="sections.html#ref-for-elementdef-article-8">(5)</a> <a href="sections.html#ref-for-elementdef-article-9">(6)</a> <a href="sections.html#ref-for-elementdef-article-10">(7)</a> <a href="sections.html#ref-for-elementdef-article-11">(8)</a> <a href="sections.html#ref-for-elementdef-article-12">(9)</a> <a href="sections.html#ref-for-elementdef-article-13">(10)</a> <a href="sections.html#ref-for-elementdef-article-14">(11)</a> <a href="sections.html#ref-for-elementdef-article-15">(12)</a> <a href="sections.html#ref-for-elementdef-article-16">(13)</a> <a href="sections.html#ref-for-elementdef-article-17">(14)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-article-18">4.3.3. section 요소(element)</a> <a href="sections.html#ref-for-elementdef-article-19">(2)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-article-20">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-article-21">4.3.9. address 요소(element)</a> <a href="sections.html#ref-for-elementdef-article-22">(2)</a> <a href="sections.html#ref-for-elementdef-article-23">(3)</a> <a href="sections.html#ref-for-elementdef-article-24">(4)</a> <a href="sections.html#ref-for-elementdef-article-25">(5)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-article-26">4.3.11. 사용법 요약</a>
     </li><li><a href="sections.html#ref-for-elementdef-article-27">4.3.11.1. Article or section?</a> <a href="sections.html#ref-for-elementdef-article-28">(2)</a> <a href="sections.html#ref-for-elementdef-article-29">(3)</a> <a href="sections.html#ref-for-elementdef-article-30">(4)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-article-31">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-article-32">4.4.4. The blockquote element</a>
@@ -8352,25 +8353,25 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-elementdef-section-2">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-section-3">3.2.4.2.3. 그룹화(sectioning) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-section-4">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-section-5">4.3.3. The section element</a> <a href="sections.html#ref-for-elementdef-section-6">(2)</a> <a href="sections.html#ref-for-elementdef-section-7">(3)</a> <a href="sections.html#ref-for-elementdef-section-8">(4)</a> <a href="sections.html#ref-for-elementdef-section-9">(5)</a> <a href="sections.html#ref-for-elementdef-section-10">(6)</a> <a href="sections.html#ref-for-elementdef-section-11">(7)</a> <a href="sections.html#ref-for-elementdef-section-12">(8)</a> <a href="sections.html#ref-for-elementdef-section-13">(9)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-section-5">4.3.3. section 요소(element)</a> <a href="sections.html#ref-for-elementdef-section-6">(2)</a> <a href="sections.html#ref-for-elementdef-section-7">(3)</a> <a href="sections.html#ref-for-elementdef-section-8">(4)</a> <a href="sections.html#ref-for-elementdef-section-9">(5)</a> <a href="sections.html#ref-for-elementdef-section-10">(6)</a> <a href="sections.html#ref-for-elementdef-section-11">(7)</a> <a href="sections.html#ref-for-elementdef-section-12">(8)</a> <a href="sections.html#ref-for-elementdef-section-13">(9)</a>
     </li><li><a href="sections.html#ref-for-elementdef-section-14">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-elementdef-section-15">4.3.10.1. Creating an outline</a>
-    </li><li><a href="sections.html#ref-for-elementdef-section-16">4.3.11. Usage summary</a>
-    </li><li><a href="sections.html#ref-for-elementdef-section-17">4.3.11.1. Article or section?</a> <a href="sections.html#ref-for-elementdef-section-18">(2)</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-section-19">4.4.1. The p element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-section-20">4.4.2. The hr element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-section-21">4.4.14. The div element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-section-22">4.5.8. The dfn element</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-section-23">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-section-24">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-section-25">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-section-26">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-section-27">(2)</a> <a href="fullindex.html#ref-for-elementdef-section-28">(3)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-section-29">Element Interfaces</a>
-    </li><li><a href="changes.html#ref-for-elementdef-section-30">Features removed</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-elementdef-section-15">4.3.10.1. 개요(outline) 생성</a> <a href="sections.html#ref-for-elementdef-section-16">(2)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-section-17">4.3.11. 사용법 요약</a>
+    </li><li><a href="sections.html#ref-for-elementdef-section-18">4.3.11.1. Article or section?</a> <a href="sections.html#ref-for-elementdef-section-19">(2)</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-section-20">4.4.1. The p element</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-section-21">4.4.2. The hr element</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-section-22">4.4.14. The div element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-section-23">4.5.8. The dfn element</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-section-24">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-section-25">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-section-26">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-section-27">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-section-28">(2)</a> <a href="fullindex.html#ref-for-elementdef-section-29">(3)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-section-30">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-section-31">Features removed</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-nav">
@@ -8379,10 +8380,10 @@ c-end         = "--&gt;"
     <li><a href="dom.html#ref-for-elementdef-nav-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-nav-2">3.2.4.2.3. 그룹화(sectioning) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-nav-3">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-nav-4">4.3.4. The nav element</a> <a href="sections.html#ref-for-elementdef-nav-5">(2)</a> <a href="sections.html#ref-for-elementdef-nav-6">(3)</a> <a href="sections.html#ref-for-elementdef-nav-7">(4)</a> <a href="sections.html#ref-for-elementdef-nav-8">(5)</a> <a href="sections.html#ref-for-elementdef-nav-9">(6)</a> <a href="sections.html#ref-for-elementdef-nav-10">(7)</a> <a href="sections.html#ref-for-elementdef-nav-11">(8)</a> <a href="sections.html#ref-for-elementdef-nav-12">(9)</a> <a href="sections.html#ref-for-elementdef-nav-13">(10)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-nav-14">4.3.5. The aside element</a>
-    </li><li><a href="sections.html#ref-for-elementdef-nav-15">4.3.10.1. Creating an outline</a>
-    </li><li><a href="sections.html#ref-for-elementdef-nav-16">4.3.11. Usage summary</a>
+    </li><li><a href="sections.html#ref-for-elementdef-nav-4">4.3.4. nav 요소(element)</a> <a href="sections.html#ref-for-elementdef-nav-5">(2)</a> <a href="sections.html#ref-for-elementdef-nav-6">(3)</a> <a href="sections.html#ref-for-elementdef-nav-7">(4)</a> <a href="sections.html#ref-for-elementdef-nav-8">(5)</a> <a href="sections.html#ref-for-elementdef-nav-9">(6)</a> <a href="sections.html#ref-for-elementdef-nav-10">(7)</a> <a href="sections.html#ref-for-elementdef-nav-11">(8)</a> <a href="sections.html#ref-for-elementdef-nav-12">(9)</a> <a href="sections.html#ref-for-elementdef-nav-13">(10)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-nav-14">4.3.5. aside 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-nav-15">4.3.10.1. 개요(outline) 생성</a>
+    </li><li><a href="sections.html#ref-for-elementdef-nav-16">4.3.11. 사용법 요약</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-nav-17">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-nav-18">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-nav-19">(2)</a> <a href="grouping-content.html#ref-for-elementdef-nav-20">(3)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-nav-21">4.4.14. The div element</a>
@@ -8400,10 +8401,10 @@ c-end         = "--&gt;"
     <li><a href="dom.html#ref-for-elementdef-aside-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-aside-2">3.2.4.2.3. 그룹화(sectioning) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-aside-3">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-aside-4">4.3.5. The aside element</a> <a href="sections.html#ref-for-elementdef-aside-5">(2)</a> <a href="sections.html#ref-for-elementdef-aside-6">(3)</a> <a href="sections.html#ref-for-elementdef-aside-7">(4)</a> <a href="sections.html#ref-for-elementdef-aside-8">(5)</a> <a href="sections.html#ref-for-elementdef-aside-9">(6)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-aside-10">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-elementdef-aside-11">4.3.10.1. Creating an outline</a>
-    </li><li><a href="sections.html#ref-for-elementdef-aside-12">4.3.11. Usage summary</a>
+    </li><li><a href="sections.html#ref-for-elementdef-aside-4">4.3.5. aside 요소(element)</a> <a href="sections.html#ref-for-elementdef-aside-5">(2)</a> <a href="sections.html#ref-for-elementdef-aside-6">(3)</a> <a href="sections.html#ref-for-elementdef-aside-7">(4)</a> <a href="sections.html#ref-for-elementdef-aside-8">(5)</a> <a href="sections.html#ref-for-elementdef-aside-9">(6)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-aside-10">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-aside-11">4.3.10.1. 개요(outline) 생성</a>
+    </li><li><a href="sections.html#ref-for-elementdef-aside-12">4.3.11. 사용법 요약</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-aside-13">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-aside-14">4.4.11. The figure element</a> <a href="grouping-content.html#ref-for-elementdef-aside-15">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-aside-16">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-aside-17">(2)</a> <a href="grouping-content.html#ref-for-elementdef-aside-18">(3)</a> <a href="grouping-content.html#ref-for-elementdef-aside-19">(4)</a> <a href="grouping-content.html#ref-for-elementdef-aside-20">(5)</a> <a href="grouping-content.html#ref-for-elementdef-aside-21">(6)</a> <a href="grouping-content.html#ref-for-elementdef-aside-22">(7)</a>
@@ -8425,8 +8426,8 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-elementdef-h1-5">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-h1-6">3.2.4.2.4. 제목(heading) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-h1-7">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-h1-8">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-elementdef-h1-9">4.3.11. Usage summary</a>
+    </li><li><a href="sections.html#ref-for-elementdef-h1-8">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-h1-9">4.3.11. 사용법 요약</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-h1-10">4.4.1. The p element</a>
     </li><li><a href="syntax.html#ref-for-elementdef-h1-11">8.1.2.4. Optional tags</a>
     </li><li><a href="syntax.html#ref-for-elementdef-h1-12">8.2.3.2. The stack of open elements</a>
@@ -8507,7 +8508,7 @@ c-end         = "--&gt;"
     <li><a href="dom.html#ref-for-elementdef-h6-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-h6-2">3.2.4.2.4. 제목(heading) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-h6-3">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-h6-4">4.3.2. The article element</a>
+    </li><li><a href="sections.html#ref-for-elementdef-h6-4">4.3.2. article 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-h6-5">4.4.1. The p element</a>
     </li><li><a href="syntax.html#ref-for-elementdef-h6-6">8.1.2.4. Optional tags</a>
     </li><li><a href="syntax.html#ref-for-elementdef-h6-7">8.2.3.2. The stack of open elements</a>
@@ -8531,12 +8532,12 @@ c-end         = "--&gt;"
    <b><a href="sections.html#rank">#rank</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="sections.html#ref-for-rank-1">4.3.6. 
-  The h1, h2,
+  h1, h2,
   h3, h4,
-  h5, and h6
-  elements </a>
-    </li><li><a href="sections.html#ref-for-rank-2">4.3.10. Headings and sections</a> <a href="sections.html#ref-for-rank-3">(2)</a> <a href="sections.html#ref-for-rank-4">(3)</a> <a href="sections.html#ref-for-rank-5">(4)</a>
-    </li><li><a href="sections.html#ref-for-rank-6">4.3.10.1. Creating an outline</a> <a href="sections.html#ref-for-rank-7">(2)</a> <a href="sections.html#ref-for-rank-8">(3)</a> <a href="sections.html#ref-for-rank-9">(4)</a>
+  h5, h6
+  요소(element)들 </a>
+    </li><li><a href="sections.html#ref-for-rank-2">4.3.10. 제목(heading)들과 섹션들</a> <a href="sections.html#ref-for-rank-3">(2)</a> <a href="sections.html#ref-for-rank-4">(3)</a> <a href="sections.html#ref-for-rank-5">(4)</a>
+    </li><li><a href="sections.html#ref-for-rank-6">4.3.10.1. 개요(outline) 생성</a> <a href="sections.html#ref-for-rank-7">(2)</a> <a href="sections.html#ref-for-rank-8">(3)</a> <a href="sections.html#ref-for-rank-9">(4)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-header">
@@ -8544,21 +8545,21 @@ c-end         = "--&gt;"
    <ul>
     <li><a href="dom.html#ref-for-elementdef-header-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-header-2">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-header-3">4.3.7. The header element</a> <a href="sections.html#ref-for-elementdef-header-4">(2)</a> <a href="sections.html#ref-for-elementdef-header-5">(3)</a> <a href="sections.html#ref-for-elementdef-header-6">(4)</a> <a href="sections.html#ref-for-elementdef-header-7">(5)</a> <a href="sections.html#ref-for-elementdef-header-8">(6)</a> <a href="sections.html#ref-for-elementdef-header-9">(7)</a> <a href="sections.html#ref-for-elementdef-header-10">(8)</a> <a href="sections.html#ref-for-elementdef-header-11">(9)</a> <a href="sections.html#ref-for-elementdef-header-12">(10)</a> <a href="sections.html#ref-for-elementdef-header-13">(11)</a> <a href="sections.html#ref-for-elementdef-header-14">(12)</a> <a href="sections.html#ref-for-elementdef-header-15">(13)</a> <a href="sections.html#ref-for-elementdef-header-16">(14)</a> <a href="sections.html#ref-for-elementdef-header-17">(15)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-header-18">4.3.8. The footer element</a>
-    </li><li><a href="sections.html#ref-for-elementdef-header-19">4.3.9. The address element</a>
-    </li><li><a href="sections.html#ref-for-elementdef-header-20">4.3.11. Usage summary</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-header-21">4.4.1. The p element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-header-22">4.4.9. The dt element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-header-23">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-header-24">(2)</a> <a href="grouping-content.html#ref-for-elementdef-header-25">(3)</a> <a href="grouping-content.html#ref-for-elementdef-header-26">(4)</a> <a href="grouping-content.html#ref-for-elementdef-header-27">(5)</a>
-    </li><li><a href="tabular-data.html#ref-for-elementdef-header-28">4.9.10. The th element</a>
-    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-29">4.13.1. Subheadings, subtitles, alternative titles and taglines</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-30">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-31">(3)</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-header-32">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-header-33">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-header-34">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-header-35">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-header-36">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-header-37">Element Interfaces</a>
-    </li><li><a href="changes.html#ref-for-elementdef-header-38">Changes to existing features</a>
+    </li><li><a href="sections.html#ref-for-elementdef-header-3">4.3.7. header 요소(element)</a> <a href="sections.html#ref-for-elementdef-header-4">(2)</a> <a href="sections.html#ref-for-elementdef-header-5">(3)</a> <a href="sections.html#ref-for-elementdef-header-6">(4)</a> <a href="sections.html#ref-for-elementdef-header-7">(5)</a> <a href="sections.html#ref-for-elementdef-header-8">(6)</a> <a href="sections.html#ref-for-elementdef-header-9">(7)</a> <a href="sections.html#ref-for-elementdef-header-10">(8)</a> <a href="sections.html#ref-for-elementdef-header-11">(9)</a> <a href="sections.html#ref-for-elementdef-header-12">(10)</a> <a href="sections.html#ref-for-elementdef-header-13">(11)</a> <a href="sections.html#ref-for-elementdef-header-14">(12)</a> <a href="sections.html#ref-for-elementdef-header-15">(13)</a> <a href="sections.html#ref-for-elementdef-header-16">(14)</a> <a href="sections.html#ref-for-elementdef-header-17">(15)</a> <a href="sections.html#ref-for-elementdef-header-18">(16)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-header-19">4.3.8. footer 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-header-20">4.3.9. address 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-header-21">4.3.11. 사용법 요약</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-header-22">4.4.1. The p element</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-header-23">4.4.9. The dt element</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-header-24">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-header-25">(2)</a> <a href="grouping-content.html#ref-for-elementdef-header-26">(3)</a> <a href="grouping-content.html#ref-for-elementdef-header-27">(4)</a> <a href="grouping-content.html#ref-for-elementdef-header-28">(5)</a>
+    </li><li><a href="tabular-data.html#ref-for-elementdef-header-29">4.9.10. The th element</a>
+    </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-30">4.13.1. Subheadings, subtitles, alternative titles and taglines</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-31">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-header-32">(3)</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-header-33">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-header-34">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-header-35">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-header-36">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-header-37">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-header-38">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-header-39">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-footer">
@@ -8567,22 +8568,22 @@ c-end         = "--&gt;"
     <li><a href="dom.html#ref-for-elementdef-footer-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-footer-2">3.2.4.2.3. 그룹화(sectioning) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-footer-3">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-footer-4">4.3.4. The nav element</a>
-    </li><li><a href="sections.html#ref-for-elementdef-footer-5">4.3.7. The header element</a> <a href="sections.html#ref-for-elementdef-footer-6">(2)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-footer-7">4.3.8. The footer element</a> <a href="sections.html#ref-for-elementdef-footer-8">(2)</a> <a href="sections.html#ref-for-elementdef-footer-9">(3)</a> <a href="sections.html#ref-for-elementdef-footer-10">(4)</a> <a href="sections.html#ref-for-elementdef-footer-11">(5)</a> <a href="sections.html#ref-for-elementdef-footer-12">(6)</a> <a href="sections.html#ref-for-elementdef-footer-13">(7)</a> <a href="sections.html#ref-for-elementdef-footer-14">(8)</a> <a href="sections.html#ref-for-elementdef-footer-15">(9)</a> <a href="sections.html#ref-for-elementdef-footer-16">(10)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-footer-17">4.3.9. The address element</a> <a href="sections.html#ref-for-elementdef-footer-18">(2)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-footer-19">4.3.11. Usage summary</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-20">4.4.1. The p element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-21">4.4.4. The blockquote element</a> <a href="grouping-content.html#ref-for-elementdef-footer-22">(2)</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-23">4.4.9. The dt element</a>
-    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-24">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-footer-25">(2)</a> <a href="grouping-content.html#ref-for-elementdef-footer-26">(3)</a> <a href="grouping-content.html#ref-for-elementdef-footer-27">(4)</a> <a href="grouping-content.html#ref-for-elementdef-footer-28">(5)</a> <a href="grouping-content.html#ref-for-elementdef-footer-29">(6)</a>
-    </li><li><a href="tabular-data.html#ref-for-elementdef-footer-30">4.9.10. The th element</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-footer-31">8.1.2.4. Optional tags</a>
-    </li><li><a href="syntax.html#ref-for-elementdef-footer-32">8.2.3.2. The stack of open elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-footer-33">Elements</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-footer-34">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-footer-35">(2)</a>
-    </li><li><a href="fullindex.html#ref-for-elementdef-footer-36">Element Interfaces</a>
-    </li><li><a href="changes.html#ref-for-elementdef-footer-37">Changes to existing features</a>
+    </li><li><a href="sections.html#ref-for-elementdef-footer-4">4.3.4. nav 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-footer-5">4.3.7. header 요소(element)</a> <a href="sections.html#ref-for-elementdef-footer-6">(2)</a> <a href="sections.html#ref-for-elementdef-footer-7">(3)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-footer-8">4.3.8. footer 요소(element)</a> <a href="sections.html#ref-for-elementdef-footer-9">(2)</a> <a href="sections.html#ref-for-elementdef-footer-10">(3)</a> <a href="sections.html#ref-for-elementdef-footer-11">(4)</a> <a href="sections.html#ref-for-elementdef-footer-12">(5)</a> <a href="sections.html#ref-for-elementdef-footer-13">(6)</a> <a href="sections.html#ref-for-elementdef-footer-14">(7)</a> <a href="sections.html#ref-for-elementdef-footer-15">(8)</a> <a href="sections.html#ref-for-elementdef-footer-16">(9)</a> <a href="sections.html#ref-for-elementdef-footer-17">(10)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-footer-18">4.3.9. address 요소(element)</a> <a href="sections.html#ref-for-elementdef-footer-19">(2)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-footer-20">4.3.11. 사용법 요약</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-21">4.4.1. The p element</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-22">4.4.4. The blockquote element</a> <a href="grouping-content.html#ref-for-elementdef-footer-23">(2)</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-24">4.4.9. The dt element</a>
+    </li><li><a href="grouping-content.html#ref-for-elementdef-footer-25">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-footer-26">(2)</a> <a href="grouping-content.html#ref-for-elementdef-footer-27">(3)</a> <a href="grouping-content.html#ref-for-elementdef-footer-28">(4)</a> <a href="grouping-content.html#ref-for-elementdef-footer-29">(5)</a> <a href="grouping-content.html#ref-for-elementdef-footer-30">(6)</a>
+    </li><li><a href="tabular-data.html#ref-for-elementdef-footer-31">4.9.10. The th element</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-footer-32">8.1.2.4. Optional tags</a>
+    </li><li><a href="syntax.html#ref-for-elementdef-footer-33">8.2.3.2. The stack of open elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-footer-34">Elements</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-footer-35">Element content categories</a> <a href="fullindex.html#ref-for-elementdef-footer-36">(2)</a>
+    </li><li><a href="fullindex.html#ref-for-elementdef-footer-37">Element Interfaces</a>
+    </li><li><a href="changes.html#ref-for-elementdef-footer-38">Changes to existing features</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-address">
@@ -8591,8 +8592,8 @@ c-end         = "--&gt;"
     <li><a href="infrastructure.html#ref-for-elementdef-address-1">2.2.1. 적합성 종류</a> <a href="infrastructure.html#ref-for-elementdef-address-2">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-address-3">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-address-4">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-address-5">4.3.9. The address element</a> <a href="sections.html#ref-for-elementdef-address-6">(2)</a> <a href="sections.html#ref-for-elementdef-address-7">(3)</a> <a href="sections.html#ref-for-elementdef-address-8">(4)</a> <a href="sections.html#ref-for-elementdef-address-9">(5)</a> <a href="sections.html#ref-for-elementdef-address-10">(6)</a> <a href="sections.html#ref-for-elementdef-address-11">(7)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-address-12">4.3.11. Usage summary</a>
+    </li><li><a href="sections.html#ref-for-elementdef-address-5">4.3.9. address 요소(element)</a> <a href="sections.html#ref-for-elementdef-address-6">(2)</a> <a href="sections.html#ref-for-elementdef-address-7">(3)</a> <a href="sections.html#ref-for-elementdef-address-8">(4)</a> <a href="sections.html#ref-for-elementdef-address-9">(5)</a> <a href="sections.html#ref-for-elementdef-address-10">(6)</a> <a href="sections.html#ref-for-elementdef-address-11">(7)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-address-12">4.3.11. 사용법 요약</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-address-13">4.4.1. The p element</a>
     </li><li><a href="syntax.html#ref-for-elementdef-address-14">8.1.2.4. Optional tags</a>
     </li><li><a href="syntax.html#ref-for-elementdef-address-15">8.2.3.2. The stack of open elements</a>
@@ -8605,11 +8606,11 @@ c-end         = "--&gt;"
    <b><a href="sections.html#sectioning-roots">#sectioning-roots</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="dom.html#ref-for-sectioning-roots-1">3.2.4.2.3. 그룹화(sectioning) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-sectioning-roots-2">4.3.1. The body element</a>
-    </li><li><a href="sections.html#ref-for-sectioning-roots-3">4.3.7. The header element</a> <a href="sections.html#ref-for-sectioning-roots-4">(2)</a> <a href="sections.html#ref-for-sectioning-roots-5">(3)</a>
-    </li><li><a href="sections.html#ref-for-sectioning-roots-6">4.3.8. The footer element</a> <a href="sections.html#ref-for-sectioning-roots-7">(2)</a> <a href="sections.html#ref-for-sectioning-roots-8">(3)</a>
-    </li><li><a href="sections.html#ref-for-sectioning-roots-9">4.3.10. Headings and sections</a>
-    </li><li><a href="sections.html#ref-for-sectioning-roots-10">4.3.10.1. Creating an outline</a> <a href="sections.html#ref-for-sectioning-roots-11">(2)</a> <a href="sections.html#ref-for-sectioning-roots-12">(3)</a> <a href="sections.html#ref-for-sectioning-roots-13">(4)</a> <a href="sections.html#ref-for-sectioning-roots-14">(5)</a> <a href="sections.html#ref-for-sectioning-roots-15">(6)</a> <a href="sections.html#ref-for-sectioning-roots-16">(7)</a> <a href="sections.html#ref-for-sectioning-roots-17">(8)</a> <a href="sections.html#ref-for-sectioning-roots-18">(9)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-roots-2">4.3.1. body 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-roots-3">4.3.7. header 요소(element)</a> <a href="sections.html#ref-for-sectioning-roots-4">(2)</a> <a href="sections.html#ref-for-sectioning-roots-5">(3)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-roots-6">4.3.8. footer 요소(element)</a> <a href="sections.html#ref-for-sectioning-roots-7">(2)</a> <a href="sections.html#ref-for-sectioning-roots-8">(3)</a>
+    </li><li><a href="sections.html#ref-for-sectioning-roots-9">4.3.10. 제목(heading)들과 섹션들</a>
+    </li><li><a href="sections.html#ref-for-sectioning-roots-10">4.3.10.1. 개요(outline) 생성</a> <a href="sections.html#ref-for-sectioning-roots-11">(2)</a> <a href="sections.html#ref-for-sectioning-roots-12">(3)</a> <a href="sections.html#ref-for-sectioning-roots-13">(4)</a> <a href="sections.html#ref-for-sectioning-roots-14">(5)</a> <a href="sections.html#ref-for-sectioning-roots-15">(6)</a> <a href="sections.html#ref-for-sectioning-roots-16">(7)</a> <a href="sections.html#ref-for-sectioning-roots-17">(8)</a> <a href="sections.html#ref-for-sectioning-roots-18">(9)</a>
     </li><li><a href="grouping-content.html#ref-for-sectioning-roots-19">4.4.4. The blockquote element</a>
     </li><li><a href="grouping-content.html#ref-for-sectioning-roots-20">4.4.11. The figure element</a>
     </li><li><a href="tabular-data.html#ref-for-sectioning-roots-21">4.9.9. The td element</a>
@@ -8624,17 +8625,17 @@ c-end         = "--&gt;"
    <ul>
     <li><a href="infrastructure.html#ref-for-outline-1">2.2.1. 적합성 종류</a>
     </li><li><a href="dom.html#ref-for-outline-2">3.2.4.2.3. 그룹화(sectioning) 콘텐트</a> <a href="dom.html#ref-for-outline-3">(2)</a>
-    </li><li><a href="sections.html#ref-for-outline-4">4.3.3. The section element</a>
-    </li><li><a href="sections.html#ref-for-outline-5">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-outline-6">4.3.10.1. Creating an outline</a> <a href="sections.html#ref-for-outline-7">(2)</a> <a href="sections.html#ref-for-outline-8">(3)</a> <a href="sections.html#ref-for-outline-9">(4)</a> <a href="sections.html#ref-for-outline-10">(5)</a> <a href="sections.html#ref-for-outline-11">(6)</a> <a href="sections.html#ref-for-outline-12">(7)</a> <a href="sections.html#ref-for-outline-13">(8)</a> <a href="sections.html#ref-for-outline-14">(9)</a> <a href="sections.html#ref-for-outline-15">(10)</a> <a href="sections.html#ref-for-outline-16">(11)</a> <a href="sections.html#ref-for-outline-17">(12)</a> <a href="sections.html#ref-for-outline-18">(13)</a> <a href="sections.html#ref-for-outline-19">(14)</a> <a href="sections.html#ref-for-outline-20">(15)</a> <a href="sections.html#ref-for-outline-21">(16)</a>
-    </li><li><a href="grouping-content.html#ref-for-outline-22">4.4.2. The hr element</a>
-    </li><li><a href="grouping-content.html#ref-for-outline-23">4.4.13. The main element</a>
+    </li><li><a href="sections.html#ref-for-outline-4">4.3.3. section 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-outline-5">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-outline-6">4.3.10.1. 개요(outline) 생성</a> <a href="sections.html#ref-for-outline-7">(2)</a> <a href="sections.html#ref-for-outline-8">(3)</a> <a href="sections.html#ref-for-outline-9">(4)</a> <a href="sections.html#ref-for-outline-10">(5)</a> <a href="sections.html#ref-for-outline-11">(6)</a> <a href="sections.html#ref-for-outline-12">(7)</a> <a href="sections.html#ref-for-outline-13">(8)</a> <a href="sections.html#ref-for-outline-14">(9)</a> <a href="sections.html#ref-for-outline-15">(10)</a> <a href="sections.html#ref-for-outline-16">(11)</a> <a href="sections.html#ref-for-outline-17">(12)</a> <a href="sections.html#ref-for-outline-18">(13)</a> <a href="sections.html#ref-for-outline-19">(14)</a> <a href="sections.html#ref-for-outline-20">(15)</a>
+    </li><li><a href="grouping-content.html#ref-for-outline-21">4.4.2. The hr element</a>
+    </li><li><a href="grouping-content.html#ref-for-outline-22">4.4.13. The main element</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="section">
    <b><a href="sections.html#section">#section</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="sections.html#ref-for-section-1">4.3.10.1. Creating an outline</a> <a href="sections.html#ref-for-section-2">(2)</a> <a href="sections.html#ref-for-section-3">(3)</a> <a href="sections.html#ref-for-section-4">(4)</a> <a href="sections.html#ref-for-section-5">(5)</a> <a href="sections.html#ref-for-section-6">(6)</a> <a href="sections.html#ref-for-section-7">(7)</a> <a href="sections.html#ref-for-section-8">(8)</a> <a href="sections.html#ref-for-section-9">(9)</a> <a href="sections.html#ref-for-section-10">(10)</a> <a href="sections.html#ref-for-section-11">(11)</a> <a href="sections.html#ref-for-section-12">(12)</a> <a href="sections.html#ref-for-section-13">(13)</a> <a href="sections.html#ref-for-section-14">(14)</a> <a href="sections.html#ref-for-section-15">(15)</a> <a href="sections.html#ref-for-section-16">(16)</a> <a href="sections.html#ref-for-section-17">(17)</a> <a href="sections.html#ref-for-section-18">(18)</a> <a href="sections.html#ref-for-section-19">(19)</a>
+    <li><a href="sections.html#ref-for-section-1">4.3.10.1. 개요(outline) 생성</a> <a href="sections.html#ref-for-section-2">(2)</a> <a href="sections.html#ref-for-section-3">(3)</a> <a href="sections.html#ref-for-section-4">(4)</a> <a href="sections.html#ref-for-section-5">(5)</a> <a href="sections.html#ref-for-section-6">(6)</a> <a href="sections.html#ref-for-section-7">(7)</a> <a href="sections.html#ref-for-section-8">(8)</a> <a href="sections.html#ref-for-section-9">(9)</a> <a href="sections.html#ref-for-section-10">(10)</a> <a href="sections.html#ref-for-section-11">(11)</a> <a href="sections.html#ref-for-section-12">(12)</a> <a href="sections.html#ref-for-section-13">(13)</a> <a href="sections.html#ref-for-section-14">(14)</a> <a href="sections.html#ref-for-section-15">(15)</a> <a href="sections.html#ref-for-section-16">(16)</a> <a href="sections.html#ref-for-section-17">(17)</a> <a href="sections.html#ref-for-section-18">(18)</a> <a href="sections.html#ref-for-section-19">(19)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="associate-section">
@@ -8646,7 +8647,7 @@ c-end         = "--&gt;"
   <aside class="dfn-panel" data-for="outline-depth">
    <b><a href="sections.html#outline-depth">#outline-depth</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="sections.html#ref-for-outline-depth-1">4.3.10.1. Creating an outline</a>
+    <li><a href="sections.html#ref-for-outline-depth-1">4.3.10.1. 개요(outline) 생성</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-p">
@@ -8661,7 +8662,7 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-elementdef-p-10">3.2.4.3. 투명 콘텐트 모델</a>
     </li><li><a href="dom.html#ref-for-elementdef-p-11">3.2.4.4. 문단(paragraphs)</a> <a href="dom.html#ref-for-elementdef-p-12">(2)</a> <a href="dom.html#ref-for-elementdef-p-13">(3)</a> <a href="dom.html#ref-for-elementdef-p-14">(4)</a> <a href="dom.html#ref-for-elementdef-p-15">(5)</a>
     </li><li><a href="dom.html#ref-for-elementdef-p-16">3.2.5.6. dir 속성(attribute)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-p-17">4.3.9. The address element</a>
+    </li><li><a href="sections.html#ref-for-elementdef-p-17">4.3.9. address 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-p-18">4.4.1. The p element</a> <a href="grouping-content.html#ref-for-elementdef-p-19">(2)</a> <a href="grouping-content.html#ref-for-elementdef-p-20">(3)</a> <a href="grouping-content.html#ref-for-elementdef-p-21">(4)</a> <a href="grouping-content.html#ref-for-elementdef-p-22">(5)</a> <a href="grouping-content.html#ref-for-elementdef-p-23">(6)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-p-24">4.4.4. The blockquote element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-p-25">4.5.8. The dfn element</a>
@@ -8758,7 +8759,7 @@ c-end         = "--&gt;"
     </li><li><a href="infrastructure.html#ref-for-elementdef-blockquote-3">2.5.3. 기본 URL로 동적 변경</a>
     </li><li><a href="dom.html#ref-for-elementdef-blockquote-4">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-blockquote-5">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-blockquote-6">4.3.10. Headings and sections</a>
+    </li><li><a href="sections.html#ref-for-elementdef-blockquote-6">4.3.10. 제목(heading)들과 섹션들</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-blockquote-7">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-blockquote-8">4.4.4. The blockquote element</a> <a href="grouping-content.html#ref-for-elementdef-blockquote-9">(2)</a> <a href="grouping-content.html#ref-for-elementdef-blockquote-10">(3)</a> <a href="grouping-content.html#ref-for-elementdef-blockquote-11">(4)</a> <a href="grouping-content.html#ref-for-elementdef-blockquote-12">(5)</a> <a href="grouping-content.html#ref-for-elementdef-blockquote-13">(6)</a> <a href="grouping-content.html#ref-for-elementdef-blockquote-14">(7)</a>
     </li><li><a href="syntax.html#ref-for-elementdef-blockquote-15">8.1.2.4. Optional tags</a>
@@ -9006,7 +9007,7 @@ c-end         = "--&gt;"
    <ul>
     <li><a href="dom.html#ref-for-elementdef-figure-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-figure-2">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-figure-3">4.3.10. Headings and sections</a>
+    </li><li><a href="sections.html#ref-for-elementdef-figure-3">4.3.10. 제목(heading)들과 섹션들</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-figure-4">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-figure-5">4.4.4. The blockquote element</a> <a href="grouping-content.html#ref-for-elementdef-figure-6">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-figure-7">4.4.7. The li element</a>
@@ -9059,11 +9060,11 @@ c-end         = "--&gt;"
     <li><a href="dom.html#ref-for-elementdef-main-1">3.2.1. 의미론(semantic)</a>
     </li><li><a href="dom.html#ref-for-elementdef-main-2">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-main-3">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-main-4">4.3.2. The article element</a>
-    </li><li><a href="sections.html#ref-for-elementdef-main-5">4.3.4. The nav element</a> <a href="sections.html#ref-for-elementdef-main-6">(2)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-main-7">4.3.5. The aside element</a>
-    </li><li><a href="sections.html#ref-for-elementdef-main-8">4.3.7. The header element</a>
-    </li><li><a href="sections.html#ref-for-elementdef-main-9">4.3.8. The footer element</a>
+    </li><li><a href="sections.html#ref-for-elementdef-main-4">4.3.2. article 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-main-5">4.3.4. nav 요소(element)</a> <a href="sections.html#ref-for-elementdef-main-6">(2)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-main-7">4.3.5. aside 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-main-8">4.3.7. header 요소(element)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-main-9">4.3.8. footer 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-main-10">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-main-11">4.4.13. The main element</a> <a href="grouping-content.html#ref-for-elementdef-main-12">(2)</a> <a href="grouping-content.html#ref-for-elementdef-main-13">(3)</a> <a href="grouping-content.html#ref-for-elementdef-main-14">(4)</a> <a href="grouping-content.html#ref-for-elementdef-main-15">(5)</a> <a href="grouping-content.html#ref-for-elementdef-main-16">(6)</a> <a href="grouping-content.html#ref-for-elementdef-main-17">(7)</a> <a href="grouping-content.html#ref-for-elementdef-main-18">(8)</a> <a href="grouping-content.html#ref-for-elementdef-main-19">(9)</a> <a href="grouping-content.html#ref-for-elementdef-main-20">(10)</a> <a href="grouping-content.html#ref-for-elementdef-main-21">(11)</a> <a href="grouping-content.html#ref-for-elementdef-main-22">(12)</a> <a href="grouping-content.html#ref-for-elementdef-main-23">(13)</a> <a href="grouping-content.html#ref-for-elementdef-main-24">(14)</a> <a href="grouping-content.html#ref-for-elementdef-main-25">(15)</a> <a href="grouping-content.html#ref-for-elementdef-main-26">(16)</a> <a href="grouping-content.html#ref-for-elementdef-main-27">(17)</a>
     </li><li><a href="links.html#ref-for-elementdef-main-28">4.8.6.6. Link type "license"</a> <a href="links.html#ref-for-elementdef-main-29">(2)</a>
@@ -9084,7 +9085,7 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-elementdef-div-8">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-9">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-div-10">3.2.5. 범용 속성(attribute)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-div-11">4.3.3. The section element</a>
+    </li><li><a href="sections.html#ref-for-elementdef-div-11">4.3.3. section 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-div-12">4.4.1. The p element</a> <a href="grouping-content.html#ref-for-elementdef-div-13">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-div-14">4.4.14. The div element</a> <a href="grouping-content.html#ref-for-elementdef-div-15">(2)</a> <a href="grouping-content.html#ref-for-elementdef-div-16">(3)</a> <a href="grouping-content.html#ref-for-elementdef-div-17">(4)</a> <a href="grouping-content.html#ref-for-elementdef-div-18">(5)</a>
     </li><li><a href="sec-forms.html#ref-for-elementdef-div-19">4.10.1.1. Writing a form’s user interface</a>
@@ -13872,7 +13873,7 @@ c-end         = "--&gt;"
    <b><a href="tabular-data.html#elementdef-td">#elementdef-td</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="dom.html#ref-for-elementdef-td-1">3.2.4. 콘텐트 모델(Content model)</a> <a href="dom.html#ref-for-elementdef-td-2">(2)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-td-3">4.3.10. Headings and sections</a> <a href="sections.html#ref-for-elementdef-td-4">(2)</a>
+    </li><li><a href="sections.html#ref-for-elementdef-td-3">4.3.10. 제목(heading)들과 섹션들</a> <a href="sections.html#ref-for-elementdef-td-4">(2)</a>
     </li><li><a href="tabular-data.html#ref-for-elementdef-td-5">4.9.6. The thead element</a>
     </li><li><a href="tabular-data.html#ref-for-elementdef-td-6">4.9.8. The tr element</a> <a href="tabular-data.html#ref-for-elementdef-td-7">(2)</a> <a href="tabular-data.html#ref-for-elementdef-td-8">(3)</a> <a href="tabular-data.html#ref-for-elementdef-td-9">(4)</a> <a href="tabular-data.html#ref-for-elementdef-td-10">(5)</a> <a href="tabular-data.html#ref-for-elementdef-td-11">(6)</a>
     </li><li><a href="tabular-data.html#ref-for-elementdef-td-12">4.9.9. The td element</a> <a href="tabular-data.html#ref-for-elementdef-td-13">(2)</a> <a href="tabular-data.html#ref-for-elementdef-td-14">(3)</a> <a href="tabular-data.html#ref-for-elementdef-td-15">(4)</a>
@@ -17450,7 +17451,7 @@ c-end         = "--&gt;"
    <ul>
     <li><a href="dom.html#ref-for-elementdef-fieldset-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-fieldset-2">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-fieldset-3">4.3.10. Headings and sections</a>
+    </li><li><a href="sections.html#ref-for-elementdef-fieldset-3">4.3.10. 제목(heading)들과 섹션들</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-fieldset-4">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-fieldset-5">4.4.14. The div element</a>
     </li><li><a href="sec-forms.html#ref-for-elementdef-fieldset-6">4.10.1.1. Writing a form’s user interface</a> <a href="sec-forms.html#ref-for-elementdef-fieldset-7">(2)</a>
@@ -19129,7 +19130,7 @@ c-end         = "--&gt;"
     <li><a href="dom.html#ref-for-elementdef-details-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-details-2">3.2.4.2.7. 대화형(interactive) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-details-3">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="sections.html#ref-for-elementdef-details-4">4.3.10. Headings and sections</a>
+    </li><li><a href="sections.html#ref-for-elementdef-details-4">4.3.10. 제목(heading)들과 섹션들</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-details-5">4.4.1. The p element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-details-6">4.7.5.1.4. Graphical Representations: Charts, diagrams, graphs, maps, illustrations</a>
     </li><li><a href="interactive-elements.html#ref-for-elementdef-details-7">4.11.1. The details element</a> <a href="interactive-elements.html#ref-for-elementdef-details-8">(2)</a> <a href="interactive-elements.html#ref-for-elementdef-details-9">(3)</a> <a href="interactive-elements.html#ref-for-elementdef-details-10">(4)</a> <a href="interactive-elements.html#ref-for-elementdef-details-11">(5)</a> <a href="interactive-elements.html#ref-for-elementdef-details-12">(6)</a> <a href="interactive-elements.html#ref-for-elementdef-details-13">(7)</a> <a href="interactive-elements.html#ref-for-elementdef-details-14">(8)</a>
@@ -19637,7 +19638,7 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-elementdef-script-15">3.2.4.2.9. 스크립트 지원 요소(element)</a>
     </li><li><a href="dom.html#ref-for-elementdef-script-16">3.2.5.6. dir 속성(attribute)</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-script-17">4.2.5. meta 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-script-18">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-elementdef-script-18">4.3.1. body 요소(element)</a>
     </li><li><a href="sec-forms.html#ref-for-elementdef-script-19">4.10.10. The option element</a> <a href="sec-forms.html#ref-for-elementdef-script-20">(2)</a> <a href="sec-forms.html#ref-for-elementdef-script-21">(3)</a>
     </li><li><a href="semantics-scripting.html#ref-for-elementdef-script-22">4.12.1. The script element</a> <a href="semantics-scripting.html#ref-for-elementdef-script-23">(2)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-24">(3)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-25">(4)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-26">(5)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-27">(6)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-28">(7)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-29">(8)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-30">(9)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-31">(10)</a>
     </li><li><a href="semantics-scripting.html#ref-for-elementdef-script-32">4.12.1.1. Processing model</a> <a href="semantics-scripting.html#ref-for-elementdef-script-33">(2)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-34">(3)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-35">(4)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-36">(5)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-37">(6)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-38">(7)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-39">(8)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-40">(9)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-41">(10)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-42">(11)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-43">(12)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-44">(13)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-45">(14)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-46">(15)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-47">(16)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-48">(17)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-49">(18)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-50">(19)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-51">(20)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-52">(21)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-53">(22)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-54">(23)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-55">(24)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-56">(25)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-57">(26)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-58">(27)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-59">(28)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-60">(29)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-61">(30)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-62">(31)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-63">(32)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-64">(33)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-65">(34)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-66">(35)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-67">(36)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-68">(37)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-69">(38)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-70">(39)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-71">(40)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-72">(41)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-73">(42)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-74">(43)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-75">(44)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-76">(45)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-77">(46)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-78">(47)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-79">(48)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-80">(49)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-81">(50)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-82">(51)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-83">(52)</a> <a href="semantics-scripting.html#ref-for-elementdef-script-84">(53)</a>
@@ -19966,7 +19967,7 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-elementdef-template-3">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-template-4">3.2.4.2.5. 어구(phrasing) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-template-5">3.2.4.2.9. 스크립트 지원 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-elementdef-template-6">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-elementdef-template-6">4.3.1. body 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-template-7">4.7.16. The area element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-template-8">(2)</a>
     </li><li><a href="tabular-data.html#ref-for-elementdef-template-9">4.9.3. The colgroup element</a>
     </li><li><a href="semantics-scripting.html#ref-for-elementdef-template-10">4.12.3. The template element</a> <a href="semantics-scripting.html#ref-for-elementdef-template-11">(2)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-12">(3)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-13">(4)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-14">(5)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-15">(6)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-16">(7)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-17">(8)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-18">(9)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-19">(10)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-20">(11)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-21">(12)</a> <a href="semantics-scripting.html#ref-for-elementdef-template-22">(13)</a>
@@ -21700,7 +21701,7 @@ c-end         = "--&gt;"
     </li><li><a href="infrastructure.html#ref-for-window-window-2">2.7.5. 가비지 컬렉션</a> <a href="infrastructure.html#ref-for-window-window-3">(2)</a>
     </li><li><a href="infrastructure.html#ref-for-window-window-4">2.9.3. StructuredCloneWithTransfer ( input, transferList, targetRealm )</a>
     </li><li><a href="document-metadata.html#ref-for-window-window-5">4.2.4. link 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-window-window-6">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-window-window-6">4.3.1. body 요소(element)</a>
     </li><li><a href="sec-forms.html#ref-for-window-window-7">4.10.10. The option element</a>
     </li><li><a href="semantics-scripting.html#ref-for-window-window-8">4.12.1.1. Processing model</a>
     </li><li><a href="browsers.html#ref-for-window-window-9">6.1. Browsing contexts</a> <a href="browsers.html#ref-for-window-window-10">(2)</a> <a href="browsers.html#ref-for-window-window-11">(3)</a> <a href="browsers.html#ref-for-window-window-12">(4)</a> <a href="browsers.html#ref-for-window-window-13">(5)</a> <a href="browsers.html#ref-for-window-window-14">(6)</a>
@@ -24046,7 +24047,7 @@ c-end         = "--&gt;"
    <b><a href="webappapis.html#event-handler">#event-handler</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="dom.html#ref-for-event-handler-1">3.2.5. 범용 속성(attribute)</a>
-    </li><li><a href="sections.html#ref-for-event-handler-2">4.3.1. The body element</a> <a href="sections.html#ref-for-event-handler-3">(2)</a> <a href="sections.html#ref-for-event-handler-4">(3)</a> <a href="sections.html#ref-for-event-handler-5">(4)</a>
+    </li><li><a href="sections.html#ref-for-event-handler-2">4.3.1. body 요소(element)</a> <a href="sections.html#ref-for-event-handler-3">(2)</a> <a href="sections.html#ref-for-event-handler-4">(3)</a> <a href="sections.html#ref-for-event-handler-5">(4)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-event-handler-6">4.7.14.10.1. AudioTrackList and VideoTrackList objects</a> <a href="semantics-embedded-content.html#ref-for-event-handler-7">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-event-handler-8">4.7.14.11.8. Event handlers for objects of the text track APIs</a> <a href="semantics-embedded-content.html#ref-for-event-handler-9">(2)</a> <a href="semantics-embedded-content.html#ref-for-event-handler-10">(3)</a> <a href="semantics-embedded-content.html#ref-for-event-handler-11">(4)</a> <a href="semantics-embedded-content.html#ref-for-event-handler-12">(5)</a> <a href="semantics-embedded-content.html#ref-for-event-handler-13">(6)</a>
     </li><li><a href="webappapis.html#ref-for-event-handler-14">7.1.5.1. Event handlers</a> <a href="webappapis.html#ref-for-event-handler-15">(2)</a> <a href="webappapis.html#ref-for-event-handler-16">(3)</a> <a href="webappapis.html#ref-for-event-handler-17">(4)</a> <a href="webappapis.html#ref-for-event-handler-18">(5)</a> <a href="webappapis.html#ref-for-event-handler-19">(6)</a> <a href="webappapis.html#ref-for-event-handler-20">(7)</a> <a href="webappapis.html#ref-for-event-handler-21">(8)</a> <a href="webappapis.html#ref-for-event-handler-22">(9)</a> <a href="webappapis.html#ref-for-event-handler-23">(10)</a> <a href="webappapis.html#ref-for-event-handler-24">(11)</a> <a href="webappapis.html#ref-for-event-handler-25">(12)</a> <a href="webappapis.html#ref-for-event-handler-26">(13)</a> <a href="webappapis.html#ref-for-event-handler-27">(14)</a> <a href="webappapis.html#ref-for-event-handler-28">(15)</a> <a href="webappapis.html#ref-for-event-handler-29">(16)</a> <a href="webappapis.html#ref-for-event-handler-30">(17)</a> <a href="webappapis.html#ref-for-event-handler-31">(18)</a> <a href="webappapis.html#ref-for-event-handler-32">(19)</a> <a href="webappapis.html#ref-for-event-handler-33">(20)</a> <a href="webappapis.html#ref-for-event-handler-34">(21)</a> <a href="webappapis.html#ref-for-event-handler-35">(22)</a> <a href="webappapis.html#ref-for-event-handler-36">(23)</a>
@@ -24059,7 +24060,7 @@ c-end         = "--&gt;"
   <aside class="dfn-panel" data-for="event-handler-idl-event-handler-idl-attribute">
    <b><a href="webappapis.html#event-handler-idl-event-handler-idl-attribute">#event-handler-idl-event-handler-idl-attribute</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="sections.html#ref-for-event-handler-idl-event-handler-idl-attribute-1">4.3.1. The body element</a>
+    <li><a href="sections.html#ref-for-event-handler-idl-event-handler-idl-attribute-1">4.3.1. body 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-event-handler-idl-event-handler-idl-attribute-2">4.7.14.10.1. AudioTrackList and VideoTrackList objects</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-event-handler-idl-event-handler-idl-attribute-3">4.7.14.11.8. Event handlers for objects of the text track APIs</a> <a href="semantics-embedded-content.html#ref-for-event-handler-idl-event-handler-idl-attribute-4">(2)</a> <a href="semantics-embedded-content.html#ref-for-event-handler-idl-event-handler-idl-attribute-5">(3)</a>
     </li><li><a href="webappapis.html#ref-for-event-handler-idl-event-handler-idl-attribute-6">7.1.1. Introduction</a>
@@ -24077,7 +24078,7 @@ c-end         = "--&gt;"
     </li><li><a href="introduction.html#ref-for-event-handler-content-event-handler-content-attribute-2">1.9.2. 
   API 스크립팅을 사용하는 경우를 막는 일반적인 위험 </a>
     </li><li><a href="dom.html#ref-for-event-handler-content-event-handler-content-attribute-3">3.2.5. 범용 속성(attribute)</a>
-    </li><li><a href="sections.html#ref-for-event-handler-content-event-handler-content-attribute-4">4.3.1. The body element</a> <a href="sections.html#ref-for-event-handler-content-event-handler-content-attribute-5">(2)</a> <a href="sections.html#ref-for-event-handler-content-event-handler-content-attribute-6">(3)</a>
+    </li><li><a href="sections.html#ref-for-event-handler-content-event-handler-content-attribute-4">4.3.1. body 요소(element)</a> <a href="sections.html#ref-for-event-handler-content-event-handler-content-attribute-5">(2)</a> <a href="sections.html#ref-for-event-handler-content-event-handler-content-attribute-6">(3)</a>
     </li><li><a href="webappapis.html#ref-for-event-handler-content-event-handler-content-attribute-7">7.1.1. Introduction</a>
     </li><li><a href="webappapis.html#ref-for-event-handler-content-event-handler-content-attribute-8">7.1.3.8. Runtime script errors</a> <a href="webappapis.html#ref-for-event-handler-content-event-handler-content-attribute-9">(2)</a>
     </li><li><a href="webappapis.html#ref-for-event-handler-content-event-handler-content-attribute-10">7.1.5.1. Event handlers</a> <a href="webappapis.html#ref-for-event-handler-content-event-handler-content-attribute-11">(2)</a> <a href="webappapis.html#ref-for-event-handler-content-event-handler-content-attribute-12">(3)</a> <a href="webappapis.html#ref-for-event-handler-content-event-handler-content-attribute-13">(4)</a>
@@ -24517,7 +24518,7 @@ c-end         = "--&gt;"
     <li><a href="introduction.html#ref-for-dom-globaleventhandlers-onload-1">1.9.1. HTML로 안전한 어플리케이션 작성</a>
     </li><li><a href="introduction.html#ref-for-dom-globaleventhandlers-onload-2">1.9.2. 
   API 스크립팅을 사용하는 경우를 막는 일반적인 위험 </a>
-    </li><li><a href="sections.html#ref-for-dom-globaleventhandlers-onload-3">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-dom-globaleventhandlers-onload-3">4.3.1. body 요소(element)</a>
     </li><li><a href="webappapis.html#ref-for-dom-globaleventhandlers-onload-4">7.1.5.2.1. IDL definitions</a>
     </li><li><a href="obsolete.html#ref-for-dom-globaleventhandlers-onload-5">11.3.3. Frames</a>
    </li></ul>
@@ -24668,7 +24669,7 @@ c-end         = "--&gt;"
   <aside class="dfn-panel" data-for="windoweventhandlers-windoweventhandlers">
    <b><a href="webappapis.html#windoweventhandlers-windoweventhandlers">#windoweventhandlers-windoweventhandlers</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="sections.html#ref-for-windoweventhandlers-windoweventhandlers-1">4.3.1. The body element</a>
+    <li><a href="sections.html#ref-for-windoweventhandlers-windoweventhandlers-1">4.3.1. body 요소(element)</a>
     </li><li><a href="browsers.html#ref-for-windoweventhandlers-windoweventhandlers-2">6.3. The Window object</a>
     </li><li><a href="obsolete.html#ref-for-windoweventhandlers-windoweventhandlers-3">11.3.3. Frames</a>
    </li></ul>
@@ -25400,7 +25401,7 @@ c-end         = "--&gt;"
     </li><li><a href="dom.html#ref-for-start-tag-2">3.2.3. 요소(element) 정의</a>
     </li><li><a href="semantics.html#ref-for-start-tag-3">4.1.1. html 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-start-tag-4">4.2.1. head 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-start-tag-5">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-start-tag-5">4.3.1. body 요소(element)</a>
     </li><li><a href="tabular-data.html#ref-for-start-tag-6">4.9.5. The tbody element</a>
     </li><li><a href="semantics-scripting.html#ref-for-start-tag-7">4.12.1. The script element</a>
     </li><li><a href="syntax.html#ref-for-start-tag-8">8.1.2. Elements</a>
@@ -25421,7 +25422,7 @@ c-end         = "--&gt;"
     </li><li><a href="document-metadata.html#ref-for-end-tag-6">4.2.3. base 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-end-tag-7">4.2.4. link 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-end-tag-8">4.2.5. meta 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-end-tag-9">4.3.1. The body element</a>
+    </li><li><a href="sections.html#ref-for-end-tag-9">4.3.1. body 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-end-tag-10">4.4.1. The p element</a>
     </li><li><a href="grouping-content.html#ref-for-end-tag-11">4.4.2. The hr element</a>
     </li><li><a href="grouping-content.html#ref-for-end-tag-12">4.4.7. The li element</a>
@@ -25535,7 +25536,7 @@ c-end         = "--&gt;"
    <ul>
     <li><a href="semantics.html#ref-for-comment-1">4.1.1. html 요소(element)</a> <a href="semantics.html#ref-for-comment-2">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-comment-3">4.2.1. head 요소(element)</a>
-    </li><li><a href="sections.html#ref-for-comment-4">4.3.1. The body element</a> <a href="sections.html#ref-for-comment-5">(2)</a>
+    </li><li><a href="sections.html#ref-for-comment-4">4.3.1. body 요소(element)</a> <a href="sections.html#ref-for-comment-5">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-comment-6">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-comment-7">(2)</a> <a href="semantics-embedded-content.html#ref-for-comment-8">(3)</a>
     </li><li><a href="tabular-data.html#ref-for-comment-9">4.9.3. The colgroup element</a>
     </li><li><a href="syntax.html#ref-for-comment-10">8.1. Writing HTML documents</a> <a href="syntax.html#ref-for-comment-11">(2)</a> <a href="syntax.html#ref-for-comment-12">(3)</a>
@@ -29381,4 +29382,4 @@ c-end         = "--&gt;"
             }
 
         });
-        </script><p class="prev_next">← <a href="semantics.html#semantics"><span class="secno">4</span> <span class="content">HTML의 요소(element)들</span></a> — <a href="index.html#contents">Table of contents</a> — <a href="sections.html#sections"><span class="secno">4.3</span> <span class="content">Sections</span></a> →</p></body></html>
+        </script><p class="prev_next">← <a href="semantics.html#semantics"><span class="secno">4</span> <span class="content">HTML의 요소(element)들</span></a> — <a href="index.html#contents">Table of contents</a> — <a href="sections.html#sections"><span class="secno">4.3</span> <span class="content">섹션</span></a> →</p></body></html>
