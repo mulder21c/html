@@ -2,7 +2,7 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <meta content="REC" name="w3c-status">
-  <title>HTML 5.1: 4.5. Text-level semantics</title>
+  <title>HTML 5.1: 4.5. 텍스트 수준 의미론</title>
   <link href="styles/styles-html.css" rel="stylesheet" type="text/css">
   <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-REC" rel="stylesheet" type="text/css">
 <style data-fill-with="stylesheet">/******************************************************************************
@@ -1439,14 +1439,14 @@ pre.idl.highlight { color: #708090; }
   <nav data-fill-with="table-of-contents" id="toc"><p class="prev_next">← <a href="grouping-content.html#grouping-content"><span class="secno">4.4</span> <span class="content">그룹화(sectioning) 콘텐트</span></a> — <a href="index.html#contents">Table of contents</a> — <a href="edits.html#edits"><span class="secno">4.6</span> <span class="content">Edits</span></a> →</p>
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory"><li>
-       <a href="textlevel-semantics.html#textlevel-semantics"><span class="secno">4.5</span> <span class="content">Text-level semantics</span></a>
+       <a href="textlevel-semantics.html#textlevel-semantics"><span class="secno">4.5</span> <span class="content">텍스트 수준 의미론</span></a>
        <ol class="toc">
-        <li><a href="textlevel-semantics.html#the-a-element"><span class="secno">4.5.1</span> <span class="content">The <span><code>a</code></span> element</span></a>
-        </li><li><a href="textlevel-semantics.html#the-em-element"><span class="secno">4.5.2</span> <span class="content">The <span><code>em</code></span> element</span></a>
-        </li><li><a href="textlevel-semantics.html#the-strong-element"><span class="secno">4.5.3</span> <span class="content">The <span><code>strong</code></span> element</span></a>
-        </li><li><a href="textlevel-semantics.html#the-small-element"><span class="secno">4.5.4</span> <span class="content">The <span><code>small</code></span> element</span></a>
-        </li><li><a href="textlevel-semantics.html#the-s-element"><span class="secno">4.5.5</span> <span class="content">The <span><code>s</code></span> element</span></a>
-        </li><li><a href="textlevel-semantics.html#the-cite-element"><span class="secno">4.5.6</span> <span class="content">The <span><code>cite</code></span> element</span></a>
+        <li><a href="textlevel-semantics.html#the-a-element"><span class="secno">4.5.1</span> <span class="content"><span><code>a</code></span> 요소(element)</span></a>
+        </li><li><a href="textlevel-semantics.html#the-em-element"><span class="secno">4.5.2</span> <span class="content"><span><code>em</code></span> 요소(element)</span></a>
+        </li><li><a href="textlevel-semantics.html#the-strong-element"><span class="secno">4.5.3</span> <span class="content"><span><code>strong</code></span> 요소(element)</span></a>
+        </li><li><a href="textlevel-semantics.html#the-small-element"><span class="secno">4.5.4</span> <span class="content"><span><code>small</code></span> 요소(element)</span></a>
+        </li><li><a href="textlevel-semantics.html#the-s-element"><span class="secno">4.5.5</span> <span class="content"><span><code>s</code></span> 요소(element)</span></a>
+        </li><li><a href="textlevel-semantics.html#the-cite-element"><span class="secno">4.5.6</span> <span class="content"><span><code>cite</code></span> 요소(element)</span></a>
         </li><li><a href="textlevel-semantics.html#the-q-element"><span class="secno">4.5.7</span> <span class="content">The <span><code>q</code></span> element</span></a>
         </li><li><a href="textlevel-semantics.html#the-dfn-element"><span class="secno">4.5.8</span> <span class="content">The <span><code>dfn</code></span> element</span></a>
         </li><li><a href="textlevel-semantics.html#the-abbr-element"><span class="secno">4.5.9</span> <span class="content">The <span><code>abbr</code></span> element</span></a>
@@ -1475,36 +1475,37 @@ pre.idl.highlight { color: #708090; }
        </li></ol>
       </li></ol>
   </nav><main><section>
-     <h3 class="heading settled" data-level="4.5" id="textlevel-semantics"><span class="secno">4.5. </span><span class="content">Text-level semantics</span><a class="self-link" href="textlevel-semantics.html#textlevel-semantics"></a></h3>
-     <h4 class="heading settled" data-level="4.5.1" id="the-a-element"><span class="secno">4.5.1. </span><span class="content">The <dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-a"><code>a</code></dfn> element</span><a class="self-link" href="textlevel-semantics.html#the-a-element"></a></h4>
+     <h3 class="heading settled" data-level="4.5" id="textlevel-semantics"><span class="secno">4.5. </span><span class="content">텍스트 수준 의미론</span><a class="self-link" href="textlevel-semantics.html#textlevel-semantics"></a></h3>
+     <h4 class="heading settled" data-level="4.5.1" id="the-a-element"><span class="secno">4.5.1. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-a"><code>a</code></dfn> 요소(element)</span><a class="self-link" href="textlevel-semantics.html#the-a-element"></a></h4>
      <dl class="element">
-      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-32">Categories</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-61">Flow content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-22">Phrasing content</a>.
-      </dd><dd>If the element has an <code>href</code> attribute: <a data-link-type="dfn" href="dom.html#interactive-content" id="ref-for-interactive-content-4">Interactive content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-19">Palpable content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-31">Contexts in which this element can be used</a>:
-      </dt><dd>Where <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-23">phrasing content</a> is expected.
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-34">Content model</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#transparent" id="ref-for-transparent-2">Transparent</a>, but there must be no <a data-link-type="dfn" href="dom.html#interactive-content" id="ref-for-interactive-content-5">interactive content</a> or <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-21">a</a></code> element descendants.
-      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-31">Tag omission in text/html</a>:
-      </dt><dd>Neither tag is omissible
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-32">Content attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-31">Global attributes</a>
-      </dd><dd><code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-10">href</a></code> - Address of the <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-11">hyperlink</a>
-      </dd><dd> <code>target</code> - Default <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-23">browsing context</a> for <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-12">hyperlink</a> <a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-12">navigation</a> and <a href="sec-forms.html#forms-form-submission">§4.10.22 Form submission</a> 
-      </dd><dd> <code>download</code> - Whether to download the resource instead of navigating to it, and its
-      file name if so 
-      </dd><dd><code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-6">rel</a></code> — Relationship of this document (or subsection/topic) to the destination resource
-      </dd><dd><code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-8">rev</a></code> — <a data-link-type="dfn" href="document-metadata.html#reverse-link" id="ref-for-reverse-link-3">Reverse link</a> relationship of the destination resource to this document (or subsection/topic)
-      </dd><dd><code>hreflang</code> - Language of the linked resource
-      </dd><dd><code>type</code> - Hint for the type of the referenced resource
-      </dd><dt>Allowed <a href="dom.html#aria-role-attribute">ARIA role attribute</a> values:
-      </dt><dd> <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#link"><code>link</code></a> (default - <a data-link-type="dfn" href="dom.html#do-not-set" id="ref-for-do-not-set-16"><em>do not set</em></a>), <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#button"><code>button</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#checkbox"><code>checkbox</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#menuitem"><code>menuitem</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#menuitemcheckbox"><code>menuitemcheckbox</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#menuitemradio"><code>menuitemradio</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#radio"><code>radio</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria-1.1/#switch"><code>switch</code></a> <a data-link-type="biblio" href="references.html#biblio-wai-aria-11">[WAI-ARIA-1.1]</a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#tab"><code>tab</code></a> or <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#treeitem"><code>treeitem</code></a> 
-      </dd><dt>Allowed <a href="dom.html#state-and-property-attributes">ARIA state and property attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-33">Global aria-* attributes</a>
-      </dd><dd>Any <code>aria-*</code> attributes <a href="dom.html#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.
-      </dd><dt><a data-link-type="dfn">DOM interface</a>:
+      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-32">카테고리</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-61">흐름(flow) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-22">어구(phrasing) 콘텐트</a>.
+      </dd><dd>요소(element)가 <code>href</code> 속성(attribute)을 가진다면: <a data-link-type="dfn" href="dom.html#interactive-content" id="ref-for-interactive-content-4">대화형(interactive) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-19">분명한(palpable) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-31">이 요소(element)가 사용될 수 있는 컨텍스트</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-23">어구(phrasing) 콘텐트</a>가 기대되는 곳.
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-34">콘텐트 모델</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#transparent" id="ref-for-transparent-2">투명</a>, 하지만 후손 <a data-link-type="dfn" href="dom.html#interactive-content" id="ref-for-interactive-content-5">대화형(interactive) 콘텐트</a>나 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-21">a</a></code> 요소(element)가 존재하지 
+      않아야(must) 합니다. 
+      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-31">text/html에서 태그 생략</a>:
+      </dt><dd>어느 태그도 생략 가능하지 않습니다
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-32">콘텐트 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-31">범용 속성(attribute)들</a>
+      </dd><dd><code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-10">href</a></code> - <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-11">하이퍼링크</a>의 주소
+      </dd><dd> <code>target</code> - <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-12">하이퍼링크</a> <a data-link-type="dfn" href="browsers.html#navigated" id="ref-for-navigated-12">탐색</a>과 <a href="sec-forms.html#forms-form-submission">§4.10.22 Form submission</a>에 대한 기본 <a data-link-type="dfn" href="browsers.html#browsing-context" id="ref-for-browsing-context-23">브라우징 컨텍스트</a> 
+      </dd><dd> <code>download</code> - 리소스로 탐색하는 대신 다운로드 할지 여부, 그리고 다운로드 한다면 
+      그것의 파일 이름. 
+      </dd><dd><code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-6">rel</a></code> — 이 문서 (혹은 하위 섹션/주제)에서 목적지 리소스로의 관계
+      </dd><dd><code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-8">rev</a></code> — 목적지 리소스로부터 이 문서 (혹은 하위 섹션/주제)로의 <a data-link-type="dfn" href="document-metadata.html#reverse-link" id="ref-for-reverse-link-3">역방향 연결</a> 관계
+      </dd><dd><code>hreflang</code> - 연결된 리소스의 언어
+      </dd><dd><code>type</code> - 참조된 리소스의 유형에 대한 힌트
+      </dd><dt>허용된 <a href="dom.html#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:
+      </dt><dd> <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#link"><code>link</code></a> (기본 값 - <a data-link-type="dfn" href="dom.html#do-not-set" id="ref-for-do-not-set-16"><em>설정하지 마세요</em></a>), <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#button"><code>button</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#checkbox"><code>checkbox</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#menuitem"><code>menuitem</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#menuitemcheckbox"><code>menuitemcheckbox</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#menuitemradio"><code>menuitemradio</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#radio"><code>radio</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria-1.1/#switch"><code>switch</code></a> <a data-link-type="biblio" href="references.html#biblio-wai-aria-11">[WAI-ARIA-1.1]</a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#tab"><code>tab</code></a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#treeitem"><code>treeitem</code></a> 
+      </dd><dt>허용된 <a href="dom.html#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-33">범용 aria-* 속성(attribute)들</a>
+      </dd><dd><a href="dom.html#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.
+      </dd><dt><a data-link-type="dfn">DOM 인터페이스</a>:
       </dt><dd>
 <pre class="idl highlight def" data-highlight="webidl"><span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="interface" data-export="" id="htmlanchorelement-htmlanchorelement">HTMLAnchorElement</dfn> : <a class="n" data-link-type="idl-name" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-36">HTMLElement</a> {
   <span class="kt">attribute</span> <span class="kt">DOMString</span> <a class="nv idl-code" data-link-type="attribute" data-type="DOMString" href="textlevel-semantics.html#dom-htmlanchorelement-target" id="ref-for-dom-htmlanchorelement-target-1">target</a>;
@@ -1519,14 +1520,16 @@ pre.idl.highlight { color: #708090; }
 <a class="n" data-link-type="idl-name" href="textlevel-semantics.html#htmlanchorelement-htmlanchorelement" id="ref-for-htmlanchorelement-htmlanchorelement-1">HTMLAnchorElement</a> <span class="kt">implements</span> <a class="n" data-link-type="idl-name" href="links.html#htmlhyperlinkelementutils-htmlhyperlinkelementutils" id="ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-1">HTMLHyperlinkElementUtils</a>;
 </pre>
      </dd></dl>
-     <p>If the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-22">a</a></code> element has an <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-11">href</a></code> attribute, then it <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-36">represents</a> a <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-13">hyperlink</a> (a hypertext anchor) labeled by its contents.</p>
-     <p>If the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-23">a</a></code> element has no <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-12">href</a></code> attribute, then the element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-37">represents</a> a placeholder for where a link might otherwise have been placed, if it had been
-  relevant, consisting of just the element’s contents.</p>
-     <p>The <code>target</code>, <code>download</code>, <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-7">rel</a></code>, <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-9">rev</a></code>, <code>hreflang</code>, and <code>type</code> attributes must be omitted if the <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-13">href</a></code> attribute is not present.</p>
-     <div class="example" id="example-7250b603">
-      <a class="self-link" href="textlevel-semantics.html#example-7250b603"></a> 
-      <p>If a site uses a consistent navigation toolbar on every page, then the link that would
-    normally link to the page itself could be marked up using an <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-24">a</a></code> element:</p>
+     <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-22">a</a></code> 요소(element)가 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-11">href</a></code> 속성(attribute)를 가진다면, 그것은 그것의 콘텐츠에 의해 라벨링
+  된 <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-13">하이퍼링크</a>를 (하이퍼텍스트 앵커) <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-36">나타냅니다</a>.</p>
+     <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-23">a</a></code> 요소(element)가 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-12">href</a></code> 속성(attribute)을 가지지 않는다면, 요소(element)는 관련되어있다면
+  요소(element)의 콘텐츠로만 구성되는 링크가 있을 수 있는 위치에 대한 자리 표시자(placeholder)를 <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-37">나타냅니다</a>.</p>
+     <p><code>target</code>, <code>download</code>, <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-7">rel</a></code>, <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-9">rev</a></code>, <code>hreflang</code>, <code>type</code> 속성(attribute)들은 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-13">href</a></code> 속성(attribute)이 존재하지 않는다면 생략되어야(must) 
+  합니다.</p>
+     <div class="example" id="example-e719473a">
+      <a class="self-link" href="textlevel-semantics.html#example-e719473a"></a> 
+      <p>사이트가 모든 페이지에 일관된 탐색 도구 모음을 사용한다면, 정상적으로 페이지 자체로 연결하는
+    링크는 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-24">a</a></code> 요소(element)를 사용하여 마크업 될 수 있습니다:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"/"</span><span class="p">&gt;</span>Home<span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="p">/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1538,71 +1541,70 @@ pre.idl.highlight { color: #708090; }
 </pre>
      </div>
      <div class="impl">
-       The <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-14">href</a></code>, <code>target</code>, <code>download</code>, and attributes affect what
-    happens when users <a data-link-type="dfn" href="links.html#follow-hyperlinks" id="ref-for-follow-hyperlinks-4">follow hyperlinks</a> or <a data-link-type="dfn" href="links.html#download-hyperlinks" id="ref-for-download-hyperlinks-1">download hyperlinks</a> created using the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-25">a</a></code> element. The <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-8">rel</a></code>, <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-10">rev</a></code>, <code>hreflang</code>, and <code>type</code> attributes may be used to indicate to the user the likely nature of the target resource before
-    the user follows the link. 
-      <p>The <a data-link-type="dfn" href="editing.html#activation-behavior" id="ref-for-activation-behavior-2">activation behavior</a> of <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-26">a</a></code> elements that create <a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-14">hyperlinks</a> is to
-    run the following steps:</p>
+       <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-14">href</a></code>, <code>target</code>, <code>download</code> 및 속성(attribute)들은 사용자가 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-25">a</a></code> 요소(element)를 사용하여 생성된 <a data-link-type="dfn" href="links.html#follow-hyperlinks" id="ref-for-follow-hyperlinks-4">하이퍼링크들을 따라가</a>거나 <a data-link-type="dfn" href="links.html#download-hyperlinks" id="ref-for-download-hyperlinks-1">하이퍼링크들을 다운로드</a> 할 때 발생하는 것에 영향을 줍니다. <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-8">rel</a></code>, <code><a data-link-type="element-sub" href="document-metadata.html#element-attrdef-a-rev" id="ref-for-element-attrdef-a-rev-10">rev</a></code>, <code>hreflang</code>, <code>type</code> 속성(attribute)들은 사용자가 
+    링크를 따라가기 전에 대상 리소스의 특징 같은 것을 사용자에게 나타내는데 사용될 수 있습니다. 
+      <p><a data-link-type="dfn" href="links.html#hyperlink" id="ref-for-hyperlink-14">하이퍼링크들</a>을 생성하는 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-26">a</a></code> 요소(element)들의 <a data-link-type="dfn" href="editing.html#activation-behavior" id="ref-for-activation-behavior-2">활성화 동작</a>은 다음 단계들을 수행하는 것입니다:</p>
       <ol>
        <li data-md="">
-        <p>If the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-27">a</a></code> element’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code> is not <a data-link-type="dfn" href="browsers.html#fully-active" id="ref-for-fully-active-2">fully active</a>, then abort
-these steps.</p>
+        <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-27">a</a></code> 요소(element)의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#document">Document</a></code>가 <a data-link-type="dfn" href="browsers.html#fully-active" id="ref-for-fully-active-2">완전히 활성화</a>되어 있지 않다면,
+이 단계들을 중단합니다.</p>
        </li><li data-md="">
-        <p>If either the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-28">a</a></code> element has a <code>download</code> attribute and the algorithm
-is not <a data-link-type="dfn" href="browsers.html#allowed-to-show-a-popup" id="ref-for-allowed-to-show-a-popup-1">allowed to show a popup</a>, or the element’s <code>target</code> attribute is
-present and applying <a data-link-type="dfn" href="browsers.html#the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name" id="ref-for-the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name-1">the rules for choosing a browsing context given a browsing context name</a>, using the
-value of the <code>target</code> attribute as the browsing context name, would result
-in there not being a chosen browsing context, then run these substeps:</p>
+        <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-28">a</a></code> 요소(element)가 <code>download</code> 속성(attribute)를 가지고 알고리즘이 <a data-link-type="dfn" href="browsers.html#allowed-to-show-a-popup" id="ref-for-allowed-to-show-a-popup-1">팝업을 보여주도록 허용</a>되지 않았거나, 요소(element)의 <code>target</code> 속성(attribute)이 존재하고 브라우징 컨텍스트 이름으로 <code>target</code> 속성(attribute)의 값을 사용하여 <a data-link-type="dfn" href="browsers.html#the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name" id="ref-for-the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name-1">브라우징 컨텍스트 이름이 주어진 브라우징 컨텍스트을 선택하기 위한 규칙</a>을 
+적용하는 것이 선택된 브라우징 컨텍스트가 존재하지 않게 되는 것을 초래한다면, 이 하위 
+단계들을 수행합니다:</p>
         <ol>
          <li data-md="">
-          <p>If there is an <a data-link-type="dfn" href="webappapis.html#entry-settings-object" id="ref-for-entry-settings-object-3">entry settings object</a>, throw an <code>InvalidAccessError</code> exception.</p>
+          <p><a data-link-type="dfn" href="webappapis.html#entry-settings-object" id="ref-for-entry-settings-object-3">엔트리 설정 객체</a>가 존재한다면, <code>InvalidAccessError</code> 예외를 던집니다.</p>
          </li><li data-md="">
-          <p>Abort these steps without following the hyperlink.</p>
+          <p>하이퍼링크를 따라가지 않고 이 단계들을 중단합니다.</p>
         </li></ol>
        </li><li data-md="">
-        <p>If the target of the <code>click</code> event is an <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-20">img</a></code> element with an <code>ismap</code> attribute specified, then server-side image map processing must be
-performed, as follows:</p>
+        <p><code>click</code> 이벤트의 대상이 명시된 <code>ismap</code> 속성(attribtue)를 가진 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-20">img</a></code> 요소(element)라면, 다음과 같이 서버 사이드 이미지맵 처리가 수행되어야(must)합니다:</p>
         <ol>
          <li data-md="">
-          <p>If the <code>click</code> event was a real pointing-device-triggered <code>click</code> event on the <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-21">img</a></code> element, then let <var>x</var> be the distance in CSS
-pixels from the left edge of the image’s left border, if it has one, or the left edge of
-the image otherwise, to the location of the click, and let <var>y</var> be the distance
-in CSS pixels from the top edge of the image’s top border, if it has one, or the top
-edge of the image otherwise, to the location of the click. Otherwise, let <var>x</var> and <var>y</var> be zero.</p>
+          <p><code>click</code> 이벤트가 <code><a data-link-type="element" href="semantics-embedded-content.html#elementdef-img" id="ref-for-elementdef-img-21">img</a></code> 요소에 실제 포인팅 디바이스에서 작동된 <code>click</code> 이벤트 였다면, <var>x</var>를 이미지의 왼쪽 테두리가 있다면 왼쪽 
+테두리의 왼쪽 모서리로부터, 혹은 그렇지 않으면 이미지의 왼쪽 모서리로부터 클릭 
+위치까지의 거리를 CSS 픽셀로 두고, <var>y</var>를 이미지의 상단 테두리가 있다면 상단 
+테두리의 상단 모서리로부터, 혹은 그렇지 않으면 이미지의 상단 모서리로부터의 클릭 
+위치까지의 거리를 CSS 픽셀로 둡니다. 그렇지 않으면 <var>x</var>와 <var>y</var>를 0으로 
+둡니다.</p>
          </li><li data-md="">
-          <p>Let <var>hyperlink suffix</var> be a U+003F QUESTION MARK character, the value of <var>x</var> expressed as a base-ten integer using <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-65">ASCII digits</a>, a U+002C COMMA
-character (,), and the value of <var>y</var> expressed as a base-ten integer using <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-66">ASCII digits</a>.</p>
+          <p><var>hyperlink suffix</var>를 U+003F 물음표 문자, <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-65">ASCII 숫자들</a>을
+사용하여 십진 정수로 표현된 <var>x</var>의 값, U+002C 콤마 문자 (,), <a data-link-type="dfn" href="infrastructure.html#ascii-digits" id="ref-for-ascii-digits-66">ASCII 숫자들</a>을 사용하여 십진 정수로 표현된 <var>y</var>의 
+값으로 둡니다.</p>
         </li></ol>
        </li><li data-md="">
-        <p>Finally, the user agent must <a data-link-type="dfn" href="links.html#follow-hyperlinks" id="ref-for-follow-hyperlinks-5">follow the hyperlink</a> or <a data-link-type="dfn" href="links.html#download-hyperlinks" id="ref-for-download-hyperlinks-2">download the hyperlink</a> created by the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-29">a</a></code> element, as determined by the <code>download</code> attribute
-and any expressed user preference, passing <var>hyperlink suffix</var>, if the steps above
-defined it.</p>
+        <p>마지막으로, 유저 에이전트는 위 단계들이 정의되었다면, <var>hyperlink suffix</var>를 전달하여, <code>download</code> 속성(attribtue)과 모든 표현된 사용자 환경 설정에 의해 결졍된 대로, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-29">a</a></code> 요소(element)에 의해 생성된 <a data-link-type="dfn" href="links.html#follow-hyperlinks" id="ref-for-follow-hyperlinks-5">하이퍼링크를 따라가거나</a> <a data-link-type="dfn" href="links.html#download-hyperlinks" id="ref-for-download-hyperlinks-2">하이퍼링크를 다운로드</a>해야(must) 합니다.</p>
       </li></ol>
      </div>
      <dl class="domintro">
       <dt><var>a</var> . <code>text</code>
-      </dt><dd>Same as <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code>.
+      </dt><dd><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code>과 동일.
      </dd></dl>
      <div class="impl">
-       The IDL attributes <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-download"><code>download</code></dfn>, <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-target"><code>target</code></dfn>, <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-rel"><code>rel</code></dfn>, <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-rev"><code>rev</code></dfn>, <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-hreflang"><code>hreflang</code></dfn>, and <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-type"><code>type</code></dfn>, must <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-18">reflect</a> the
-    respective content attributes of the same name. 
-      <p>The IDL attribute <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-rellist"><code>relList</code></dfn> must <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-19">reflect</a> the <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-9">rel</a></code> content attribute.</p>
-      <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-text"><code>text</code></dfn> IDL attribute, on getting, must return the same value as the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code> IDL attribute on the element, and on setting, must act as if the <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code> IDL attribute on the element had been set to the new value.</p>
+       IDL 속성(attribute)들 <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-download"><code>download</code></dfn>, <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-target"><code>target</code></dfn>, <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-rel"><code>rel</code></dfn>, <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-rev"><code>rev</code></dfn>, <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-hreflang"><code>hreflang</code></dfn>, <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-type"><code>type</code></dfn>는 
+	동일한 이름의 각 콘텐트 속성(attribute)들을 <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-18">반영</a>해야(must) 합니다. 
+      <p>IDL 속성(attribute) <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-rellist"><code>relList</code></dfn>은 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-rel" id="ref-for-element-attrdef-a-rel-9">rel</a></code> 콘텐트 속성(attribute)을 <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-19">반영</a>해야(must) 합니다.</p>
+      <p><dfn class="dfn-paneled idl-code" data-dfn-for="HTMLAnchorElement" data-dfn-type="attribute" data-export="" id="dom-htmlanchorelement-text"><code>text</code></dfn> IDL 속성(attribute)는 가져올 때
+    요소(element)의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code> IDL 속성(attribute)와 동일한 값을 반환해야(must) 하고, 설정 
+    할 때, 요소(element)의 <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-node-textcontent">textContent</a></code> IDL 속성(attribute)에 새로운 값이 설정된 것 같이 
+    동작해야(must) 합니다.</p>
       <hr>
-      <p>The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-30">a</a></code> element also supports the <code>HTMLHyperlinkElementUtils</code> interface. <a data-link-type="biblio" href="references.html#biblio-url">[URL]</a></p>
-      <p>When the element is created, and whenever the element’s <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-15">href</a></code> content attribute is
-    set, changed, or removed, the user agent must invoke the element’s <code>HTMLHyperlinkElementUtils</code> interface’s set the input algorithm with the value of the <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-16">href</a></code> content
-    attribute, if any, or the empty string otherwise, as the given value.</p>
-      <p>The element’s <code>HTMLHyperlinkElementUtils</code> interface’s get the base algorithm must simply return
-    the <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-9">document base URL</a>.</p>
-      <p>The element’s <code>HTMLHyperlinkElementUtils</code> interface’s query encoding is the <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-document-encoding">document’s character encoding</a>.</p>
-      <p>When the element’s <code>HTMLHyperlinkElementUtils</code> interface invokes its update steps with a string <var>value</var>, the user agent must set the element’s <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-17">href</a></code> content attribute to
-    the string <var>value</var>.</p>
+      <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-30">a</a></code> 요소(element)는 또한 <code>HTMLHyperlinkElementUtils</code> 인터페이스를 지원합니다. <a data-link-type="biblio" href="references.html#biblio-url">[URL]</a></p>
+      <p>요소(element)가 생성될 때, 그리고 요소(element)의 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-15">href</a></code> 콘텐트 속성(attribute)이 설정,
+    변경, 제거 될 때마다, 유저 에이전트는 요소(element)의 <code>HTMLHyperlinkElementUtils</code> 인터페이스의 입력 설정 알고리즘을 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-16">href</a></code> 콘텐트 속성(attribute)이 있다면 그 속성의 값을 
+    가지고, 그렇지 않으면 주어진 값으로 빈 문자열을 가지고 호출해야(must) 합니다.</p>
+      <p>요소(element)의 <code>HTMLHyperlinkElementUtils</code> 인터페이스의 기본 URL 획득(get the base)
+    알고리즘은 단순하게 <a data-link-type="dfn" href="infrastructure.html#document-base-url" id="ref-for-document-base-url-9">문서 기본 URL</a>을 반환해야(must) 합니다.</p>
+      <p>요소(element)의 <code>HTMLHyperlinkElementUtils</code> 인터페이스의 질의 인코딩은 <a data-link-type="dfn" href="https://www.w3.org/TR/dom/#concept-document-encoding">문서의 문자 인코딩</a>입니다.</p>
+      <p>요소(element)의 <code>HTMLHyperlinkElementUtils</code> 인터페이스가 문자열 <var>value</var>를
+    가지고 그것의 갱신 단계들을 작동시킬 경우, 유저 에이전트는 요소(element)의 <code><a data-link-type="element-sub" href="links.html#element-attrdef-a-href" id="ref-for-element-attrdef-a-href-17">href</a></code> 콘텐트 
+    속성(attribute)를 문자열 <var>value</var>로 설정해야(must) 합니다.</p>
      </div>
-     <div class="example" id="example-3fe0f2b1">
-      <a class="self-link" href="textlevel-semantics.html#example-3fe0f2b1"></a> The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-31">a</a></code> element may be wrapped around entire paragraphs, lists, tables, and so forth,
-    even entire sections, so long as there is no interactive content within (e.g., buttons or other
-    links). This example shows how this can be used to make an entire advertising block into a link: 
+     <div class="example" id="example-6c47aa54">
+      <a class="self-link" href="textlevel-semantics.html#example-6c47aa54"></a> <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-a" id="ref-for-elementdef-a-31">a</a></code> 요소(element)는 전체 문단들, 목록들, 표들, 등등 심지어 전체 섹션까지도 내부에 상호작용 
+    콘텐트가 (예를 들어, 버튼이나 다른 링크들) 존재하지만 않으면 감쌀 수 있습니다. 이 예는 이것이 
+    전체 광고 블럭이 링크 안으로 들어가게 하는데 사용될 수 있는 방식을 보여줍니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">aside</span> <span class="na">class</span><span class="o">=</span><span class="s">"advertising"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Advertising<span class="p">&lt;</span><span class="p">/</span><span class="nt">h1</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://ad.example.com/?adid=1929&amp;amp;pubid=1422"</span><span class="p">&gt;</span>
@@ -1622,114 +1624,107 @@ defined it.</p>
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">aside</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <h4 class="heading settled" data-level="4.5.2" id="the-em-element"><span class="secno">4.5.2. </span><span class="content">The <dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-em"><code>em</code></dfn> element</span><a class="self-link" href="textlevel-semantics.html#the-em-element"></a></h4>
+     <h4 class="heading settled" data-level="4.5.2" id="the-em-element"><span class="secno">4.5.2. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-em"><code>em</code></dfn> 요소(element)</span><a class="self-link" href="textlevel-semantics.html#the-em-element"></a></h4>
      <dl class="element">
-      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-33">Categories</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-62">Flow content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-24">Phrasing content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-20">Palpable content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-32">Contexts in which this element can be used</a>:
-      </dt><dd>Where <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-25">phrasing content</a> is expected.
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-35">Content model</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-26">Phrasing content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-32">Tag omission in text/html</a>:
-      </dt><dd>Neither tag is omissible
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-33">Content attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-32">Global attributes</a>
-      </dd><dt>Allowed <a href="dom.html#aria-role-attribute">ARIA role attribute</a> values:
-      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">Any role value</a>.
-      </dd><dt>Allowed <a href="dom.html#state-and-property-attributes">ARIA state and property attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-34">Global aria-* attributes</a>
-      </dd><dd>Any <code>aria-*</code> attributes <a href="dom.html#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.
-      </dd><dt><a data-link-type="dfn">DOM interface</a>:
-      </dt><dd>Uses <code class="idl"><a data-link-type="idl" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-37">HTMLElement</a></code>.
+      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-33">카테고리</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-62">흐름(flow) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-24">어구(phrasing) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-20">분명한(palpable) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-32">이 요소(element)가 사용될 수 있는 컨텍스트</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-25">어구(phrasing) 콘텐트</a>가 기대되는 곳.
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-35">콘텐트 모델</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-26">어구(phrasing) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-32">text/html에서 태그 생략</a>:
+      </dt><dd>어느 태그도 생략 가능하지 않습니다
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-33">콘텐트 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-32">범용 속성(attribute)들</a>
+      </dd><dt>허용된 <a href="dom.html#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:
+      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.
+      </dd><dt>허용된 <a href="dom.html#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-34">범용 aria-* 속성(attribute)들</a>
+      </dd><dd><a href="dom.html#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.
+      </dd><dt><a data-link-type="dfn">DOM 인터페이스</a>:
+      </dt><dd><code class="idl"><a data-link-type="idl" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-37">HTMLElement</a></code>를 사용.
      </dd></dl>
-     <p>The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-em" id="ref-for-elementdef-em-4">em</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-38">represents</a> stress emphasis of its contents.</p>
-     <p>The level of stress that a particular piece of content has is given by its number of ancestor <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-em" id="ref-for-elementdef-em-5">em</a></code> elements.</p>
-     <p>The placement of stress emphasis changes the meaning of the sentence. The element thus forms an
-  integral part of the content. The precise way in which stress is used in this way depends on the
-  language.</p>
-     <div class="example" id="example-ced98b0a">
-      <a class="self-link" href="textlevel-semantics.html#example-ced98b0a"></a> These examples show how changing the stress emphasis changes the meaning. First, a general
-    statement of fact, with no stress: 
+     <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-em" id="ref-for-elementdef-em-4">em</a></code> 요소(element)는 그것의 콘텐츠의 역설 강조(stress emphasis)를 <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-38">나타냅니다</a>.</p>
+     <p>콘텐트의 특정 부분의 강조 수준은 조상 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-em" id="ref-for-elementdef-em-5">em</a></code> 요소(elemenet)들의 수에 의해 주어집니다.</p>
+     <p>역설 강조(stress emphasis)의 위치는 문장의 의미(meaning)를 변경합니다. 따라서 요소(element)는
+  콘텐트의 필수적인 부분을 구성합니다. 이 방법으로 사용되는 강조의 정확한 방법은 언어에 따라 다릅니다.</p>
+     <div class="example" id="example-a8c04b94">
+      <a class="self-link" href="textlevel-semantics.html#example-a8c04b94"></a> 이 예제들은 역설 강조(stress emphasis)가 의미(meaning)을 변경하는 방식을 보여줍니다. 먼저, 강조 
+    없는, 사실에 대한 일반적인 문장입니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Cats are cute animals.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></pre>
-      <p>By emphasizing the first word, the statement implies that the kind of animal under discussion
-    is in question (maybe someone is asserting that dogs are cute):</p>
+      <p>첫 번째 단어를 강조하여, 문장이 논의 중인 동물의 종류가 문제의 것임을 나타냅니다 (어쩌면
+    누군가가 개들이 귀엽다고 주장하고 있을 것입니다):</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Cats<span class="p">&lt;</span><span class="p">/</span><span class="nt">em</span><span class="p">&gt;</span> are cute animals.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></pre>
-      <p>Moving the stress to the verb, one highlights that the truth of the entire sentence is in
-    question (maybe someone is saying cats are not cute):</p>
+      <p>강조를 동사로 옮기는 것은, 전체 문장의 진실성이 논의되고 있는 것임을 강조하는 것이 됩니다
+    (어쩌면 누군가가 고양이는 귀엽지 않다라고 말하고 있을 것입니다):</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Cats <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>are<span class="p">&lt;</span><span class="p">/</span><span class="nt">em</span><span class="p">&gt;</span> cute animals.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></pre>
-      <p>By moving it to the adjective, the exact nature of the cats is reasserted (maybe someone
-    suggested cats were <em>mean</em> animals):</p>
+      <p>그것을 형용사로 옮김에 의해, 고양이의 정확한 특성이 다시 주장됩니다 (어쩌면 누군가가 고양이는 <em>사나운</em> 동물이라고 주장했을 것입니다):</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Cats are <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>cute<span class="p">&lt;</span><span class="p">/</span><span class="nt">em</span><span class="p">&gt;</span> animals.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></pre>
-      <p>Similarly, if someone asserted that cats were vegetables, someone correcting this might
-    emphasize the last word:</p>
+      <p>비슷하게, 누군가 고양이는 채소라고 주장한다면, 이를 정정하는 누군가는 마지막 단어를 강조할
+    수 있습니다:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Cats are cute <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>animals<span class="p">&lt;</span><span class="p">/</span><span class="nt">em</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></pre>
-      <p>By emphasizing the entire sentence, it becomes clear that the speaker is fighting hard to get
-    the point across. This kind of stress emphasis also typically affects the punctuation, hence the
-    exclamation mark here.</p>
+      <p>전체 문장을 강조하여, 발표자가 요점을 이해시키기 위해 열심히 싸우고 있음이 명확해 집니다. 역설
+    강조(stress emphasis)의 종류는 또한 일반적으로 구두점에 영향을 주고, 이런 이유로 여기 느낌표가 
+    있습니다.</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Cats are cute animals!<span class="p">&lt;</span><span class="p">/</span><span class="nt">em</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></pre>
-      <p>Anger mixed with emphasizing the cuteness could lead to markup such as:</p>
+      <p>귀여움을 강조하는 것이 섞인 분노는 다음과 같은 마크업을 이끌어 낼 수 있습니다:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Cats are <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>cute<span class="p">&lt;</span><span class="p">/</span><span class="nt">em</span><span class="p">&gt;</span> animals!<span class="p">&lt;</span><span class="p">/</span><span class="nt">em</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></pre>
      </div>
      <div class="note" role="note">
-       The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-em" id="ref-for-elementdef-em-6">em</a></code> element isn’t a generic "italics" element. Sometimes, text is intended to
-    stand out from the rest of the paragraph, as if it was in a different mood or voice. For this,
-    the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-i" id="ref-for-elementdef-i-17">i</a></code> element is more appropriate. 
-      <p>The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-em" id="ref-for-elementdef-em-7">em</a></code> element also isn’t intended to convey importance; for that purpose, the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-4">strong</a></code> element is more appropriate.</p>
+       <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-em" id="ref-for-elementdef-em-6">em</a></code> 요소(element)는 일반적인 "이탤릭체" 요소(element)가 아닙니다. 때때로, 다른 분위기나 
+    음성으로 있는 것 처럼, 텍스트는 문단의 나머지로부터 눈에 띄기 위한 것입니다. 이를 위해, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-i" id="ref-for-elementdef-i-17">i</a></code> 요소(element)가 좀 더 적절합니다. 
+      <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-em" id="ref-for-elementdef-em-7">em</a></code> 요소(element)는 또한 중요성을 전달하기 위한 것이 아닙니다; 그 목적을 위해, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-4">strong</a></code> 요소(element)가 좀 더 적절합니다.</p>
      </div>
-     <h4 class="heading settled" data-level="4.5.3" id="the-strong-element"><span class="secno">4.5.3. </span><span class="content">The <dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-strong"><code>strong</code></dfn> element</span><a class="self-link" href="textlevel-semantics.html#the-strong-element"></a></h4>
+     <h4 class="heading settled" data-level="4.5.3" id="the-strong-element"><span class="secno">4.5.3. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-strong"><code>strong</code></dfn> 요소(element)</span><a class="self-link" href="textlevel-semantics.html#the-strong-element"></a></h4>
      <dl class="element">
-      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-34">Categories</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-63">Flow content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-27">Phrasing content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-21">Palpable content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-33">Contexts in which this element can be used</a>:
-      </dt><dd>Where <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-28">phrasing content</a> is expected.
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-36">Content model</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-29">Phrasing content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-33">Tag omission in text/html</a>:
-      </dt><dd>Neither tag is omissible
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-34">Content attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-33">Global attributes</a>
-      </dd><dt>Allowed <a href="dom.html#aria-role-attribute">ARIA role attribute</a> values:
-      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">Any role value</a>.
-      </dd><dt>Allowed <a href="dom.html#state-and-property-attributes">ARIA state and property attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-35">Global aria-* attributes</a>
-      </dd><dd>Any <code>aria-*</code> attributes <a href="dom.html#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.
-      </dd><dt><a data-link-type="dfn">DOM interface</a>:
-      </dt><dd>Uses <code class="idl"><a data-link-type="idl" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-38">HTMLElement</a></code>.
+      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-34">카테고리</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-63">흐름(flow) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-27">어구(phrasing) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-21">분명한(palpable) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-33">이 요소(element)가 사용될 수 있는 컨텍스트</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-28">어구(phrasing) 콘텐트</a>가 기대되는 곳.
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-36">콘텐트 모델</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-29">어구(phrasing) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-33">text/html에서 태그 생략</a>:
+      </dt><dd>어느 태그도 생략 가능하지 않습니다
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-34">콘텐트 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-33">범용 속성(attribute)들</a>
+      </dd><dt>허용된 <a href="dom.html#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:
+      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.
+      </dd><dt>허용된 <a href="dom.html#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-35">범용 aria-* 속성(attribute)들</a>
+      </dd><dd><a href="dom.html#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.
+      </dd><dt><a data-link-type="dfn">DOM 인터페이스</a>:
+      </dt><dd><code class="idl"><a data-link-type="idl" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-38">HTMLElement</a></code>를 사용.
      </dd></dl>
-     <p>The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-5">strong</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-39">represents</a> strong importance, seriousness, or
-  urgency for its contents.</p>
-     <p><strong>Importance</strong>: The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-6">strong</a></code> element can be used in a heading, caption,
-  or paragraph to distinguish the part that really matters from other parts that might be more
-  detailed, more jovial, or merely boilerplate.</p>
-     <p class="example" id="example-09b2529f"><a class="self-link" href="textlevel-semantics.html#example-09b2529f"></a>For example, the first word of the previous paragraph is marked up with <code>strong</code> to distinguish it from the more detailed text in the rest of the
-  paragraph.</p>
-     <p><strong>Seriousness</strong>: The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-7">strong</a></code> element can be used to mark up a warning
-  or caution notice.</p>
-     <p><strong>Urgency</strong>: The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-8">strong</a></code> element can be used to denote contents that
-  the user needs to see sooner than other parts of the document.</p>
-     <p>The relative level of importance of a piece of content is given by its number of ancestor <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-9">strong</a></code> elements; each <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-10">strong</a></code> element increases the importance of its
-  contents.</p>
-     <p>Changing the importance of a piece of text with the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-11">strong</a></code> element does not change
-  the meaning of the sentence.</p>
-     <div class="example" id="example-86d72e9c">
-      <a class="self-link" href="textlevel-semantics.html#example-86d72e9c"></a> Here, the word "chapter" and the actual chapter number are mere boilerplate, and the actual
-    name of the chapter is marked up with <code>strong</code>: 
+     <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-5">strong</a></code> 요소(element)는 그것의 콘텐츠에 대한 강한 중요성, 심각성, 긴급성을 <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-39">나타냅니다</a>.</p>
+     <p><strong>중요성</strong>: <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-6">strong</a></code> 요소(element)는 더 상세하거나, 더 유쾌하거나, 한낱 상투어일 수
+  있는 다른 부분들로부터 정말 중요한 부분을 구별하기 위해 제목(heading), 캡션, 문단에 사용될 수 
+  있습니다.</p>
+     <p>예를 들어, 이전 문단의 첫 번째 단어가 문단의 나머지의 좀 더 자세한 텍스트로부터 그것을 구별하기
+  위해 <code>strong</code>으로 마크업 됩니다.</p>
+     <p><strong>심각성</strong>: <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-7">strong</a></code> 요소(element)는 주의나 경고 안내를 마크업하는데 사용될 수
+  있습니다.</p>
+     <p><strong>긴급성</strong>: <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-8">strong</a></code> 요소(element)는 사용자가 문서의 다른 부분들보다 빨리 볼 필요가
+  있는 콘텐츠를 표시하는데 사용될 수 있습니다.</p>
+     <p>콘텐츠의 부분의 중요성의 상대적 수준은 그것의 조상 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-9">strong</a></code> 요소(element)들의 객수에 의해
+  주어집니다; 각 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-10">strong</a></code> 요소(element)는 그것의 콘텐츠의 중요성을 증가시킵니다.</p>
+     <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-11">strong</a></code> 요소(element)로 텍스트의 부분의 중요성을 변경하는 것은 문장의 의미(meaning)를 변경하지
+  않습니다.</p>
+     <div class="example" id="example-a76b0625">
+      <a class="self-link" href="textlevel-semantics.html#example-a76b0625"></a> 여기, 단어 "chapter"와 실제 챕터 번호는 단순한 상투어에 불과하고, 챕터의 실제 이름이 <code>strong</code>으로 마크업 됩니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Chapter 1: <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>The Praxis<span class="p">&lt;</span><span class="p">/</span><span class="nt">strong</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">h1</span><span class="p">&gt;</span></pre>
-      <p>In the following example, the name of the diagram in the caption is marked up with <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-12">strong</a></code>, to distinguish it from boilerplate text (before) and the description
-    (after):</p>
+      <p>다음 예에서, 캡션 내의 도표의 이름이 상투적인 텍스트와 (앞) 설명을 (뒤) 구별하기 위해 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-12">strong</a></code>으로 마크업됩니다:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>Figure 1. <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Ant colony dynamics<span class="p">&lt;</span><span class="p">/</span><span class="nt">strong</span><span class="p">&gt;</span>. The ants in this colony areaffected by the heat source (upper left) and the food source (lower right).<span class="p">&lt;</span><span class="p">/</span><span class="nt">figcaption</span><span class="p">&gt;</span></pre>
-      <p>In this example, the heading is really "Flowers, Bees, and Honey", but the author has added a
-    light-hearted addition to the heading. The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-13">strong</a></code> element is thus used to mark up
-    the first part to distinguish it from the latter part.</p>
+      <p>이 예에서, 제목(heading)은 실제로 "Flowers, Bees, and Honey"이지만, 작성자는 제목(heading)에
+    가벼운 마음으로 추가 사항을 추가했습니다. 따라서 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-13">strong</a></code> 요소(element)는 나중 부분으로부터 
+    그것을 구별하기 위해 첫 번째 부분을 마크업하는데 사용됩니다.</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Flowers, Bees, and Honey<span class="p">&lt;</span><span class="p">/</span><span class="nt">strong</span><span class="p">&gt;</span> and other things I don’t understand<span class="p">&lt;</span><span class="p">/</span><span class="nt">h1</span><span class="p">&gt;</span></pre>
      </div>
-     <div class="example" id="example-3e1f3000">
-      <a class="self-link" href="textlevel-semantics.html#example-3e1f3000"></a> Here is an example of a warning notice in a game, with the
-    various parts marked up according to how important they are: 
+     <div class="example" id="example-81c884c9">
+      <a class="self-link" href="textlevel-semantics.html#example-81c884c9"></a> 여기 얼마나 중요한지에 따라 마크업 된 다양한 부분을 가진 게임의 주의 안내의 예가 있습니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Warning.<span class="p">&lt;</span><span class="p">/</span><span class="nt">strong</span><span class="p">&gt;</span> This dungeon is dangerous.
 <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Avoid the ducks.<span class="p">&lt;</span><span class="p">/</span><span class="nt">strong</span><span class="p">&gt;</span> Take any gold you find.
 <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Do not take any of the diamonds<span class="p">&lt;</span><span class="p">/</span><span class="nt">strong</span><span class="p">&gt;</span>,
@@ -1737,9 +1732,9 @@ they are explosive and <span class="p">&lt;</span><span class="nt">strong</span>
 ten meters.<span class="p">&lt;</span><span class="p">/</span><span class="nt">strong</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">strong</span><span class="p">&gt;</span> You have been warned.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <div class="example" id="example-2c57b6b9">
-      <a class="self-link" href="textlevel-semantics.html#example-2c57b6b9"></a> In this example, the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-14">strong</a></code> element is used to denote the part of the text that
-    the user is intended to read first. 
+     <div class="example" id="example-6601af8f">
+      <a class="self-link" href="textlevel-semantics.html#example-6601af8f"></a> 이 예에서, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-14">strong</a></code> 요소(element)가 사용자가 먼저 읽도록 의도 된 텍스트의 일부를 나타내는데 
+    사용됩니다. 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Welcome to Remy, the reminder system.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Your tasks for today:<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1749,40 +1744,41 @@ ten meters.<span class="p">&lt;</span><span class="p">/</span><span class="nt">s
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <h4 class="heading settled" data-level="4.5.4" id="the-small-element"><span class="secno">4.5.4. </span><span class="content">The <dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-small"><code>small</code></dfn> element</span><a class="self-link" href="textlevel-semantics.html#the-small-element"></a></h4>
+     <h4 class="heading settled" data-level="4.5.4" id="the-small-element"><span class="secno">4.5.4. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-small"><code>small</code></dfn> 요소(element)</span><a class="self-link" href="textlevel-semantics.html#the-small-element"></a></h4>
      <dl class="element">
-      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-35">Categories</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-64">Flow content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-30">Phrasing content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-22">Palpable content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-34">Contexts in which this element can be used</a>:
-      </dt><dd>Where <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-31">phrasing content</a> is expected.
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-37">Content model</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-32">Phrasing content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-34">Tag omission in text/html</a>:
-      </dt><dd>Neither tag is omissible
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-35">Content attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-34">Global attributes</a>
-      </dd><dt>Allowed <a href="dom.html#aria-role-attribute">ARIA role attribute</a> values:
-      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">Any role value</a>.
-      </dd><dt>Allowed <a href="dom.html#state-and-property-attributes">ARIA state and property attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-36">Global aria-* attributes</a>
-      </dd><dd>Any <code>aria-*</code> attributes <a href="dom.html#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.
-      </dd><dt><a data-link-type="dfn">DOM interface</a>:
-      </dt><dd>Uses <code class="idl"><a data-link-type="idl" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-39">HTMLElement</a></code>.
+      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-35">카테고리</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-64">흐름(flow) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-30">어구(phrasing) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-22">분명한(palpable) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-34">이 요소(element)가 사용될 수 있는 컨텍스트</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-31">어구(phrasing) 콘텐트</a>가 기대되는 곳.
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-37">콘텐트 모델</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-32">어구(phrasing) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-34">text/html에서 태그 생략</a>:
+      </dt><dd>어느 태그도 생략 가능하지 않습니다
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-35">콘텐트 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-34">범용 속성(attribute)들</a>
+      </dd><dt>허용된 <a href="dom.html#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:
+      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.
+      </dd><dt>허용된 <a href="dom.html#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-36">범용 aria-* 속성(attribute)들</a>
+      </dd><dd><a href="dom.html#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.
+      </dd><dt><a data-link-type="dfn">DOM 인터페이스</a>:
+      </dt><dd><code class="idl"><a data-link-type="idl" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-39">HTMLElement</a></code>를 사용.
      </dd></dl>
-     <p>The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-5">small</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-40">represents</a> side comments such as small print.</p>
-     <p class="note" role="note"> Small print typically features disclaimers, caveats, legal restrictions, or copyrights. Small
-    print is also sometimes used for attribution, or for satisfying licensing requirements. </p>
-     <p class="note" role="note"> The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-6">small</a></code> element does not "de-emphasize" or lower the importance of text
-    emphasized by the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-em" id="ref-for-elementdef-em-8">em</a></code> element or marked as important with the <code>strong</code> element. To mark text as not emphasized or important, simply do not mark it up with the <code>em</code> or <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-15">strong</a></code> elements respectively. </p>
-     <p>The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-7">small</a></code> element should not be used for extended spans of text, such as multiple
-  paragraphs, lists, or sections of text. It is only intended for short runs of text. The text of a
-  page listing terms of use, for instance, would not be a suitable candidate for the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-8">small</a></code> element: in such a case, the text is not a side comment, it is the main content
-  of the page.</p>
-     <div class="example" id="example-351660ca">
-      <a class="self-link" href="textlevel-semantics.html#example-351660ca"></a> In this example, the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-9">small</a></code> element is used to indicate that value-added tax is
-    not included in a price of a hotel room: 
+     <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-5">small</a></code> 요소(element)는 작은 글자 부분 같은 보조 코멘트들을 <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-40">나타냅니다</a>.</p>
+     <p class="note" role="note"> 작은 글자 부분은 일반적으로 고지 사항들, 경고 사항들, 법적 제한 사항들, 저작권들의 특징을 
+    가집니다. 작은 글자 부분은 또한 때때로 속성(attribution)에 대해 혹은 저작권 요구사항들을 
+    만족시키는 것에 대해 사용됩니다. </p>
+     <p class="note" role="note"> <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-6">small</a></code> 요소(element)는 "덜 강조"하거나, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-em" id="ref-for-elementdef-em-8">em</a></code> 요소(element)에 의해 강조되거나 <code>strong</code> 요소(element)로 중요한 것으로 표기 된 텍스트의 중요도를 감소시키지 않습니다. 
+    강조 혹은 중요하지 않은 것으로 텍스트를 표기하려면, 단순히 각각 <code>em</code>이나 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-strong" id="ref-for-elementdef-strong-15">strong</a></code> 요소(element)들로 그것을 마크업 하지 않으면 됩니다. </p>
+     <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-7">small</a></code> 요소(element)는 여러 문단들, 목록들, 텍스트의 섹션들 같은 텍스트의 확장된 범위에 사용되지
+  않아야(must) 합니다. 이것은 일련의 짧은 텍스트에만 의도된 것입니다. 예를 들어, 사용 약관들을 
+  나열하는 페이지의 텍스트는 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-8">small</a></code> 요소(element)들에 적합한 후보가 아닐 것입니다: 그러한 경우, 
+  텍스트는 보조 코멘트가 아니며, 페이지의 주요 콘텐트입니다.</p>
+     <div class="example" id="example-c9bd4819">
+      <a class="self-link" href="textlevel-semantics.html#example-c9bd4819"></a> 이 예에서, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-9">small</a></code> 요소(element)는 부가 가치세가 호텔 방의 가격에 포함되어 있지 않음을 
+    나타내기 위해 사용됩니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Single room
   <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>199 € <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>breakfast included, VAT not included<span class="p">&lt;</span><span class="p">/</span><span class="nt">small</span><span class="p">&gt;</span>
@@ -1791,16 +1787,16 @@ ten meters.<span class="p">&lt;</span><span class="p">/</span><span class="nt">s
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">dl</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <div class="example" id="example-982296da">
-      <a class="self-link" href="textlevel-semantics.html#example-982296da"></a> In this second example, the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-10">small</a></code> element is used for a side comment in an article. 
+     <div class="example" id="example-03a73acd">
+      <a class="self-link" href="textlevel-semantics.html#example-03a73acd"></a> 이 두 번째 예에서, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-10">small</a></code> 요소(elmeent)는 아티클의 보조 코멘트로 사용됩니다. 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Example Corp today announced record profits for the
 second quarter <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>(Full Disclosure: Foo News is a subsidiary of
 Example Corp)<span class="p">&lt;</span><span class="p">/</span><span class="nt">small</span><span class="p">&gt;</span>, leading to speculation about a third quarter
 merger with Demo Group.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre>
-      <p>This is distinct from a sidebar, which might be multiple paragraphs long and is removed from the
-    main flow of text. In the following example, we see a sidebar from the same article. This
-    sidebar also has small print, indicating the source of the information in the sidebar.</p>
+      <p>이것은 여러 문단들이 될 수 있고 테스트의 주요 흐름으로부터 제거되는 사이드바와 구별됩니다. 다음
+    예에서, 동일한 아티클의 사이드바를 볼 수 있습니다. 이 사이드바는 또한 사이드바 내의 정보의 
+    소스를 나타내는 작은 글자 부분을 가집니다.</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Example Corp<span class="p">&lt;</span><span class="p">/</span><span class="nt">h1</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This company mostly creates small software and Web
@@ -1812,81 +1808,80 @@ merger with Demo Group.<span class="p">&lt;</span><span class="p">/</span><span 
   page.<span class="p">&lt;</span><span class="p">/</span><span class="nt">small</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">aside</span><span class="p">&gt;</span>
 </pre>
-      <p>In this last example, the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-11">small</a></code> element is marked as being <em>important</em> small print.</p>
+      <p>이 마지막 예에서, <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-small" id="ref-for-elementdef-small-11">small</a></code> 요소(element)는 <em>중요한</em> 작은 글자 부분이 되는 것으로
+    표기됩니다.</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>Continued use of this service will result in a kiss.<span class="p">&lt;</span><span class="p">/</span><span class="nt">small</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">strong</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></pre>
      </div>
-     <h4 class="heading settled" data-level="4.5.5" id="the-s-element"><span class="secno">4.5.5. </span><span class="content">The <dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-s"><code>s</code></dfn> element</span><a class="self-link" href="textlevel-semantics.html#the-s-element"></a></h4>
+     <h4 class="heading settled" data-level="4.5.5" id="the-s-element"><span class="secno">4.5.5. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-s"><code>s</code></dfn> 요소(element)</span><a class="self-link" href="textlevel-semantics.html#the-s-element"></a></h4>
      <dl class="element">
-      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-36">Categories</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-65">Flow content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-33">Phrasing content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-23">Palpable content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-35">Contexts in which this element can be used</a>:
-      </dt><dd>Where <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-34">phrasing content</a> is expected.
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-38">Content model</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-35">Phrasing content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-35">Tag omission in text/html</a>:
-      </dt><dd>Neither tag is omissible
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-36">Content attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-35">Global attributes</a>
-      </dd><dt>Allowed <a href="dom.html#aria-role-attribute">ARIA role attribute</a> values:
-      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">Any role value</a>.
-      </dd><dt>Allowed <a href="dom.html#state-and-property-attributes">ARIA state and property attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-37">Global aria-* attributes</a>
+      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-36">카테고리</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-65">흐름(flow) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-33">어구(phrasing) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-23">분명한(palpable) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-35">이 요소(element)가 사용될 수 있는 컨텍스트</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-34">어구(phrasing) 콘텐트</a>가 기대되는 곳.
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-38">콘텐트 모델</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-35">어구(phrasing) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-35">text/html에서 태그 생략</a>:
+      </dt><dd>어느 태그도 생략 가능하지 않습니다
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-36">콘텐트 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-35">범용 속성(attribute)들</a>
+      </dd><dt>허용된 <a href="dom.html#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:
+      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.
+      </dd><dt>허용된 <a href="dom.html#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-37">범용 aria-* 속성(attribute)들</a>
       </dd><dd>Any <code>aria-*</code> attributes <a href="dom.html#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.
-      </dd><dt><a data-link-type="dfn">DOM interface</a>:
-      </dt><dd>Uses <code class="idl"><a data-link-type="idl" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-40">HTMLElement</a></code>.
+      </dd><dt><a data-link-type="dfn">DOM 인터페이스</a>:
+      </dt><dd><code class="idl"><a data-link-type="idl" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-40">HTMLElement</a></code>를 사용.
      </dd></dl>
-     <p>The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-s" id="ref-for-elementdef-s-5">s</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-41">represents</a> contents that are no longer accurate or no longer
-  relevant.</p>
-     <p class="note" role="note"> The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-s" id="ref-for-elementdef-s-6">s</a></code> element is not appropriate when indicating document edits; to mark a span of
-    text as having been removed from a document, use the <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-11">del</a></code> element. </p>
-     <div class="example" id="example-62687ddc">
-      <a class="self-link" href="textlevel-semantics.html#example-62687ddc"></a> In this example a recommended retail price has been marked as no longer relevant as the product
-    in question has a new sale price. 
+     <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-s" id="ref-for-elementdef-s-5">s</a></code> 요소(element)는 더 이상 정확하지 않거나 더 이상 관련이 없는 콘텐츠를 <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-41">나타냅니다</a>.</p>
+     <p class="note" role="note"> <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-s" id="ref-for-elementdef-s-6">s</a></code> 요소(element) 문서 편집을 나타내는 경우 적절하지 않습니다; 문서로부터 제거된 테스트의 
+    범위를 표현하기 위해서는 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-11">del</a></code> 요소(element)를 사용하세요. </p>
+     <div class="example" id="example-87b45a37">
+      <a class="self-link" href="textlevel-semantics.html#example-87b45a37"></a> 이 예에서 궈장 소매가는 새로운 할인 가를 가지는 문제의 상품에 더 이상 관련이 없는 것으로 
+    표기됩니다. 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Buy our Iced Tea and Lemonade!<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">s</span><span class="p">&gt;</span>Recommended retail price: $3.99 per bottle<span class="p">&lt;</span><span class="p">/</span><span class="nt">s</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Now selling for just $2.99 a bottle!<span class="p">&lt;</span><span class="p">/</span><span class="nt">strong</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <h4 class="heading settled" data-level="4.5.6" id="the-cite-element"><span class="secno">4.5.6. </span><span class="content">The <dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-cite"><code>cite</code></dfn> element</span><a class="self-link" href="textlevel-semantics.html#the-cite-element"></a></h4>
+     <h4 class="heading settled" data-level="4.5.6" id="the-cite-element"><span class="secno">4.5.6. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-cite"><code>cite</code></dfn> 요소(element)</span><a class="self-link" href="textlevel-semantics.html#the-cite-element"></a></h4>
      <dl class="element">
-      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-37">Categories</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-66">Flow content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-36">Phrasing content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-24">Palpable content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-36">Contexts in which this element can be used</a>:
-      </dt><dd>Where <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-37">phrasing content</a> is expected.
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-39">Content model</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-38">Phrasing content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-36">Tag omission in text/html</a>:
-      </dt><dd>Neither tag is omissible
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-37">Content attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-36">Global attributes</a>
-      </dd><dt>Allowed <a href="dom.html#aria-role-attribute">ARIA role attribute</a> values:
-      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">Any role value</a>.
-      </dd><dt>Allowed <a href="dom.html#state-and-property-attributes">ARIA state and property attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-38">Global aria-* attributes</a>
-      </dd><dd>Any <code>aria-*</code> attributes <a href="dom.html#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.
-      </dd><dt><a data-link-type="dfn">DOM interface</a>:
-      </dt><dd>Uses <code class="idl"><a data-link-type="idl" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-41">HTMLElement</a></code>.
+      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-37">카테고리</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-66">흐름(flow) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-36">어구(phrasing) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-24">분명한(palpable) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-36">이 요소(element)가 사용될 수 있는 컨텍스트</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-37">어구(phrasing) 콘텐트</a>가 기대되는 곳.
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-39">콘텐트 모델</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-38">어구(phrasing) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-36">text/html에서 태그 생략</a>:
+      </dt><dd>어느 태그도 생략 가능하지 않습니다
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-37">콘텐트 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-36">범용 속성(attribute)들</a>
+      </dd><dt>허용된 <a href="dom.html#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:
+      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.
+      </dd><dt>허용된 <a href="dom.html#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-38">범용 aria-* 속성(attribute)들</a>
+      </dd><dd><a href="dom.html#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.
+      </dd><dt><a data-link-type="dfn">DOM 인터페이스</a>:
+      </dt><dd><code class="idl"><a data-link-type="idl" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-41">HTMLElement</a></code>를 사용.
      </dd></dl>
-     <p>The <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-8">cite</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-42">represents</a> a reference to a creative work. It must include
-  the title of the work or the name of the author (person, people or organization) or an URL
-  reference, or a reference in abbreviated form as per the conventions used for the addition of
-  citation metadata.</p>
-     <p class="note" role="note"> Creative works include a book, a paper, an essay, a poem, a score, a song, a script, a film, a
-    TV show, a game, a sculpture, a painting, a theatre production, a play, an opera, a musical, an
-    exhibition, a legal case report, a computer program, , a web site, a web page, a blog post or
-    comment, a forum post or comment, a tweet, a written or oral statement, etc. </p>
-     <div class="example" id="example-db2e568e">
-      <a class="self-link" href="textlevel-semantics.html#example-db2e568e"></a> Here is an example of the author of a quote referenced using the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-9">cite</a></code> element: 
+     <p><code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-8">cite</a></code> 요소(element)는 창작물에 대한 참조를 <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-42">나타냅니다</a>. 그것은 작업물이나
+  작성자나 (개인, 사람들 혹은 단체) URL 참조의 제목이나 출처(citation) 메타데이터의 추가에 사용된 
+  규칙에 따라 축약된 구성의 참조를 포함해야(must) 합니다.</p>
+     <p class="note" role="note"> 창작물은 책, 신문, 에세이, 시, 악보, 노래, 대본, 영화, TV 쇼, 게임, 조각품, 그림, 공연 작품, 
+    연극, 오페라, 뮤지컬, 전시회, 법률 사건 보고서, 컴퓨터 프로그램, 웹 사이트, 웹 페이지, 블로그 
+    게시물이나 댓글, 포럼 게시물이나 댓글, 트윗, 기록물이나 구술서 등등을 포함합니다. </p>
+     <div class="example" id="example-24c19983">
+      <a class="self-link" href="textlevel-semantics.html#example-24c19983"></a> 여기 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-9">cite</a></code> 요소(element)를 사용하여 참조된 인용구(quote)의 작성자의 예입니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>In the words of <span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>Charles Bukowski<span class="p">&lt;</span><span class="p">/</span><span class="nt">cite</span><span class="p">&gt;</span> -
 <span class="p">&lt;</span><span class="nt">q</span><span class="p">&gt;</span>An intellectual says a simple thing in a hard way. An artist says a hard thing in a simple way.<span class="p">&lt;</span><span class="p">/</span><span class="nt">q</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <div class="example" id="example-f45704ac">
-      <a class="self-link" href="textlevel-semantics.html#example-f45704ac"></a> This second example identifies the author of a tweet by referencing the authors name using the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-10">cite</a></code> element: 
+     <div class="example" id="example-24b6bb52">
+      <a class="self-link" href="textlevel-semantics.html#example-24b6bb52"></a> 이 두 번째 예제는 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-10">cite</a></code> 요소(element)를 사용하여 작성자 이름을 참조하는 것에 의해 트윗의 
+    작성자를 식별합니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">class</span><span class="o">=</span><span class="s">"twitter-tweet"</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>♥ Bukowski in <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://twitter.com/search?q=%23HTML5&amp;src=hash"</span><span class="p">&gt;</span>#HTML5<span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span> spec examples
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://t.co/0FIEiYN1pC"</span><span class="p">&gt;</span>https://t.co/0FIEiYN1pC<span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span><mark><span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>— karl dubost (@karlpro)
@@ -1894,21 +1889,19 @@ merger with Demo Group.<span class="p">&lt;</span><span class="p">/</span><span 
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <div class="example" id="example-e30dd0a2">
-      <a class="self-link" href="textlevel-semantics.html#example-e30dd0a2"></a> In this example the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-11">cite</a></code> element is used to reference the title of a work in a
-    bibliography: 
+     <div class="example" id="example-c91e3d3f">
+      <a class="self-link" href="textlevel-semantics.html#example-c91e3d3f"></a> 이 예에서 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-11">cite</a></code> 요소(element)는 참고문헌에서 작품의 제목을 참조하는데 사용됩니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>Universal Declaration of Human Rights<span class="p">&lt;</span><span class="p">/</span><span class="nt">cite</span><span class="p">&gt;</span>, United Nations,
 December 1948. Adopted by General Assembly resolution 217 A (III).<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <div class="example" id="example-b5a53de1">
-      <a class="self-link" href="textlevel-semantics.html#example-b5a53de1"></a> In this example the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-12">cite</a></code> element is used to reference the title of a television
-    show: 
+     <div class="example" id="example-b0260cea">
+      <a class="self-link" href="textlevel-semantics.html#example-b0260cea"></a> 이 예에서 <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-12">cite</a></code> 요소(element)는 텔레비젼 쇼의 제목을 참조하는데 사용됩니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Who is your favorite doctor (in <span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>Doctor Who<span class="p">&lt;</span><span class="p">/</span><span class="nt">cite</span><span class="p">&gt;</span>)?<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></pre>
      </div>
-     <div class="example" id="example-18a9a57a">
-      <a class="self-link" href="textlevel-semantics.html#example-18a9a57a"></a> A very common use for the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-13">cite</a></code> element is to identify the author of a comment in a
-    blog post or forum, as in this example: 
+     <div class="example" id="example-50c0c548">
+      <a class="self-link" href="textlevel-semantics.html#example-50c0c548"></a> <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-13">cite</a></code> 요소(element)에 대한 매우 일반적인 사용은 이 예에서와 같이 블로그 게시물이나 포럼에 
+    댓글의 작성자를 식별하는 것입니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">id</span><span class="o">=</span><span class="s">"comment-1"</span><span class="p">&gt;</span>
   Comment by <span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://oli.jp"</span><span class="p">&gt;</span>Oli Studholme<span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">cite</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"2013-08-19T16:01"</span><span class="p">&gt;</span>August 19th, 2013 at 4:01 pm<span class="p">&lt;</span><span class="p">/</span><span class="nt">time</span><span class="p">&gt;</span>
@@ -1920,8 +1913,9 @@ December 1948. Adopted by General Assembly resolution 217 A (III).<span class="p
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">article</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <div class="example" id="example-cdc9efce">
-      <a class="self-link" href="textlevel-semantics.html#example-cdc9efce"></a> Another common use for the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-14">cite</a></code> element is to reference the <code>URL</code> of a search result, as in this example: 
+     <div class="example" id="example-5aac7053">
+      <a class="self-link" href="textlevel-semantics.html#example-5aac7053"></a> <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-14">cite</a></code> 요소(element)의 다른 일반적인 사용은 이 예에서와 같이, 검색 결과의 <code>URL</code>을 
+    참조하는 것입니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"resultStats"</span><span class="p">&gt;</span>About 416,000,000 results 0.33 seconds)&nbsp;<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
 ...
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://www.w3.org/html/wg/"</span><span class="p">&gt;</span>W3C <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>HTML Working Group<span class="p">&lt;</span><span class="p">/</span><span class="nt">i</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">a</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1931,8 +1925,9 @@ work through 31 December 2014. A Plan 2014 document published by the...<span cla
 ...
 </pre>
      </div>
-     <div class="example" id="example-939422b7">
-      <a class="self-link" href="textlevel-semantics.html#example-939422b7"></a> Where the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-15">cite</a></code> element is used to identify an abbreviated reference such as <i>Ibid.</i> it is suggested that this reference be linked to the base reference: 
+     <div class="example" id="example-4ed3acb3">
+      <a class="self-link" href="textlevel-semantics.html#example-4ed3acb3"></a> <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-cite" id="ref-for-elementdef-cite-15">cite</a></code> 요소(element)는 <i>Ibid</i>와 같은 축약된 참조를 식별하는 데 사용됩니다. 이것은 이 
+    참조가 기본 참조에 연결되는 것이 좋습니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Book notes<span class="p">&lt;</span><span class="p">/</span><span class="nt">h2</span><span class="p">&gt;</span>
   ...
@@ -1952,14 +1947,13 @@ work through 31 December 2014. A Plan 2014 document published by the...<span cla
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">article</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <p class="note" role="note"> A <em>citation</em> is not a <em>quote</em> (for which the <code><a data-link-type="element" href="textlevel-semantics.html#elementdef-q" id="ref-for-elementdef-q-6">q</a></code> element is
-    appropriate). </p>
-     <div class="example" id="example-c0173a49">
-      <a class="self-link" href="textlevel-semantics.html#example-c0173a49"></a> This is incorrect usage, because <code>cite</code> is not for quotes: 
+     <p class="note" role="note"> <em>출처(citation)</em>는 <em>인용(quote)</em>이 (<code><a data-link-type="element" href="textlevel-semantics.html#elementdef-q" id="ref-for-elementdef-q-6">q</a></code> 요소(element)가 적절한) 아닙니다. </p>
+     <div class="example" id="example-7e4897e6">
+      <a class="self-link" href="textlevel-semantics.html#example-7e4897e6"></a> <code>cite</code>는 인용(quote)들이 아니기 때문에, 잘못된 사용법입니다: 
 <pre class="bad">&lt;p&gt;&lt;cite&gt;This is wrong!, said Hillary.&lt;/cite&gt; is a quote from the
 popular daytime TV drama When Ian became Hillary.&lt;/p&gt;
 </pre>
-      <p>This is an example of the correct usage:</p>
+      <p>이것이 올바른 사용법의 예입니다:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">q</span><span class="p">&gt;</span>This is correct, said Hillary.<span class="p">&lt;</span><span class="p">/</span><span class="nt">q</span><span class="p">&gt;</span> is a quote from the
 popular daytime TV drama <span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>When Ian became Hillary<span class="p">&lt;</span><span class="p">/</span><span class="nt">cite</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre>
@@ -5255,7 +5249,7 @@ document.body.appendChild(wbr);
     </li><li><a href="infrastructure.html#ref-for-ascii-digits-51">2.4.5.9. 기간</a> <a href="infrastructure.html#ref-for-ascii-digits-52">(2)</a> <a href="infrastructure.html#ref-for-ascii-digits-53">(3)</a> <a href="infrastructure.html#ref-for-ascii-digits-54">(4)</a> <a href="infrastructure.html#ref-for-ascii-digits-55">(5)</a> <a href="infrastructure.html#ref-for-ascii-digits-56">(6)</a> <a href="infrastructure.html#ref-for-ascii-digits-57">(7)</a> <a href="infrastructure.html#ref-for-ascii-digits-58">(8)</a> <a href="infrastructure.html#ref-for-ascii-digits-59">(9)</a> <a href="infrastructure.html#ref-for-ascii-digits-60">(10)</a>
     </li><li><a href="dom.html#ref-for-ascii-digits-61">3.1.2. 리소스 메타데이터 관리</a> <a href="dom.html#ref-for-ascii-digits-62">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-ascii-digits-63">4.2.5.3. 선처리(pragma) 지시자들</a> <a href="document-metadata.html#ref-for-ascii-digits-64">(2)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-ascii-digits-65">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-ascii-digits-66">(2)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-ascii-digits-65">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-ascii-digits-66">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-ascii-digits-67">4.5.16. The time element</a> <a href="textlevel-semantics.html#ref-for-ascii-digits-68">(2)</a>
     </li><li><a href="links.html#ref-for-ascii-digits-69">4.8.6.5. Link type "icon"</a>
     </li><li><a href="sec-forms.html#ref-for-ascii-digits-70">4.10.19.8.1. Autofilling form controls: the autocomplete attribute</a> <a href="sec-forms.html#ref-for-ascii-digits-71">(2)</a> <a href="sec-forms.html#ref-for-ascii-digits-72">(3)</a> <a href="sec-forms.html#ref-for-ascii-digits-73">(4)</a> <a href="sec-forms.html#ref-for-ascii-digits-74">(5)</a> <a href="sec-forms.html#ref-for-ascii-digits-75">(6)</a> <a href="sec-forms.html#ref-for-ascii-digits-76">(7)</a> <a href="sec-forms.html#ref-for-ascii-digits-77">(8)</a> <a href="sec-forms.html#ref-for-ascii-digits-78">(9)</a> <a href="sec-forms.html#ref-for-ascii-digits-79">(10)</a>
@@ -6085,7 +6079,7 @@ document.body.appendChild(wbr);
     </li><li><a href="infrastructure.html#ref-for-document-base-url-4">2.5.2. URL 해석</a>
     </li><li><a href="infrastructure.html#ref-for-document-base-url-5">2.5.3. 기본 URL로 동적 변경</a>
     </li><li><a href="document-metadata.html#ref-for-document-base-url-6">4.2.3. base 요소(element)</a> <a href="document-metadata.html#ref-for-document-base-url-7">(2)</a> <a href="document-metadata.html#ref-for-document-base-url-8">(3)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-document-base-url-9">4.5.1. The a element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-document-base-url-9">4.5.1. a 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-document-base-url-10">4.7.16. The area element</a>
     </li><li><a href="browsers.html#ref-for-document-base-url-11">6.1. Browsing contexts</a>
     </li><li><a href="browsers.html#ref-for-document-base-url-12">6.1.6. Script settings for browsing contexts</a>
@@ -6298,7 +6292,7 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-reflection-15">4.4.4. blockquote 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-reflection-16">4.4.5. ol 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-reflection-17">4.4.7. li 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-reflection-18">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-reflection-19">(2)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-reflection-18">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-reflection-19">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-reflection-20">4.5.15. The data element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-reflection-21">4.5.16. The time element</a>
     </li><li><a href="edits.html#ref-for-reflection-22">4.6.3. Attributes common to ins and del elements</a> <a href="edits.html#ref-for-reflection-23">(2)</a>
@@ -6909,12 +6903,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-represent-33">4.4.12. figcaption 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-represent-34">4.4.13. main 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-represent-35">4.4.14. div 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-represent-36">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-represent-37">(2)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-represent-38">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-represent-39">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-represent-40">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-represent-41">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-represent-42">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-represent-36">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-represent-37">(2)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-represent-38">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-represent-39">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-represent-40">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-represent-41">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-represent-42">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-represent-43">4.5.7. The q element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-represent-44">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-represent-45">4.5.9. The abbr element</a>
@@ -7051,12 +7045,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-htmlelement-htmlelement-33">4.4.7. li 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-htmlelement-htmlelement-34">4.4.8. dl 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-htmlelement-htmlelement-35">4.4.14. div 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-36">4.5.1. The a element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-37">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-38">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-39">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-40">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-41">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-36">4.5.1. a 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-37">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-38">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-39">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-40">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-41">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-42">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-43">4.5.9. The abbr element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-44">4.5.10. The ruby element</a>
@@ -7198,12 +7192,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-categories-29">4.4.12. figcaption 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-categories-30">4.4.13. main 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-categories-31">4.4.14. div 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-categories-32">4.5.1. The a element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-categories-33">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-categories-34">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-categories-35">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-categories-36">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-categories-37">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-categories-32">4.5.1. a 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-categories-33">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-categories-34">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-categories-35">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-categories-36">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-categories-37">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-categories-38">4.5.7. The q element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-categories-39">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-categories-40">4.5.9. The abbr element</a>
@@ -7315,12 +7309,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-contexts-in-which-this-element-can-be-used-28">4.4.12. figcaption 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-contexts-in-which-this-element-can-be-used-29">4.4.13. main 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-contexts-in-which-this-element-can-be-used-30">4.4.14. div 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-31">4.5.1. The a element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-32">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-33">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-34">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-35">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-36">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-31">4.5.1. a 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-32">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-33">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-34">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-35">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-36">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-37">4.5.7. The q element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-38">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-39">4.5.9. The abbr element</a>
@@ -7434,12 +7428,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-content-model-31">4.4.12. figcaption 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-content-model-32">4.4.13. main 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-content-model-33">4.4.14. div 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-model-34">4.5.1. The a element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-model-35">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-model-36">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-model-37">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-model-38">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-model-39">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-model-34">4.5.1. a 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-model-35">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-model-36">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-model-37">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-model-38">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-model-39">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-content-model-40">4.5.7. The q element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-content-model-41">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-content-model-42">4.5.9. The abbr element</a>
@@ -7553,12 +7547,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-tag-omission-in-text-html-28">4.4.12. figcaption 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-tag-omission-in-text-html-29">4.4.13. main 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-tag-omission-in-text-html-30">4.4.14. div 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-31">4.5.1. The a element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-32">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-33">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-34">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-35">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-36">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-31">4.5.1. a 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-32">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-33">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-34">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-35">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-36">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-37">4.5.7. The q element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-38">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-39">4.5.9. The abbr element</a>
@@ -7671,12 +7665,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-content-attribute-29">4.4.12. figcaption 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-content-attribute-30">4.4.13. main 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-content-attribute-31">4.4.14. div 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-32">4.5.1. The a element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-33">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-34">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-35">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-36">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-37">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-32">4.5.1. a 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-33">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-34">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-35">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-36">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-37">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-38">4.5.7. The q element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-39">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-40">4.5.9. The abbr element</a>
@@ -7854,12 +7848,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-flow-content-54">4.4.12. figcaption 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-flow-content-55">4.4.13. main 요소(element)</a> <a href="grouping-content.html#ref-for-flow-content-56">(2)</a> <a href="grouping-content.html#ref-for-flow-content-57">(3)</a>
     </li><li><a href="grouping-content.html#ref-for-flow-content-58">4.4.14. div 요소(element)</a> <a href="grouping-content.html#ref-for-flow-content-59">(2)</a> <a href="grouping-content.html#ref-for-flow-content-60">(3)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-61">4.5.1. The a element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-62">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-63">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-64">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-65">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-66">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-61">4.5.1. a 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-62">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-63">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-64">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-65">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-flow-content-66">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-flow-content-67">4.5.7. The q element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-flow-content-68">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-flow-content-69">4.5.9. The abbr element</a>
@@ -7982,12 +7976,12 @@ document.body.appendChild(wbr);
   요소(element)들 </a>
     </li><li><a href="grouping-content.html#ref-for-phrasing-content-20">4.4.1. p 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-phrasing-content-21">4.4.3. pre 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-22">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-23">(2)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-24">4.5.2. The em element</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-25">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-26">(3)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-27">4.5.3. The strong element</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-28">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-29">(3)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-30">4.5.4. The small element</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-31">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-32">(3)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-33">4.5.5. The s element</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-34">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-35">(3)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-36">4.5.6. The cite element</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-37">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-38">(3)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-22">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-23">(2)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-24">4.5.2. em 요소(element)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-25">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-26">(3)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-27">4.5.3. strong 요소(element)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-28">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-29">(3)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-30">4.5.4. small 요소(element)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-31">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-32">(3)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-33">4.5.5. s 요소(element)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-34">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-35">(3)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-36">4.5.6. cite 요소(element)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-37">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-38">(3)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-39">4.5.7. The q element</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-40">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-41">(3)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-42">(4)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-43">4.5.8. The dfn element</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-44">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-45">(3)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-46">4.5.9. The abbr element</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-47">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-48">(3)</a>
@@ -8113,7 +8107,7 @@ document.body.appendChild(wbr);
   콘텐트 모델과 속성(attribute) 값에 대한 제한 사항 </a>
     </li><li><a href="dom.html#ref-for-interactive-content-2">3.2.4.2.7. 대화형(interactive) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-interactive-content-3">3.2.5.2. title 속성(attribute)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-interactive-content-4">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-interactive-content-5">(2)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-interactive-content-4">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-interactive-content-5">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-interactive-content-6">4.7.5. The img element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-interactive-content-7">4.7.6. The iframe element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-interactive-content-8">4.7.7. The embed element</a>
@@ -8157,12 +8151,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-palpable-content-16">4.4.11. figure 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-palpable-content-17">4.4.13. main 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-palpable-content-18">4.4.14. div 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-19">4.5.1. The a element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-20">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-21">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-22">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-23">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-24">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-19">4.5.1. a 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-20">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-21">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-22">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-23">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-24">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-25">4.5.7. The q element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-26">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-27">4.5.9. The abbr element</a>
@@ -8234,7 +8228,7 @@ document.body.appendChild(wbr);
    <b><a href="dom.html#transparent">#transparent</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="dom.html#ref-for-transparent-1">3.2.4.3. 투명 콘텐트 모델</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-transparent-2">4.5.1. The a element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-transparent-2">4.5.1. a 요소(element)</a>
     </li><li><a href="edits.html#ref-for-transparent-3">4.6.1. The ins element</a>
     </li><li><a href="edits.html#ref-for-transparent-4">4.6.2. The del element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-transparent-5">4.7.8. The object element</a>
@@ -8298,12 +8292,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-global-attributes-28">4.4.12. figcaption 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-global-attributes-29">4.4.13. main 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-global-attributes-30">4.4.14. div 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-31">4.5.1. The a element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-32">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-33">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-34">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-35">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-36">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-31">4.5.1. a 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-32">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-33">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-34">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-35">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-36">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-37">4.5.7. The q element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-38">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-39">4.5.9. The abbr element</a>
@@ -8624,7 +8618,7 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-do-not-set-13">4.4.7. li 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-do-not-set-14">4.4.8. dl 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-do-not-set-15">4.4.13. main 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-do-not-set-16">4.5.1. The a element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-do-not-set-16">4.5.1. a 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-do-not-set-17">4.7.16. The area element</a>
     </li><li><a href="sec-forms.html#ref-for-do-not-set-18">4.10.5.1.2. Text (type=text) state and Search state (type=search)</a>
     </li><li><a href="sec-forms.html#ref-for-do-not-set-19">4.10.5.1.3. Telephone state (type=tel)</a>
@@ -8690,12 +8684,12 @@ document.body.appendChild(wbr);
     </li><li><a href="grouping-content.html#ref-for-global-aria--attributes-30">4.4.12. figcaption 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-global-aria--attributes-31">4.4.13. main 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-global-aria--attributes-32">4.4.14. div 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-33">4.5.1. The a element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-34">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-35">4.5.3. The strong element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-36">4.5.4. The small element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-37">4.5.5. The s element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-38">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-33">4.5.1. a 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-34">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-35">4.5.3. strong 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-36">4.5.4. small 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-37">4.5.5. s 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-38">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-39">4.5.7. The q element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-40">4.5.8. The dfn element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-41">4.5.9. The abbr element</a>
@@ -9069,7 +9063,7 @@ document.body.appendChild(wbr);
    <b><a href="document-metadata.html#element-attrdef-a-rev">#element-attrdef-a-rev</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="document-metadata.html#ref-for-element-attrdef-a-rev-1">4.2.4. link 요소(element)</a> <a href="document-metadata.html#ref-for-element-attrdef-a-rev-2">(2)</a> <a href="document-metadata.html#ref-for-element-attrdef-a-rev-3">(3)</a> <a href="document-metadata.html#ref-for-element-attrdef-a-rev-4">(4)</a> <a href="document-metadata.html#ref-for-element-attrdef-a-rev-5">(5)</a> <a href="document-metadata.html#ref-for-element-attrdef-a-rev-6">(6)</a> <a href="document-metadata.html#ref-for-element-attrdef-a-rev-7">(7)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-element-attrdef-a-rev-8">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-rev-9">(2)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-rev-10">(3)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-element-attrdef-a-rev-8">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-rev-9">(2)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-rev-10">(3)</a>
     </li><li><a href="links.html#ref-for-element-attrdef-a-rev-11">4.8.6.2. Link type "author"</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-a-rev-12">Attributes</a>
    </li></ul>
@@ -9078,7 +9072,7 @@ document.body.appendChild(wbr);
    <b><a href="document-metadata.html#reverse-link">#reverse-link</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="document-metadata.html#ref-for-reverse-link-1">4.2.4. link 요소(element)</a> <a href="document-metadata.html#ref-for-reverse-link-2">(2)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-reverse-link-3">4.5.1. The a element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-reverse-link-3">4.5.1. a 요소(element)</a>
     </li><li><a href="fullindex.html#ref-for-reverse-link-4">Attributes</a>
    </li></ul>
   </aside>
@@ -10318,7 +10312,7 @@ document.body.appendChild(wbr);
     </li><li><a href="dom.html#ref-for-elementdef-a-16">3.2.5.4. translate 속성(attribute)</a>
     </li><li><a href="document-metadata.html#ref-for-elementdef-a-17">4.2.4. link 요소(element)</a> <a href="document-metadata.html#ref-for-elementdef-a-18">(2)</a> <a href="document-metadata.html#ref-for-elementdef-a-19">(3)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-a-20">4.4.1. p 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-a-21">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-22">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-23">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-24">(4)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-25">(5)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-26">(6)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-27">(7)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-28">(8)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-29">(9)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-30">(10)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-31">(11)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-a-21">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-22">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-23">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-24">(4)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-25">(5)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-26">(6)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-27">(7)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-28">(8)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-29">(9)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-30">(10)</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-31">(11)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-a-32">4.5.8. The dfn element</a> <a href="textlevel-semantics.html#ref-for-elementdef-a-33">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-a-34">4.5.31. Usage summary</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-a-35">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-a-36">(2)</a> <a href="semantics-embedded-content.html#ref-for-elementdef-a-37">(3)</a>
@@ -10371,7 +10365,7 @@ document.body.appendChild(wbr);
   <aside class="dfn-panel" data-for="htmlanchorelement-htmlanchorelement">
    <b><a href="textlevel-semantics.html#htmlanchorelement-htmlanchorelement">#htmlanchorelement-htmlanchorelement</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-htmlanchorelement-htmlanchorelement-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-htmlanchorelement-htmlanchorelement-1">4.5.1. a 요소(element)</a>
     </li><li><a href="obsolete.html#ref-for-htmlanchorelement-htmlanchorelement-2">11.3.5. Other elements, attributes and APIs</a>
     </li><li><a href="fullindex.html#ref-for-htmlanchorelement-htmlanchorelement-3">Elements</a>
     </li><li><a href="fullindex.html#ref-for-htmlanchorelement-htmlanchorelement-4">Element Interfaces</a>
@@ -10380,49 +10374,49 @@ document.body.appendChild(wbr);
   <aside class="dfn-panel" data-for="dom-htmlanchorelement-download">
    <b><a href="textlevel-semantics.html#dom-htmlanchorelement-download">#dom-htmlanchorelement-download</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-download-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-download-1">4.5.1. a 요소(element)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlanchorelement-target">
    <b><a href="textlevel-semantics.html#dom-htmlanchorelement-target">#dom-htmlanchorelement-target</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-target-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-target-1">4.5.1. a 요소(element)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlanchorelement-rel">
    <b><a href="textlevel-semantics.html#dom-htmlanchorelement-rel">#dom-htmlanchorelement-rel</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-rel-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-rel-1">4.5.1. a 요소(element)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlanchorelement-rev">
    <b><a href="textlevel-semantics.html#dom-htmlanchorelement-rev">#dom-htmlanchorelement-rev</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-rev-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-rev-1">4.5.1. a 요소(element)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlanchorelement-hreflang">
    <b><a href="textlevel-semantics.html#dom-htmlanchorelement-hreflang">#dom-htmlanchorelement-hreflang</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-hreflang-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-hreflang-1">4.5.1. a 요소(element)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlanchorelement-type">
    <b><a href="textlevel-semantics.html#dom-htmlanchorelement-type">#dom-htmlanchorelement-type</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-type-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-type-1">4.5.1. a 요소(element)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlanchorelement-rellist">
    <b><a href="textlevel-semantics.html#dom-htmlanchorelement-rellist">#dom-htmlanchorelement-rellist</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-rellist-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-rellist-1">4.5.1. a 요소(element)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlanchorelement-text">
    <b><a href="textlevel-semantics.html#dom-htmlanchorelement-text">#dom-htmlanchorelement-text</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-text-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-dom-htmlanchorelement-text-1">4.5.1. a 요소(element)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="elementdef-em">
@@ -10431,8 +10425,8 @@ document.body.appendChild(wbr);
     <li><a href="dom.html#ref-for-elementdef-em-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-em-2">3.2.4.2.5. 어구(phrasing) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-em-3">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-em-4">4.5.2. The em element</a> <a href="textlevel-semantics.html#ref-for-elementdef-em-5">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-em-6">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-em-7">(4)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-em-8">4.5.4. The small element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-em-4">4.5.2. em 요소(element)</a> <a href="textlevel-semantics.html#ref-for-elementdef-em-5">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-em-6">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-em-7">(4)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-em-8">4.5.4. small 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-em-9">4.5.22. The i element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-em-10">4.5.23. The b element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-em-11">4.5.24. The u element</a>
@@ -10450,9 +10444,9 @@ document.body.appendChild(wbr);
     <li><a href="dom.html#ref-for-elementdef-strong-1">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-strong-2">3.2.4.2.5. 어구(phrasing) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-strong-3">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-strong-4">4.5.2. The em element</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-strong-5">4.5.3. The strong element</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-6">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-7">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-8">(4)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-9">(5)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-10">(6)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-11">(7)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-12">(8)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-13">(9)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-14">(10)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-strong-15">4.5.4. The small element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-strong-4">4.5.2. em 요소(element)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-strong-5">4.5.3. strong 요소(element)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-6">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-7">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-8">(4)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-9">(5)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-10">(6)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-11">(7)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-12">(8)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-13">(9)</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-14">(10)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-strong-15">4.5.4. small 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-strong-16">4.5.23. The b element</a> <a href="textlevel-semantics.html#ref-for-elementdef-strong-17">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-strong-18">4.5.31. Usage summary</a>
     </li><li><a href="syntax.html#ref-for-elementdef-strong-19">8.2.3.2. The stack of open elements</a>
@@ -10469,7 +10463,7 @@ document.body.appendChild(wbr);
     </li><li><a href="dom.html#ref-for-elementdef-small-2">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-small-3">3.2.4.2.5. 어구(phrasing) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-small-4">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-small-5">4.5.4. The small element</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-6">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-7">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-8">(4)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-9">(5)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-10">(6)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-11">(7)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-small-5">4.5.4. small 요소(element)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-6">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-7">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-8">(4)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-9">(5)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-10">(6)</a> <a href="textlevel-semantics.html#ref-for-elementdef-small-11">(7)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-small-12">4.5.31. Usage summary</a>
     </li><li><a href="syntax.html#ref-for-elementdef-small-13">8.2.3.2. The stack of open elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-small-14">Elements</a>
@@ -10484,7 +10478,7 @@ document.body.appendChild(wbr);
     </li><li><a href="dom.html#ref-for-elementdef-s-2">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-s-3">3.2.4.2.5. 어구(phrasing) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-s-4">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-s-5">4.5.5. The s element</a> <a href="textlevel-semantics.html#ref-for-elementdef-s-6">(2)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-s-5">4.5.5. s 요소(element)</a> <a href="textlevel-semantics.html#ref-for-elementdef-s-6">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-s-7">4.5.31. Usage summary</a>
     </li><li><a href="syntax.html#ref-for-elementdef-s-8">8.2.3.2. The stack of open elements</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-s-9">Elements</a>
@@ -10499,7 +10493,7 @@ document.body.appendChild(wbr);
     </li><li><a href="dom.html#ref-for-elementdef-cite-2">3.2.4.2.5. 어구(phrasing) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-cite-3">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-cite-4">4.4.4. blockquote 요소(element)</a> <a href="grouping-content.html#ref-for-elementdef-cite-5">(2)</a> <a href="grouping-content.html#ref-for-elementdef-cite-6">(3)</a> <a href="grouping-content.html#ref-for-elementdef-cite-7">(4)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-cite-8">4.5.6. The cite element</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-9">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-10">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-11">(4)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-12">(5)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-13">(6)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-14">(7)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-15">(8)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-cite-8">4.5.6. cite 요소(element)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-9">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-10">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-11">(4)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-12">(5)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-13">(6)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-14">(7)</a> <a href="textlevel-semantics.html#ref-for-elementdef-cite-15">(8)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-cite-16">4.5.24. The u element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-cite-17">4.5.31. Usage summary</a>
     </li><li><a href="rendering.html#ref-for-elementdef-cite-18">10.7.1. Links, forms, and navigation</a>
@@ -10516,7 +10510,7 @@ document.body.appendChild(wbr);
     </li><li><a href="dom.html#ref-for-elementdef-q-3">3.2.4.2.5. 어구(phrasing) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-q-4">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-q-5">4.4.4. blockquote 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-q-6">4.5.6. The cite element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-q-6">4.5.6. cite 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-q-7">4.5.7. The q element</a> <a href="textlevel-semantics.html#ref-for-elementdef-q-8">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-q-9">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-q-10">(4)</a> <a href="textlevel-semantics.html#ref-for-elementdef-q-11">(5)</a> <a href="textlevel-semantics.html#ref-for-elementdef-q-12">(6)</a> <a href="textlevel-semantics.html#ref-for-elementdef-q-13">(7)</a> <a href="textlevel-semantics.html#ref-for-elementdef-q-14">(8)</a> <a href="textlevel-semantics.html#ref-for-elementdef-q-15">(9)</a> <a href="textlevel-semantics.html#ref-for-elementdef-q-16">(10)</a> <a href="textlevel-semantics.html#ref-for-elementdef-q-17">(11)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-q-18">4.5.31. Usage summary</a>
     </li><li><a href="rendering.html#ref-for-elementdef-q-19">10.7.1. Links, forms, and navigation</a>
@@ -10920,7 +10914,7 @@ document.body.appendChild(wbr);
     </li><li><a href="dom.html#ref-for-elementdef-i-14">3.2.4.2.2. 흐름(flow) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-15">3.2.4.2.5. 어구(phrasing) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-i-16">3.2.4.2.8. 분명한(palpable) 콘텐트</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-i-17">4.5.2. The em element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-i-17">4.5.2. em 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-i-18">4.5.22. The i element</a> <a href="textlevel-semantics.html#ref-for-elementdef-i-19">(2)</a> <a href="textlevel-semantics.html#ref-for-elementdef-i-20">(3)</a> <a href="textlevel-semantics.html#ref-for-elementdef-i-21">(4)</a> <a href="textlevel-semantics.html#ref-for-elementdef-i-22">(5)</a> <a href="textlevel-semantics.html#ref-for-elementdef-i-23">(6)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-i-24">4.5.23. The b element</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-i-25">4.5.24. The u element</a>
@@ -11126,7 +11120,7 @@ document.body.appendChild(wbr);
     </li><li><a href="dom.html#ref-for-elementdef-del-3">3.2.4.2.5. 어구(phrasing) 콘텐트</a>
     </li><li><a href="dom.html#ref-for-elementdef-del-4">3.2.4.4. 문단(paragraphs)</a> <a href="dom.html#ref-for-elementdef-del-5">(2)</a> <a href="dom.html#ref-for-elementdef-del-6">(3)</a> <a href="dom.html#ref-for-elementdef-del-7">(4)</a> <a href="dom.html#ref-for-elementdef-del-8">(5)</a> <a href="dom.html#ref-for-elementdef-del-9">(6)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-del-10">4.4.1. p 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-del-11">4.5.5. The s element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-del-11">4.5.5. s 요소(element)</a>
     </li><li><a href="edits.html#ref-for-elementdef-del-12">4.6. Edits</a>
     </li><li><a href="edits.html#ref-for-elementdef-del-13">4.6.2. The del element</a> <a href="edits.html#ref-for-elementdef-del-14">(2)</a>
     </li><li><a href="edits.html#ref-for-elementdef-del-15">4.6.3. Attributes common to ins and del elements</a> <a href="edits.html#ref-for-elementdef-del-16">(2)</a>
@@ -11287,7 +11281,7 @@ document.body.appendChild(wbr);
     </li><li><a href="dom.html#ref-for-elementdef-img-16">3.2.4.2.8. 분명한(palpable) 콘텐트</a> <a href="dom.html#ref-for-elementdef-img-17">(2)</a>
     </li><li><a href="dom.html#ref-for-elementdef-img-18">3.2.5.4. translate 속성(attribute)</a>
     </li><li><a href="dom.html#ref-for-elementdef-img-19">3.2.5.6. dir 속성(attribute)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-img-20">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-elementdef-img-21">(2)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-elementdef-img-20">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-elementdef-img-21">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-img-22">4.7.1. Introduction</a> <a href="semantics-embedded-content.html#ref-for-elementdef-img-23">(2)</a> <a href="semantics-embedded-content.html#ref-for-elementdef-img-24">(3)</a> <a href="semantics-embedded-content.html#ref-for-elementdef-img-25">(4)</a> <a href="semantics-embedded-content.html#ref-for-elementdef-img-26">(5)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-img-27">4.7.3. The picture element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-img-28">(2)</a> <a href="semantics-embedded-content.html#ref-for-elementdef-img-29">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-elementdef-img-30">4.7.4. The source element when used with the picture element</a> <a href="semantics-embedded-content.html#ref-for-elementdef-img-31">(2)</a> <a href="semantics-embedded-content.html#ref-for-elementdef-img-32">(3)</a>
@@ -14380,7 +14374,7 @@ document.body.appendChild(wbr);
     </li><li><a href="infrastructure.html#ref-for-hyperlink-2">2.5.3. 기본 URL로 동적 변경</a>
     </li><li><a href="document-metadata.html#ref-for-hyperlink-3">4.2.3. base 요소(element)</a> <a href="document-metadata.html#ref-for-hyperlink-4">(2)</a> <a href="document-metadata.html#ref-for-hyperlink-5">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-hyperlink-6">4.2.4. link 요소(element)</a> <a href="document-metadata.html#ref-for-hyperlink-7">(2)</a> <a href="document-metadata.html#ref-for-hyperlink-8">(3)</a> <a href="document-metadata.html#ref-for-hyperlink-9">(4)</a> <a href="document-metadata.html#ref-for-hyperlink-10">(5)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-hyperlink-11">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-hyperlink-12">(2)</a> <a href="textlevel-semantics.html#ref-for-hyperlink-13">(3)</a> <a href="textlevel-semantics.html#ref-for-hyperlink-14">(4)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-hyperlink-11">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-hyperlink-12">(2)</a> <a href="textlevel-semantics.html#ref-for-hyperlink-13">(3)</a> <a href="textlevel-semantics.html#ref-for-hyperlink-14">(4)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-hyperlink-15">4.7.5.1.3. A link or button containing nothing but an image</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-hyperlink-16">4.7.16. The area element</a> <a href="semantics-embedded-content.html#ref-for-hyperlink-17">(2)</a> <a href="semantics-embedded-content.html#ref-for-hyperlink-18">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-hyperlink-19">4.7.17. Image maps</a>
@@ -14424,7 +14418,7 @@ document.body.appendChild(wbr);
     </li><li><a href="dom.html#ref-for-element-attrdef-a-href-5">3.1.3. DOM 트리 접근자</a> <a href="dom.html#ref-for-element-attrdef-a-href-6">(2)</a> <a href="dom.html#ref-for-element-attrdef-a-href-7">(3)</a>
     </li><li><a href="dom.html#ref-for-element-attrdef-a-href-8">3.2.4.2.7. 대화형(interactive) 콘텐트</a>
     </li><li><a href="document-metadata.html#ref-for-element-attrdef-a-href-9">4.2.4. link 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-10">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-11">(2)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-12">(3)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-13">(4)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-14">(5)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-15">(6)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-16">(7)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-17">(8)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-10">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-11">(2)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-12">(3)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-13">(4)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-14">(5)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-15">(6)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-16">(7)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-href-17">(8)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-a-href-18">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-a-href-19">(2)</a>
     </li><li><a href="links.html#ref-for-element-attrdef-a-href-20">4.8.2. Links created by a and area elements</a> <a href="links.html#ref-for-element-attrdef-a-href-21">(2)</a>
     </li><li><a href="links.html#ref-for-element-attrdef-a-href-22">4.8.4. Following hyperlinks</a>
@@ -14460,7 +14454,7 @@ document.body.appendChild(wbr);
    <b><a href="links.html#element-attrdef-a-rel">#element-attrdef-a-rel</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="document-metadata.html#ref-for-element-attrdef-a-rel-1">4.2.4. link 요소(element)</a> <a href="document-metadata.html#ref-for-element-attrdef-a-rel-2">(2)</a> <a href="document-metadata.html#ref-for-element-attrdef-a-rel-3">(3)</a> <a href="document-metadata.html#ref-for-element-attrdef-a-rel-4">(4)</a> <a href="document-metadata.html#ref-for-element-attrdef-a-rel-5">(5)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-element-attrdef-a-rel-6">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-rel-7">(2)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-rel-8">(3)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-rel-9">(4)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-element-attrdef-a-rel-6">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-rel-7">(2)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-rel-8">(3)</a> <a href="textlevel-semantics.html#ref-for-element-attrdef-a-rel-9">(4)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-element-attrdef-a-rel-10">4.7.16. The area element</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-a-rel-11">(2)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-a-rel-12">(3)</a> <a href="semantics-embedded-content.html#ref-for-element-attrdef-a-rel-13">(4)</a>
     </li><li><a href="links.html#ref-for-element-attrdef-a-rel-14">4.8.1. Introduction</a> <a href="links.html#ref-for-element-attrdef-a-rel-15">(2)</a> <a href="links.html#ref-for-element-attrdef-a-rel-16">(3)</a> <a href="links.html#ref-for-element-attrdef-a-rel-17">(4)</a>
     </li><li><a href="links.html#ref-for-element-attrdef-a-rel-18">4.8.2. Links created by a and area elements</a> <a href="links.html#ref-for-element-attrdef-a-rel-19">(2)</a> <a href="links.html#ref-for-element-attrdef-a-rel-20">(3)</a> <a href="links.html#ref-for-element-attrdef-a-rel-21">(4)</a>
@@ -14486,7 +14480,7 @@ document.body.appendChild(wbr);
   <aside class="dfn-panel" data-for="htmlhyperlinkelementutils-htmlhyperlinkelementutils">
    <b><a href="links.html#htmlhyperlinkelementutils-htmlhyperlinkelementutils">#htmlhyperlinkelementutils-htmlhyperlinkelementutils</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-1">4.5.1. a 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-2">4.7.16. The area element</a>
     </li><li><a href="changes.html#ref-for-htmlhyperlinkelementutils-htmlhyperlinkelementutils-3">Changes to existing features</a>
    </li></ul>
@@ -14580,7 +14574,7 @@ document.body.appendChild(wbr);
    <ul>
     <li><a href="document-metadata.html#ref-for-follow-hyperlinks-1">4.2.3. base 요소(element)</a>
     </li><li><a href="document-metadata.html#ref-for-follow-hyperlinks-2">4.2.4. link 요소(element)</a> <a href="document-metadata.html#ref-for-follow-hyperlinks-3">(2)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-follow-hyperlinks-4">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-follow-hyperlinks-5">(2)</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-follow-hyperlinks-4">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-follow-hyperlinks-5">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-follow-hyperlinks-6">4.7.16. The area element</a> <a href="semantics-embedded-content.html#ref-for-follow-hyperlinks-7">(2)</a>
     </li><li><a href="links.html#ref-for-follow-hyperlinks-8">4.8.2. Links created by a and area elements</a> <a href="links.html#ref-for-follow-hyperlinks-9">(2)</a>
     </li><li><a href="browsers.html#ref-for-follow-hyperlinks-10">6.1.5. Browsing context names</a>
@@ -14590,7 +14584,7 @@ document.body.appendChild(wbr);
   <aside class="dfn-panel" data-for="download-hyperlinks">
    <b><a href="links.html#download-hyperlinks">#download-hyperlinks</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-download-hyperlinks-1">4.5.1. The a element</a> <a href="textlevel-semantics.html#ref-for-download-hyperlinks-2">(2)</a>
+    <li><a href="textlevel-semantics.html#ref-for-download-hyperlinks-1">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-download-hyperlinks-2">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-download-hyperlinks-3">4.7.16. The area element</a> <a href="semantics-embedded-content.html#ref-for-download-hyperlinks-4">(2)</a>
     </li><li><a href="links.html#ref-for-download-hyperlinks-5">4.8.2. Links created by a and area elements</a>
     </li><li><a href="links.html#ref-for-download-hyperlinks-6">4.8.5. Downloading resources</a>
@@ -21486,7 +21480,7 @@ document.body.appendChild(wbr);
    <b><a href="editing.html#activation-behavior">#activation-behavior</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="document-metadata.html#ref-for-activation-behavior-1">4.2.4. link 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-activation-behavior-2">4.5.1. The a element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-activation-behavior-2">4.5.1. a 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-activation-behavior-3">4.7.16. The area element</a>
     </li><li><a href="links.html#ref-for-activation-behavior-4">4.8.2. Links created by a and area elements</a>
     </li><li><a href="sec-forms.html#ref-for-activation-behavior-5">4.10.4. The label element</a> <a href="sec-forms.html#ref-for-activation-behavior-6">(2)</a> <a href="sec-forms.html#ref-for-activation-behavior-7">(3)</a>
@@ -22304,7 +22298,7 @@ document.body.appendChild(wbr);
     </li><li><a href="document-metadata.html#ref-for-browsing-context-15">4.2.3. base 요소(element)</a> <a href="document-metadata.html#ref-for-browsing-context-16">(2)</a> <a href="document-metadata.html#ref-for-browsing-context-17">(3)</a>
     </li><li><a href="document-metadata.html#ref-for-browsing-context-18">4.2.5.3. 선처리(pragma) 지시자들</a> <a href="document-metadata.html#ref-for-browsing-context-19">(2)</a> <a href="document-metadata.html#ref-for-browsing-context-20">(3)</a> <a href="document-metadata.html#ref-for-browsing-context-21">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-browsing-context-22">4.2.7. 스타일링과 스크립팅의 상호작용</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-browsing-context-23">4.5.1. The a element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-browsing-context-23">4.5.1. a 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-browsing-context-24">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-25">(2)</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-26">(3)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-browsing-context-27">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-28">(2)</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-29">(3)</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-30">(4)</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-31">(5)</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-32">(6)</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-33">(7)</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-34">(8)</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-35">(9)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-browsing-context-36">4.7.7. The embed element</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-37">(2)</a> <a href="semantics-embedded-content.html#ref-for-browsing-context-38">(3)</a>
@@ -22630,7 +22624,7 @@ document.body.appendChild(wbr);
    <b><a href="browsers.html#fully-active">#fully-active</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="document-metadata.html#ref-for-fully-active-1">4.2.4. link 요소(element)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-fully-active-2">4.5.1. The a element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-fully-active-2">4.5.1. a 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fully-active-3">4.7.7. The embed element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fully-active-4">4.7.8. The object element</a> <a href="semantics-embedded-content.html#ref-for-fully-active-5">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-fully-active-6">4.7.14.8. Playing the media resource</a> <a href="semantics-embedded-content.html#ref-for-fully-active-7">(2)</a>
@@ -22778,7 +22772,7 @@ document.body.appendChild(wbr);
   <aside class="dfn-panel" data-for="allowed-to-show-a-popup">
    <b><a href="browsers.html#allowed-to-show-a-popup">#allowed-to-show-a-popup</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-allowed-to-show-a-popup-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-allowed-to-show-a-popup-1">4.5.1. a 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-allowed-to-show-a-popup-2">4.7.16. The area element</a>
     </li><li><a href="sec-forms.html#ref-for-allowed-to-show-a-popup-3">4.10.5.1.17. File Upload state (type=file)</a>
     </li><li><a href="browsers.html#ref-for-allowed-to-show-a-popup-4">6.1.5. Browsing context names</a> <a href="browsers.html#ref-for-allowed-to-show-a-popup-5">(2)</a>
@@ -22788,7 +22782,7 @@ document.body.appendChild(wbr);
   <aside class="dfn-panel" data-for="the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name">
    <b><a href="browsers.html#the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name">#the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="textlevel-semantics.html#ref-for-the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name-1">4.5.1. The a element</a>
+    <li><a href="textlevel-semantics.html#ref-for-the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name-1">4.5.1. a 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name-2">4.7.16. The area element</a>
     </li><li><a href="links.html#ref-for-the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name-3">4.8.4. Following hyperlinks</a> <a href="links.html#ref-for-the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name-4">(2)</a>
     </li><li><a href="sec-forms.html#ref-for-the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name-5">4.10.22.3. Form submission algorithm</a>
@@ -23883,7 +23877,7 @@ document.body.appendChild(wbr);
     </li><li><a href="dom.html#ref-for-navigated-4">3.1. 문서</a> <a href="dom.html#ref-for-navigated-5">(2)</a> <a href="dom.html#ref-for-navigated-6">(3)</a> <a href="dom.html#ref-for-navigated-7">(4)</a>
     </li><li><a href="document-metadata.html#ref-for-navigated-8">4.2.3. base 요소(element)</a> <a href="document-metadata.html#ref-for-navigated-9">(2)</a>
     </li><li><a href="document-metadata.html#ref-for-navigated-10">4.2.5.3. 선처리(pragma) 지시자들</a> <a href="document-metadata.html#ref-for-navigated-11">(2)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-navigated-12">4.5.1. The a element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-navigated-12">4.5.1. a 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-navigated-13">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-navigated-14">(2)</a> <a href="semantics-embedded-content.html#ref-for-navigated-15">(3)</a> <a href="semantics-embedded-content.html#ref-for-navigated-16">(4)</a> <a href="semantics-embedded-content.html#ref-for-navigated-17">(5)</a> <a href="semantics-embedded-content.html#ref-for-navigated-18">(6)</a> <a href="semantics-embedded-content.html#ref-for-navigated-19">(7)</a> <a href="semantics-embedded-content.html#ref-for-navigated-20">(8)</a> <a href="semantics-embedded-content.html#ref-for-navigated-21">(9)</a> <a href="semantics-embedded-content.html#ref-for-navigated-22">(10)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-navigated-23">4.7.7. The embed element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-navigated-24">4.7.8. The object element</a>
@@ -24640,7 +24634,7 @@ document.body.appendChild(wbr);
    <b><a href="webappapis.html#entry-settings-object">#entry-settings-object</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="dom.html#ref-for-entry-settings-object-1">3.1.4. XML 문서 로딩</a> <a href="dom.html#ref-for-entry-settings-object-2">(2)</a>
-    </li><li><a href="textlevel-semantics.html#ref-for-entry-settings-object-3">4.5.1. The a element</a>
+    </li><li><a href="textlevel-semantics.html#ref-for-entry-settings-object-3">4.5.1. a 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-entry-settings-object-4">4.7.16. The area element</a>
     </li><li><a href="browsers.html#ref-for-entry-settings-object-5">6.1.1.1. Navigating nested browsing contexts in the DOM</a>
     </li><li><a href="browsers.html#ref-for-entry-settings-object-6">6.3.1. APIs for creating and navigating browsing contexts by name</a>
