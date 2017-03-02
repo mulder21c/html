@@ -1,49 +1,51 @@
 <section>
 
-<h3 id="textlevel-semantics">Text-level semantics</h3>
+<h3 id="textlevel-semantics">텍스트 수준 의미론</h3>
 
-<h4 id="the-a-element">The <dfn element><code>a</code></dfn> element</h4>
+<h4 id="the-a-element"><dfn element><code>a</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd>If the element has an <code>href</code> attribute: <a>Interactive content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Transparent</a>, but there must be no <a>interactive content</a> or <{a}> element descendants.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><{a/href}> - Address of the <a>hyperlink</a></dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd>요소(element)가 <code>href</code> 속성(attribute)을 가진다면: <a lt="Interactive content">대화형(interactive) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Transparent">투명</a>, 하지만 후손 
+      <a lt="interactive content">대화형(interactive) 콘텐트</a>나 <{a}> 요소(element)가 존재하지 
+      않아야(must) 합니다.
+	</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><{a/href}> - <a lt="hyperlink">하이퍼링크</a>의 주소</dd>
     <dd>
-      <code>target</code> - Default <a>browsing context</a> for <a>hyperlink</a> <a>navigation</a>
-      and [[#forms-form-submission]]
+      <code>target</code> - <a lt="hyperlink">하이퍼링크</a> <a lt="navigation">탐색</a>과 
+      [[#forms-form-submission]]에 대한 기본 <a lt="browsing context">브라우징 컨텍스트</a>
     </dd>
     <dd>
-      <code>download</code> - Whether to download the resource instead of navigating to it, and its
-      file name if so
+      <code>download</code> - 리소스로 탐색하는 대신 다운로드 할지 여부, 그리고 다운로드 한다면 
+      그것의 파일 이름.
     </dd>
-    <dd><{a/rel}> — Relationship of this document (or subsection/topic) to the destination resource</dd>
-    <dd><{a/rev}> — <a>Reverse link</a> relationship of the destination resource to this document (or subsection/topic)</dd>
-    <dd><code>hreflang</code> - Language of the linked resource</dd>
-    <dd><code>type</code> - Hint for the type of the referenced resource</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dd><{a/rel}> — 이 문서 (혹은 하위 섹션/주제)에서 목적지 리소스로의 관계</dd>
+    <dd><{a/rev}> — 목적지 리소스로부터 이 문서 (혹은 하위 섹션/주제)로의 <a lt="Reverse link">역방향 연결</a> 관계</dd>
+    <dd><code>hreflang</code> - 연결된 리소스의 언어</dd>
+    <dd><code>type</code> - 참조된 리소스의 유형에 대한 힌트</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd>
-      <a value for="role"><code>link</code></a> (default - <a><em>do not set</em></a>), <a value for="role"><code>button</code></a>,
+      <a value for="role"><code>link</code></a> (기본 값 - <a lt="do not set"><em>설정하지 마세요</em></a>), <a value for="role"><code>button</code></a>,
       <a value for="role"><code>checkbox</code></a>, <a value for="role"><code>menuitem</code></a>,
       <a value for="role"><code>menuitemcheckbox</code></a>, <a value for="role"><code>menuitemradio</code></a>,
       <a value for="role"><code>radio</code></a>, <a value for="role"><code>switch</code></a> [[WAI-ARIA-1.1]],
-      <a value for="role"><code>tab</code></a> or <a value for="role"><code>treeitem</code></a>
+      <a value for="role"><code>tab</code></a>, <a value for="role"><code>treeitem</code></a>
     </dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLAnchorElement">
         interface HTMLAnchorElement : HTMLElement {
@@ -61,20 +63,21 @@
     </dd>
   </dl>
 
-  If the <{a}> element has an <{a/href}> attribute, then it <a>represents</a> a
-  <a>hyperlink</a> (a hypertext anchor) labeled by its contents.
+  <{a}> 요소(element)가 <{a/href}> 속성(attribute)를 가진다면, 그것은 그것의 콘텐츠에 의해 라벨링 
+  된 <a lt="hyperlink">하이퍼링크</a>를 (하이퍼텍스트 앵커) <a lt="represents">나타냅니다</a>.
 
-  If the <{a}> element has no <{a/href}> attribute, then the element
-  <a>represents</a> a placeholder for where a link might otherwise have been placed, if it had been
-  relevant, consisting of just the element's contents.
+  <{a}> 요소(element)가 <{a/href}> 속성(attribute)을 가지지 않는다면, 요소(element)는 관련되어있다면 
+  요소(element)의 콘텐츠로만 구성되는 링크가 있을 수 있는 위치에 대한 자리 표시자(placeholder)를 
+  <a lt="represents">나타냅니다</a>.
 
-  The <code>target</code>, <code>download</code>, <{a/rel}>, <{a/rev}>, <code>hreflang</code>, and
-  <code>type</code> attributes must be omitted if the <{a/href}> attribute is not present.
+  <code>target</code>, <code>download</code>, <{a/rel}>, <{a/rev}>, <code>hreflang</code>, 
+  <code>type</code> 속성(attribute)들은 <{a/href}> 속성(attribute)이 존재하지 않는다면 생략되어야(must) 
+  합니다.
 
   <div class="example">
 
-    If a site uses a consistent navigation toolbar on every page, then the link that would
-    normally link to the page itself could be marked up using an <{a}> element:
+    사이트가 모든 페이지에 일관된 탐색 도구 모음을 사용한다면, 정상적으로 페이지 자체로 연결하는 
+    링크는 <{a}> 요소(element)를 사용하여 마크업 될 수 있습니다:
 
     <pre highlight="html">
       &lt;nav&gt;
@@ -89,88 +92,89 @@
   </div>
 
   <div class="impl">
-    The <{a/href}>, <code>target</code>, <code>download</code>, and attributes affect what
-    happens when users <a>follow hyperlinks</a> or <a>download hyperlinks</a> created using the
-    <{a}> element. The <{a/rel}>, <{a/rev}>, <code>hreflang</code>, and <code>type</code>
-    attributes may be used to indicate to the user the likely nature of the target resource before
-    the user follows the link.
+    <{a/href}>, <code>target</code>, <code>download</code> 및 속성(attribute)들은 사용자가 <{a}> 
+    요소(element)를 사용하여 생성된 <a lt="follow hyperlinks">하이퍼링크들을 따라가</a>거나 
+    <a lt="download hyperlinks">하이퍼링크들을 다운로드</a> 할 때 발생하는 것에 영향을 줍니다. 
+    <{a/rel}>, <{a/rev}>, <code>hreflang</code>, <code>type</code> 속성(attribute)들은 사용자가 
+    링크를 따라가기 전에 대상 리소스의 특징 같은 것을 사용자에게 나타내는데 사용될 수 있습니다.
 
-    The <a>activation behavior</a> of <{a}> elements that create <a>hyperlinks</a> is to
-    run the following steps:
+    <a lt="hyperlinks">하이퍼링크들</a>을 생성하는 <{a}> 요소(element)들의 
+    <a lt="activation behavior">활성화 동작</a>은 다음 단계들을 수행하는 것입니다:
 
-    1. If the <{a}> element's {{Document}} is not <a>fully active</a>, then abort
-        these steps.
-    2. If either the <{a}> element has a <code>download</code> attribute and the algorithm
-        is not <a>allowed to show a popup</a>, or the element's <code>target</code> attribute is
-        present and applying
-        <a>the rules for choosing a browsing context given a browsing context name</a>, using the
-        value of the <code>target</code> attribute as the browsing context name, would result
-        in there not being a chosen browsing context, then run these substeps:
-        1. If there is an <a>entry settings object</a>, throw an <code>InvalidAccessError</code>
-            exception.
-        2. Abort these steps without following the hyperlink.
-    3. If the target of the <code>click</code> event is an <{img}> element with an
-        <code>ismap</code> attribute specified, then server-side image map processing must be
-        performed, as follows:
-        1. If the <code>click</code> event was a real pointing-device-triggered <code>click</code>
-            event on the <{img}> element, then let <var>x</var> be the distance in CSS
-            pixels from the left edge of the image's left border, if it has one, or the left edge of
-            the image otherwise, to the location of the click, and let <var>y</var> be the distance
-            in CSS pixels from the top edge of the image's top border, if it has one, or the top
-            edge of the image otherwise, to the location of the click. Otherwise, let <var>x</var>
-            and <var>y</var> be zero.
-        2. Let <var>hyperlink suffix</var> be a U+003F QUESTION MARK character, the value of
-            <var>x</var> expressed as a base-ten integer using <a>ASCII digits</a>, a U+002C COMMA
-            character (,), and the value of <var>y</var> expressed as a base-ten integer using
-            <a>ASCII digits</a>.
-    4. Finally, the user agent must <a>follow the hyperlink</a> or <a>download the hyperlink</a>
-        created by the <{a}> element, as determined by the <code>download</code> attribute
-        and any expressed user preference, passing <var>hyperlink suffix</var>, if the steps above
-        defined it.
+    1. <{a}> 요소(element)의 {{Document}}가 <a lt="fully active">완전히 활성화</a>되어 있지 않다면, 
+        이 단계들을 중단합니다.
+    2. <{a}> 요소(element)가 <code>download</code> 속성(attribute)를 가지고 알고리즘이 
+        <a lt="allowed to show a popup">팝업을 보여주도록 허용</a>되지 않았거나, 요소(element)의 
+        <code>target</code> 속성(attribute)이 존재하고 브라우징 컨텍스트 이름으로 <code>target</code> 
+        속성(attribute)의 값을 사용하여 
+        <a lt="the rules for choosing a browsing context given a browsing context name">브라우징 컨텍스트 이름이 주어진 브라우징 컨텍스트을 선택하기 위한 규칙</a>을 
+        적용하는 것이 선택된 브라우징 컨텍스트가 존재하지 않게 되는 것을 초래한다면, 이 하위 
+        단계들을 수행합니다:
+        1. <a lt="entry settings object">엔트리 설정 객체</a>가 존재한다면, 
+            <code>InvalidAccessError</code> 예외를 던집니다.
+        2. 하이퍼링크를 따라가지 않고 이 단계들을 중단합니다.
+    3. <code>click</code> 이벤트의 대상이 명시된 <code>ismap</code> 속성(attribtue)를 가진 <{img}> 
+        요소(element)라면, 다음과 같이 서버 사이드 이미지맵 처리가 수행되어야(must)합니다:
+        1. <code>click</code> 이벤트가 <{img}> 요소에 실제 포인팅 디바이스에서 작동된 
+            <code>click</code> 이벤트 였다면, <var>x</var>를 이미지의 왼쪽 테두리가 있다면 왼쪽 
+            테두리의 왼쪽 모서리로부터, 혹은 그렇지 않으면 이미지의 왼쪽 모서리로부터 클릭 
+            위치까지의 거리를 CSS 픽셀로 두고, <var>y</var>를 이미지의 상단 테두리가 있다면 상단 
+            테두리의 상단 모서리로부터, 혹은 그렇지 않으면 이미지의 상단 모서리로부터의 클릭 
+            위치까지의 거리를 CSS 픽셀로 둡니다. 그렇지 않으면 <var>x</var>와 <var>y</var>를 0으로 
+            둡니다.
+        2. <var>hyperlink suffix</var>를 U+003F 물음표 문자, <a lt="ASCII digits">ASCII 숫자들</a>을 
+            사용하여 십진 정수로 표현된 <var>x</var>의 값, U+002C 콤마 문자 (,), 
+            <a lt="ASCII digits">ASCII 숫자들</a>을 사용하여 십진 정수로 표현된 <var>y</var>의 
+            값으로 둡니다.
+    4. 마지막으로, 유저 에이전트는 위 단계들이 정의되었다면, <var>hyperlink suffix</var>를 전달하여, 
+        <code>download</code> 속성(attribtue)과 모든 표현된 사용자 환경 설정에 의해 결졍된 대로, 
+        <{a}> 요소(element)에 의해 생성된 <a lt="follow the hyperlink">하이퍼링크를 따라가거나</a> 
+        <a lt="download the hyperlink">하이퍼링크를 다운로드</a>해야(must) 합니다.
   </div>
 
   <dl class="domintro">
     <dt><var>a</var> . <code>text</code></dt>
-    <dd>Same as {{Node/textContent}}.</dd>
+    <dd>{{Node/textContent}}과 동일.</dd>
   </dl>
 
   <div class="impl">
-    The IDL attributes <dfn attribute for="HTMLAnchorElement"><code>download</code></dfn>,
+    IDL 속성(attribute)들 <dfn attribute for="HTMLAnchorElement"><code>download</code></dfn>,
     <dfn attribute for="HTMLAnchorElement"><code>target</code></dfn>, <dfn attribute for="HTMLAnchorElement"><code>rel</code></dfn>, <dfn attribute for="HTMLAnchorElement"><code>rev</code></dfn>,
-    <dfn attribute for="HTMLAnchorElement"><code>hreflang</code></dfn>, and <dfn attribute for="HTMLAnchorElement"><code>type</code></dfn>, must <a>reflect</a> the
-    respective content attributes of the same name.
+    <dfn attribute for="HTMLAnchorElement"><code>hreflang</code></dfn>, <dfn attribute for="HTMLAnchorElement"><code>type</code></dfn>는 
+	동일한 이름의 각 콘텐트 속성(attribute)들을 <a lt="reflect">반영</a>해야(must) 합니다.
 
-    The IDL attribute <dfn attribute for="HTMLAnchorElement"><code>relList</code></dfn> must <a>reflect</a> the <{a/rel}>
-    content attribute.
+    IDL 속성(attribute) <dfn attribute for="HTMLAnchorElement"><code>relList</code></dfn>은 <{a/rel}> 
+    콘텐트 속성(attribute)을 <a lt="reflect">반영</a>해야(must) 합니다.
 
-    The <dfn attribute for="HTMLAnchorElement"><code>text</code></dfn> IDL attribute, on getting, must return the same value as the
-    {{Node/textContent}} IDL attribute on the element, and on setting, must act as if the
-    {{Node/textContent}} IDL attribute on the element had been set to the new value.
+    <dfn attribute for="HTMLAnchorElement"><code>text</code></dfn> IDL 속성(attribute)는 가져올 때 
+    요소(element)의 {{Node/textContent}} IDL 속성(attribute)와 동일한 값을 반환해야(must) 하고, 설정 
+    할 때, 요소(element)의 {{Node/textContent}} IDL 속성(attribute)에 새로운 값이 설정된 것 같이 
+    동작해야(must) 합니다.
 
     <hr />
 
-    The <{a}> element also supports the <code>HTMLHyperlinkElementUtils</code> interface. [[!URL]]
+    <{a}> 요소(element)는 또한 <code>HTMLHyperlinkElementUtils</code> 인터페이스를 지원합니다. [[!URL]]
 
-    When the element is created, and whenever the element's <{links/href}> content attribute is
-    set, changed, or removed, the user agent must invoke the element's <code>HTMLHyperlinkElementUtils</code>
-    interface's set the input algorithm with the value of the <{links/href}> content
-    attribute, if any, or the empty string otherwise, as the given value.
+    요소(element)가 생성될 때, 그리고 요소(element)의 <{links/href}> 콘텐트 속성(attribute)이 설정, 
+    변경, 제거 될 때마다, 유저 에이전트는 요소(element)의 <code>HTMLHyperlinkElementUtils</code> 
+    인터페이스의 입력 설정 알고리즘을 <{links/href}> 콘텐트 속성(attribute)이 있다면 그 속성의 값을 
+    가지고, 그렇지 않으면 주어진 값으로 빈 문자열을 가지고 호출해야(must) 합니다.
 
-    The element's <code>HTMLHyperlinkElementUtils</code> interface's get the base algorithm must simply return
-    the <a>document base URL</a>.
+    요소(element)의 <code>HTMLHyperlinkElementUtils</code> 인터페이스의 기본 URL 획득(get the base) 
+    알고리즘은 단순하게 <a lt="document base URL">문서 기본 URL</a>을 반환해야(must) 합니다.
 
-    The element's <code>HTMLHyperlinkElementUtils</code> interface's query encoding is the
-    <a>document's character encoding</a>.
+    요소(element)의 <code>HTMLHyperlinkElementUtils</code> 인터페이스의 질의 인코딩은 
+    <a lt="document's character encoding">문서의 문자 인코딩</a>입니다.
 
-    When the element's <code>HTMLHyperlinkElementUtils</code> interface invokes its update steps with a string
-    <var>value</var>, the user agent must set the element's <{links/href}> content attribute to
-    the string <var>value</var>.
+    요소(element)의 <code>HTMLHyperlinkElementUtils</code> 인터페이스가 문자열 <var>value</var>를 
+    가지고 그것의 갱신 단계들을 작동시킬 경우, 유저 에이전트는 요소(element)의 <{links/href}> 콘텐트 
+    속성(attribute)를 문자열 <var>value</var>로 설정해야(must) 합니다. 
   </div>
 
   <div class="example">
-    The <{a}> element may be wrapped around entire paragraphs, lists, tables, and so forth,
-    even entire sections, so long as there is no interactive content within (e.g., buttons or other
-    links). This example shows how this can be used to make an entire advertising block into a link:
+    <{a}> 요소(element)는 전체 문단들, 목록들, 표들, 등등 심지어 전체 섹션까지도 내부에 상호작용 
+    콘텐트가 (예를 들어, 버튼이나 다른 링크들) 존재하지만 않으면 감쌀 수 있습니다. 이 예는 이것이 
+    전체 광고 블럭이 링크 안으로 들어가게 하는데 사용될 수 있는 방식을 보여줍니다:
 
     <pre highlight="html">
       &lt;aside class="advertising"&gt;
@@ -193,158 +197,150 @@
     </pre>
   </div>
 
-<h4 id="the-em-element">The <dfn element><code>em</code></dfn> element</h4>
+<h4 id="the-em-element"><dfn element><code>em</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{em}> element <a>represents</a> stress emphasis of its contents.
+  <{em}> 요소(element)는 그것의 콘텐츠의 역설 강조(stress emphasis)를 <a lt="represents">나타냅니다</a>.
 
-  The level of stress that a particular piece of content has is given by its number of ancestor
-  <{em}> elements.
+  콘텐트의 특정 부분의 강조 수준은 조상 <{em}> 요소(elemenet)들의 수에 의해 주어집니다.
 
-  The placement of stress emphasis changes the meaning of the sentence. The element thus forms an
-  integral part of the content. The precise way in which stress is used in this way depends on the
-  language.
+  역설 강조(stress emphasis)의 위치는 문장의 의미(meaning)를 변경합니다. 따라서 요소(element)는 
+  콘텐트의 필수적인 부분을 구성합니다. 이 방법으로 사용되는 강조의 정확한 방법은 언어에 따라 다릅니다.
 
   <div class="example">
-    These examples show how changing the stress emphasis changes the meaning. First, a general
-    statement of fact, with no stress:
+    이 예제들은 역설 강조(stress emphasis)가 의미(meaning)을 변경하는 방식을 보여줍니다. 먼저, 강조 
+    없는, 사실에 대한 일반적인 문장입니다:
 
     <pre highlight="html">&lt;p&gt;Cats are cute animals.&lt;/p&gt;</pre>
 
-    By emphasizing the first word, the statement implies that the kind of animal under discussion
-    is in question (maybe someone is asserting that dogs are cute):
+    첫 번째 단어를 강조하여, 문장이 논의 중인 동물의 종류가 문제의 것임을 나타냅니다 (어쩌면 
+    누군가가 개들이 귀엽다고 주장하고 있을 것입니다):
 
     <pre highlight="html">&lt;p&gt;&lt;em&gt;Cats&lt;/em&gt; are cute animals.&lt;/p&gt;</pre>
 
-    Moving the stress to the verb, one highlights that the truth of the entire sentence is in
-    question (maybe someone is saying cats are not cute):
+    강조를 동사로 옮기는 것은, 전체 문장의 진실성이 논의되고 있는 것임을 강조하는 것이 됩니다 
+    (어쩌면 누군가가 고양이는 귀엽지 않다라고 말하고 있을 것입니다):
 
     <pre highlight="html">&lt;p&gt;Cats &lt;em&gt;are&lt;/em&gt; cute animals.&lt;/p&gt;</pre>
 
-    By moving it to the adjective, the exact nature of the cats is reasserted (maybe someone
-    suggested cats were <em>mean</em> animals):
+    그것을 형용사로 옮김에 의해, 고양이의 정확한 특성이 다시 주장됩니다 (어쩌면 누군가가 고양이는 
+    <em>사나운</em> 동물이라고 주장했을 것입니다):
 
     <pre highlight="html">&lt;p&gt;Cats are &lt;em&gt;cute&lt;/em&gt; animals.&lt;/p&gt;</pre>
 
-    Similarly, if someone asserted that cats were vegetables, someone correcting this might
-    emphasize the last word:
+    비슷하게, 누군가 고양이는 채소라고 주장한다면, 이를 정정하는 누군가는 마지막 단어를 강조할 
+    수 있습니다:
 
     <pre highlight="html">&lt;p&gt;Cats are cute &lt;em&gt;animals&lt;/em&gt;.&lt;/p&gt;</pre>
 
-    By emphasizing the entire sentence, it becomes clear that the speaker is fighting hard to get
-    the point across. This kind of stress emphasis also typically affects the punctuation, hence the
-    exclamation mark here.
+    전체 문장을 강조하여, 발표자가 요점을 이해시키기 위해 열심히 싸우고 있음이 명확해 집니다. 역설 
+    강조(stress emphasis)의 종류는 또한 일반적으로 구두점에 영향을 주고, 이런 이유로 여기 느낌표가 
+    있습니다.
 
     <pre highlight="html">&lt;p&gt;&lt;em&gt;Cats are cute animals!&lt;/em&gt;&lt;/p&gt;</pre>
 
-    Anger mixed with emphasizing the cuteness could lead to markup such as:
+    귀여움을 강조하는 것이 섞인 분노는 다음과 같은 마크업을 이끌어 낼 수 있습니다:
 
     <pre highlight="html">&lt;p&gt;&lt;em&gt;Cats are &lt;em&gt;cute&lt;/em&gt; animals!&lt;/em&gt;&lt;/p&gt;</pre>
   </div>
 
   <div class="note">
-    The <{em}> element isn't a generic "italics" element. Sometimes, text is intended to
-    stand out from the rest of the paragraph, as if it was in a different mood or voice. For this,
-    the <{i}> element is more appropriate.
+    <{em}> 요소(element)는 일반적인 "이탤릭체" 요소(element)가 아닙니다. 때때로, 다른 분위기나 
+    음성으로 있는 것 처럼, 텍스트는 문단의 나머지로부터 눈에 띄기 위한 것입니다. 이를 위해, <{i}> 
+    요소(element)가 좀 더 적절합니다.
 
-    The <{em}> element also isn't intended to convey importance; for that purpose, the
-    <{strong}> element is more appropriate.
+    <{em}> 요소(element)는 또한 중요성을 전달하기 위한 것이 아닙니다; 그 목적을 위해, <{strong}> 
+    요소(element)가 좀 더 적절합니다.
   </div>
 
-<h4 id="the-strong-element">The <dfn element><code>strong</code></dfn> element</h4>
+<h4 id="the-strong-element"><dfn element><code>strong</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{strong}> element <a>represents</a> strong importance, seriousness, or
-  urgency for its contents.
+  <{strong}> 요소(element)는 그것의 콘텐츠에 대한 강한 중요성, 심각성, 긴급성을 
+  <a lt="represents">나타냅니다</a>.
 
-  <strong>Importance</strong>: The <{strong}> element can be used in a heading, caption,
-  or paragraph to distinguish the part that really matters from other parts that might be more
-  detailed, more jovial, or merely boilerplate.
+  <strong>중요성</strong>: <{strong}> 요소(element)는 더 상세하거나, 더 유쾌하거나, 한낱 상투어일 수 
+  있는 다른 부분들로부터 정말 중요한 부분을 구별하기 위해 제목(heading), 캡션, 문단에 사용될 수 
+  있습니다.
 
-  <p class="example">For example, the first word of the previous paragraph is marked up with
-  <code>strong</code> to distinguish it from the more detailed text in the rest of the
-  paragraph.</p>
+  예를 들어, 이전 문단의 첫 번째 단어가 문단의 나머지의 좀 더 자세한 텍스트로부터 그것을 구별하기 
+  위해 <code>strong</code>으로 마크업 됩니다. 
 
-  <strong>Seriousness</strong>: The <{strong}> element can be used to mark up a warning
-  or caution notice.
+  <strong>심각성</strong>: <{strong}> 요소(element)는 주의나 경고 안내를 마크업하는데 사용될 수 
+  있습니다.
 
-  <strong>Urgency</strong>: The <{strong}> element can be used to denote contents that
-  the user needs to see sooner than other parts of the document.
+  <strong>긴급성</strong>: <{strong}> 요소(element)는 사용자가 문서의 다른 부분들보다 빨리 볼 필요가 
+  있는 콘텐츠를 표시하는데 사용될 수 있습니다. 
 
-  The relative level of importance of a piece of content is given by its number of ancestor
-  <{strong}> elements; each <{strong}> element increases the importance of its
-  contents.
+  콘텐츠의 부분의 중요성의 상대적 수준은 그것의 조상 <{strong}> 요소(element)들의 객수에 의해 
+  주어집니다; 각 <{strong}> 요소(element)는 그것의 콘텐츠의 중요성을 증가시킵니다.
 
-  Changing the importance of a piece of text with the <{strong}> element does not change
-  the meaning of the sentence.
+  <{strong}> 요소(element)로 텍스트의 부분의 중요성을 변경하는 것은 문장의 의미(meaning)를 변경하지 
+  않습니다.
 
   <div class="example">
-    Here, the word "chapter" and the actual chapter number are mere boilerplate, and the actual
-    name of the chapter is marked up with <code>strong</code>:
+    여기, 단어 "chapter"와 실제 챕터 번호는 단순한 상투어에 불과하고, 챕터의 실제 이름이 
+    <code>strong</code>으로 마크업 됩니다:
 
     <pre highlight="html">&lt;h1&gt;Chapter 1: &lt;strong&gt;The Praxis&lt;/strong&gt;&lt;/h1&gt;</pre>
 
-    In the following example, the name of the diagram in the caption is marked up with
-    <{strong}>, to distinguish it from boilerplate text (before) and the description
-    (after):
+    다음 예에서, 캡션 내의 도표의 이름이 상투적인 텍스트와 (앞) 설명을 (뒤) 구별하기 위해 
+    <{strong}>으로 마크업됩니다:
 
     <pre highlight="html">&lt;figcaption&gt;Figure 1. &lt;strong&gt;Ant colony dynamics&lt;/strong&gt;. The ants in this colony are
 affected by the heat source (upper left) and the food source (lower right).&lt;/figcaption&gt;</pre>
 
-    In this example, the heading is really "Flowers, Bees, and Honey", but the author has added a
-    light-hearted addition to the heading. The <{strong}> element is thus used to mark up
-    the first part to distinguish it from the latter part.
+    이 예에서, 제목(heading)은 실제로 "Flowers, Bees, and Honey"이지만, 작성자는 제목(heading)에 
+    가벼운 마음으로 추가 사항을 추가했습니다. 따라서 <{strong}> 요소(element)는 나중 부분으로부터 
+    그것을 구별하기 위해 첫 번째 부분을 마크업하는데 사용됩니다.
 
     <pre highlight="html">&lt;h1&gt;&lt;strong&gt;Flowers, Bees, and Honey&lt;/strong&gt; and other things I don't understand&lt;/h1&gt;</pre>
   </div>
 
   <div class="example">
-    Here is an example of a warning notice in a game, with the
-    various parts marked up according to how important they are:
+    여기 얼마나 중요한지에 따라 마크업 된 다양한 부분을 가진 게임의 주의 안내의 예가 있습니다:
 
     <pre highlight="html">
       &lt;p&gt;&lt;strong&gt;Warning.&lt;/strong&gt; This dungeon is dangerous.
@@ -356,8 +352,8 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    In this example, the <{strong}> element is used to denote the part of the text that
-    the user is intended to read first.
+    이 예에서, <{strong}> 요소(element)가 사용자가 먼저 읽도록 의도 된 텍스트의 일부를 나타내는데 
+    사용됩니다.
 
     <pre highlight="html">
       &lt;p&gt;Welcome to Remy, the reminder system.&lt;/p&gt;
@@ -370,54 +366,53 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </pre>
   </div>
 
-<h4 id="the-small-element">The <dfn element><code>small</code></dfn> element</h4>
+<h4 id="the-small-element"><dfn element><code>small</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{small}> element <a>represents</a> side comments such as small print.
+  <{small}> 요소(element)는 작은 글자 부분 같은 보조 코멘트들을 <a lt="represents">나타냅니다</a>.
 
   <p class="note">
-    Small print typically features disclaimers, caveats, legal restrictions, or copyrights. Small
-    print is also sometimes used for attribution, or for satisfying licensing requirements.
+    작은 글자 부분은 일반적으로 고지 사항들, 경고 사항들, 법적 제한 사항들, 저작권들의 특징을 
+    가집니다. 작은 글자 부분은 또한 때때로 속성(attribution)에 대해 혹은 저작권 요구사항들을 
+    만족시키는 것에 대해 사용됩니다.
   </p>
 
   <p class="note">
-    The <{small}> element does not "de-emphasize" or lower the importance of text
-    emphasized by the <{em}> element or marked as important with the <code>strong</code>
-    element. To mark text as not emphasized or important, simply do not mark it up with the
-    <code>em</code> or <{strong}> elements respectively.
+    <{small}> 요소(element)는 "덜 강조"하거나, <{em}> 요소(element)에 의해 강조되거나 
+    <code>strong</code> 요소(element)로 중요한 것으로 표기 된 텍스트의 중요도를 감소시키지 않습니다. 
+    강조 혹은 중요하지 않은 것으로 텍스트를 표기하려면, 단순히 각각 <code>em</code>이나 <{strong}> 
+    요소(element)들로 그것을 마크업 하지 않으면 됩니다.
   </p>
 
-  The <{small}> element should not be used for extended spans of text, such as multiple
-  paragraphs, lists, or sections of text. It is only intended for short runs of text. The text of a
-  page listing terms of use, for instance, would not be a suitable candidate for the
-  <{small}> element: in such a case, the text is not a side comment, it is the main content
-  of the page.
+  <{small}> 요소(element)는 여러 문단들, 목록들, 텍스트의 섹션들 같은 텍스트의 확장된 범위에 사용되지 
+  않아야(must) 합니다. 이것은 일련의 짧은 텍스트에만 의도된 것입니다. 예를 들어, 사용 약관들을 
+  나열하는 페이지의 텍스트는 <{small}> 요소(element)들에 적합한 후보가 아닐 것입니다: 그러한 경우, 
+  텍스트는 보조 코멘트가 아니며, 페이지의 주요 콘텐트입니다.
 
   <div class="example">
-    In this example, the <{small}> element is used to indicate that value-added tax is
-    not included in a price of a hotel room:
+    이 예에서, <{small}> 요소(element)는 부가 가치세가 호텔 방의 가격에 포함되어 있지 않음을 
+    나타내기 위해 사용됩니다:
 
     <pre highlight="html">
       &lt;dl&gt;
@@ -430,7 +425,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    In this second example, the <{small}> element is used for a side comment in an article.
+    이 두 번째 예에서, <{small}> 요소(elmeent)는 아티클의 보조 코멘트로 사용됩니다.
 
     <pre highlight="html">
       &lt;p&gt;Example Corp today announced record profits for the
@@ -439,9 +434,9 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
       merger with Demo Group.&lt;/p&gt;
     </pre>
 
-    This is distinct from a sidebar, which might be multiple paragraphs long and is removed from the
-    main flow of text. In the following example, we see a sidebar from the same article. This
-    sidebar also has small print, indicating the source of the information in the sidebar.
+    이것은 여러 문단들이 될 수 있고 테스트의 주요 흐름으로부터 제거되는 사이드바와 구별됩니다. 다음 
+    예에서, 동일한 아티클의 사이드바를 볼 수 있습니다. 이 사이드바는 또한 사이드바 내의 정보의 
+    소스를 나타내는 작은 글자 부분을 가집니다.
 
     <pre highlight="html">
       &lt;aside&gt;
@@ -456,47 +451,47 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
       &lt;/aside&gt;
     </pre>
 
-    In this last example, the <{small}> element is marked as being <em>important</em>
-    small print.
+    이 마지막 예에서, <{small}> 요소(element)는 <em>중요한</em> 작은 글자 부분이 되는 것으로 
+    표기됩니다.
 
     <pre highlight="html">&lt;p&gt;&lt;strong&gt;&lt;small&gt;Continued use of this service will result in a kiss.&lt;/small&gt;&lt;/strong&gt;&lt;/p&gt;</pre>
   </div>
 
-<h4 id="the-s-element">The <dfn element><code>s</code></dfn> element</h4>
+<h4 id="the-s-element"><dfn element><code>s</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
     <dd>Any <code>aria-*</code> attributes <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{s}> element <a>represents</a> contents that are no longer accurate or no longer
-  relevant.
+  <{s}> 요소(element)는 더 이상 정확하지 않거나 더 이상 관련이 없는 콘텐츠를 
+  <a lt="represents">나타냅니다</a>.
 
   <p class="note">
-    The <{s}> element is not appropriate when indicating document edits; to mark a span of
-    text as having been removed from a document, use the <{del}> element.
+    <{s}> 요소(element) 문서 편집을 나타내는 경우 적절하지 않습니다; 문서로부터 제거된 테스트의 
+    범위를 표현하기 위해서는 <{del}> 요소(element)를 사용하세요.
   </p>
 
   <div class="example">
-    In this example a recommended retail price has been marked as no longer relevant as the product
-    in question has a new sale price.
+    이 예에서 궈장 소매가는 새로운 할인 가를 가지는 문제의 상품에 더 이상 관련이 없는 것으로 
+    표기됩니다.
 
     <pre highlight="html">
       &lt;p&gt;Buy our Iced Tea and Lemonade!&lt;/p&gt;
@@ -505,45 +500,42 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </pre>
   </div>
 
-<h4 id="the-cite-element">The <dfn element><code>cite</code></dfn> element</h4>
+<h4 id="the-cite-element"><dfn element><code>cite</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{cite}> element <a>represents</a> a reference to a creative work. It must include
-  the title of the work or the name of the author (person, people or organization) or an URL
-  reference, or a reference in abbreviated form as per the conventions used for the addition of
-  citation metadata.
+  <{cite}> 요소(element)는 창작물에 대한 참조를 <a lt="represents">나타냅니다</a>. 그것은 작업물이나 
+  작성자나 (개인, 사람들 혹은 단체) URL 참조의 제목이나 출처(citation) 메타데이터의 추가에 사용된 
+  규칙에 따라 축약된 구성의 참조를 포함해야(must) 합니다.
 
   <p class="note">
-    Creative works include a book, a paper, an essay, a poem, a score, a song, a script, a film, a
-    TV show, a game, a sculpture, a painting, a theatre production, a play, an opera, a musical, an
-    exhibition, a legal case report, a computer program, , a web site, a web page, a blog post or
-    comment, a forum post or comment, a tweet, a written or oral statement, etc.
+    창작물은 책, 신문, 에세이, 시, 악보, 노래, 대본, 영화, TV 쇼, 게임, 조각품, 그림, 공연 작품, 
+    연극, 오페라, 뮤지컬, 전시회, 법률 사건 보고서, 컴퓨터 프로그램, 웹 사이트, 웹 페이지, 블로그 
+    게시물이나 댓글, 포럼 게시물이나 댓글, 트윗, 기록물이나 구술서 등등을 포함합니다.
   </p>
 
   <div class="example">
-    Here is an example of the author of a quote referenced using the <{cite}> element:
+    여기 <{cite}> 요소(element)를 사용하여 참조된 인용구(quote)의 작성자의 예입니다:
 
     <pre highlight="html">
       &lt;p&gt;In the words of &lt;cite&gt;Charles Bukowski&lt;/cite&gt; -
@@ -552,7 +544,8 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    This second example identifies the author of a tweet by referencing the authors name using the <{cite}> element:
+    이 두 번째 예제는 <{cite}> 요소(element)를 사용하여 작성자 이름을 참조하는 것에 의해 트윗의 
+    작성자를 식별합니다:
 
     <pre highlight="html">
       &lt;blockquote class="twitter-tweet"&gt;
@@ -564,8 +557,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    In this example the <{cite}> element is used to reference the title of a work in a
-    bibliography:
+    이 예에서 <{cite}> 요소(element)는 참고문헌에서 작품의 제목을 참조하는데 사용됩니다:
 
     <pre highlight="html">
       &lt;p&gt;&lt;cite&gt;Universal Declaration of Human Rights&lt;/cite&gt;, United Nations,
@@ -574,15 +566,14 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    In this example the <{cite}> element is used to reference the title of a television
-    show:
+    이 예에서 <{cite}> 요소(element)는 텔레비젼 쇼의 제목을 참조하는데 사용됩니다:
 
     <pre highlight="html">&lt;p&gt;Who is your favorite doctor (in &lt;cite&gt;Doctor Who&lt;/cite&gt;)?&lt;/p&gt;</pre>
   </div>
 
   <div class="example">
-    A very common use for the <{cite}> element is to identify the author of a comment in a
-    blog post or forum, as in this example:
+    <{cite}> 요소(element)에 대한 매우 일반적인 사용은 이 예에서와 같이 블로그 게시물이나 포럼에 
+    댓글의 작성자를 식별하는 것입니다:
 
     <pre highlight="html">
       &lt;article id="comment-1"&gt;
@@ -598,8 +589,8 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    Another common use for the <{cite}> element is to reference the <code>URL</code>
-    of a search result, as in this example:
+    <{cite}> 요소(element)의 다른 일반적인 사용은 이 예에서와 같이, 검색 결과의 <code>URL</code>을 
+    참조하는 것입니다:
 
     <pre highlight="html">
       &lt;div id="resultStats"&gt;About 416,000,000 results 0.33 seconds)&nbsp;&lt;/div&gt;
@@ -613,8 +604,8 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    Where the <{cite}> element is used to identify an abbreviated reference such as
-    <i>Ibid.</i> it is suggested that this reference be linked to the base reference:
+    <{cite}> 요소(element)는 <i>Ibid</i>와 같은 축약된 참조를 식별하는 데 사용됩니다. 이것은 이 
+    참조가 기본 참조에 연결되는 것이 좋습니다:
 
     <pre highlight="html">
       &lt;article&gt;
@@ -638,19 +629,18 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <p class="note">
-    A <em>citation</em> is not a <em>quote</em> (for which the <{q}> element is
-    appropriate).
+    <em>출처(citation)</em>는 <em>인용(quote)</em>이 (<{q}> 요소(element)가 적절한) 아닙니다.
   </p>
 
   <div class="example">
-    This is incorrect usage, because <code>cite</code> is not for quotes:
+    <code>cite</code>는 인용(quote)들이 아니기 때문에, 잘못된 사용법입니다:
 
     <pre class="bad">
       &lt;p&gt;&lt;cite&gt;This is wrong!, said Hillary.&lt;/cite&gt; is a quote from the
       popular daytime TV drama When Ian became Hillary.&lt;/p&gt;
     </pre>
 
-    This is an example of the correct usage:
+    이것이 올바른 사용법의 예입니다:
 
     <pre highlight="html">
       &lt;p&gt;&lt;q&gt;This is correct, said Hillary.&lt;/q&gt; is a quote from the
