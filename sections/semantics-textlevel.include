@@ -648,61 +648,59 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </pre>
   </div>
 
-<h4 id="the-q-element">The <dfn element><code>q</code></dfn> element</h4>
+<h4 id="the-q-element"><dfn element><code>q</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
     <dd>
-      <code>cite</code> - Link to the source of the quotation or more information about the edit
+      <code>cite</code> - 인용구의 소스나 편집에 대한 추가 정보로의 링크
     </dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLQuoteElement}}.</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLQuoteElement}}를 사용.</dd>
   </dl>
 
-  The <{q}> element <a>represents</a> some <a>phrasing content</a> quoted from another
-  source.
+  <{q}> 요소(element)는 다른 소스로부터 인용된 일부 
+  <a lt="phrasing content">어구(phrasing) 콘텐트</a>를 <a lt="represents">나타냅니다</a>.
 
-  Quotation punctuation (such as quotation marks) that is quoting the contents of the element must
-  not appear immediately before, after, or inside <{q}> elements; they will be inserted
-  into the rendering by the user agent.
+  요소(element)의 콘텐츠를 인용하는 인용 구두점(인용 부호 같은)은 <{q}> 요소(element)들의 즉시 앞, 
+  뒤, 안에 나타나지 않아야(must) 합니다; 그것들은 유저 에이전트에 의한 렌더링에 삽입될 것입니다.
 
-  Content inside a <{q}> element must be quoted from another source, whose address, if it
-  has one, may be cited in the <dfn element-attr for="q"><code>cite</code></dfn> attribute. The source may be fictional,
-  as when quoting characters in a novel or screenplay.
+  <{q}> 요소(element) 내의 콘텐트는 다른 소스로부터 인용되어야(must)하고, 주소를 가진다면 주소는 
+  <dfn element-attr for="q"><code>cite</code></dfn> 속성(attribute)에 인용될 수 있습니다. 소스는 
+  소설이나 시나리오의 등장 인물들을 인용할 때 처럼, 허구적일 수 있습니다.
 
-  If the <{q/cite}> attribute is present, it must be a
-  <a>valid URL potentially surrounded by spaces</a>. To obtain the corresponding citation link, the
-  value of the attribute must be <a>parsed</a> relative to the element's <a>node document</a>.
-  User agents may allow users to follow such citation links, but they are primarily intended for
-  private use (e.g., by server-side scripts collecting statistics about a site's use of quotations),
-  not for readers.
+  <{q/cite}> 속성(attribute)이 존재한다면, 그것은 
+  <a lt="valid URL potentially surrounded by spaces">유효한 잠정적으로 공백으로 둘러 싸일 수 있는 URL</a>이어야(must) 
+  합니다. 해당하는 출처 링크를 얻기 위해, 속성(attribute)의 값은 요소(element)의 
+  <a lt="node document">노드 문서</a>에 관련하여 <a lt="parsed">해석</a>되어야(must) 합니다. 유저 
+  에이전트는 사용자가 그 출처 링크들을 따라가는 것을 허용할 수 있지만, 그것들은 주로 특정한 사용을 
+  위해 (예를 들어, 사이트의 인용들 사용에 대한 통계를 수집하는 서버 사이드 스크립트에 의해) 의도된 
+  것이지, 독자들을 위한 것이 아닙니다.
 
-  The <{q}> element must not be used in place of quotation marks that do not represent
-  quotes; for example, it is inappropriate to use the <{q}> element for marking up
-  sarcastic statements.
+  <{q}> 요소(element)는 인용(quote)들을 나타내지 않는 인용 부호 위치에 사용되지 않아야(must) 합니다; 
+  예를 들어, 비꼬는 문장들을 마크업하기 위해 <{q}> 요소(element)를 사용하는 것은 부적절합니다.
 
-  The use of <{q}> elements to mark up quotations is entirely optional; using explicit
-  quotation punctuation without <{q}> elements is just as correct.
+  인용구(quotation)들을 마크업하기 위한 <{q}> 요소(element)들의 사용은 전적으로 선택적입니다; <{q}> 
+  요소(element) 없이 명시적 인용 구두점을 사용하는 것은 적절합니다.
 
   <div class="example">
-    Here is a simple example of the use of the <{q}> element:
+    여기 <{q}> 요소(element)의 사용의 간단한 예가 있습니다:
 
     <pre highlight="html">
       &lt;p&gt;The man said &lt;q&gt;Things that are impossible just take
@@ -711,8 +709,8 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    Here is an example with both an explicit citation link in the <{q}> element, and an
-    explicit citation outside:
+    여기 <{q}> 요소(element) 안에 명시적인 출처(citation) 링크와, 밖에 명시적인 출처(citation)를 
+    모두 가진 예가 있습니다:
 
     <pre highlight="html">
       &lt;p&gt;The W3C page &lt;cite&gt;About W3C&lt;/cite&gt; says the W3C's
@@ -724,7 +722,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    In the following example, the quotation itself contains a quotation:
+    다음 예에서, 인용구(quotation) 자체가 인용구(quotation)를 포함합니다:
 
     <pre highlight="html">
       &lt;p&gt;In &lt;cite&gt;Example One&lt;/cite&gt;, he writes &lt;q&gt;The man
@@ -734,7 +732,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    In the following example, quotation marks are used instead of the <{q}> element:
+    다음 예에서, 인용 부호들이 <{q}> 요소(element) 대신 사용됩니다:
 
     <pre highlight="html">
       &lt;p&gt;His best argument was ❝I disagree❞, which
@@ -743,8 +741,8 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    In the following example, there is no quote — the quotation marks are used to name a
-    word. Use of the <{q}> element in this case would be inappropriate.
+    다음 예에는, 인용(quote)이 없습니다 — 인용 부호들은 단어를 이름을 지정하는데 사용됩니다. 이 
+    경우에 <{q}> 요소(element)의 사용은 적절하지 않을 것입니다.
 
     <pre highlight="html">
       &lt;p&gt;The word "ineffable" could have been used to describe the disaster
@@ -752,58 +750,58 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </pre>
   </div>
 
-<h4 id="the-dfn-element">The <dfn element><code>dfn</code></dfn> element</h4>
+<h4 id="the-dfn-element"><dfn element><code>dfn</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>, but there must be no <{dfn}> element descendants.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd>Also, the <{dfn/title}> attribute has special semantics on this element.</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>, <{dfn}> 후손 요소(element)들이 없어야(must) 합니다.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd>또한, <{dfn/title}> 속성(attribute)은 이 요소(element)에서 특별한 의미(semantics)를 가집니다.</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{dfn}> element <a>represents</a> the defining instance of a term. The
-  <a element lt="p">paragraph</a>, <a element lt="dl">description list group</a>, or <a element lt="section">section</a> that is the nearest ancestor of
-  the <{dfn}> element must also contain the definition(s) for the <a>term</a> given by the
-  <{dfn}> element.
+  <{dfn}> 요소(element)는 용어의 정의 사례를 <a lt="represents">나타냅니다</a>. <{dfn}> 
+  요소(element)의 가장 가까운 조상 <a element lt="p">문단</a>, <a element lt="dl">설명 목록 그룹</a>, 
+  <a element lt="section">섹션</a>은 또한 <{dfn}> 요소(element)에 의해 주어진 <a lt="term">용어</a>에 
+  대한 정의(들)를 포함해야(must) 합니다.
 
-  <dfn lt="defines the term|defining term|term">Defining term</dfn>: If the <{dfn}> element has a <dfn element-attr for="dfn"><code>title</code></dfn>
-  attribute, then the exact value of that attribute is the term being defined. Otherwise, if it
-  contains exactly one element child node and no child <code>Text</code> nodes, and that child
-  element is an <{abbr}> element with a <code>title</code> attribute, then the exact value
-  of <em>that</em> attribute is the term being defined. Otherwise, it is the exact
-  {{Node/textContent}} of the <{dfn}> element that gives the term being defined.
+  <dfn lt="defines the term|defining term|term">정의 용어</dfn>: <{dfn}> 용어(element)가 
+  <dfn element-attr for="dfn"><code>title</code></dfn> 속성(attribute)을 가진다면, 그 
+  속성(attribute)의 정확한 값은 정의되는 용어입니다. 그렇지 않고, 그것이 정확히 한 개 자식 
+  요소(element) 노드를 가지고 자식 <code>Text</code> 노드들을 가지지 않으며, 그 자식 요소(element)가 
+  <code>title</code> 속성(attribute)을 가진 <{abbr}> 요소(element)라면, <em>그</em> 
+  속성(attribute)의 정확한 값은 정의되는 용어입니다. 그렇지 않으면, 그것은 정의되는 용어를 제공하는 
+  <{dfn}> 요소(element)의 정확한 {{Node/textContent}}입니다.
 
-  If the <code>title</code> attribute of the <{dfn}> element is present, then it must
-  contain only the term being defined.
+  <{dfn}> 요소(element)의 <code>title</code> 속성(attribute)이 존재한다면, 그것은 정의되는 용어만을 
+  포함해야(must) 합니다.
 
   <p class="note">
-    The <code>title</code> attribute of ancestor elements does not affect <{dfn}> elements.
+    조상 요소(element)들의 <code>title</code> 속성(attribute)은 <{dfn}> 요소(element)들에 영향을 
+    주지 않습니다.
   </p>
 
-  An <{a}> element that links to a <{dfn}> element represents an instance of the
-  term defined by the <{dfn}> element.
+  <{dfn}> 요소(element)로 연결하는 <{a}> 요소(element)는 <{dfn}> 요소(element)에 의해 정의된 용어의 
+  사례를 나타냅니다.
 
   <div class="example">
-    In the following fragment, the term "Garage Door Opener" is first defined in the first
-    paragraph, then used in the second. In both cases, its abbreviation is what is actually
-    displayed.
+    다음 코드 조각에서, 용어 "Garage Door Opener"는 첫 번째 문단에서 처음 정의되고, 이후 두 번째 
+    문단에서 사용됩니다. 두 모든 경우에, 그것의 축약어는 실제로 보여지는 것입니다.
 
     <pre highlight="html">
       &lt;p&gt;The &lt;dfn&gt;&lt;abbr title="Garage Door Opener"&gt;GDO&lt;/abbr&gt;&lt;/dfn&gt;
@@ -813,7 +811,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
       and so Hammond ordered the iris to be opened.&lt;/p&gt;
     </pre>
 
-    With the addition of an <{a}> element, the reference can be made explicit:
+    <{a}> 요소(element)의 추가 사항을 가지고, 참조가 명시적으로 될 수 있습니다:
 
     <pre highlight="html">
       &lt;p&gt;The &lt;dfn id=gdo&gt;&lt;abbr title="Garage Door Opener"&gt;GDO&lt;/abbr&gt;&lt;/dfn&gt;
@@ -824,41 +822,41 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </pre>
 </div>
 
-<h4 id="the-abbr-element">The <dfn element><code>abbr</code></dfn> element</h4>
+<h4 id="the-abbr-element"><dfn element><code>abbr</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
     <dd>Also, the <{abbr/title}> attribute has special semantics on this element.</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{abbr}> element <a>represents</a> an abbreviation or acronym, optionally with its
-  expansion. The <dfn element-attr for="abbr"><code>title</code></dfn> attribute may be used to provide an expansion of the
-  abbreviation. The attribute, if specified, must contain an expansion of the abbreviation, and
-  nothing else.
+  <{abbr}> 요소(element)는 선택적으로 그것의 본디말을 가지고, 축약어나 두문자어를 
+  <a lt="represents">나타냅니다</a>. <dfn element-attr for="abbr"><code>title</code></dfn> 
+  속성(attribute)은 축약어의 본디말을 제공하는데 사용될 수 있습니다. 속성(attribute)이 명시되었다면, 
+  속성(attribute)은 축약어의 본디말을 포함해야(must)하고, 그렇지 않으면 아무 것도 포함하지 
+  않아야(must) 합니다.
 
   <div class="example">
-    The paragraph below contains an abbreviation marked up with the <{abbr}> element.
-    This paragraph <a>defines the term</a> "Web Hypertext Application
-    Technology Working Group".
+    아래 문단은 <{abbr}> 요소(element)로 마크업 된 축약어를 포함합니다. 이 문단은 
+    "Web Hypertext Application Technology Working Group" 
+    <a lt="defines the term">용어를 정의</a>합니다.
 
     <pre highlight="html">
       &lt;p&gt;The &lt;dfn id=whatwg&gt;&lt;abbr
@@ -869,7 +867,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
       Web.&lt;/p&gt;
     </pre>
 
-    An alternative way to write this would be:
+    이를 작성하기 위한 또 다른 동등한 방법은 다음과 같을 것입니다:
 
     <pre highlight="html">
       &lt;p&gt;The &lt;dfn id=whatwg&gt;Web Hypertext Application Technology
@@ -883,8 +881,8 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    This paragraph has two abbreviations. Notice how only one is defined; the other, with no
-    expansion associated with it, does not use the <{abbr}> element.
+    이 문단은 두 축약어들을 가집니다. 오직 하나만 정의되는 방식에 주목하세요; 그것과 연관된 본디말이 
+    없는 다른 하나는 <{abbr}> 요소(element)를 사용하지 않습니다.
 
     <pre highlight="html">
       &lt;p&gt;The
@@ -894,7 +892,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    This paragraph links an abbreviation to its definition.
+    이 문단은 축약어를 그것의 정의로 연결합니다.
 
     <pre highlight="html">
       &lt;p&gt;The &lt;a href="#whatwg"&gt;&lt;abbr
@@ -905,8 +903,8 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    This paragraph marks up an abbreviation without giving an expansion, possibly as a hook to
-    apply styles for abbreviations (e.g., smallcaps).
+    이 문단은 아마도 축약어들에 대해 스타일을 적용하기 위한 (예를 들어, 작은 대문자) 훅(hook)이기 
+    때문에, 본디말을 제공하는 것 없이 축약어를 마크업합니다.
 
     <pre highlight="html">
       &lt;p&gt;Philip and Dashiva both denied that they were going to
@@ -915,11 +913,11 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </pre>
   </div>
 
-  If an abbreviation is pluralized, the expansion's grammatical number (plural vs singular) must
-  match the grammatical number of the contents of the element.
+  축약어가 복수형이라면, 본디말의 문법에 맞는 수는 (복수 vs 단수) 요소(element)의 콘텐츠의 문법에 
+  맞는 수와 일치해야(must) 합니다.
 
   <div class="example">
-    Here the plural is outside the element, so the expansion is in the singular:
+    여기 복수는 요소(element) 밖이고, 본디말은 단수입니다:
 
     <pre highlight="html">
       &lt;p&gt;Two &lt;abbr title="Working Group"&gt;WG&lt;/abbr&gt;s worked on
@@ -927,7 +925,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
       &lt;abbr&gt;HTMLWG&lt;/abbr&gt;.&lt;/p&gt;
     </pre>
 
-    Here the plural is inside the element, so the expansion is in the plural:
+    여기 복수는 내부 요소(element)이고 본디말은 복수입니다:
 
     <pre highlight="html">
       &lt;p&gt;Two &lt;abbr title="Working Groups"&gt;WGs&lt;/abbr&gt; worked on
@@ -936,89 +934,86 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </pre>
   </div>
 
-  Abbreviations do not have to be marked up using this element. It is expected to be useful in the
-  following cases:
+  축약어는 이 요소(element)를 사용하여 마크업 될 필요는 없습니다. 이것은 다음 경우들에서 유용할 
+  것으로 기대됩니다:
 
-  * Abbreviations for which the author wants to give expansions, where using the <code>abbr</code>
-    element with a <code>title</code> attribute is an alternative to including the expansion inline
-    (e.g., in parentheses).
-  * Abbreviations that are likely to be unfamiliar to the document's readers, for which authors are
-    encouraged to either mark up the abbreviation using an <{abbr}> element with a
-    <code>title</code> attribute or include the expansion inline in the text the first time the
-    abbreviation is used.
-  * Abbreviations whose presence needs to be semantically annotated, e.g., so that they can be
-    identified from a style sheet and given specific styles, for which the <{abbr}> element
-    can be used without a <code>title</code> attribute.
+  * 본디말을 인라인으로 (예를 들어, 괄호 안에) 포함하기 위한 대안 인 <code>title</code> 
+    속성(attribute)을 가진 <code>abbr</code> 요소(element)를 사용하는 경우, 작성자가 본디말들을 
+    제공하기 원하는 축약어들.
+  * 작성자들이 <code>title</code> 속성(attribute)을 가진 <{abbr}> 요소(element)를 사용하는 축약어를 
+    마크업 하도록 권장되거나 확장이 사용되는 첫 번째 텍스트 내에 본디말이 인라인으로 포함시키도록 
+    권장되는 문서의 독자들에게 익숙하지 않을 것 같은 축약어들.
+  * 의미론적으로 주석이 달릴 필요가 있는 축약어들, 예를 들어, 때문에 스타일시트와 주어진 특정 
+    스타일로부터 식별될 수 있는, <code>title</code> 속성(attribute)이 없이 사용 될 수 있는 <{abbr}> 
+    요소(element).
 
-  Providing an expansion in a <code>title</code> attribute once will not necessarily cause other
-  <{abbr}> elements in the same document with the same contents but without a
-  <code>title</code> attribute to behave as if they had the same expansion. Every <code>abbr</code>
-  element is independent.
+  한 번 <code>title</code> 속성(attribute)에 본디말을 제공하는 것은 동일한 콘텐츠를 가지지만 
+  <code>title</code> 속성(attribute)이 없는 동일 문서의 다른 <{abbr}> 요소(element)들이 필연적으로 
+  동일한 본디말을 가지는 것 처럼 동작하는 것을 야기시키지 않을 것입니다. 매 <code>abbr</code> 
+  요소(element)는 독립적입니다.
 
-<h4 id="the-ruby-element">The <dfn element><code>ruby</code></dfn> element</h4>
+<h4 id="the-ruby-element"><dfn element><code>ruby</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd>See prose.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd>본문 참고.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{ruby}> element allows one or more spans of phrasing content to be marked with ruby
-  annotations. Ruby annotations are short runs of text presented alongside base text, primarily
-  used in East Asian typography as a guide for pronunciation or to include other annotations. In
-  Japanese, this form of typography is also known as <i>furigana</i>. Ruby text can appear on either
-  side, and sometimes both sides, of the base text, and it is possible to control its position using
-  CSS. A more complete introduction to ruby can be found in the <cite>Use Cases &amp; Exploratory
-  Approaches for Ruby Markup</cite> document as well as in <cite>CSS Ruby</cite>.
-  [[RUBY-UC]] [[CSS3-RUBY]]
+  <{ruby}> 요소(element)는 루비 주석으로 마크업 되는 하나 이상의 어구 콘텐트의 범위를 허용합니다. 
+  루비 주석들은 주로 발음에 대한 혹은 다른 주석들에 포함시키기 위한 지침으로서 동아시아 글자에 사용 
+  된 기본 텍스트와 나란히 표현된 짧은 일련의 텍스트입니다. 일본어에서, 이 글자의 형식은 또한 
+  <i>후리가나</i>로 알려져 있습니다. 루비 텍스트는 기본 텍스트의 사이드, 양쪽 사이드 모두에 나타날 
+  수 있고, CSS를 사용하여 그것의 위치를 제어할 수 있습니다. 루비에 대한 더 완벽한 소개는 <cite>루비 
+  마크업에 대한 사용법들 &amp; 탐색적 접근법들</cite> 문서뿐 아니라 <cite>CSS Ruby</cite>에서 찾을 
+  수 있습니다. [[RUBY-UC]] [[CSS3-RUBY]]
 
-  The content model of <{ruby}> elements consists of one or more of the following sequences:
+  <{ruby}> 요소(element)들의 콘텐트 모델은 하나 이상의 다음 시퀀스들로 구성됩니다:
 
-  1. One or more <a>phrasing content</a> nodes or <{rb}> elements.
-  2. One or more <code>rt</code> or <{rtc}> elements, each of which either immediately
-      preceded or followed by an <{rp}> elements.
+  1. 하나 이상의 <a lt="phrasing content">어구(phrasing) 콘텐트</a> 노드들이나 <{rb}> 요소(element)들.
+  2. <{rp}> 요소(element)가 즉시 앞서거나 즉시 뒤따르는, 하나 이상의 <code>rt</code>나 <{rtc}> 
+      요소(element)들.
 
-  The <{ruby}>, <{rb}>, <{rtc}>, and <{rt}> elements can be used
-  for a variety of kinds of annotations, including in particular (though by no means limited to)
-  those described below. For more details on Japanese Ruby in particular, and how to render Ruby for
-  Japanese, see <cite>Requirements for Japanese Text Layout</cite>. [[!JLREQ]] The <code>rp</code>
-  element can be used as fallback content when ruby rendering is not supported.
+  아래 설명된 특정한 (결코 이에 국한되지 않지만) 것들을 포함하여, <{ruby}>, <{rb}>, <{rtc}>, 
+  <{rt}> 요소(element)들은 다양한 주석들에 사용될 수 있습니다. 특히, 일본어 루비에 자세한 사항들과 
+  일본어에 대한 루비를 표현하는 방법에 대해, <cite>일본어 텍스트 레이아웃에 대한 요구사항들</cite>을 
+  참조하세요. [[!JLREQ]] <code>rp</code> 요소(element)는 루비 렌더링이 지원되지 않는 경우 폴백으로 
+  사용될 수 있습니다.
 
-  : Mono-ruby for individual base characters
-  :: Annotations (the ruby text) are associated individually with each ideographic character (the
-      base text). In Japanese this is typically hiragana or katakana characters used to provide
-      readings of kanji characters.
+  : 각 기본 문자들에 대한 모노 루비
+  :: 주석들은 (루비 텍스트) 각 표의 문자 (기본 텍스트)와 개별적으로 연관됩니다. 일본어에서 이것은 
+      일반적으로 칸지 문자들의 독음을 제공하는데 사용되는 히라가나나 카타카나 문자들입니다.
 
       <div class="example">
         <pre highlight="html">&lt;ruby&gt;base&lt;rt&gt;annotation&lt;/ruby&gt;</pre>
       </div>
 
-      When no <{rb}> element is used, the base is implied, as above. But you can also make
-      it explicit. This can be useful notably for styling, or when consecutive bases are to be
-      treated as a group, as in the jukugo ruby example further down.
+      <{rb}> 요소(element)가 사용되지 않는 경우, 기본 텍스트는 위와 같이 암묵적입니다. 하지만 
+      그것을 명시적으로 만들 수도 있습니다. 이것은 특히 스타일링 하거나, 더 아래의 
+      쥬쿠고(じゅくご, 숙어)에서와 같이, 연이은 기본 텍스트들이 그룹으로 취급되는 경우에 유용할 수 
+      있습니다. 
 
       <div class="example">
         <pre highlight="html">&lt;ruby&gt;&lt;rb&gt;base&lt;rt&gt;annotation&lt;/ruby&gt;</pre>
       </div>
 
-      In the following example, notice how each annotation corresponds to a single base character.
+      다음 예에서, 각 주석이 단일 기본 문자에 일치하는 방식에 주목하세요.
 
       <div class="example">
         <pre highlight="html">
@@ -1028,14 +1023,13 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
         </pre>
       </div>
 
-      Ruby text interspersed in regular text provides structure akin to the following image:
+      일반 텍스트에 배치된 루비 텍스트는 다음 이미지와 유사한 구조를 제공합니다:
 
-      <img src="images/composition.png" width="390" height="87" alt="An example of ruby text mixed up with regular text." />
+      <img src="images/composition.png" width="390" height="87" alt="일반 텍스트와 혼합된 루비의 예." />
 
-      This example can also be written as follows, using one <{ruby}> element with two
-      segments of base text and two annotations (one for each) rather than two back-to-back
-      <{ruby}> elements each with one base text segment and annotation (as in the markup
-      above):
+      이 예는 각각 한 개의 기본 텍스트 세그먼트와 주석을 가진 (위 마크업에서 처럼) 두 개의 다닥다닥 
+      붙은 <{ruby}> 요소(element)들 대신, 다음과 같이 기본 텍스트의 두 세그먼트들과 두 주석을 
+      (각각에 대해 하나씩) 가진 한 개 <{ruby}> 요소(element)를 사용하여 작성될 수도 있습니다:
 
       <div class="example">
         <pre highlight="html">
@@ -1045,39 +1039,38 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
         </pre>
       </div>
 
-    : Group ruby
-    :: Group ruby is often used where phonetic annotations don't map to discreet base characters, or
-        for semantic glosses that span the whole base text. For example, the word "today" is written
-        with the characters 今日, literally "this day". But it's pronounced きょう (kyou), which
-        can't be broken down into a "this" part and a "day" part. In typical rendering, you can't
-        split text that is annotated with group ruby; it has to wrap as a single unit onto the next
-        line. When a <a>ruby text annotation</a> maps to a base that is comprised of more than one
-        character, then that base is grouped.
+    : 그룹 루비
+    :: 그룹 루비는 종종 표음 주석들이 적당한 기본 문자들에 일치되지 않는 경우에, 혹은 전체 기본 
+        텍스트에 걸친 시맨틱 어휘들에 대해 사용됩니다. 예를 들어, 단어 "today"는 문자 그대로 
+        "this day"인 문자 今日로 작성됩니다. 하지만, 그것은 "this" 부분과 "day" 부분으로 분해될 수 
+        없는 きょう (kyou)라고 발음됩니다. 일반적인 표현에서, 그룹 루비로 주석이 달린 텍스트를 
+        분리할 수 없습니다; 그것은 다음 행 위에 단일 개체로 감싸져야(has to) 합니다. 
+        <a lt="ruby text annotation">루비 텍스트 주석</a>은 하나 이상의 문자로 구성 된 기본 텍스트에 
+        일치하는 경우, 그 기본 텍스트는 그룹화 된 것입니다.
 
-        The following group ruby:
+        다음 그룹 루비는:
 
-        <img src="images/group.png" width="78" height="88" alt="Group ruby example with きょう annotating 今日" />
+        <img src="images/group.png" width="78" height="88" alt="きょう로 주석을 다는 今日 그룹 루비 예" />
 
-        Can be marked up as follows:
+        다음 과 같이 마크업 될 수 있습니다:
 
         <div class="example">
           <pre highlight="html">&lt;ruby&gt;今日&lt;rt&gt;きょう&lt;/ruby&gt;</pre>
         </div>
 
-    : Jukugo ruby
-    :: <em>Jukugo</em> refers to a Japanese compound noun, i.e., a word made up of more than one
-        kanji character. <em>Jukugo ruby</em> is a term that is used not to describe ruby
-        annotations over jukugo text, but rather to describe ruby with a behavior slightly
-        different from mono or group ruby. Jukugo ruby is similar to mono ruby, in that there is
-        a strong association between ruby text and individual base characters, but the ruby text
-        is typically rendered as grouped together over multiple ideographs when they are on the
-        same line.
+    : 쥬쿠고 루비
+    :: <em>쥬쿠고</em>는 일본어 복합 명사를, 즉, 하나 이상의 칸지 문자로 구성된 단어를, 나타냅니다. 
+        <em>쥬쿠고 루비</em>는 쥬쿠고 텍스트를 통해 루비 주석들을 설명하는데 사용되는 것이 아니라, 
+        모노 혹은 그룹 루비와 약간 다른 행동을 가진 루비를 설명하는데 사용되는 용어입니다. 쥬쿠고 
+        루비는 루비 텍스트와 각각의 기본 문자들 사이에 강한 연관이 있다는 점에서 모노 루비와 
+        유사하지만, 루비 텍스트는 일반적으로 여러 표의 문자들이 같은 행에 있는 경우 표의 문자들 
+        위에 함께 그룹화되어 표현됩니다.
 
-        The distinction is captured in this example:
+        이 예에서 차이가 포착됩니다:
 
         <img src="images/hokekyou.png" width="66" height="126" alt="Example of jukugo ruby" />
 
-        Which can be marked up as follows:
+        다음과 같이 마크업 될 수 있습니다:
 
         <div class="example">
           <pre highlight="html">
@@ -1085,28 +1078,28 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
           </pre>
         </div>
 
-        In this example, each <{rt}> element is paired with its respective <code>rb</code>
-        element, the difference with an interleaved <code>rb</code>/<code>rt</code> approach being
-        that the sequences of both base text and ruby annotations are implicitly placed in common
-        containers so that the grouping information is captured.
+        이 예에서, 각 <{rt}> 요소(element)는 그것의 각 <code>rb</code> 요소(element)와 쌍을 이루고, 
+        두 기본 텍스트의 시퀀스와 루비 주석들이 되는 교차된 <code>rb</code>/<code>rt</code> 접근 
+        방식의 차이점은 일반적인 컨테이너에 암묵적으로 위치되기 때문에 그룹화 정보가 포착된다는 
+        것입니다.
 
         <p class="note">
-          For more details on <a>Jukugo Ruby rendering</a>, see Appendix F in the
-          <cite>Requirements for Japanese Text Layout</cite> and Use Case C: Jukugo ruby in the
-          <cite>Use Cases &amp; Exploratory Approaches for Ruby Markup</cite>. [[!JLREQ]]
-          [[RUBY-UC]]
+          <a lt="Jukugo Ruby rendering">쥬쿠고 루비 표현</a>에 대한 더 자세한 사항들에 대해서는, 
+          <cite lt="Requirements for Japanese Text Layout">일본 텍스트 레이아웃에 대한 요구사항들</cite>의 
+          부록 F와 <cite lt="Use Cases &amp; Exploratory Approaches for Ruby Markup">루비 마크업에 
+          대한 사용법들 &amp; 탐색적 접근법들</cite>의 사용법 C: 쥬쿠고 루비를 참고하세요.
+          [[!JLREQ]] [[RUBY-UC]]
         </p>
 
-    : Inline ruby
-    :: In some contexts, for instance when the font size or line height are too small for ruby to be
-        readable, it is desirable to inline the ruby annotation such that it appears in parentheses
-        after the text it annotates. This also provides a convenient fallback strategy for user
-        agents that do not support rendering ruby annotations.
+    : 인라인 루비
+    :: 일부 컨텍스트들에서, 예를 들어, 글자 크기나 행 높이가 루비를 읽기에 너무 작은 경우, 루비가 
+        텍스트 뒤의 괄호에 주석이 나타나는 인라인 루비 주석이 바람직합니다. 이것은 또한 루비 
+        주석들의 렌더링을 지원하지 않는 유저 에이전트에 대한 간편한 폴백 방법을 제공합니다.
 
-        Inlining takes grouping into account. For example, Tokyo is written with two kanji
-        characters, 東, which is pronounced とう, and 京, which is pronounced きょう. Each base
-        character should be annotated individually, but the fallback should be 東京(とうきょう) not
-        東(とう)京(きょう). This can be marked up as follows:
+        인라인 하는 것은 그룹화를 고려합니다. 예를 들어 도쿄는 とう로 발음되는 東, きょう로 발음되는 
+        京 두 칸지 문자로 작성됩니다. 각 기본 문자는 개별적으로 주석이 달려야(should) 하지만 폴백은 
+        東(とう)京(きょう)가 아니라 東京(とうきょう)가 되어야(should) 합니다. 이것은 다음과 같이 
+        마크업 될 수 있습니다:
 
         <div class="example">
           <pre highlight="html">
@@ -1114,10 +1107,10 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
           </pre>
         </div>
 
-        Note that the above markup will enable the usage of parentheses when inlining for browsers
-        that support ruby layout, but for those that don't it will fail to provide parenthetical
-        fallback. This is where the <{rp}> element is useful. It can be inserted into the
-        above example to provide the appropriate fallback when ruby layout is not supported:
+        위 마크업은 루비 레이아웃을 지원하는 브라우저들에 대해 인라인 하는 경우 괄호들의 사용을 
+        가능하게 하지만, 이를 지원하지 않는 브라우저에 대해서는 괄호 폴백을 제공하는데 실패하게 될 
+        것에 주목하세요. 이것은 <{rp}> 요소(element)가 유용한 경우입니다. 루비 레이아웃이 제공되지 
+        않는 경우 적절한 폴백을 제공하기 위해 위 예에 그것이 삽입 될 수 있습니다:
 
       <div class="example">
         <pre highlight="html">
@@ -1125,16 +1118,15 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
         </pre>
       </div>
 
-    : Text with both phonetic and semantic annotations (double-sided ruby)
-    :: Sometimes, ruby can be used to annotate a base twice.
+    : 독음과 의미 주석을 모두 가지는 텍스트 (양쪽 사용이 가능한 루비)
+    :: 때때로, 루비는 기본 텍스트에 두 번 주석을 다는데 사용 될 수 있습니다.
 
-        In the following example, the Chinese word for San Francisco (旧金山, i.e., "old gold
-        mountain") is annotated both using pinyin to give the pronunciation, and with the original
-        English.
+        다음 예에서, San Francisco에 대한 중국어는 (旧金山, 즉, "old gold mountain") 발음을 제공하는 
+        핀인(중국어의 로마자 표기법)과 본래의 영어를 사용하여 주석이 달립니다.
 
-        <img src="images/group-double.png" width="113" height="84" alt="San Francisco in Chinese, with both pinyin and the original English as annotations." />
+        <img src="images/group-double.png" width="113" height="84" alt="주석으로 핀인과 원래 영어를 모두 가진, 중국어로 San Francisco" />
 
-        Which is marked up as follows:
+        다음과 같이 마크업 됩니다:
 
         <div class="example">
           <pre highlight="html">
@@ -1142,18 +1134,17 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
           </pre>
         </div>
 
-          In this example, a single base run of three base characters is annotated with three pinyin
-          ruby text segments in a first (implicit) container, and an <{rtc}> element is
-          introduced in order to provide a second single <a>ruby text annotation</a> being the
-          city's English name.
+          이 예에서, 일련의 세 개의 기본 문자들의 기본 텍스트는 첫 번째 (암묵적) 컨테이너의 세 핀인 
+          루비 텍스트 세그먼트로 주석이 달리고, <{rtc}> 요소(element)는 도시의 영어 이름이 되는 두 
+          번째 단일 <a lt="ruby text annotation">루비 텍스트 주석</a>을 제공하기 위해 도입됩니다.
 
-          We can also revisit our jukugo example above with 上手 ("skill") to show how it can be
-          annotation in both kana and romaji phonetics while at the same time maintaining the
-          pairing to bases and annotation grouping information.
+          또한 동시에 기본 문자들과 그룹화 정보 주석의 쌍을 유지하는 반면 카나와 로마지 발음 모두에 
+          주석이 사용될 수 있는 방법을 보여주기 위해 위 쥬쿠고 예를 上手 ("skill")를 가지고 다시 
+          논의 할 수 있습니다.
 
           <img src="images/mono-or-jukugo-double.png" width="185" height="120" alt="上手 (&quot;skill&quot;) annotated in both kana and romaji, shown in both jukugo and mono styles." />
 
-          Which is marked up as follows:
+          다음과 같이 마크업 됩니다:
 
         <div class="example">
           <pre highlight="html">
@@ -1161,10 +1152,10 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
           </pre>
         </div>
 
-        Text that is a direct child of the <{rtc}> element implicitly produces a ruby text
-        segment as if it were contained in an <{rt}> element. In this contrived example,
-        this is shown with some symbols that are given names in English and French with annotations
-        intended to appear on either side of the base symbol.
+        <{rtc}> 요소(element)의 직속 자식인 텍스트는 그것이 <{rt}> 요소(element)에 포함되어 있던 것 
+        처럼, 암묵적으로 루비 텍스트 세그먼트를 생성합니다. 이 인워적인 예에서, 이것은 기본 심볼의 
+        양쪽에 나타나도록 의도된 주석들을 가지고 영어와 프랑스어로 이름이 주어진 일부 기호들로 
+        보여집니다.
 
         <div class="example">
           <pre highlight="html">
@@ -1176,11 +1167,10 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
           </pre>
         </div>
 
-        Similarly, text directly inside a <{ruby}> element implicitly produces a ruby base
-        as if it were contained in an <{rb}> element, and <code>rt</code> children of
-        <code>ruby</code> are implicitly contained in an <code>rtc</code> container. In effect, the
-        above example is equivalent (in meaning, though not in the DOM it produces) to the
-        following:
+        유사하게, <{ruby}> 요소(element) 바로 내부의 텍스트는 <{rb}> 요소(element)에 포함되어 있던 
+        것 처럼 암묵적으로 루비 기본 문자를 생성하고, <code>ruby</code>의 자식 <code>rt</code>는 
+        암묵적으로 <code>rtc</code> 컨테이너에 포함됩니다. 사실 상, 위 예는 다음과 동등합니다 
+        (의미적으로, DOM에서 생성되는 것은 아니기는 하지만):
 
         <div class="example">
           <pre highlight="html">
@@ -1195,524 +1185,520 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   <hr />
 
   <div class="impl">
-    Within a ruby element, content is parcelled into a series of ruby segments. Each
-    <dfn>ruby segment</dfn> is described by:
+    루비 요소(element) 내에서, 콘텐트는 일련의 루비 세그먼트들로 나누어 집니다. 각 
+    <dfn lt="ruby segment">루비 세그먼트</dfn>는 다음에 의해 기술됩니다:
 
-      * Zero or more <dfn>ruby bases</dfn>, each of which is a DOM range that may contain phrasing
-          content or an <{rb}> element.
-      * A base range, that is a DOM range including all the bases. This is the
-          <dfn>ruby base container</dfn>.
-      * Zero or more <a>ruby text containers</a> which may correspond to explicit <code>rtc</code>
-          elements, or to sequences of <{rt}> elements implicitly recognized as contained
-          in an anonymous <a>ruby text container</a>.
+      * 각각이 어구(phrasing) 콘텐트나 <{rb}> 요소(element)를 포함할 수 있는 DOM 범위인, 0개 이상의 
+          <dfn lt="ruby bases">루비 기본 문자들</dfn>
+      * 기본 문자 범위는 모든 기본 문자들을 포함하는 DOM 범위 입니다. 이것은 
+          <dfn lt="ruby base container">루비 기본 컨테이너</dfn>입니다.
+      * 명시적인 <code>rtc</code> 요소(element)에 해당하거나, <a lt="ruby text container">루비 
+          텍스트 컨테이너</a>에 포함될 때 암묵적으로 인식된 <{rt}> 요소(element)의 시퀀스들일 수 
+          있는 0개 이상의 <a lt="ruby text containers">루비 텍스트 컨테이너들</a>.
 
-    Each <dfn>ruby text container</dfn> is described by zero or more
-    <dfn>ruby text annotations</dfn> each of which is a DOM range that may contain phrasing content
-    or an <{rt}> element, and an annotations range that is a range including all the
-    annotations for that container. A <a>ruby text container</a> is also known (primarily in a CSS
-    context) as a <dfn>ruby annotation container</dfn>.
+    각 <dfn lt="ruby text container">루비 텍스트 컨테이너</dfn>는 각각이 어구(phrasing) 콘텐트나 
+    <{rt}> 요소(element)를 포함할 수 있는 DOM 범위인 0개 이상의 
+    <dfn lt="ruby text annotations">루비 텍스트 주석들</dfn>과 그 컨테이너에 대한 모든 주석들을 
+    포함하는 범위인 주석 범위에 의해 기술됩니다. 
+    <a lt="ruby text container">루비 텍스트 컨테이너</a>는 또한 
+    <dfn lt="ruby annotation container">루비 주석 컨테이너</dfn>로 (주로 CSS 컨텍스트에서) 알려져 
+    있습니다.
 
-    Furthermore, a ruby element contains <dfn>ignored ruby content</dfn>. Ignored ruby content does
-    not form part of the document's semantics. It consists of some <a>inter-element whitespace</a>
-    and <{rp}> elements, the latter of which are used for legacy user agents that do not
-    support ruby at all.
+    뿐만 아니라, 루비 요소(element)는 <dfn lt="ignored ruby content">무시된 루비 콘텐트</dfn>를 
+    포함합니다. 무시된 루비 콘텐트는 문서의 의미론의 일부를 구성하지 않습니다. 이는 뒤 쪽의 것이 
+    루비를 전혀 지원하지 않는 유저 에이전트에 사용되는 몇몇의 
+    <a lt="inter-element whitespace">요소(element) 간 여백</a>과 <{rp}> 요소(element)들로 구성됩니다.
 
-    The process of <dfn>annotation pairing</dfn> associates <a>ruby annotations</a> with
-    <a>ruby bases</a>. Within each <a>ruby segment</a>, each <a>ruby base</a> in the
-    <a>ruby base container</a> is paired with one <a>ruby text annotation</a> from the
-    <a>ruby text container</a>, in order. If there are not enough <a>ruby text annotations</a> in a
-    <a>ruby annotation container</a>, the last one is associated with any excess <a>ruby bases</a>.
-    (If there are not any in the <a>ruby annotation container</a>, an anonymous empty one is assumed
-    to exist.) If there are not enough <a>ruby bases</a>, any remaining <a>ruby text annotations</a>
-    are assumed to be associated with empty, anonymous bases inserted at the end of the
-    <a>ruby base container</a>.
+    <dfn lt="annotation pairing">주석 쌍</dfn>의 처리는 <a lt="ruby annotations">루비 주석들</a>과 
+    <a lt="ruby bases">루비 기본 문자</a>를 연관짓흡니다. 각 <a lt="ruby segment">루비 세그먼트</a> 
+    내에서, <a lt="ruby base container">루비 기본 문자 컨테이너</a> 내의 각 <a lt="ruby base">루비 
+    베이스</a>는 순서에 따라 <a lt="ruby text container">루비 텍스트 컨테이너</a>의 한 개 
+    <a lt="ruby text annotation">루비 텍스트 주석</a>과 짝지어 집니다. 
+    <a lt="ruby annotation container">루비 주석 컨텐이너</a>에 
+    <a lt="ruby text annotations">루비 텍스트 주석들</a>이 충분하지 않다면, 마지막 것은 초과분의 
+    <a lt="ruby bases">루비 기본 문자들</a>과 연관되어집니다. 
+    (<a lt="ruby annotation container">루비 주석 컨텐이너</a>에 어떠한 것도 없다면, 익명의 빈 것이 
+    존재한다고 가정됩니다.) <a lt="ruby bases">루비 기본 문자들</a>이 충분하지 않다면, 모든 나머지 
+    <a lt="ruby text annotations">루비 텍스트 주석들</a>은 <a lt="ruby base container">루비 기본 
+    문자 컨테이너</a>의 끝에 삽입된 익명의 기본 문자인 빈 것과 연관되는 것으로 간주됩니다.
 
-    Note that the terms <a>ruby segment</a>, <a>ruby base</a>, <a>ruby text annotation</a>,
-    <a>ruby text container</a>, <a>ruby base container</a>, and <a>ruby annotation container</a>
-    have their equivalents in <cite>CSS Ruby Module Level 3</cite>. [[CSS3-RUBY]]
+    용어 <a lt="ruby segment">루비 세그먼트</a>, <a lt="ruby base">루비 기본 문자</a>, 
+    <a lt="ruby text annotation">루비 텍스트 주석</a>, <a lt="ruby text container">루비 텍스트 
+    컨테이너</a>, <a lt="ruby base container">루비 기본 컨테이너</a>, 
+    <a lt="ruby annotation container">루비 주석 컨테이너</a>가 
+    <cite lt="CSS Ruby Module Level 3">CSS 루비 모듈 레벨 3</cite>에서 그것들과 동등한 것들을 가지는 
+    것에 주목하세요. [[CSS3-RUBY]]
 
-    Informally, the segmentation and categorization algorithm below performs a simple set of
-    tasks. First it processes adjacent <{rb}> elements, text nodes, and non-ruby
-    elements into a list of bases. Then it processes any number of <{rtc}> elements or
-    sequences of <{rt}> elements that are considered to automatically map to an
-    anonymous <a>ruby text container</a>. Put together these data items form a <a>ruby
-    segment</a> as detailed in the data model above. It will continue to produce such segments
-    until it reaches the end of the content of a given <{ruby}> element. The complexity
-    of the algorithm below compared to this informal description stems from the need to support
-    an author-friendly syntax and being mindful of inter-element white space.
+    비공식적으로, 분할과 분류 알고리즘은 아래 작업들의 간단한 설정을 수행합니다. 먼저 기본 문자들의 
+    목록 내의 인접한 <{rb}> 요소(element)들, 텍스트 노드들, 비 루비 요소(element)들을 처리합니다. 
+    이후, 자동으로 익명 <a lt="ruby text container">루비 텍스트 컨테이너</a>에 매핑되는 것으로 
+    간주된 많은 <{rtc}> 요소(element)들이나 <{rt}> 요소(element)들의 시퀀스들을 처리합니다. 위 
+    데이터 모델에서 설명된 대로 <a lt="ruby segment">루비 세그먼트</a>를 형성하는 이 데이터 항목들을 
+    묶습니다. 주어진 <{ruby}> 요소(element)의 콘텐트의 끝에 도달할 때까지 그러한 세크먼트들을 계속 
+    생성할 것입니다. 이 비공식적인 설명과 비교되는 아래 알고리즘의 복잡성은 작성자에게 친숙한 문접의 
+    지원과 요소(element) 간 여백을 염두하는 필요에서 기인합니다.
 
-    At any particular time, the <dfn>segmentation and categorization of content of a
-    <code>ruby</code></dfn> element is the result that would be obtained from running the following
-    algorithm:
+    임의의 특정 시간에, <dfn lt="segmentation and categorization of content of a ruby"><code>ruby</code> 
+    요소(element)의 콘텐트의 분할과 분류</dfn>는 다음 알고리즘을 수행한 것으로부터 얻어지는 
+    결과입니다:
 
 <!-- Start cleanup here -->
 
     <ol>
       <li>
-        Let <var>root</var> be the <{ruby}> element for which the algorithm is
-        being run.
+        <var>root</var>를 알고리즘이 실행되는 <{ruby}> 요소(element)로 둡니다.
       </li>
-      <li>Let <var>index</var> be 0.</li>
-      <li>Let <var>ruby segments</var> be an empty list.</li>
-      <li>Let <var>current bases</var> be an empty list of DOM ranges.</li>
-      <li>Let <var>current bases range</var> be null.</li>
-      <li>Let <var>current bases range start</var> be null.</li>
-      <li>Let <var>current annotations</var> be an empty list of DOM ranges.</li>
-      <li>Let <var>current annotations range</var> be null.</li>
-      <li>Let <var>current annotations range start</var> be null.</li>
-      <li>Let <var>current annotation containers</var> be an empty list.</li>
-      <li>Let <var>current automatic base nodes</var> be an empty list of DOM Nodes.</li>
-      <li>Let <var>current automatic base range start</var> be null.</li>
+      <li><var>index</var>를 0으로 둡니다.</li>
+      <li><var>ruby segments</var>를 빈 목록으로 둡니다.</li>
+      <li><var>current bases</var>를 DOM 범위들의 빈 목록으로 둡니다.</li>
+      <li><var>current bases range</var>를 null로 둡니다.</li>
+      <li><var>current bases range start</var>를 null로 둡니다.</li>
+      <li><var>current annotations</var>를 DOM 범위들의 빈 목록으로 둡니다.</li>
+      <li><var>current annotations range</var>를 null로 둡니다.</li>
+      <li><var>current annotations range start</var>를 null로 둡니다.</li>
+      <li><var>current annotation containers</var>를 빈 목록으로 둡니다.</li>
+      <li><var>current automatic base nodes</var>를 DOM 범위들의 빈 목록으로 둡니다.</li>
+      <li><var>current automatic base range start</var>를 null로 둡니다.</li>
       <li>
-        <i>Process a ruby child</i>: If <var>index</var> is equal to or greater than the number of
-        child nodes in <var>root</var>, then run the steps to <a>commit a ruby segment</a>,
-        return <var>ruby segments</var>, and abort these steps.
-      </li>
-      <li>
-        Let <var>current child</var> be the <var>index</var>th node in <var>root</var>.
+        <i>자식 루비 처리</i>: <var>index</var>가 <var>root</var> 내 자식 노드들의 수보다 크거나 
+        같다면, <a lt="commit a ruby segment">루비 세그먼트를 커밋</a>하기 위한 단계를 수행하고,
+        <var>ruby segments</var>를 반환하고, 이 단계들을 중단합니다.
       </li>
       <li>
-        If <var>current child</var> is not a <a>Text</a> node and is not an
-        {{Element}} node, then increment <var>index</var> by one and jump to the step
-        labelled <i>process a ruby child</i>.
+        <var>current child</var>를 <var>root</var> 내 <var>index</var>번째 노드로 둡니다.
       </li>
       <li>
-        If <var>current child</var> is an <{rp}> element, then increment
-        <var>index</var> by one and jump to the step labelled <i>process a ruby child</i>. (Note
-        that this has the effect of including this element in any range that we are currently
-        processing. This is done intentionally so that misplaced <code>rp</code> can be
-        processed correctly; semantically they are ignored all the same.)
+        <var>current child</var>가 <a>Text</a> 노드가 아니고 {{Element}} 노드가 아니라면, 
+        <var>index</var>를 1 증가시키고 <i>자식 루비 처리</i>로 라벨링 된 단계로 건너뜁니다.
       </li>
       <li>
-        If <var>current child</var> is an <{rt}> element, then run these substeps:
+        <var>current child</var>가 <{rp}> 요소(element)라면, <var>index</var>를 1 증가시키고 
+        <i>자식 루비 처리</i>로 라벨링 된 단계로 건너뜁니다. (이것은 현재 처리중인 범위에서 이 
+        요소(element)를 포함하는 것의 효과를 가짐에 주목하세요. 이것은 잘못 위치된 <code>rp</code>가 
+        올바르게 처리될 수 있도록 의도적으로 이루어집니다; 의미론적으로 그것들은 매 한가지로 
+        무시됩니다.
+      </li>
+      <li>
+        <var>current child</var>가 <{rt}> 요소(element)라면, 이 하위 단계들을 수행합니다:
     <ol>
-          <li>Run the steps to <a>commit an automatic base</a>.</li>
-          <li>Run the steps to <a>commit the base range</a>.</li>
+          <li><a lt="commit an automatic base">자동 기본 문자 커밋</a>을 위한 단계들을 수행합니다.</li>
+          <li><a lt="commit the base range">기본 범위 커밋</a>을 위한 단계들을 수행합니다.</li>
           <li>
-            If <var>current annotations</var> is empty, set <var>current annotations range
-            start</var> to the value of <var>index</var>.
+            <var>current annotations</var>가 비어있다면, <var>current annotations range
+            start</var>를 <var>index</var>의 값으로 설정합니다.
           </li>
           <li>
-            Create a new DOM range whose <a lt="range start">start</a> is the
-            <a lt="range bp">boundary point</a> (<var>root</var>,
-            <var>index</var>) and whose <a lt="range end">end</a> is the <a lt="range bp">boundary point</a> (<var>root</var>, <var>index</var> plus
-            one), and append it at the end of <var>current annotations</var>.
+            <a lt="range start">시작점</a>이 <a lt="range bp">경계점</a> (<var>root</var>, 
+            <var>index</var>)이고, <a lt="range end">종료점</a>이 <a lt="range bp">경계점</a> 
+            (<var>root</var>, <var>index</var> + 1)인 새로운 DOM 범위를 생성하고, 그것을 
+            <var>current annotations</var>의 끝에 추가(append)합니다.
           </li>
           <li>
-            Increment <var>index</var> by one and jump to the step labelled <i>process a ruby
-            child</i>.
-          </li>
-        </ol>
-      </li>
-      <li>
-        If <var>current child</var> is an <{rtc}> element, then run these
-        substeps:
-        <ol>
-          <li>Run the steps to <a>commit an automatic base</a>.</li>
-          <li>Run the steps to <a>commit the base range</a>.</li>
-          <li>Run the steps to <a>commit current annotations</a>.</li>
-          <li>
-            Create a new <a>ruby annotation container</a>. It is described by the list of
-            annotations returned by running the steps to <a>process an <code>rtc</code>
-            element</a> and a DOM range whose <a lt="range start">start</a> is
-            the <a lt="range bp">boundary point</a> (<var>root</var>,
-            <var>index</var>) and whose <a lt="range end">end</a> is the <a lt="range bp">boundary point</a> (<var>root</var>, <var>index</var> plus
-            one). Append this new <a>ruby annotation container</a> at the end of <var>current
-            annotation containers</var>.
-          </li>
-          <li>
-            Increment <var>index</var> by one and jump to the step labelled <i>process a ruby
-            child</i>.
+            <var>index</var>을 1 증가시키고 <i>자식 루비 처리</i>로 라벨링 된 단계로 건너뜁니다.
           </li>
         </ol>
       </li>
       <li>
-        If <var>current child</var> is a {{Text}} node and is <a>inter-element
-        whitespace</a>, then run these substeps:
+        <var>current child</var>가 <{rtc}> 요소(element)라면, 이 하위 단계들을 수행합니다:
         <ol>
+          <li><a lt="commit an automatic base">자동 기본 문자 커밋</a>을 위한 단계들을 수행합니다.</li>
+          <li><a lt="commit the base range">기본 범위 커밋</a>을 위한 단계들을 수행합니다.</li>
+          <li><a lt="commit current annotations">현재 주석들 커밋</a>을 위한 단계들을 수행합니다.</li>
           <li>
-            If <var>current annotations</var> is not empty, increment <var>index</var> by one and
-            jump to the step labelled <i>process a ruby child</i>.
+            새로운 <a lt="ruby annotation container">루비 주석 컨테이너</a>를 생성합니다. 그것은 
+            <a lt="range start">시작점</a>이 <a lt="range bp">경계점</a> (<var>root</var>, 
+            <var>index</var>)이고 <a lt="range end">종료점</a>이 <a lt="range bp">경계점</a> 
+            (<var>root</var>, <var>index</var> + 1)인 DOM 범위와 
+            <a lt="process an rtc element"><code>rtc</code> 요소(element)를 처리</a>하기 위한 
+            단계들을 수행하여 반환된 주석들의 목록에 의해 형성됩니다. 이 새로운 
+            <a lt="ruby annotation container">루비 주석 컨테이너</a>를 
+            <var>current annotation containers</var>의 끝에 추가(append)합니다.
           </li>
           <li>
-            Run the following substeps:
+            <var>index</var>를 1 증가시키고 <i>자식 루비 처리</i>로 라벨링 된 단계로 건너뜁니다.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <var>current child</var>가 {{Text}} 노드이고,
+        <a lt="inter-element whitespace">요소(element) 간 여백</a>이라면, 이 하위 단계들을 수행합니다:
+        <ol>
+          <li>
+            <var>current annotations</var>가 비어있지 않다면, <var>index</var>를 1 증가시키고
+            <i>자식 루비 처리</i>로 라벨링 된 단계로 건너뜁니다.
+          </li>
+          <li>
+            다음 하위 단계들을 수행합니다:
             <ol>
-              <li>Let <var>lookahead index</var> be set to the value of <var>index</var>.</li>
-              <li><i>Peek ahead</i>: Increment <var>lookahead index</var> by one.</li>
+              <li><var>lookahead index</var>를 <var>index</var>의 값으로 설정합니다.</li>
+              <li><i>미리 보기</i>: <var>lookahead index</var>를 1 증가시킵니다.</li>
               <li>
-                If <var>lookahead index</var> is equal to or greater than the number of
-                child nodes in <var>root</var>, then abort these substeps.
+                <var>lookahead index</var>가 <var>root</var> 내의 자식 노드들의 수보다 크거나 같다면
+                이 하위 단계들을 중단합니다.
               </li>
               <li>
-                Let <var>peek child</var> be the <var>lookahead index</var>th node in
-                <var>root</var>.
+                <var>peek child</var>를 <var>root</var> 내 <var>lookahead index</var>번째 노드로 
+                둡니다.
               </li>
               <li>
-                If <var>peek child</var> is a {{Text}} node and is <a>inter-element
-                whitespace</a>, then jump to the step labelled <i>peek ahead</i>.
+                <var>peek child</var>가 {{Text}} 노드이고 
+               <a lt="inter-element whitespace">요소(element) 간 여백</a>이라면, <i>미리 보기</i>로
+			   라벨링 된 단계로 건너뜁니다.
               </li>
               <li>
-                If <var>peek child</var> is an <{rt}> element, an
-                <{rtc}> element, or an <{rp}> element, then set
-                <var>index</var> to the value of <var>lookahead index</var> and jump to the step
-                labelled <i>process a ruby child</i>.
+                <var>peek child</var>가 <{rt}> 요소(element), 또는 <{rtc}> 요소(element), 또는 
+                <{rp}> 요소(element)라면, <var>index</var>를 <var>lookahead index</var>의 값으로 
+                설정하고 <i>자식 루비 처리</i>로 라벨링 된 단계로 건너뜁니다.
               </li>
             </ol>
           </li>
         </ol>
       </li>
       <li>
-        If <var>current annotations</var> is not empty or if <var>current annotation
-        containers</var> is not empty, then run the steps to <a>commit a ruby segment</a>.
+        <var>current annotations</var>가 비어있지 않거나 <var>current annotation containers</var>가 
+        비어있지 않다면, <a lt="commit a ruby segment">루비 세그먼트 커밋</a>을 위한 단계들을 
+        수행합니다.
       </li>
       <li>
-        If <var>current child</var> is an <{rb}> element, then run these substeps:
+        <var>current child</var>가 <{rb}> 요소(element)라면, 이 하위 단계들을 수행합니다:
         <ol>
-          <li>Run the steps to <a>commit an automatic base</a>.</li>
+          <li><a lt="commit an automatic base">자동 기본 문자 커밋</a>을 위한 단계를 수행합니다.</li>
           <li>
-            If <var>current bases</var> is empty, then set <var>current bases range start</var> to
-            the value of <var>index</var>.
+            <var>current bases</var>가 비어있다면, <var>current bases range start</var>를
+            <var>index</var>의 값으로 설정합니다.
           </li>
           <li>
-            Create a new DOM range whose <a lt="range start">start</a> is the
-            <a lt="range bp">boundary point</a> (<var>root</var>,
-            <var>index</var>) and whose <a lt="range end">end</a> is the <a lt="range bp">boundary point</a> (<var>root</var>, <var>index</var> plus
-            one), and append it at the end of <var>current bases</var>.
+            <a lt="range start">시작점</a>이 <a lt="range bp">경계점</a> (<var>root</var>, 
+            <var>index</var>)이고, <a lt="range end">종료점</a>이 <a lt="range bp">경계점</a> 
+            (<var>root</var>, <var>index</var> + 1)인 새로운 DOM 범위를 생성하고, 
+            <var>current bases</var>의 끝에 추가(append)합니다.
           </li>
           <li>
-            Increment <var>index</var> by one and jump to the step labelled <i>process a ruby
-            child</i>.
+            <var>index</var>를 1 증가시키고 <i>자식 루비 처리</i>로 라벨링 된 단계로 건너뜁니다.
             </li>
         </ol>
       </li>
       <li>
-        If <var>current automatic base nodes</var> is empty, set <var>current automatic base range
-        start</var> to the value of <var>index</var>.
+        <var>current automatic base nodes</var>가 비어있다면, 
+        <var>current automatic base range start</var>를 <var>index</var>의 값으로 설정합니다.
       </li>
       <li>
-        Append <var>current child</var> at the end of <var>current automatic base nodes</var>.
+        <var>current child</var>를 <var>current automatic base nodes</var>의 끝에 추가(append) 합니다.
       </li>
       <li>
-        Increment <var>index</var> by one and jump to the step labelled <i>process a ruby
-        child</i>.
-      </li>
-    </ol>
-
-      When the steps above say to <dfn>commit a ruby segment</dfn>, it means to run the
-      following steps at that point in the algorithm:
-
-    <ol>
-      <li>Run the steps to <a>commit an automatic base</a>.</li>
-      <li>
-        If <var>current bases</var>, <var>current annotations</var>, and <var>current annotation
-        containers</var> are all empty, abort these steps.
-      </li>
-      <li>Run the steps to <a>commit the base range</a>.</li>
-      <li>Run the steps to <a>commit current annotations</a>.</li>
-      <li>
-        Create a new <a>ruby segment</a>. It is described by a list of bases set to
-        <var>current bases</var>, a base DOM range set to <var>current bases range</var>, and a
-        list of <a>ruby annotation containers</a>
-        that are the <var>current annotation containers</var> list. Append this new
-        <a>ruby segment</a> at the end of <var>ruby segments</var>.
-      </li>
-      <li>Let <var>current bases</var> be an empty list.</li>
-      <li>Let <var>current bases range</var> be null.</li>
-      <li>Let <var>current bases range start</var> be null.</li>
-      <li>Let <var>current annotation containers</var> be an empty list.</li>
-    </ol>
-
-      When the steps above say to <dfn>commit the base range</dfn>, it means to run the following
-      steps at that point in the algorithm:
-
-    <ol>
-      <li>If <var>current bases</var> is empty, abort these steps.</li>
-      <li>If <var>current bases range</var> is not null, abort these steps.</li>
-      <li>
-        Let <var>current bases range</var> be a DOM range whose <a lt="range start">start</a> is the <a lt="range bp">boundary
-        point</a> (<var>root</var>, <var>current bases range start</var>) and whose <a lt="range end">end</a> is the <a lt="range bp">boundary
-        point</a> (<var>root</var>, <var>index</var>).
+        <var>index</var>를 1 증가시키고 <i>자식 루비 처리</i>로 라벨링 된 단계로 건너뜁니다.
       </li>
     </ol>
 
-      When the steps above say to <dfn>commit current annotations</dfn>, it means to run the
-      following steps at that point in the algorithm:
+      위 단계가 <dfn lt="commit a ruby segment">루비 세그먼크 커밋</dfn>에 응하는 경우, 알고리즘 
+      내의 그 지점에서 다음 단계들을 수행함을 의미합니다:
 
     <ol>
+      <li><a lt="commit an automatic base">자동 기본 문자 커밋</a>을 위한 단계를 수행합니다.</li>
       <li>
-        If <var>current annotations</var> is not empty and <var>current annotations range</var> is
-        null let <var>current annotations range</var> be a DOM range whose <a lt="range start">start</a> is the <a lt="range bp">boundary
-        point</a> (<var>root</var>, <var>current annotations range start</var>) and whose <a lt="range end">end</a> is the <a lt="range bp">boundary
-        point</a> (<var>root</var>, <var>index</var>).
+        <var>current bases</var>, <var>current annotations</var>, <var>current annotation
+        containers</var>가 모두 비어있다면, 이 단계들을 중단합니다.
       </li>
+      <li><a lt="commit the base range">기본 범위 커밋</a>을 위한 단계들을 수행합니다.</li>
+      <li><a lt="commit current annotations">현재 주석들 커밋</a>을 위한 단계들을 수행합니다.</li>
       <li>
-        If <var>current annotations</var> is not empty, create a new <a>ruby annotation
-        container</a>. It is described by an annotations list set to <var>current
-        annotations</var> and a range set to <var>current annotations range</var>. Append this new
-        <a>ruby annotation container</a> at the end of <var>current annotation
-        containers</var>.
+        새로운 <a lt="ruby segment">루비 세그먼트</a>를 생성합니다. 이것은 
+        <var>current bases</var>으로 설정된 기본 문자들의 목록과, <var>current bases range</var>로 
+        설정된 DOM 범위와, <var>current annotation containers</var> 목록인 
+        <a lt="ruby annotation containers">루비 주석 컨테이너들</a>의 목록에 의해 기술됩니다. 이 
+        새로운 <a lt="ruby segment">루비 세그먼트</a>를 <var>ruby segments</var>의 끝에 추가(append) 
+        합니다.
       </li>
-      <li>Let <var>current annotations</var> be an empty list of DOM ranges.</li>
-      <li>Let <var>current annotations range</var> be null.</li>
-      <li>Let <var>current annotations range start</var> be null.</li>
+      <li><var>current bases</var>를 빈 목록으로 둡니다.</li>
+      <li><var>current bases range</var>를 null로 둡니다.</li>
+      <li><var>current bases range start</var>를 null로 둡니다.</li>
+      <li><var>current annotation containers</var>를 빈 목록으로 둡니다.</li>
     </ol>
 
-      When the steps above say to <dfn>commit an automatic base</dfn>, it means to run the
-      following steps at that point in the algorithm:
+      위 단계들이 <dfn lt="commit the base range">기본 범위 커밋</dfn>에 응하는 경우, 이는 알고리즘 
+      내의 그 지점에서 다음 단계들을 수행함을 의미합니다:
+
+    <ol>
+      <li><var>current bases</var>가 비어있다면, 이 단계들을 중단합니다.</li>
+      <li><var>current bases range</var>가 null이 아니라면, 이 단계들을 중단합니다.</li>
+      <li>
+        <var>current bases range</var>를 <a lt="range start">시작점</a>이 <a lt="range bp">경계점</a> 
+        (<var>root</var>, <var>current bases range start</var>)이고 <a lt="range end">종료점</a>이 
+        <a lt="range bp">경계점</a> (<var>root</var>, <var>index</var>)인 DOM 범위로 둡니다.
+      </li>
+    </ol>
+
+      위 단계들이 <dfn lt="commit current annotations">현재 주석들 커밋</dfn>에 응하는 경우, 이는 
+      알고리즘내의 그 지점에서 다음 단계들을 수행함을 의미합니다:
 
     <ol>
       <li>
-        If <var>current automatic base nodes</var> is empty, abort these steps.
+        <var>current annotations</var>이 비어있지 않고 <var>current annotations range</var>가 null 
+        이라면 <var>current annotations range</var>를 <a lt="range start">시작점</a>이 
+        <a lt="range bp">경계점</a> (<var>root</var>, <var>current annotations range start</var>)이고 
+        <a lt="range end">종료점</a>이 <a lt="range bp">경계점</a> (<var>root</var>, <var>index</var>)인 
+        DOM 범위로 둡니다.
       </li>
       <li>
-        If <var>current automatic base nodes</var> contains nodes that are not {{Text}}
-        nodes, or {{Text}} nodes that are not <a>inter-element whitespace</a>, then
-        run these substeps:
+        <var>current annotations</var>가 비어 있지 않다면, 새로운 
+        <a lt="ruby annotation container">루비 주석 컨테이너</a>를 생성합니다. 이것은 
+        <var>current annotations</var>로 설정된 주석 목록과 <var>current annotations range</var>로 
+        설정 된 범위에 의해 기술됩니다. 이 새로운 
+        <a lt="ruby annotation container">루비 주석 컨테이너</a>를 
+        <var>current annotation containers</var>의 끝에 추가(append) 합니다.
+      </li>
+      <li><var>current annotations</var>를 DOM 범위의 빈 목록으로 둡니다.</li>
+      <li><var>current annotations range</var>를 null로 둡니다.</li>
+      <li><var>current annotations range start</var>를 null로 둡니다.</li>
+    </ol>
+
+      위 단계들이 <dfn lt="commit an automatic base">자동 기본 문자 커밋</dfn>에 응하는 경우, 이는 
+      알고리즘내의 그 지점에서 다음 단계들을 수행함을 의미합니다:
+
+    <ol>
+      <li>
+        <var>current automatic base nodes</var>가 비어있다면, 이 단계들을 중단합니다.
+      </li>
+      <li>
+        <var>current automatic base nodes</var>가 {{Text}} 노드들이 아닌 노드들이나 
+        <a lt="inter-element whitespace">요소(element) 간 여백</a>이 아닌 {{Text}} 노드들을 포함한다면, 
+        이 하위 단계들을 수행합니다:
         <ol>
           <li>
-            It <var>current bases</var> is empty, set <var>current bases range start</var> to the
-            value of <var>current automatic base range start</var>.
+            <var>current bases</var>가 비어있다면, <var>current bases range start</var>를 
+            <var>current automatic base range start</var>의 값으로 설정합니다.
           </li>
           <li>
-            Create a new DOM range whose <a lt="range start">start</a> is the
-            <a lt="range bp">boundary point</a> (<var>root</var>, <var>current
-            automatic base range start</var>) and whose <a lt="range end">end</a>
-            is the <a lt="range bp">boundary point</a> (<var>root</var>,
-            <var>index</var>), and append it at the end of <var>current bases</var>.
+            <a lt="range start">시작점</a>이 <a lt="range bp">경계점</a> (<var>root</var>, 
+            <var>current automatic base range start</var>)이고 <a lt="range end">종료점</a>이 
+            <a lt="range bp">경계점</a> (<var>root</var>, <var>index</var>)인 새로운 DOM 범위를 
+            생성하고, 그것을 <var>current bases</var>의 끝에 추가(append) 합니다.
           </li>
         </ol>
-        </li><li>Let <var>current automatic base nodes</var> be an empty list of DOM Nodes.</li>
-        <li>Let <var>current automatic base range start</var> be null.</li>
+        </li><li><var>current automatic base nodes</var>를 DOM 노드들의 빈 목록으로 둡니다.</li>
+        <li><var>current automatic base range start</var>를 null로 둡니다.</li>
 
     </ol>
   </div>
 
-<h4 id="the-rb-element">The <dfn element><code>rb</code></dfn> element</h4>
+<h4 id="the-rb-element"><dfn element><code>rb</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd>None.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>As a child of a <{ruby}> element.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd>없음.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><{ruby}> 요소(element)의 자식으로.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
     <dd>
-      An <{rb}> element's <a>end tag</a> may be omitted if the <{rb}> element is
-      immediately followed by an <{rb}>, <{rt}>, <code>rtc</code> or
-      <{rp}> element, or if there is no more content in the parent element.
+      <{rb}> 요소(element)의 <a lt="end tag">종료 태그</a>는 <{rb}> 요소(element)에 즉시<{rb}>, 
+      <{rt}>, <code>rtc</code>, 또는 <{rp}> 요소(element)가 뒤따르거나, 부모 요소(element)에 더 
+      이상의 콘텐트가 존재하지 않는다면 생략될 수 있습니다.
     </dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-    The <{rb}> element marks the base text component of a ruby annotation. When it is
-    the child of a <{ruby}> element, it doesn't <a>represent</a> anything itself, but its parent <code>ruby</code>
-    element uses it as part of determining what <em>it</em> <a>represents</a>.
+    <{rb}> 요소(element)는 루비 주석의 기본 텍스트 컴포넌트를 표기합니다. 이것이 <{ruby}> 
+    요소(element)의 자식인 경우, 스스로는 아무 것도 <a lt="represent">나타내지</a> 않지만, 부모 
+    <code>ruby</code> 요소(element)가 <em>그것</em>이 <a lt="represents">나타내는</a> 것을 결정하는  
+    것의 일환으로 사용합니다.
 
   <div class="impl">
-    An <{rb}> element that is not a child of a <{ruby}> element <a>represents</a>
-    the same thing as its children.
+    <{ruby}> 요소(element)의 자식이 아닌 <{rb}> 요소(element)는 그것의 자식과 동일한 것을 
+    <a lt="represents">나타냅니다</a>.
   </div>
 
-<h4 id="the-rt-element">The <dfn element><code>rt</code></dfn> element</h4>
+<h4 id="the-rt-element"><dfn element><code>rt</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd>None.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>As a child of a <code>ruby</code> or of an <{rtc}> element.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd>없음.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><code>ruby</code>나 <{rtc}> 요소(element)의 자식으로.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
     <dd>
-      An <{rt}> element's <a>end tag</a> may be omitted if the <{rt}> element is
-      immediately followed by an <{rb}>, <{rt}>, <code>rtc</code> or
-      <{rp}> element, or if there is no more content in the parent element.
+      <{rt}> 요소(element)의 <a lt="end tag">종료 태그</a>는 <{rt}> 요소(element)에 즉시 <{rb}>, 
+      <{rt}>, <code>rtc</code> 또는 <{rp}> 요소(element)가 뒤따르거나, 부모 요소(element)에 더 
+      이상의 콘텐트가 존재하지 않는다면 생략 될 수 있습니다.
     </dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{rt}> element marks the ruby text component of a ruby annotation. When it is
-  the child of a <{ruby}> element or of an <{rtc}> element that is itself
-  the child of a <{ruby}> element, it doesn't <a>represent</a> anything itself, but its ancestor <code>ruby</code>
-  element uses it as part of determining what <em>it</em> <a>represents</a>.
+  <{rt}> 요소(element)는 루비 주석의 루비 텍스트 컴포넌트를 표기합니다. 이것이 <{ruby}> 
+  요소(element)의 자식이거나 <{ruby}> 요소(element)의 자식인 <{rtc}> 요소(element)의 자식인 경우, 
+  그것은 스스로는 아무 것도 <a lt="represent">나타내지</a> 않지만, 조상 <code>ruby</code> 요소(element)가 
+  <em>그것</em>이 <a lt="represents">나타내는</a> 것을 결정하는 것의 일환으로 사용합니다.
 
   <div class="impl">
-    An <{rt}> element that is not a child of a <{ruby}> element or of an
-    <{rtc}> element that is itself the child of a <{ruby}> element
-    <a>represents</a> the same thing as its children.
+    <{ruby}> 요소(element)의 자식이 아닌 <{rt}> 요소(element)나 <{ruby}> 요소(element)의 자식 
+    <{rtc}> 요소(element)의 자식이 아닌 <{rt}> 요소(element)는 그것의 자식과 동일한 것을 
+    <a lt="represents">나타냅니다</a>.
   </div>
 
-<h4 id="the-rtc-element">The <dfn element><code>rtc</code></dfn> element</h4>
+<h4 id="the-rtc-element"><dfn element><code>rtc</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd>None.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>As a child of a <{ruby}> element.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>, <{rt}>, or <{rp}> elements.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd>없음.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><{ruby}> 요소(element)의 자식으로.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Phrasing content">어구(phrasing) 콘텐트</a>, <{rt}>, <{rp}> 요소(element)들.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
     <dd>
-      An <{rtc}> element's <a>end tag</a> may be omitted if the <{rtc}> element is
-      immediately followed by an <code>rb</code> or <{rtc}> element, or if there is no more
-      content in the parent element.
+      <{rtc}> 요소(element)의 <a lt="end tag">종료 태그</a>는 <{rtc}> 요소(element)에 
+      <code>rb</code>나 <{rtc}> 요소(element)가 즉시 뒤따르거나 부모 요소(element)에 더 이상의 
+      콘텐트가 없다면 생략 할 수 있습니다.
     </dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{rtc}> element marks a <a>ruby text container</a> for ruby text components
-  in a ruby annotation. When it is the child of a <{ruby}> element it doesn't <a>represent</a> anything itself, but its parent <{ruby}> element
-  uses it as part of determining what <em>it</em> <a>represents</a>.
+  <{rtc}> 요소(element)는 루비 주석 내 루비 텍스트 컴포넌트들에 대한 
+  <a lt="ruby text container">루비 텍스트 컨테이너</a>를 표기합니다. 이것이 <{ruby}> 요소(element)의 
+  자식인 경우, 그것은 스스로는 아무 것도 <a lt="represent">나타내지</a> 않지만, 조상 
+  <code>ruby</code> 요소(element)가 <em>그것</em>이 <a lt="represents">나타내는</a> 것을 결정하는 
+  것의 일환으로 사용합니다.
 
   <div class="impl">
 
-      An <{rtc}> element that is not a child of a <{ruby}> element
-      <a>represents</a> the same thing as its children.
+      <{ruby}> 요소(element)의 자식이 아닌 <{rtc}> 요소(element)는 그것의 자식과 동일한 것을 
+      <a lt="represents">나타냅니다</a>.
 
-      When an <{rtc}> element is processed as part of the segmentation and
-      categorization of content for a <{ruby}> element, the following algorithm
-      defines how to <dfn>process an <{rtc}> element</dfn>:
+      <{rtc}> 요소(element)가 <{ruby}> 요소(element)에 대한 콘텐트의 분할과 분류의 일부로 처리되는 
+      경우, 다음 알고리즘은 <dfn lt="process an rtc element"><{rtc}> 요소(element)를 처리</dfn>하는 
+      방법을 정의합니다:
 
     <ol>
       <li>
-        Let <var>root</var> be the <{rtc}> element for which the algorithm is
-        being run.
+        <var>root</var>를 알고리즘이 수행되는 <{rtc}> 요소(element)로 둡니다.
         </li>
-      <li>Let <var>index</var> be 0.</li>
-      <li>Let <var>annotations</var> be an empty list of DOM ranges.</li>
-      <li>Let <var>current automatic annotation nodes</var> be an empty list of DOM nodes.</li>
-      <li>Let <var>current automatic annotation range start</var> be null.</li>
+      <li><var>index</var>를 0으로 둡니다.</li>
+      <li><var>annotations</var>를 DOM 범위들의 빈 목록으로 둡니다.</li>
+      <li><var>current automatic annotation nodes</var>를 DOM 범위들의 빈 목록으로 둡니다.</li>
+      <li><var>current automatic annotation range start</var>를 null로 둡니다.</li>
       <li>
-        <i>Process an rtc child</i>: If <var>index</var> is equal to or greater than the number of
-        child nodes in <var>root</var>, then run the steps to <a>commit an automatic
-        annotation</a>, return <var>annotations</var>, and abort these steps.
+        <i>rtc 자식 처리</i>: <var>index</var>가 <var>root</var> 내 자식 노드들의 수보다 크거나 같다면, 
+        <a lt="commit an automatic annotation">자동 주석 커밋</a>을 위한 단계들을 수행하고, 
+        <var>annotations</var>를 반환하고, 이 단계들을 중단합니다.
       </li>
       <li>
-        Let <var>current child</var> be the <var>index</var>th node in <var>root</var>.
+        <var>current child</var>를 <var>root</var>내 <var>index</var>번째 노드로 둡니다.
       </li>
       <li>
-        If <var>current child</var> is an <{rt}> element, then run these substeps:
+        <var>current child</var>가 <{rt}> 요소(element)라면, 이 하위 단계들을 수행합니다:
         <ol>
-          <li>Run the steps to <a>commit an automatic annotation</a>.</li>
+          <li><a lt="commit an automatic annotation">자동 주석 커밋</a>을 위한 단계들을 수행합니다.</li>
           <li>
-            Create a new DOM range whose <a lt="range start">start</a> is the
-            <a lt="range bp">boundary point</a> (<var>root</var>,
-            <var>index</var>) and whose <a lt="range end">end</a> is the <a lt="range bp">boundary point</a> (<var>root</var>, <var>index</var> plus
-            one), and append it at the end of <var>annotations</var>.
+            <a lt="range start">시작점</a>이 <a lt="range bp">경계점</a> (<var>root</var>, 
+            <var>index</var>)이고, <a lt="range end">종료점</a>이 <a lt="range bp">경계점</a> 
+            (<var>root</var>, <var>index</var> + 1)인 새로운 DOM 범위를 생성하고, 그것을 
+            <var>annotations</var>에 추가(append) 합니다.
           </li>
           <li>
-            Increment <var>index</var> by one and jump to the step labelled <i>process an rtc
-            child</i>.
+            <var>index</var>를 하나 증가시키고 <i>rtc 자식 처리</i>로 라벨링 된 단계로 건너뜁니다.
           </li>
         </ol>
       </li>
       <li>
-        If <var>current automatic annotation nodes</var> is empty, set <var>current automatic
-        annotation range start</var> to the value of <var>index</var>.
+        <var>current automatic annotation nodes</var>가 비어있다면, <var>current automatic
+        annotation range start</var>를 <var>index</var>의 값으로 설정합니다.
       </li>
       <li>
-        Append <var>current child</var> at the end of <var>current automatic annotation
-        nodes</var>.
+        <var>current child</var>를 <var>current automatic annotation nodes</var>의 끝에 추가(append)
+        합니다.
       </li>
       <li>
-        Increment <var>index</var> by one and jump to the step labelled <i>process an rtc
-        child</i>.
+        <var>index</var>를 하나 증기시키고 <i>rtc 자식 처리</i>로 라벨링 된 단계로 건너뜁니다.
       </li>
     </ol>
 
-      When the steps above say to <dfn>commit an automatic annotation</dfn>, it means to run the
-      following steps at that point in the algorithm:
+      위 단계들이 <dfn lt="commit an automatic annotation">자동 주석 커밋</dfn>에 응하는 경우, 이는 
+      알고리즘 내의 그 지점에서 다음 단계들을 수행함을 의미합니다:
 
     <ol>
       <li>
-        If <var>current automatic annotation nodes</var> is empty, abort these steps.
+        <var>current automatic annotation nodes</var>가 비어있다면, 이 단계들을 중단합니다.
       </li>
       <li>
-        If <var>current automatic annotation nodes</var> contains nodes that are not
-        {{Text}} nodes, or {{Text}} nodes that are not <a>inter-element
-        whitespace</a>, then create a new DOM range whose <a lt="range start">start</a> is the <a lt="range bp">boundary
-        point</a> (<var>root</var>, <var>current automatic annotation range start</var>) and
-        whose <a lt="range end">end</a> is the <a lt="range bp">boundary point</a> (<var>root</var>, <var>index</var>), and
-        append it at the end of <var>annotations</var>.
+        <var>current automatic annotation nodes</var>가 {{Text}} 노드들이 아닌 노드들이나 
+        <a lt="inter-element whitespace">요소(element) 간 여백</a>이 아닌 {{Text}} 노드들을 포함한다면, 
+        <a lt="range start">시작점</a>이 <a lt="range bp">경계점</a> (<var>root</var>, 
+        <var>current automatic annotation range start</var>)이고 <a lt="range end">종료점</a>이 
+        <a lt="range bp">경계점</a> (<var>root</var>, <var>index</var>)인 새로운 DOM 범위를 생성하고, 
+        그것을 <var>annotations</var>의 끝에 추가(append) 합니다.
       </li>
-      <li>Let <var>current automatic annotation nodes</var> be an empty list of DOM nodes.</li>
-      <li>Let <var>current automatic annotation range start</var> be null.</li>
+      <li><var>current automatic annotation nodes</var>를 DOM 노드들의 빈 목록으로 둡니다.</li>
+      <li><var>current automatic annotation range start</var>를 null로 둡니다.</li>
     </ol>
   </div>
 
-<h4 id="the-rp-element">The <dfn element><code>rp</code></dfn> element</h4>
+<h4 id="the-rp-element"><dfn element><code>rp</code></dfn> 요소(element)</h4>
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd>None.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd>없음.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
     <dd>
-      As a child of a <code>ruby</code> or <{rtc}> element, either immediately before or
-      immediately after an <code>rt</code> or <{rtc}> element, but not between
-      <{rt}> elements.
+      <code>ruby</code>나 <{rtc}> 요소(element)의 자식으로, <{rt}> 요소(element)들 사이가 아닌, 
+      <code>rt</code>나 <{rtc}> 요소(element)의 바로 앞 또는 바로 뒤.
     </dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>An <{rp}> element's <a>end tag</a> may be omitted
-    if the <{rp}> element is immediately followed by an <{rb}>, <{rt}>,
-    <code>rtc</code> or <{rp}> element, or if there is no more content in the parent
-    element.</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd><{rp}> 요소(element)의 <a lt="end tag">종료 태그</a>는 <{rp}> 요소(element)에 <{rb}>, 
+    <{rt}>, <code>rtc</code>, 또는 <{rp}> 요소(element)가 즉시 뒤따르거나, 부모 요소(element)에 더 
+    이상의 콘텐트가 없다면 생략 가능합니다.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-    The <{rp}> element is used to provide fallback text to be shown by user agents that
-    don't support ruby annotations. One widespread convention is to provide parentheses around
-    the ruby text component of a ruby annotation.
+    <{rp}> 요소(element)는 루비 주석을 지원하지 않는 유저 에이전트들에 의해 보여지는 폴백 텍스트를 
+    제공하는데 사용됩니다. 광범위한 한 가지 규칙은 루비 주석의 루비 텍스트 컴포넌트 주위에 괄호들을 
+    제공하는 것입니다.
 
-    The contents of the <{rp}> elements are typically not displayed by user agents
-    which do support ruby annotations
+    <{rp}> 요소(element)들의 콘텐츠는 일반적으로 루비 주석을 지원하는 유저 에이전트들에 의해 
+    표시되지 않습니다.
 
-    An <{rp}> element <span class="impl">that is a child of a <code>ruby</code>
-    element</span> <a>represents</a> nothing. <span class="impl">An <code>rp</code>
-    element whose parent element is not a <{ruby}> element <a>represents</a> its
-    children.</span>
+    <span class="impl"><code>ruby</code> 요소(element)의 자식인</span> <{rp}> 요소(element)는 아무 
+    것도 <a lt="represents">나타내지</a> 않습니다. <span class="impl">부모 요소(element)가 <{ruby}> 
+    요소(element)가 아닌 <{rp}> 요소(element)는 그것의 자식을 <a lt="represents">나타냅니다</a>.</span>
 
-    The example shown previously, in which each ideograph in the text <span lang="ja">漢字</span> is annotated with its phonetic reading, could be expanded
-    to use <code>rp</code> so that in legacy user agents the readings are in parentheses (please
-    note that white space has been introduced into this example in order to make it more
-    readable):
+    텍스트 <span lang="ja">漢字</span> 내의 각 표음 문자에 음독으로 주석이 달린 앞서 보여진 예제는 
+    레거시 유저 에이전트들에서 음독이 괄호 안에 있도록 <code>rp</code>를 사용하도록 확장 될 수 
+    있습니다 (더 나은 가독성을 만들기 위해 여백이 이 예제에 도입되는 것에 주목하세요):
 
   <div class="example"><pre lang="ja">...
 &lt;ruby&gt;
@@ -1726,15 +1712,15 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
 ...
   </pre></div>
 
-    In conforming user agents the rendering would be as above, but in user agents that do not
-    support ruby, the rendering would be:
+    규범을 준수하는 유저 에이전트들에서 렌더링은 위와 같을 것이지만, 루비를 지원하지 않는 유저 
+    에이전트들에서는 렌더링이 다음과 같을 것입니다:
 
   <div class="example"><pre lang="ja">... 漢字 (かんじ) ...</pre></div>
 
-    When there are multiple annotations for a segment, <{rp}> elements can also be
-    placed between the annotations. Here is another copy of an earlier contrived example showing
-    some symbols with names given in English and French using double-sided annotations, but this
-    time with <{rp}> elements as well:
+    하나의 세그먼트에 대해 여러 주석들이 존재하는 경우, <{rp}> 요소(element)들은 또한 주석들 사이에 
+    배치될 수 있습니다. 여기 양쪽 주석들을 사용하는 영어와 프랑스어로 주어진 이름들을 가지고 일부 
+    기호들을 보여주지만 이번에는 <{rp}> 요소(element)도 가지는, 앞선 부자연스러운 사례의 다른 사본이 
+    있습니다:
 
   <div class="example">
     <pre highlight="html">
@@ -1746,7 +1732,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </pre>
   </div>
 
-    This would make the example render as follows in non-ruby-capable user agents:
+    이것은 루비가 호환되지 않는 유저 에이전드들에서 다음과 같은 예제 표현을 만들것입니다:
 
   <div class="example">
     <pre highlight="html">
@@ -1756,29 +1742,28 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </pre>
   </div>
 
-<h4 id="the-data-element">The <dfn element><code>data</code></dfn> element</h4>
+<h4 id="the-data-element"><dfn element><code>data</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>value</code> - Machine-readable value </dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>value</code> - 기계가 해석할 수 있는 값 </dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLDataElement">
         interface HTMLDataElement : HTMLElement {
@@ -1788,62 +1773,59 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </dd>
   </dl>
 
-  The <{data}> element <a>represents</a> its contents, along with a
-  machine-readable form of those contents in the <code>value</code>
-  attribute.
+  <{data}> 요소(element)는 <code>value</code> 속성(attribute)에 있는 기계가 해석할 수 있는 콘텐츠의 
+  형식과 함께, 그것의 콘텐츠를 <a lt="represents">나타냅니다</a>.
 
-  The <dfn element-attr for="data"><code>value</code></dfn> attribute must be present. Its value
-  must be a representation of the element's contents in a machine-readable format.
+  <dfn element-attr for="data"><code>value</code></dfn> 속성(attribute)은 반드시 존재해야(must) 
+  합니다. 그것의 값은 기계가 해석 할 수 있는 형식으로 요소(element)의 콘텐츠의 표현이어야(must) 합니다.
 
   <p class="note">
-    When the value is date- or time-related, the more specific <code>time</code>
-  element can be used instead.
+    값이 날짜 혹은 시간 관련인 경우, 더 명시적인 <code>time</code> 요소(element)가 대신 사용될 수 
+    있습니다.
   </p>
 
-  The element can be used for several purposes.
+  요소(element)는 몇 가지 목적들에 사용 될 수 있습니다.
 
-  When combined with microformats or microdata,
-  the element serves to provide both a machine-readable value for the purposes
-  of data processors, and a human-readable value for the purposes of rendering in a Web browser. In
-  this case, the format to be used in the <code>value</code> attribute is
-  determined by the microformats or microdata vocabulary in use.
+  마이크로포맷들이나 마이크로데이터와 결합된 경우, 요소(element)는 데이터 처리기의 목적들을 위한 
+  기계가 해석 할 수 있는 값과, 웹 브라우저에서의 표현 목적을 위한 사람이 읽을 수 있는 값 모두를 
+  제공하는데 도움을 줍니다. 이 경우,  <code>value</code> 속성(attribute) 내에 사용되는 형식은 
+  사용되고 있는 마이크로포맷들이나 마이크로데이터에 의해 결정됩니다.
 
-  The element can also, however, be used in conjunction with scripts in the page, for when a
-  script has a literal value to store alongside a human-readable value. In such cases, the format to
-  be used depends only on the needs of the script. (The <code>data-*</code>
-  attributes can also be useful in such situations.)
+  하지만, 요소(element)는 또한 스크립트가 사람이 읽을 수 있는 값과 함께 저장하기 위한 리터럴 값을 
+  가지는 경우에 대해, 페이지에서 스크립트와 함께 사용 될 수 있습니다. 그러한 경우에, 사용되는 형식은 
+  오직 스크립트의 요구에 의존됩니다. (<code>data-*</code> 속성(attribute)들은 또한 그러한 상황에서 
+  유용할 수 있습니다.)
 
   <div class="impl">
 
-  The <dfn attribute for="HTMLDataElement"><code>value</code></dfn> IDL attribute must
-  <a>reflect</a> the content attribute of the same name.
+  <dfn attribute for="HTMLDataElement"><code>value</code></dfn> IDL 속성(attribute)은 동일한 이름의 
+  콘텐트 속성(attribute)을 <a lt="reflect">반영</a>해야(must) 합니다.
 
   </div>
 
-<h4 id="the-time-element">The <dfn element><code>time</code></dfn> element</h4>
+<h4 id="the-time-element"><dfn element><code>time</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd>If the element has a <code>datetime</code> attribute: <a>Phrasing content</a>.</dd>
-    <dd>Otherwise: <a>Text</a> , but must match requirements described in prose below.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>datetime</code> - Machine-readable value</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd>요소(element)가 <code>datetime</code> 속성(attribute:)를 가진다면: <a lt="phrasing content">어구(phrasing) 콘텐트</a></dd>
+    <dd>그렇지 않으면: 아래 본문에 기술된 요구사항들에 일치해야(must) 하는 <a lt="Text">텍스트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>datetime</code> - 기계가 해석 할 수 있는 값</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLTimeElement">
         interface HTMLTimeElement : HTMLElement {
@@ -1853,30 +1835,29 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     </dd>
   </dl>
 
-  The <{time}> element <a>represents</a> its contents, along with a
-  machine-readable form of those contents in the <code>datetime</code>
-  attribute. The kind of content is limited to various kinds of dates, times, time-zone offsets, and
-  durations, as described below.
+  <{time}> 요소(element)는 <code>datetime</code> 속성(attribute)의 기계가 해석 할 수 있는 그 
+  콘텐츠의 형식과 함께, 그것의 콘텐츠를 <a lt="represents">나타냅니다</a>. 콘텐츠의 종류는 다양한 
+  날짜들, 시간들, 표준 시간대들, 기간들, 아래 설명된 것들에 한정됩니다.
 
-  The <dfn element-attr for="time"><code>datetime</code></dfn> attribute may be present. If
-  present, its value must be a representation of the element's contents in a machine-readable
-  format.
+  <dfn element-attr for="time"><code>datetime</code></dfn> 속성(attribute)이 존재할 수 있습니다. 
+  존재한다면, 그것의 값은 기계가 해석 할 수 있는 형식으로 요소(element)의 콘텐츠의 표현이어야(must) 
+  합니다.
 
-  A <{time}> element that does not have a <code>datetime</code> content attribute must not have any element
-  descendants.
+  <code>datetime</code> 콘텐트 속성(attribute)을 가지지 않은 <{time}> 요소(element)는 어떤 후손 
+  요소(element)들도 가지지 않아야(must) 합니다.
 
-  The <dfn>datetime value</dfn> of a <{time}> element is the value of the element's
-  <{time/datetime}> content attribute, if it has one, otherwise the concatenation of the contents of
-  all the {{Text}} nodes that are children of the <{time}> element (ignoring any other
-  nodes such as comments or elements), in <a>tree order</a>.
+  <{time}> 요소(element)의 <dfn lt="datetime value">일시(datetime) 값</dfn>은 요소(element)의 
+  <{time/datetime}> 콘텐트 속성(attribute)의 값을 가진다면 그 값이고, 그렇지 않으면 
+  <a lt="tree order">트리 순서</a>에 따라 <{time}> 요소(element)의 자식인 모든 {{Text}} 노드들의 
+  (주석들이나 요소(element)들 같은 다른 노드들을 제외하고) 콘텐츠의 결합입니다.
 
 
-  The <a>datetime value</a> of a <{time}> element must match one of the following
-  syntaxes.
+  <{time}> 요소(element)의 <a lt="datetime value">일시(datetime) 값</a>은 다음 문법들 중 하나에 
+  일치해야(must) 합니다.
 
   <dl>
 
-    <dt>A <a>valid month string</a></dt>
+    <dt><a lt="valid month string">유효한 월 문자열</a></dt>
 
     <dd>
 
@@ -1884,7 +1865,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
 
     </dd>
 
-    <dt>A <a>valid date string</a></dt>
+    <dt><a lt="valid date string">유효한 날짜 문자열</a></dt>
 
     <dd>
 
@@ -1892,7 +1873,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
 
     </dd>
 
-    <dt>A <a>valid yearless date string</a></dt>
+    <dt><a lt="valid yearless date string">유효한 연도 없는 날짜 문자열</a></dt>
 
     <dd>
 
@@ -1900,7 +1881,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
 
     </dd>
 
-    <dt>A <a>valid time string</a></dt>
+    <dt><a lt="valid time string">유효한 시간 문자열</a></dt>
 
     <dd>
 
@@ -1910,7 +1891,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
 
     </dd>
 
-    <dt>A <a>valid floating date and time string</a></dt>
+    <dt><a lt="valid floating date and time string">유효한 변동 날짜와 시간 문자열</a></dt>
 
     <dd>
 
@@ -1922,17 +1903,17 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     <pre class="example">&lt;time&gt;2011-11-18 14:54:39.929&lt;/time&gt;</pre>
 
     <p class="note">
-    Times with dates but without a time zone offset are useful for specifying events
-    that are observed at the same specific time in each time zone, throughout a day. For example,
-    the 2020 new year is celebrated at 2020-01-01 00:00 in each time zone, not at the same precise
-    moment across all time zones. For events that occur at the same time across all time zones, for
-    example a videoconference meeting, a <a>valid global date and time string</a> is likely
-    more useful.
+    날짜는 있지만 표준 시간대가 없는 시간들은 하루 동안 각 표준 시간대 내 특정 시간에 보여지는 
+    이벤트들을 명시하는데 유용합니다. 예를 들어, 2020 새해는 모든 표준 시간대에 걸쳐 정확히 동일한 
+    순간이 아니라 각각의 표준 시간대에서 2020-01-01 00:00에 기념됩니다. 모든 표준 시간대에 걸쳐 
+    동일한 시간에 발생하는 이벤트들에 대해, 예를 들어 화상 회의, 
+    <a lt="valid global date and time string">유효한 세계 날짜와 시간 문자열</a>이 더 유용할 
+    것입니다.
   </p>
 
     </dd>
 
-    <dt>A <a>valid time-zone offset string</a></dt>
+    <dt><a lt="valid time-zone offset string">유효한 표준 시간대 편차 문자열</a></dt>
 
     <dd>
 
@@ -1943,18 +1924,18 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     <pre class="example">&lt;time&gt;-08:00&lt;/time&gt;</pre>
 
     <p class="note">
-    For times without dates (or times referring to events that recur on multiple
-    dates), specifying the geographic location that controls the time is usually more useful than
-    specifying a time zone offset, because geographic locations change time zone offsets with
-    daylight savings time. In some cases, geographic locations even change time zone, e.g., when the
-    boundaries of those time zones are redrawn, as happened with Samoa at the end of 2011. There
-    exists a time zone database that describes the boundaries of time zones and what rules apply
-    within each such zone, known as the <i>time zone database</i>. [[TZDATABASE]]
+    날짜가 없는 시간들에 (또는 여러 날짜들에 되풀이 하는 이벤트들을 참조하는 시간들) 대해, 지리적 
+    위치는 섬머타임제를 가지고 표준 시간대 편차들을 변경하기 때문에, 시간을 제어하는 지리적 위치를 
+    명시하는 것은 보통 표준 시간대 편차를 명시하는 것보다 더 유용합니다. 일부 경우들에, 지리적 
+    위치는 표준 시간대도 변경시킵니다, 예를 들어, 2011년의 끝에 사모아에서 발생한 것 같은, 그 표준 
+    시간대의 경계들이 변경되는 경우. <i lt="time zone database">표준 시간대 데이터베이스</i>로 
+    알려진, 표준 시간대의 경계들과 그 각각의 지역에서 적용되는 규칙들을 기술하는 표준 시간대 
+    데이터베이스가 존재합니다. [[TZDATABASE]]
   </p>
 
     </dd>
 
-    <dt>A <a>valid global date and time string</a></dt>
+    <dt><a lt="valid global date and time string">유효한 세계 날짜와 시간 문자열</a></dt>
 
     <dd>
 
@@ -1999,18 +1980,18 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     <pre class="example">&lt;time&gt;2011-11-18 06:54:39.929-08:00&lt;/time&gt;</pre>
 
     <p class="note">
-    Times with dates and a time zone offset are useful for specifying specific
-    events, or recurring virtual events where the time is not anchored to a specific geographic
-    location. For example, the precise time of an asteroid impact, or a particular meeting in a
-    series of meetings held at 1400 UTC every day, regardless of whether any particular part of the
-    world is observing daylight savings time or not. For events where the precise time varies by the
-    local time zone offset of a specific geographic location, a <a>valid floating date and time
-    string</a> combined with that geographic location is likely more useful.
+    날짜들과 표준 시간대 편차를 가진 시간들은 특정 이벤트를 명시하거나 시간이 특정 지리적 위치에 
+    고정되지 않는 반복되는 가상의 이벤트들을 명시하는데 유용합니다. 예를 들어, 소행성 충돌의 정확한 
+    시간이나 세계의 특정 부분이 섬머타임을 관찰하든 하지 않든 상관 없이 매일 세계시 1400에 열리는 
+    일련의 회의 중 특정 회의의 정확한 시간. 특정 지리적 위치의 현지 표준 시간대 편차에 따라 정확한 
+    시간이 다른 이벤트들에 대해, 지리적 위치가 결합된 
+    <a lt="valid floating date and time string">유효한 변동 날짜와 시간 문자열</a>이 더 유용할 
+    것입니다.
   </p>
 
     </dd>
 
-    <dt>A <a>valid week string</a></dt>
+    <dt><a lt="valid week string">유효한 주 문자열</a></dt>
 
     <dd>
 
@@ -2018,7 +1999,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
 
     </dd>
 
-    <dt>Four or more <a>ASCII digits</a>, at least one of which is not U+0030 DIGIT ZERO (0)</dt>
+    <dt>적어도 하나가 U+0030 숫자 0이 아닌, 4개 이상의 <a lt="ASCII digits">ASCII 숫자들</a>.</dt>
 
     <dd>
 
@@ -2028,7 +2009,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
 
     </dd>
 
-    <dt>A <a>valid duration string</a></dt>
+    <dt><a lt="valid duration string">유효한 기간 문자열</a></dt>
 
     <dd>
 
@@ -2041,80 +2022,85 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </dl>
 
   <p class="note">
-    Many of the preceding valid syntaxes describe "floating" date and/or time values
-  (they do not include a <a>time-zone offset</a>). Care is needed when
-  converting floating time values to or from global ("incremental") time values (e.g., JavaScript's
-  Date object). In many cases, an implicit time-of-day and time zone are used in the conversion and
-  may result in unexpected changes to the value of the date itself.
-  [[TIMEZONE]]
+    앞선 많은 유효한 문법들은 "변동" 날짜와/또는 시간 값들을 (그것들은 <a lt="time-zone offset">표준 
+  시간대 편차</a>를 포함하지 않습니다) 기술합니다. 변동 시간 값들을 세계 ("증분") 시간 값들로 혹은 
+  이로부터 (예를 들어, 자바스크립트의 Date 객체) 변경하는 경우 주의가 필요합니다. 많은 경우에, 
+  암묵적 시각과 표준 시간대는 변환에 사용되고 날짜 자체의 값으로 변환에 예기치 않은 결과를 가져올 
+  것입니다. [[TIMEZONE]]
   </p>
 
   <div class="impl">
 
-  The <dfn>machine-readable equivalent of the element's contents</dfn> must be obtained from the
-  element's <a>datetime value</a> by using the following algorithm:
+  <dfn lt="machine-readable equivalent of the element's contents">요소(element)의 콘텐츠의 기계가 해석할 수 있는 동등한 것</dfn>은 
+  다음 알고리즘을 사용하여 요소(element)의 <a lt="datetime value">일시(datetime) 값</a>으로부터 
+  얻어져야(must) 합니다:
 
   <ol>
 
-    <li>If <a>parsing a month string</a> from the element's
-    <a>datetime value</a> returns a <a>month</a>, that is the
-    machine-readable equivalent; abort these steps.</li>
+    <li>요소(element)의 <a lt="datetime value">일시(datetime) 값</a>으로부터 
+    <a lt="parsing a month string">월 문자열 해석</a>이 <a lt="month">월</a>을 반환한다면, 그것은 
+    기계가 해석 할 수 있는 동등한 것입니다; 이 단계들을 중단합니다.</li>
 
-    <li>If <a>parsing a date string</a> from the element's
-    <a>datetime value</a> returns a <a for="dates">date</a>, that is the
-    machine-readable equivalent; abort these steps.</li>
+    <li>요소(element)의  <a lt="datetime value">일시(datetime) 값</a>으로부터 
+    <a lt="parsing a month string">월 문자열 해석</a>이 <a for="dates">날짜</a>를 반환한다면, 그것은 
+    기계가 해석 할 수 있는 동등한 것입니다; 이 단계들을 중단합니다.</li>
 
-    <li>If <a>parsing a yearless date string</a> from
-    the element's <a>datetime value</a> returns a <a>yearless
-    date</a>, that is the machine-readable equivalent; abort these steps.</li>
+    <li>요소(element)의 <a lt="datetime value">일시(datetime) 값</a>으로부터 
+    <a lt="parsing a yearless date string">연도 없는 날짜 문자열 해석</a>이 
+    <a lt="yearless date">연도 없는 날짜</a>를 반환한다면, 그것은 기계가 해석할 수 있는 동등한 
+    것입니다; 이 단계들을 중단합니다.</li>
 
-    <li>If <a>parsing a time string</a> from the element's
-    <a>datetime value</a> returns a <a>time</a>, that is the
-    machine-readable equivalent; abort these steps.</li>
+    <li>요소(element)의 <a lt="datetime value">일시(datetime) 값</a>으로부터 
+    <a lt="parsing a time string">시간 문자열 해석</a>이 <a lt="time">시간</a>을 반환한다면, 그것은 
+    기계가 해석할 수 있는 동등한 것입니다; 이 단계들을 중단합니다.</li>
 
-    <li>If <a>parsing a floating date and time string</a> from the element's <a>datetime value</a> returns a <a>floating date and time</a>, that is the machine-readable
-    equivalent; abort these steps.</li>
+    <li>요소(element)의 <a lt="datetime value">일시(datetime) 값</a>으로부터 
+    <a lt="parsing a floating date and time string">변동 날짜와 시간 문자열을 해석</a>이 
+    <a lt="floating date and time">변동 날짜와 시간</a>을 반환한다면, 그것은 기계가 해석할 수 있는 
+    동등한 것입니다; 이 단계들을 중단합니다.</li>
 
-    <li>If <a>parsing a time-zone offset string</a>
-    from the element's <a>datetime value</a> returns a <a>time-zone
-    offset</a>, that is the machine-readable equivalent; abort these steps.</li>
+    <li>요소(element)의 <a lt="datetime value">일시(datetime) 값</a>으로부터 
+    <a lt="parsing a time-zone offset string">표준 시간대 편차 문자열 해석</a>이 
+    <a lt="time-zone offset">표준 시간대 편차</a>를 반환한다면, 그것은 기계가 해석할 수 있는 동등한 
+    것입니다; 이 단계들을 중단합니다.</li>
 
-    <li>If <a>parsing a floating date and time string</a> from the element's <a>datetime value</a> returns a <a>global date and time</a>, that is the machine-readable equivalent;
-    abort these steps.</li>
+    <li>요소(element)의 <a lt="datetime value">일시(datetime) 값</a>으로부터 
+    <a lt="parsing a floating date and time string">변동 날짜와 시간 문자열 해석</a>이 
+    <a lt="global date and time">세계 날짜와 시간</a>을 반환한다면, 그것은 기계가 해석할 수 있는 
+    동등한 것입니다; 이 단계들을 중단합니다.</li>
 
-    <li>If <a>parsing a week string</a> from the element's
-    <a>datetime value</a> returns a <a>week</a>, that is the
-    machine-readable equivalent; abort these steps.</li>
+    <li>요소(element)의 <a lt="datetime value">일시(datetime) 값</a>으로부터 
+    <a lt="parsing a week string">주 문자열 해석</a>이 <a lt="week">주</a>를 반환한다면, 그것은 
+    기계가 해석할 수 있는 동등한 것입니다; 이 단계들을 중단합니다.</li>
 
-    <li>If the element's <a>datetime value</a> consists of only <a>ASCII digits</a>,
-    at least one of which is not U+0030 DIGIT ZERO (0), then the machine-readable equivalent is the
-    base-ten interpretation of those digits, representing a year; abort these steps.</li>
+    <li>요소(element)의 <a lt="datetime value">일시(datetime) 값</a>이 적어도 하나가 U+0030 숫자 
+    0이 아닌 <a lt="ASCII digits">ASCII 숫자들</a>로 구성된다면, 기계가 해석 할 수 있는 동등한 것은 
+    연도를 나타내는, 그 숫자들의 십진법 해석입니다. 이 단계들을 중단합니다.</li>
 
-    <li>If <a>parsing a duration string</a> from the
-    element's <a>datetime value</a> returns a <a>duration</a>,
-    that is the machine-readable equivalent; abort these steps.</li>
+    <li>요소(element)의 <a lt="datetime value">일시(datetime) 값</a>으로부터 
+    <a lt="parsing a duration string">기간 문자열 해석</a>이 <a lt="duration">기간</a>을 반환한다면, 
+    그것은 기계가 해석할 수 있는 동등한 것입니다; 이 단계들을 중단합니다.</li>
 
-    <li>There is no machine-readable equivalent.</li>
+    <li>기계가 해석 가능한 동등한 것이 없습니다.</li>
 
   </ol>
 
   <p class="note">
-    The algorithms referenced above are intended to be designed such that for any
-  arbitrary string <var>s</var>, only one of the algorithms returns a value. A more
-  efficient approach might be to create a single algorithm that parses all these data types in one
-  pass; developing such an algorithm is left as an exercise to the reader.
+    위 참조된 알고리즘들은 임의의 문자열에 대해 알고리즘들 중 하나만 값을 반환하게 설계되도록 의도된 
+  것입니다. 더 효율적인 처리 방법은 한 번에 이 모든 데이터 유형들을 해석하는 단일 알고리즘을 
+  생성하는 것입니다; 그러한 알고리즘을 개발하는 것은 독자들에게 과제로 남겨집니다.
   </p>
 
-  The <dfn attribute for="HTMLTimeElement"><code>dateTime</code></dfn> IDL attribute must
-  <a>reflect</a> the element's <code>datetime</code> content
-  attribute.
+  <dfn attribute for="HTMLTimeElement"><code>dateTime</code></dfn> IDL 속성(attribute)은
+  요소(element)의 <code>datetime</code> 콘텐트 속성(attribute)을 <a lt="reflect">반영</a>해야(must)
+  합니다.
 
   </div>
 
   <div class="example">
-    The <{time}> element can be used to encode dates, for example in microformats. The
-    following shows a hypothetical way of encoding an event using a variant on hCalendar that uses
-    the <{time}> element:
+    <{time}> 요소(element)는 데이터들을 인코드 하는데, 예를 들어 마이크로포맷들로, 사용될 수 
+    있습니다. 다음은 <{time}> 요소(element)를 사용하는 hCalendar에서 변형을 사용하는 이벤트를 
+    인코딩하는 가상의 방법을 보여줍니다:
 
     <pre highlight="html">
 &lt;div class="vevent"&gt;
@@ -2129,8 +2115,8 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    Here, a fictional microdata vocabulary based on the Atom vocabulary is used with the
-    <{time}> element to mark up a blog post's publication date.
+    여기, 아톰 표현 형식을 기반으로한 가상의 마이크로데이터 표현 형식이 블로그 게시물의 게시 날짜를 
+    마크업하기 위해 <{time}> 요소(element)를 가지고 사용됩니다.
 
     <pre highlight="html">
 &lt;article vocab="https://n.example.org/" typeof="rfc4287"&gt;
@@ -2143,8 +2129,8 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    In this example, another article's publication date is marked up using <{time}>, this
-    time using the schema.org microdata vocabulary:
+    이 예에서, 이번에는 schema.org 마이크로데이터 표현 형식을 사용하여, 다른 아티클의 게시 날짜는 
+    <{time}>을 사용하여 마크업됩니다:
 
     <pre highlight="html">
 &lt;article typeof="schema:BlogPosting"&gt;
@@ -2157,28 +2143,28 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
   </div>
 
   <div class="example">
-    In the following snippet, the <{time}> element is used to encode a date in the
-    ISO8601 format, for later processing by a script:
+    다음 코드 조각에서, <{time}> 요소(element)는 나중에 스크립트에 의한 처리를 위해 날짜를 ISO8601 
+    형식으로 인코드 하는데 사용됩니다:
 
     <pre highlight="html">
 &lt;p&gt;Our first date was &lt;time datetime="2006-09-23"&gt;a Saturday&lt;/time&gt;.&lt;/p&gt;
     </pre>
 
-    In this second snippet, the value includes a time:
+    이 두 번째 코드 조각에서, 값은 시간을 포함합니다:
 
     <pre highlight="html">
 &lt;p&gt;We stopped talking at &lt;time datetime="2006-09-24T05:00-07:00"&gt;5am the next morning&lt;/time&gt;.&lt;/p&gt;
     </pre>
 
-    A script loaded by the page (and thus privy to the page's internal convention of marking up
-    dates and times using the <{time}> element) could scan through the page and look at all
-    the <{time}> elements therein to create an index of dates and times.
+    페이지에 의해 로드 된 스크립트는 (그리고 따라서 <{time}> 요소(element)를 사용하여 날짜들과 
+    시간들을 마크업하는 페이지의 내부 규칙을 공유하는 것이 된) 페이지를 살펴보고 날짜와 시간들의 
+    색인을 생성하기 위해 그 안에 있는 모든 <{time}> 요소(element)들을 검토할 수 있습니다.
 
   </div>
 
   <div class="example">
-    For example, this element conveys the string "Friday" with the additional semantic that the
-    18th of November 2011 is the meaning that corresponds to "Friday":
+    예를 들어, 이 요소(element)는 2011년 11월 18일은 "금요일"에 해당한다는 추가적인 의미(semantic)를 
+    가진 문자열 "Friday"를 전달합니다:
 
     <pre highlight="html">
 Today is &lt;time datetime="2011-11-18"&gt;Friday&lt;/time&gt;.
@@ -2187,7 +2173,7 @@ Today is &lt;time datetime="2011-11-18"&gt;Friday&lt;/time&gt;.
   </div>
 
   <div class="example">
-    In this example, a specific time in the Pacific Standard Time timezone is specified:
+    이 예에서, 태평양 표준 시간대로 특정 시간이 명시됩니다:
 
     <pre highlight="html">
 Your next meeting is at &lt;time datetime="2011-11-18T15:00-08:00"&gt;3pm&lt;/time&gt;.
@@ -2195,43 +2181,41 @@ Your next meeting is at &lt;time datetime="2011-11-18T15:00-08:00"&gt;3pm&lt;/ti
 
   </div>
 
-<h4 id="the-code-element">The <dfn element><code>code</code></dfn> element</h4>
+<h4 id="the-code-element"><dfn element><code>code</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{code}> element <a>represents</a> a fragment of computer code. This could
-  be an XML element name, a file name, a computer program, or any other string that a computer would
-  recognize.
+  <{code}> 요소(element)는 컴퓨터 코드의 코드 조각을 <a lt="represents">나타냅니다</a>. 이것은 XML 
+  요소(element) 이름, 파일 이름, 컴퓨터 프로그램, 컴퓨터가 인식하는 다른 문자열이 될 수 있습니다.
 
-  There is no formal way to indicate the language of computer code being marked up. Authors who
-  wish to mark <{code}> elements with the language used, e.g., so that syntax highlighting
-  scripts can use the right rules, can use the <code>class</code> attribute, e.g.,
-  by adding a class prefixed with "<code>language-</code>" to the element.
+  마크업 되는 컴퓨터 코드의 언어를 나타내는 공식적인 방법은 없습니다. 사용된 언어와 함께 <{code}> 
+  요소(element)들을 표기하기를 원하는, 예를 들어, 문법 강조 스크립트가 올바른 규칙들을 사용할 수 
+  있도록, 작성자들은 <code>class</code> 속성(attribute)을, 예를 들어, 요소(element)에 
+  "<code>language-</code>"가 앞에 붙은 클래스를 추가하여, 사용할 수 있습니다.
 
   <div class="example">
-    The following example shows how the element can be used in a paragraph to mark up element
-    names and computer code, including punctuation.
+    다음 예는 구두점을 포함하여, 요소(element)가 요소(element)이름과 컴퓨터 코드를 마크업하기 위해 
+    문단에 사용되는 방식을 보여줍니다.
 
     <pre highlight="html">
 &lt;p&gt;The &lt;code&gt;code&lt;/code&gt; element represents a fragment of computer
@@ -2249,8 +2233,8 @@ keyword, which is followed by the &lt;code&gt;.&lt;/code&gt; punctuation charact
   </div>
 
   <div class="example">
-    The following example shows how a block of code could be marked up using the <code>pre</code>
-    and <{code}> elements.
+    다음 예는 코드 블럭이 <code>pre</code>과 <{code}> 요소(element)들을 사용하여 마크업 될 수 있는 
+    방법을 보여줍니다.
 
     <pre highlight="html">
 &lt;pre&gt;&lt;code class="language-pascal"&gt;var i: Integer;
@@ -2259,47 +2243,44 @@ begin
 end.&lt;/code&gt;&lt;/pre&gt;
     </pre>
 
-    A class is used in that example to indicate the language used.
+    클래스가 그 예에서 사용된 언어를 나타내기 위해 사용됩니다.
 
   </div>
 
   <p class="note">
-    See the <{pre}> element for more details.
+    더 자세한 사항들을 위해 <{pre}> 요소(element)를 참고하세요.
   </p>
 
-<h4 id="the-var-element">The <dfn element><code>var</code></dfn> element</h4>
+<h4 id="the-var-element"><dfn element><code>var</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{var}> element <a>represents</a> a variable. This could be an actual
-  variable in a mathematical expression or programming context, an identifier representing a
-  constant, a symbol identifying a physical quantity, a function parameter, or just be a term used
-  as a placeholder in prose.
+  <{var}> 요소(element)는 변수를 <a lt="represents">나타냅니다</a>. 이것은 수학적 표현이나 
+  프로그래밍 컨텍스트에서의 실제 변수, 상수를 나타내는 식별자, 물리적 수량을 식별하는 부호, 함수 
+  매개변수, 본문 내 플레이스홀더로 사용되는 용어 일 수 있습니다.
 
   <div class="example">
-    In the paragraph below, the letter "n" is being used as a
-    variable in prose:
+    아래 문단에서, 글자 "n"은 본문에서 변수로 사용되고 있습니다:
     <pre highlight="html">
 &lt;p&gt;If there are &lt;var&gt;n&lt;/var&gt; pipes leading to the ice
 cream factory then I expect at &lt;em&gt;least&lt;/em&gt; &lt;var&gt;n&lt;/var&gt;
@@ -2307,14 +2288,12 @@ flavors of ice cream to be available for purchase!&lt;/p&gt;
     </pre>
   </div>
 
-  For mathematics, in particular for anything beyond the simplest of expressions, MathML is more
-  appropriate. However, the <{var}> element can still be used to refer to specific
-  variables that are then mentioned in MathML expressions.
+  수학의 경우, 매우 간단한 표현식이 아닌 한, MathML이 더 적절합니다. 하지만, <{var}> 요소(element)는 
+  여전히 MathML 표현식들에서 언급되는 특정 변수들을 가리키는데 사용될 수 있습니다.
 
   <div class="example">
-    In this example, an equation is shown, with a legend that references the variables in the
-    equation. The expression itself is marked up with MathML, but the variables are mentioned in the
-    figure's legend using <{var}>.
+    이 예에서, 방정식 내에서 변수들을 참조하는 범례를 가지고 방정식이 보여집니다. 표현식 자체는 
+    MathML로 마크업 되지만, 변수들은 <{var}>를 사용하여 삽화의 범례 내에서 언급됩니다.
 
     <pre highlight="html">
 &lt;figure&gt;
@@ -2337,8 +2316,8 @@ flavors of ice cream to be available for purchase!&lt;/p&gt;
   </div>
 
   <div class="example">
-    Here, the equation describing mass-energy equivalence is used in a sentence, and the
-    <{var}> element is used to mark the variables and constants in that equation:
+    여기, 질량 에너지 등가성을 설명하는 방정식이 문장에 사용되고, <{var}> 요소(element)가 그 
+    방정식에서 변수들과 상수들을 표기하는데 사용됩니다:
 
     <pre highlight="html">
 &lt;p&gt;Then he turned to the blackboard and picked up the chalk. After a few moment's
@@ -2348,46 +2327,44 @@ looked pleased.&lt;/p&gt;
 
   </div>
 
-<h4 id="the-samp-element">The <dfn element><code>samp</code></dfn> element</h4>
+<h4 id="the-samp-element"><dfn element><code>samp</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{samp}> element <a>represents</a> sample or quoted output from another
-  program or computing system.
+  <{samp}> 요소(element)는 견본 혹은 다른 프로그램이나 컴퓨팅 시스템으로부터의 인용된 출력을 
+  <a lt="represents">나타냅니다</a>.
 
   <p class="note">
-    See the <code>pre</code> and <{kbd}> elements for more details.
+    더 자세한 사항들을 위해 <code>pre</code>와 <{kbd}> 요소(element)들을 참고하세요.
   </p>
 
   <p class="note">
-    This element can be contrasted with the <{output}> element, which can be
-  used to provide immediate output in a Web application.
+    이 요소(element)는 웹 어플리케이션에서의 직접적인 출력을 제공하는데 사용될 수 있는 <{output}> 
+  요소(element)와 뚜렷한 차이를 보입니다.
   </p>
 
   <div class="example">
-    This example shows the <{samp}> element being used
-    inline:
+    이 예는 인라인으로 사용되는 <{samp}> 요소(element)를 보여줍니다:
     <pre highlight="html">
 &lt;p&gt;The computer said &lt;samp&gt;Too much cheese in tray
 two&lt;/samp&gt; but I didn't know what that meant.&lt;/p&gt;
@@ -2395,11 +2372,10 @@ two&lt;/samp&gt; but I didn't know what that meant.&lt;/p&gt;
   </div>
 
   <div class="example">
-    This second example shows a block of sample output. Nested <code>samp</code> and
-    <{kbd}> elements allow for the styling of specific elements of the sample output using a
-    style sheet. There's also a few parts of the <code>samp</code> that are annotated with even more
-    detailed markup, to enable very precise styling. To achieve this, <{span}> elements are
-    used.
+    이 두 번째 예는 견본 출력 블럭을 보여줍니다. 중첩된 <code>samp</code>와 <{kbd}> 
+    요소(element)들은 스타일 시트를 사용하여 견본 출력의 특정 요소(element)들의 스타일링을 
+    허용합니다. 매우 정밀한 스타일링을 가능하게 하기 위해, 한층 더 자세한 마크업으로 주석이 달린 
+    <code>samp</code>의 몇 부분도 있습니다. 이를 이루기 위해, <{span}> 요소(element)들이 사용됩니다.
 
     <pre highlight="html">
 &lt;pre&gt;&lt;samp&gt;&lt;span class="prompt"&gt;jdoe@mowmow:~$&lt;/span&gt; &lt;kbd&gt;ssh demo.example.com&lt;/kbd&gt;
@@ -2411,55 +2387,53 @@ Linux demo 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189 #1 SM
 
   </div>
 
-<h4 id="the-kbd-element">The <dfn element><code>kbd</code></dfn> element</h4>
+<h4 id="the-kbd-element"><dfn element><code>kbd</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{kbd}> element <a>represents</a> user input (typically keyboard input,
-  although it may also be used to represent other input, such as voice commands).
+  <{kbd}> 요소(element)는 사용자 입력을 (음성 명령들 같은 다른 입력을 나타내는데 사용될 수도 있지만, 
+  일반적으로 키보드 입력) <a lt="represents">나타냅니다</a>.
 
-  When the <{kbd}> element is nested inside a <{samp}> element, it represents
-  the input as it was echoed by the system.
+  <{kbd}> 요소(element)가 <{samp}> 요소(element) 안에 중첩되는 경우, 그것은 시스템에 의해 반영된 
+  입력을 나타냅니다.
 
-  When the <{kbd}> element <em>contains</em> a <{samp}> element, it represents
-  input based on system output, for example invoking a menu item.
+  <{kbd}> 요소(element)가 <{samp}> 요소(element)를 <em>포함</em>하는 경우, 그것은 시스템 출력에 
+  기반한 입력을, 예를 들어 메뉴 항목 호출, 나타냅니다.
 
-  When the <{kbd}> element is nested inside another <{kbd}> element, it
-  represents an actual key or other single unit of input as appropriate for the input mechanism.
+  <{kbd}> 요소(element)가 다른 <{kbd}> 요소(element) 내에 중첩되는 경우, 그것은 입력 메커니즘에 대한 
+  적절한 실제 키나 다른 입력 단일 장치를 나타냅니다.
 
   <div class="example">
-    Here the <{kbd}> element is used to indicate keys to press:
+    여기 <{kbd}> 요소(element)가 누를 키들을 나타내는데 사용됩니다:
 
     <pre highlight="html">
 &lt;p&gt;To make George eat an apple, press &lt;kbd&gt;&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;F3&lt;/kbd&gt;&lt;/kbd&gt;&lt;/p&gt;
     </pre>
 
-    In this second example, the user is told to pick a particular menu item. The outer
-    <{kbd}> element marks up a block of input, with the inner <{kbd}> elements
-    representing each individual step of the input, and the <{samp}> elements inside them
-    indicating that the steps are input based on something being displayed by the system, in this
-    case menu labels:
+    이 두 번째 예에서, 사용자는 특정 메뉴 항목을 고르도록 지시 받습니다. 바깥 <{kbd}> 
+    요소(element)는 입력의 각 개별 단계를 나타내는 내부 <{kbd}> 요소(element)들과 그 <{kbd}> 
+    요소(element)들 내부에 단계들이 시스템에 의해 표시되고 있는 어떤 것에 기반한 입력 임을, 이 
+    예에서는 메뉴 레이블들을, 나타내는 <{samp}>요소(element)를 가지고 마크업 합니다:
 
     <pre highlight="html">
 &lt;p&gt;To make George eat an apple, select
@@ -2467,7 +2441,7 @@ Linux demo 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189 #1 SM
 &lt;/p&gt;
     </pre>
 
-    Such precision isn't necessary; the following is equally fine:
+    이러한 정확성은 필요하지 않습니다; 다음은 동일하게 괜찮습니다:
 
     <pre highlight="html">
 &lt;p&gt;To make George eat an apple, select &lt;kbd&gt;File | Eat Apple...&lt;/kbd&gt;&lt;/p&gt;
@@ -2475,42 +2449,40 @@ Linux demo 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189 #1 SM
 
   </div>
 
-<h4 id="the-sub-and-sup-elements">The <dfn element><code>sub</code></dfn> and <dfn element><code>sup</code></dfn> elements</h4>
+<h4 id="the-sub-and-sup-elements"><dfn element><code>sub</code></dfn>와 <dfn element><code>sup</code></dfn> 요소(element)들</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Use <code>HTMLElement</code>.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd><code>HTMLElement</code>를 사용.</dd>
   </dl>
 
-  The <{sup}> element <a>represents</a> a superscript and the <code>sub</code>
-  element <a>represents</a> a subscript.
+  <{sup}> 요소(element)는 어깨 글자를 <a lt="represents">나타내고</a>, <code>sub</code> 
+  요소(element)는 다리 글자를 <a lt="represents">나타냅니다</a>.
 
-  These elements must be used only to mark up typographical conventions with specific meanings,
-  not for typographical presentation for presentation's sake. For example, it would be inappropriate
-  for the <code>sub</code> and <{sup}> elements to be used in the name of the LaTeX
-  document preparation system. In general, authors should use these elements only if the
-  <em>absence</em> of those elements would change the meaning of the content.
+  이 요소(element)들은 표현(presentation)의 목적을 위한 글씨체 표현(presentation)이 아니라, 특정한 
+  의미를 가지는 표기법을 마크업 하기 위헤서만 사용되어야(must)합니다. 예를 들어, 
+  <code>sub</code>와 <{sup}> 요소(element)가 LaTeX 문서 준비 시스템의 이름에 사용되는 것은 부적절할 
+  것입니다. 일반적으로, 작성자는 그 요소(element)들의 <em>부재</em>가 콘텐트의 의미를 변경하는 
+  경우에만 이 요소(element)들을 사용해야(should) 합니다.
 
-  In certain languages, superscripts are part of the typographical conventions for some
-  abbreviations.
+  특정 언어에서, 어깨 글자들은 어떤 축약어들을 위한 표기법의 일부입니다.
 
   <div class="example">
     <pre highlight="html">
@@ -2520,12 +2492,12 @@ Linux demo 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189 #1 SM
     </pre>
   </div>
 
-  The <{sub}> element can be used inside a <{var}> element, for variables that
-  have subscripts.
+  <{sub}> 요소(element)는 다리 문자들을 가지는 변수들에 대해, <{var}> 요소(element) 내에 사용될 수 
+  있습니다.
 
   <div class="example">
-    Here, the <{sub}> element is used to represent the subscript that identifies the
-    variable in a family of variables:
+    여기, <{sub}> 요소(element)가 변수들의 모음에서 변수를 식별하는 다리 문자를 나타내는데 
+    사용됩니다:
 
     <pre highlight="html">
 &lt;p&gt;The coordinate of the &lt;var&gt;i&lt;/var&gt;th point is
@@ -2535,9 +2507,9 @@ For example, the 10th point has coordinate
     </pre>
   </div>
 
-  Mathematical expressions often use subscripts and superscripts. Authors are encouraged to use
-  MathML for marking up mathematics, but authors may opt to use <code>sub</code> and
-  <code>sup</code> if detailed mathematical markup is not desired. [[!MATHML]]
+  수학적 표현식은 종종 어깨 문자들과 다리 문자들을 사용합니다. 작성자들은 수학을 마크업하는데 
+  MathML을 사용하도록 권장되지만, 상세한 수학적 마크업이 요구되지 않는다면 <code>sub</code>와 
+  <code>sup</code>를 사용하는 것을 선택할 수 있습니다. [[!MATHML]]
 
   <div class="example">
     <pre highlight="html">
@@ -2548,47 +2520,46 @@ f(&lt;var&gt;x&lt;/var&gt;, &lt;var&gt;n&lt;/var&gt;) = log&lt;sub&gt;4&lt;/sub&
     </pre>
   </div>
 
-<h4 id="the-i-element">The <dfn element><code>i</code></dfn> element</h4>
+<h4 id="the-i-element"><dfn element><code>i</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{i}> element <a>represents</a> a span of text in an alternate voice or
-  mood, or otherwise offset from the normal prose in a manner indicating a different quality of
-  text, such as a taxonomic designation, a technical term, an idiomatic phrase from another
-  language, transliteration, a thought, or a ship name in Western texts.
+  <{i}> 요소(element)는 다른 어조나 분위기의 텍스트 범위, 분류학상의 명칭, 기술 용어, 다른 언어의 
+  관용구, 음역, 생각, 서양 문학의 배 이름 같은 텍스트의 다른 특징을 나타내는 방식으로 일반 
+  본문으로부터의 보충을 <a lt="represents">나타냅니다</a>.
 
-  Terms in languages different from the main text should be annotated with <{global/lang}> attributes (or, in XML, <{global/lang}> attributes in the <a>XML namespace</a>).
+  주요 텍스트와 다른 언어의 용어는 <{global/lang}> 속성(attribute)들을 (혹은 XML 에서는 
+  <a lt="XML namespace">XML 네임스페이스</a>에 있는 <{global/lang}> 속성(attribute)들) 가지고 
+  주석(annotate)을 달아야(should) 합니다.
 
   <div class="example">
-    The examples below show uses of the <{i}> element:
+    아래 예들은 <{i}> 요소(element)의 사용을 보여줍니다:
     <pre highlight="html">
 &lt;p&gt;The &lt;i class="taxonomy"&gt;Felis silvestris catus&lt;/i&gt; is cute.&lt;/p&gt;
 &lt;p&gt;The term &lt;i&gt;prose content&lt;/i&gt; is defined above.&lt;/p&gt;
 &lt;p&gt;There is a certain &lt;i lang="fr"&gt;je ne sais quoi&lt;/i&gt; in the air.&lt;/p&gt;
     </pre>
-    In the following example, a dream sequence is marked up using
-    <{i}> elements.
+    다음 예에서, 꿈 장면이 <{i}> 요소(element)들을 사용하여 마크업 됩니다.
     <pre highlight="html">
 &lt;p&gt;Raymond tried to sleep.&lt;/p&gt;
 &lt;p&gt;&lt;i&gt;The ship sailed away on Thursday&lt;/i&gt;, he
@@ -2601,55 +2572,52 @@ her—&lt;/i&gt;&lt;/p&gt;
     </pre>
   </div>
 
-  Authors can use the <code>class</code> attribute on the <code>i</code>
-  element to identify why the element is being used, so that if the style of a particular use (e.g.,
-  dream sequences as opposed to taxonomic terms) is to be changed at a later date, the author
-  doesn't have to go through the entire document (or series of related documents) annotating each
-  use.
+  작성자들은 요소(element)가 사용되는 이유를 식별하기 위해 <code>i</code> 요소(element)에 
+  <code>class</code> 속성(attribute)을 사용할 수 있기 때문에, 특정한 용도의 (예를 들어, 분류학상의 
+  용어들과 다르게 꿈 장면) 스타일이 나중에 변경되는 경우, 작성자는 각 용도를 주석을 다는 전체 문서를 
+  (혹은 일련의 관련된 문서) 살펴볼 필요가 없습니다.
 
-  Authors are encouraged to consider whether other elements might be more applicable than the
-  <{i}> element, for instance the <{em}> element for marking up stress emphasis,
-  or the <{dfn}> element to mark up the defining instance of a term.
+  작성자들은 <{i}> 요소(element)보다 더 적절한 다른 요소(element)들이 있을 수 있는지, 예를 들어, 
+  역설 강조(stress emphasis)를 마크업하기 위한 <{em}> 요소(element)나 용어의 정의 예를 마크업하기 
+  위한 <{dnf}> 요소(element), 고려하도록 권장됩니다.
 
   <p class="note">
-    Style sheets can be used to format <{i}> elements, just like any other
-  element can be restyled. Thus, it is not the case that content in <{i}> elements will
-  necessarily be italicized.
+    스타일 시트들은 다른 요소(element)가 재 스타일링 될 수 있는 것처럼, <{i}> 요소(element)들에 
+  형식을 지정하는데 사용될 수 있습니다. 따라서, <{i}> 요소(element)들 내의 콘텐트가 필연적으로 
+  이탤릭체가 되는 경우가 아닙니다.
   </p>
 
-<h4 id="the-b-element">The <dfn element><code>b</code></dfn> element</h4>
+<h4 id="the-b-element"><dfn element><code>b</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{b}> element <a>represents</a> a span of text to which attention is being
-  drawn for utilitarian purposes without conveying any extra importance and with no implication of
-  an alternate voice or mood, such as key words in a document abstract, product names in a review,
-  actionable words in interactive text-driven software, or an article lede.
+  <{b}> 요소(element)는 문서 개념에서 핵심 단어들, 리뷰의 상품 이름, 상호작용 텍스트 중심 소프트웨어의 
+  실행 가능한 단어들, 기사 헤드라인 같은, 추가적인 중요성을 전달하지 않고 다른 어조나 분위기의 영향 
+  없이 실용적인 목적으로 주의가 끌어지는 텍스트의 범위를 <a lt="represents">나타냅니다</a>.
 
   <div class="example">
-    The following example shows a use of the <{b}> element to highlight key words without
-    marking them up as important:
+    다음 예는 중요한 것으로 그것들을 표기하지 않고 핵심 단어들을 강조(highlight)하기 위한 <{b}> 
+    요소(element)의 사용을 보여줍니다:
 
     <pre highlight="html">
 &lt;p&gt;The &lt;b&gt;frobonitor&lt;/b&gt; and &lt;b&gt;barbinator&lt;/b&gt; components are fried.&lt;/p&gt;
@@ -2658,8 +2626,8 @@ her—&lt;/i&gt;&lt;/p&gt;
   </div>
 
   <div class="example">
-    In the following example, objects in a text adventure are highlighted as being special by use
-    of the <{b}> element.
+    다음 예에서, <{b}> 요소(element)의 사용에 의해 텍스트 어드벤쳐의 객체들이 특별한 것으로 
+    강조(highlight)됩니다..
 
     <pre highlight="html">
 &lt;p&gt;You enter a small room. Your &lt;b&gt;sword&lt;/b&gt; glows
@@ -2669,9 +2637,9 @@ brighter. A &lt;b&gt;rat&lt;/b&gt; scurries past the corner wall.&lt;/p&gt;
   </div>
 
   <div class="example">
-    Another case where the <{b}> element is appropriate is in marking up the lede (or
-    lead) sentence or paragraph. The following example shows how a <a href="https://news.bbc.co.uk/2/hi/uk_news/scotland/north_east/7101506.stm">BBC article about
-    kittens adopting a rabbit as their own</a> could be marked up:
+    <{b}> 요소(element)가 적절한 다른 경우는 헤드라인(혹은 톱뉴스) 문장이나 문단에 표기하는 
+    것입니다. 다음 예는 <a href="https://news.bbc.co.uk/2/hi/uk_news/scotland/north_east/7101506.stm">토끼를 자신들의 가족으로 입양한 새끼 고양이들에 대한 BBC 기사</a>가 
+    마크업 될 수 있는 방식을 보여줍니다:
 
     <pre highlight="html">
 &lt;article&gt;
@@ -2685,113 +2653,106 @@ brighter. A &lt;b&gt;rat&lt;/b&gt; scurries past the corner wall.&lt;/p&gt;
 
   </div>
 
-  As with the <{i}> element, authors can use the <code>class</code>
-  attribute on the <{b}> element to identify why the element is being used, so that if the
-  style of a particular use is to be changed at a later date, the author doesn't have to go through
-  annotating each use.
+  <{i}> 요소(element)와 마찬가지로, 작성자들은 요소(element)가 사용되는 이유를 식별하기 위해 <{b}> 
+  요소(element)에 <code>class</code> 속성(attribute)을 사용할 수 있기 때문에, 특정한 용도의 스타일이 
+  나중에 변경되는 경우, 작성자는 각 용도를 주석을 달 필요가 없습니다.
 
-  The <{b}> element should be used as a last resort when no other element is more
-  appropriate. In particular, headings should use the <code>h1</code> to <code>h6</code> elements,
-  stress emphasis should use the <{em}> element, importance should be denoted with the
-  <{strong}> element, and text marked or highlighted should use the <code>mark</code>
-  element.
+  <{b}> 요소(element)는 더 적절한 다른 요소가 없는 경우에 마지막 수단으로 사용되어야(should) 합니다. 
+  특히, 제목(heading)들은 <code>h1</code>부터 <code>h6</code> 요소(element)들을 사용해야(should) 
+  하고, 역설 강조(stress emphasis)는 <{em}> 요소(element)를 사용해야(should) 하고, 중요성은 <{strong}> 
+  요소(element)를 가지고 나타내져야 하며, 텍스트 표기나 강조는 <code>mark</code> 요소(element)를 
+  사용해야(should) 합니다.
 
   <div class="example">
-    The following would be <em>incorrect</em> usage:
+    다음은 <em>맞지 않는</em> 사용법일 것 입니다:
 
     <pre class="bad">&lt;p&gt;&lt;b&gt;WARNING!&lt;/b&gt; Do not frob the barbinator!&lt;/p&gt;</pre>
 
-    In the previous example, the correct element to use would have been <{strong}>, not
-    <{b}>.
+    이전 예에서, 사용할 올바른 요소(element)는 <{b}>가 아니라 <{strong}> 였을 것입니다.
 
   </div>
 
   <p class="note">
-    Style sheets can be used to format <{b}> elements, just like any other
-  element can be restyled. Thus, it is not the case that content in <{b}> elements will
-  necessarily be boldened.
+    스타일 시트들은 다른 요소(element)가 재 스타일링 될 수 있는 것처럼, <{b}> 요소(element)들에 
+  형식을 지정하는데 사용될 수 있습니다. 따라서, <{b}> 요소(element)들 내의 콘텐트가 필연적으로 굵은 
+  글꼴이 되는 경우가 아닙니다.
   </p>
 
-<h4 id="the-u-element">The <dfn element><code>u</code></dfn> element</h4>
+<h4 id="the-u-element"><dfn element><code>u</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{u}> element <a>represents</a> a span of text with an unarticulated, though
-  explicitly rendered, non-textual annotation, such as labeling the text as being a proper name in
-  Chinese text (a Chinese proper name mark), or labeling the text as being misspelt.
+  <{u}> 요소(element)는 불분명한 텍스트의 범위나, 명시적으로 렌더링 되어있기는 하지만, 중국어 
+  텍스트의 고유 명사가 되는 것으로 라벨링 하는 것 같은 (중국어 고유 명사 기호) 비 텍스트 주석이나, 
+  철자가 틀린 것으로서의 텍스트 라벨링을 <a lt="represents">나타냅니다</a>.
 
-  In most cases, another element is likely to be more appropriate: for marking stress emphasis,
-  the <{em}> element should be used; for marking key words or phrases either the
-  <{b}> element or the <{mark}> element should be used, depending on the context;
-  for marking book titles, the <{cite}> element should be used; for labeling text with explicit textual annotations, the
-  <{ruby}> element should be used; for technical terms, taxonomic designation,
-  transliteration, a thought, or for labeling ship names in Western texts, the <{i}>
-  element should be used.
+  대다수의 경우에, 다른 요소(element)가 더 적절할 것 같습니다: 역설 강조(stress emphasis)를 표기하기 
+  위해서는 <{em}> 요소(element)가 사용되어야(should); 핵심 단어들이나 핵심 어구들을 표기하기 
+  위해서는 문맥에 따라 <{b}> 요소(element)나 <{mark}> 요소(element)가 사용되어야(should); 책 
+  제목들을 표기하기 위해, <{cite}> 요소(element)가 사용되어야(should); 명시적인 텍스트 주석들을 가진 
+  텍스트 라벨링을 위해, <{ruby}> 요소가 사용되어야(should); 기술 용어, 분류학상 명칭, 음역, 생각, 
+  서양 문학의 배 이름을 라벨링 하기 위해, <{i}> 요소(element)가 사용되어야(should) 합니다.
 
   <p class="note">
-    The default rendering of the <{u}> element in visual presentations
-  clashes with the conventional rendering of hyperlinks (underlining). Authors are encouraged to
-  avoid using the <{u}> element where it could be confused for a hyperlink.
+    시각적 표현에서 <{u}> 요소(element)의 기본 렌더링은 전통적인 하이퍼링크들의 렌더링 (밑줄긋기)와 
+  충돌합니다. 작성자들은 하이퍼링크에 대한 혼란이 야기되는 경우 <{u}> 요소(element)를 사용하는 것을 
+  피하도록 권장됩니다.
   </p>
 
-<h4 id="the-mark-element">The <dfn element><code>mark</code></dfn> element</h4>
+<h4 id="the-mark-element"><dfn element><code>mark</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{mark}> element <a>represents</a> a run of text in one document marked or
-  highlighted for reference purposes, due to its relevance in another context. When used in a
-  quotation or other block of text referred to from the prose, it indicates a highlight that was not
-  originally present but which has been added to bring the reader's attention to a part of the text
-  that might not have been considered important by the original author when the block was originally
-  written, but which is now under previously unexpected scrutiny. When used in the main prose of a
-  document, it indicates a part of the document that has been highlighted due to its likely
-  relevance to the user's current activity.
+  <{mark}> 요소(element)는 다른 컨텍스트에서 그것의 관련성을 위해, 참조 목적으로 표기 혹은 강조된 
+  문서 내의 일련의 텍스트를 <a lt="represents">나타냅니다</a>. 인용구(quotation)나 본문으로부터 
+  참조된 텍스트의 다른 블럭에 사용되는 경우, 그것은 본래는 존재하지 않았으나 독자들의 주의를 블럭이 
+  본래 작성되었을 때 원작자에 의해 중요하다고 고려되지 않았지만 현재는 전에 예상하지 못한 검토 하에 
+  있는 텍스트의 일부로 가져오기 위해 추가된 강조를 나타냅니다. 문서의 주요 본문에 사용되는 경우, 
+  사용자의 현재 행동에 관련되는 것 같기 때문에 강조된 문서의 일부를 나타냅니다.
 
   <div class="example">
-    This example shows how the <{mark}> element can be used to bring attention to a
-    particular part of a quotation:
+    이 예는 인용구(quotation)의 특정 부분으로 주의를 가져오는데 <{mark}> 요소(element)가 사용될 수 
+    있는 방법을 보여줍니다:
 
     <pre highlight="html">
 &lt;p lang="en-US"&gt;Consider the following quote:&lt;/p&gt;
@@ -2803,16 +2764,15 @@ brighter. A &lt;b&gt;rat&lt;/b&gt; scurries past the corner wall.&lt;/p&gt;
 the person writing this quote is clearly not American.&lt;/p&gt;
     </pre>
 
-    (If the goal was to mark the element as misspelt, however, the <{u}> element,
-    possibly with a class, would be more appropriate.)
+    (그러나, 오타로 요소(element)를 표기하기 위한 목적이라면, <{u}> 요소(element)가, 아마도 클래스를 
+    가진, 더 적절할 것입니다.)
 
   </div>
 
   <div class="example">
-    Another example of the <{mark}> element is highlighting parts of a document that are
-    matching some search string. If someone looked at a document, and the server knew that the user
-    was searching for the word "kitten", then the server might return the document with one paragraph
-    modified as follows:
+    <{mark}> 요소(element)의 다른 예는 어떤 검색 문자열과 일치하는 문서의 일부를 강조하는 것입니다. 
+    누군가 문서를 보고 서버가 사용자가 단어 "kitten"에 대해 검색했다는 것을 알았다면, 서버는 다음과 
+    같은 수정된 문단을 가진 문서를 반환 할 수 있습니다:
 
     <pre highlight="html">
 &lt;p&gt;I also have some &lt;mark&gt;kitten&lt;/mark&gt;s who are visiting me
@@ -2823,8 +2783,7 @@ should adopt a &lt;mark&gt;kitten&lt;/mark&gt;.&lt;/p&gt;
   </div>
 
   <div class="example">
-    In the following snippet, a paragraph of text refers to a specific part of a code
-    fragment.
+    다음 코드 조각에서, 텍스트의 문단은 코드 조각의 특정한 부분을 가리킵니다.
 
     <pre highlight="html">
 &lt;p&gt;The highlighted part below is where the error lies:&lt;/p&gt;
@@ -2834,8 +2793,8 @@ begin
 end.&lt;/code&gt;&lt;/pre&gt;
     </pre>
 
-    This is separate from <em>syntax highlighting</em>, for which <code>span</code> is more
-    appropriate. Combining both, one would get:
+    이것은 <code>span</code>이 더 적절한 <em>문법 강조</em>와는 별개입니다. 둘을 결합하면 다음이 
+    얻어집니다:
 
     <pre highlight="html">
 &lt;p&gt;The highlighted part below is where the error lies:&lt;/p&gt;
@@ -2848,9 +2807,10 @@ end.&lt;/code&gt;&lt;/pre&gt;
   </div>
 
   <div class="example">
-    This is another example showing the use of <code>mark</code> to highlight a part of quoted
-    text that was originally not emphasized. In this example, common typographic conventions have led
-    the author to explicitly style <{mark}> elements in quotes to render in italics.
+    이것은 본래는 강조(emphasis) 되지 않은 인용된 부분을 강조(highlight)하기 위한 
+    <code>mark</code>의 사용을 보여주는 다른 예입니다. 이 예에서, 일반적인 표기법은 작성자가 
+    이탤릭체로 렌더링 되게 하기 위해 명시적으로 인용구 내의 <{mark}> 요소(element)들을 스타일하도록 
+    이끕니다.
 
     <pre highlight="html">
 &lt;head&gt;
@@ -2879,18 +2839,16 @@ end.&lt;/code&gt;&lt;/pre&gt;
 &lt;/article&gt;
     </pre>
 
-    Note, incidentally, the distinction between the <{em}> element in this example, which
-    is part of the original text being quoted, and the <{mark}> element, which is
-    highlighting a part for comment.
+    부수적으로, 이 예에서 인용되는 원본 텍스트의 일부인 <{em}> 요소(element)와 <{mark}> 
+    요소(element) 사이의 차이에 주목하세요.
 
   </div>
 
   <div class="example">
-    The following example shows the difference between denoting the <em>importance</em> of a span
-    of text (<code>strong</code>) as opposed to denoting the <em>relevance</em> of a span of text
-    (<code>mark</code>). It is an extract from a textbook, where the extract has had the parts
-    relevant to the exam highlighted. The safety warnings, important though they may be, are
-    apparently not relevant to the exam.
+    다음 예는 텍스트의 범위의 <em>관련성(relevance)</em>을 나타내는 것과 (<code>mark</code>) 달리 
+    텍스트의 범위의 <em>중요성(importance)</em>을 나타내는 것 (<code>strong</code>) 사이의 차이를 
+    보여줍니다. 이 예는 발췌가 시험과 연관된 부분이 강조된 교과서에서 발췌한 것입니다. 안전 
+    경고문들은 비록 중요할 지라도 시험과는 분명히 관련이 없습니다.
 
     <pre highlight="html">
 &lt;h3&gt;Wormhole Physics Introduction&lt;/h3&gt;
@@ -2916,56 +2874,53 @@ wormhole connection.&lt;/mark&gt;&lt;/p&gt;
 
   </div>
 
-<h4 id="the-bdi-element">The <dfn element><code>bdi</code></dfn> element</h4>
+<h4 id="the-bdi-element"><dfn element><code>bdi</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd>Also, the <code>dir</code> global attribute has special semantics on this element.</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd>또한, <code>dir</code> 범용 속성(attribute)은 이 요소(element)에서 특정한 의미(semantics)를 가집니다.</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{bdi}> element <a>represents</a> a span of text that is to be isolated from
-  its surroundings for the purposes of bidirectional text formatting. [[!BIDI]]
+  <{bdi}> 요소(element)는 양방향성 텍스트 서식의 목적으로 주변으로부터 구분되는 텍스트의 범위를 
+  <a lt="represents">나타냅니다</a>. [[!BIDI]]
 
   <p class="note">
-    The <code>dir</code> global attribute defaults to <code>auto</code> on this element (it never inherits from the parent element like
-  with other elements).
+    <code>dir</code> 범용 속성(attribute)은 이 요소(element)에서 기본으로 <code>auto</code>가
+    입니다(다른 요소(element)들과 마찬가지로 부모 요소(element)로부터 상속하지 않습니다).
   </p>
 
   <div class="impl">
 
   <p class="note">
-    This element <a href="#bidireq">has rendering requirements involving the bidirectional algorithm</a>.
+    이 요소(element)는 <a href="#bidireq">양방향성 알고리즘을 수반하는 렌더링 요구사항들을 가집니다</a>.
   </p>
 
   </div>
 
   <div class="example">
-    This element is especially useful when embedding user-generated content with an unknown
-    directionality.
+    이 요소(element)는 특히 알 수 없는 방향성을 가진 사용자 생성 콘텐트를 포함할 경우 유용합니다.
 
-    In this example, usernames are shown along with the number of posts that the user has
-    submitted. If the <{bdi}> element were not used, the username of the Arabic user would
-    end up confusing the text (the bidirectional algorithm would put the colon and the number "3"
-    next to the word "User" rather than next to the word "posts").
+    이 예에서, 사용자 이름들은 사용자가 제출한 게시물의 숫자와 함께 보여집니다. <{bdi}> 
+    요소(element)가 사용되지 않았다면, 아랍 사용자의 사용자 이름은 텍스트를 혼란스럽게 만들 것입니다 
+    (양방향 알고리즘은 단어 "posts" 다음보다 단어 "User" 다음에 콜론과 숫자 "3"을 둘 것입니다).
 
     <pre highlight="html">
 &lt;ul&gt;
@@ -2977,80 +2932,82 @@ wormhole connection.&lt;/mark&gt;&lt;/p&gt;
 
     <figure>
     <img src="images/sample-bdi.png"/>
-    <figcaption>When using the <{bdi}> element, the username acts as expected.</figcaption>
+    <figcaption><{bdi}> 요소(element)를 사용하는 경우, 사용자 이름이 예상대로 작동합니다.</figcaption>
     </figure>
 
     <figure>
     <img src="images/sample-not-bdi.png"/>
-    <figcaption>If the <{bdi}> element were to be replaced by a <{b}> element, the username would confuse the bidirectional algorithm and the third bullet would end up saying "User 3 :", followed by the Arabic name (right-to-left), followed by "posts" and a period.</figcaption>
+    <figcaption><{bdi}> 요소(element)가 <{b}> 요소(element)로 교체되었다면, 사용자 이름은 양방향 
+    알고리즘을 혼란스럽게 만들고 세 번째 글머리 기호는 "User 3:", 그 뒤로 아랍 이름 (오른쪽에서 
+    왼쪽), 그 뒤로 "posts" 그리고 마침표라고 나타내게 될 것입니다.</figcaption>
     </figure>
 
   </div>
 
-<h4 id="the-bdo-element">The <dfn element><code>bdo</code></dfn> element</h4>
+<h4 id="the-bdo-element"><dfn element><code>bdo</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd>Also, the <code>dir</code> global attribute has special semantics on this element.</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd>또한, <code>dir</code> 범용 속성(attribute)은 이 요소(element)에서 특별한 의미(semantics)를 가집니다.</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{bdo}> element <a>represents</a> explicit text directionality formatting
-  control for its children. It allows authors to override the Unicode bidirectional algorithm by
-  explicitly specifying a direction override. [[!BIDI]]
+  <{bdo}> 요소(element)는 그것의 자식에 대한 명시적인 텍스트 방향성 서식 제어를 
+  <a lt="represents">나타냅니다</a>. 이 요소(element)는 작성자가 명시적으로 방향 재정의를 명시하는 
+  것에 의해 유니코드 방향성 알고리즘을 재정의 하는 것을 허용합니다. [[!BIDI]]
 
-  Authors must specify the <{global/dir}> attribute on this element, with the
-  value <a attr-value for="global/dir"><code>ltr</code></a> to specify a left-to-right override and with the value <a attr-value for="global/dir"><code>rtl</code></a> to
-  specify a right-to-left override. The <a attr-value for="global/dir"><code>auto</code></a> value must not be specified.
+  작성자들은 이 요소(element)에 왼쪽에서 오른쪽 재정의를 명시하기 위한 값 
+  <a attr-value for="global/dir"><code>ltr</code></a>과 오른쪽에서 왼쪽 재정의를 명시하기 위한 값 
+  <a attr-value for="global/dir"><code>rtl</code></a>을 가지고 <{global/dir}> 속성(attribute)을 
+  명시해야(must) 합니다. <a attr-value for="global/dir"><code>auto</code></a> 값은 명시되지 
+  않아야(must) 합니다.
 
   <div class="impl">
 
   <p class="note">
-    This element <a href="#bidireq">has rendering requirements involving the bidirectional algorithm</a>.
+    이 요소(element)는 <a href="#bidireq">양방향성 알고리즘을 수반하는 렌더링 요구사항들을 가집니다</a>.
   </p>
 
   </div>
 
-<h4 id="the-span-element">The <dfn element><code>span</code></dfn> element</h4>
+<h4 id="the-span-element"><dfn element><code>span</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLSpanElement">
         interface HTMLSpanElement : HTMLElement {};
@@ -3058,15 +3015,14 @@ wormhole connection.&lt;/mark&gt;&lt;/p&gt;
     </dd>
   </dl>
 
-  The <{span}> element doesn't mean anything on its own, but can be useful when used
-  together with the <a>Global attributes</a>, e.g., <code>class</code>,
-  <{global/lang}>, or <code>dir</code>. It
-  <a>represents</a> its children.
+  <{span}> 요소(element)는 그 자체로는 아무 것도 의미(mean)하지 않지만, 
+  <a lt="Global attributes">범용 속성(attribute)들</a>과 예를 들어, 예를 들어, <code>class</code>, 
+  <{global/lang}>, 또는 <code>dir</code>과 함께 사용되는 경우에 유용할 수 있습니다. 그것은 그것의 
+  자식을 <a lt="represents">나타냅니다</a>.
 
   <div class="example">
-    In this example, a code fragment is marked up using
-    <{span}> elements and <code>class</code> attributes so that its keywords and
-    identifiers can be color-coded from CSS:
+    이 예에서, 코드 조각은 그것의 키워드들과 식별자들이 CSS로부터 색상이 입혀질 수 있도록 <{span}> 
+    요소(element)들과 <code>class</code> 속성(attribute)들을 사용하여 마크업됩니다:
 
     <pre highlight="html">
 &lt;pre&gt;&lt;code class="lang-c"&gt;&lt;span class="keyword"&gt;for&lt;/span&gt; (&lt;span class="ident"&gt;j&lt;/span&gt; = 0; &lt;span class="ident"&gt;j&lt;/span&gt; &amp;lt; 256; &lt;span class="ident"&gt;j&lt;/span&gt;++) {
@@ -3079,27 +3035,26 @@ wormhole connection.&lt;/mark&gt;&lt;/p&gt;
 
   </div>
 
-<h4 id="the-br-element">The <dfn element><code>br</code></dfn> element</h4>
+<h4 id="the-br-element"><dfn element><code>br</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Nothing</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>No <a>end tag</a></dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Nothing">없음</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd><a lt="end tag">종료 태그</a> 없음.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLBRElement">
         interface HTMLBRElement : HTMLElement {};
@@ -3107,20 +3062,19 @@ wormhole connection.&lt;/mark&gt;&lt;/p&gt;
     </dd>
   </dl>
 
-  The <{br}> element <a>represents</a> a line break.
+  <{br}> 요소(element)는 줄 바꿈을 <a lt="represents">나타냅니다</a>.
 
   <p class="note">
-    While line breaks are usually represented in visual media by physically moving
-  subsequent text to a new line, a style sheet or user agent would be equally justified in causing
-  line breaks to be rendered in a different manner, for instance as green dots, or as extra
-  spacing.
+    줄 바꿈들이 보통 시각 매체에서 물리적으로 다음 텍스트를 새로운 줄로 옮기는 것으로 표현되는 반면, 
+  스타일 시트나 유저에이전트는 줄 바꿈이 다른 방법으로, 예를 들어 녹색 점이나 추가적인 공백, 렌더링 
+  되도록 하는 것은 동일하게 정당할 것입니다.
   </p>
 
-  <{br}> elements must be used only for line breaks that are actually part of the
-  content, as in poems or addresses.
+  <{br}> 요소(element)들은 시들이나 주소들에서와 같이, 실제로 콘텐트의 일부인 줄 바꿈을 위해서만 
+  사용되어야 합니다.
 
   <div class="example">
-  The following example is correct usage of the <{br}> element:
+  다음 예는 <{br}> 요소(element)의 올바른 사용예입니다:
 
     <pre highlight="html">
 &lt;p&gt;P. Sherman&lt;br&gt;
@@ -3130,10 +3084,10 @@ Sydney&lt;/p&gt;
 
   </div>
 
-  <{br}> elements must not be used for separating thematic groups in a paragraph.
+  <{br}> 요소(element)들은 문단 내 주제 그룹을 분별하기 위해 사용되지 않아야(must) 합니다.
 
   <div class="example">
-    The following examples are non-conforming, as they abuse the <{br}> element:
+    다음 예들은 <{br}> 요소(element)를 오용한 것으로, 부적합 합니다:
 
     <pre highlight="html">
 &lt;p&gt;&lt;a ...&gt;34 comments.&lt;/a&gt;&lt;br&gt;
@@ -3145,7 +3099,7 @@ Sydney&lt;/p&gt;
 &lt;label&gt;Address: &lt;input name="address"&gt;&lt;/label&gt;&lt;/p&gt;
     </pre>
 
-    Here are alternatives to the above, which are correct:
+    여기 위에 대한 옳바른 대안이 있습니다:
 
     <pre highlight="html">
 &lt;p&gt;&lt;a ...&gt;34 comments.&lt;/a&gt;&lt;/p&gt;
@@ -3159,51 +3113,49 @@ Sydney&lt;/p&gt;
 
   </div>
 
-  If a <a>paragraph</a> consists of nothing but a single <{br}> element, it
-  represents a placeholder blank line (e.g., as in a template). Such blank lines must not be used for
-  presentation purposes.
+  <a lt="paragraph">문단</a>이 어떤 것으로도 구성되지 않고 단일 <{br}> 요소(element)로 구성된다면, 
+  그것은 플레이스홀더 빈 줄을 (예를 들어, 템플릿에서) 나타냅니다. 그러한 빈 줄들은 표현(presentaion) 
+  목적들을 위해 사용되지 않아야(must) 합니다.
 
   <div class="impl">
 
-  Any content inside <{br}> elements must not be considered part of the surrounding
-  text.
+  <{br}> 요소(element)들 내부의 어떤 콘텐트도 주변 텍스트의 일부로 간주되지 않아야(must) 합니다.
 
   <p class="note">
-    This element <a href="#bidireq">has rendering requirements involving the bidirectional algorithm</a>.
+    이 요소(element)는 <a href="#bidireq">양방향성 알고리즘을 수반하는 렌더링 요구사항들을 가집니다</a>.
   </p>
 
   </div>
 
-<h4 id="the-wbr-element">The <dfn element><code>wbr</code></dfn> element</h4>
+<h4 id="the-wbr-element"><dfn element><code>wbr</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>phrasing content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Nothing</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>No <a>end tag</a></dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties">Any role value</a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
-    <dd>Uses {{HTMLElement}}.</dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>가 기대되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Nothing">없음</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd><a lt="end tag">종료 태그</a> 없음.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a href="#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
+    <dd>{{HTMLElement}}를 사용.</dd>
   </dl>
 
-  The <{wbr}> element <a>represents</a> a line break opportunity.
+  <{wbr}> 요소(element)는 줄 바꿈 기회를 <a lt="represents">나타냅니다</a>.
 
   <div class="example">
-    In the following example, someone is quoted as saying something which, for effect, is written
-    as one long word. However, to ensure that the text can be wrapped in a readable fashion, the
-    individual words in the quote are separated using a <{wbr}> element.
+    다음 예에서, 효과를 위해, 누군가 하나의 긴 단어로 쓰여진 무언가를 말한 것으로 인용됩니다. 
+    하지만, 텍스트가 읽을 수 있는 방식으로 감싸질 수 있는 것을 보장하기 위해, 인용구 내 각각의 
+    단어들이 <{wbr}> 요소(element)들을 사용하여 나뉩니다.
 
     <pre highlight="html">
 &lt;p&gt;So then he pointed at the tiger and screamed
@@ -3213,8 +3165,8 @@ Sydney&lt;/p&gt;
   </div>
 
   <div class="example">
-    Here, especially long lines of code in a program listing have suggested wrapping points given
-    using <{wbr}> elements.
+    여기 특히 프로그램 목록에서 코드의 긴 줄들이 <{wbr}> 요소(element)들을 사용하여 주어진 지점들을 
+    감싸는 것을 제안했습니다.
 
     <pre highlight="html">
 &lt;pre&gt;...
@@ -3227,8 +3179,7 @@ Course course = Helm.CourseFactory(Heading, &lt;wbr&gt;Maps.MapFactoryFromHeadin
 
   <div class="impl">
 
-  Any content inside <{wbr}> elements must not be considered part of the surrounding
-  text.
+  <{wbr}> 요소(element)들 내 어떤 콘텐트도 주변 텍스트의 일부로 간주되지 않아야(must) 합니다.
 
     <pre class="example">var wbr = document.createElement("wbr");
 wbr.textContent = "This is wrong";
@@ -3236,155 +3187,155 @@ document.body.appendChild(wbr);
 </pre>
 
   <p class="note">
-    This element <a href="#bidireq">has rendering requirements involving the bidirectional algorithm</a>.
+    이 요소(element)는 <a href="#bidireq">양방향성 알고리즘을 수반하는 렌더링 요구사항들을 가집니다</a>.
   </p>
 
   </div>
 
-<h4 id="text-level-semantics-usage-summary">Usage summary</h4>
+<h4 id="text-level-semantics-usage-summary">사용법 요약</h4>
 
-  <em>This section is non-normative.</em>
+  <em>이 섹션은 비규범적입니다.</em>
 
   <table>
     <thead>
     <tr>
-      <th>Element
-      </th><th>Purpose
-      </th><th>Example
+      <th>요소(element)
+      </th><th>목적
+      </th><th>예
     </th></tr></thead><tbody>
     <tr>
       <td><{a}>
-      </td><td>Hyperlinks
+      </td><td>하이퍼링크들
       </td><td><pre class="example">Visit my <strong>&lt;a href="drinks.html"&gt;drinks&lt;/a&gt;</strong> page.</pre>
 
     </td></tr><tr>
       <td><{em}>
-      </td><td>Stress emphasis
+      </td><td>역설 강조(stress emphasis)
       </td><td><pre class="example">I must say I <strong>&lt;em&gt;adore&lt;/em&gt;</strong> lemonade.</pre>
 
     </td></tr><tr>
       <td><{strong}>
-      </td><td>Importance
+      </td><td>중요성
       </td><td><pre class="example">This tea is <strong>&lt;strong&gt;very hot&lt;/strong&gt;</strong>.</pre>
 
     </td></tr><tr>
       <td><{small}>
-      </td><td>Side comments
+      </td><td>보조 코멘트들
       </td><td><pre class="example">These grapes are made into wine. <strong>&lt;small&gt;Alcohol is addictive.&lt;/small&gt;</strong></pre>
 
     </td></tr><tr>
       <td><{s}>
-      </td><td>Inaccurate text
+      </td><td>정확하지 않은 텍스트
       </td><td><pre class="example">Price: <strong>&lt;s&gt;£4.50&lt;/s&gt;</strong> £2.00!</pre>
 
     </td></tr><tr>
       <td><{cite}>
-      </td><td>Titles of works
+      </td><td>작품들의 제목들
       </td><td><pre class="example">The case <strong>&lt;cite&gt;Hugo v. Danielle&lt;/cite&gt;</strong> is relevant here.</pre>
 
     </td></tr><tr>
       <td><{q}>
-      </td><td>Quotations
+      </td><td>인용구(quotation)들
       </td><td><pre class="example">The judge said <strong>&lt;q&gt;You can drink water from the fish tank&lt;/q&gt;</strong> but advised against it.</pre>
 
     </td></tr><tr>
       <td><{dfn}>
-      </td><td>Defining instance
+      </td><td>장의 사례
       </td><td><pre class="example">The term <strong>&lt;dfn&gt;organic food&lt;/dfn&gt;</strong> refers to food produced without synthetic chemicals.</pre>
 
     </td></tr><tr>
       <td><{abbr}>
-      </td><td>Abbreviations
+      </td><td>축약어들
       </td><td><pre class="example">Organic food in Ireland is certified by the <strong>&lt;abbr title="Irish Organic Farmers and Growers Association"&gt;IOFGA&lt;/abbr&gt;</strong>.</pre>
 
     </td></tr><tr>
       <td><{ruby}>, <{rb}>, <{rp}>, <{rt}>, <code>rtc</code>
-      </td><td>Ruby annotations
+      </td><td>루비 주석(annotation)들
       </td><td><pre class="example"><strong>&lt;ruby&gt; &lt;rb&gt;OJ &lt;rp&gt;(&lt;rtc&gt;&lt;rt&gt;Orange Juice&lt;/rtc&gt;&lt;rp&gt;)&lt;/ruby&gt;</strong></pre>
 
     </td></tr><tr>
       <td><{data}>
-      </td><td>Machine-readable equivalent
+      </td><td>기계가 해석할 수 있는 동등한 것
       </td><td><pre class="example">Available starting today! <strong>&lt;data value="UPC:022014640201"&gt;North Coast Organic Apple Cider&lt;/data&gt;</strong></pre>
 
     </td></tr><tr>
       <td><{time}>
-      </td><td>Machine-readable equivalent of date- or time-related data
+      </td><td>날짜 혹은 시간 관련 데이터의 기계가 해석 할 수 있는 동등한 것
       </td><td><pre class="example">Available starting on <strong>&lt;time datetime="2011-11-18"&gt;November 18th&lt;/time&gt;</strong>!</pre>
 
     </td></tr><tr>
       <td><{code}>
-      </td><td>Computer code
+      </td><td>컴퓨터 코드
       </td><td><pre class="example">The <strong>&lt;code&gt;fruitdb&lt;/code&gt;</strong> program can be used for tracking fruit production.</pre>
 
     </td></tr><tr>
       <td><{var}>
-      </td><td>Variables
+      </td><td>변수들
       </td><td><pre class="example">If there are <strong>&lt;var&gt;n&lt;/var&gt;</strong> fruit in the bowl, at least <strong>&lt;var&gt;n&lt;/var&gt;</strong>÷2 will be ripe.</pre>
 
     </td></tr><tr>
       <td><{samp}>
-      </td><td>Computer output
+      </td><td>컴퓨터 출력
       </td><td><pre class="example">The computer said <strong>&lt;samp&gt;Unknown error -3&lt;/samp&gt;</strong>.</pre>
 
     </td></tr><tr>
       <td><{kbd}>
-      </td><td>User input
+      </td><td>사용자 입력
       </td><td><pre class="example">Hit <strong>&lt;kbd&gt;F1&lt;/kbd&gt;</strong> to continue.</pre>
 
     </td></tr><tr>
       <td><{sub}>
-      </td><td>Subscripts
+      </td><td>다리 글자들
       </td><td><pre class="example">Water is H<strong>&lt;sub&gt;2&lt;/sub&gt;</strong>O.</pre>
 
     </td></tr><tr>
       <td><{sup}>
-      </td><td>Superscripts
+      </td><td>어깨 글자들
       </td><td><pre class="example">The Hydrogen in heavy water is usually <strong>&lt;sup&gt;2&lt;/sup&gt;</strong>H.</pre>
 
     </td></tr><tr>
       <td><{i}>
-      </td><td>Alternative voice
+      </td><td>다른 어조
       </td><td><pre class="example">Lemonade consists primarily of <strong>&lt;i&gt;Citrus limon&lt;/i&gt;</strong>.</pre>
 
     </td></tr><tr>
       <td><{b}>
-      </td><td>Keywords
+      </td><td>키워드들
       </td><td><pre class="example">Take a <strong>&lt;b&gt;lemon&lt;/b&gt;</strong> and squeeze it with a <strong>&lt;b&gt;juicer&lt;/b&gt;</strong>.</pre>
 
     </td></tr><tr>
       <td><{u}>
-      </td><td>Annotations
+      </td><td>주석(annotation)들
       </td><td><pre class="example">The mixture of apple juice and <strong>&lt;u class="spelling"&gt;eldeflower&lt;/u&gt;</strong> juice is very pleasant.</pre>
 
     </td></tr><tr>
       <td><{mark}>
-      </td><td>Highlight
+      </td><td>강조(highlight)
       </td><td><pre class="example">Elderflower cordial, with one <strong>&lt;mark&gt;part&lt;/mark&gt;</strong> cordial to ten <strong>&lt;mark&gt;part&lt;/mark&gt;</strong>s water, stands a<strong>&lt;mark&gt;part&lt;/mark&gt;</strong> from the rest.</pre>
 
     </td></tr><tr>
       <td><{bdi}>
-      </td><td>Text directionality isolation
+      </td><td>텍스트 방향 구분
       </td><td><pre class="example">The recommended restaurant is <strong>&lt;bdi lang=""&gt;My Juice Café (At The Beach)&lt;/bdi&gt;</strong>.</pre>
 
     </td></tr><tr>
       <td><{bdo}>
-      </td><td>Text directionality formatting
+      </td><td>텍스트 방향 서식
       </td><td><pre class="example">The proposal is to write English, but in reverse order. "Juice" would become "<strong>&lt;bdo dir=rtl&gt;Juice&lt;/bdo&gt;</strong>"</pre>
 
     </td></tr><tr>
       <td><{span}>
-      </td><td>Other
+      </td><td>기타
       </td><td><pre class="example">In French we call it <strong>&lt;span lang="fr"&gt;sirop de sureau&lt;/span&gt;</strong>.</pre>
 
     </td></tr><tr>
       <td><{br}>
-      </td><td>Line break
+      </td><td>줄 바꿈
       </td><td><pre class="example">Simply Orange Juice Company<strong>&lt;br&gt;</strong>Apopka, FL 32703<strong>&lt;br&gt;</strong>U.S.A.</pre>
 
     </td></tr><tr>
       <td><{wbr}>
-      </td><td>Line breaking opportunity
+      </td><td>줄 바꿈 기회
       </td><td><pre class="example">www.simply<strong>&lt;wbr&gt;</strong>orange<strong>&lt;wbr&gt;</strong>juice.com</pre>
 
   </td></tr></tbody></table>
