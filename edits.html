@@ -2,7 +2,7 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <meta content="REC" name="w3c-status">
-  <title>HTML 5.1: 4.6. Edits</title>
+  <title>HTML 5.1: 4.6. 편집</title>
   <link href="styles/styles-html.css" rel="stylesheet" type="text/css">
   <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-REC" rel="stylesheet" type="text/css">
 <style data-fill-with="stylesheet">/******************************************************************************
@@ -1439,53 +1439,53 @@ pre.idl.highlight { color: #708090; }
   <nav data-fill-with="table-of-contents" id="toc"><p class="prev_next">← <a href="textlevel-semantics.html#textlevel-semantics"><span class="secno">4.5</span> <span class="content">텍스트 수준 의미론</span></a> — <a href="index.html#contents">Table of contents</a> — <a href="semantics-embedded-content.html#semantics-embedded-content"><span class="secno">4.7</span> <span class="content">Embedded content</span></a> →</p>
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory"><li>
-       <a href="edits.html#edits"><span class="secno">4.6</span> <span class="content">Edits</span></a>
+       <a href="edits.html#edits"><span class="secno">4.6</span> <span class="content">편집</span></a>
        <ol class="toc">
-        <li><a href="edits.html#the-ins-element"><span class="secno">4.6.1</span> <span class="content">The <span><code>ins</code></span> element</span></a>
-        </li><li><a href="edits.html#the-del-element"><span class="secno">4.6.2</span> <span class="content">The <span><code>del</code></span> element</span></a>
-        </li><li><a href="edits.html#attributes-common-to-ins-and-del-elements"><span class="secno">4.6.3</span> <span class="content">Attributes common to <code>ins</code> and <code><span>del</span></code> elements</span></a>
-        </li><li><a href="edits.html#edits-and-paragraphs"><span class="secno">4.6.4</span> <span class="content">Edits and paragraphs</span></a>
-        </li><li><a href="edits.html#edits-and-lists"><span class="secno">4.6.5</span> <span class="content">Edits and lists</span></a>
-        </li><li><a href="edits.html#edits-and-tables"><span class="secno">4.6.6</span> <span class="content">Edits and tables</span></a>
+        <li><a href="edits.html#the-ins-element"><span class="secno">4.6.1</span> <span class="content"><span><code>ins</code></span> 요소(element)</span></a>
+        </li><li><a href="edits.html#the-del-element"><span class="secno">4.6.2</span> <span class="content"><span><code>del</code></span> 요소(element)</span></a>
+        </li><li><a href="edits.html#attributes-common-to-ins-and-del-elements"><span class="secno">4.6.3</span> <span class="content"><code>ins</code>와 <code><span>del</span></code> 요소(element)들에 공통된 속성(attribute)들</span></a>
+        </li><li><a href="edits.html#edits-and-paragraphs"><span class="secno">4.6.4</span> <span class="content">편집과 문단</span></a>
+        </li><li><a href="edits.html#edits-and-lists"><span class="secno">4.6.5</span> <span class="content">편집과 목록</span></a>
+        </li><li><a href="edits.html#edits-and-tables"><span class="secno">4.6.6</span> <span class="content">편집과 표</span></a>
        </li></ol>
       </li></ol>
   </nav><main><section>
-     <h3 class="heading settled" data-level="4.6" id="edits"><span class="secno">4.6. </span><span class="content">Edits</span><a class="self-link" href="edits.html#edits"></a></h3>
-     <p>The <code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-16">ins</a></code> and <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-12">del</a></code> elements represent edits to the document.</p>
-     <h4 class="heading settled" data-level="4.6.1" id="the-ins-element"><span class="secno">4.6.1. </span><span class="content">The <dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-ins"><code>ins</code></dfn> element</span><a class="self-link" href="edits.html#the-ins-element"></a></h4>
+     <h3 class="heading settled" data-level="4.6" id="edits"><span class="secno">4.6. </span><span class="content">편집</span><a class="self-link" href="edits.html#edits"></a></h3>
+     <p><code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-16">ins</a></code>와 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-12">del</a></code> 요소(element)들은 문서에 대한 편집을 나타냅니다.</p>
+     <h4 class="heading settled" data-level="4.6.1" id="the-ins-element"><span class="secno">4.6.1. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-ins"><code>ins</code></dfn> 요소(element)</span><a class="self-link" href="edits.html#the-ins-element"></a></h4>
      <dl class="element">
-      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-62">Categories</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-87">Flow content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-102">Phrasing content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-43">Palpable content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-61">Contexts in which this element can be used</a>:
-      </dt><dd>Where <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-103">phrasing content</a> is expected.
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-64">Content model</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#transparent" id="ref-for-transparent-3">Transparent</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-61">Tag omission in text/html</a>:
-      </dt><dd>Neither tag is omissible
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-62">Content attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-62">Global attributes</a>
+      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-62">카테고리</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-87">흐름(flow) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-102">어구(phrasing) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#palpable-content" id="ref-for-palpable-content-43">분명한(palpable) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-61">이 요소(element)가 사용될 수 있는 컨텍스트</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-103">어구(phrasing) 콘텐트</a>가 기대되는 곳.
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-64">콘텐트 모델</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#transparent" id="ref-for-transparent-3">투명</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-61">text/html에서 태그 생략</a>:
+      </dt><dd>어느 태그도 생략 가능하지 않습니다
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-62">콘텐트 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-62">범용 속성(attribute)들</a>
       </dd><dd><code>cite</code> - Link to the source of the quotation or more information about the edit 
       </dd><dd><code>datetime</code> - Date and (optionally) time of the change 
-      </dd><dt>Allowed <a href="dom.html#aria-role-attribute">ARIA role attribute</a> values:
-      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">Any role value</a>.
-      </dd><dt>Allowed <a href="dom.html#state-and-property-attributes">ARIA state and property attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-63">Global aria-* attributes</a>
-      </dd><dd>Any <code>aria-*</code> attributes <a href="dom.html#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.
-      </dd><dt><a data-link-type="dfn">DOM interface</a>:
-      </dt><dd>Uses the <code>HTMLModElement</code> interface.
+      </dd><dt>허용된 <a href="dom.html#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:
+      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.
+      </dd><dt>허용된 <a href="dom.html#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-63">범용 aria-* 속성(attribute)들</a>
+      </dd><dd><a href="dom.html#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.
+      </dd><dt><a data-link-type="dfn">DOM 인터페이스</a>:
+      </dt><dd><code>HTMLModElement</code> 인터페이스를 사용.
      </dd></dl>
-     <p>The <code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-17">ins</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-74">represents</a> an addition to the document.</p>
-     <div class="example" id="example-8bce0caa">
-      <a class="self-link" href="edits.html#example-8bce0caa"></a> The following represents the addition of a single paragraph: 
+     <p><code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-17">ins</a></code> 요소(element)는 문서에 대한 삽입을 <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-74">나타냅니다</a>.</p>
+     <div class="example" id="example-f00ea639">
+      <a class="self-link" href="edits.html#example-f00ea639"></a> 다음은 단일 문단의 삽입을 나타냅니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> I like fruit. <span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="p">/</span><span class="nt">ins</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">aside</span><span class="p">&gt;</span>
 </pre>
-      <p>As does the following, because everything in the <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-23">aside</a></code> element here counts as <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-104">phrasing content</a> and therefore there is just one <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-11">paragraph</a>:</p>
+      <p>다음과 같이 할 경우, because <code><a data-link-type="element" href="sections.html#elementdef-aside" id="ref-for-elementdef-aside-23">aside</a></code> 요소(element) 내 모든 것이 여기서 <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-104">어구(phrasing) 콘텐트</a>로 세기 때문에 단 하나의 <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-11">문단</a>만 존재합니다:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>
   Apples are <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>tasty<span class="p">&lt;</span><span class="p">/</span><span class="nt">em</span><span class="p">&gt;</span>.
@@ -1496,11 +1496,11 @@ pre.idl.highlight { color: #708090; }
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">aside</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <p><code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-18">ins</a></code> elements should not cross <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-12">implied paragraph</a> boundaries.</p>
-     <div class="example" id="example-2827f63e">
-      <a class="self-link" href="edits.html#example-2827f63e"></a> The following example represents the addition of two paragraphs, the second of which was
-    inserted in two parts. The first <code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-19">ins</a></code> element in this example thus crosses a
-    paragraph boundary, which is considered poor form. 
+     <p><code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-18">ins</a></code> 요소(element)들은 <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-12">암묵적 문단</a> 경계들을 가로지르지
+  않아야(should) 합니다.</p>
+     <div class="example" id="example-bdf1d33f">
+      <a class="self-link" href="edits.html#example-bdf1d33f"></a> 다음 예는 두 문단들의 추가를 보여주며, 두 번째 것이 두 개 부분들에 삽입되었습니다. 이 예에서 첫 
+    번째 <code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-19">ins</a></code> 요소(element)는 따라서 문단 경계를 가로지르며, 이는 잘못된 형식으로 간주됩니다. 
 <pre class="bad">&lt;aside&gt;  &lt;!-- don’t do this --&gt;
   &lt;ins datetime="2005-03-16 00:00Z"&gt;
   &lt;p&gt; I like fruit. &lt;/p&gt;
@@ -1510,8 +1510,8 @@ pre.idl.highlight { color: #708090; }
   So are pears.
   &lt;/ins&gt;
 &lt;/aside&gt;</pre>
-      <p>Here is a better way of marking this up. It uses more elements, but none of the elements cross
-    implied paragraph boundaries.</p>
+      <p>여기 이것을 마크업하는 더 나은 방법이 있습니다. 더 많은 요소(element)들을 사용하지만, 암묵적인
+    문단 경계들을 가로지르는 요소(element)들은 없습니다.</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">ins</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"2005-03-16 00:00Z"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> I like fruit. <span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1525,34 +1525,34 @@ pre.idl.highlight { color: #708090; }
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">aside</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <h4 class="heading settled" data-level="4.6.2" id="the-del-element"><span class="secno">4.6.2. </span><span class="content">The <dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-del"><code>del</code></dfn> element</span><a class="self-link" href="edits.html#the-del-element"></a></h4>
+     <h4 class="heading settled" data-level="4.6.2" id="the-del-element"><span class="secno">4.6.2. </span><span class="content"><dfn class="dfn-paneled" data-dfn-type="element" data-export="" id="elementdef-del"><code>del</code></dfn> 요소(element)</span><a class="self-link" href="edits.html#the-del-element"></a></h4>
      <dl class="element">
-      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-63">Categories</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-88">Flow content</a>.
-      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-105">Phrasing content</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-62">Contexts in which this element can be used</a>:
-      </dt><dd>Where <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-106">phrasing content</a> is expected.
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-65">Content model</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#transparent" id="ref-for-transparent-4">Transparent</a>.
-      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-62">Tag omission in text/html</a>:
-      </dt><dd>Neither tag is omissible
-      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-63">Content attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-63">Global attributes</a>
-      </dd><dd><code>cite</code> - Link to the source of the quotation or more information about the edit 
-      </dd><dd><code>datetime</code> - Date and (optionally) time of the change 
-      </dd><dt>Allowed <a href="dom.html#aria-role-attribute">ARIA role attribute</a> values:
-      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">Any role value</a>.
-      </dd><dt>Allowed <a href="dom.html#state-and-property-attributes">ARIA state and property attributes</a>:
-      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-64">Global aria-* attributes</a>
-      </dd><dd>Any <code>aria-*</code> attributes <a href="dom.html#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.
-      </dd><dt><a data-link-type="dfn">DOM interface</a>:
-      </dt><dd>Uses the <code>HTMLModElement</code> interface.
+      <dt><a data-link-type="dfn" href="dom.html#categories" id="ref-for-categories-63">카테고리</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#flow-content" id="ref-for-flow-content-88">흐름(flow) 콘텐트</a>.
+      </dd><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-105">어구(phrasing) 콘텐트</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-62">이 요소(element)가 사용될 수 있는 컨텍스트</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-106">어구(phrasing) 콘텐트</a>가 기대되는 곳.
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-model" id="ref-for-content-model-65">콘텐트 모델</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#transparent" id="ref-for-transparent-4">투명</a>.
+      </dd><dt><a data-link-type="dfn" href="dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-62">text/html에서 태그 생략</a>:
+      </dt><dd>어느 태그도 생략 가능하지 않습니다
+      </dd><dt><a data-link-type="dfn" href="dom.html#content-attribute" id="ref-for-content-attribute-63">콘텐트 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-attributes" id="ref-for-global-attributes-63">범용 속성(attribute)들</a>
+      </dd><dd><code>cite</code> - 인용구(quotation) 혹은 편집에 대한 더 많은 정보의 소스로의 링크
+      </dd><dd><code>datetime</code> - 변경의 날짜와 (선택적으로) 시간 
+      </dd><dt>허용된 <a href="dom.html#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:
+      </dt><dd><a href="dom.html#allowed-aria-roles-states-and-properties">모든 역할(role) 값</a>.
+      </dd><dt>허용된 <a href="dom.html#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:
+      </dt><dd><a data-link-type="dfn" href="dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-64">범용 aria-* 속성(attribute)들</a>
+      </dd><dd><a href="dom.html#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.
+      </dd><dt><a data-link-type="dfn">DOM 인터페이스</a>:
+      </dt><dd><code>HTMLModElement</code> 인터페이스를 사용.
      </dd></dl>
-     <p>The <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-13">del</a></code> element <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-75">represents</a> a removal from the document.</p>
-     <p><code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-14">del</a></code> elements should not cross <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-13">implied paragraph</a> boundaries.</p>
-     <div class="example" id="example-de57462f">
-      <a class="self-link" href="edits.html#example-de57462f"></a> The following shows a "to do" list where items that have been done are crossed-off with the
-    date and time of their completion. 
+     <p><code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-13">del</a></code> 요소(element)는 문서로부터의 제거를 <a data-link-type="dfn" href="dom.html#represent" id="ref-for-represent-75">나타냅니다</a>.</p>
+     <p><code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-14">del</a></code> 요소(element)는 <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-13">암묵적 문단</a> 경계를 가로지르지 않아야(should)
+  합니다.</p>
+     <div class="example" id="example-f4f38f86">
+      <a class="self-link" href="edits.html#example-f4f38f86"></a> 다음은 완료된 것의 날짜와 시간을 줄을 그어 지워진 항목들이 있는 "할 일" 목록을 보여줍니다. 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>To Do<span class="p">&lt;</span><span class="p">/</span><span class="nt">h1</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Empty the dishwasher<span class="p">&lt;</span><span class="p">/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1562,42 +1562,47 @@ pre.idl.highlight { color: #708090; }
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <h4 class="heading settled" data-level="4.6.3" id="attributes-common-to-ins-and-del-elements"><span class="secno">4.6.3. </span><span class="content">Attributes common to <code>ins</code> and <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-15">del</a></code> elements</span><a class="self-link" href="edits.html#attributes-common-to-ins-and-del-elements"></a></h4>
-     <p>The <dfn class="dfn-paneled" data-dfn-for="edits" data-dfn-type="element-attr" data-export="" id="element-attrdef-edits-cite"><code>cite</code></dfn> attribute may be used to specify the
-  address of a document that explains the change. When that document is long, for instance the
-  minutes of a meeting, authors are encouraged to include a fragment identifier pointing to the
-  specific part of that document that discusses the change.</p>
-     <p>If the <code>cite</code> attribute is present, it must be a <a data-link-type="dfn" href="infrastructure.html#valid-url-potentially-surrounded-by-spaces" id="ref-for-valid-url-potentially-surrounded-by-spaces-4">valid
-  URL potentially surrounded by spaces</a> that explains the change. <span class="impl">To obtain
-  the corresponding citation link, the value of the attribute must be <a data-link-type="dfn" href="https://www.w3.org/2001/tag/doc/promises-guide/#resolve-promise">resolved</a> relative to the element.</span> User agents may allow users to follow such
-  citation links, but they are primarily intended for private use (e.g., by server-side scripts
-  collecting statistics about a site’s edits), not for readers.</p>
-     <p>The <dfn class="dfn-paneled" data-dfn-for="edits" data-dfn-type="element-attr" data-export="" id="element-attrdef-edits-datetime"><code>datetime</code></dfn> attribute may be used to specify
-  the time and date of the change.</p>
-     <p>If present, the <code>datetime</code> attribute’s value must be a <a data-link-type="dfn" href="infrastructure.html#valid-date-string-with-optional-time" id="ref-for-valid-date-string-with-optional-time-1">valid date string with optional time</a>.</p>
+     <h4 class="heading settled" data-level="4.6.3" id="attributes-common-to-ins-and-del-elements"><span class="secno">4.6.3. </span><span class="content"><code>ins</code>와 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-15">del</a></code> 요소(element)들에 공통된 속성(attribute)들</span><a class="self-link" href="edits.html#attributes-common-to-ins-and-del-elements"></a></h4>
+     <p><dfn class="dfn-paneled" data-dfn-for="edits" data-dfn-type="element-attr" data-export="" id="element-attrdef-edits-cite"><code>cite</code></dfn> 속성(attribute)은 변경을 설명하는 문서의
+  주소를 명시하는데 사용될 수 있습니다. 그 문서가 긴 경우, 예를 들어 회의록의 경우, 작성자들은 
+  변경을 논하는 그 문서의 특정 부분을 가리키는 문서 조각 식별자를 포함하도록 권장됩니다.</p>
+     <p><code>cite</code> 속성(attribute)이 존재한다면, 그것은 변경을 설명하는 <a data-link-type="dfn" href="infrastructure.html#valid-url-potentially-surrounded-by-spaces" id="ref-for-valid-url-potentially-surrounded-by-spaces-4">유효한 잠정적으로 공백으로 둘러 싸일 수 있는 URL</a>이어야(must) 
+  합니다. <span class="impl">해당하는 출처(citation) 링크를 얻기 위해, 속성(attribute)의 값은 
+  요소(element)에 관련하여 <a data-link-type="dfn" href="https://www.w3.org/2001/tag/doc/promises-guide/#resolve-promise">반영</a>되어야(must) 합니다.</span> 유저 에이전트들은 
+  그러한 출처(citation) 링크드를 따라가는 것을 허용할 수 있지만, 그것들은 독자들을 위한 것이 아닌, 
+  주로 특정한 사용을 (예를 들어, 사이트의 편집들에 대한 통계를 수집하는 서버 사이드 스크립트들) 위해 
+  의도된 것입니다.</p>
+     <p><dfn class="dfn-paneled" data-dfn-for="edits" data-dfn-type="element-attr" data-export="" id="element-attrdef-edits-datetime"><code>datetime</code></dfn> 속성(attribute)은 변경의 시간과 날짜를
+  명시하는데 사용 될 수 있습니다.</p>
+     <p>존재한다면, <code>datetime</code> 속성(attribute)이 값은 <a data-link-type="dfn" href="infrastructure.html#valid-date-string-with-optional-time" id="ref-for-valid-date-string-with-optional-time-1">선택적인 시간을 가진 유효한 날짜 문자열</a>이어야(must)
+  합니다.</p>
      <div class="impl">
-      <p>User agents must parse the <code>datetime</code> attribute according
-  to the <a data-link-type="dfn" href="infrastructure.html#parse-a-date-or-time-string" id="ref-for-parse-a-date-or-time-string-1">parse a date or time string</a> algorithm. If that doesn’t return a <a data-link-type="dfn" href="infrastructure.html#dates-date" id="ref-for-dates-date-2">date</a> or a <a data-link-type="dfn" href="infrastructure.html#global-date-and-time" id="ref-for-global-date-and-time-4">global date and time</a>,
-  then the modification has no associated timestamp (the value is non-conforming; it is not a <a data-link-type="dfn" href="infrastructure.html#valid-date-string-with-optional-time" id="ref-for-valid-date-string-with-optional-time-2">valid date string with optional time</a>). Otherwise, the modification is marked as
-  having been made at the given <a data-link-type="dfn" href="infrastructure.html#dates-date" id="ref-for-dates-date-3">date</a> or <a data-link-type="dfn" href="infrastructure.html#global-date-and-time" id="ref-for-global-date-and-time-5">global date and time</a>. If the given value is a <a data-link-type="dfn" href="infrastructure.html#global-date-and-time" id="ref-for-global-date-and-time-6">global date and time</a> then user agents should use the associated
-  time-zone offset information to determine which time zone to present the given datetime in.</p>
+      <p>유저 에이전트들은 <a data-link-type="dfn" href="infrastructure.html#parse-a-date-or-time-string" id="ref-for-parse-a-date-or-time-string-1">날짜나 시간 문자열 해석</a> 알고리즘에 따라 <code>datetime</code> 속성(attribute)을 해석해야(must) 합니다. 그것이 <a data-link-type="dfn">날짜</a>나 <a data-link-type="dfn" href="infrastructure.html#global-date-and-time" id="ref-for-global-date-and-time-4">세계 날짜와 시간</a>을 반환하지 않는다면, 수정 사항은 연관된 
+  타임스탬프를 (값은 비 규범적입니다; 이것은 <a data-link-type="dfn" href="infrastructure.html#valid-date-string-with-optional-time" id="ref-for-valid-date-string-with-optional-time-2">선택적인 
+  시간을 가진 유효한 날짜 문자열</a>이 아닙니다) 가지지 않습니다. 그렇지 않으면, 수정 사항은 주어진 <a data-link-type="dfn">날짜</a>나 <a data-link-type="dfn" href="infrastructure.html#global-date-and-time" id="ref-for-global-date-and-time-5">세계 날짜와 시간</a>에 만들어진 것으로 
+  표기됩니다. 주어진 값이 <a data-link-type="dfn" href="infrastructure.html#global-date-and-time" id="ref-for-global-date-and-time-6">세계 날짜와 시간</a>이라면 유저 에이전트들은 
+  주어진 일시(datetime)이 존재하는 표준 시간대를 결정하기 위해 연관된 표준시간대 편차 정보를 
+  사용해야(should) 합니다.</p>
      </div>
-     <p>This value <span class="impl">may be shown to the user, but it</span> is primarily intended for
-  private use.</p>
-     <p>The <code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-20">ins</a></code> and <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-16">del</a></code> elements <span class="impl">must</span> implement the <code class="idl"><a data-link-type="idl" href="edits.html#htmlmodelement-htmlmodelement" id="ref-for-htmlmodelement-htmlmodelement-1">HTMLModElement</a></code> interface:</p>
+     <p>이 값은 <span class="impl">사용자에게 보여질 수 있지만, </span> 주로 특정한 사용에 대해 의도된
+  것입니다.</p>
+     <p><code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-20">ins</a></code>와 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-16">del</a></code> 요소(element)들은 <code class="idl"><a data-link-type="idl" href="edits.html#htmlmodelement-htmlmodelement" id="ref-for-htmlmodelement-htmlmodelement-1">HTMLModElement</a></code> 인터페이스를
+  구현<span class="impl">해야(must)</span> 합니다:</p>
 <pre class="idl highlight def" data-highlight="webidl"><span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-for="HTMLModElement" data-dfn-type="interface" data-export="" id="htmlmodelement-htmlmodelement">HTMLModElement</dfn> : <a class="n" data-link-type="idl-name" href="dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-64">HTMLElement</a> {
   <span class="kt">attribute</span> <span class="kt">DOMString</span> <a class="nv idl-code" data-link-type="attribute" data-type="DOMString" href="edits.html#dom-htmlmodelement-cite" id="ref-for-dom-htmlmodelement-cite-1">cite</a>;
   <span class="kt">attribute</span> <span class="kt">DOMString</span> <a class="nv idl-code" data-link-type="attribute" data-type="DOMString" href="edits.html#dom-htmlmodelement-datetime" id="ref-for-dom-htmlmodelement-datetime-1">dateTime</a>;
 };
 </pre>
      <div class="impl">
-      <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLModElement" data-dfn-type="attribute" data-export="" id="dom-htmlmodelement-cite"><code>cite</code></dfn> IDL attribute must <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-22">reflect</a> the element’s <code><a data-link-type="element-sub" href="edits.html#element-attrdef-edits-cite" id="ref-for-element-attrdef-edits-cite-1">cite</a></code> content attribute. The <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLModElement" data-dfn-type="attribute" data-export="" id="dom-htmlmodelement-datetime"><code>dateTime</code></dfn> IDL attribute must <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-23">reflect</a> the
-  element’s <code><a data-link-type="element-sub" href="edits.html#element-attrdef-edits-datetime" id="ref-for-element-attrdef-edits-datetime-1">datetime</a></code> content attribute.</p>
+      <p><dfn class="dfn-paneled idl-code" data-dfn-for="HTMLModElement" data-dfn-type="attribute" data-export="" id="dom-htmlmodelement-cite"><code>cite</code></dfn> IDL 속성(attribute)은 요소(element)의 <code><a data-link-type="element-sub" href="edits.html#element-attrdef-edits-cite" id="ref-for-element-attrdef-edits-cite-1">cite</a></code> 콘텐트 속성(attribute)을 <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-22">반영</a>해야(must) 합니다. <dfn class="dfn-paneled idl-code" data-dfn-for="HTMLModElement" data-dfn-type="attribute" data-export="" id="dom-htmlmodelement-datetime"><code>dateTime</code></dfn> IDL 속성(attribute)은 
+  요소(element)의 <code><a data-link-type="element-sub" href="edits.html#element-attrdef-edits-datetime" id="ref-for-element-attrdef-edits-datetime-1">datetime</a></code> 콘텐트 속성(attribute)을 <a data-link-type="dfn" href="infrastructure.html#reflection" id="ref-for-reflection-23">반영</a>해야(must) 
+  합니다.</p>
      </div>
-     <h4 class="heading settled" data-level="4.6.4" id="edits-and-paragraphs"><span class="secno">4.6.4. </span><span class="content">Edits and paragraphs</span><a class="self-link" href="edits.html#edits-and-paragraphs"></a></h4>
-     <p><em>This section is non-normative.</em></p>
-     <p>Since the <code>ins</code> and <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-17">del</a></code> elements do not affect <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-14">paragraphing</a>, it is possible, in some cases where paragraphs are <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-15">implied</a> (without explicit <code><a data-link-type="element" href="grouping-content.html#elementdef-p" id="ref-for-elementdef-p-26">p</a></code> elements), for an <code>ins</code> or <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-18">del</a></code> element to span both an entire paragraph or other
-  non-<a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-107">phrasing content</a> elements and part of another paragraph. For example:</p>
+     <h4 class="heading settled" data-level="4.6.4" id="edits-and-paragraphs"><span class="secno">4.6.4. </span><span class="content">편집과 문단</span><a class="self-link" href="edits.html#edits-and-paragraphs"></a></h4>
+     <p><em>이 섹션은 비규범적입니다.</em></p>
+     <p><code>ins</code>와 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-17">del</a></code> 요소(element)들은 <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-14">문단화</a>에 영향을 가지지 않기
+  때문에, 문단들이 <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-15">암묵적</a> 인 경우 (명시적인 <code><a data-link-type="element" href="grouping-content.html#elementdef-p" id="ref-for-elementdef-p-26">p</a></code> 요소(element)들 없이), <code>ins</code>나 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-18">del</a></code> 요소(element)가 전체 문단이나 다른 비 <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-107">어구(phrasing) 콘텐트</a>들과 다른 문단의 일부 모두에 걸치는 것이 
+  가능합니다. 예를 들어:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1609,9 +1614,8 @@ pre.idl.highlight { color: #708090; }
   This is a second sentence, which was there all along.
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">section</span><span class="p">&gt;</span>
 </pre>
-     <p>By only wrapping some paragraphs in <code><a data-link-type="element" href="grouping-content.html#elementdef-p" id="ref-for-elementdef-p-27">p</a></code> elements, one can even get the end of one
-  paragraph, a whole second paragraph, and the start of a third paragraph to be covered by the same <code>ins</code> or <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-19">del</a></code> element (though this is very confusing, and not considered
-  good practice):</p>
+     <p><code><a data-link-type="element" href="grouping-content.html#elementdef-p" id="ref-for-elementdef-p-27">p</a></code> 요소(element)들 내 일부 문단들을 감싸는 것만으로, 동일한 <code>ins</code>나 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-19">del</a></code> 요소(element)에 의해 씌워지는 한 개 문단의 말미, 두 번째 문단 전체, 세 번째 문단의 서두를 얻게 될 
+  수 있습니다 (하지만 이것은 매우 혼란스럽고, 좋은 사례로 간주되지 않습니다):</p>
 <pre class="bad">&lt;section&gt;  This is the first paragraph. &lt;ins&gt;This sentence was
   inserted.
   &lt;p&gt;This second paragraph was inserted.&lt;/p&gt;
@@ -1619,8 +1623,9 @@ pre.idl.highlight { color: #708090; }
   third paragraph in this example.
   &lt;!-- (don’t do this) --&gt;
 &lt;/section&gt;</pre>
-     <p>However, due to the way <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-16">implied paragraphs</a> are defined, it is
-  not possible to mark up the end of one paragraph and the start of the very next one using the same <code>ins</code> or <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-20">del</a></code> element. You instead have to use one (or two) <code>p</code> element(s) and two <code>ins</code> or <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-21">del</a></code> elements, as for example:</p>
+     <p>하지만, <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-16">암묵적인 문단들</a>이 정의되는 방법 때문에, 동일한 <code>ins</code>나 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-20">del</a></code> 요소(element)를 사용하여 한 개 문단의 말미와 다음 문단의 서두를 
+  마크업하는 것을 가능하지 않습니다. 대신 예를 들어 다음과 같이, 하나의 (혹은 두 개의) <code>p</code> 요소(element)들과 두 개의 <code>ins</code>나 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-21">del</a></code> 요소(element)들을 
+  사용해야(have to) 합니다:</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is the first paragraph. <span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;</span>This sentence was
   deleted.<span class="p">&lt;</span><span class="p">/</span><span class="nt">del</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1628,18 +1633,18 @@ pre.idl.highlight { color: #708090; }
   sentence needed a separate <span class="ni">&amp;lt;</span>del<span class="ni">&amp;gt;</span> element.<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">section</span><span class="p">&gt;</span>
 </pre>
-     <p>Partly because of the confusion described above, authors are strongly encouraged to always mark
-  up all paragraphs with the <code><a data-link-type="element" href="grouping-content.html#elementdef-p" id="ref-for-elementdef-p-28">p</a></code> element, instead of having <code>ins</code> or <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-22">del</a></code> elements that cross <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-17">implied paragraphs</a> boundaries.</p>
-     <h4 class="heading settled" data-level="4.6.5" id="edits-and-lists"><span class="secno">4.6.5. </span><span class="content">Edits and lists</span><a class="self-link" href="edits.html#edits-and-lists"></a></h4>
-     <p><em>This section is non-normative.</em></p>
-     <p>The content models of the <code>ol</code> and <code><a data-link-type="element" href="grouping-content.html#elementdef-ul" id="ref-for-elementdef-ul-13">ul</a></code> elements do not allow <code>ins</code> and <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-23">del</a></code> elements as children. Lists always represent all their
-  items, including items that would otherwise have been marked as deleted.</p>
-     <p>To indicate that an item is inserted or deleted, an <code>ins</code> or <code>del</code> element can be wrapped around the contents of the <code><a data-link-type="element" href="grouping-content.html#elementdef-li" id="ref-for-elementdef-li-16">li</a></code> element. To indicate that an
-  item has been replaced by another, a single <code><a data-link-type="element" href="grouping-content.html#elementdef-li" id="ref-for-elementdef-li-17">li</a></code> element can have one or more <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-24">del</a></code> elements followed by one or more <code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-21">ins</a></code> elements.</p>
-     <div class="example" id="example-7b1e2bb1">
-      <a class="self-link" href="edits.html#example-7b1e2bb1"></a> In the following example, a list that started empty had items added and removed from it over
-    time. The bits in the example that have been emphasized show the parts that are the "current"
-    state of the list. The list item numbers don’t take into account the edits, though. 
+     <p>부분적으로 위에 설명된 혼란의 이유로, 작성자들은 <a data-link-type="dfn" href="dom.html#paragraph" id="ref-for-paragraph-17">암묵적 문단들</a> 경계들을 가로지르는 <code>ins</code>나 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-22">del</a></code> 요소(element)들을 가지는 대신, 항상 모든 문단을 <code><a data-link-type="element" href="grouping-content.html#elementdef-p" id="ref-for-elementdef-p-28">p</a></code> 요소(element)를 가지고 마크업 하도록 강하게 권장됩니다.</p>
+     <h4 class="heading settled" data-level="4.6.5" id="edits-and-lists"><span class="secno">4.6.5. </span><span class="content">편집과 목록</span><a class="self-link" href="edits.html#edits-and-lists"></a></h4>
+     <p><em>이 섹션은 비규범적입니다.</em></p>
+     <p><code>ol</code>과 <code><a data-link-type="element" href="grouping-content.html#elementdef-ul" id="ref-for-elementdef-ul-13">ul</a></code> 요소(element)들의 콘텐트 모델들은 자식으로 <code>ins</code>과 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-23">del</a></code> 요소(element)들을 허용하지 않습니다. 목록들은 삭제된 것으로 표기된 항목들을 포함하여, 항상 모든 
+  그들의 항목들을 나타냅니다.</p>
+     <p>항목이 삽입되었거나 삭제되었음을 나타내기 위해, <code>ins</code>나 <code>del</code> 요소(element)는 <code><a data-link-type="element" href="grouping-content.html#elementdef-li" id="ref-for-elementdef-li-16">li</a></code> 요소(element)의 콘텐츠를 둘러 감쌀 수 있습니다. 항목이 다른 것으로 교체되었다는 것을 
+  나타내기 위해, 단일 <code><a data-link-type="element" href="grouping-content.html#elementdef-li" id="ref-for-elementdef-li-17">li</a></code> 요소(element)가 하나 이상의 <code><a data-link-type="element" href="edits.html#elementdef-ins" id="ref-for-elementdef-ins-21">ins</a></code> 요소(element)들이 뒤따르는 하나 
+  이상의 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-24">del</a></code> 요소(element)들을 가질 수 있습니다.</p>
+     <div class="example" id="example-84f0e841">
+      <a class="self-link" href="edits.html#example-84f0e841"></a> 다음 예에서, 빈 것으로 시작된 항목은 시간이 지남에 따라 추가되고 제거된 항목들을 가집니다. 
+    예에서 강조되어진 부분은 목록의 "현재" 상태인 부분들을 보여줍니다. 하지만, 목록 항목 번호들은 
+    편집들을 고려하지 않습니다. 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Stop-ship bugs<span class="p">&lt;</span><span class="p">/</span><span class="nt">h1</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">ins</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"2008-02-12T15:20Z"</span><span class="p">&gt;</span>Bug 225:
@@ -1653,9 +1658,8 @@ pre.idl.highlight { color: #708090; }
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">ol</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <div class="example" id="example-ac96394a">
-      <a class="self-link" href="edits.html#example-ac96394a"></a> In the following example, a list that started with just fruit was replaced by a list with just
-    colors. 
+     <div class="example" id="example-ca4edcd1">
+      <a class="self-link" href="edits.html#example-ca4edcd1"></a> 다음 예에서, 과일로 시작된 목록은 색상들을 가진 목록으로 교체되었습니다. 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>List of <span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;</span>fruits<span class="p">&lt;</span><span class="p">/</span><span class="nt">del</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>colors<span class="p">&lt;</span><span class="p">/</span><span class="nt">ins</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">h1</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;</span>Lime<span class="p">&lt;</span><span class="p">/</span><span class="nt">del</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>Green<span class="p">&lt;</span><span class="p">/</span><span class="nt">ins</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1669,15 +1673,14 @@ pre.idl.highlight { color: #708090; }
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <h4 class="heading settled" data-level="4.6.6" id="edits-and-tables"><span class="secno">4.6.6. </span><span class="content">Edits and tables</span><a class="self-link" href="edits.html#edits-and-tables"></a></h4>
-     <p><em>This section is non-normative.</em></p>
-     <p>The elements that form part of the table model have complicated content model requirements that
-  do not allow for the <code>ins</code> and <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-25">del</a></code> elements, so indicating edits to a
-  table can be difficult.</p>
-     <p>To indicate that an entire row or an entire column has been added or removed, the entire
-  contents of each cell in that row or column can be wrapped in <code>ins</code> or <code>del</code> elements (respectively).</p>
-     <div class="example" id="example-ad6fea9f">
-      <a class="self-link" href="edits.html#example-ad6fea9f"></a> Here, a table’s row has been added: 
+     <h4 class="heading settled" data-level="4.6.6" id="edits-and-tables"><span class="secno">4.6.6. </span><span class="content">편집과 표</span><a class="self-link" href="edits.html#edits-and-tables"></a></h4>
+     <p><em>이 섹션은 비규범적입니다.</em></p>
+     <p>표 모델의 일부를 형성하는 요소(element)들은 <code>ins</code>와 <code><a data-link-type="element" href="edits.html#elementdef-del" id="ref-for-elementdef-del-25">del</a></code> 요소(element)들을 허용하지
+  않는 복잡한 콘텐트 모델을 가지므로, 표에 대한 편집을 나타내는 것은 어려울 수 있습니다.</p>
+     <p>전체 행 또는 전체 열이 추가 혹은 제거되었음을 나타내기 위해, 그 행이나 열 내의 각 칸의 전체
+  콘텐츠가 <code>ins</code>나 <code>del</code> 요소(element)들로 (각각) 감싸질 수 있습니다.</p>
+     <div class="example" id="example-2e0d09fe">
+      <a class="self-link" href="edits.html#example-2e0d09fe"></a> 여기, 표의 행이 추가되었습니다: 
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span> Game name           <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span> Game publisher   <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span> Verdict
@@ -1687,8 +1690,8 @@ pre.idl.highlight { color: #708090; }
   <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>Portal 2<span class="p">&lt;</span><span class="p">/</span><span class="nt">ins</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>Valve<span class="p">&lt;</span><span class="p">/</span><span class="nt">ins</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>10/10<span class="p">&lt;</span><span class="p">/</span><span class="nt">ins</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">table</span><span class="p">&gt;</span>
 </pre>
-      <p>Here, a column has been removed (the time at which it was removed is given also, as is a link
-    to the page explaining why):</p>
+      <p>여기, 열이 제거되었습니다 (이유를 설명하는 페이지로의 링크와 마찬가지로, 제거된 시간도
+    주어집니다):</p>
 <pre class="highlight"><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span> Game name           <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span> Game publisher   <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">del</span> <span class="na">cite</span><span class="o">=</span><span class="s">"/edits/r192"</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"2011-05-02 14:23Z"</span><span class="p">&gt;</span>Verdict<span class="p">&lt;</span><span class="p">/</span><span class="nt">del</span><span class="p">&gt;</span>
@@ -1699,8 +1702,8 @@ pre.idl.highlight { color: #708090; }
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">table</span><span class="p">&gt;</span>
 </pre>
      </div>
-     <p>Generally speaking, there is no good way to indicate more complicated edits (e.g., that a cell
-  was removed, moving all subsequent cells up or to the left).</p>
+     <p>일반적으로 말해서, 더 복잡한 편집들을 (예를 들어, 모든 이후 칸테들이 위나 왼쪽으로 이동시켜 칸이
+  삭제되는) 나타내는 좋은 방법은 없습니다.</p>
     </section></main>
   
 <script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
@@ -3357,8 +3360,7 @@ pre.idl.highlight { color: #708090; }
    <b><a href="infrastructure.html#dates-date">#dates-date</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="infrastructure.html#ref-for-dates-date-1">2.4.5.10. 시간의 모호한 때</a>
-    </li><li><a href="edits.html#ref-for-dates-date-2">4.6.3. Attributes common to ins and del elements</a> <a href="edits.html#ref-for-dates-date-3">(2)</a>
-    </li><li><a href="sec-forms.html#ref-for-dates-date-4">4.10.5.1.7. Date state (type=date)</a> <a href="sec-forms.html#ref-for-dates-date-5">(2)</a> <a href="sec-forms.html#ref-for-dates-date-6">(3)</a> <a href="sec-forms.html#ref-for-dates-date-7">(4)</a> <a href="sec-forms.html#ref-for-dates-date-8">(5)</a> <a href="sec-forms.html#ref-for-dates-date-9">(6)</a> <a href="sec-forms.html#ref-for-dates-date-10">(7)</a> <a href="sec-forms.html#ref-for-dates-date-11">(8)</a> <a href="sec-forms.html#ref-for-dates-date-12">(9)</a>
+    </li><li><a href="sec-forms.html#ref-for-dates-date-2">4.10.5.1.7. Date state (type=date)</a> <a href="sec-forms.html#ref-for-dates-date-3">(2)</a> <a href="sec-forms.html#ref-for-dates-date-4">(3)</a> <a href="sec-forms.html#ref-for-dates-date-5">(4)</a> <a href="sec-forms.html#ref-for-dates-date-6">(5)</a> <a href="sec-forms.html#ref-for-dates-date-7">(6)</a> <a href="sec-forms.html#ref-for-dates-date-8">(7)</a> <a href="sec-forms.html#ref-for-dates-date-9">(8)</a> <a href="sec-forms.html#ref-for-dates-date-10">(9)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="valid-date-string">
@@ -3501,7 +3503,7 @@ pre.idl.highlight { color: #708090; }
     <li><a href="infrastructure.html#ref-for-global-date-and-time-1">2.4.5.6. 표준 시간대</a>
     </li><li><a href="infrastructure.html#ref-for-global-date-and-time-2">2.4.5.10. 시간의 모호한 때</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-date-and-time-3">4.5.16. time 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-global-date-and-time-4">4.6.3. Attributes common to ins and del elements</a> <a href="edits.html#ref-for-global-date-and-time-5">(2)</a> <a href="edits.html#ref-for-global-date-and-time-6">(3)</a>
+    </li><li><a href="edits.html#ref-for-global-date-and-time-4">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a> <a href="edits.html#ref-for-global-date-and-time-5">(2)</a> <a href="edits.html#ref-for-global-date-and-time-6">(3)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="valid-global-date-and-time-string">
@@ -3589,14 +3591,14 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="valid-date-string-with-optional-time">
    <b><a href="infrastructure.html#valid-date-string-with-optional-time">#valid-date-string-with-optional-time</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="edits.html#ref-for-valid-date-string-with-optional-time-1">4.6.3. Attributes common to ins and del elements</a> <a href="edits.html#ref-for-valid-date-string-with-optional-time-2">(2)</a>
+    <li><a href="edits.html#ref-for-valid-date-string-with-optional-time-1">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a> <a href="edits.html#ref-for-valid-date-string-with-optional-time-2">(2)</a>
     </li><li><a href="fullindex.html#ref-for-valid-date-string-with-optional-time-3">Attributes</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="parse-a-date-or-time-string">
    <b><a href="infrastructure.html#parse-a-date-or-time-string">#parse-a-date-or-time-string</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="edits.html#ref-for-parse-a-date-or-time-string-1">4.6.3. Attributes common to ins and del elements</a>
+    <li><a href="edits.html#ref-for-parse-a-date-or-time-string-1">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="simple-color">
@@ -3761,7 +3763,7 @@ pre.idl.highlight { color: #708090; }
     <li><a href="document-metadata.html#ref-for-valid-url-potentially-surrounded-by-spaces-1">4.2.3. base 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-valid-url-potentially-surrounded-by-spaces-2">4.4.4. blockquote 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-valid-url-potentially-surrounded-by-spaces-3">4.5.7. q 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-valid-url-potentially-surrounded-by-spaces-4">4.6.3. Attributes common to ins and del elements</a>
+    </li><li><a href="edits.html#ref-for-valid-url-potentially-surrounded-by-spaces-4">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a>
     </li><li><a href="links.html#ref-for-valid-url-potentially-surrounded-by-spaces-5">4.8.2. Links created by a and area elements</a>
     </li><li><a href="sec-forms.html#ref-for-valid-url-potentially-surrounded-by-spaces-6">4.10.5.1.4. URL state (type=url)</a>
     </li><li><a href="fullindex.html#ref-for-valid-url-potentially-surrounded-by-spaces-7">Attributes</a> <a href="fullindex.html#ref-for-valid-url-potentially-surrounded-by-spaces-8">(2)</a> <a href="fullindex.html#ref-for-valid-url-potentially-surrounded-by-spaces-9">(3)</a>
@@ -4028,7 +4030,7 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-reflection-18">4.5.1. a 요소(element)</a> <a href="textlevel-semantics.html#ref-for-reflection-19">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-reflection-20">4.5.15. data 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-reflection-21">4.5.16. time 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-reflection-22">4.6.3. Attributes common to ins and del elements</a> <a href="edits.html#ref-for-reflection-23">(2)</a>
+    </li><li><a href="edits.html#ref-for-reflection-22">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a> <a href="edits.html#ref-for-reflection-23">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-reflection-24">4.7.4. The source element when used with the picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-reflection-25">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-reflection-26">(2)</a> <a href="semantics-embedded-content.html#ref-for-reflection-27">(3)</a> <a href="semantics-embedded-content.html#ref-for-reflection-28">(4)</a> <a href="semantics-embedded-content.html#ref-for-reflection-29">(5)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-reflection-30">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-reflection-31">(2)</a>
@@ -4665,8 +4667,8 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-represent-71">4.5.28. span 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-represent-72">4.5.29. br 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-represent-73">4.5.30. wbr 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-represent-74">4.6.1. The ins element</a>
-    </li><li><a href="edits.html#ref-for-represent-75">4.6.2. The del element</a>
+    </li><li><a href="edits.html#ref-for-represent-74">4.6.1. ins 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-represent-75">4.6.2. del 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-represent-76">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-represent-77">4.7.4. The source element when used with the picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-represent-78">4.7.5. The img element</a> <a href="semantics-embedded-content.html#ref-for-represent-79">(2)</a> <a href="semantics-embedded-content.html#ref-for-represent-80">(3)</a> <a href="semantics-embedded-content.html#ref-for-represent-81">(4)</a> <a href="semantics-embedded-content.html#ref-for-represent-82">(5)</a> <a href="semantics-embedded-content.html#ref-for-represent-83">(6)</a> <a href="semantics-embedded-content.html#ref-for-represent-84">(7)</a>
@@ -4806,7 +4808,7 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-61">4.5.28. span 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-62">4.5.29. br 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-htmlelement-htmlelement-63">4.5.30. wbr 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-htmlelement-htmlelement-64">4.6.3. Attributes common to ins and del elements</a>
+    </li><li><a href="edits.html#ref-for-htmlelement-htmlelement-64">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-htmlelement-htmlelement-65">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-htmlelement-htmlelement-66">4.7.5. The img element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-htmlelement-htmlelement-67">4.7.6. The iframe element</a>
@@ -4955,8 +4957,8 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-categories-59">4.5.28. span 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-categories-60">4.5.29. br 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-categories-61">4.5.30. wbr 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-categories-62">4.6.1. The ins element</a>
-    </li><li><a href="edits.html#ref-for-categories-63">4.6.2. The del element</a>
+    </li><li><a href="edits.html#ref-for-categories-62">4.6.1. ins 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-categories-63">4.6.2. del 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-categories-64">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-categories-65">4.7.4. The source element when used with the picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-categories-66">4.7.5. The img element</a>
@@ -5072,8 +5074,8 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-58">4.5.28. span 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-59">4.5.29. br 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-contexts-in-which-this-element-can-be-used-60">4.5.30. wbr 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-contexts-in-which-this-element-can-be-used-61">4.6.1. The ins element</a>
-    </li><li><a href="edits.html#ref-for-contexts-in-which-this-element-can-be-used-62">4.6.2. The del element</a>
+    </li><li><a href="edits.html#ref-for-contexts-in-which-this-element-can-be-used-61">4.6.1. ins 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-contexts-in-which-this-element-can-be-used-62">4.6.2. del 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-contexts-in-which-this-element-can-be-used-63">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-contexts-in-which-this-element-can-be-used-64">4.7.4. The source element when used with the picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-contexts-in-which-this-element-can-be-used-65">4.7.5. The img element</a>
@@ -5191,8 +5193,8 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-content-model-61">4.5.28. span 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-content-model-62">4.5.29. br 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-content-model-63">4.5.30. wbr 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-content-model-64">4.6.1. The ins element</a>
-    </li><li><a href="edits.html#ref-for-content-model-65">4.6.2. The del element</a>
+    </li><li><a href="edits.html#ref-for-content-model-64">4.6.1. ins 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-content-model-65">4.6.2. del 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-content-model-66">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-content-model-67">4.7.4. The source element when used with the picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-content-model-68">4.7.5. The img element</a>
@@ -5310,8 +5312,8 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-58">4.5.28. span 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-59">4.5.29. br 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-tag-omission-in-text-html-60">4.5.30. wbr 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-tag-omission-in-text-html-61">4.6.1. The ins element</a>
-    </li><li><a href="edits.html#ref-for-tag-omission-in-text-html-62">4.6.2. The del element</a>
+    </li><li><a href="edits.html#ref-for-tag-omission-in-text-html-61">4.6.1. ins 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-tag-omission-in-text-html-62">4.6.2. del 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-tag-omission-in-text-html-63">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-tag-omission-in-text-html-64">4.7.4. The source element when used with the picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-tag-omission-in-text-html-65">4.7.5. The img element</a>
@@ -5428,8 +5430,8 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-59">4.5.28. span 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-60">4.5.29. br 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-content-attribute-61">4.5.30. wbr 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-content-attribute-62">4.6.1. The ins element</a>
-    </li><li><a href="edits.html#ref-for-content-attribute-63">4.6.2. The del element</a>
+    </li><li><a href="edits.html#ref-for-content-attribute-62">4.6.1. ins 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-content-attribute-63">4.6.2. del 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-content-attribute-64">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-content-attribute-65">4.7.4. The source element when used with the picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-content-attribute-66">4.7.5. The img element</a>
@@ -5607,8 +5609,8 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-flow-content-84">4.5.28. span 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-flow-content-85">4.5.29. br 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-flow-content-86">4.5.30. wbr 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-flow-content-87">4.6.1. The ins element</a>
-    </li><li><a href="edits.html#ref-for-flow-content-88">4.6.2. The del element</a>
+    </li><li><a href="edits.html#ref-for-flow-content-87">4.6.1. ins 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-flow-content-88">4.6.2. del 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-flow-content-89">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-flow-content-90">4.7.5. The img element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-flow-content-91">4.7.6. The iframe element</a>
@@ -5739,9 +5741,9 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-95">4.5.28. span 요소(element)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-96">(2)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-97">(3)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-98">4.5.29. br 요소(element)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-99">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-phrasing-content-100">4.5.30. wbr 요소(element)</a> <a href="textlevel-semantics.html#ref-for-phrasing-content-101">(2)</a>
-    </li><li><a href="edits.html#ref-for-phrasing-content-102">4.6.1. The ins element</a> <a href="edits.html#ref-for-phrasing-content-103">(2)</a> <a href="edits.html#ref-for-phrasing-content-104">(3)</a>
-    </li><li><a href="edits.html#ref-for-phrasing-content-105">4.6.2. The del element</a> <a href="edits.html#ref-for-phrasing-content-106">(2)</a>
-    </li><li><a href="edits.html#ref-for-phrasing-content-107">4.6.4. Edits and paragraphs</a>
+    </li><li><a href="edits.html#ref-for-phrasing-content-102">4.6.1. ins 요소(element)</a> <a href="edits.html#ref-for-phrasing-content-103">(2)</a> <a href="edits.html#ref-for-phrasing-content-104">(3)</a>
+    </li><li><a href="edits.html#ref-for-phrasing-content-105">4.6.2. del 요소(element)</a> <a href="edits.html#ref-for-phrasing-content-106">(2)</a>
+    </li><li><a href="edits.html#ref-for-phrasing-content-107">4.6.4. 편집과 문단</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-phrasing-content-108">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-phrasing-content-109">4.7.5. The img element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-phrasing-content-110">4.7.6. The iframe element</a> <a href="semantics-embedded-content.html#ref-for-phrasing-content-111">(2)</a>
@@ -5908,7 +5910,7 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-40">4.5.26. bdi 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-41">4.5.27. bdo 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-palpable-content-42">4.5.28. span 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-palpable-content-43">4.6.1. The ins element</a>
+    </li><li><a href="edits.html#ref-for-palpable-content-43">4.6.1. ins 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-palpable-content-44">4.7.5. The img element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-palpable-content-45">4.7.6. The iframe element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-palpable-content-46">4.7.7. The embed element</a>
@@ -5962,8 +5964,8 @@ pre.idl.highlight { color: #708090; }
    <ul>
     <li><a href="dom.html#ref-for-transparent-1">3.2.4.3. 투명 콘텐트 모델</a>
     </li><li><a href="textlevel-semantics.html#ref-for-transparent-2">4.5.1. a 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-transparent-3">4.6.1. The ins element</a>
-    </li><li><a href="edits.html#ref-for-transparent-4">4.6.2. The del element</a>
+    </li><li><a href="edits.html#ref-for-transparent-3">4.6.1. ins 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-transparent-4">4.6.2. del 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-transparent-5">4.7.8. The object element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-transparent-6">4.7.10. The video element</a> <a href="semantics-embedded-content.html#ref-for-transparent-7">(2)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-transparent-8">4.7.11. The audio element</a> <a href="semantics-embedded-content.html#ref-for-transparent-9">(2)</a>
@@ -5983,9 +5985,9 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="grouping-content.html#ref-for-paragraph-7">4.4.1. p 요소(element)</a> <a href="grouping-content.html#ref-for-paragraph-8">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-paragraph-9">4.4.2. hr 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-paragraph-10">4.5.29. br 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-paragraph-11">4.6.1. The ins element</a> <a href="edits.html#ref-for-paragraph-12">(2)</a>
-    </li><li><a href="edits.html#ref-for-paragraph-13">4.6.2. The del element</a>
-    </li><li><a href="edits.html#ref-for-paragraph-14">4.6.4. Edits and paragraphs</a> <a href="edits.html#ref-for-paragraph-15">(2)</a> <a href="edits.html#ref-for-paragraph-16">(3)</a> <a href="edits.html#ref-for-paragraph-17">(4)</a>
+    </li><li><a href="edits.html#ref-for-paragraph-11">4.6.1. ins 요소(element)</a> <a href="edits.html#ref-for-paragraph-12">(2)</a>
+    </li><li><a href="edits.html#ref-for-paragraph-13">4.6.2. del 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-paragraph-14">4.6.4. 편집과 문단</a> <a href="edits.html#ref-for-paragraph-15">(2)</a> <a href="edits.html#ref-for-paragraph-16">(3)</a> <a href="edits.html#ref-for-paragraph-17">(4)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="global-attributes">
@@ -6055,8 +6057,8 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-58">4.5.28. span 요소(element)</a> <a href="textlevel-semantics.html#ref-for-global-attributes-59">(2)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-60">4.5.29. br 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-attributes-61">4.5.30. wbr 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-global-attributes-62">4.6.1. The ins element</a>
-    </li><li><a href="edits.html#ref-for-global-attributes-63">4.6.2. The del element</a>
+    </li><li><a href="edits.html#ref-for-global-attributes-62">4.6.1. ins 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-global-attributes-63">4.6.2. del 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-global-attributes-64">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-global-attributes-65">4.7.4. The source element when used with the picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-global-attributes-66">4.7.5. The img element</a>
@@ -6447,8 +6449,8 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-60">4.5.28. span 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-61">4.5.29. br 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-global-aria--attributes-62">4.5.30. wbr 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-global-aria--attributes-63">4.6.1. The ins element</a>
-    </li><li><a href="edits.html#ref-for-global-aria--attributes-64">4.6.2. The del element</a>
+    </li><li><a href="edits.html#ref-for-global-aria--attributes-63">4.6.1. ins 요소(element)</a>
+    </li><li><a href="edits.html#ref-for-global-aria--attributes-64">4.6.2. del 요소(element)</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-global-aria--attributes-65">4.7.3. The picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-global-aria--attributes-66">4.7.4. The source element when used with the picture element</a>
     </li><li><a href="semantics-embedded-content.html#ref-for-global-aria--attributes-67">4.7.5. The img element</a>
@@ -7329,7 +7331,7 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="grouping-content.html#ref-for-elementdef-aside-13">4.4.1. p 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-aside-14">4.4.11. figure 요소(element)</a> <a href="grouping-content.html#ref-for-elementdef-aside-15">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-aside-16">4.4.13. main 요소(element)</a> <a href="grouping-content.html#ref-for-elementdef-aside-17">(2)</a> <a href="grouping-content.html#ref-for-elementdef-aside-18">(3)</a> <a href="grouping-content.html#ref-for-elementdef-aside-19">(4)</a> <a href="grouping-content.html#ref-for-elementdef-aside-20">(5)</a> <a href="grouping-content.html#ref-for-elementdef-aside-21">(6)</a> <a href="grouping-content.html#ref-for-elementdef-aside-22">(7)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-aside-23">4.6.1. The ins element</a>
+    </li><li><a href="edits.html#ref-for-elementdef-aside-23">4.6.1. ins 요소(element)</a>
     </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-24">4.13.5. Footnotes</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-25">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-aside-26">(3)</a>
     </li><li><a href="syntax.html#ref-for-elementdef-aside-27">8.1.2.4. Optional tags</a>
     </li><li><a href="syntax.html#ref-for-elementdef-aside-28">8.2.3.2. The stack of open elements</a>
@@ -7587,7 +7589,7 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="grouping-content.html#ref-for-elementdef-p-18">4.4.1. p 요소(element)</a> <a href="grouping-content.html#ref-for-elementdef-p-19">(2)</a> <a href="grouping-content.html#ref-for-elementdef-p-20">(3)</a> <a href="grouping-content.html#ref-for-elementdef-p-21">(4)</a> <a href="grouping-content.html#ref-for-elementdef-p-22">(5)</a> <a href="grouping-content.html#ref-for-elementdef-p-23">(6)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-p-24">4.4.4. blockquote 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-p-25">4.5.8. dfn 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-p-26">4.6.4. Edits and paragraphs</a> <a href="edits.html#ref-for-elementdef-p-27">(2)</a> <a href="edits.html#ref-for-elementdef-p-28">(3)</a>
+    </li><li><a href="edits.html#ref-for-elementdef-p-26">4.6.4. 편집과 문단</a> <a href="edits.html#ref-for-elementdef-p-27">(2)</a> <a href="edits.html#ref-for-elementdef-p-28">(3)</a>
     </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-p-29">4.13.1. Subheadings, subtitles, alternative titles and taglines</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-p-30">(2)</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-p-31">(3)</a>
     </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-p-32">4.13.4. Conversations</a>
     </li><li><a href="matching-html-elements-using-selectors.html#ref-for-elementdef-p-33">4.15.2. Pseudo-classes</a> <a href="matching-html-elements-using-selectors.html#ref-for-elementdef-p-34">(2)</a>
@@ -7791,7 +7793,7 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="grouping-content.html#ref-for-elementdef-ul-7">4.4.5. ol 요소(element)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-ul-8">4.4.6. ul 요소(element)</a> <a href="grouping-content.html#ref-for-elementdef-ul-9">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-ul-10">4.4.7. li 요소(element)</a> <a href="grouping-content.html#ref-for-elementdef-ul-11">(2)</a> <a href="grouping-content.html#ref-for-elementdef-ul-12">(3)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-ul-13">4.6.5. Edits and lists</a>
+    </li><li><a href="edits.html#ref-for-elementdef-ul-13">4.6.5. 편집과 목록</a>
     </li><li><a href="semantics-scripting.html#ref-for-elementdef-ul-14">4.12.3. The template element</a>
     </li><li><a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-ul-15">4.13.3. Tag clouds</a> <a href="common-idioms-without-dedicated-elements.html#ref-for-elementdef-ul-16">(2)</a>
     </li><li><a href="syntax.html#ref-for-elementdef-ul-17">8.1.2.4. Optional tags</a>
@@ -7822,7 +7824,7 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="grouping-content.html#ref-for-elementdef-li-5">4.4.5. ol 요소(element)</a> <a href="grouping-content.html#ref-for-elementdef-li-6">(2)</a> <a href="grouping-content.html#ref-for-elementdef-li-7">(3)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-li-8">4.4.6. ul 요소(element)</a> <a href="grouping-content.html#ref-for-elementdef-li-9">(2)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-li-10">4.4.7. li 요소(element)</a> <a href="grouping-content.html#ref-for-elementdef-li-11">(2)</a> <a href="grouping-content.html#ref-for-elementdef-li-12">(3)</a> <a href="grouping-content.html#ref-for-elementdef-li-13">(4)</a> <a href="grouping-content.html#ref-for-elementdef-li-14">(5)</a> <a href="grouping-content.html#ref-for-elementdef-li-15">(6)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-li-16">4.6.5. Edits and lists</a> <a href="edits.html#ref-for-elementdef-li-17">(2)</a>
+    </li><li><a href="edits.html#ref-for-elementdef-li-16">4.6.5. 편집과 목록</a> <a href="edits.html#ref-for-elementdef-li-17">(2)</a>
     </li><li><a href="syntax.html#ref-for-elementdef-li-18">8.1.2.4. Optional tags</a> <a href="syntax.html#ref-for-elementdef-li-19">(2)</a> <a href="syntax.html#ref-for-elementdef-li-20">(3)</a>
     </li><li><a href="syntax.html#ref-for-elementdef-li-21">8.2.3.2. The stack of open elements</a>
     </li><li><a href="syntax.html#ref-for-elementdef-li-22">8.2.5.3. Closing elements that have implied end tags</a> <a href="syntax.html#ref-for-elementdef-li-23">(2)</a>
@@ -8832,10 +8834,10 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="dom.html#ref-for-elementdef-ins-5">3.2.4.3. 투명 콘텐트 모델</a> <a href="dom.html#ref-for-elementdef-ins-6">(2)</a> <a href="dom.html#ref-for-elementdef-ins-7">(3)</a> <a href="dom.html#ref-for-elementdef-ins-8">(4)</a>
     </li><li><a href="dom.html#ref-for-elementdef-ins-9">3.2.4.4. 문단(paragraphs)</a> <a href="dom.html#ref-for-elementdef-ins-10">(2)</a> <a href="dom.html#ref-for-elementdef-ins-11">(3)</a> <a href="dom.html#ref-for-elementdef-ins-12">(4)</a> <a href="dom.html#ref-for-elementdef-ins-13">(5)</a> <a href="dom.html#ref-for-elementdef-ins-14">(6)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-ins-15">4.4.1. p 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-ins-16">4.6. Edits</a>
-    </li><li><a href="edits.html#ref-for-elementdef-ins-17">4.6.1. The ins element</a> <a href="edits.html#ref-for-elementdef-ins-18">(2)</a> <a href="edits.html#ref-for-elementdef-ins-19">(3)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-ins-20">4.6.3. Attributes common to ins and del elements</a>
-    </li><li><a href="edits.html#ref-for-elementdef-ins-21">4.6.5. Edits and lists</a>
+    </li><li><a href="edits.html#ref-for-elementdef-ins-16">4.6. 편집</a>
+    </li><li><a href="edits.html#ref-for-elementdef-ins-17">4.6.1. ins 요소(element)</a> <a href="edits.html#ref-for-elementdef-ins-18">(2)</a> <a href="edits.html#ref-for-elementdef-ins-19">(3)</a>
+    </li><li><a href="edits.html#ref-for-elementdef-ins-20">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a>
+    </li><li><a href="edits.html#ref-for-elementdef-ins-21">4.6.5. 편집과 목록</a>
     </li><li><a href="syntax.html#ref-for-elementdef-ins-22">8.1.2.4. Optional tags</a>
     </li><li><a href="rendering.html#ref-for-elementdef-ins-23">10.7.1. Links, forms, and navigation</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-ins-24">Elements</a>
@@ -8853,12 +8855,12 @@ pre.idl.highlight { color: #708090; }
     </li><li><a href="dom.html#ref-for-elementdef-del-4">3.2.4.4. 문단(paragraphs)</a> <a href="dom.html#ref-for-elementdef-del-5">(2)</a> <a href="dom.html#ref-for-elementdef-del-6">(3)</a> <a href="dom.html#ref-for-elementdef-del-7">(4)</a> <a href="dom.html#ref-for-elementdef-del-8">(5)</a> <a href="dom.html#ref-for-elementdef-del-9">(6)</a>
     </li><li><a href="grouping-content.html#ref-for-elementdef-del-10">4.4.1. p 요소(element)</a>
     </li><li><a href="textlevel-semantics.html#ref-for-elementdef-del-11">4.5.5. s 요소(element)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-del-12">4.6. Edits</a>
-    </li><li><a href="edits.html#ref-for-elementdef-del-13">4.6.2. The del element</a> <a href="edits.html#ref-for-elementdef-del-14">(2)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-del-15">4.6.3. Attributes common to ins and del elements</a> <a href="edits.html#ref-for-elementdef-del-16">(2)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-del-17">4.6.4. Edits and paragraphs</a> <a href="edits.html#ref-for-elementdef-del-18">(2)</a> <a href="edits.html#ref-for-elementdef-del-19">(3)</a> <a href="edits.html#ref-for-elementdef-del-20">(4)</a> <a href="edits.html#ref-for-elementdef-del-21">(5)</a> <a href="edits.html#ref-for-elementdef-del-22">(6)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-del-23">4.6.5. Edits and lists</a> <a href="edits.html#ref-for-elementdef-del-24">(2)</a>
-    </li><li><a href="edits.html#ref-for-elementdef-del-25">4.6.6. Edits and tables</a>
+    </li><li><a href="edits.html#ref-for-elementdef-del-12">4.6. 편집</a>
+    </li><li><a href="edits.html#ref-for-elementdef-del-13">4.6.2. del 요소(element)</a> <a href="edits.html#ref-for-elementdef-del-14">(2)</a>
+    </li><li><a href="edits.html#ref-for-elementdef-del-15">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a> <a href="edits.html#ref-for-elementdef-del-16">(2)</a>
+    </li><li><a href="edits.html#ref-for-elementdef-del-17">4.6.4. 편집과 문단</a> <a href="edits.html#ref-for-elementdef-del-18">(2)</a> <a href="edits.html#ref-for-elementdef-del-19">(3)</a> <a href="edits.html#ref-for-elementdef-del-20">(4)</a> <a href="edits.html#ref-for-elementdef-del-21">(5)</a> <a href="edits.html#ref-for-elementdef-del-22">(6)</a>
+    </li><li><a href="edits.html#ref-for-elementdef-del-23">4.6.5. 편집과 목록</a> <a href="edits.html#ref-for-elementdef-del-24">(2)</a>
+    </li><li><a href="edits.html#ref-for-elementdef-del-25">4.6.6. 편집과 표</a>
     </li><li><a href="syntax.html#ref-for-elementdef-del-26">8.1.2.4. Optional tags</a>
     </li><li><a href="rendering.html#ref-for-elementdef-del-27">10.7.1. Links, forms, and navigation</a>
     </li><li><a href="fullindex.html#ref-for-elementdef-del-28">Elements</a>
@@ -8870,21 +8872,21 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="element-attrdef-edits-cite">
    <b><a href="edits.html#element-attrdef-edits-cite">#element-attrdef-edits-cite</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="edits.html#ref-for-element-attrdef-edits-cite-1">4.6.3. Attributes common to ins and del elements</a>
+    <li><a href="edits.html#ref-for-element-attrdef-edits-cite-1">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-edits-cite-2">Elements</a> <a href="fullindex.html#ref-for-element-attrdef-edits-cite-3">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="element-attrdef-edits-datetime">
    <b><a href="edits.html#element-attrdef-edits-datetime">#element-attrdef-edits-datetime</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="edits.html#ref-for-element-attrdef-edits-datetime-1">4.6.3. Attributes common to ins and del elements</a>
+    <li><a href="edits.html#ref-for-element-attrdef-edits-datetime-1">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a>
     </li><li><a href="fullindex.html#ref-for-element-attrdef-edits-datetime-2">Elements</a> <a href="fullindex.html#ref-for-element-attrdef-edits-datetime-3">(2)</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="htmlmodelement-htmlmodelement">
    <b><a href="edits.html#htmlmodelement-htmlmodelement">#htmlmodelement-htmlmodelement</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="edits.html#ref-for-htmlmodelement-htmlmodelement-1">4.6.3. Attributes common to ins and del elements</a>
+    <li><a href="edits.html#ref-for-htmlmodelement-htmlmodelement-1">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a>
     </li><li><a href="fullindex.html#ref-for-htmlmodelement-htmlmodelement-2">Elements</a> <a href="fullindex.html#ref-for-htmlmodelement-htmlmodelement-3">(2)</a>
     </li><li><a href="fullindex.html#ref-for-htmlmodelement-htmlmodelement-4">Element Interfaces</a> <a href="fullindex.html#ref-for-htmlmodelement-htmlmodelement-5">(2)</a>
    </li></ul>
@@ -8892,13 +8894,13 @@ pre.idl.highlight { color: #708090; }
   <aside class="dfn-panel" data-for="dom-htmlmodelement-cite">
    <b><a href="edits.html#dom-htmlmodelement-cite">#dom-htmlmodelement-cite</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="edits.html#ref-for-dom-htmlmodelement-cite-1">4.6.3. Attributes common to ins and del elements</a>
+    <li><a href="edits.html#ref-for-dom-htmlmodelement-cite-1">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-htmlmodelement-datetime">
    <b><a href="edits.html#dom-htmlmodelement-datetime">#dom-htmlmodelement-datetime</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="edits.html#ref-for-dom-htmlmodelement-datetime-1">4.6.3. Attributes common to ins and del elements</a>
+    <li><a href="edits.html#ref-for-dom-htmlmodelement-datetime-1">4.6.3. ins와 del 요소(element)들에 공통된 속성(attribute)들</a>
    </li></ul>
   </aside>
   <aside class="dfn-panel" data-for="device-pixel-ratio">
