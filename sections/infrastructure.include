@@ -2146,7 +2146,7 @@
       실패입니다.
   6. <var>year</var>과 <var>month</var>를 반환합니다.
 
-<h5 id="sec-dates">날짜</h5>
+<h5 id="sec-dates" lt="date">날짜</h5>
 
   <dfn for="dates" lt="date|dates">날짜</dfn>는 연, 월, 일로 구성되는 표준시간대가 없는 특정한 
   <a lt="proleptic-Gregorian date">역산 그레고리 날짜</a>로 구성됩니다. [[GREGORIAN]]
@@ -2345,7 +2345,7 @@
   표준시간대 없이 표현됩니다. [[GREGORIAN]]
 
   문자열이 주어진 순서에 따라 다음 컴포넌트들로 구성된다면 날짜와 시간을 나타내는 
-  <dfn lt="valid-floating-date-and-time-string">유효한 변동 날짜와 시간 문자열</dfn>입니다:
+  <dfn lt="valid floating date and time string">유효한 변동 날짜와 시간 문자열</dfn>입니다:
 
   1. 날짜를 나타내는 <a lt="valid date string">유효한 날짜 문자열</a>
   2. U+0054 라틴 대문자 T (T) 혹은 U+0020 공백 문자
@@ -3450,9 +3450,9 @@
     보안 문제가 발생할 수 있습니다. 자세한 내용은 MIME 스니핑 명세를 참고하세요. [[!MIMESNIFF]]
   </p>
 
-<h4 id="extracting-character-encodings-from-meta-elements"><{meta}> 요소(element)로부터 문자 인코딩 추출하기</h4>
+<h4 id="extracting-character-encodings-from-meta-elements" lt="extracting character encodings from meta elements"><{meta}> 요소(element)로부터 문자 인코딩 추출하기</h4>
 
-  주어진 문자열 <var>s</var>인, <dfn lt="algorithm for extracting a character encoding from a <{meta}> element"><{meta}> 요소(element)로부터 문자 인코딩 추출하기 위한 알고리즘</dfn>은,
+  주어진 문자열 <var>s</var>인, <dfn lt="algorithm for extracting a character encoding from a meta element"><{meta}> 요소(element)로부터 문자 인코딩 추출하기 위한 알고리즘</dfn>은,
   다음과 같습니다. 이것은 문자 인코딩을 반환하거나 아무 것도 반환하지 않을 것입니다.
 
   1. <var>position</var>을 초기에 문자열의 시작을 가리키는, <var>s</var>에 대한 포인터로 둡니다.
@@ -3639,7 +3639,7 @@
   <a lt="valid non-negative integer">유효한 음이 아닌 정수</a>로 나타나는 가능한 가장 짧은 문자열로 
   변환되어야(must)하고 그 문자열은 새로운 콘텐트 속성(attribute) 값으로 사용되어야(must) 합니다.
 
-  반영하는 IDL 속성(attribute)이 <dfn>0보다 큰 음이 아닌 정수로만 제한된</dfn> 부호 없는 정수 유형
+  반영하는 IDL 속성(attribute)이 <dfn lt="limited to only non-negative numbers greater than zero">0보다 큰 음이 아닌 정수로만 제한된</dfn> 부호 없는 정수 유형
   (<code>unsigned long</code>)을 가진다면, 동작은 이전 경우와 비슷하게 동작하되 0은 허용되지 않습니다.
   가져올 때, 콘텐트 속성(attribute)은 먼저 <a lt="rules for parsing non-negative integers">음이 아닌 정수 해석에 대한 규칙</a>에 
   따라 해석되어야(must)하고, 그것이 성공하고 값이 1에서 2147483647까지 범위 내에 있다면, 결과 값이 

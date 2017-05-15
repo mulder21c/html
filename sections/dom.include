@@ -793,7 +793,7 @@
   :: <a lt="Global aria-* attributes">범용 aria-* 속성(attribute)</a> 목록과
       <a href="#allowed-aria-roles-states-and-properties">허용된 역할(role), 상태(state), 속성(property)</a> 
       표로의 링크
-  : <dfn>DOM 인터페이스</dfn>
+  : <dfn lt="dom interface">DOM 인터페이스</dfn>
   :: 그 요소(element)가 구현해야(must)하는 DOM 인터페이스의 규범적 정의
 
   이것은 요소가 작성자<span class="impl">와 구현</span>에 적용할 수 있는 추가적인 규범적 적합성 기준과
@@ -801,7 +801,7 @@
 
 <h5 id="element-definitions-attributes">속성(attribute)</h5>
 
-  달리 명시되지 않는 한, <a lt="html elements">html 요소(element)</a>의 속성(attribute)은 빈 문자열을
+  달리 명시되지 않는 한, <a lt="html elements">html 요소(element)들</a>의 속성(attribute)은 빈 문자열을
   포함하여 임의의 문자열 값을 가질 수 있습니다. 명시적으로 정해지지 않는 한, 그러한 속성(attribute)에
   명시 될 수 있는 텍스트에 대한 제약 사항은 없습니다.
 

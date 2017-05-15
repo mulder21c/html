@@ -2042,7 +2042,7 @@ affected by the heat source (upper left) and the food source (lower right).&lt;/
     기계가 해석 할 수 있는 동등한 것입니다; 이 단계들을 중단합니다.</li>
 
     <li>요소(element)의  <a lt="datetime value">일시(datetime) 값</a>으로부터 
-    <a lt="parsing a month string">월 문자열 해석</a>이 <a for="dates">날짜</a>를 반환한다면, 그것은 
+    <a lt="parsing a month string">월 문자열 해석</a>이 <a for="dates" lt="date">날짜</a>를 반환한다면, 그것은 
     기계가 해석 할 수 있는 동등한 것입니다; 이 단계들을 중단합니다.</li>
 
     <li>요소(element)의 <a lt="datetime value">일시(datetime) 값</a>으로부터 
@@ -2579,7 +2579,7 @@ her—&lt;/i&gt;&lt;/p&gt;
 
   작성자들은 <{i}> 요소(element)보다 더 적절한 다른 요소(element)들이 있을 수 있는지, 예를 들어, 
   역설 강조(stress emphasis)를 마크업하기 위한 <{em}> 요소(element)나 용어의 정의 예를 마크업하기 
-  위한 <{dnf}> 요소(element), 고려하도록 권장됩니다.
+  위한 <{dfn}> 요소(element), 고려하도록 권장됩니다.
 
   <p class="note">
     스타일 시트들은 다른 요소(element)가 재 스타일링 될 수 있는 것처럼, <{i}> 요소(element)들에 

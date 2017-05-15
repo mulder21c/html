@@ -165,11 +165,11 @@
   <div class="impl">
 
   유저 에이전트들은 <a lt="parse a date or time string">날짜나 시간 문자열 해석</a> 알고리즘에 따라  
-  <code>datetime</code> 속성(attribute)을 해석해야(must) 합니다. 그것이 <a for="dates">날짜</a>나 
+  <code>datetime</code> 속성(attribute)을 해석해야(must) 합니다. 그것이 <a for="dates" lt="dates">날짜</a>나 
   <a lt="global date and time">세계 날짜와 시간</a>을 반환하지 않는다면, 수정 사항은 연관된 
   타임스탬프를 (값은 비 규범적입니다; 이것은 <a lt="valid date string with optional time">선택적인 
   시간을 가진 유효한 날짜 문자열</a>이 아닙니다) 가지지 않습니다. 그렇지 않으면, 수정 사항은 주어진 
-  <a for="dates">날짜</a>나 <a lt="global date and time">세계 날짜와 시간</a>에 만들어진 것으로 
+  <a for="dates" lt="date">날짜</a>나 <a lt="global date and time">세계 날짜와 시간</a>에 만들어진 것으로 
   표기됩니다. 주어진 값이 <a lt="global date and time">세계 날짜와 시간</a>이라면 유저 에이전트들은 
   주어진 일시(datetime)이 존재하는 표준 시간대를 결정하기 위해 연관된 표준시간대 편차 정보를 
   사용해야(should) 합니다.
