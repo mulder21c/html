@@ -3294,33 +3294,31 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
     </pre>
   </div>
 
-<h6 id="captcha-images">CAPTCHA Images</h6>
+<h6 id="captcha-images">CAPTCHA 이미지</h6>
 
-  CAPTCHA stands for "Completely Automated Public Turing test to tell Computers and Humans Apart".
-  CAPTCHA images are used for security purposes to confirm that content is being accessed by a
-  person rather than a computer. This authentication is done through visual verification of an
-  image. CAPTCHA typically presents an image with characters or words in it that the user is to
-  re-type. The image is usually distorted and has some noise applied to it to make the characters
-  difficult to read.
+  CAPTCHA는 "컴퓨터와 인간을 구별하는 완전히 자동화 된 공공 튜링 테스트"를 나타냅니다. CAPTCHA 
+  이미지들은 콘텐트가 컴퓨터가 아닌 사람에 의해 접근되고 있는지를 확인 하기 위한 보안 목적으로 
+  사용됩니다. 이 인증은 이미지의 시각적 확인을 통해 이루어집니다. CAPTCHA는 일반적으로 사용자가 
+  다시 타이핑하기 위한 글자나 단어를 가진 이미지를 나타냅니다. 이미지는 보통 왜곡되고 글자들을 읽기 
+  어렵게 만들기 위해 적용된 일부 노이즈를 가집니다.
 
-  To improve the accessibility of CAPTCHA provide text alternatives that identify and describe the
-  purpose of the image, and provide alternative forms of the CAPTCHA using output modes for
-  different types of sensory perception. For instance provide an audio alternative along with the
-  visual image. Place the audio option right next to the visual one. This helps but is still
-  problematic for people without sound cards, the deaf-blind, and some people with limited hearing.
-  Another method is to include a form that asks a question along with the visual image. This helps
-  but can be problematic for people with cognitive impairments.
+  CAPTCHA의 접근성을 향상시키기 위해 이미지의 목적을 식별하고 설명하는 대체 텍스트들을 제공하고, 
+  다른 유형의 감간 인식에 대한 출력 모드를 사용하여 CAPTCHA의 대체 형식을 제공하세요. 예를 들어 
+  시각적인 이미지와 함께 대체 음성을 제공하세요. 시작적 이미지의 바로 옆에 음성 옵션을 위치 시키세요. 
+  이것은 도움이 되지만, 사운드 카드가 없는 사람, 청각-시각장애인, 몇몇 제한된 청력을 가진 사람들에 
+  대해 요전히 문제가 됩니다. 다른 방법은 시각 이미지와 함께 질문을 묻는 양식을 포함하는 것입니다. 
+  이것은 도움이 되지만 인지 장애를 가진 사람들에 대해 문자가 될 수 있습니다.
 
   <p class="note">
-    It is strongly recommended that alternatives to CAPTCHA be used, as all forms of CAPTCHA
-    introduce unacceptable barriers to entry for users with disabilities. Further information is
-    available in <a>Inaccessibility of CAPTCHA</a>.
+    CAPTCHA의 모든 형식은 장애를 가진 사용자들에 대해 허용 될 수 없는 참여 장벽을 가져오기 때문에,
+    CAPTCHA에 대해 사용되는 대안들이 강력하게 권장됩니다. 좀 더 자세한 정보는 
+    <a>Inaccessibility of CAPTCHA</a>에서 사용 가능합니다.
   </p>
 
   <div class="example">
-    This example shows a CAPTCHA test which uses a distorted image of text. The text alternative in
-    the <code>alt</code> attribute provides instructions for a user in the case where she cannot
-    access the image content.
+    이 예는 텍스트의 왜곡된 이미지를 사용하는 CAPTCHA 검사를 보여줍니다. <code>alt</code> 
+    속성(attribute) 내의 대체 텍스트는 이미지 콘텐트에 접근할 수 없는 경우의 사용자에 대한 
+    지시사항들을 제공합니다.
 
   <img src="images/captcha.png" alt="captcha containing the words 'aides' and 'sprucest'. The letters are distorted and the color of the letters and background is partially inverted," width="270" height="60" />
 
@@ -3333,17 +3331,18 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
     </pre>
   </div>
 
-<h6 id="an-image-in-a-picture-element">An image in a <{picture}> element</h6>
+<h6 id="an-image-in-a-picture-element"><{picture}> 요소(element) 내의 이미지</h6>
 
-  The <{picture}> element and any <{source}> elements it contains have no semantics for users,
-  only the <{img}> element or its text alternative is displayed to users. Provide a text alternative for an
-  <{img}> element without regard to it being within a <{picture}> element. Refer to
-  <a href="#alt-text">Requirements for providing text to act as an alternative for images</a> for more information on how to provide
-  useful <code>alt</code> text for images.
+  <{picture}> 요소(element)와 그것이 포함하는 <{source}> 요소(element)들은 사용자들에 대한 
+  의미(semantic)을 가지지 않으므로, <{img}> 요소(element)나 그것의 대체 텍스트만이 사용자들에게 
+  표시됩니다. <{img}> 요소(element)에 대한 대체 텍스트를 <{picture}> 요소(element)에 있는 것과 관계 
+  없이 제공하세요. 이미지들에 대한 유용한 <code>alt</code> 텍스트를 제공하는 방법데 대한 자세한 
+  내용을 위해 <a href="#alt-text">이미지들에 대한 대체 텍스트로서 동작하도록 텍스트를 제공하기 위한 
+  요구사항</a>을 참조하세요.
 
-  <p class="note"><a for="image">Art directed</a> images that rely on <code>picture</code> need to depict
-  the same content (irrespective of size, pixel density, or any other discriminating factor). Therefore the appropriate
-  text alternative for an image will always be the same irrespective of which source file ends up being chosen by the browser.</p>
+  <p class="note"><code>picture</code>에 의존하는 <a for="image">art directed</a> 이미지들은 동일한 
+  콘텐트를 (크기, 픽셀 밀도, 다른 식별 요소에 관계 없이) 그리도록 요구됩니다. 따라서 브라우저에 의해 
+  선택되는 소스 파일에 관계 없이 이미지에 대한 적절한 대체 텍스트가 항상 동일할 것입니다.</p>
 
   <div class="example">
     <pre highlight="html">
@@ -3354,120 +3353,105 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
       &lt;/picture&gt;
     </pre>
 
-    The large and small versions (both versions are displayed for demonstration purposes) of
-    the image portray the same scene: Reflection of a girls face in a train window,
-    while the small version (displayed on smaller screens) is cropped, this does not effect the subject matter
-    or the appropriateness of the <code>alt</code> text.
+    이미지의 크고 작은 버전들은 (두 버전 모두 데모 용으로 표시됩니다) 동일한 장면을 묘사합니다: 
+    열차 창에 소녀 얼굴의 반사 장면은, 작은 버전 (작은 화면에 표시되는)이 잘렸지만, 주제나
+    <code>alt</code> 텍스트의 적절성에 영향을 주지 않습니다.
 
     <img src="images/face_large.png" alt="Reflection of a girls face in a train window." width="300" height="315" />&nbsp;<img src="images/face_small.png" alt="Reflection of a girls face in a train window." width="228" height="237" />
 </div>
 
   <div class="impl">
 
-<h6 id="guidance-for-markup-generators">Guidance for markup generators</h6>
+<h6 id="guidance-for-markup-generators">마크업 생성기들을 위한 지침</h6>
 
-  Markup generators (such as WYSIWYG authoring tools) should, wherever possible, obtain
-  alternative text from their users. However, it is recognized that in many cases, this will not be
-  possible.
+  마크업 생성기들은 (WYSIWYG 작성도구들 같은), 가능한 어디든지, 그것들의 사용자들로부터 대체 
+  텍스트를 얻어야(should) 합니다. 하지만, 많은 경우에, 이것은 가능하지 않을 것으로 인정됩니다.
 
-  For images that are the sole contents of links, markup generators should examine the link
-  target to determine the title of the target, or the URL of the target, and use information
-  obtained in this manner as the alternative text.
+  링크들의 유일한 콘텐트인 이미지들에 대해, 마크업 생성기들은 대상의 제목이나 대상의 URL을 결정하기 
+  위해 링크 대상을 검토해야(should)하고, 이 방법으로 얻어진 정보를 대체 텍스트로 사용해야 합니다.
 
-  For images that have captions, markup generators should use the
-  <{figure}> and <{figcaption}> elements to provide the image's caption.
+  캡션을 가지는 이미지들에 대해, 마크업 생성기들은 이미지의 캡션을 제공하기 위해 <{figure}>와 
+  <{figcaption}> 요소(element)들을 사용해야(should) 합니다.
 
-  As a last resort, implementors should either set the <code>alt</code> attribute to the empty string, under
-  the assumption that the image is a purely decorative image that
-  doesn't add any information but is still specific to the surrounding
-  content, or omit the <code>alt</code> attribute
-  altogether, under the assumption that the image is a key part of the
-  content.
+  최후의 수단으로, 구현자는 이미지가 어떤 정보도 추가하지 않지만 여전히 주변 콘텐트에 따라 다른 
+  순수하게 장식 이미지라는 가정 하에 <code>alt</code> 속성(attribute)을 빈 문자열로 설정 
+  해야(should) 하거나, 이미지가 콘텐트의 핵심 부분이라는 가정하에<code>alt</code> 속성(attribute)을 
+  완전히 생략해야(should) 합니다.
 
-  Markup generators may specify a <dfn><code>generator-unable-to-provide-required-alt</code></dfn>
-  attribute on <{img}> elements for which they have been
-  unable to obtain a text alternative and for which they have therefore
-  omitted the <code>alt</code> attribute. The
-  value of this attribute must be the empty string. Documents
-  containing such attributes are not conforming, but conformance
-  checkers will silently ignore this error.
+  마크업 생성기들은 대체 텍스트를 얻는 것이 불가능하고 때문에 <code>alt</code> 속성(attribute)이 
+  생략된 <{img}> 요소(element)들에 <dfn><code>generator-unable-to-provide-required-alt</code></dfn> 
+  속성(attribute)을 명시할 수 있습니다. 이 속성(attribute)의 값은 빈 문자열이어야(must) 합니다. 그 
+  속성(attribute)들을 포함하는 문서들은 적합하지 않지만, 적합성 검사기들은 이 오류를 묵시적으로 
+  무시할 것입니다.
 
   <p class="note">
-    This is intended to avoid markup generators from
-  being pressured into replacing the error of omitting the <code>alt</code> attribute with the even more
-  egregious error of providing phony text alternatives, because
-  state-of-the-art automated conformance checkers cannot distinguish
-  phony text alternatives from correct text alternatives.
+    이것은 최신의 자동화 적합성 검사기들이 가짜 대체 텍스트들과 올바른 대체 텍스트들을 구별할 수 
+  없기 때문에, <code>alt</code> 속성(attribute)의 생략 오류를 가짜 대체 텍스트들을 제공하는 훨씬 더 
+  엄청난 오류로의 교체가 강제되는 것으로부터 마크업 생성기들을 방지하기 위해 의도된 것입니다.
   </p>
 
-  Markup generators should generally avoid using the image's own
-  file name as the text alternative. Similarly, markup generators
-  should avoid generating text alternatives from any content that will
-  be equally available to presentation user agents (e.g., Web
-  browsers).
+  마크업 생성기들은 일반적으로 대체 텍스트로서 이미지 자신의 파일 이름을 사용하는 것을 
+  방지해야(should) 합니다. 마찬가지로, 마크업 생성기들은 프리젠테이션 유저 에이전트들에 (예를 들어, 
+  웹 브라우저들) 동일하게 사용 가능한 콘텐트로부터 대체 텍스트들을 생성하는 것을 방지해야(should) 
+  합니다.
 
   <p class="note">
-    This is because once a page is generated, it will
-  typically not be updated, whereas the browsers that later read the
-  page can be updated by the user, therefore the browser is likely to
-  have more up-to-date and finely-tuned heuristics than the markup
-  generator did when generating the page.
+    이것은, 나중에 페이지를 읽는 브라우저들이 사용자에 의해 업데이트 될 수 있는 반면에, 일단 
+  페이지가 생성되면 일반적으로 업데이트 될 수 없기 때문에, 브라우저는 페이지가 생성될 때 마크업 
+  생성기가 하는 것 보다 좀 더 최신의 그리고 미세하게 조정된 휴리스틱을 가질 가능성이 높습니다.
   </p>
 
   </div>
 
-<h6 id="guidance-for-conformance-checkers">Guidance for conformance checkers</h6>
+<h6 id="guidance-for-conformance-checkers">적합성 검사기들을 위한 지침</h6>
 
-  A conformance checker must report the lack of an <code>alt</code> attribute as an error unless one
-  of the conditions listed below applies:
+  적합성 검사기들은 아래 나열된 조건들 중 하나에 적용되지 않는 한 <code>alt</code> 속성(attribute)의 
+  결핍을 오류로 보고해야(must) 합니다:
 
-  * The <{img}> element is in a <{figure}> element that satisfies
-     <a>the conditions described above</a>.
-  * The <{img}> element has a (non-conforming) <code>generator-unable-to-provide-required-alt</code>
-    attribute whose value is the empty string. A conformance checker that is not reporting the lack
-    of an <code>alt</code> attribute as an error must also not report the presence of the empty
-    <code>generator-unable-to-provide-required-alt</code> attribute as an error. (This case does not
-    represent a case where the document is conforming, only that the generator could not determine
-    appropriate alternative text — validators are not required to show an error in this case,
-    because such an error might encourage markup generators to include bogus alternative text purely
-    in an attempt to silence validators. Naturally, conformance checkers <em>may</em> report the
-    lack of an <code>alt</code> attribute as an error even in the presence of the
-    <code>generator-unable-to-provide-required-alt</code> attribute; for example, there could be a
-    user option to report <em>all</em> conformance errors even those that might be the more or less
-    inevitable result of using a markup generator.)
+  * <{img}> 요소(element)가 <a lt="the conditions described above">위에 기술 된 조건들</a>을 
+     만족시키는 <{figure}> 요소(element)에 있는 경우.
+  * <{img}> 요소(element)가 (부적합 한) 값이 빈 문자열인 
+    <code>generator-unable-to-provide-required-alt</code> 속성(attribute)을 가짐. <code>alt</code> 
+    속성(attribute)의 결핍을 오류로 보고하지 않는 적합성 검사기는 빈 
+    <code>generator-unable-to-provide-required-alt</code> 속성(attribute)의 존재를 오류로 보고하지 
+    않아야(must) 합니다. (이 경우는 적절한 대체 텍스트를 결정할 수 없는 생성기를 제외하고, 문서가 
+    적합한 경우를 나타내지 않습니다 — 그 오류는 마크업 생성기들이 검사기들을 침묵시킬 의도로 순전히 
+    가짜 대체 텍스트를 포함하도록 권장할 수 있기 때문에 검사기들은 이 경우 오류를 보여주도록 요구 
+    되지 않습니다. 물론, 적합성 검사기들은 <code>generator-unable-to-provide-required-alt</code> 
+    속성(attribute)의 존재에도 불구하고 <code>alt</code> 속성(attribute)의 결핍을 오류로 보고 
+    <em>할 수 있습니다</em>; 예를 들어, 심지어 마크업 생성기를 사용하여 많거나 적은 불가피한 결과가 
+    될 수 있는 것 조차도 <em>모든</em> 적합성 오류들을 보고하기 위한 사용자 옵션이 있을 수 있습니다.)
 
-<h4 id="the-iframe-element">The <dfn element><code>iframe</code></dfn> element</h4>
+<h4 id="the-iframe-element"><dfn element><code>iframe</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Embedded content</a>.</dd>
-    <dd><a>Interactive content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>embedded content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd>Text that conforms to the requirements given in the prose.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>src</code> - Address of the resource</dd>
-    <dd><code>srcdoc</code> - A document to render in the <code>iframe</code></dd>
-    <dd><{iframe/name}> - Name of <a>nested browsing context</a></dd>
-    <dd><{iframe/sandbox}> - Security rules for nested content</dd>
-    <dd><code>allowfullscreen</code> - Whether to allow the <code>iframe</code>'s
-    contents to use <code>requestFullscreen()</code></dd>
-    <dd><code>width</code> - Horizontal dimension</dd>
-    <dd><code>height</code> - Vertical dimension</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a value for="role"><code>application</code></a>, <a value for="role"><code>document</code></a>, or <a value for="role"><code>img</code></a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Embedded content">삽입(embedded) 콘텐트</a>.</dd>
+    <dd><a lt="interactive content">대화형(interactive) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="embedded content">삽입(embedded) 콘텐트</a>가 예상되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd>본문에 주어진 요구사항들을 따르는 텍스트</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>src</code> - 리소스의 주소</dd>
+    <dd><code>srcdoc</code> - <code>iframe</code>에 렌더링 할 문서</dd>
+    <dd><{iframe/name}> - <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 이름</dd>
+    <dd><{iframe/sandbox}> - 중첩된 콘텐트에 대한 보안 규칙들</dd>
+    <dd><code>allowfullscreen</code> - <code>iframe</code>의 콘텐트가 <code>requestFullscreen()</code>를 사용하는 것을 허용할지 여부</dd>
+    <dd><code>width</code> - 가로 치수</dd>
+    <dd><code>height</code> - 세로 치수</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a value for="role"><code>application</code></a>, <a value for="role"><code>document</code></a>, <a value for="role"><code>img</code></a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLIFrameElement">
         interface HTMLIFrameElement : HTMLElement {
@@ -3485,43 +3469,44 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
     </dd>
   </dl>
 
-  The <{iframe}> element <a>represents</a> a <a>nested browsing context</a>.
+  <{iframe}> 요소(element)는 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 
+  <a lt="represents">나타냅니다</a>.
 
-  The <dfn element-attr for="iframe"><code>src</code></dfn> attribute gives the address of a page
-  that the <a>nested browsing context</a> is to contain. The attribute, if present, must be a
-  <a>valid non-empty URL potentially surrounded by spaces</a>.
+  <dfn element-attr for="iframe"><code>src</code></dfn> 속성(attribute)은 
+  <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>가 포함하는 페이지의 주소를 제공합니다. 
+  이 속성(attribute)이 존재한다면 <a lt="valid non-empty URL potentially surrounded by spaces">유효한 잠정적으로 공백으로 둘러 싸일 수 있는 비어있지 않은 URL</a>이어야(must) 
+  합니다.
 
-  The <dfn element-attr for="iframe"><code>srcdoc</code></dfn> attribute gives the content of
-  the page that the <a>nested browsing context</a> is to contain. The value of the attribute
-  is the source of <dfn for="iframe" lt="iframe srcdoc document|an iframe srcdoc documents">an <code>iframe</code> <code>srcdoc</code>
-  document</dfn>.
+  <dfn element-attr for="iframe"><code>srcdoc</code></dfn> 속성(attribute)은 
+  <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>가 포함하는 페이지의 콘텐트를 제공합니다. 
+  이 속성(attribute)의 값은 <dfn for="iframe" lt="iframe srcdoc document|an iframe srcdoc documents"><code>iframe</code> <code>srcdoc</code> 문서</dfn>의 
+  소스입니다.
 
-  The <code>srcdoc</code> attribute, if present, must have a value
-  using <a href="#syntax">the HTML syntax</a> that consists of the following syntactic components, in the
-  given order:
+  <code>srcdoc</code> 속성(attribute)이 존재한다면 주어진 순서에 따라 다음 구문 컴포넌트들로 구성되는 
+  <a href="#syntax">HTML 문법</a>을 사용하는 값을 가져야(must) 합니다:
 
   <ol>
 
-    <li>Any number of <a>comments</a> and <a>space characters</a>.</li>
+    <li>얼마든지의 <a lt="comments">주석들</a>과 <a lt="space characters">공백 문자들</a>.</li>
 
-    <li>Optionally, a <a>DOCTYPE</a>.
+    <li>선택적으로, <a>DOCTYPE</a>.
 
-    </li><li>Any number of <a>comments</a> and <a>space characters</a>.</li>
+    </li><li>얼마든지의 <a lt="comments">주석들</a>과 <a lt="space characters">공백 문자들</a>.</li>
 
-    <li>The root element, in the form of an <{html}> element.</li>
+    <li><{html}> 요소(element)의 형식으로, 루트 요소(element).</li>
 
-    <li>Any number of <a>comments</a> and <a>space characters</a>.</li>
+    <li>얼마든지의 <a lt="comments">주석들</a>과 <a lt="space characters">공백 문자들</a>.</li>
 
   </ol>
 
-  For <{iframe}> elements in <a>XML documents</a>, the <code>srcdoc</code> attribute, if present, must have a value that matches the
-  production labeled <code>document</code> in the XML specification. [[!XML]]
+  <a lt="XML documents">XML 문서들</a>에 있는 <{iframe}> 요소(element)들에 대해, <code>srcdoc</code> 
+  속성(attribute)이 존재한다면 XML 명세에 <code>document</code>라고 라벨링 된 생산물에 일치하는 값을 
+  가져야(must) 합니다. [[!XML]]
 
   <div class="example">
-    Here a blog uses the <code>srcdoc</code> attribute in conjunction
-    with the <{iframe/sandbox}> attributes described below to provide users of user
-    agents that support this feature with an extra layer of protection from script injection in the
-    blog post comments:
+    여기 블로그가 블로그 게시물 댓글들에 스크립트 인젝션으로부터 보호 추가 레이어로 이 기능을 
+    지원하는 유저 에이전트들의 사용자들에게 제공하기 위해 아래 기술된 <{iframe/sandbox}> 
+    속성(attribute)과 함께 <code>srcdoc</code> 속성(attribute)을 사용합니다:
 
     <pre highlight="html">
 &lt;article&gt;
@@ -3548,99 +3533,115 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
   &lt;/article&gt;
     </pre>
 
-    Notice the way that quotes have to be escaped (otherwise the <code>srcdoc</code> attribute would end prematurely), and the way raw
-    ampersands (e.g., in URLs or in prose) mentioned in the sandboxed content have to be
-    <em>doubly</em> escaped — once so that the ampersand is preserved when originally parsing
-    the <code>srcdoc</code> attribute, and once more to prevent the
-    ampersand from being misinterpreted when parsing the sandboxed content.
+    따옴표를 이스케이프 되어야(have to) 하는 (그렇지 않으면 <code>srcdoc</code> 속성(attribute)들이 
+    일찍 종료될 것입니다) 방식과 샌드박스 된 콘텐트에 언급된 앰퍼샌드들이 (예를 들어, 본문에서 
+    URL들의 앰퍼샌드) <em>이중</em>으로 이스케이프되어야(have to)하는 방식에 주목하세요 — 한 번은 
+    앰퍼센드가 본래 <code>srcdoc</code> 속성(attribute)을 해석 할 때 보존되고, 샌드박스 된 콘텐트를 
+    해석 할 때 자롯 해석되는 것으로부터 앰퍼샌드를 방지하기 위해 한 번 더.
 
-    Furthermore, notice that since the <a>DOCTYPE</a> is optional in
-    <a lt="iframe srcdoc document"><code>iframe</code> <code>srcdoc</code> documents</a>, and the <{html}>,
-    <{head}>, and <{body}> elements have <a>optional
-    start and end tags</a>, and the <a element for="html"><code>title</code></a> element is also optional in <a lt="iframe srcdoc document"><code>iframe</code> <code>srcdoc</code>
-    documents</a>, the markup in a <code>srcdoc</code> attribute can be
-    relatively succinct despite representing an entire document, since only the contents of the
-    <{body}> element need appear literally in the syntax. The other elements are still
-    present, but only by implication.
+    게다가, <a lt="iframe srcdoc document"><code>iframe</code> <code>srcdoc</code> 문서들</a>에
+    <a>DOCTYPE</a>이 선택적이고, <{html}>, <{head}>, <{body}> 요소(element)들이 
+    <a lt="optional start and end tags">선택적 시작/종료 태그들</a>을 가지며, 
+    <a lt="iframe srcdoc document"><code>iframe</code> <code>srcdoc</code> 문서들</a>에 
+    <a element for="html"><code>title</code></a> 요소(element) 역시 선택적이기 때문에, <{body}> 
+    요소(element)의 콘텐츠만이 구문에서 문자 그대로 나타날 필요가 있으므로 <code>srcdoc</code> 
+    속성(attribute) 내의 마크업은 전체 문서를 나타내는 것에도 불구하고 비교적 간결할 수 있습니다. 
+    다른 요소(element)들은 암묵적으로만 여전히 존재합니다.
 
   </div>
 
   <p class="note">
-    In <a href="#syntax">the HTML syntax</a>, authors need only remember to use U+0022
-  QUOTATION MARK characters (") to wrap the attribute contents and then to escape all U+0022
-  QUOTATION MARK (") and U+0026 AMPERSAND (&amp;) characters, and to specify the <{iframe/sandbox}> attribute, to ensure safe embedding of content.
+    <a href="#syntax">HTML 문법</a>에서, 작성자들은 단지 속성(attribute) 콘텐트를 감싸기 위해 U+0022 
+  따옴표 문자들 (")을 사용하고 이후 모든 U+0022 따옴표 문자 (")와 0026 앰퍼샌드 (&amp;) 문자들을 
+  이스케이프하고, 콘텐트의 안전한 삽입을 보장하기 위해 <{iframe/sandbox}> 속성(attribute)을 명시하는 
+  것을 기억하기만 하면 됩니다.
   </p>
 
   <p class="note">
-    Due to restrictions of <a href="#xhtml">the XHTML syntax</a>, in XML the U+003C LESS-THAN
-  SIGN character (&lt;) needs to be escaped as well. In order to prevent <a>attribute-value normalization</a>, some of XML's
-  whitespace characters — specifically U+0009 CHARACTER TABULATION (tab), U+000A LINE FEED
-  (LF), and U+000D CARRIAGE RETURN (CR) — also need to be escaped. [[!XML]]
+    <a href="#xhtml">XHTML 문법</a>의 제한 때문에, XML에서 U+003C ~보다 작다 기호 문자 (&lt;)도 
+  이스케이프 될 필요가 있습니다. <a lt="attribute-value normalization">속성(attribute)-값 정규화</a>를 
+  방지하기 위해, 일부 XML의 공백 문자들 — 특별히 U+0009 탭 문자 (tab), U+000A 라인피드 (LF), U+000D 
+  캐리지 리턴 (CR) — 또한 이스케이프 될 필요가 있습니다. [[!XML]]
   </p>
 
   <p class="note">
-    If the <code>src</code> attribute and the <code>srcdoc</code> attribute are both specified together, the <code>srcdoc</code> attribute takes priority. This allows authors to provide
-  a fallback <a for="url">URL</a> for legacy user agents that do not support the <code>srcdoc</code> attribute.
+    <code>src</code> 속성(attribute)과 <code>srcdoc</code> 속성(attribute)이 모두 함께 명시되어 
+  있다면, <code>srcdoc</code> 속성(attribute)이 우선됩니다. 이것은 작성자가 <code>srcdoc</code> 
+  속성(attribute)을 지원하지 않는 레거시 유저 에이전트들에 대한 폴백 <a for="url">URL</a>을 제공하는 
+  것을 허용합니다.
   </p>
 
   <div class="impl">
 
   <hr />
 
-  When an <{iframe}> element is <a for="document">inserted into a document</a> that has a <a>browsing context</a>, the user agent must create a <a>nested browsing context</a>, and
-  then <a>process the <code>iframe</code> attributes</a> for the "first time".
+  <{iframe}> 요소(element)가 <a lt="browsing context">브라우징 컨텍스트</a>를 가지는 
+  <a for="document" lt="inserted into a document">문서에 삽입 되는</a> 경우, 유저 에이전트는 
+  <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 생성해야(must) 하고, "처음"으로 
+  <a lt="process the iframe attributes"><code>iframe</code> 속성(attribute)들을 처리</a>해야(must) 
+  합니다.
 
-  When an <{iframe}> element is <a for="document">removed from a document</a>, the user agent must <a>discard</a> the <a>nested browsing context</a>, if any.
+  <{iframe}> 요소(element)가 <a for="document" lt="removed from a document">문서로부터 제거</a> 되는 
+  경우, 유저 에이전트는 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>가 있다면 이를 
+  <a lt="discard">폐기</a>해야(must) 합니다.
 
   <p class="note">
-    This happens without any <code>unload</code> events firing
-  (the <a>nested browsing context</a> and its {{Document}} are <em><a>discarded</a></em>, not <em><a>unloaded</a></em>).
+    이것은 <code>unload</code> 이벤트 발생 없이 일어납니다 
+	(<a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>와 그것의 {{Document}}는 
+	<em><a lt="unloaded">언로드</a></em>가 아니라 <em><a lt="discarded">폐기</a>됩니다</em>).
   </p>
 
-  Whenever an <{iframe}> element with a <a>nested browsing context</a> has its
-  <code>srcdoc</code> attribute set, changed, or removed, the user agent
-  must <a>process the <code>iframe</code> attributes</a>.
+  <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 가진 <{iframe}> 요소(element)가 
+  그것의 <code>srcdoc</code> 속성(attribute)이 설정, 변경, 제거 될 때마다, 유저 에이전트는 
+  <a lt="process the iframe attributes"><code>iframe</code> 속성(attribute)들을 처리</a>해야(must) 
+  합니다.
 
-  Similarly, whenever an <{iframe}> element with a <a>nested browsing context</a>
-  but with no <code>srcdoc</code> attribute specified has its <code>src</code> attribute set, changed, or removed, the user agent must
-  <a>process the <code>iframe</code> attributes</a>.
+  마찬가지로, <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 가지지만 명시된
+  <code>srcdoc</code> 속성(attribute)이 없는 <{iframe}> 요소(element)가 그것의 <code>src</code> 
+  속성(attribute)이 설정, 변경, 제거 될 때마다, 유저 에이전트는 
+  <a lt="process the iframe attributes"><code>iframe</code> 속성(attribute)들을 처리</a>해야(must) 
+  합니다.
 
-  When the user agent is to <dfn lt="reprocess the iframe attributes|process the iframe attributes">process the <code>iframe</code> attributes</dfn>, it must run
-  the first appropriate steps from the following list:
+  유저 에이전트가 
+  <dfn lt="reprocess the iframe attributes|process the iframe attributes"><code>iframe</code> 
+  속성(attribute)들을 처리</dfn>하는 경우, 다음 목록에서 첫 번째 적절한 단계들을 수행해야(must) 
+  합니다:
 
   <dl class="switch">
 
-    <dt>If the <code>srcdoc</code> attribute is specified</dt>
+    <dt><code>srcdoc</code> 속성(attribute)이 명시되어 있다면</dt>
 
     <dd>
 
-    <a>Navigate</a> the element's <a>child browsing context</a> to a new <a>response</a> whose
-    <a>url list</a> consists of <a scheme>about:srcdoc</a>, <a for="response">header list</a>
-    consists of <code>Content-Type</code>/<a href="#text-html"><code>text/html</code></a>,
-    <a for="response">body</a> is the value of the attribute, <a for="response">CSP list</a> is the
-    <a for="document">CSP list</a> of the <{iframe}> element's <a>node document</a>, and
-    <a for="response">HTTPS state</a> is the <a for="document">HTTPS state</a> of the <{iframe}>
-    element's <a>node document</a>.
+    요소(element)의 <a lt="child browsing context">자식 브라우징 컨텍스트</a>를 
+    <a lt="url list">url 목록</a>이 <a scheme>about:srcdoc</a>로 구성되고, 
+    <a for="response" lt="header list">헤더 목록</a>이 <code>Content-Type</code>/<a href="#text-html"><code>text/html</code></a>로 
+    구성되며, <a for="response">body</a>가 속성(attribute)의 값이고, 
+    <a for="response" lt="CSP list">CSP 목록</a>이 <{iframe}> 요소(element)의 
+    <a lt="node document">노드 문서</a>의 <a for="document" lt="CSP list">CSP 목록</a>이며, 
+    <a for="response" lt="HTTPS state">HTTPS 상태</a>가 <{iframe}> 요소(element)의 
+    <a lt="node document">노드 문서</a>의 <a for="document" lt="HTTPS state">HTTPS 상태</a>인 새로운 
+    <a lt="response">응답</a>으로 <a lt="navigate">이동(navigate)</a>시키세요.
 
-    The resulting {{Document}} must be considered
-    <a lt="iframe srcdoc document">an <code>iframe</code> <code>srcdoc</code> document</a>.
+    결과 {{Document}}는 <a lt="iframe srcdoc document"><code>iframe</code> <code>srcdoc</code> 문서</a>로 
+    간주되어야(must) 합니다.
 
     </dd>
 
-    <dt>Otherwise, if the element has no <code>src</code> attribute
-    specified, and the user agent is processing the <code>iframe</code>'s attributes for the "first
-    time"</dt>
+    <dt>그렇지 않고, 요소(element)가 명시된 <code>src</code> 속성(attribute)을 가지지 않고 유저 
+    에이전트가 "처음"으로 <code>iframe</code> 속성(attribute)들을 처리하고 있다면</dt>
 
     <dd>
 
-    <a>Queue a task</a> to run the <a>iframe load event steps</a>.
+    <a lt="iframe load event steps">iframe load event 단계들</a>을 수행하기 위한 
+    <a lt="queue a task">작업을 대기열에 넣습니다</a>.
 
-    The <a>task source</a> for this <a>task</a> is the
-    <a>DOM manipulation task source</a>.
+    이 <a lt="task">작업</a>에 대한 <a lt="task source">작업 소스</a>는 
+    <a lt="DOM manipulation task source">DOM 조작 작업 소스</a>입니다.
 
     </dd>
 
-    <dt>Otherwise</dt>
+    <dt>그렇지 않으면</dt>
 
     <dd>
 
@@ -3648,28 +3649,30 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
 
       <li>
 
-      If the element has no <code>src</code> attribute specified, or its value is the empty string,
-      let <var>url</var> be the string "<code>about:blank</code>".
+      요소(element)가 명시된 <code>src</code> 속성(attribute)을 가지지 않거나, 그것의 값이 빈 
+      문자열이라면, <var>url</var>을 문자열 "<code>about:blank</code>"로 둡니다.
 
-      Otherwise, <a>parse</a> the value of the <code>src</code> attribute, relative to the <{iframe}> element.
+      그렇지 않으면, <code>src</code> 속성(attribute)의 값을 <{iframe}> 요소(element)와 관련하여 
+      <a lt="parse">해석</a> 하세요.
 
-      If that is not successful, then let <var>url</var> be the string
-      "<code>about:blank</code>". Otherwise, let <var>url</var> be the <a>resulting URL string</a>.
-
-      </li>
-
-      <li>
-
-      If there exists an <a>ancestor browsing context</a> whose <a>active
-      document</a>'s <a>address</a>, ignoring fragment
-      identifiers, is equal to <var>url</var>, then abort these steps.
+      그것이 성공적이지 않다면, <var>url</var>를 문자열 "<code>about:blank</code>"로 둡니다. 그렇지 
+      않으면 <var>url</var>을 <a lt="resulting URL string">결과 URL 문자열</a>로 둡니다.
 
       </li>
 
       <li>
 
-      <a>Navigate</a> the element's <a>child browsing context</a>
-      to <var>url</var>.
+      문서 조각 식별자를 무시하여, <a lt="active document">활성 문서</a>의 
+      <a lt="address">주소</a>가 <var>url</var>가 동일한 
+      <a lt="ancestor browsing context">조상 브라우징 컨텍스트</a>가 존재한다면, 이 단계들을 
+      중단합니다.
+
+      </li>
+
+      <li>
+
+      요소(element)의 <a lt="child browsing context">자식 브라우징 컨텍스트</a>를 <var>url</var>로 
+      <a lt="navigate">이동(navigate)</a> 시키세요.
 
       </li>
 
@@ -3679,173 +3682,189 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
 
   </dl>
 
-  Furthermore, if the <a>active document</a> of the element's <a>child browsing
-  context</a> before such a <a>navigation</a> was not <a>completely
-  loaded</a> at the time of the new <a>navigation</a>, then the <a>navigation</a> must be completed with <a>replacement enabled</a>.
+  게다가, 그 <a lt="navigation">이동</a> 전에 요소(element)의 
+  <a lt="child browsing context">자식 브라우징 컨텍스트</a>의 <a lt="active document">활성 문서</a>가 
+  새로운 <a lt="navigation">이동</a>의 시점에 <a lt="completely loaded">완전히 로드</a> 되지 않았다면,
+  <a lt="navigation">이동</a>은 <a lt="replacement enabled">교체 활성화</a>를 가지고 완료되어야(must) 
+  합니다.
 
-  Similarly, if the <a>child browsing context</a>'s <a>session history</a> contained
-  only one {{Document}} when the <a>process the <code>iframe</code> attributes</a>
-  algorithm was invoked, and that was the <code>about:blank</code> {{Document}} created
-  when the <a>child browsing context</a> was created, then any <a>navigation</a> required of the user agent in that algorithm must be completed
-  with <a>replacement enabled</a>.
+  마찬가지로, <a lt="process the iframe attributes"><code>iframe</code> 속성(attribute)들 처리</a> 
+  알고리즘이 호출되는 경우, <a lt="child browsing context">자식 브라우징 컨텍스트</a>의 
+  <a lt="session history">세션 히스토리</a>가 오직 하나의 {{Document}}를 포함하고, 그것이 
+  <a lt="child browsing context">자식 브라우징 컨텍스트</a>가 생성 될 때 생성 된 
+  <code>about:blank</code> {{Document}}였다면, 그 알고리즘에서 유저 에이전트의 요구된 모든 
+  <a lt="navigation">이동</a>은 <a lt="replacement enabled">교체 활성화</a>를 가지고 완료되어야(must) 
+  합니다.
 
-  When a {{Document}} in an <code>iframe</code> is marked as <a>completely
-  loaded</a>, the user agent must run the <a>iframe load event steps</a> <a>in parallel</a>.
+  <code>iframe</code> 내의 {{Document}}가 <a lt="completely loaded">완전히 로드 된</a>것으로 표기되는 
+  경우, 유저 에이전트는 <a lt="in parallel">병렬로</a> 
+  <a lt="iframe load event steps">iframe load 이벤트 단계들</a>을 수행해야(must) 합니다.
 
   <p class="note">
-    A <code>load</code> event is also fired at the
-  <{iframe}> element when it is created if no other data is loaded in it.
+    그것이 생성될 때 어떤 다른 데이터도 그 내부에서 로드되지 않는다면 <code>load</code> 이벤트도 
+  <{iframe}> 요소(element)에서 발생됩니다.
   </p>
 
-  Each {{Document}} has an <dfn>iframe load in progress</dfn> flag and a <dfn>mute
-  iframe load</dfn> flag. When a {{Document}} is created, these flags must be unset for
-  that {{Document}}.
+  각 {{Document}}는 <dfn>iframe load in progress</dfn> 플래그와 <dfn>mute iframe load</dfn> 플래그를 
+  가집니다. {{Document}}가 생성될 때, 이 플래그들은 그 {{Document}}에 대해 해제되어야(must) 합니다.
 
-  The <dfn>iframe load event steps</dfn> are as follows:
+  <dfn lt="iframe load event steps">iframe load 이벤트 단계들</dfn>은 다음과 같습니다:
 
   <ol>
 
-    <li>Let <var>child document</var> be the <a>active document</a> of the
-    <{iframe}> element's <a>nested browsing context</a>.</li>
+    <li><var>child document</var>를 <{iframe}> 요소(element)의 
+    <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 
+    <a lt="active document">활성 문서</a>로 둡니다.</li>
 
-    <li>If <var>child document</var> has its <a>mute iframe load</a> flag set,
-    abort these steps.</li>
+    <li><var>child document</var>가 그것의 설정된 <a>mute iframe load</a> 플래그를 가진다면, 이 
+    단계들을 중단합니다.</li>
 
-    <li>Set <var>child document</var>'s <a>iframe load in progress</a>
-    flag.</li>
+    <li><var>child document</var>의 <a>iframe load in progress</a> 플래그를 설정합니다.</li>
 
-    <li><a>Fire a simple event</a> named <code>load</code> at the
-    <{iframe}> element.</li>
+    <li><{iframe}> 요소(element)에 <code>load</code>라고 이름이 붙은 
+    <a lt="fire a simple event">단순 이벤트를 발생</a> 시킵니다.</li>
 
-    <li>Unset <var>child document</var>'s <a>iframe load in progress</a>
-    flag.</li>
+    <li><var>child document</var>의 <a>iframe load in progress</a> 플래그를 해제합니다.</li>
 
   </ol>
 
-  <p class="warning">This, in conjunction with scripting, can be used to probe the URL space of the
-  local network's HTTP servers. User agents may implement <a>cross-origin</a>
-  access control policies that are stricter than those described above to mitigate this attack, but
-  unfortunately such policies are typically not compatible with existing Web content.</p>
+  <p class="warning">이것은, 스크립팅과 함께, 로컬 네트워크의 HTTP 서버들의 URL 공간을 살피는데 
+  사용될 수 있습니다. 유저 에이전트들은 이 공격을 완화시키기 위해 위에 기술된 것 보다 엄격한 
+  <a>cross-origin</a> 접근 제어 정책들을 구현할 수 있지만, 불행하게도 그 정책들은 일반적으로 기존의 
+  웹 콘텐트와 호환되지 않습니다.</p>
 
-  When the <code>iframe</code>'s <a>browsing context</a>'s <a>active document</a> is
-  not <a>ready for post-load tasks</a>, and when anything in the <code>iframe</code> is <a>delaying the load event</a> of the <code>iframe</code>'s
-  <a>browsing context</a>'s <a>active document</a>, and when the <code>iframe</code>'s
-  <a>browsing context</a> is in the <a>delaying <code>load</code> events
-  mode</a>, the <code>iframe</code> must <a>delay the load event</a> of its document.
+  <code>iframe</code>의 <a lt="browsing context">브라우징 컨텍스트</a>의 
+  <a lt="active document">활성 문서</a>가 <a lt="ready for post-load tasks">post-load 작업들에 대해 준비</a>되지 
+  않은 경우와, <code>iframe</code> 내의 모든 것이 <code>iframe</code>의 
+  <a lt="browsing context">브라우징 컨텍스트</a>의 <a lt="active document">활성 문서</a>의 
+  <a lt="delaying the load event">load 이벤트를 지연 중</a>인 경우와, <code>iframe</code>의 
+  <a lt="browsing context">브라우징 컨텍스트</a>가 
+  <a lt="delaying load events mode"><code>load</code> 이벤트 지연 모드</a>에 있는 경우, 
+  <code>iframe</code>은 그 문서의 <a lt="delay the load event">load 이벤트를 지연</a>시켜야(must) 
+  합니다.
 
   <p class="note">
-    If, during the handling of the <code>load</code> event, the
-  <a>browsing context</a> in the <code>iframe</code> is again <a>navigated</a>, that will further <a>delay the load event</a>.
+    <code>load</code> 이벤트의 처리 동안, <code>iframe</code> 내의 
+  <a lt="browsing context">브라우징 컨텍스트</a>가 다시 <a lt="navigated">이동</a>되었다면, 좀 더 
+  <a lt="delay the load event">load 이벤트를 지연</a>시킬 것입니다.
   </p>
 
   </div>
 
   <p class="note">
-    If, when the element is created, the <code>srcdoc</code> attribute is not set, and the <code>src</code> attribute is either also not set or set but its value cannot be
-  <a>resolved</a>, the browsing context will remain at the initial
-  <code>about:blank</code> page.
+    요소(element)가 생성되었을 때, <code>srcdoc</code> 속성(attribute)이 설정되어 있지 않고, 
+  <code>src</code> 속성(attribute) 또한 설정되어 있지 않거나 설정되었지만 그 값이 
+  <a lt="resolved">분석(resolve)</a>될 수 없다면, 브라우징 컨텍스트는 초기 <code>about:blank</code> 
+  페이지에 남을 것입니다.
   </p>
 
   <p class="note">
-    If the user <a>navigates</a> away from this page, the
-  <code>iframe</code>'s corresponding <code>WindowProxy</code> object will proxy new
-  <code>Window</code> objects for new {{Document}} objects, but the <code>src</code> attribute will not change.
+    사용자가 이 페이지로부터 다른 곳으로 <a lt="navigates">이동</a>한다면, <code>iframe</code>의 
+  해당하는 <code>WindowProxy</code> 객체는 새로운 {{Document}} 객체들에 대한 새로운 <code>Window</code> 
+  객체들을 대리(proxy)할 것이지만, <code>src</code> 속성(attribute)는 변경하지 않을 것입니다.
   </p>
 
   <hr />
 
-  The <dfn element-attr for="iframe"><code>name</code></dfn> attribute, if present, must be a
-  <a>valid browsing context name</a>. The given value is used to name the <a>nested browsing context</a>. <span class="impl">When the browsing context is created, if the attribute
-  is present, the <a>browsing context name</a> must be set to the value of this attribute;
-  otherwise, the <a>browsing context name</a> must be set to the empty string.</span>
+  <dfn element-attr for="iframe"><code>name</code></dfn> 속성(attribute)이 있다면, 
+  <a lt="valid browsing context name">유효한 브라우징 컨텍스트 이름</a>이어야(must) 합니다. 주어진 
+  값은 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 이름 짓는데 사용됩니다. 
+  <span class="impl">브라우징 컨텍스트가 생성될 때, 속성(attribute)이 존재한다면 
+  <a lt="browsing context name">브라우징 컨텍스트 이름</a>은 이 속성(attribute)의 값으로 
+  설정되어야(must) 합니다; 그렇지 않으면, <a lt="browsing context name">브라우징 컨텍스트 이름</a>은 
+  빈 문자열로 설정되어야(must) 합니다.</span>
 
   <div class="impl">
 
-  Whenever the <code>name</code> attribute is set, the nested
-  <a>browsing context</a>'s <a lt="browsing context name">name</a> must be changed to
-  the new value. If the attribute is removed, the <a>browsing context name</a> must be set to
-  the empty string.
+  <code>name</code> 속성(attribute)이 설정될 때 마다, 중첩된 
+  <a lt="browsing context">브라우징 컨텍스트</a>의 <a lt="browsing context name">이름</a>은 새로운 
+  값으로 변경되어야(must) 합니다. 속성(attribute)이 제거 되었다면, 
+  <a lt="browsing context name">브라우징 컨텍스트 이름</a>은 빈 문자열로 설정되어야(must) 합니다.
 
   </div>
 
   <hr />
 
-  The <dfn element-attr for="iframe"><code>sandbox</code></dfn> attribute, when specified,
-  enables a set of extra restrictions on any content hosted by the <{iframe}>. Its value
-  must be an <a>unordered set of unique space-separated tokens</a> that are <a>ASCII
-  case-insensitive</a>. The allowed values are <code>allow-forms</code>, <code>allow-pointer-lock</code>, <code>allow-popups</code>, <code>allow-same-origin</code>, <code>allow-scripts</code>, and <code>allow-top-navigation</code>.
+  <dfn element-attr for="iframe"><code>sandbox</code></dfn> 속성(attribute)이 명시된 경우, 
+  <{iframe}>에 의해 관리되는 모든 콘텐트에 대한 별도의 제한 사항들의 세트를 가능하게 합니다. 그 값은 
+  <a lt="ASCII case-insensitive">ASCII 대소문자 구분 없이</a> 
+  <a lt="unordered set of unique space-separated tokens">공백으로 분리된 고유한 토큰들의 순서없는 세트</a>이어야(must) 
+  합니다. 허용된 값들은 <code>allow-forms</code>, <code>allow-pointer-lock</code>, 
+  <code>allow-popups</code>, <code>allow-same-origin</code>, <code>allow-scripts</code>, 
+  <code>allow-top-navigation</code> 입니다.
 
-  When the attribute is set, the content is treated as being from a unique
-  <a for="concept">origin</a>,
-  forms, scripts, and various potentially annoying APIs are disabled, links are prevented from
-  targeting other <a>browsing contexts</a>, and plugins are secured.
-  The <code>allow-same-origin</code> keyword causes
-  the content to be treated as being from its real origin instead of forcing it into a unique
-  origin; the <code>allow-top-navigation</code>
-  keyword allows the content to <a>navigate</a> its <a>top-level browsing context</a>;
-  and the <code>allow-forms</code>, <code>allow-pointer-lock</code>, <code>allow-popups</code> and <code>allow-scripts</code> keywords re-enable forms, the
-  pointer lock API, popups, and scripts respectively. [[!POINTERLOCK]]
+  속성(attribute)이 설정 된 경우, 콘텐트는 고유 <a for="concept" lt="origin">출처</a>, 양식, 
+  스크립트들, 비활성화 된 다양한 곤란한 가능성이 있는 API들로 취급되고, 링크들은 다른 
+  <a lt="browsing contexts">브라우징 컨텍스트들</a>을 대상으로 하는 것을 방지하고, 플러그인들은 
+  보호됩니다. <code>allow-same-origin</code> 키워드는 콘텐트가 고유 출처에 강제되는 것 대신 그것의 
+  실제 출처의 것으로 취급되는 것을 야기합니다; <code>allow-top-navigation</code> 키워드는 콘텐트가 
+  그것의 <a lt="top-level browsing context">최상위 브라우징 컨텍스트</a>로 
+  <a lt="navigate">이동</a>하는 것을 허용하고; <code>allow-forms</code>, 
+  <code>allow-pointer-lock</code>, <code>allow-popups</code>, <code>allow-scripts</code> 키워드들은 
+  각각 양식들, 포인터 잠금 API, 팝업, 스크립트들을 재활성화 시킵니다. [[!POINTERLOCK]]
 
-  <p class="warning">Setting both the <code>allow-scripts</code> and <code>allow-same-origin</code> keywords together when the
-  embedded page has the <a>same origin</a> as the page containing the <code>iframe</code>
-  allows the embedded page to simply remove the <{iframe/sandbox}>
-  attribute and then reload itself, effectively breaking out of the sandbox altogether.</p>
+  <p class="warning">삽입 된(embedded) 페이지가 <code>iframe</code>을 포함하는 페이지로서 
+  <a lt="same origin">동일 출처</a>를 가지는 경우 <code>allow-scripts</code>과 
+  <code>allow-same-origin</code> 키워드들을 모두 함께 설정하는 것은 효과적으로 완전히 샌드박스에서 
+  벗어나, 삽입 된(embedded) 페이지가 <{iframe/sandbox}> 속성(attribute)를 쉽게 제거하고 그것을 
+  리로드 하는 것을 허용합니다.</p>
 
-  <p class="warning">These flags only take effect when the <a>nested browsing context</a> of
-  the <code>iframe</code> is <a>navigated</a>. Removing them, or removing the
-  entire <{iframe/sandbox}> attribute, has no effect on an
-  already-loaded page.</p>
+  <p class="warning">이 플래그들은 <code>iframe</code>의 
+  <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>가 <a lt="navigated">이동 되는</a> 
+  경우에만 적용됩니다. 그것들을 제거하거나, 전체 <{iframe/sandbox}> 속성(attribute)을 제거하는 것은 
+  이미 로드된 페이지에 아무런 영향을 가지지 않습니다.</p>
 
-  <p class="warning">Potentially hostile files should not be served from the same server as the file
-  containing the <{iframe}> element. Sandboxing hostile content is of minimal help if an
-  attacker can convince the user to just visit the hostile content directly, rather than in the
-  <{iframe}>. To limit the damage that can be caused by hostile HTML content, it should be
-  served from a separate dedicated domain. Using a different domain ensures that scripts in the
-  files are unable to attack the site, even if the user is tricked into visiting those pages
-  directly, without the protection of the <{iframe/sandbox}>
-  attribute.</p>
+  <p class="warning">잠재적으로 악의적인 파일들은 <{iframe}> 요소(element)를 포함하는 파일로 동일한 
+  서버로부터 제공되지 않아야(should) 합니다. 공격자가 사용자에게 악의적인 콘텐트로 직접 방문하도록 
+  납득 시킬 수 있다면, 샌드박스 된 악의적인 콘텐트는 <{iframe}> 안에서보다 최소한의 도움입니다. 
+  악의적인 HTML 콘텐트에 의해 야기될 수 있는 피해를 최소화 하기 위해, 별도로 지정된 도메인으로부터 
+  제공되어야(should) 합니다. 다른 도메인을 사용하는 것은, 사용자가 <{iframe/sandbox}> 
+  속성(attribute)의 보호 없이 그 페이지들을 직접 방문하도록 속임에도 불구하고, 파일 내 스크립트가 
+  사이트를 공격하는 것을 불가능하게 만드는 것을 보장합니다. </p>
 
   <div class="impl">
 
-  When an <{iframe}> element with a <{iframe/sandbox}>
-  attribute has its <a>nested browsing context</a> created (before the initial
-  <code>about:blank</code> {{Document}} is created), and when an <code>iframe</code>
-  element's <{iframe/sandbox}> attribute is set or changed while it
-  has a <a>nested browsing context</a>, the user agent must <a>parse the sandboxing directive</a> using the attribute's value as the <var>input</var>, the <{iframe}> element's <a>nested browsing context</a>'s
-  <span><{iframe}> sandboxing flag set</span> as the output, and, if the
-  <code>iframe</code> has an <code>allowfullscreen</code>
-  attribute, the <var>allow fullscreen flag</var>.
+  <{iframe/sandbox}> 속성(attribute)을 가진 <{iframe}> 요소(element)가 그것의 생성된 
+  <a lt="nested browsing context">중첩 브라우징 컨텍스트</a>를 가지는 (초기 <code>about:blank</code> 
+  {{Document}}가 생성되기 전에) 경우와, <code>iframe</code> 요소(element)가 
+  <a lt="nested browsing context">중첩 브라우징 컨텍스트</a>를 가지는 동안 <{iframe/sandbox}> 
+  속성(attribute)이 설정되거나 변경되는 경우, 유저 에이전트는 <var>input</var>으로서 
+  속성(attribute)의 값과 출력으로서 <{iframe}> 요소(element)의 
+  <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 
+  <span><{iframe}> sandboxing 플래그 설정</span>을, 그리고 <code>iframe</code>이 
+  <code>allowfullscreen</code> 속성(attribute)를 가진다면 <var>allow fullscreen flag</var>를 
+  사용하여 <a lt="parse the sandboxing directive">샌드박싱 지시를 해석</a>해야(must)합니다. 
 
-  When an <{iframe}> element's <{iframe/sandbox}>
-  attribute is removed while it has a <a>nested browsing context</a>, the user agent must
-  empty the <{iframe}> element's <a>nested browsing context</a>'s
-  <span><{iframe}> sandboxing flag set</span> as the output.
+  <{iframe}> 요소(element)가 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 가지는 
+  동안 <{iframe/sandbox}> 속성(attribute)이 제거되는 경우, 유저 에이전트는 출력으로 <{iframe}> 
+  요소(element)의 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 <span><{iframe}> 
+  샌드박싱 플래그 설정</span>을 비워야(must) 합니다.
 
   </div>
 
   <div class="example">
-    In this example, some completely-unknown, potentially hostile, user-provided HTML content is
-    embedded in a page. Because it is served from a separate domain, it is affected by all the normal
-    cross-site restrictions. In addition, the embedded page has scripting disabled, plugins disabled,
-    forms disabled, and it cannot navigate any frames or windows other than itself (or any frames or
-    windows it itself embeds).
+    이 예에서, 완전히 알수 없는, 잠재적으로 악의적일 수 있는, 사용자가 제공한 HTML 콘텐트가 페이지에 
+    삽입되어 있습니다. 그것은 별도의 도메인으로부터 제공되었기 때문에, 모든 정상 교차 사이트 
+    제약사항들에 의해 영향을 받습니다. 게다가, 삽입된 페이지는 스크립팅 비활성화, 플러그인 비활성화, 
+    양식 비활성화 되고, 다른 프레임들이나 자신 이외의 창들을 (혹은 다른 프레임들이나 그 자신을 
+    삽입하는 창들) 이동할 수 없습니다.
 
     <pre highlight="html">
 &lt;p&gt;We're not scared of you! Here is your content, unedited:&lt;/p&gt;
 &lt;iframe title="Example iframe" sandbox src="https://usercontent.example.net/getusercontent.cgi?id=12193"&gt;&lt;/iframe&gt;
     </pre>
 
-    <p class="warning">It is important to use a separate domain so that if the attacker convinces the
-    user to visit that page directly, the page doesn't run in the context of the site's origin, which
-    would make the user vulnerable to any attack found in the page.</p>
+    <p class="warning">공격자가 사용자로 하여금 그 페이지에 직접 방문하도록 납득시킨다면, 페이지는 
+    사용자가 페이지 내에서 발견되는 공격에 취약하도록 만드는 사이트의 출처의 컨텍스트에서 수행하지 
+    않기 때문에 별도의 도메인을 사용하는 것이 중요합니다.</p>
 
   </div>
 
   <div class="example">
-    In this example, a gadget from another site is embedded. The gadget has scripting and forms
-    enabled, and the origin sandbox restrictions are lifted, allowing the gadget to communicate with
-    its originating server. The sandbox is still useful, however, as it disables plugins and popups,
-    thus reducing the risk of the user being exposed to malware and other annoyances.
+    이 예에서, 다른 사이트로부터 가젯이 삽입됩니다. 가젯은 스크립팅과 양식이 활성화 되어있고, 그것의 
+    발신 서버와 통신하는 것을 허용하여, 원본 샌드박스 제약 사항들이 해제 되어 있습니다. 하지만 
+    플러그인들과 팝업들이 비활성화 된 것처럼,  멀웨어와 다른 교란에 노출되는 사용자의 위험을 줄이는 
+    것에 여전히 유용합니다.
 
     <pre highlight="html">
 &lt;iframe title="Maps" sandbox="allow-same-origin allow-forms allow-scripts"
@@ -3855,53 +3874,56 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
   </div>
 
   <div class="example">
-    Suppose a file A contained the following fragment:
+    다음 코드 조각을 포함하는 파일 A를 가정해보세요:
 
     <pre highlight="html">
 &lt;iframe title="Example iframe" sandbox="allow-same-origin allow-forms" src=B&gt;&lt;/iframe&gt;
     </pre>
 
-    Suppose that file B contained an iframe also:
+    아이프레임을 포함하는 파일 B도 가정해보세요:
 
     <pre highlight="html">
 &lt;iframe title="Example iframe" sandbox="allow-scripts" src=C&gt;&lt;/iframe&gt;
     </pre>
 
-    Further, suppose that file C contained a link:
+    또, 링크를 포함하는 파일 C를 가정해보세요:
 
     <pre highlight="html">
 &lt;a href=D&gt;Link&lt;/a&gt;
     </pre>
 
-    For this example, suppose all the files were served as <a href="#text-html"><code>text/html</code></a>.
+    이 예에서, 모들 파일들이 <a href="#text-html"><code>text/html</code></a>로 제공된다고 가정하세요.
 
-    Page C in this scenario has all the sandboxing flags set. Scripts are disabled, because the
-    <code>iframe</code> in A has scripts disabled, and this overrides the <code>allow-scripts</code> keyword set on the
-    <code>iframe</code> in B. Forms are also disabled, because the inner <code>iframe</code> (in B)
-    does not have the <code>allow-forms</code> keyword
-    set.
+    이 시나리오에서 페이지 C는 모두 샌드박싱 플래그 설정을 가집니다. A의 <code>iframe</code>은 
+    비활성화된 스크립트들을 가지므로 스크립트들은 비활성화 되고, 이것은 B의 <code>iframe</code>에서 
+    <code>allow-scripts</code> 키워드 설정을 재정의합니다. (B의) 내부 <code>iframe</code>가 
+    <code>allow-scripts</code> 키워드를 가지지 않으므로 양식들 또한 비활성화됩니다.
 
-    Suppose now that a script in A removes all the <{iframe/sandbox}> attributes in A  and B.
-    This would change nothing immediately. If the user clicked the link in C, loading page D into the
-    <code>iframe</code> in B, page D would now act as if the <code>iframe</code> in B had the <code>allow-same-origin</code> and <code>allow-forms</code> keywords set, because that was the
-    state of the <a>nested browsing context</a> in the <code>iframe</code> in A when page B was
-    loaded.
+    이제 A의 스크립트가 A와 B의 모든 <{iframe/sandbox}> 속성(attribute)들을 제거한다고 가정해보세요. 
+    이것은 즉시 아무 것도 변경시키지 않을 것입니다. 사용자가 B의 <code>iframe</code>으로 페이지 D를 
+    로딩하는 C의 링크를 클릭했다면, 페이지 D는 이제 B의 <code>iframe</code>이 페이지 B가 로드되었을 
+    때 A의 <code>iframe</code>에서 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 
+    상태를 가졌기 때문에 <code>allow-same-origin</code>과 <code>allow-forms</code> 키워드 설정을 가진 
+    것처럼 수행합니다.
 
-    Generally speaking, dynamically removing or changing the <{iframe/sandbox}> attribute is ill-advised, because it can make it quite
-    hard to reason about what will be allowed and what will not.
+    일반적으로 말해서, 동적으로 <{iframe/sandbox}> 속성(attribute)을 제거하거나 변경하는 것은 그것이 
+    무엇을 허용할 것이고 무엇을 허용하지 않을 것인지에 대해 판단하는 것을 꽤 어렵게 만들기 때문에 
+    문제의 소지가 있습니다.
 
   </div>
 
   <hr />
 
-  The <dfn element-attr for="iframe"><code>allowfullscreen</code></dfn> attribute is a
-  <a>boolean attribute</a>. When specified, it indicates that {{Document}} objects in
-  the <{iframe}> element's <a>browsing context</a> are to be allowed to use <code>requestFullscreen()</code> (if it's not blocked for other
-  reasons, e.g., there is another ancestor <code>iframe</code> without this attribute set).
+  <dfn element-attr for="iframe"><code>allowfullscreen</code></dfn> 속성(attribute)은 
+  <a lt="boolean attribute">불리언 속성(attribute)</a>입니다. 이 속성(attribute)이 명시된 경우, 
+  <{iframe}> 요소(element)의 <a lt="browsing context">브라우징 컨텍스트</a> 내의 {{Document}} 
+  객체들이 <code>requestFullscreen()</code>를 사용하도록 설정되어야 합니다(다른 이유로 예를 들어, 
+  이 속성 설정이 없는 다른 조상 <code>iframe</code>이 존재하여 차단되지 않는다면).
 
   <div class="example">
-    Here, an <code>iframe</code> is used to embed a player from a video site. The <code>allowfullscreen</code> attribute is needed to enable the
-    player to show its video fullscreen.
+    여기에서, <code>iframe</code>는 비디오 사이트로부터 플레이어를 삽입하는데 사용됩니다. 
+    <code>allowfullscreen</code> 속성(attribute)는 플레이어가 그것의 비디오를 전체화면으로 
+    보여주도록 활성화 할 필요가 있습니다.
 
     <pre highlight="html">
 &lt;article&gt;
@@ -3920,62 +3942,69 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
 
   <hr />
 
-  The <{iframe}> element supports <a>dimension attributes</a> for cases where the
-  embedded content has specific dimensions (e.g., ad units have well-defined dimensions).
+  <{iframe}> 요소(element)는 삽입된 콘텐트가 특정 치수들을 (예를 들어, 명확하게 정의된 치수들을 
+  가지는 광고) 명시하는 경우들에 대해 <a lt="dimension attributes">치수 속성(attribute)들</a>을 
+  지원합니다.
 
-  An <{iframe}> element never has <a>fallback content</a>, as it will always
-  create a nested <a>browsing context</a>, regardless of whether the specified initial
-  contents are successfully used.
+  <{iframe}> 요소(element)는 명시된 초기 콘텐츠가 성공적으로 사용되든 상관없이 항상 중첩된 
+  <a lt="browsing context">브라우징 컨텍스트</a>를 생성하기 때문에, 결코 
+  <a lt="fallback content">폴백 콘텐트</a>를 가지지 않습니다.
 
   <hr />
 
-  Descendants of <{iframe}> elements represent nothing. (In legacy user agents that do
-  not support <{iframe}> elements, the contents would be parsed as markup that could act as
-  fallback content.)
+  <{iframe}> 요소(element)들의 후손들은 아무 것도 나타내지 않습니다. (<{iframe}> 요소(element)들을 
+  지원하지 않는 레거시 유저 에이전트들에서, 콘텐츠는 폴백 콘텐트로 수행될 수 있는 마크업으로 해석될 
+  것입니다.)
 
-  When used in <a>HTML documents</a>, the allowed content model
-  of <{iframe}> elements is text, except that invoking the <a>HTML fragment parsing
-  algorithm</a> with the <{iframe}> element as the <a>context</a> element and the text contents as
-  the <var>input</var> must result in a list of nodes that are all <a>phrasing content</a>,
-  with no <a for="parser">parse errors</a> having occurred, with no <code>script</code>
-  elements being anywhere in the list or as descendants of elements in the list, and with all the
-  elements in the list (including their descendants) being themselves conforming.
+  <a lt="HTML documents">HTML 문서들</a>에 사용되는 경우, <a lt="context">컨텍스트</a> 
+  요소(element)로서 <{iframe}> 요소와 <var>input</var>으로서 텍스트 콘텐츠를 가지고 
+  <a lt="HTML fragment parsing algorithm">HTML 조각 해석 알고리즘</a>을 수행하는 것이 
+  <a for="parser" lt="parse errors">해석 오류</a> 발생 없이, 목록 내 아무 곳에 있거나 
+  요소(element)들의 후손들로 존재하는 <code>script</code> 요소(element)들 없이, 자체적으로 규칙을 
+  준수하는 목록 내 모든 요소(element)들 (그들의 후손들을 포함하여)과 함께 모든 
+  <a lt="phrasing content">어구(phrasing) 콘텐트</a>인 노드들의 목록을 야기해야(must) 하는 텍스트를 
+  제외하고, <{iframe}> 요소(element)들의 허용된 콘텐트 모델은 텍스트입니다.
 
-  The <{iframe}> element must be empty in <a>XML documents</a>.
+  <{iframe}> 요소(element)는 <a lt="XML documents">XML 문서들</a>에서 비어 있어야(must) 합니다.
 
   <p class="note">
-    The <a>HTML parser</a> treats markup inside <{iframe}> elements as
-  text.
+    <a lt="HTML parser">HTML 해석기</a>는 <{iframe}> 요소(element) 내부 마크업을 텍스트로 취급합니다.
   </p>
 
   <div class="impl">
 
   <hr />
 
-  The IDL attributes <dfn attribute for="HTMLIFrameElement"><code>src</code></dfn>, <dfn attribute for="HTMLIFrameElement"><code>srcdoc</code></dfn>, <dfn attribute for="HTMLIFrameElement"><code>name</code></dfn>, and <dfn attribute for="HTMLIFrameElement"><code>sandbox</code></dfn> must <a>reflect</a> the respective
-  content attributes of the same name.
+  IDL 속성(attribute)들 <dfn attribute for="HTMLIFrameElement"><code>src</code></dfn>, 
+  <dfn attribute for="HTMLIFrameElement"><code>srcdoc</code></dfn>, 
+  <dfn attribute for="HTMLIFrameElement"><code>name</code></dfn>, 
+  <dfn attribute for="HTMLIFrameElement"><code>sandbox</code></dfn>는 각각 동일한 이름의 콘텐트 
+  속성(attribute)들을 <a lt="reflect">반영</a>해야(must) 합니다.
 
-  The <a>supported tokens</a> for <{iframe/sandbox}>'s {{DOMTokenList}} are the
-  allowed values defined in the <{iframe/sandbox}> attribute and supported by the user agent.
+  <{iframe/sandbox}>의 {{DOMTokenList}}에 대한 <a lt="supported tokens">지원되는 토큰들</a>은 
+  <{iframe/sandbox}> 속성(attribute)에 정의된 값들이 허용되고 유저 에이전트들에 의해 지원됩니다.
 
-  The <dfn attribute for="HTMLIFrameElement"><code>allowFullscreen</code></dfn> IDL attribute
-  must <a>reflect</a> the <code>allowfullscreen</code>
-  content attribute.
+  <dfn attribute for="HTMLIFrameElement"><code>allowFullscreen</code></dfn> IDL 속성(attribute)는 
+  <code>allowfullscreen</code> 콘텐트 속성(attribute)을 <a lt="reflect">반영</a>해야(must) 합니다.
 
-  The <dfn attribute for="HTMLIFrameElement"><code>contentDocument</code></dfn> IDL attribute must
-  return the {{Document}} object of the <a>active document</a> of the <{iframe}> element's
-  <a>nested browsing context</a>, if any and if its <a for="concept">origin</a> is the
-  <a>same origin-domain</a> as the <a for="concept">origin</a> specified by the
-  <a>incumbent settings object</a>, or null otherwise.
+  <dfn attribute for="HTMLIFrameElement"><code>contentDocument</code></dfn> IDL 속성(attribute)은 
+  <{iframe}> 요소(element)의 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>가 있다면 
+  그리고 그것의 <a for="concept" lt="origin">출처</a>가 
+  <a lt="incumbent settings object">현직 설정 객체</a>에 의해 명시된 
+  <a for="concept" lt="origin">출처</a>로서 <a lt="same origin-domain">동일 출처 도메인</a>인 
+  <a lt="active document">활성 문서</a>의 {{Document}} 객체를 반환해야(must) 하고, 그렇지 않으면 
+  null을 반환해야(must) 합니다.
 
-  The <dfn attribute for="HTMLIFrameElement"><code>contentWindow</code></dfn> IDL attribute must
-  return the <code>WindowProxy</code> object of the <{iframe}> element's <a>nested browsing context</a>, if any, or null otherwise.
+  <dfn attribute for="HTMLIFrameElement"><code>contentWindow</code></dfn> IDL 속성(attribute)은 
+  <{iframe}> 요소(element)의 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 
+  <code>WindowProxy</code> 객체가 있다면 <code>WindowProxy</code> 객체를 반환해야(must) 하고, 그렇지 
+  않으면 null을 반환해야(must) 합니다.
 
   </div>
 
   <div class="example">
-    Here is an example of a page using an <code>iframe</code> to include advertising from an
-    advertising broker:
+    여기 광고 중개인으로부터의 광고를 포함하기 위해 <code>iframe</code>을 사용하는 페이지의 예가 
+    있습니다:
 
     <pre highlight="html">
 &lt;iframe title="Advert" src="https://ads.example.com/?customerid=923513721&amp;amp;format=banner"
@@ -3984,38 +4013,37 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
 
   </div>
 
-<h4 id="the-embed-element">The <dfn element><code>embed</code></dfn> element</h4>
+<h4 id="the-embed-element"><dfn element><code>embed</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Embedded content</a>.</dd>
-    <dd><a>Interactive content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>embedded content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Nothing</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>No <a>end tag</a></dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Embedded content">삽입(embedded) 콘텐트</a>.</dd>
+    <dd><a lt="interactive content">대화형(interactive) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="embedded content">삽입(embedded) 콘텐트</a>가 예상되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Nothing">없음</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd><a lt="end tag">종료 태그</a> 없음.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
     <dd><code>src</code> - Address of the resource</dd>
     <dd><code>type</code> - Type of embedded resource</dd>
     <dd><code>width</code> - Horizontal dimension</dd>
     <dd><code>height</code>- Vertical dimension</dd>
-    <dd>Any other attribute that has no namespace (see prose).</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dd>네임스페이스를 가지지 않는 모든 다른 속성(attribute) (본문 참고).</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd><a value for="role"><code>application</code></a>,
-    <a value for="role"><code>document</code></a> or
-    <a value for="role"><code>img</code></a> or
+    <a value for="role"><code>document</code></a>나
+    <a value for="role"><code>img</code></a>나
     <a value for="role"><code>presentation</code></a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLEmbedElement">
         interface HTMLEmbedElement : HTMLElement {
@@ -4028,139 +4056,156 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
       </pre>
 
       <div class="impl">
-        Depending on the type of content instantiated by the <{embed}> element, the node may also
-        support other interfaces.
+        <{embed}> 요소(element)에 의해 인스턴스화 된 콘텐트의 유형에 따라, 노드 또한 다른
+        인터페이스들을 지원할 수 있습니다.
       </div>
     </dd>
   </dl>
 
-  The <{embed}> element provides an integration point for an external (typically
-  non-HTML) application or interactive content.
+  <{embed}> 요소(element)는 외부 (일반적으로 비 HTML) 어플리케이션이나 대화형 콘텐트에 대한 통합점을 
+  제공합니다.
 
-  The <dfn element-attr for="embed"><code>src</code></dfn> attribute gives the address of the
-  resource being embedded. The attribute, if present, must contain a <a>valid non-empty URL
-  potentially surrounded by spaces</a>.
+  <dfn element-attr for="embed"><code>src</code></dfn> 속성(attribute)은 삽입되는 리소스의 주소를 
+  제공합니다. 속성(attribute)이 존재한다면 
+  <a lt="valid non-empty URL potentially surrounded by spaces">유효한 잠정적으로 공백으로 둘러 싸일 수 있는 비어있지 않은 URL</a>을 
+  포함해야(must) 합니다.
 
-  The <dfn element-attr for="embed"><code>type</code></dfn> attribute, if present, gives the
-  <a>MIME type</a> by which the plugin to instantiate is selected. The value must be a
-  <a>valid mime type</a>. If both the <code>type</code> attribute and
-  the <code>src</code> attribute are present, then the <code>type</code> attribute must specify the same type as the <a>explicit Content-Type metadata</a> of the resource given by the <code>src</code> attribute.
+  <dfn element-attr for="embed"><code>type</code></dfn> 속성(attribute)이 존재한다면 인스턴스화 할 
+  플러그인이 선택되는 <a lt="MIME type">MIME 타입</a> 을 제공합니다. 값은 
+  <a lt="valid mime type">유효한 MIME 타입</a>이어야(must) 합니다. <code>type</code> 
+  속성(attribute)과 <code>src</code> 속성(attribute)이 모두 존재한다면, <code>type</code> 
+  속성(attribute)은 <code>src</code> 속성(attribute)에 의해 주어진 리소스의 
+  <a lt="explicit Content-Type metadata">명시적인 Content-Type 메타데이터</a>와 동일한 타입으로 
+  명시해야(must) 합니다. 
 
   <div class="impl">
 
-  While any of the following conditions are occurring, any <a>plugin</a> instantiated for
-  the element must be removed, and the <{embed}> element <a>represents</a>
-  nothing:
+  다음 조건들 중 하나라도 발생한다면, 요소(element)에 대해 인스턴스화 된 모든 
+  <a lt="plugin">플러그인</a>은 제거되어야(must)하고, <{embed}> 요소(element )는 아무 것도 
+  <a lt="represents">나타내지</a> 않습니다:
 
   <ul class="brief">
 
-    <li>The element has neither a <code>src</code> attribute nor a <code>type</code> attribute.</li>
+    <li>요소(element)가 <code>src</code> 속성(attribute)과 <code>type</code> 속성(attribute) 중 
+    어떠한 것도 가지지 않는 경우.</li>
 
-    <li>The element has a <a>media element</a> ancestor.</li>
+    <li>요소(element)가 조상 <a lt="media element">미디어 요소(element)</a>를 가지는 경우 .</li>
 
-    <li>The element has an ancestor <{object}> element that is <em>not</em> showing its
-    <a>fallback content</a>.</li>
+    <li>요소(element)가 그것의 <a lt="fallback content">폴백 콘텐트</a>를 보여주지 <em>않는</em>
+    조상 <{object}> 요소(element)를 가지는 경우.</li>
 
   </ul>
 
-  An <{embed}> element is said to be <dfn>potentially
-  active</dfn> when the following conditions are all met simultaneously:
+  <{embed}> 요소(element)가 다음 조건들을 모두 동시에 만족하는 경우 
+  <dfn lt="potentially active">잠재적으로 활성</dfn>이라고 불립니다:
 
   <ul class="brief">
 
-    <li>The element is <a>in a <code>Document</code></a> or was <a>in a <code>Document</code></a> the last time the <a>event loop</a>
-    reached step 1.</li>
+    <li>요소(element)가 <a lt="in a Document"><code>Document</code> 안에</a> 있거나 
+    마지막으로 <a lt="event loop">이벤트 루프</a>가 단계 1에 도달했을 때 
+    <a lt="in a Document"><code>Document</code> 안에</a> 있었을 경우.</li>
 
-    <li>The element's <a>node document</a> is <a>fully active</a>.</li>
+    <li>요소(element)의 <a lt="node document">노드 문서</a>가 <a lt="fully active">완전히 활성화</a>된 경우.</li>
 
-    <li>The element has either a <code>src</code> attribute set or a <code>type</code> attribute set (or both).</li>
+    <li>요소(element)가 설정 된 <code>src</code> 속성(attriute)이나 설정 된 <code>type</code> 
+    속성(attribute) (혹은 둘 모두)를 가지는 경우.</li>
 
-    <li>The element's <code>src</code> attribute is either absent or its value
-    is not the empty string.</li>
+    <li>요소(element)의 <code>src</code> 속성(attribute)이 없거나 그 값이 빈 문자열이 아닌 경우.</li>
 
-    <li>The element is not a descendant of a <a>media element</a>.</li>
+    <li>요소(element)가 <a lt="media element">미디어 요소(element)</a>의 후손이 아닌 경우.</li>
 
-    <li>The element is not a descendant of an <{object}> element that is not showing its
-    <a>fallback content</a>.</li>
+    <li>요소(element)가 그것의 <a lt="fallback content">폴백 콘텐트</a>를 보여주지 않는 <{object}> 
+    요소(element)의 후손이 아닌 경우.</li>
 
-    <li>The element is <a>being rendered</a>, or was <a>being rendered</a> the last time
-    the <a>event loop</a> reached step 1.</li>
+    <li>요소(element)가 <a lt="being rendered">렌더링 되는 것</a> 이거나, 마지막으로 
+    <a lt="event loop">이벤트 루프</a>가 단계 1에 도달했을 때 
+    <a lt="being rendered">렌더링 되는 것</a>이었을 경우.</li>
 
   </ul>
 
-  Whenever an <{embed}> element that was not <a>potentially active</a> becomes <a>potentially active</a>, and whenever a <a>potentially active</a> <{embed}> element that is
-  remaining <a>potentially active</a> and has its <code>src</code> attribute set, changed, or removed or its <code>type</code> attribute set, changed, or removed, the user agent must
-  <a>queue a task</a> using the <dfn>embed task source</dfn> to run <a>the
-  <code>embed</code> element setup steps</a>.
+  <a lt="potentially active">잠재적으로 활성</a>이 아니었던 <{embed}> 요소(element)가 
+  <a lt="potentially active">잠재적으로 활성화</a> 될 때마다, 그리고 
+  <a lt="potentially active">잠재적 활성</a> <{embed}> 요소(element)가 남아있는 
+  <a lt="potentially active">잠재적으로 활성</a>이고 그것의 <code>src</code> 속성(attribute)이 설정, 
+  변경, 혹은 제거되거나, 그것의 <code>type</code> 속성(attribute)이 설정, 변경, 혹은 제거 될 때 마다, 
+  유저 에이전트는 <a lt="the embed element setup steps"><code>embed</code> 요소(element) 설정 단계들</a>을 
+  수행하기 위한 <dfn lt="embed task source">삽입(embed) 작업 소스</dfn>를 사용하여 
+  <a lt="queue a task">작업을 대기열에 넣어야</a>(must) 합니다.
 
-  <dfn>The <{embed}> element setup steps</dfn> are as follows:
+  <dfn lt="the embed element setup steps"><{embed}> 요소(element) 설정 단계들</dfn>은 다음과 같습니다:
 
   <ol>
 
-    <li>If another <a>task</a> has since been queued to run <a>the
-    <code>embed</code> element setup steps</a> for this element, then abort these steps.</li>
+    <li>이 요소(element)에 대해 <a lt="the embed element setup steps"><code>embed</code> 
+    요소(element) 설정 단계들</a>을 수행하기 위해 다른 <a lt="task">작업</a>이 대기열에 넣어진 
+	이후라면, 이 단계들을 중단합니다.</li>
 
     <li>
 
     <dl class="switch">
 
-      <dt>If the element has a <code>src</code> attribute set</dt>
+      <dt>요소(element)가 설정 된 <code>src</code> 속성(attribute)을 가진다면</dt>
 
       <dd>
 
-      The user agent must <a>parse</a> the value of the element's
-      <code>src</code> attribute, relative to the element. If that is
-      successful, the user agent should run these steps:
+      유저 에이전트는 요소(element)의 <code>src</code> 속성(attribute)의 값을 요소(element)에 
+      관련하여 <a lt="parse">해석</a>해야(must) 합니다. 그것이 성공적이라면, 유저 에이전트는 이 
+      단계들을 수행해야(should) 합니다:
 
       <ol>
 
-        <li>Let <var>request</var> be a new <a>request</a> whose
-        <a for="url">URL</a> is the <a>resulting URL string</a>,
-        <a>client</a> is the element's <a>node
-        document</a>'s <code>Window</code> object's <a>environment settings object</a>,
-        <a>destination</a> is "<code>unknown</code>", <a>omit-<code>Origin</code>-header flag</a> is set if the
-        element doesn't have a <a>browsing context scope origin</a>, <a>credentials mode</a> is "<code>include</code>", and whose <a>use-URL-credentials flag</a> is set.</li>
+        <li><var>request</var>를 <a for="url">URL</a>이 
+        <a lt="resulting URL string">결과 URL 문자열</a>이고, <a lt="client">클라이언트</a>가 
+        요소(element)의 <a lt="node document">노드 문서</a>의 <code>Window</code> 객체의 
+        <a lt="environment settings object">환경 설정 객체</a>이고, <a lt="destination">목적지</a>가 
+        "<code>unknown</code>"이며, 요소(element)가 
+        <a lt="browsing context scope origin">브라우징 컨테스트 범위 출처</a>를 가지지 않는다면 
+        <a lt="omit-Origin-header flag">출처 헤더 생략 플래그</a>가 설정되어 있고, 
+        <a lt="credentials mode">자격 증명 모드</a>가 "<code>include</code>"이며, 
+        <a lt="use-URL-credentials flag">URL 자격 증명 사용 플래그</a>가 설정된 새로운 
+        <a lt="request">요청</a>으로둡니다.</li>
 
-        <li><a>Fetch</a> <var>request</var>.</li>
+        <li><var>request</var>를 <a lt="fetch">가져옵니다(fetch)</a>.</li>
       </ol>
 
-      The <a>task</a> that is <a>queued</a> by the <a>networking task source</a> once the
-      resource has been fetched must run the following steps:
+      <a lt="networking task source">네트워킹 작업 소스</a>에 의해 <a lt="queued">대기열에 넣어진</a> 
+      <a lt="task">작업</a>은 리소스가 가져와졌을(fetch) 때 다음 단계들을 수행해야(must) 합니다:
 
       <ol>
 
-        <li>If another <a>task</a> has since been queued to run
-        <a>the <code>embed</code> element setup steps</a> for this element, then abort these
-        steps.</li>
+        <li>이 요소(element)에 대해 <a lt="the embed element setup steps"><code>embed</code> 
+        요소(element) 설정 단계</a>를 수행하기 위해 다른 <a lt="task">작업</a>이 대기열에 넣어진 
+        이후라면, 이 단계들을 중단합니다.</li>
 
         <li>
 
-        Determine the <dfn>type of the content</dfn> being embedded, as
-        follows (stopping at the first substep that determines the type):
+        삽입되는 <dfn lt="type of the content">콘텐트의 유형</dfn>을 (유형을 결정하는 첫 번째 하위 
+        단계에서 중지하여) 다음과 같이 결정합니다:
 
         <ol>
 
-          <li>If the element has a <code>type</code> attribute, and that
-attribute's value is a type that a <a>plugin</a> supports, then the value of the
-          <code>type</code> attribute is the content's type.</li>
+          <li>요소(element)가 <code>type</code> 속성(attribute)을 가지고 그 속성(attribute)의 값이 
+          <a lt="plugin">플러그인</a>이 지원하는 유형이라면, <code>type</code> 속성(attribute)의 
+          값은 콘텐트의 유형입니다.</li>
 
           <li>
 
-          Otherwise, if applying the <a>URL parser</a> algorithm to the <a for="url">URL</a> of
-          the specified resource (after any redirects) results in a <a>URL record</a> whose
-          <a>path</a> component matches a pattern that a
-          <a>plugin</a> supports, then the content's type is the type that the plugin can handle.
+          그렇지 않고, 명시된 리소스의 <a for="url">URL</a>에 <a lt="URL parser">URL 해석</a> 
+          알고리즘을 적용하는 것이 (모든 리다이렉트들 이후) <a lt="path">경로</a> 컴포넌트가 
+          <a lt="plugin">플러그인</a>이 지원하는 패턴과 일치하는 <a lt="URL record">URL 레코드</a>를 
+          야기한다면, 콘텐트의 유형은 플러그인이 처리할 수 있는 유형입니다.
 
-          <p class="example">For example, a plugin might say that it can handle resources with <a>path</a> components that end with the four character string
-          "<code>.swf</code>".</p>
+          <p class="example">예를 들어, 플러그인은 네 개 문자 문자열 ".swf"로 끝나는 
+          <a lt="path">경로</a> 컴포넌트들을 가진 리소스를 처리할 수 있다고 말할 수 있습니다.</p>
 
           </li>
 
-          <li>Otherwise, if the specified resource has <a>explicit
-          Content-Type metadata</a>, then that is the content's type.</li>
+          <li>그렇지 않고, 명시된 리소스가 
+          <a lt="explicit Content-Type metadata">명시적 Content-Type 메타데이터</a>를 가진다면, 
+          그것이 콘텐트의 유형입니다.</li>
 
-          <li>Otherwise, the content has no <a for="request">type</a> and there
-          can be no appropriate <a>plugin</a> for it.</li>
+          <li>그렇지 않으면 콘텐트는 <a for="request" lt="type">유형</a>을 가지지 않고 그것에 대한 
+          적절한 <a lt="plugin">플러그인</a>이 없을 수 있습니다.</li>
 
         </ol>
 
@@ -4168,21 +4213,28 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
 
         <li>
 
-        If the previous step determined that the content's type is <code>image/svg+xml</code>, then run the following substeps:
+        이전 단계가 콘텐트의 유형이 <code>image/svg+xml</code>이라고 결정했다면, 다음 하위 단계들을 
+        수행합니다:
 
         <ol>
 
-          <li>If the <{embed}> element is not associated with a <a>nested browsing context</a>, associate the element with a newly created <a>nested browsing context</a>, and, if the element has a <code>name</code> attribute, set the <a>browsing context name</a> of the element's <a>nested browsing context</a> to the value of this attribute.
+          <li><{embed}> 요소(element)가 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>와
+          연관되지 않는다면, 새롭게 생성된 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>와 
+          연관짓고, 요소(element)가 <code>name</code> 속성(attribute)을 가진다면, 요소(element)의 
+          <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 
+          <a lt="browsing context name">브라우징 컨텍스트 이름</a>을 이 속성(attribute)의 값으로 
+          설정합니다.
 
-          </li><li><a>Navigate</a> the <a>nested browsing context</a> to
-          the fetched resource, with <a>replacement enabled</a>, and with the
-          <{embed}> element's <a>node document</a>'s <a>browsing context</a> as the <a>source
-          browsing context</a>. (The <code>src</code> attribute of the
-          <{embed}> element doesn't get updated if the browsing context gets further
-          navigated to other locations.)</li>
+          </li><li><a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 가져와진 리소스로 
+          <a lt="replacement enabled">교체 활성화</a>와 
+          <a lt="source browsing context">소스 브라우징 컨텍스트</a>로서 <{embed}> 요소(element)의 
+          <a lt="node document">노드 문서</a>의 <a lt="browsing context">브라우징 컨텍스트</a>를 
+          가지고 <a lt="navigate">이동</a>시킵니다. (<{embed}> 요소(element)의 <code>src</code> 
+          속성(attribute)은 브라우징 컨텍스트가 다른 위치들로 더 이동된다면 업데이트 되지 
+          않습니다.)</li>
 
-          <li>The <{embed}> element now <a>represents</a> its associated
-          <a>nested browsing context</a>.</li>
+          <li><{embed}> 요소(element)는 이제 그것의 연관된 
+          <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 <a lt="represents">나타냅니다</a>.</li>
 
         </ol>
 
@@ -4190,41 +4242,44 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
 
         <li>
 
-        Otherwise, find and instantiate an appropriate <a>plugin</a> based on the content's type, and hand that <a>plugin</a> the
-        content of the resource, replacing any previously instantiated plugin for the element. The
-        <{embed}> element now represents this <a>plugin</a> instance.
+        그렇지 않으면, 콘텐트 유형을 기반으로 적절한 <a lt="plugin">플러그인</a>을 찾고 인스턴스화 
+        하고, 리소스의 콘텐트를 요소(element)에 대해 이전에 인스턴스화 된 플러그인들을 대신하여 그 
+        <a lt="plugin">플러그인</a>에 전달합니다. <{embed}> 요소(element)는 이제 이 
+        <a lt="plugin">플러그인</a> 인스턴스를 나타냅니다.
 
         </li>
 
-        <li>Once the resource or plugin has completely loaded, <a>queue a task</a> to
-        <a>fire a simple event</a> named <code>load</code> at the
-        element.</li>
+        <li>리소스나 플러그인이 완전히 로드되었을 때, 요소(element)에 <code>load</code>라고 이름이 
+        붙은 <a lt="fire a simple event">단순 이벤트를 발생</a>시키기 위한 
+        <a lt="queue a task">작업을 대기열에 넣습니다</a>.</li>
 
       </ol>
 
-      Whether the resource is fetched successfully or not (e.g., whether the response status was
-      an <a>ok status</a>) must be ignored when determining the content's type and when handing the resource to the
-      plugin.
+      리소스가 성공적으로 가져와(fetch)졌는지 아닌지의 여부는 (예를 들어, 응답 상태가 
+      <a lt="ok status">ok 상태</a>였는지 여부) 콘텐트의 유형을 결정하는 중인 경우 와 리소스를 
+      플러그인에 전달하는 중인 경우 무시되어야(must) 합니다.
 
       <p class="note">
-    This allows servers to return data for plugins even with error responses (e.g.,
-      HTTP 500 Internal Server Error codes can still contain plugin data).
+      이것은 오류 응답들에도 불구하고 플러그인들에 대해 데이터를 반환하는 것을 허용합니다 (예를 들어, 
+      HTTP 500 서버 내부 오류 코드들은 여전히 플러그인 데이터를 포함할 수 있습니다).
   </p>
 
-      Fetching the resource must <a>delay the load event</a> of the element's <a>node document</a>.
+      리소스를 가져오는(fetch) 것은 요소(element)의 <a lt="node document">노드 문서</a>의 
+      <a lt="delay the load event">load 이벤트를 지연</a>시켜야(must) 합니다.
 
       </dd>
 
-      <dt>If the element has no <code>src</code> attribute set</dt>
+      <dt>요소(element)가 설정된 <code>src</code> 속성(attribute)을 가지지 않는다면</dt>
 
       <dd>
 
-      The user agent should find and instantiate an appropriate <a>plugin</a> based on the
-      value of the <code>type</code> attribute. The <code>embed</code>
-      element now represents this <a>plugin</a> instance.
+      유저 에이전트는 <code>type</code> 속성(attribute)의 값을 기반으로 적절한 
+      <a lt="plugin">플러그인</a>을 찾고 인스턴스화 해야(should)합니다. <code>embed</code> 
+      요소(element)는 이제 이 <a lt="plugin">플러그인</a> 인스턴스를 나타냅니다.
 
-      Once the plugin is completely loaded, <a>queue a task</a> to <a>fire a simple
-      event</a> named <code>load</code> at the element.
+      플러그인이 완전히 로드되었을 때, 요소(element)에 <code>load</code>라고 이름이 붙은 
+      <a lt="fire a simple event">단순 이벤트를 발생</a>시키기 위한 
+      <a lt="queue a task">작업을 대기열에 넣습니다</a>.
 
       </dd>
 
@@ -4234,98 +4289,105 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
 
   </ol>
 
-  The <{embed}> element has no <a>fallback content</a>. If the user agent can't
-  find a suitable plugin when attempting to find and instantiate one for the algorithm above, then
-  the user agent must use a default plugin. This default could be as simple as saying "Unsupported
-  Format".
+  <{embed}> 요소(element)는 <a lt="fallback content">폴백 콘텐트</a>를 가지지 않습니다. 유저 
+  에이전트가 위 알고리즘에 대한 것을 찾고 인스턴스화 하기 위해 시도하는 경우 적절한 플러그인을 찾을 
+  수 없다면, 유저 에이전트는 기본 플러그인을 사용해야(must)합니다. 이 기본 플러그인은 "지원되지 않는 
+  형식"으로 나타내는 것처럼 단순할 수 있습니다.
 
-  Whenever an <{embed}> element that was <a>potentially
-  active</a> stops being <a>potentially active</a>, any
-  <a>plugin</a> that had been instantiated for that element must be unloaded.
+  <a lt="potentially active">잠재적으로 활성</a>이었던 <{embed}> 요소(element)가 
+  <a lt="potentially active">잠재적으로 활성화</a> 되는 것을 중단 할 때마다, 그 요소(element)에 대해 
+  인스턴스화 된 모든 <a lt="plugin">플러그인</a>은 언로드 되어야(must) 합니다.
 
-  When a <a>plugin</a> is to be instantiated but it cannot be <a>secured</a> and the <a>sandboxed plugins browsing context
-  flag</a> is set on the <{embed}> element's <a>node document</a>'s <a>active
-  sandboxing flag set</a>, then the user agent must not instantiate the <a>plugin</a>, and
-  must instead render the <{embed}> element in a manner that conveys that the
-  <a>plugin</a> was disabled. The user agent may offer the user the option to override the
-  sandbox and instantiate the <a>plugin</a> anyway; if the user invokes such an option, the
-  user agent must act as if the conditions above did not apply for the purposes of this element.
+  <a lt="plugin">플러그인</a>이 인스턴스화 되어야 하지만 <a lt="secured">보호</a>될 수 없고 <{embed}> 
+  요소(element)의 <a lt="node document">노드 문서</a>의 
+  <a lt="active sandboxing flag set">샌드박싱 활성화 플래그 설정</a>에 
+  <a lt="sandboxed plugins browsing context flag">샌드박스 된 플러그인들 브라우징 컨텍스트 플래그</a>가
+  설정되는 경우, 유저 에이전트는 <a lt="plugin">플러그인</a>을 인스턴스화 하지 않아야(must)하고, 
+  대신 <a lt="plugin">플러그인</a>이 비활성화 되었음을 전달하는 방법으로 <{embed}> 요소(element)를 
+  렌더링해야(must) 합니다. 유저 에이전트는 사용자에게 샌드박스를 재정의하고 그래도 
+  <a lt="plugin">플러그인</a>을 인스턴스화 하기 위한 옵션을 권할 수 있습니다; 사용자가 그러한 옵션을 
+  호출한다면, 유저 에이전트는 위 조건들이 이 요소(element)의 목적에 대해 적용하지 않는 것처럼 
+  수행해야(must) 합니다.
 
-  <p class="warning">Plugins that cannot be <a>secured</a> are
-  disabled in sandboxed browsing contexts because they might not honor the restrictions imposed by
-  the sandbox (e.g., they might allow scripting even when scripting in the sandbox is disabled). User
-  agents should convey the danger of overriding the sandbox to the user if an option to do so is
-  provided.</p>
+  <p class="warning"><a lt="secured">보호</a>될 수 없는 플러그인들은 샌드박스에 의해 부여된 
+  제약사항들을 이행하지 않을 것이기 때문에 (예를 들어, 샌드박스 내 스크립팅이 비활성화 되었을 때 
+  조차 스크립팅을 허용할 수 있습니다) 샌드박스 된 브라우징 컨텍스트들 내에서 비활성화 될 수 있습니다. 
+  유저 에이전트들은 그렇게 하기 위한 옵션이 제공된다면 사용자에게 샌드박스를 재정의하는 것의 위험을 
+  전달해야(should) 합니다.</p>
 
-  When an <{embed}> element represents a <a>nested browsing context</a>: if the
-  <{embed}> element's <a>nested browsing context</a>'s <a>active document</a>
-  is not <a>ready for post-load tasks</a>, and when anything is <a>delaying the load event</a> of the <{embed}> element's <a>browsing context</a>'s <a>active document</a>, and when the <{embed}> element's
-  <a>browsing context</a> is in the <a>delaying <code>load</code>
-  events mode</a>, the <code>embed</code> must <a>delay the load event</a> of its
-  document.
+  <{embed}> 요소(element)가 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 나타내는 
+  경우: <{embed}> 요소(element)의 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 
+  <a lt="active document">활성 문서</a>가 <a lt="ready for post-load tasks">로드 후 작업들에 대해 준비</a>되지 
+  않았고, 무엇이든 <{embed}> 요소(element)의 <a lt="browsing context">브라우징 컨텍스트</a>의 
+  <a lt="active document">활성 문서</a>의 <a lt="delaying the load event">load 이벤트를 지연 시키는 중</a>인 
+  경우, 그리고 <{embed}> 요소(element)의 <a lt="browsing context">브라우징 컨텍스트</a>가 
+  <a lt="delaying load events mode"><code>load</code> 이벤트들 지연 중 모드</a>에 있는 경우, 
+  <code>embed</code>는 그것의 문서의 <a lt="delay the load event">load 이벤트를 지연</a>시켜야(must) 
+  합니다.
 
-  The <a>task source</a> for the <a>tasks</a> mentioned in this
-  section is the <a>DOM manipulation task source</a>.
+  이 섹션에 언급된 <a lt="tasks">작업들</a>에 대한 <a lt="task source">작업 소스</a>는 
+  <a lt="DOM manipulation task source">DOM 조작 작업 소스</a>입니다.
 
   </div>
 
-  Any namespace-less attribute other than <code>name</code>, <code>align</code>, <code>hspace</code>, and <code>vspace</code> may be
-  specified on the <{embed}> element, so long as its name is <a>XML-compatible</a>
-  and contains no <a>uppercase ASCII letters</a>. These attributes are then passed as
-  parameters to the <a>plugin</a>.
+  <code>name</code>, <code>align</code>, <code>hspace</code>, <code>vspace</code>을 제외한 
+  네임스페이스 없는 속성(attribute)은 그것의 이름이 <a lt="XML-compatible">XML 호환 가능</a>하고 
+  <a lt="uppercase ASCII letters">대문자 ASCII 문자들</a>을 포함하지 않기만 하면 <{embed}> 
+  요소(element)에 명시될 수 있습니다. 이 속성(attribute)들은 이후에 <a lt="plugin">플러그인</a>에 
+  파라미터들로 전달됩니다.
 
   <p class="note">
-    All attributes in <a>HTML documents</a> get lowercased automatically, so the
-  restriction on uppercase letters doesn't affect such documents.
+    <a lt="HTML documents">HTML 문서들</a> 내의 모든 속성(attribute)들은 대문자의 제약 사항들이 그 
+  문서에 영향을 주지 않기 때문에 자동으로 소문자로 바뀐 것을 얻습니다.
   </p>
 
   <p class="note">
-    The four exceptions are to exclude legacy attributes that have side-effects beyond
-  just sending parameters to the <a>plugin</a>.
+    4개의 예외들은 <a lt="plugin">플러그인</a>에 파라미터들을 전달하는 것을 넘어 부작용을 가지는 
+  레거시 속성(attribute)들을 제외하는 것입니다.
   </p>
 
   <div class="impl">
 
-  The user agent should pass the names and values of all the attributes of the <code>embed</code>
-  element that have no namespace to the <a>plugin</a> used, when one is instantiated.
+  유저 에이전트는 <code>embed</code>가 인스턴스화 될 때, 사용된 <a lt="plugin">플러그인</a>에 대한 
+  네임스페이스를 갖지 않는 <code>embed</code>의 모든 속성(attribute)들의 이름들과 값들을 전달해야(should)
+  합니다.
 
-  The <code>HTMLEmbedElement</code> object representing the element must expose the scriptable
-  interface of the <a>plugin</a> instantiated for the <{embed}> element, if any. At a
-  minimum, this interface must implement the <dfn for="embed">legacy caller
-  operation</dfn>. (It is suggested that the default behavior of this legacy caller operation, e.g.,
-  the behavior of the default plugin's legacy caller operation, be to throw a
-  {{NotSupportedError}} exception.)
+  요소(element)를 나타내는 <code>HTMLEmbedElement</code> 객체는 <{embed}> 요소(element)에 대해 
+  인스턴스화 된 <a lt="plugin">플러그인</a>의 스크립트 가능한 인터페이스가 있다면 이를 노출해야(must) 
+  합니다. 최소한, 이 인터페이스는 <dfn for="embed" lt="legacy caller operation">레거시 호출 연산</dfn>을 
+  구현해야(must) 합니다. (이 레거시 호출 연산의 기본 동작은, 예를 들어 기본 플러그인의 레거시 호출자 
+  연산의 동작은, {{NotSupportedError}} 예외를 던지는 것이 되도록 제안됩니다.)
 
   </div>
 
-  The <{embed}> element supports <a>dimension attributes</a>.
+  <{embed}> 요소(element)는 <a lt="dimension attributes">치수 속성(attribute)들</a>을 지원합니다.
 
   <div class="impl">
 
-  The IDL attributes <dfn attribute for="HTMLEmbedElement"><code>src</code></dfn> and {{HTMLEmbedElement/type}} each must <a>reflect</a> the respective
-  content attributes of the same name.
+  IDL 속성(attribute)들 <dfn attribute for="HTMLEmbedElement"><code>src</code></dfn>과 
+  {{HTMLEmbedElement/type}}는 각각 동일한 이름의 각 콘텐트 속성(attribute)들을 
+  <a lt="reflect">반영</a>해야(must) 합니다.
 
   </div>
 
   <div class="example">
-    Here's a way to embed a resource that requires a proprietary plugin, like Flash:
+    여기 Flash와 같이, 특허 플러그인을 요구하는 리소스를 삽입하는 방법이 있습니다.
 
     <pre highlight="html">
 &lt;embed src="catgame.swf"&gt;
     </pre>
 
-    If the user does not have the plugin (for example if the plugin vendor doesn't support the
-    user's platform), then the user will be unable to use the resource.
+    사용자가 플러그인을 가지고 있지 않다면 (예를 들어 플러그인 제공자가 사용자의 플랫폼을 지원하지 
+    않는다며), 사용자는 리소스를 사용하는 것이 불가능할 것입니다.
 
-    To pass the plugin a parameter "quality" with the value "high", an attribute can be
-    specified:
+    플러그인에 "high" 값을 가진 "quality" 파라미터를 전달하기 위해, 속성(attribute)이 명시될 수 
+    있습니다:
 
     <pre highlight="html">
 &lt;embed src="catgame.swf" quality="high"&gt;
     </pre>
 
-    This would be equivalent to the following, when using an <{object}> element
-    instead:
+    <{object}> 요소(element)를 대신 사용하는 경우, 이것은 다음과 동등할 것입니다:
 
     <pre highlight="html">
 &lt;object data="catgame.swf"&gt;
@@ -4335,39 +4397,38 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
 
   </div>
 
-<h4 id="the-object-element">The <dfn element><code>object</code></dfn> element</h4>
+<h4 id="the-object-element"><dfn element><code>object</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Embedded content</a>.</dd>
-    <dd><a lt="listed element">listed</a>, <a>submittable</a>, and <a>reassociateable</a> <a>form-associated element</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>embedded content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd>Zero or more <{param}> elements, then, <a>transparent</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible.</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>data</code> - Address of the resource</dd>
-    <dd><code>type</code> - Type of embedded resource</dd>
-    <dd><code>typemustmatch</code> - Whether the <code>type</code>
-    attribute and the <a>Content-Type</a> value need to match for the resource to be used</dd>
-    <dd><{object/name}> - Name of <a>nested browsing context</a></dd>
-    <dd><code>form</code> - Associates the control with a <{form}> element</dd>
-    <dd><code>width</code> - Horizontal dimension</dd>
-    <dd><code>height</code> - Vertical dimension</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd><a value for="role"><code>application</code></a>, <a value for="role"><code>document</code></a> or <a value for="role"><code>img</code></a> or
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Embedded content">삽입(embedded) 콘텐트</a>.</dd>
+    <dd><a lt="listed element">나열된</a>, <a lt="submittable">제출 가능한</a>, <a lt="reassociateable">다시 연관 시킬 수 있는</a> <a lt="form-associated element">양식 관련 요소(element)</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="embedded content">삽입(embedded) 콘텐트</a>가 예상되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd>0개 이상의 <{param}> 요소(element)들, 이후, <a lt="transparent">투명</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>data</code> - 리소스의 주소</dd>
+    <dd><code>type</code> - 삽입된 리소스의 유형</dd>
+    <dd><code>typemustmatch</code> - 사용되는 리소스에 대해 <code>type</code> 속성(attribute)와
+    <a>Content-Type</a> 값이 일치해야 할 필요가 있는지 여부</dd>
+    <dd><{object/name}> - <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 이름</dd>
+    <dd><code>form</code> - <{form}> 요소(element)와 컨트롤을 연결</dd>
+    <dd><code>width</code> - 가로 치수</dd>
+    <dd><code>height</code> - 세로 치수</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd><a value for="role"><code>application</code></a>, <a value for="role"><code>document</code></a> 또는 <a value for="role"><code>img</code></a> 또는
     <a value for="role"><code>presentation</code></a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLObjectElement">
         interface HTMLObjectElement : HTMLElement {
@@ -4393,221 +4454,243 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
       </pre>
 
       <div class="impl">
-        Depending on the type of content instantiated by the <{object}> element, the node also
-        supports other interfaces.
+        <{object}> 요소(element)에 의해 인스턴스화 된 콘텐트의 유형에 따라, 노드도 다른 
+        인터페이스들을 지원합니다.
       </div>
     </dd>
   </dl>
 
-  The <{object}> element can represent an external resource, which, depending on the
-  type of the resource, will either be treated as an image, as a <a>nested browsing context</a>, or as an external resource to be processed by a <a>plugin</a>.
+  <{object}> 요소(element)는 리소스의 유형에 따라 이미지로, 
+  <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>로, 또는 <a lt="plugin">플러그인</a>에 
+  의해 처리되는 외부 리소스로 다루어지는 외부 리소스를 나타낼 수 있습니다. 
 
-  The <dfn element-attr for="object"><code>data</code></dfn> attribute, if present, specifies the
-  address of the resource. If present, the attribute must be a <a>valid non-empty URL potentially
-  surrounded by spaces</a>.
+  <dfn element-attr for="object"><code>data</code></dfn> 속성(attribute)이 존재한다면, 이는 리소스의 
+  주소를 명시합니다. 이 속성(attribute)이 존재한다면, 속성(attribute)은 
+  <a lt="valid non-empty URL potentially surrounded by spaces">유효한 잠정적으로 공백으로 둘러 싸일 수 있는 비어있지 않은 URL</a>이어야(must) 합니다.
 
-  <p class="warning">Authors who reference resources from other <a for="concept">origins</a>
-  that they do not trust are urged to use the <code>typemustmatch</code> attribute defined below. Without that
-  attribute, it is possible in certain cases for an attacker on the remote host to use the plugin
-  mechanism to run arbitrary scripts, even if the author has used features such as the Flash
-  "allowScriptAccess" parameter.</p>
+  <p class="warning">신뢰하지 않는 다른 <a for="concept" lt="origins">출처들</a>로부터의 리소스를 
+  참조하는 작성자들은 아래 정의된 <code>typemustmatch</code> 속성(attribute)을 사용하도록 강력히 
+  권고됩니다. 그 속성(attribute)이 없으면, 작성자가 Flash "allowScriptAccess" 파라미터와 같은 기능을 
+  사용했다 하더라도, 어떤 경우들에서 공격자가 원격 호스트에서 임의의 스크립트를 수행시키기 위한 
+  플러그인 메커니즘을 사용하는 것이 가능합니다.</p>
 
-  The <dfn element-attr for="object"><code>type</code></dfn> attribute, if present, specifies the
-  type of the resource. If present, the attribute must be a <a>valid mime type</a>.
+  <dfn element-attr for="object"><code>type</code></dfn> 속성(attribute)이 존재한다면, 이 속성(attribute)은 
+  리소스의 유형을 명시합니다. 이 속성(attribute)이 존재한다면, 속성(attribute)은 
+  <a lt="valid mime type">유효한 MIME 타입</a>이어야(must) 합니다.
 
-  At least one of either the <code>data</code> attribute or the <code>type</code> attribute must be present.
+  적어도 <code>data</code> 속성(attribute)이나 <code>type</code> 속성(attribute) 중 하나는 
+  존재해야(must) 합니다.
 
-  The <dfn element-attr for="object"><code>typeMustMatch</code></dfn> attribute is a
-  <a>boolean attribute</a> whose presence indicates that the resource specified by the <code>data</code> attribute is only to be used if the value of the <code>type</code> attribute and the <a>Content-Type</a> of the
-  aforementioned resource match.
+  <dfn element-attr for="object"><code>typeMustMatch</code></dfn> 속성(attribute)은 그 존재가 
+  <code>data</code> 속성(attribute)에 의해 명시된 리소스가 <code>type</code> 속성(attribute)의 값과 
+  앞서 언급된 리소스의 <a>Content-Type</a>과 일치하는 경우에만 사용 됨을 나타내는 
+  <a lt="boolean attribute">불리언 속성(attribute)</a> 입니다.
 
-  The <code>typemustmatch</code> attribute must not be
-  specified unless both the <code>data</code> attribute and the <code>type</code> attribute are present.
+  <code>typemustmatch</code> 속성(attribute)은 <code>data</code> 속성(attribute)과 <code>type</code> 
+  속성(attribute)이 모두 존재하지 않는 한 명시되지 않아야(must) 합니다.
 
-  The <dfn element-attr for="object"><code>name</code></dfn> attribute, if present, must be a
-  <a>valid browsing context name</a>. The given value is used to name the <a>nested browsing context</a>, if applicable.
+  <dfn element-attr for="object"><code>name</code></dfn> 속성(attribute)이 존재한다면, 이 
+  속성(attribute)은 <a lt="valid browsing context name">유효한 브라우징 컨텍스트 이름</a>이어야(must) 
+  합니다. 주어진 값은 적용 가능하다면, <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 
+  이름을 붙이는데 사용됩니다.
 
   <div class="impl">
 
-  Whenever one of the following conditions occur:
+  다음 조건들 중 하나가 발생할 때마다:
 
   <ul>
 
-    <li>the element is created,
+    <li>요소(element)가 생성,
 
-    </li><li>the element is popped off the <a>stack of open elements</a> of an <a>HTML
-    parser</a> or <a>XML parser</a>,
+    </li><li>요소(element)가 <a lt="HTML parser">HTML 해석기</a>나 <a lt="XML parser">XML 해석기</a>의 
+    <a lt="stack of open elements">열린 요소(element)들의 스택</a>을 끊어냄,
 
-    </li><li>the element is not on the <a>stack of open elements</a> of an <a>HTML parser</a>
-    or <a>XML parser</a>, and it is either <a for="document">inserted into a document</a> or <a for="document">removed from a document</a>,
+    </li><li>요소(element)가 <a lt="HTML parser">HTML 해석기</a>나 <a lt="XML parser">XML 해석기</a>의
+     <a lt="stack of open elements">열린 요소(element)들의 스택</a>에 있지 않고, 
+     <a for="document" lt="inserted into a document">문서에 삽입</a>되거나 
+     <a for="document" lt="removed from a document">문서로부터 제거</a>됨
 
-    </li><li>the element's <a>node document</a> changes whether it is <a>fully active</a>,
+    </li><li>요소(element)의 <a lt="node document">노드 문서</a>가 
+    <a lt="fully active">완전히 활성화</a>인지 여부를 변경,
 
-    </li><li>one of the element's ancestor <{object}> elements changes to or from showing its
-    <a>fallback content</a>,
+    </li><li>요소(element)의 후손 <{object}> 요소(element)들 중 하나가 그것의 
+    <a lt="fallback content">폴백 콘텐트</a>를 보여주는 것으로 혹은 보여주는 것에서 변경,
 
-    </li><li>the element's <code>classid</code> attribute is set, changed, or
-    removed,
+    </li><li>요소(element)의 <code>classid</code> 속성(attribute)이 설정, 변경, 제거,
 
-    </li><li>the element's <code>classid</code> attribute is not present, and
-    its <code>data</code> attribute is set, changed, or removed,
+    </li><li>요소(element)의 <code>classid</code> 속성(attribute)이 존재하지 않고, 요소(element)의 
+    <code>data</code> 속성(attribute)이 설정, 변경, 제거,
 
-    </li><li>neither the element's <code>classid</code> attribute nor its
-    <code>data</code> attribute are present, and its <code>type</code> attribute is set, changed, or removed,
+    </li><li>요소(element)의 <code>classid</code> 속성(attribute)이나 <code>data</code> 
+    속성(attribute)이 둘 다 존재하지 않고, 요소(element)의 <code>type</code> 속성(attribute)이 설정, 
+    변경, 제거,
 
-    </li><li>the element changes from <a>being rendered</a> to not being rendered, or vice versa,
+    </li><li>요소(element)가 <a lt="being rendered">렌더링 되는 것</a>에서 렌더링 되지 않는 것으로 
+    변경, 혹은 그 반대,
+
 
   </li></ul>
 
-  ...the user agent must <a>queue a task</a> to run the following steps to (re)determine
-  what the <{object}> element represents. This <a>task</a>
-  being <a>queued</a> or actively running must <a>delay the load
-  event</a> of the element's <a>node document</a>.
+  ...유저 에이전트는 <{object}> 요소(element)가 무엇을 나타내는지를 (재)결정하기 위한 다음 단계들을 
+  수행하기 위한 <a lt="queue a task">작업을 대기열에 넣어야</a>(must) 합니다. 
+  <a lt="queued">대기열에 넣어</a>지거나 활발히 수행 중인 이 <a lt="task">작업</a>은 요소(element)의 
+  <a lt="node document">노드 문서</a>의 <a lt="delay the load event">load 이벤트를 지연</a>시켜야(must) 
+  합니다.
 
   <ol>
 
     <li>
 
-    If the user has indicated a preference that this <{object}> element's <a>fallback
-    content</a> be shown instead of the element's usual behavior, then jump to the step below
-    labeled <i>fallback</i>.
+    사용자가 이 <{object}> 요소(element)의 <a lt="fallback content">폴백 콘텐트</a>가 요소(element)의
+    보통의 동작 대신 보여지도록 설정을 지시했다면, 아래 <i>fallback</i>으로 라벨링 된 단계로 
+    건너 뜁니다.
 
     <p class="note">
-    For example, a user could ask for the element's <a>fallback content</a> to
-    be shown because that content uses a format that the user finds more accessible.
+    예를 들어, 콘텐트는 사용자가 더 접근 가능한 것을 찾는 형식을 사용하기 때문에 사용자는 
+    요소(element)의 <a lt="fallback content">폴백 콘텐트</a>가 보여지도록 요청할 수 있습니다.
   </p>
 
     </li>
 
     <li>
 
-    If the element has an ancestor <a>media element</a>, or has an ancestor
-    <{object}> element that is <em>not</em> showing its <a>fallback content</a>, or
-    if the element is not <a>in a <code>Document</code></a> with a
-    <a>browsing context</a>, or if the element's <a>node document</a> is not <a>fully
-    active</a>, or if the element is still in the <a>stack of open elements</a> of an
-    <a>HTML parser</a> or <a>XML parser</a>, or if the element is not <a>being
-    rendered</a>, then jump to the step below labeled <i>fallback</i>.
+    요소(element)가 후손 <a lt="media element">미디어 요소(element)</a>를 가지거나, 
+    <a lt="fallback content">폴백 콘텐트</a>를 보여주고 있지 <em>않은</em> 후손 <{object}> 
+    요소(element)를 가지거나, 요소(element)가 <a lt="browsing context">브라우징 컨텍스트</a>를 가진 
+    <a lt="in a Document"><code>Document</code> 안에</a> 있지 않거나, 요소(element)의 
+    <a lt="node document">노드 문서</a>가 <a lt="fully active">완전히 활성화</a>가 아니거나, 
+    요소(element)가 여전히 <a lt="HTML parser">HTML 해석기</a>나 <a lt="XML parser">XML 해석기</a>의 
+    <a lt="stack of open elements">열린 요소(element)들의 스택</a> 안에 있거나, 요소(element)가 
+    <a lt="being rendered">렌더링 되는 것</a>이 아니라면, <i>fallback</i>으로 라벨링 된 단계로 
+    건너뜁니다.
 
     </li>
 
     <li>
 
-    If the <code>classid</code> attribute is present, and has a
-    value that isn't the empty string, then: if the user agent can find a <a>plugin</a>
-    suitable according to the value of the <code>classid</code>
-    attribute, and either plugins aren't being sandboxed or that
-    <a>plugin</a> can be <a>secured</a>, then that
-    <a>plugin</a> <a>should be used</a>, and the value of the <code>data</code> attribute, if any, should be passed to the
-    <a>plugin</a>. If no suitable <a>plugin</a> can be found, or if the
-    <a>plugin</a> reports an error, jump to the step below labeled <i>fallback</i>.
+    <code>classid</code> 속성(attribute)이 존재하고 빈 문자열이 아닌 값을 가진다면: 유저 에이전트가
+    <code>classid</code> 속성(attribute)의 값에 따라 적절한 <a lt="plugin">플러그인</a>을 찾을 수 
+    있고, 플러그인들이 샌드박스 되지 않는 것이거나 그 <a lt="plugin">플러그인</a>이 
+    <a lt="secured">보호</a>될 수 있다면, 그 <a lt="plugin">플러그인</a>은 
+    <a lt="should be used">사용되어야</a>(should)하고, <code>data</code> 속성(attribute)의 값이 
+    있다면 그것은 <a lt="plugin">플러그인</a>으로 전달되어야(should) 합니다. 적절한 
+    <a lt="plugin">플러그인</a>을 찾을 수 없거나,  <a lt="plugin">플러그인</a>이 오류를 보고한다면,
+    <i>fallback</i>으로 라벨링 된 단계로 점프합니다.
 
     </li>
 
-    <li>If the <code>data</code> attribute is present and its value is
-    not the empty string, then:
+    <li><code>data</code> 속성(attribute)이 존재하고 그 값이 빈 문자열이 아니라면 :
 
     <ol>
 
-      <li>If the <code>type</code> attribute is present and its value is
-      not a type that the user agent supports, and is not a type that the user agent can find a
-      <a>plugin</a> for, then the user agent may jump to the step below labeled <i>fallback</i>
-      without fetching the content to examine its real type.</li>
+      <li><code>type</code> 속성(attribute)이 존재하고 그 값이 유저 에이전트가 지원하는 유형이 
+      아니며, 유저 에이전트가 그 속성(attribute) 값에 대한 <a lt="plugin">플러그인</a>을 찾을 수 
+      있는 유형이 아니라면, 유저 에이전트는 그것의의 실제 유형을 검사하기 위해 콘텐트를 
+      가져오는(fetch) 것 없이 아래 <i>fallback</i>으로 라벨링 된 단계로 건너뛸 수 있습니다.</li>
 
-      <li><a>Parse</a> the <a for="url">URL</a> specified by the <code>data</code> attribute, relative to the element.</li>
+      <li><code>data</code> 속성(attribute)에 의해 명시된 <a for="url">URL</a>을 요소(element)에 
+      관련하여 <a lt="parse">해석</a> 합니다.</li>
 
-      <li>If that failed, <a>fire a simple event</a> named <code>error</code> at the element, then jump to the step below labeled
-      <i>fallback</i>.</li>
+      <li>그것이 실패했다면, 요소(element)에 <code>error</code>라고 이름이 붙은 
+      <a lt="fire a simple event">단순 이벤트를 발생</a>시키고, 아래 <i>fallback</i>으로 라벨링 된 
+      단계로 건너뜁니다.</li>
 
-      <li>Let <var>request</var> be a new <a>request</a> whose
-      <a for="url">URL</a> is the <a>resulting URL string</a>,
-      <a>client</a> is the element's <a>node
-      document</a>'s <code>Window</code> object's <a>environment settings object</a>,
-      <a>destination</a> is "<code>unknown</code>", <a>omit-<code>Origin</code>-header flag</a> is set if the
-      element doesn't have a <a>browsing context scope origin</a>, <a>credentials mode</a> is "<code>include</code>", and whose <a>use-URL-credentials flag</a> is set.</li>
+      <li><var>request</var>를 <a for="url">URL</a>이 <a lt="resulting URL string">결과 URL 문자열</a>이고, 
+      <a lt="client">클라이언트</a>가 요소(element)의 <a lt="node document">노드 문서</a>의 
+      <code>Window</code> 객체의 <a lt="environment settings object">환경 설정 객체</a>이며, 
+      <a lt="destination">목적지</a>가 "<code>unknown</code>"이고, 요소(element)가 
+      <a lt="browsing context scope origin">브라우징 컨텍스트 범위 출처</a>를 가지지 않는다면 
+	  <a lt="omit-Origin-header flag">출처 헤더 생략 플래그</a>가 설정되어 있으며, 
+	  <a lt="credentials mode">자격 증명 모드</a>가 "<code>include</code>"이고 
+	  <a lt="use-URL-credentials flag">URL 자격 증명 사용 플래그</a>가 설정 된 새로운 
+	  <a lt="request">요청</a>으로 둡니다.</li>
 
       <li>
-      <a>Fetch</a> <var>request</var>.
+      <var>request</var>을 <a lt="fetch">가져옵니다(fetch)</a>.
 
-      Fetching the resource must <a>delay the load event</a> of the element's <a>node
-      document</a> until the <a>task</a> that is <a>queued</a> by the <a>networking task source</a> once the resource has been
-      fetched (defined next) has been run.
+      리소스를 가져오는(fetch) 것은 리소스가 가져와(fetch)졌을 때 
+      <a lt="networking task source">네트워킹 작업 소스</a>에 의해 <a lt="queued">대기열에 넣어진</a> 
+      <a lt="task">작업</a>이 (다음으로 정의된) 수행 될 때까지 요소(element)의 
+      <a lt="node document">노드 문서</a>의 
+      <a lt="delay the load event">load 이벤트를 지연</a>시켜야(must) 합니다.
       </li>
 
-      <li>If the resource is not yet available (e.g., because the resource was not available in the
-      cache, so that loading the resource required making a request over the network), then jump to
-      the step below labeled <i>fallback</i>. The <a>task</a> that is
-      <a>queued</a> by the <a>networking task source</a> once the
-      resource is available must restart this algorithm from this step. Resources can load
-      incrementally; user agents may opt to consider a resource "available" whenever enough data has
-      been obtained to begin processing the resource.</li>
+      <li>리소스가 아직 사용 가능하지 않다면 (예를 들어, 리소스가 캐시에서 아직 사용할 수 없기 
+      때문에, 리소스를 로딩하는 것은 네트워크를 통해 요청을 만드는 것을 요구합니다), 아래 
+      <i>fallback</i>으로 라벨링 된 단계로 건너뜁니다. 리소스가 사용 가능 할 때 
+      <a lt="networking task source">네트워킹 작업 소스</a>에 의해 <a lt="queued">대기열에 넣어진</a> 
+      <a lt="task">작업</a>은 이 단계로부터 이 알고리즘을 재시작해야(must) 합니다. 리소스들이 
+      점차적으로 로드될 수 있습니다; 유저 에이전트들은 리소스를 처리하는 것을 시작하기 위해 충분한 
+      데이터라가 얻어질 때마다 리소스를 "사용 가능"한 것으로 간주되도록 선택할 수 있습니다.</li>
 
-      <li>If the load failed (e.g., there was an HTTP 404 error, there was a DNS error), <a>fire
-      a simple event</a> named <code>error</code> at the element, then jump to
-      the step below labeled <i>fallback</i>.</li>
+      <li>로드가 실패되었다면 (예를 들어, HTTP 404 오류가 있었거나, DNS 오류가 있었거나), 
+      요소(element)에 <code>error</code>라고 이름이 붙은 
+      <a lt="fire a simple event">단순 이벤트를 발생</a>시키고, 아래 <i>fallback</i>으로 라벨링 된 
+      단계로 건너뜁니다.</li>
 
       <li>
 
-      Determine the <var>resource type</var>, as follows:
+      다음과 같이, <var>resource type</var>을 결정합니다:
 
       <ol>
 
         <li>
 
-        Let the <var>resource type</var> be unknown.
+        <var>resource type</var>를 알 수 없음으로 둡니다.
 
         </li>
 
         <li>
 
-        If the <{object}> element has a <code>type</code>
-        attribute and a <code>typemustmatch</code> attribute, and
-        the resource has <a>associated Content-Type metadata</a>, and the
-        type specified in <a>the resource's Content-Type metadata</a> is
-        an <a>ASCII case-insensitive</a> match for the value of the element's <code>type</code> attribute, then let <var>resource type</var>
-        be that type and jump to the step below labeled <i>handler</i>.
+        <{object}> 요소(element)가 <code>type</code> 속성(attribute)과 <code>typemustmatch</code> 
+        속성(attribute)을 가지고, 리소스가 
+        <a lt="associated Content-Type metadata">연관된 Content-Type 메타데이터</a>를 가지며, 
+        <a lt="the resource's Content-Type metadata">리소스의 Content-Type 메타데이터</a>에 명시된 
+        유형이 요소(element)의 <code>type</code> 속성(attribute)의 값에 
+        <a lt="ASCII case-insensitive">ASCII 대소문자 구분 없이</a> 일치한다면, 
+        <var>resource type</var>을 그 유형으로 두고 아래 <i>handler</i>라고 라벨링 된 단계로 
+        건너뜁니다.
 
         </li>
 
         <li>
 
-        If the <{object}> element has a <code>typemustmatch</code> attribute, jump to the step below
-        labeled <i>handler</i>.
+        <{object}> 요소(element)가 <code>typemustmatch</code> 속성(attribute)을 가진다면, 아래
+        <i>handler</i>라고 라벨링 된 단계로 건너뜁니다.
 
         </li>
 
         <li>
 
-        If the user agent is configured to strictly obey Content-Type headers for this resource,
-        and the resource has <a>associated Content-Type metadata</a>,
-        then let the <var>resource type</var> be the type specified in <a>the resource's Content-Type metadata</a>, and jump to the step below
-        labeled <i>handler</i>.
+        유저 에이전트가 이 리소스에 대해 Content-Type 헤더들을 엄격히 준수하도록 설정되어 있고, 
+        리소스가 <a lt="associated Content-Type metadata">연관된 Content-Type 메타데이터</a>를 
+        가진다면, <var>resource type</var>을 
+        <a lt="the resource's Content-Type metadata">리소스의 Content-Type 메타데이터</a> 내에 명시된 
+        유형으로 두고, 아래 <i>handler</i>라고 라벨링 된 단계로 건너뜁니다.
 
-        <p class="warning">This can introduce a vulnerability, wherein a site is trying to embed a
-        resource that uses a particular plugin, but the remote site overrides that and instead
-        furnishes the user agent with a resource that triggers a different plugin with different
-        security characteristics. </p>
-
-        </li>
-
-        <li>
-
-        If there is a <code>type</code> attribute present on the
-        <{object}> element, and that attribute's value is not a type that the user agent
-        supports, but it <em>is</em> a type that a <a>plugin</a> supports, then let the <var>resource type</var> be the type specified in that <code>type</code> attribute, and jump to the step below labeled
-        <i>handler</i>.
+        <p class="warning">이것은 사이트가 특정 플러그인을 사용하는 삽입된 리소스를 시도하고 있다는 
+        점에서 취약성을 끌어들일 수 있지만, 원격 사이트는 그것을 무시하고 대신 유저 에이전트에 다른 
+        보안성들을 가진 다른 플러그인을 작동시키는 리소스를 제공합니다.</p>
 
         </li>
 
         <li>
 
-        Run the appropriate set of steps from the following
-        list:
+        <{object}> 요소(element)에 <code>type</code> 속성(attribute)이 존재하고, 그 속성(attribute)의 
+        값이 유저 에이전트들이 지원하는 유형이 아니라, <a lt="plugin">플러그인</a>이 지원하는 
+        유형<em>이라면</em>, <var>resource type</var>을 그 <code>type</code> 속성(attribute)에 
+        명시된 유형으로 두고, 아래 <i>handler</i>라고 라벨링 된 단계로 건너뜁니다.
+
+        </li>
+
+        <li>
+
+        다음 목록에서 적절한 단계들의 세트를 수행합니다:
 
         <dl class="switch">
 
-          <dt>If the resource has <a>associated Content-Type
-          metadata</a></dt>
+          <dt>리소스가 <a lt="associated Content-Type metadata">연관된 Content-Type 메타데이터</a>를 
+          가진다면</dt>
 
           <dd>
 
@@ -4615,54 +4698,55 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
 
             <li>
 
-            Let <var>binary</var> be false.
+            <var>binary</var>를 false로 둡니다.
 
             </li>
 
             <li>
 
-            If the type specified in <a>the resource's Content-Type
-            metadata</a> is "<code>text/plain</code>", and the result of applying the <a>rules for distinguishing if a resource is
-            text or binary</a> to the resource is that the resource is not
-            <code>text/plain</code>, then set <var>binary</var> to true.
+            <a lt="the resource's Content-Type metadata">리소스의 Content-Type 메타데이터</a>에 
+            명시된 유형이 "<code>text/plain</code>"이고, 
+            <a lt="rules for distinguishing if a resource is text or binary">리소스가 텍스트인지 바이너리인지 결정하기 위한 규칙들</a>을 
+            리소스에 적용한 결과가 리소스는 <code>text/plain</code>이 아니다는 것이라면, 
+            <var>binary</var>를 true로 설정합니다.
 
             </li>
 
             <li>
 
-            If the type specified in <a>the resource's Content-Type
-            metadata</a> is "<code>application/octet-stream</code>", then set <var>binary</var> to true.
+            <a lt="the resource's Content-Type metadata">리소스의 Content-Type 메타데이터</a>에 
+            명시된 유형이 "<code>application/octet-stream</code>"이라면, <var>binary</var>를 true로 
+            설정합니다.
 
             </li>
 
             <li>
 
-            If <var>binary</var> is false, then let the <var>resource
-            type</var> be the type specified in <a>the resource's
-            Content-Type metadata</a>, and jump to the step below labeled <i>handler</i>.
+            <var>binary</var>가 false라면, <var>resource type</var>을 
+            <a lt="the resource's Content-Type metadata">리소스의 Content-Type 메타데이터</a>에 
+            명시된 유형으로 두고, 아래 <i>handler</i>라고 라벨링 된 단계로 건너뜁니다.
 
             </li>
 
             <li>
 
-            If there is a <code>type</code> attribute present on the
-            <{object}> element, and its value is not <code>application/octet-stream</code>,
-            then run the following steps:
+            <{object}> 요소(element)에 <code>type</code> 속성(attribute)이 존재하고, 그 값이
+             <code>application/octet-stream</code>이 아니라면, 다음 단계들을 수행합니다:
 
             <ol>
 
               <li>
 
-              If the attribute's value is a type that a <a>plugin</a> supports, or the
-      attribute's value is a type that starts with "<code>image/</code>" that is
-              not also an <a>XML MIME type</a>, then let the <var>resource type</var> be the
-              type specified in that <code>type</code> attribute.
+              속성(attribute)의 값이 <a lt="plugin">플러그인</a>이 지원하는 유형이거나, 
+              속성(attribute)의 값이 <a lt="XML MIME type">XML MIME 타입</a>이 아닌 
+              "<code>image/</code>"로 시작하는 유형이라면, <var>resource type</var>을 그 
+              <code>type</code> 속성(attribute)에 명시된 유형으로 둡니다.
 
               </li>
 
               <li>
 
-              Jump to the step below labeled <i>handler</i>.
+              아래 <i>handler</i>라고 라벨링 된 단계로 건너뜁니다.
 
               </li>
 
@@ -4674,8 +4758,8 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
 
           </dd>
 
-          <dt>Otherwise, if the resource does not have <a>associated
-          Content-Type metadata</a></dt>
+          <dt>그렇지 않고, 리소스가 
+          <a lt="associated Content-Type metadata">연관된 Content-Type 메타데이터</a>를 가지지 않는다면</dt>
 
           <dd>
 
@@ -4683,20 +4767,19 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
 
             <li>
 
-            If there is a <code>type</code> attribute present on the
-            <{object}> element, then let the <var>tentative type</var> be the type
-            specified in that <code>type</code> attribute.
+            <{object}> 요소(element)에 <code>type</code> 속성(attribute)이 존재한다면, 
+            <var>tentative type</var>을 그 <code>type</code> 속성(attribute)에 명시된 유형으로 
+            둡니다.
 
-            Otherwise, let <var>tentative type</var> be the <a>computed type of the resource</a>.
+            그렇지 않으면, <var>tentative type</var>을 <a lt="computed type of the resource">계산된 리소스의 유형</a>으로 둡니다.
 
             </li>
 
             <li>
 
-            If <var>tentative type</var> is <em>not</em>
-            <code>application/octet-stream</code>, then let <var>resource type</var> be
-            <var>tentative type</var> and jump to the step below labeled
-            <i>handler</i>.
+            <var>tentative type</var>이 <code>application/octet-stream</code>이 <em>아니라면</em>,
+            <var>resource type</var>을 <var>tentative type</var>로 두고 아래 <i>handler</i>라고 
+            라벨링 된 단계로 건너뜁니다.
 
             </li>
 
@@ -4710,96 +4793,103 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
 
         <li>
 
-        If applying the <a>URL parser</a> algorithm to the <a for="url">URL</a> of the
-        specified resource (after any redirects) results in a <a>URL record</a> whose <a>path</a> component matches a pattern that a <a>plugin</a>
-        supports, then let <var>resource type</var> be the type that the plugin can
-        handle.
+        <a lt="URL parser">URL 해석</a> 알고리즘을 명시된 리소스의 <a for="url">URL</a>에 적용 하는 
+        것이 (다른 리다이렉트들 이후) <a lt="path">경로</a> 컴포넌트가 <a lt="plugin">플러그인</a>이 
+        지원하는 패턴에 일치하는 <a lt="URL record">URL 레코드</a>를 야기한다면, 
+        <var>resource type</var>을 그 플러그인이 처리할 수 있는 유형으로 둡니다.
 
-        <p class="example">For example, a plugin might say that it can handle resources with <a>path</a> components that end with the four character string
-        "<code>.swf</code>".</p>
+        <p class="example">예를 들어, 플러그인은 네 개 문자열 "<code>.swf</code>"로 끝나는 
+        <a lt="path">경로</a> 컴포넌트들을 가진 리소스들을 처리할 수 있다로 말 할 수 있습니다.</p>
 
         </li>
 
       </ol>
 
       <p class="note">
-    It is possible for this step to finish, or for one of the substeps above to
-      jump straight to the next step, with <var>resource type</var> still being unknown. In
-      both cases, the next step will trigger fallback.
+      이 단계가 종료되는 것이나, 위 하위 단계들 중 하나가 여전히 알 수 없는 <var>resource type</var>을
+      가지고 다음 단계로 바로 건너 뛰는 것이 가능합니다. 이 두 경우들에, 다음 단계는 폴백을 작동 
+      시킬 것입니다.
   </p>
 
       </li>
 
-      <li><i>Handler</i>: Handle the content as given by the first of the following cases that
-      matches:
+      <li><i>Handler</i>: 다음 경우들의 첫 번째 일치하는 것에 의해 주어진 것으로 콘텐트를 처리합니다:
 
       <dl class="switch">
 
-        <dt>If the <var>resource type</var> is not a type that the user agent supports, but
-        it <em>is</em> a type that a <a>plugin</a> supports</dt>
+        <dt><var>resource type</var>이 유저 에이전트가 지원하는 유형이 아니라, 
+        <a lt="plugin">플러그인</a>이 지원하는 유형<em>이라면</em>,</dt>
 
         <dd>
 
-        If plugins are being sandboxed and the plugin that
-        supports <var>resource type</var> cannot be <a>secured</a>, jump to the step below labeled <i>fallback</i>.
+        플러그인들이 샌드박스 되는 것이고 <var>resource type</var>을 지원한는 플러그인이 
+        <a lt="secured">보호</a>될 수 없다면, 아래 <i>fallback</i>으로 라벨링 된 단계로 건너뜁니다.
 
-        Otherwise, the user agent should use the plugin that supports
-        <var>resource type</var> and pass the content of the resource to that
-        <a>plugin</a>. If the <a>plugin</a> reports an error, then jump to the step
-        below labeled <i>fallback</i>.
+        그렇지 않으면, 유저 에이전트는 <var>resource type</var>을 지원하는 플러그인을 사용해야(should)
+        하고, 그 <a lt="plugin">플러그인</a>에 리소스의 콘텐트를 전달해야(should) 합니다. 
+        <a lt="plugin">플러그인</a>이 오류를 보고한다면, <i>fallback</i>으로 라벨링 된 단계로 
+        건너뜁니다.
 
         </dd>
 
-        <dt>If the <var>resource type</var> is an <a>XML MIME type</a>, or  if the <var>resource type</var>
-        does not start with "<code>image/</code>"</dt>
+        <dt><var>resource type</var>이 <a lt="XML MIME type">XML MIME 타입</a>이거나 
+        <var>resource type</var>이 "<code>image/</code>"로 시작하지 않는다면</dt>
 
         <dd>
-        The <{object}> element must be associated with a newly created <a>nested browsing context</a>, if it does not already have one.
+        <{object}> 요소(element)는 새롭게 생성된 
+        <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 이미 가지고 있지 않다면 
+        이와 연관되어야(must) 합니다.
 
-        If the <a for="url">URL</a> of the given resource is not <code>about:blank</code>, the
-        element's <a>nested browsing context</a> must then be <a>navigated</a> to that resource, with
-        <a>replacement enabled</a>, and with the <{object}> element's <a>node document</a>'s
-        <a>browsing context</a> as the <a>source browsing context</a>. (The <code>data</code> attribute of the <{object}> element doesn't
-        get updated if the browsing context gets further navigated to other locations.)
+        주어진 리소스의 <a for="url">URL</a>이 <code>about:blank</code>가 아니라면, 요소(element)의 
+        <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>는 
+        <a lt="replacement enabled">교체 활성화</a>와, 
+        <a lt="source browsing context">소스 브라우징 컨텍스트</a>로서 <{object}> 요소(element)의 
+        <a lt="node document">노드 문서</a>의 <a lt="browsing context">브라우징 컨텍스트</a>를 
+        가지고 그 리소스로 <a lt="navigated">이동</a>되어야(must) 합니다. (브라우징 컨텍스트가 다른 
+        위치들로 더 이동한다면 <{object}> 요소(element)의 <code>data</code> 속성(attribute)은 
+        업데이트 되지 않습니다.)
 
-        If the <a for="url">URL</a> of the given resource <em>is</em> <code>about:blank</code>, then,
-        instead, the user agent must <a>queue a task</a> to <a>fire a simple event</a>
-        named <code>load</code> at the <{object}> element. <span class="note">No <code>load</code> event is fired at the
-        <code>about:blank</code> document itself.</span>
+        주어진 리소스의 <a for="url">URL</a>이 <code>about:blank</code><em>라면</em>, 대신에, 유저 
+        에이전트는 <{object}> 요소(element)에 <code>load</code>라고 이름이 붙은 
+        <a lt="fire a simple event">단순 이벤트를 발생</a>시키기 위한 
+        <a lt="queue a task">작업을 대기열에 넣어야</a>(must) 합니다. 
+        <span class="note"><code>load</code> 이벤트는 <code>about:blank</code> 문서 자체에 발생되지 
+        않습니다.</span>
 
-        The <{object}> element <a>represents</a> the <a>nested browsing context</a>.
+        <{object}> 요소(element)는 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 
+        나타냅니다.
 
-        If the <code>name</code> attribute is present, the
-        <a>browsing context name</a> must be set to the value of this attribute; otherwise,
-        the <a>browsing context name</a> must be set to the empty string.
+        <code>name</code> 속성(attribute)이 존재한다면, 
+        <a lt="browsing context name">브라우징 컨텍스트 이름</a>은 이 속성(attribute)의 값으로 설정 
+        되어야(must) 합니다; 그렇지 않으면, <a lt="browsing context name">브라우징 컨텍스트 이름</a>은
+        빈 문자열로 설정 되어야(must) 합니다.
         </dd>
 
-        <dt>If the <var>resource type</var> starts with "<code>image/</code>", and support
-        for images has not been disabled</dt>
+        <dt><var>resource type</var>이 "<code>image/</code>"로 시작하고, 이미지에 대한 지원이 
+        비활성화되지 않았다면</dt>
 
         <dd>
 
-        Apply the <a>image sniffing</a> rules to
-        determine the type of the image.
+        <a lt="image sniffing">이미지 스니핑 규칙</a>을 이미지의 유형을 결정하는데 적용합니다.
 
-        The <{object}> element <a>represents</a> the specified image. The image is
-        not a <a>nested browsing context</a>.
+        <{object}> 요소(element)는 명시된 이미지를 <a lt="represents">나타냅니다</a>. 이미지는 
+        <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>가 아닙니다.
 
-        If the image cannot be rendered, e.g., because it is malformed or in an unsupported
-        format, jump to the step below labeled <i>fallback</i>.
+        이미지가 렌더링 될 수 없다면, 예를 들어 그것이 잘못되었거나 지원되지 않는 형식이라면, 
+        아래 <i>fallback</i>으로 라벨링 된 단계로 건너뜁니다.
 
         </dd>
 
-        <dt>Otherwise</dt>
+        <dt>그렇지 않으면</dt>
 
         <dd>
 
-        The given <var>resource type</var> is not supported. Jump to the step below
-        labeled <i>fallback</i>.
+        주어진 <var>resource type</var>은 지원되지 않습니다. 아래 <i>fallback</i>으로 라벨링 된 
+        단계로 건너뜁니다.
 
         <p class="note">
-    If the previous step ended with the <var>resource type</var> being
-        unknown, this is the case that is triggered.
+        앞선 단계가 알 수 없는 것이 되는 <var>resource type</var>으로 끝났다면, 이것은 작동 된 
+        경우입니다.
   </p>
 
         </dd>
@@ -4808,14 +4898,13 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
 
       </li>
 
-      <li>The element's contents are not part of what the <{object}> element
-      represents.
+      <li>요소(element)의 콘텐트는 <{object}> 요소(element)가 나타내는 것의 일부가 아닙니다.
 
       </li><li>
 
-      Abort these steps. Once the resource is completely loaded, <a>queue a task</a> to
-      <a>fire a simple event</a> named <code>load</code> at the
-      element.
+      이 단계들을 중단시킵니다. 리소스가 완전히 로드되었을 때, 요소(element)에 <code>load</code>라고 
+      이름이 붙은 <a lt="fire a simple event">단순 이벤트를 발생</a>시키기 위한 
+      <a lt="queue a task">작업을 대기열에 넣습니다</a>.
 
       </li>
 
@@ -4823,103 +4912,118 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
 
     </li>
 
-    <li>If the <code>data</code> attribute is absent but the <code>type</code> attribute is present, and the user agent can find a
-    <a>plugin</a> suitable according to the value of the <code>type</code> attribute, and either plugins aren't being sandboxed or the <a>plugin</a> can be
-    <a>secured</a>, then that <a>plugin</a> <a>should be used</a>. If these conditions cannot be met, or if the
-    <a>plugin</a> reports an error, jump to the step below labeled <i>fallback</i>. Otherwise
-    abort these steps; once the plugin is completely loaded, <a>queue a task</a> to <a>fire
-    a simple event</a> named <code>load</code> at the element.</li>
+    <li><code>data</code> 속성(attribute)이 없지만 <code>type</code> 속성(attribute)이 존재하고, 유저 
+    에이전트가 <code>type</code> 속성(attribute)의 값에 따라 적절한 <a lt="plugin">플러그인</a>을 
+    찾을 수 있고, 플러그인들이 샌드박스 되는 것이 아니거나 <a lt="plugin">플러그인</a>이 
+    <a lt="secured">보호</a>될 수 있다면, 그 <a lt="plugin">플러그인</a>이 
+    <a lt="should be used">사용되어야(should) 합니다</a>. 이 조건을 만나지 못하거나, 
+    <a lt="plugin">플러그인</a>이 오류를 보고한다면, 아래 <i>fallback</i>으로 라벨링 된 단계로 
+    건너뜁니다. 그렇지 않으면 이 단계들을 중단합니다; 플러그인이 완전히 로드될 때, 요소(element)에 
+    <code>load</code>라고 이름이 붙은 <a lt="fire a simple event">단순 이벤트를 발생</a>시키기 위한 
+    <a lt="queue a task">작업을 대기열에 넣습니다</a>.</li>
 
-    <li><i>Fallback</i>: The <{object}> element <a>represents</a> the element's
-    children, ignoring any leading <{param}> element children. This is the element's
-    <a>fallback content</a>. If the element has an instantiated <a>plugin</a>, then
-    unload it.</li>
+    <li><i>Fallback</i>: <{object}> 요소(element)는 다른 선두의 자식 <{param}> 요소(element)들을 
+    무시하고, 요소(element)의 자식을 <a lt="represents">나타냅니다</a>. 이것이 요소(element)의 
+    <a lt="fallback content">폴백 콘텐트</a>입니다. 요소(element)가 인스턴스화 된 
+    <a lt="plugin">플러그인</a>을 가진다면, 그것은 언로드 됩니다.</li>
 
   </ol>
 
-  <dfn lt="should be used"></dfn>When the algorithm above instantiates a <a>plugin</a>, the user agent
-  should pass to the <a>plugin</a> used the names and values of all the attributes on the
-  element, in the order they were added to the element, with the attributes added by the parser
-  being ordered in source order, followed by a parameter named "PARAM" whose value is null, followed
-  by all the names and values of <a>parameters</a> given by
-  <{param}> elements that are children of the <{object}> element, in <a>tree
-  order</a>. If the <a>plugin</a> supports a scriptable interface, the
-  <code>HTMLObjectElement</code> object representing the element should expose that interface. The
-  <{object}> element <a>represents</a> the <a>plugin</a>. The
-  <a>plugin</a> is not a nested <a>browsing context</a>.
+  <dfn lt="should be used"></dfn>위 알고리즘이 <a lt="plugin">플러그인</a>을 인스턴스화 할 때, 유저 
+  에이전트는 요소(element)의 사용된 모든 모든 속성(attribute)들의 이름들과 값들을, 그것들이 
+  요소(element)에 추가된 순서에 따라, 소스 순서에 따라 정렬되는 해석기 의해 추가된 속성(attribute)들, 
+  그 뒤로 값이 null인 "PARAM"으로 이름이 붙은 파라미터, 그 뒤로 <{object}> 요소(element)의 자식인
+  <{param}> 요소(element)에 의해 주어진 <a lt="parameters">파라미터들</a>의 모든 이름들과 값들을 
+  <a lt="tree order">트리 순서</a>에 따라 <a lt="plugin">플러그인</a>에 전달해야(should) 합니다. 
+  <a lt="plugin">플러그인</a>이 스트립트 가능한 인터페이스를 지원한다면, 요소(element)를 나타내는 
+  <code>HTMLObjectElement</code> 객체는 그 인터페이스를 노출해야(should) 합니다. <{object}> 
+  요소(element)는 <a lt="plugin">플러그인</a>을 <a lt="represents">나타냅니다</a>. 
+  <a lt="plugin">플러그인</a>은 중첩된 <a lt="browsing context">브라우징 컨텍스트</a>가 아닙니다.
 
-  Plugins are considered sandboxed for the purpose of an
-  <{object}> element if the <a>sandboxed plugins browsing context flag</a> is set on
-  the <{object}> element's <a>node document</a>'s <a>active sandboxing flag
-  set</a>.
+  <{object}> 요소(element)의 <a lt="node document">노드 문서</a>의 
+  <a lt="active sandboxing flag set">샌드박싱 활성화 플래그 설정</a>에 
+  <a lt="sandboxed plugins browsing context flag">샌드박스 된 플러그인 브라우징 컨텍스트 플래그</a>가 
+  설정 되었다면 플러그인들은 <{object}> 요소(element)의 목적을 위해 샌드박스 된 것으로 간주됩니다.
 
-  Due to the algorithm above, the contents of <{object}> elements act as <a>fallback
-  content</a>, used only when referenced resources can't be shown (e.g., because it returned a 404
-  error). This allows multiple <{object}> elements to be nested inside each other,
-  targeting multiple user agents with different capabilities, with the user agent picking the first
-  one it supports.
+  위 알고리즘 때문에, <{object}> 요소(element)들의 콘텐츠는 참조된 리소스들이 보여질 수 없을 때에만 
+  (예를 들어, 그것이 404 오류를 반환했기 때문에) 사용되는 <a lt="fallback content">폴백 콘텐트</a>로서
+  동작합니다. 이것은 다른 능력들을 가진 여러 유저 에이전트들을 타게팅하여, 유저 에이전트가 지원하는 
+  처음 것을 선택하도록 여러 <{object}> 요소(element)들이 서로의 내부에 중첩되는 것을 허용합니다.
 
-  When an <{object}> element represents a <a>nested browsing context</a>: if the
-  <{object}> element's <a>nested browsing context</a>'s <a>active document</a>
-  is not <a>ready for post-load tasks</a>, and when anything is <a>delaying the load event</a> of the <{object}> element's <a>browsing context</a>'s <a>active document</a>, and when the <{object}> element's
-  <a>browsing context</a> is in the <a>delaying <code>load</code>
-  events mode</a>, the <code>object</code> must <a>delay the load event</a> of its
-  document.
+  <{object}> 요소(element)가 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>를 나타내는 
+  경우: <{object}> 요소(element)의 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 
+  <a lt="active document">활성 문서</a>가 <a lt="ready for post-load tasks">로드 후 작업들에 대해 
+  준비</a>되지 않고, 어떤 것이든 <{object}> 요소(element)의 
+  <a lt="browsing context">브라우징 컨텍스트</a>의 <a lt="active document">활성 문서</a>의 
+  <a lt="delaying the load event">load 이벤트를 지원</a>시키고 있는 경우와, <{object}> 
+  요소(element)의 <a lt="browsing context">브라우징 컨텍스트</a>가 
+  <a lt="delaying load events mode"><code>load</code> 이벤트들 지연 중 모드</a>에 있다면, 
+  <code>object</code>는 그것의 문서의 <a lt="delay the load event">load 이벤트를 지연</a>시켜야(must) 
+  합니다.
 
-  The <a>task source</a> for the <a>tasks</a> mentioned in this
-  section is the <a>DOM manipulation task source</a>.
+  이 섹션에 언급된 <a lt="tasks">작업들</a>에 대한 <a lt="task source">작업 소스</a>는 
+  <a lt="DOM manipulation task source">DOM 조작 작업 소스</a>입니다.
 
-  Whenever the <code>name</code> attribute is set, if the
-  <{object}> element has a nested <a>browsing context</a>, its <a lt="browsing context name">name</a> must be changed to the new value. If the attribute is removed, if the
-  <{object}> element has a <a>browsing context</a>, the <a>browsing context name</a> must be set to the empty string.
-
-  </div>
-
-  The <{object/form}> attribute is used to explicitly associate the
-  <{object}> element with its <a>form owner</a>.
-
-  <div class="impl">
-
-  <strong>Constraint validation</strong>: <{object}> elements are always <a>barred
-  from constraint validation</a>.
+  <code>name</code> 속성(attribute)이 설정될 때마다, <{object}> 요소(element)가 중첩된 
+  <a lt="browsing context">브라우징 컨텍스트</a>를 가진다면, 그것의 
+  <a lt="browsing context name">이름</a>은 새로운 값으로 변경되어야(must) 합니다. 속성(attribute)이 
+  제거된다면, <{object}> 요소(element)가 <a lt="browsing context">브라우징 컨텍스트</a>를 가진다면, 
+  <a lt="browsing context name">브라우징 컨텍스트 이름</a>은 빈 문자열로 설정 되어야(must) 합니다.
 
   </div>
 
-  The <{object}> element supports <a>dimension attributes</a>.
+  <{object/form}> 속성(attribute)은 <{object}> 요소(element)를 그것의 
+  <a lt="form owner">양식 소유자</a>와 명시적으로 연관시키기 위해 사용됩니다.
 
   <div class="impl">
 
-  The IDL attributes {{HTMLObjectElement/data}}, {{HTMLObjectElement/type}} and {{HTMLObjectElement/name}} each must <a>reflect</a> the respective
-  content attributes of the same name. The {{HTMLObjectElement/typeMustMatch}} IDL attribute must
-  <a>reflect</a> the <{object/typemustmatch}> content
-  attribute.
+  <strong>제약조건 확인</strong>: <{object}> 요소(element)들은 항상 
+  <a lt="barred from constraint validation">제약 조건 확인을 금지</a>됩니다.
 
-  The {{HTMLObjectElement/contentDocument}} IDL attribute must return the {{Document}} object of the
-  <a>active document</a> of the <{object}> element's <a>nested browsing context</a>, if any and if
-  its <a for="concept">origin</a> is the <a>same origin-domain</a> as the
-  <a for="concept">origin</a> specified by the <a>incumbent settings object</a>, or null otherwise.
+  </div>
 
-  The {{HTMLObjectElement/contentWindow}} IDL attribute must
-  return the <code>WindowProxy</code> object of the <{object}> element's <a>nested browsing context</a>, if it has one; otherwise, it must return null.
+  <{object}> 요소(element)는 <a lt="dimension attributes">치수 속성(attribute)들</a>을 지원합니다.
 
-  The <code>willValidate</code>, <code>validity</code>, and <code>validationMessage</code> attributes, and the <code>checkValidity()</code>, <code>reportValidity()</code>, and <code>setCustomValidity()</code> methods, are part of the
-  <a>constraint validation API</a>. The <code>form</code> IDL attribute
-  is part of the element's forms API.
+  <div class="impl">
 
-  All <{object}> elements have a <dfn for="object">legacy caller
-  operation</dfn>. If the <{object}> element has an instantiated <a>plugin</a> that
-  supports a scriptable interface that defines a legacy caller operation, then that must be the
-  behavior of the object's legacy caller operation. Otherwise, the object's legacy caller operation
-  must be to throw a {{NotSupportedError}} exception.
+  IDL 속성(attribute)들 {{HTMLObjectElement/data}}, {{HTMLObjectElement/type}}, 
+  {{HTMLObjectElement/name}}은 각각 동일한 이름의 각 콘텐트 속성(attribute)들을 
+  <a lt="reflect">반영</a>해야(must) 합니다. {{HTMLObjectElement/typeMustMatch}} IDL 속성(attribute)은
+  <{object/typemustmatch}> 콘텐트 속성(attribute)을 반영해야 합니다. useMap IDL 속성은 usemap 콘텐트 
+  속성을 <a lt="reflect">반영</a>해야(must) 합니다.
+
+  {{HTMLObjectElement/contentDocument}} IDL 속성(attribute)은 <{object}> 요소(element)의 
+  <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 <a lt="active document">활성 문서</a>의
+  {{Document}} 객체가 존재하고 그것의 <a for="concept" lt="origin">출처</a>가 
+  <a lt="incumbent settings object">현직 설정 객체</a>에 의해 명시된 
+  <a for="concept" lt="origin">출처</a>로서 <a lt="same origin-domain">동일 출처 도메인</a>이라면 
+  <{object}> 요소(element)의 <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 
+  <a lt="active document">활성 문서</a>의 {{Document}} 객체를 반환해야(must) 하고, 그렇지 않으면 
+  null을 반환해야(must) 합니다.
+
+  {{HTMLObjectElement/contentWindow}} IDL 속성(attribute)은 <{object}> 요소(element)의 
+  <a lt="nested browsing context">중첩된 브라우징 컨텍스트</a>의 <code>WindowProxy</code> 객체를 
+  가진다면 이를 반환해야(must) 하고 그렇지 않으면 null을 반환해야(must) 합니다.
+
+  <code>willValidate</code>, <code>validity</code>, <code>validationMessage</code> 
+  속성(attribute)들과 <code>checkValidity()</code>, <code>reportValidity()</code>, 
+  <code>setCustomValidity()</code> 메서드들은 <a lt="constraint validation API">제약 조건 확인 API</a>의
+  일부입니다. <code>form</code> IDL 속성(attribute)은 요소(element)의 forms API의 일부입니다.
+
+  모든 <{object}> 요소(element)는 <dfn for="object" lt="legacy caller operation">레거시 호출자 연산</dfn>을 
+  가집니다. <{object}> 요소(element)가 레거시 호출자 연산을 정의하는 스크립트 가능한 인터페이스를 
+  지원하는 인스턴스화 된 <a lt="plugin">플러그인</a>을 가진다면, 그것은 객체의 레거시 호출자 연산의 
+  동작이어야(must) 합니다. 그렇지 않으면, 객체의 레거시 호출자 연산은 {{NotSupportedError}} 예외를 
+  던져야(must) 합니다.
 
   </div>
 
   <div class="example">
-    In the following example, a Java applet is embedded in a page using the <code>object</code>
-    element. (Generally speaking, it is better to avoid using applets like these and instead use
-    native JavaScript and HTML to provide the functionality, since that way the application will work
-    on all Web browsers without requiring a third-party plugin. Many devices, especially embedded
-    devices, do not support third-party technologies like Java.)
+    다음 예에서, 자바 애플릿은 <code>object</code> 요소(element)를 사용하여 페이지에 삽입됩니다. 
+    (일반적으로 말해서, 이것들과 같은 애플릿들을 사용하는 것은 피하고 대신 기능성을 제공하기 위해 
+    네이티브 JavaScript와 HTML을 사용하는 것이, 어플리케이션이 서드 파티 플러그인을 요구하지 않고 
+    모든 웹 브라우저들에서 동작할 것이기 때문에, 더 좋습니다. 많은 기기들, 특히 임베디드 기기는 
+    Java와 같은 서드 파티 기술을 지원하지 않습니다.)
 
     <pre highlight="html">
 &lt;figure&gt;
@@ -4934,8 +5038,7 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
   </div>
 
   <div class="example">
-    In this example, an HTML page is embedded in another using the <code>object</code>
-    element.
+    이 예에서, HTML 페이지는 <code>object</code> 요소(element)를 사용하여 다른 HTML에 삽입됩니다.
 
     <pre highlight="html">
 &lt;figure&gt;
@@ -4947,11 +5050,11 @@ attribute's value is a type that a <a>plugin</a> supports, then the value of the
   </div>
 
   <div class="example">
-    The following example shows how a plugin can be used in HTML (in this case the Flash plugin,
-    to show a video file). Fallback is provided for users who do not have Flash enabled, in this case
-    using the <{video}> element to show the video for those using user agents that support
-    <{video}>, and finally providing a link to the video for those who have neither Flash
-    nor a <code>video</code>-capable browser.
+    다음 예는 HTML에 플러그인이 어떻게 사용될 수 있는지를 (이 경우 비디오 파일을 보여주기 위한 플래시 
+    플러그인) 보여줍니다. 폴백은 활성화 된 Flash를 가지지 않은 사용자들에 대해, 이 경우에 비디오를 
+    보여주기 위해 <{video}>를 지원하는 유저 에이전트들을 사용하는 사용자에 대해서는 <{video}> 
+    요소(element)를 사용하고, 마지막으로 플래시나 <code>video</code>-가능 브라우저를 가지지 않은 
+    사용자들에 대해서는 비디오로의 링크를 제공하여 제공됩니다.
 
     <pre highlight="html">
 &lt;p&gt;Look at my video:

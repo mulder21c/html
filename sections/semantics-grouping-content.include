@@ -397,7 +397,7 @@
     <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
     <dd><code>cite</code> - 인용구 소스로의 링크.</dd>
     <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
-    <dd><a href="#allowed-aria-roles-states-and-properties"></a>.</dd>
+    <dd>모든 역할(role) 값.</dd>
     <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
     <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
     <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
@@ -1056,7 +1056,7 @@
   <p class="note">
     <code>li</code> 요소(element)들 안에 제목(heading) 요소(element)들을 (예를 들어, <code>h1</code>) 
     포함시키는 경우, 작성자가 의도한 의미(semantics)를 전달하지 않을 것입니다. 제목(heading)은 
-    새로운 색션을 시작하고, 따라서 목록 내의 제목(heading)은 암묵적으로 여러 섹션들로 목록을 
+    새로운 섹션을 시작하고, 따라서 목록 내의 제목(heading)은 암묵적으로 여러 섹션들로 목록을 
     분리시킵니다.
   </p>
 
