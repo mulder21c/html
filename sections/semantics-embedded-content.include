@@ -5071,26 +5071,26 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
 
   </div>
 
-<h4 id="the-param-element">The <dfn element><code>param</code></dfn> element</h4>
+<h4 id="the-param-element"><dfn element><code>param</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd>None.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>As a child of an <{object}> element, before any <a>flow content</a>.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Nothing</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>No <a>end tag</a></dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>name</code> - Name of parameter</dd>
-    <dd><code>value</code> - Value of parameter</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd>None</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd>없음.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><{object}> 요소(element)의 자식으로서, 모든 <a lt="flow content">흐름(flow) 콘텐트</a> 이전에.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Nothing">없음</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd><a lt="end tag">종료 태그</a> 없음.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>name</code> - 파라미터의 이름</dd>
+    <dd><code>value</code> - 파라미터의 값</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd>없음</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLParamElement">
         interface HTMLParamElement : HTMLElement {
@@ -5101,37 +5101,39 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
     </dd>
   </dl>
 
-  The <{param}> element defines parameters for plugins invoked by <code>object</code>
-  elements. It does not <a>represent</a> anything on its own.
+  <{param}> 요소(element)는 <code>object</code> 요소(element)들에 의해 작동되는 플러그인들에 대한 
+  파라미터들을 정의 합니다. 이 요소(element)는 스스로 어떠한 것도 <a lt="represent">나타내지</a> 
+  않습니다.
 
-  The <dfn element-attr for="param"><code>name</code></dfn> attribute gives the name of the
-  parameter.
+  <dfn element-attr for="param"><code>name</code></dfn> 속성(attribute)은 파라미터의 이름을 
+  제공합니다.
 
-  The <dfn element-attr for="param"><code>value</code></dfn> attribute gives the value of the
-  parameter.
+  <dfn element-attr for="param"><code>value</code></dfn> 속성(attribute)은 파라미터의 값을 
+  제공합니다.
 
-  Both attributes must be present. They may have any value.
+  두 속성은 모두 존재해야(must) 합니다. 그것들은 어떠한 값이든 가질 수 있습니다.
 
   <div class="impl">
 
-  If both attributes are present, and if the parent element of the <code>param</code> is an
-  <{object}> element, then the element defines a <dfn>parameter</dfn> with the given name-value pair.
+  두 속성(attribute)들이 모두 존재하고, <code>param</code>의 부모 요소(element)가 <{object}> 
+  요소(element)라면, 요소(element)는 주어진 이름-값 쌍으로 <dfn lt="parameter">파라미터</dfn>를 
+  정의합니다.
 
-  If either the name or value of a <a>parameter</a> defined
-  by a <{param}> element that is the child of an <{object}> element that
-  <a>represents</a> an instantiated <a>plugin</a> changes, and if that
-  <a>plugin</a> is communicating with the user agent using an API that features the ability to
-  update the <a>plugin</a> when the name or value of a <a>parameter</a> so changes, then the user agent must
-  appropriately exercise that ability to notify the <a>plugin</a> of the change.
+  인스턴스화 된 <a lt="plugin">플러그인</a>을 나타내는 <{object}> 요소(element)의 자식인 <{param}> 
+  요소(element)에 의해 정의된 <a lt="parameter">파라미터</a>의 이름과 값이 변경되고, 그 
+  <a lt="plugin">플러그인</a>이 <a lt="parameter">파라미터</a>의 이름과 값이 변경될 때 
+  <a lt="plugin">플러그인</a>을 업데이트 할 수 있는 특징을 가진 API를 사용하는 유저 에이전트와 통신 
+  중이라면, 유저 에이전트는 변경된 <a lt="plugin">플러그인</a>을 통지할 수 있도록 적절하게 
+  수행해야(must) 합니다.
 
-  The IDL attributes <dfn attribute for="HTMLParamElement"><code>name</code></dfn> and <dfn attribute for="HTMLParamElement"><code>value</code></dfn> must both <a>reflect</a> the respective
-  content attributes of the same name.
+  IDL 속성(attribute)들 <dfn attribute for="HTMLParamElement"><code>name</code></dfn>과 <dfn attribute for="HTMLParamElement"><code>value</code></dfn>는 
+  모두 동일한 이름의 각각의 콘텐트 속성(attribute)들을 <a lt="reflect">반영</a>해야(must) 합니다.
 
   </div>
 
   <div class="example">
-    The following example shows how the <{param}> element can be used to pass a parameter
-    to a plugin, in this case the O3D plugin.
+    다음 예는 <{param}> 요소(element)가 플러그인에, 이 경우에는 O3D 플러그인에, 파라미터를 전달하기 
+    위해 사용될 수 있는 방법을 보여줍니다.
 
     <pre highlight="html">
 &lt;!DOCTYPE HTML&gt;
@@ -5161,48 +5163,47 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
 
   </div>
 
-<h4 id="the-video-element">The <dfn element><code>video</code></dfn> element</h4>
+<h4 id="the-video-element"><dfn element><code>video</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Embedded content</a>.</dd>
-    <dd>If the element has a <{video/controls}> attribute: <a>interactive content</a>.</dd>
-    <dd><a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>embedded content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd>If the element has a <code>src</code> attribute:
-  zero or more <{track}> elements, then
-  <a>transparent</a>, but with no <a>media element</a> descendants.</dd>
-    <dd>If the element does not have a <code>src</code> attribute: zero or
-    more <{source}> elements, then zero or more <{track}> elements, then
-  <a>transparent</a>, but with no <a>media element</a> descendants.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>src</code> - Address of the resource</dd>
-    <dd><code>crossorigin</code> - How the element handles crossorigin requests</dd>
-    <dd><code>poster</code> - Poster frame to show prior to video playback</dd>
-    <dd><code>preload</code> - Hints how much buffering the
-    <a>media resource</a> will likely need</dd>
-    <dd><code>autoplay</code> - Hint that the <a>media resource</a>
-    can be started automatically when the page is loaded</dd>
-    <dd><code>loop</code> - Whether to loop the <a>media resource</a></dd>
-    <dd><code>muted</code> - Whether to mute the <a>media resource</a> by default</dd>
-    <dd><{video/controls}> - Show user agent controls</dd>
-    <dd><code>width</code> - Horizontal dimension</dd>
-    <dd><code>height</code> - Vertical dimension</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Embedded content">삽입(embedded) 콘텐트</a>.</dd>
+    <dd>요소(element)가 <{video/controls}> 속성(attribute)을 가진다면: <a lt="interactive content">대화형(interactive) 콘텐트</a>.</dd>
+    <dd><a lt="Palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="embedded content">삽입(embedded) 콘텐트</a>가 예상되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd>요소(element)가 <code>src</code> 속성(attribute)을 가진다면:
+    0개 이상의 <{track}> 요소(element)들, 그 뒤로 후손 
+    <a lt="media element">미디어 요소(element)</a>들이 없는 <a lt="transparent">투명</a>.</dd>
+    <dd>요소(element)가 <code>src</code> 속성(attribute)을 가지 않는다면: 0개 이상의 <{source}> 
+    요소(element)들, 그 뒤로 0개 이상의 <{track}> 요소(element)들, 그 뒤로 후손
+     <a lt="media element">미디어 요소(element)</a>들이 없는 <a lt="transparent">투명</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>src</code> - 리소스의 주소</dd>
+    <dd><code>crossorigin</code> - 요소(element)가 crossorigin 요청들을 처리하는 방법</dd>
+    <dd><code>poster</code> - 비디오 재생 이전에 보여 줄 포스터 프레임</dd>
+    <dd><code>preload</code> - <a lt="media resource">미디어 리소스</a>를 얼마나 많이 버퍼링 해야
+    하는지에 대한 힌트</dd>
+    <dd><code>autoplay</code> - 페이지가 로드 될 때 <a lt="media resource">미디어 리소스</a>가
+    자동으로 시작될 수 있는지에 대한 힌트</dd>
+    <dd><code>loop</code> - <a lt="media resource">미디어 리소스</a>를 반복할지 여부</dd>
+    <dd><code>muted</code> - 기본적으로 <a lt="media resource">미디어 리소스</a>를 음소거 할지 여부</dd>
+    <dd><{video/controls}> - 유저 에이전트 컨트롤들 표시</dd>
+    <dd><code>width</code> - 가로 치수</dd>
+    <dd><code>height</code> - 세로 치수</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd><a value for="role"><code>application</code></a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
 
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLVideoElement">
         interface HTMLVideoElement : HTMLMediaElement {
@@ -5216,157 +5217,168 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
     </dd>
   </dl>
 
-  A <{video}> element is used for playing videos or movies, and audio files with
-  captions.
+  <{video}> 요소(element)는 비디오들이나 영화, 오디오 파일들을 캡션과 함께 재생하는데 사용됩니다.
 
-  Content may be provided inside the <{video}> element<span class="impl">. User agents
-  should not show this content to the user</span>; it is intended for older Web browsers which do
-  not support <{video}>, so that legacy video plugins can be tried, or to show text to the
-  users of these older browsers informing them of how to access the video contents.
+  콘텐트는 <{video}> 요소(element) 안에 제공될 수 있습니다<span class="impl">. 유저 에이전트들은 
+  사용자에게 이 콘텐트를 보여주지 않아야(should) 합니다</span>; 이것은 <{video}>를 지원하지 않는 
+  오래된 웹 브라우저들을 위해 의도된 것이기 때문에, 레거시 비디오 플러그인들이 시도될 수 있거나, 
+  또는 이 구형 브라우저들의 사용자들에게 비디오 콘텐츠에 접근하는 방법의 유용한 텍스트를 보여주기
+  위한 것입니다.
 
   <p class="note">
-    In particular, this content is not intended to address accessibility concerns. To
-  make video content accessible to the partially sighted, the blind, the hard-of-hearing, the deaf,
-  and those with other physical or cognitive disabilities, a variety of features are available.
-  Captions can be provided, either embedded in the video stream or as external files using the
-  <{track}> element. Sign-language tracks can be provided, again either embedded in the
-  video stream. Audio descriptions can be provided, either as a separate track embedded in the video
-  stream, or in text form using a <a>WebVTT file</a> referenced using the <{track}> element and
-  synthesized into speech by the user agent. WebVTT can also be used to provide chapter titles. For
-  users who would rather not use a media element at all, transcripts or other textual alternatives
-  can be provided by simply linking to them in the prose near the <{video}> element. [[WEBVTT]]
+    특히, 이 콘텐트는 접근성 문제들을 다루기 위해 의도된 것이 아닙니다. 비디오 콘텐트를 약시, 전맹, 
+  난청, 청각 장애, 기타 신체적 혹은 인지 장애들을 가진 사람들에게 접근 가능하도록 만들기 위해 다양한 
+  기능들이 사용 가능합니다. 캡션들이 비디오 스트림에 삽입되거나, <{track}> 요소(element)를 사용하여 
+  외부 파일로서 제공될 수 있습니다. 수화 트랙들이 비디오 스트림에 또 삽입되어 제공될 수 있습니다. 
+  오디오 설명들이 비디오 스트림에 삽입된 별도의 트랙으로서, 혹은 <{track}> 요소(element)를 사용하여 
+  참조되고 유저 에이전트에 의해 음성으로 합성되는 <a lt="WebVTT file">WebVTT 파일</a>을 사용하여 
+  텍스트 형식으로 제공될 수 있습니다. WebVTT는 또한 장면의 표제(chapter title)들을 제공하는데 사용될 
+  수 있습니다. 모든 미디어 요소(element)를 전혀 사용하지 않을 사용자들을 위해, 원고나 다른 대체 
+  텍스트들이 본문 내 <{video}> 요소(element) 가까이에 간단히 연결되는 것을 통해 제공될 수 있습니다.
+  [[WEBVTT]]
   </p>
 
-  The <{video}> element is a <a>media element</a> whose <a>media data</a> is
-  ostensibly video data, possibly with associated audio data.
+  <{video}> 요소(element)는 연관된 오디오 데이터를 가질 수 있는, <a lt="media data">미디어 데이터</a>가 
+  표면상 비디오 테이터인 <a lt="media element">미디어 요소</a> 입니다.
 
-  The <code>src</code>, <code>preload</code>,
-  <code>autoplay</code>, <code>loop</code>, <code>muted</code>, and <{video/controls}>
-  attributes are the attributes common to all media elements.
+  <code>src</code>, <code>preload</code>, <code>autoplay</code>, <code>loop</code>, 
+  <code>muted</code>, <{video/controls}> 속성(attribute)들은 모든 미디어 요소(element)들에 대해 공통 
+  속성(attribute)들 입니다.
 
-  The <dfn element-attr for="video"><code>poster</code></dfn> content attribute gives the address of an
-  image file that the user agent can show while no video data is available. The attribute, if
-  present, must contain a <a>valid non-empty URL potentially surrounded by spaces</a>.
+  <dfn element-attr for="video"><code>poster</code></dfn> 콘텐트 속성(attribute)은 사용 가능한 
+  비디오 데이터가 없을 경우 유저 에이전트가 보여줄 수 있는 이미지 파일의 주소를 제공합니다. 이 
+  속성(attribute)이 존재한다면 
+  <a lt="valid non-empty URL potentially surrounded by spaces">유효한 잠정적으로 공백으로 둘러 싸일 수 있는 비어있지 않은 URL</a>을 
+  포함해야(must) 합니다.
 
   <div class="impl">
 
-  If the specified resource is to be used, then, when the element is created or when the <code>poster</code> attribute is set, changed, or removed, the user agent must
-  run the following steps to determine the element's <dfn>poster frame</dfn> (regardless of the
-  value of the element's <a>show poster flag</a>):
+  명시된 리소스가 사용된다면, 요소(element)가 생성될 때나 <code>poster</code> 속성(attribute)이 설정, 
+  변경, 제거 될 경우, 유저 에이전트는 요소(element)의 <dfn lt="poster frame">포스터 프레임</dfn>을 
+  결정하기 위해 (요소(element)의 <a lt="show poster flag">포스터 표시 플래그</a>의 값에 상관없이) 
+  다음 단계들을 수행해야(must) 합니다:
 
   <ol>
 
-    <li>If there is an existing instance of this algorithm running for this <code>video</code>
-    element, abort that instance of this algorithm without changing the <a>poster
-    frame</a>.</li>
+    <li>이 <code>video</code> 요소(element)에 대해 수행하는 이 알고리즘의 기존의 인스턴스가 
+    존재한다면, <a lt="poster frame">포스터 프레임</a> 변경 없이 이 알고리즘의 그 인스턴스를 
+    중단합니다.</li>
 
-    <li>If the <code>poster</code> attribute's value is the empty string
-    or if the attribute is absent, then there is no <a>poster frame</a>; abort these
-    steps.</li>
+    <li><code>poster</code> 속성(attribute)의 값이 빈 문자열 이거나, 이 속성(attribute)이 없다면, 
+    <a lt="poster frame">포스터 프레임</a>은 존재하지 않습니다; 이 단계들을 중단합니다.</li>
 
-    <li><a>Parse</a> the <code>poster</code> attribute's value relative to the element. If this fails,
-    then there is no <a>poster frame</a>; abort these steps.</li>
+    <li><code>poster</code> 속성(attribute)의 값을 요소(element)에 관련하여 <a lt="parse">해석</a>합니다. 
+    이것이 실패한다면, <a lt="poster frame">포스터 프레임</a>은 존재하지 않습니다; 이 단계들을 중단합니다.</li>
 
-    <li>Let <var>request</var> be a new <a>request</a> whose
-    <a for="url">URL</a> is the <a>resulting URL string</a>,
-    <a>client</a> is the element's <a>node document</a>'s
-    <code>Window</code> object's <a>environment settings object</a>, <a for="request">type</a> is "<code>image</code>", <a>destination</a> is "<code>subresource</code>",
-    <a>credentials mode</a> is "<code>include</code>", and whose <a>use-URL-credentials flag</a> is set.
+    <li><var>request</var>를 <a for="url">URL</a>이 <a lt="resulting URL string">결과 URL 문자열</a>이고, 
+    <a lt="client">클라이언트</a>가 요소(element)의 <a lt="node document">노드 문서</a>의 
+    <code>Window</code> 객체의 <a lt="environment settings object">환경 설정 객체</a>이며, 
+    <a for="request" lt="type">유형</a>이 "<code>image</code>"이고, <a lt="destination">목적지</a>가
+    "<code>subresource</code>"이며, <a lt="credentials mode">자격 증명 모드</a>가 
+    "<code>include</code>"이고 <a lt="use-URL-credentials flag">URL 자격 증명 사용 플래그</a>가 
+    설정 된 새로운 <a lt="request">요청</a>으로 둡니다.
 
-    </li><li><a>Fetch</a> <var>request</var>. This must
-    <a>delay the load event</a> of the element's <a>node document</a>.</li>
+    </li><li><var>request</var>를 <a lt="fetch">가져(fetch)옵니다</a>. 이것은 요소(element)의 
+    <a lt="node document">노드 문서</a>의 <a lt="delay the load event">load 이벤트를 지연</a>시켜야(must) 
+    합니다.</li>
 
-    <li>If an image is thus obtained, the <a>poster frame</a> is that image. Otherwise,
-    there is no <a>poster frame</a>.</li>
+    <li>이미지가 얻어졌다면, <a lt="poster frame">포스터 프레임</a>은 그 이미지 입니다. 
+    그렇지 않으면, <a lt="poster frame">포스터 프레임</a>은 존재하지 않습니다.</li>
 
   </ol>
 
   </div>
 
   <p class="note">
-    The image given by the <code>poster</code> attribute,
-  the <i>poster frame</i>, is intended to be a representative frame of the
-  video (typically one of the first non-blank frames) that gives the user an idea of what the video
-  is like.
+    <code>poster</code> 속성(attribute)에 의해 주어진 이미지, <i>포스터 프레임</i>은 사용자에게 
+  비디오가 무엇인지의 느낌을 전달하는 비디오의 대표 프레임이 되도록 (일반적으로 첫 번째 비어 있지 
+  않은 프레임의 하나) 의도된 것입니다.
   </p>
 
   <div class="impl">
 
   <hr />
 
-  A <{video}> element represents what is given for the first matching condition in the
-  list below:
+  <{video}> 요소(element)는 다음 목록에 처음 일치하는 조건에 대해 주어진 것을 나타냅니다:
 
   <dl class="switch">
 
-    <dt>When no video data is available (the element's <code>readyState</code> attribute is either <code>HAVE_NOTHING</code>, or <code>HAVE_METADATA</code> but no video data has yet been obtained at
-    all, or the element's <code>readyState</code> attribute is any
-    subsequent value but the <a>media resource</a> does not have a video channel)</dt>
+    <dt>사용 가능한 비디오 데이터가 없는 경우 (요소(element)의 <code>readyState</code> 
+    속성(attribute)이 <code>HAVE_NOTHING</code> 이거나, <code>HAVE_METADATA</code>이지만 비디오 
+    데이터가 아직 전혀 얻어지지 않았거나, 요소(element)의 <code>readyState</code> 속성(attribute)이 
+    차후의 값이지만 <a lt="media resource">미디어 리소스</a>가 비디오 채널을 가지지 않는 경우)</dt>
 
-    <dd>The <{video}> element <a>represents</a> its <a>poster frame</a>, if any,
-    or else transparent black with no <a>intrinsic dimensions</a>.</dd>
+    <dd><{video}> 요소(element)는 그것의 <a lt="poster frame">포스터 프레임</a>이 있다면 
+    <a lt="poster frame">포스터 프레임</a>을, 그렇지 않으면 <a lt="intrinsic dimensions">고유 치수들</a>이 
+    없는 투명한 검정 화면을 <a lt="represents">나타냅니다</a>.</dd>
 
-    <dt>When the <{video}> element is <a>paused</a>, the <a>current playback position</a> is the first frame of video,
-    and the element's <a>show poster flag</a> is set</dt>
+    <dt><{video}> 요소(element)가 <a lt="paused">일시 중지</a>되고, 
+    <a lt="current playback position">현재 재생 위치</a>가 비디오의 첫 번째 프레임이고, 
+    요소(element)의 <a lt="show poster flag">포스터 표시 플래그</a>가 설정 된 경우</dt>
 
-    <dd>The <{video}> element <a>represents</a> its <a>poster frame</a>, if any,
-    or else the first frame of the video.</dd>
+    <dd><{video}> 요소(element)는 그것의 <a lt="poster frame">포스터 프레임</a>이 있다면 
+    <a lt="poster frame">포스터 프레임</a>을, 그렇지 않으면 비디오의 첫 번째 프레임을 
+    <a lt="represents">나타냅니다</a>.</dd>
 
-    <dt>When the <{video}> element is <a>paused</a>, and the
-    frame of video corresponding to the <a>current playback
-    position</a> is not available (e.g., because the video is seeking or buffering)</dt>
+    <dt><{video}> 요소(element)가 <a lt="paused">일시 중지</a>되었고, 
+    <a lt="current playback position">현재 재생 위치</a>에 해당하는 비디오의 프레임이 사용 가능하지 
+    않은 경우(예를 들어, 비디오가 탐색 중이거나 버퍼링 중이기 때문에)</dt>
 
-    <dt>When the <{video}> element is neither <a>potentially playing</a> nor <a>paused</a> (e.g., when seeking or stalled)</dt>
+    <dt><{video}> 요소(element)가 <a lt="potentially playing">재생 중 일 수 있지도</a> 
+    <a lt="paused">일시 중지</a> 되지도 않은 경우 (예를 들어 탐색 중이거나 멈춘(stalled) 경우)</dt>
 
-    <dd>The <{video}> element <a>represents</a> the last frame of the video to have
-    been rendered.</dd>
+    <dd><{video}> 요소(element)는 렌더링 된 비디오의 마지막 프레임을 
+    <a lt="represents">나타냅니다</a>.</dd>
 
-    <dt>When the <{video}> element is <a>paused</a></dt>
+    <dt><{video}> 요소(element)가 <a lt="paused">일시 중지</a> 된 경우</dt>
 
-    <dd>The <{video}> element <a>represents</a> the frame of video corresponding to
-    the <a>current playback position</a>.</dd>
+    <dd><{video}> 요소(element)는 <a lt="current playback position">현재 재생 위치</a>에 해당하는 
+    비디오의 프레임을 <a lt="represents">나타냅니다</a>.</dd>
 
-    <dt>Otherwise (the <{video}> element has a video channel and is <a>potentially
-    playing</a>)</dt>
+    <dt>그 외 (<{video}> 요소(element)가 비디오 채널을 가지며 
+    <a lt="potentially playing">재생 중 일 수</a>있는)</dt>
 
-    <dd>The <{video}> element <a>represents</a> the frame of video at the continuously
-    increasing <a lt="current position">"current" position</a>. When the
-    <a>current playback position</a> changes such that the last frame rendered is no longer the
-    frame corresponding to the <a>current playback position</a> in the video, the new frame
-    must be rendered.</dd>
+    <dd><{video}> 요소(element)는 계속적으로 증가하는 <a lt="current position">"현재" 위치</a>의 
+    비디오 프레임을 <a lt="represents">나타냅니다</a>. <a lt="current playback position">현재 재생 위치</a>가 
+    렌더링 된 마지막 프레임이 비디오에서 더 이상 <a lt="current playback position">현재 재생 위치</a>에 
+    일치하지 않는 프레임으로 변경하는 경우, 새로운 프레임이 렌더링 되어야(must) 합니다.</dd>
 
   </dl>
 
-  Frames of video must be obtained from the video track that was <a>selected</a> when the <a>event loop</a> last reached
-  step 1.
+  비디오의 프레임들은 마지막으로 <a lt="event loop">이벤트 루프</a>가 단계 1에 도달했을 때 
+  <a lt="selected">선택</a> 되었던 비디오 트랙으로부터 얻어져야(must) 합니다.
 
   <p class="note">
-    Which frame in a video stream corresponds to a particular playback position is
-  defined by the video stream's format.
+    특정 재생 위치에 해당하는 비디오 스트림에서 프레임은 비디오 스트림의 형식에 의해 정의됩니다.
   </p>
 
-  The <{video}> element also <a>represents</a> any <a>text track cues</a> whose <a>text track cue active flag</a> is set and whose
-  <a>text track</a> is in the <a mode for="track">showing</a> mode, and any
-  audio from the <a>media resource</a>, at the <a>current playback position</a>.
+  <{video}> 요소(element)는 또한 <a lt="current playback position">현재 재생 위치</a>에, 
+  <a lt="text track cue active flag">텍스트 트랙 큐 활성화 플래그</a>가 설정되고 
+  <a lt="text track">텍스트 트랙</a>이 <a mode for="track" lt="showing">표시</a> 모드에 있는 모든 
+  <a lt="text track cues">텍스트 트랙 큐들</a>과 <a lt="media resource">미디어 리소스</a>로부터의 
+  오디오를 <a lt="represents">나타냅니다</a>.
 
-  Any audio associated with the <a>media resource</a> must, if played, be played
-  synchronized with the <a>current playback position</a>, at the element's <a>effective
-  media volume</a>. The user agent must play the audio from audio tracks that were enabled when the <a>event loop</a> last reached step 1.
+  <a lt="media resource">미디어 리소스</a>와 연관된 모든 오디오는, 재생 되었다면, 요소(element)의 
+  <a lt="effective media volume">유효한 미디어 볼륨</a>에 
+  <a lt="current playback position">현재 재생 위치</a>와 동시에 재생 되어야(must) 합니다. 유저  
+  에이전트는 마지막으로 <a lt="event loop">이벤트 루프</a>가 단계 1에 도달했을 때 활성화 되었던  
+  오디오 트랙들로부터 오디오를 재생해야(must) 합니다.
 
-  In addition to the above, the user agent may provide messages to the user (such as "buffering",
-  "no video loaded", "error", or more detailed information) by overlaying text or icons on the video
-  or other areas of the element's playback area, or in another appropriate manner.
+  위의 것에 추가적으로, 유저 에이전트는 사용자에게 메세지를 ("버퍼링 중", "로드된 비디오 없음", 
+  "오류", 또는 더 자세한 정보와 같은) 비디오 위 혹은 요소(element)의 재생 영역의 다른 영역들에 
+  텍스트나 아이콘들을 중첩시키거나, 다른 적절한 방법으로 제공 할 수 있습니다.
 
-  User agents that cannot render the video may instead make the element <a>represent</a> a link to an external video playback utility or to the video
-  data itself.
+  비디오를 렌더링 할 수 없는 유저 에이전트들은 대신 외부 비디오 재생 유틸리티로의 링크나 비디오 
+  데이터 자체로의 링크를 <a lt="represents">나타내는</a> 요소(element)를 만들 수 있습니다.
 
-  When a <{video}> element's <a>media resource</a> has a video channel, the
-  element <a>provides a paint source</a> whose width is the <a>media resource</a>'s
-  <a for="video">intrinsic width</a>, whose height is the
-  <a>media resource</a>'s <a for="video">intrinsic height</a>, and whose appearance is
-  the frame of video corresponding to the <a>current playback position</a>, if that is available, or else
-  (e.g., when the video is seeking or buffering) its previous appearance, if any, or else (e.g.,
-  because the video is still loading the first frame) blackness.
+  <{video}> 요소(element)의 <a lt="media resource">미디어 리소스</a>가 비디오 채널을 가지는 경우, 
+  요소(element)는 너비가 <a lt="media resource">미디어 리소스</a>의 
+  <a for="video" lt="intrinsic width">고유 너비</a>이고, 높이가 <a lt="media resource">미디어 리소스</a>의 
+  <a for="video" lt="intrinsic height">고유 높이</a>이며, 모양이 
+  <a lt="current playback position">현재 재생 위치</a>에 해당하는 비디오의 프레임이 가능하다면 그 
+  프레임인, 그렇지 않으면 (예를 들어 비디오가 탐색 중이거나 버퍼링 중인 경우) 이전 모양이 있다면 이전 
+  모양을, 그렇지 않으면 (예를 들어 비디오가 여전히 첫 번째 프레임을 로딩 중이기 때문에) 검은색 
+  <a lt="provides a paint source">그림 소스를 제공</a>합니다.
 
   <hr />
 
@@ -5379,8 +5391,7 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
 
     <dd>
 
-    These attributes return the intrinsic dimensions of the video,
-    or zero if the dimensions are not known.
+    이 속성(attribute)들은 비디오의 고유 치수들을 반환하거나, 치수들을 알 수 없다면 0을 반환합니다.
 
     </dd>
 
@@ -5388,83 +5399,98 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
 
   <div class="impl">
 
-  The <dfn for='video'>intrinsic width</dfn> and <dfn for='video'>intrinsic height</dfn> of the <a>media resource</a>
-  are the dimensions of the resource in CSS pixels after taking into account the resource's
-  dimensions, aspect ratio, clean aperture, resolution, and so forth, as defined for the format used
-  by the resource. If an anamorphic format does not define how to apply the aspect ratio to the
-  video data's dimensions to obtain the "correct" dimensions, then the user agent must apply the
-  ratio by increasing one dimension and leaving the other unchanged.
+  <a lt="media resource">미디어 리소스</a>의 <dfn for='video' lt="intrinsic width">고유 너비</dfn>와 
+  <dfn for='video' lt="intrinsic height">고유 높이</dfn>는 리소스에 의해 사용되는 형식에 대해 정의된 
+  것으로서, 리소스의 치수들, 화면 종횡비, clean aperture, 해상도, 기타 등등을 고려하여 CSS 픽셀로 
+  리소스의 치수입니다. 아나모픽(anamorphic) 형식이 "올바른" 치수들을 얻어오기 위해 종횡비를 비디오 
+  데이터의 치수들에 적용하는 방법을 정의하지 않는다면, 유저 에이전트는 한쪽 치수를 증가시키고 다른 
+  변하지 않은 것은 그대로 둠으로 비율을 적용해야(must) 합니다.
 
-  The <dfn attribute for="HTMLVideoElement"><code>videoWidth</code></dfn> IDL attribute must return
-  the <a for='video'>intrinsic width</a> of the video in CSS pixels.
-  The <dfn attribute for="HTMLVideoElement"><code>videoHeight</code></dfn> IDL attribute must return
-  the <a for='video'>intrinsic height</a> of the video in CSS
-  pixels. If the element's <code>readyState</code> attribute is <code>HAVE_NOTHING</code>, then the attributes must return 0.
+  <dfn attribute for="HTMLVideoElement"><code>videoWidth</code></dfn> IDL 속성(attribute)은 비디오의 
+  <a for='video' lt="intrinsic width">고유 너비</a>를 CSS 픽셀로 반환해야(must) 합니다. 
+  <dfn attribute for="HTMLVideoElement"><code>videoHeight</code></dfn> IDL 속성(attribute)은 비디오의 
+  <a for='video' lt="intrinsic height">고유 높이</a>를 CSS 픽셀로 반환해야(must) 합니다. 요소(element)의 
+  <code>readyState</code> 속성(attribute)이 <code>HAVE_NOTHING</code>이라면, 속성(attribute)은 0을 
+  반환해야(must) 합니다.
 
-  Whenever the <a for='video'>intrinsic width</a>
-  or <a for='video'>intrinsic height</a> of the video changes
-  (including, for example, because the selected video
-  track was changed), if the element's <code>readyState</code>
-  attribute is not <code>HAVE_NOTHING</code>, the user agent must
-  <a>queue a task</a> to <a>fire a simple event</a> named <code>resize</code> at the <a>media element</a>.
+  비디오의 <a for='video' lt="intrinsic width">고유 너비</a>나 
+  <a for='video' lt="intrinsic height">고유 높이</a>가 변경될 때 마다 (예를들어, 선택 된 비디오 
+  트랙이 변경되는 경우를 포함하여), 요소(element)의 <code>readyState</code> 속성이 
+  <code>HAVE_NOTHING</code>이 아니라면, 유저 에이전트는 <a lt="media element">미디어 요소</a>에 
+  <code>resize</code>라고 이름이 붙은 <a lt="fire a simple event">단순 이벤트를 발생</a>시키기 위한 
+  <a lt="queue a task">작업을 대기열에 넣어야</a>(must) 합니다.
 
   </div>
 
-  The <{video}> element supports <a>dimension attributes</a>.
+  <{video}> 요소(element)는 <a lt="dimension attributes">치수 속성(attribute)들</a>을 지원합니다.
 
   <div class="impl">
 
-  In the absence of style rules to the contrary, video content should be rendered inside the
-  element's playback area such that the video content is shown centered in the playback area at the
-  largest possible size that fits completely within it, with the video content's aspect ratio being
-  preserved. Thus, if the aspect ratio of the playback area does not match the aspect ratio of the
-  video, the video will be shown letterboxed or pillarboxed. Areas of the element's playback area
-  that do not contain the video represent nothing.
+  반대로 스타일 규칙이 없는 경우, 비디오 콘텐트는 비디오 콘텐트의 종횡비가 보존되면서 비디오 
+  콘텐트가 그 내부에 완전히 맞는 가능한 가장 큰 사이즈의 재생 영역 가운데로 보여지는 요소(element)의 
+  재생 영역 안에 렌더링 되어야(should) 합니다. 따라서, 재생 영역의 종횡비가 비디오의 종횡비와 
+  매칭되지 않는다면, 비디오는 레터박스나 필러박스로 보여질 것입니다. 비디오를 포함하지 않는 
+  요소(element)의 재생 영역의 영역은 아무 것도 나타내지 않습니다.
 
-  <p class="note">
-    In user agents that implement CSS, the above requirement can be implemented by
-  using the style rule suggested in [[#rendering]].
+  <p class="translator-note">
+    <dl>
+        <dt>레터박스(letterboxed)</dt> 
+        <dd>16 : 9를 4 : 3에 맞추는 방법</dd>
+        <dt>필러박스(pillarboxed)</dt>
+        <dd>4 : 3을 16 : 9에 맞추는 방법</dd>
+    </dl>
   </p>
 
-  The <a for="css">intrinsic width</a> of a <{video}> element's playback area is the
-  <a for="css">intrinsic width</a> of the <a>poster frame</a>, if that is available and the
-  element currently <a>represents</a> its poster frame; otherwise, it is the <a for="video">intrinsic width</a> of the video resource, if that is
-  available; otherwise the <a for="css">intrinsic width</a> is missing.
+  <p class="note">
+    CSS를 구현하는 유저 에이전트들에서, 위 요구사항은 [[#rendering]]에 제안된 스타일 규칙을 사용하여 
+  구현될 수 있습니다.
+  </p>
 
-  The <a for="css">intrinsic height</a> of a <{video}> element's playback area is the
-  <a for="css">intrinsic height</a> of the <a>poster frame</a>, if that is available and the
-  element currently <a>represents</a> its poster frame; otherwise it is the <a for="video">intrinsic height</a> of the video resource, if that is
-  available; otherwise the <a for="css">intrinsic height</a> is missing.
+  <a lt="poster frame">포스터 프레임</a>의 <a for="css" lt="intrinsic width">고유 너비</a>가 사용 
+  가능하고 요소(element)가 현재 그것의 포스터 프레임을 <a lt="represents">나타낸다면</a>, <{video}> 
+  요소(element)의 재생 영역의 <a for="css" lt="intrinsic width">고유 너비</a>는 
+  <a lt="poster frame">포스터 프레임</a>의 <a for="css" lt="intrinsic width">고유 너비</a>이고; 
+  그렇지 않고 비디오 리소스의 <a for="css" lt="intrinsic width">고유 너비</a>가 사용 가능하다면 
+  비디오 리소스의 <a for="css" lt="intrinsic width">고유 너비</a>이며; 그렇지 않으면 
+  <a for="css" lt="intrinsic width">고유 너비</a>는 누락 된 것입니다.
 
-  The <a>default object size</a> is a width of 300 CSS pixels and a height of 150 CSS
-  pixels. [[!CSS3-IMAGES]]
+  <a lt="poster frame">포스터 프레임</a>의 <a for="css" lt="intrinsic height">고유 높이</a>가 사용 
+  가능하고 요소(element)가 현재 그것의 포스터 프레임을 <a lt="represents">나타낸다면</a>, <{video}> 
+  요소(element)의 재생 영역의 <a for="css" lt="intrinsic height">고유 높이</a>는 
+  <a lt="poster frame">포스터 프레임</a>의  <a for="css" lt="intrinsic height">고유 높이</a>이고;
+  그렇지 않고 비디오 리소스의 <a for="css" lt="intrinsic height">고유 높이</a>가 사용 가능하다면 
+  비디오 리소스의 <a for="css" lt="intrinsic height">고유 높이</a>이며; 그렇지 않으면 
+  <a for="css" lt="intrinsic height">고유 높이</a>는 누락 된 것입니다.
 
-  <hr />
-
-  User agents should provide controls to enable or disable the display of closed captions, audio
-  description tracks, and other additional data associated with the video stream, though such
-  features should, again, not interfere with the page's normal rendering.
-
-  User agents may allow users to view the video content in manners more suitable to the user
-  (e.g., fullscreen or in an independent resizable window). As for the other user interface
-  features, controls to enable this should not interfere with the page's normal rendering unless the
-  user agent is <a>exposing a user interface</a>.
-  In such an independent context, however, user agents may make full user interfaces visible even
-  if the <{mediaelements/controls}> attribute is absent.
-
-  User agents may allow video playback to affect system features that could interfere with the
-  user's experience; for example, user agents could disable screensavers while video playback is in
-  progress.
+  <a lt="default object size">기본 객체 크기</a>는 너비 300px과 높이 150px 입니다. [[!CSS3-IMAGES]]
 
   <hr />
 
-  The <dfn><code>poster</code></dfn> IDL attribute must
-  <a>reflect</a> the <code>poster</code> content attribute.
+  유저 에이전트들은 폐쇄 자막(closed caption)들의 표시, 오디오 설명 트랙들, 비디오 스트림과 연관된 
+  다른 추가적인 데이터를 활성화 혹은 비활성화하는 컨트롤들을 제공해야(should)하지만, 그 기능들이 
+  페이지의 일반적인 렌더링을 방해하지 않아야(should) 합니다.
+
+  유저 에이전트들은 사용자에게 좀 더 적절한 방법들로 (예를 들어, 풀 스크린이나 독립된 사이즈 조절 
+  가능한 창에서) 비디오 콘텐트를 보는 것을 허용할 수 있습니다. 다른 유저 인터페이스 기능의 경우, 
+  이를 활성화하기 위한 컨트롤은 유저 에이전트가 
+  <a lt="exposing a user interface">유저 인터페이스를 노출 중</a>이 아닌 한 페이지의 일반적인 렌더링을 
+  방해하지 않아야(should) 합니다. 그러나 그러한 독립적인 컨텍스트에서, 유저 에이전트들은 
+  <{mediaelements/controls}> 속성(attribute)이 없다하더라도 전체 사용자 인터페이스들을 표시할 수 
+  있습니다.
+
+  유저 에이전트들은 비디오 재생이 사용자 경험을 방해할 수 있는 시스템 기능들에 영향을 주는 것을 
+  허용할 수 있습니다; 예를 들어, 유저 에이전트들은 비디오 재생이 처리 중인 동안 화면보호기들을 
+  비활성화 할 수 있습니다.
+
+  <hr />
+
+  <dfn><code>poster</code></dfn> IDL 속성(attribute)은 <code>poster</code> 콘텐트 속성(attribute)을 
+  <a lt="reflect">반영</a>해야(must) 합니다.
 
   </div>
 
   <div class="example">
-    This example shows how to detect when a video has failed to play correctly:
+    이 예는 비디오가 제대로 재생하지 못한 경우를 감지하는 방법을 보여줍니다:
 
     <pre highlight="html">
 &lt;script&gt;
@@ -5495,44 +5521,43 @@ My &lt;img src="heart.png" alt="heart"&gt; breaks.
 
   </div>
 
-<h4 id="the-audio-element">The <dfn element><code>audio</code></dfn> element</h4>
+<h4 id="the-audio-element"><dfn element><code>audio</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd><a>Flow content</a>.</dd>
-    <dd><a>Phrasing content</a>.</dd>
-    <dd><a>Embedded content</a>.</dd>
-    <dd>If the element has a <{audio/controls}> attribute: <a>Interactive content</a>.</dd>
-    <dd>If the element has a <{audio/controls}> attribute: <a>Palpable content</a>.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>Where <a>embedded content</a> is expected.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd>If the element has a <code>src</code> attribute:
-zero or more <{track}> elements, then
-<a>transparent</a>, but with no <a>media element</a> descendants.</dd>
-    <dd>If the element does not have a <code>src</code> attribute: zero or more <{source}> elements, then
-  zero or more <{track}> elements, then
-  <a>transparent</a>, but with no <a>media element</a> descendants.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>Neither tag is omissible</dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>src</code> - Address of the resource</dd>
-    <dd><code>crossorigin</code> - How the element handles crossorigin requests</dd>
-    <dd><code>preload</code> - Hints how much buffering the
-    <a>media resource</a> will likely need</dd>
-    <dd><code>autoplay</code> - Hint that the <a>media resource</a>
-    can be started automatically when the page is loaded</dd>
-    <dd><code>loop</code> - Whether to loop the <a>media resource</a></dd>
-    <dd><code>muted</code> - Whether to mute the <a>media resource</a> by default</dd>
-    <dd><{audio/controls}> - Show user agent controls</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd><a lt="flow content">흐름(flow) 콘텐트</a>.</dd>
+    <dd><a lt="phrasing content">어구(phrasing) 콘텐트</a>.</dd>
+    <dd><a lt="Embedded content">삽입(embedded) 콘텐트</a>.</dd>
+    <dd>요소(element)가 <{audio/controls}> 속성(attribute)을 가진다면: <a lt="interactive content">대화형(interactive) 콘텐트</a>.</dd>
+    <dd>요소(element)가 <{audio/controls}> 속성(attribute)을 가진다면: <a lt="palpable content">분명한(palpable) 콘텐트</a>.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="embedded content">삽입(embedded) 콘텐트</a>가 예상되는 곳.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd>요소(element)가 <code>src</code> 속성(attribute)을 가진다면: 0개 이상의 <{track}> 
+    요소(element)들, 그 뒤로 후손 <a lt="media element">미디어 요소(element)</a>들이 없는 
+    <a lt="transparent">투명</a></dd>
+    <dd>요소(element)가 <code>src</code> 속성(attribute)을 가지지 않는다면: 0개 이상의 <{source}> 
+    요소(element)들, 그 뒤로 0개 이상의 <{track}> 요소(element)들, 그 뒤로 후손 
+    <a lt="media element">미디어 요소(element)</a>들이 없는 <a lt="transparent">투명</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd>어느 태그도 생략 가능하지 않습니다</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>src</code> - 리소스의 주소</dd>
+    <dd><code>crossorigin</code> - 요소(element)가 crossorigin 요청들을 처리하는 방법</dd>
+    <dd><code>preload</code> - <a lt="media resource">미디어 리소스</a>를 얼마나 많이 버퍼링 해야
+    하는지에 대한 힌트</dd>
+    <dd><code>autoplay</code> - 페이지가 로드 될 때 <a lt="media resource">미디어 리소스</a>가
+    자동으로 시작될 수 있는지에 대한 힌트</dd>
+    <dd><code>loop</code> - <a lt="media resource">미디어 리소스</a>를 반복할지 여부</dd>
+    <dd><code>muted</code> - 기본적으로 <a lt="media resource">미디어 리소스</a>를 음소거 할지 여부</dd>
+    <dd><{audio/controls}> - 유저 에이전트 컨트롤들 표시</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
     <dd><a value for="role"><code>application</code></a>.</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dd>Any <code>aria-*</code> attributes
-    <a href="#allowed-aria-roles-states-and-properties">applicable to the allowed roles</a>.</dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dd><a href="#allowed-aria-roles-states-and-properties">허용된 역할(role)들에 적용 가능한</a> 모든 <code>aria-*</code> 속성(attribute)들.</dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
     <pre class="idl" data-highlight="webidl" dfn-for="HTMLAudioElement">
       [NamedConstructor=Audio(optional DOMString src)]
@@ -5541,40 +5566,41 @@ zero or more <{track}> elements, then
     </dd>
   </dl>
 
-  An <{audio}> element <a>represents</a> a sound or audio stream.
+  <{audio}> 요소(element)는 사운드나 오디오 스트림을 <a lt="represents">나타냅니다</a>.
 
-  Content may be provided inside the <{audio}> element<span class="impl">. User agents
-  should not show this content to the user</span>; it is intended for older Web browsers which do
-  not support <{audio}>, so that legacy audio plugins can be tried, or to show text to the
-  users of these older browsers informing them of how to access the audio contents.
+  콘텐트는 <{audio}> 요소(element) 내에 제공될 수 있습니다<span class="impl">. 유저 에이전트들은 
+  사용자에게 이 콘텐트를 보여주지 않아야(should) 합니다.</span>; 이는 <{audio}>를 지원하지 않는 구형 
+  웹 브라우저를 위해 의도된 것이기 때문에, 레거시 오디오 플러그인들이 시도될 수 있거나, 또는 이 구형 
+  브라우저들의 사용자들에게 오디오 콘텐트에 접근하는 방법의 유용한 텍스트를 보여주기 위한 것입니다.
 
   <p class="note">
-    In particular, this content is not intended to address accessibility concerns. To
-  make audio content accessible to the deaf or to those with other physical or cognitive
-  disabilities, a variety of features are available. If captions or a sign language video are
-  available, the <{video}> element can be used instead of the <{audio}> element to
-  play the audio, allowing users to enable the visual alternatives. Chapter titles can be provided
-  to aid navigation, using the <{track}> element and a <a>WebVTT file</a>. And,
-  naturally, transcripts or other textual alternatives can be provided by simply linking to them in
-  the prose near the <{audio}> element. [[WEBVTT]]
+    특히, 이 콘텐트는 접근성 문제를 다루기 위해 의도된 것이 아닙니다. 오디오 콘텐트를 청각 장애나 
+  기타 신체적 혹은 인지 장애를 가진 사람들에게 접근 가능하도록 만들기 위해 다양한 기능들이 사용 
+  가능합니다. 캡션들이나 수화 동영상이 사용 가능하다면, 사용자에게 시각적 대안들을 가능하도록 하는
+  <{video}> 요소(element)가 오디오를 재생하기 위해 <{audio}> 요소(element) 대신 사용될 수 있습니다.
+  <{track}> 요소(element)와 <a lt="WebVTT file">WebVTT 파일</a>을 사용하여, 
+  장면의 표제(chapter title)들이 탐색을 돕기 위해 제공될 수 있습니다. 그리고, 당연히, 원고나 다른 
+  대체 텍스트들이 본문 내 <{audio}> 요소(element) 가까이에 간단히 연결되는 것을 통해 제공될 수 
+  있습니다. [[WEBVTT]]
   </p>
 
-  The <{audio}> element is a <a>media element</a> whose <a>media data</a> is
-  ostensibly audio data.
+  <{audio}> 요소(element)는 <a lt="media data">미디어 데이터</a>가 표면상 오디오 데이터인 
+  <a lt="media element">미디어 요소</a>입니다.
 
-  The <code>src</code>, <code>preload</code>,
-  <code>autoplay</code>, <code>loop</code>, <code>muted</code>, and <{audio/controls}>
-  attributes are the attributes common to all media elements.
+  <code>src</code>, <code>preload</code>, <code>autoplay</code>, <code>loop</code>, 
+  <code>muted</code>, <{audio/controls}> 속성(attribute)들은 모든 미디어 요소(element)들에 대해 공통 
+  속성(attribute)들 입니다.
 
   <div class="impl">
 
-  When an <{audio}> element is <a>potentially playing</a>, it must have its audio
-  data played synchronized with the <a>current playback position</a>, at the element's
-  <a>effective media volume</a>. The user agent must play the audio from audio tracks that
-  were enabled when the <a>event loop</a> last reached step 1.
+  <{audio}> 요소(element)가 <a lt="potentially playing">재생 중 일 수</a>있는 경우, 요소(element)의 
+  <a lt="effective media volume">유효한 미디어 볼륨</a>에 
+  <a lt="current playback position">현재 재생 위치</a>와 동시에 재생 되어야(must) 합니다. 유저 
+  에이전트는 마지막으로 <a lt="event loop">이벤트 루프</a>가 단계 1에 도달했을 때 활성화 되었던 
+  오디오 트랙들로부터 오디오를 재생해야(must) 합니다.
 
-  When an <{audio}> element is not <a>potentially playing</a>, audio must not play
-  for the element.
+  <{audio}>  요소(element)가 <a lt="potentially playing">재생 중 일 수</a>있지 않을 때, 오디오는 
+  요소(element)에 대해 재생하지 않아야(must) 합니다.
 
   </div>
 
@@ -5584,8 +5610,8 @@ zero or more <{track}> elements, then
 
     <dd>
 
-    Returns a new <{audio}> element, with the <code>src</code>
-    attribute set to the value passed in the argument, if applicable.
+    인자로 전달된 값으로 설정된 <code>src</code> 속성(attribute)이 적절하다면 이 속성(attribute)을 
+    가지고 새로운 <{audio}> 요소(element)를 반환합니다.
 
     </dd>
 
@@ -5593,39 +5619,41 @@ zero or more <{track}> elements, then
 
   <div class="impl" id='audio'>
 
-  A constructor is provided for creating <code>HTMLAudioElement</code> objects (in addition to
-  the factory methods from DOM such as <code>createElement()</code>): <dfn constructor for="HTMLAudioElement"><code>Audio(<var>src</var>)</code></dfn>. When invoked as a
-  constructor, it must return a new <code>HTMLAudioElement</code> object (a new <code>audio</code>
-  element). The element must be created with its <code>preload</code>
-  attribute set to the literal value "<code>auto</code>". If the
-  <var>src</var> argument is present, the object created must be created with its <code>src</code> content attribute set to the provided value (this will cause the user agent to invoke the object's
-  <a>resource selection algorithm</a> before returning).
-  The element's <a>node document</a> must be the <a>active document</a> of the <a>browsing context</a> of the <code>Window</code> object on which the interface object of the invoked
-  constructor is found.
+  (<code>createElement()</code>과 같은 DOM 팩토리 메서드들 뿐 아니라) <code>HTMLAudioElement</code> 
+  객체들을 생성하기 위한 생성자가 제공됩니다: 
+  <dfn constructor for="HTMLAudioElement"><code>Audio(<var>src</var>)</code></dfn>). 생성자로서 호출 
+  될 경우, 이는 새로운 <code>HTMLAudioElement</code> 객체 (새로운 <code>audio</code> 요소(element))를 
+  반환해야(must) 합니다. 요소(element)는 리터럴 값 "<code>auto</code>"로 설정 된 <code>preload</code> 
+  속성(attribute)을 가지고 생성되어야(must) 합니다. <var>src</var> 인자가 존재한다면, 객체는 제공된 
+  값으로 설정된 <code>src</code> 콘텐트 속성을 가지고 생성되어여(must) 합니다 (이것은 유저 에이전트가 
+  반환 이전에 객체의 <a lt="resource selection algorithm">리소스 선택 알고리즘</a>을 호출하게 될 
+  것입니다). 요소(element)의 <a lt="node document">노드 문서</a>는 작동된 생성자의 인터페이스 객체가 
+  발견되는 <code>Window</code> 객체의 <a lt="browsing context">브라우징 컨텍스트</a>의 
+  <a lt="active document">활성 문서</a>이어야(must) 합니다.
 
   </div>
 
-<h4 id="the-source-element">The <dfn element for="media"><code>source</code></dfn> element</h4>
+<h4 id="the-source-element"><dfn element for="media"><code>source</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd>None.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>As a child of a <a>media element</a>, before any <a>flow content</a>
-  or <{track}> elements.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Nothing</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>No <a>end tag</a></dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>src</code> - Address of the resource</dd>
-    <dd><code>type</code> - Type of embedded resource</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd>None</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd>없음.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="media element">미디어 요소(element)의</a> 자식으로서, 모든 
+    <a lt="flow content">흐름(flow) 콘텐트</a>나 <{track}> 요소(element)들 이전에.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Nothing">없음</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd><a lt="end tag">종료 태그</a> 없음.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>src</code> - 리소스의 주소</dd>
+    <dd><code>type</code> - 삽입된 리소스의 유형</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd>없음</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLSourceElement">
         interface HTMLSourceElement : HTMLElement {
@@ -5636,94 +5664,99 @@ zero or more <{track}> elements, then
     </dd>
   </dl>
 
-  The <{source}> element allows authors to specify multiple alternative <a>media resources</a> for <a>media elements</a>. It does not <a>represent</a> anything on its own.
+  <{source}> 요소(element)는 작성자들이 <a lt="media elements">미디어 요소(element)들</a>에 대한 
+  여러 대체 <a lt="media resources">미디어 리소스들</a>을 명시하는 것이 허용됩니다. 이 
+  요소(element)는 스스로 아무 것도 <a lt="represent">나타내지</a> 않습니다.
 
-  The <dfn element-attr for="source"><code>src</code></dfn> attribute gives the address of the
-  <a>media resource</a>. The value must be a <a>valid non-empty URL potentially surrounded
-  by spaces</a>. This attribute must be present.
+  <dfn element-attr for="source"><code>src</code></dfn> 속성(attribute)은 
+  <a lt="media resource">미디어 리소스</a>의 주소를 제공합니다. 값은 <a lt="valid non-empty URL potentially surrounded by spaces">유효한 잠정적으로 공백으로 둘러 싸일 수 있는 비어있지 않은 URL</a>이어야(must)
+  합니다. 이 속성(attribute)은 반드시 존재해야(must) 합니다.
 
   <p class="note">
-    Dynamically modifying a <{source}> element and its attribute when the
-  element is already inserted in a <code>video</code> or <{audio}> element will have no
-  effect. To change what is playing, just use the <code>src</code> attribute
-  on the <a>media element</a> directly, possibly making use of the <code>canPlayType()</code> method to pick from amongst available
-  resources. Generally, manipulating <{source}> elements manually after the document has
-  been parsed is an unnecessarily complicated approach.
+    <{source}> 요소(element)가 이미 <code>video</code>나 <{audio}> 요소(element)에 삽입 되었을 경우 
+  동적으로 <{source}> 요소(element)와 그것의 속성(attribute)을 수정하는 것은 아무런 영향을 가지지 
+  않습니다. 재생되고 있는 것을 변경하기 위해서는, 단지 사용 가능한 리소스들 중에서 선택하기 위해 
+  아마도 <code>canPlayType()</code> 메서드를 활용하여, 직접적으로 
+  <a lt="media element">미디어 요소(element)</a>에 <code>src</code> 속성(attribute)을 사용하세요. 
+  일반적으로, 문서가 해석된 이후 <{source}> 요소(element)를 수동으로 조작하는 것은 불필요하게 복잡한 
+  접근입니다.
   </p>
 
-  The <dfn element-attr for="source"><code>type</code></dfn> content attribute gives the type of the
-  <a>media resource</a>, to help the user agent determine if it can play this <a>media
-  resource</a> before fetching it. If specified, its value must be a <a>valid MIME
-  type</a>. The <code>codecs</code> parameter, which certain MIME types define, might be
-  necessary to specify exactly how the resource is encoded. [[!RFC6381]]
+  <dfn element-attr for="source"><code>type</code></dfn> 콘텐트 속성(attribute)은 
+  <a lt="media resource">미디어 리소스</a>를 가져오기(fetch) 전에 이 
+  <a lt="media resource">미디어 리소스</a>를 재생할 수 있는지의 여부를 유저 에이전트가 판단하는 것을 
+  돕기 위해 <a lt="media resource">미디어 리소스</a>의 유형을 제공합니다. 명시된 경우, 그것의 값은 
+  <a lt="valid MIME type">유효한 MIME 타입</a>이어야(must) 합니다. 특정 MIME 타입들이 정의하는 
+  <code>codecs</code> 파라미터는 리소스가 인코드 되는 방법을 정확하게 지정하기 위해 필요할 수 
+  있습니다. [[!RFC6381]]
 
   <div class="example">
-    The following list shows some examples of how to use the <code>codecs=</code> MIME
-    parameter in the <code>type</code> attribute.
+    다음 목록은 <code>type</code> 속성(attribute)에 <code>codecs=</code> MIME 파라미터를 사용하는 
+    방법의 몇 가지 예를 보여줍니다.
 
     <dl>
 
-    <dt>H.264 Constrained baseline profile video (main and extended video compatible) level 3 and Low-Complexity AAC audio in MP4 container</dt>
+    <dt>MP4 컨테이너 내 H.264 CBP 비디오 (main, extended video와 호환가능) 레벨 3과 AAC LC 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='video.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'&gt;
     </pre></dd>
 
-    <dt>H.264 Extended profile video (baseline-compatible) level 3 and Low-Complexity AAC audio in MP4 container</dt>
+    <dt>MP4 컨테이너 내 H.264 Extended profile 비디오 (baseline-compatible) 레벨 3과 AAC LC 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='video.mp4' type='video/mp4; codecs="avc1.58A01E, mp4a.40.2"'&gt;
     </pre></dd>
 
-    <dt>H.264 Main profile video level 3 and Low-Complexity AAC audio in MP4 container</dt>
+    <dt>MP4 컨테이너 내 H.264 Main profile 비디오 레벨 3과 AAC LC 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='video.mp4' type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'&gt;
     </pre></dd>
 
-    <dt>H.264 &quot;High&quot; profile video (incompatible with main, baseline, or extended profiles) level 3 and Low-Complexity AAC audio in MP4 container</dt>
+    <dt>MP4 컨테이너 내 H.264 'High' profile 비디오 (main, baseline, extended profiles과 호환되지 않음) 레벨 3과 AAC LC 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='video.mp4' type='video/mp4; codecs="avc1.64001E, mp4a.40.2"'&gt;
     </pre></dd>
 
-    <dt>MPEG-4 Visual Simple Profile Level 0 video and Low-Complexity AAC audio in MP4 container</dt>
+    <dt>MP4 컨테이너 내 MPEG-4 Visual SP 레벨 0과 AAC LC 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='video.mp4' type='video/mp4; codecs="mp4v.20.8, mp4a.40.2"'&gt;
     </pre></dd>
 
-    <dt>MPEG-4 Advanced Simple Profile Level 0 video and Low-Complexity AAC audio in MP4 container</dt>
+    <dt>MP4 컨테이너 내 MPEG-4 ASP 레벨 0과 AAC LC 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='video.mp4' type='video/mp4; codecs="mp4v.20.240, mp4a.40.2"'&gt;
     </pre></dd>
 
-    <dt>MPEG-4 Visual Simple Profile Level 0 video and AMR audio in 3GPP container</dt>
+    <dt>3GPP 컨테이너 내 MPEG-4 Visual SP 레벨 0과 AMR 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='video.3gp' type='video/3gpp; codecs="mp4v.20.8, samr"'&gt;
     </pre></dd>
 
-    <dt>Theora video and Vorbis audio in Ogg container</dt>
+    <dt>ogg 컨테이너 내 theora 비디오와 vorbis 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='video.ogv' type='video/ogg; codecs="theora, vorbis"'&gt;
     </pre></dd>
 
-    <dt>Theora video and Speex audio in Ogg container</dt>
+    <dt>ogg 컨테이너 내 theora 비디오 speex 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='video.ogv' type='video/ogg; codecs="theora, speex"'&gt;
     </pre></dd>
 
-    <dt>Vorbis audio alone in Ogg container</dt>
+    <dt>ogg 컨테이너 내 단독 vorbis 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='audio.ogg' type='audio/ogg; codecs=vorbis'&gt;
     </pre></dd>
 
-    <dt>Speex audio alone in Ogg container</dt>
+    <dt>ogg 컨테이너 내 단독 speex 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='audio.spx' type='audio/ogg; codecs=speex'&gt;
     </pre></dd>
 
-    <dt>FLAC audio alone in Ogg container</dt>
+    <dt>ogg 컨테이너 내 단독 FLAC 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='audio.oga' type='audio/ogg; codecs=flac'&gt;
     </pre></dd>
 
-    <dt>Dirac video and Vorbis audio in Ogg container</dt>
+    <dt>ogg 컨테이너 내 dirac 비디오와 vorbis 오디오</dt>
     <dd><pre highlight="html">
 &lt;source src='video.ogv' type='video/ogg; codecs="dirac, vorbis"'&gt;
     </pre></dd>
@@ -5734,19 +5767,22 @@ zero or more <{track}> elements, then
 
   <div class="impl">
 
-  If a <code>source</code> element is inserted as a child of a <a>media element</a> that
-  has no <code>src</code> attribute and whose <code>networkState</code> has the value <code>NETWORK_EMPTY</code>, the user agent must invoke the <a>media element</a>'s <a>resource selection
-  algorithm</a>.
+  <code>source</code> 요소(elemet)가 <code>src</code> 속성(attribute)이 없고 
+  <code>networkState</code>가 <code>NETWORK_EMPTY</code> 값을 가지는 
+  <a lt="media element">미디어 요소(element)</a>의 자식으로 삽입된다면, 유저 에이전트는 
+  <a lt="media element">미디어 요소(element)</a>의 
+  <a lt="resource selection algorithm">리소스 선택 알고리즘</a>을 호출해야(must) 합니다.
 
-  The IDL attributes <dfn attribute for="source"><code>src</code></dfn> and <dfn attribute for="source"><code>type</code></dfn> must <a>reflect</a> the respective content
-  attributes of the same name.
+  IDL 속성(attribute)들 <dfn attribute for="source"><code>src</code></dfn>, 
+  <dfn attribute for="source"><code>type</code></dfn>은 동일한 이름의 각 콘텐트 속성(attribute)들을 
+  <a lt="reflect">반영</a>해야(must) 합니다.
 
   </div>
 
   <div class="example">
-    If the author isn't sure if user agents will all be able to render the media resources
-    provided, the author can listen to the <code>error</code> event on the last
-    <{source}> element and trigger fallback behavior:
+    유저 에이전트들이 제공된 미디어 리소스들을 렌더링 할 수 있는지의 여부를 작성자가 확신할 수 
+    없다면, 작성자는 마지막 <{source}> 요소(element)에 <code>error</code> 이벤트를 두고 폴백 동작을 
+    작동시킬 수 있습니다:
 
     <pre highlight="html">
 &lt;script&gt;
@@ -5771,29 +5807,29 @@ zero or more <{track}> elements, then
 
   </div>
 
-<h4 id="the-track-element">The <dfn element><code>track</code></dfn> element</h4>
+<h4 id="the-track-element"><dfn element><code>track</code></dfn> 요소(element)</h4>
 
   <dl class="element">
-    <dt><a>Categories</a>:</dt>
-    <dd>None.</dd>
-    <dt><a>Contexts in which this element can be used</a>:</dt>
-    <dd>As a child of a <a>media element</a>, before any <a>flow content</a>.</dd>
-    <dt><a>Content model</a>:</dt>
-    <dd><a>Nothing</a>.</dd>
-    <dt><a>Tag omission in text/html</a>:</dt>
-    <dd>No <a>end tag</a></dd>
-    <dt><a>Content attributes</a>:</dt>
-    <dd><a>Global attributes</a></dd>
-    <dd><code>kind</code> - The type of text track</dd>
-    <dd><code>src</code> - Address of the resource</dd>
-    <dd><code>srclang</code> - Language of the text track</dd>
-    <dd><code>label</code> - User-visible label</dd>
-    <dd><code>default</code> - Enable the track if no other <a>text track</a> is more suitable</dd>
-    <dt>Allowed <a href="#aria-role-attribute">ARIA role attribute</a> values:</dt>
-    <dd>None</dd>
-    <dt>Allowed <a href="#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
-    <dd><a>Global aria-* attributes</a></dd>
-    <dt><a>DOM interface</a>:</dt>
+    <dt><a lt="Categories">카테고리</a>:</dt>
+    <dd>없음.</dd>
+    <dt><a lt="Contexts in which this element can be used">이 요소(element)가 사용될 수 있는 컨텍스트</a>:</dt>
+    <dd><a lt="media element">미디어 요소(element)</a>의 자식으로, 모든 <a lt="flow content">흐름 콘텐트</a> 이전에.</dd>
+    <dt><a lt="content model">콘텐트 모델</a>:</dt>
+    <dd><a lt="Nothing">없음</a>.</dd>
+    <dt><a lt="Tag omission in text/html">text/html에서 태그 생략</a>:</dt>
+    <dd><a lt="end tag">종료 태그</a> 없음.</dd>
+    <dt><a lt="Content attributes">콘텐트 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global attributes">범용 속성(attribute)들</a></dd>
+    <dd><code>kind</code> - 텍스트 트랙 유형</dd>
+    <dd><code>src</code> - 리소스의 주소</dd>
+    <dd><code>srclang</code> - 텍스트 트랙의 언어</dd>
+    <dd><code>label</code> - 사용자에게 보이는 레이블</dd>
+    <dd><code>default</code> - 적절한 다른 <a lt="text track">텍스트 트랙</a>이 없을 경우 트랙 활성화</dd>
+    <dt>허용된 <a href="#aria-role-attribute">ARIA 역할(role) 속성(attribute)</a> 값들:</dt>
+    <dd>없음</dd>
+    <dt>허용된 <a href="#state-and-property-attributes">ARIA 상태(state)와 속성(property) 속성(attribute)들</a>:</dt>
+    <dd><a lt="Global aria-* attributes">범용 aria-* 속성(attribute)들</a></dd>
+    <dt><a lt="DOM interface">DOM 인터페이스</a>:</dt>
     <dd>
       <pre class="idl" data-highlight="webidl" dfn-for="HTMLTrackElement">
         interface HTMLTrackElement : HTMLElement {
@@ -5815,143 +5851,163 @@ zero or more <{track}> elements, then
     </dd>
   </dl>
 
-  The <{track}> element allows authors to specify explicit external text resources for <a>media elements</a>. It
-  does not <a>represent</a> anything on its own.
+  <{track}> 요소(element)는 작성자들이 <a lt="media elements">미디어 요소들</a>에 대해 명시적인 외부 
+  텍스트 리소스들을 명시하는 것을 허용합니다. 이 요소(element)는 스스로 아무 것도 
+  <a lt="represent">나타내지</a> 않습니다.
 
-  The <dfn element-attr for="track"><code>kind</code></dfn> attribute is an <a>enumerated
-  attribute</a>. The following table lists the keywords defined for this attribute. The keyword
-  given in the first cell of each row maps to the state given in the second cell.
+  <dfn element-attr for="track"><code>kind</code></dfn> 속성(attribute)은 
+  <a lt="enumerated attribute">열거 속성(attribute)</a>입니다. 다음 표는 이 속성(attribute)에 대해 
+  정의된 키워드들을 나열합니다. 각 행의 첫 번째 칸에 주어진 키워드는 두 번째 칸에 주어진 상태에 
+  대응됩니다.
 
   <table>
     <thead>
     <tr>
-      <th>Keyword
-      </th><th>State
-      </th><th>Brief description
+      <th>키워드
+      </th><th>상태
+      </th><th>간단한 설명
     </th></tr></thead><tbody>
     <tr>
       <td><dfn attr-value for="track/kind"><code>subtitles</code></dfn>
       </td><td><dfn state for="track">Subtitles</dfn>
       </td><td>
-      Transcription or translation of the dialog, suitable for when the sound is available but not understood (e.g., because the user does not understand the language of the <a>media resource</a>'s audio track).
-      Overlaid on the video.
+      사운드가 사용 가능하지만 이해할 수 없는 경우에 대한 (예를 들어, 사용자가 
+      <a lt="media resource">미디어 리소스</a>의 오디오 트랙의 언어를 이해할 수 없기 때문에) 적절한, 
+      대화의 원고나 번역. 비디오에 오버레이 됩니다.
     </td></tr><tr>
       <td><dfn attr-value for="track/kind"><code>captions</code></dfn>
       </td><td><dfn state for="track">Captions</dfn>
       </td><td>
-      Transcription or translation of the dialog, sound effects, relevant musical cues, and other relevant audio information, suitable for when sound is unavailable or not clearly audible (e.g., because it is muted, drowned-out by ambient noise, or because the user is deaf).
-      Overlaid on the video; labeled as appropriate for the hard-of-hearing.
+      사운드가 사용 할 수 없거나 깨끗하게 들리지 않는 경우에 대한 적절한 (예를 들어, 음소거, 주변 
+      소음으로 들리지 않거나 사용자가 청각 장애인이기 때문에), 대화, 사운드 효과들, 관련 음악적 신호, 
+      기타 관련 오디오 정보의 원고나 번역. 비디오에 오버레이 됩니다; 난청자에 대해 적절하게 표시 됨.
     </td></tr><tr>
       <td><dfn attr-value for="track/kind"><code>descriptions</code></dfn>
       </td><td><dfn state for="track">Descriptions</dfn>
       </td><td>
-      Textual descriptions of the video component of the <a>media resource</a>, intended for audio synthesis when the visual component is obscured, unavailable, or not usable (e.g., because the user is interacting with the application without a screen while driving, or because the user is blind).
-      Synthesized as audio.
+      시각 컴포넌트가 보기 어렵거나, 사용할 준비가 되지 않거나, 사용 할 수 없는 경우에 대해 (예를 
+      들어, 사용자가 운정 중인 동안 화면 없이 어플리케이션과 상호작용 하고 있기 때문에, 혹은 
+      사용자가 시각장애인이기 때문에) 의도된, <a lt="media resource">미디어 리소스</a>의 비디오 
+      컴포넌트의 텍스트 형식의 설명들. 오디오로 합성됨.
     </td></tr><tr>
       <td><dfn attr-value for="track/kind"><code>chapters</code></dfn>
       </td><td><dfn state for="track">Chapters</dfn>
       </td><td>
-      Chapter titles, intended to be used for navigating the <a>media resource</a>.
-      Displayed as an interactive (potentially nested) list in the user agent's interface.
+      <a lt="media resource">미디어 리소스</a>를 탐색하기 위해 사용되도록 의도된 챕터 제목. 유저 
+      인터페이스에서 인터랙티브 한 것으로(중첩될 수 있음) 표시 됨.
     </td></tr><tr>
       <td><dfn attr-value for="track/kind"><code>metadata</code></dfn>
       </td><td><dfn state for="track">Metadata</dfn>
       </td><td>
-      Tracks intended for use from script.
-      Not displayed by the user agent.
+      스크립트에서의 사용을 위해 의도된 트랙.
+      유저 에이전트에 의해 표시되지 않음.
   </td></tr></tbody></table>
 
-  The attribute may be omitted. The <i>missing value default</i> is the <a>subtitles</a> state. The
-  <i>invalid value default</i> is the <a>metadata</a> state.
+  속성(attribute)은 생략될 수 있습니다. <i>생략 기본 값</i>은 <a>subtitles</a> 상태 입니다. 
+  <i>유효하지 않은 기본 값</i>은 <a>metadata</a> 상태 입니다.
 
-  The <dfn element-attr for="track"><code>src</code></dfn> attribute gives the address of the text
-  track data. The value must be a <a>valid non-empty URL potentially surrounded by spaces</a>.
-  This attribute must be present.
+  <dfn element-attr for="track"><code>src</code></dfn> 속성(attribute)은 텍스트 트랙 데이터의 주소를 
+  제공합니다. 값은 <a lt="valid non-empty URL potentially surrounded by spaces">유효한 잠정적으로 
+  공백으로 둘러 싸일 수 있는 비어있지 않은 URL</a>이어야(must) 합니다. 이 속성(attribute)은 
+  존재해야(must) 합니다.
 
-  If the element has a <{track/src}> attribute whose value is not the
-  empty string and whose value, when the attribute was set, could be successfully <a>parsed</a>
-  relative to the element's <a>node document</a>, then the element's <dfn>track URL</dfn> is the
-  <a>resulting URL string</a>. Otherwise, the element's <a>track URL</a> is the empty string.
+  요소(element)가 값이 빈 문자열이 아니고 <{track/src}> 속성(attribute)이 설정 되었을 때 그 값이 
+  요소(element)의 <a lt="node document">노드 문서</a>에 관련하여 성공적으로 <a lt="parsed">해석</a> 
+  될 수 있는 <{track/src}> 속성(attribute)을 가진다면, 요소(element)의 
+  <dfn lt="track URL">트랙 URL</dfn>은 <a lt="resulting URL string">결과 URL 문자열</a>입니다. 
+  그렇지 않으면, 요소(element)의 <a lt="track URL">트랙 URL</a>은 빈 문자열입니다.
 
   <div class="note">
-  If the element's <a>track URL</a> identifies a <a>WebVTT</a> resource, and the
-  element's <code>kind</code> attribute is not in the <a state for="track">Metadata</a> state, then the <a>WebVTT</a> file must be
-  a <a>WebVTT file using cue text</a>. [[WEBVTT]]
+  요소(element)의 <a lt="track URL">트랙 URL</a>이 <a>WebVTT</a> 리소스를 식별하고, 요소(element)의
+  <code>kind</code> 속성(attribute)이 <a state for="track">Metadata</a> 상태에 있지 않다면, 
+  <a>WebVTT</a> 파일은 <a lt="WebVTT file using cue text">큐 텍스트를 사용하는 WebVTT 파일</a>이어야(must) 
+  합니다. [[WEBVTT]]
 
-  Furthermore, if the element's <a>track URL</a> identifies a <a>WebVTT</a> resource,
-  and the element's <code>kind</code> attribute is in the <a>chapters</a> state, then the <a>WebVTT</a> file must be
-  both a <a>WebVTT file using chapter title text</a> and a <a>WebVTT file using only nested
-  cues</a>. [[WEBVTT]]
+  뿐만 아니라, 요소(element)의 <a lt="track URL">트랙 URL</a>이 <a>WebVTT</a> 리소스를 식별하고, 
+  요소(element)의 <code>kind</code> 속성(attribute)이 <a>chapters</a> 상태에 있다면, <a>WebVTT</a> 
+  파일은 <a lt="WebVTT file using chapter title text">챕터 제목 텍스트를 사용하는 WebVTT 파일</a>이어야(must) 
+  하고, <a lt="WebVTT file using only nested cues">중첩된 큐만을 사용하는 WebVTT 파일</a>이어야(must) 
+  합니다. [[WEBVTT]]
   </div>
 
-  The <dfn element-attr for="track"><code>srclang</code></dfn> attribute gives the language of
-  the text track data. The value must be a valid BCP 47 language tag. This attribute must be present
-  if the element's <code>kind</code> attribute is in the <a>subtitles</a> state. [[!BCP47]]
+  <dfn element-attr for="track"><code>srclang</code></dfn> 속성(attribute)은 텍스트 트랙 데이터의 
+  언어를 제공합니다. 값은 유효한 BCP 47 언어 태그이어야(must) 합니다. 이 속성(attribute)은 
+  요소(element)의 <code>kind</code> 속성(attribute)이 <a>subtitles</a> 상태에 있다면 존재해야(must) 
+  합니다. [[!BCP47]]
 
   <div class="impl">
 
-  If the element has a <code>srclang</code> attribute whose value is
-  not the empty string, then the element's <dfn>track language</dfn> is the value of the attribute.
-  Otherwise, the element has no <a>track language</a>.
+  요소(element)가 값이 빈 문자열이 아닌 <code>srclang</code> 속성(attribute)을 가진다면, 
+  요소(element)의 <dfn lt="track language">트랙 언어</dfn>는 속성(attribute)의 값입니다. 그렇지 
+  않으면, 요소는 <a lt="track language">트랙 언어</a>를 가지지 않습니다.
 
   </div>
 
-  The <dfn element-attr for="track"><code>label</code></dfn> attribute gives a user-readable
-  title for the track. This title is used by user agents when listing <a>subtitle</a>, <a>caption</a>, and <a state for="track" lt="Descriptions">audio description</a> tracks in their user interface.
+  <dfn element-attr for="track"><code>label</code></dfn> 속성(attribute)은 트랙에 대한 사용자가 읽을 
+  수 있는 제목을 제공합니다. 이 제목은 유저 에이전트들의 유저 인터페이스에서 
+  <a lt="subtitle">자막(subtitle)</a>, <a lt="caption">자막(caption)</a>, 
+  <a state for="track" lt="Descriptions">오디오 설명</a>을 나열하는 경우 유저 에이전트들에 의해 
+  사용됩니다.
 
-  The value of the <code>label</code> attribute, if the attribute is
-  present, must not be the empty string. Furthermore, there must not be two <code>track</code>
-  element children of the same <a>media element</a> whose <code>kind</code> attributes are in the same state, whose <code>srclang</code> attributes are both missing or have values that
-  represent the same language, and whose <code>label</code> attributes are
-  again both missing or both have the same value.
+  <code>label</code> 속성(attribute)이 존재한다면, 그 속성(attribute)의 값은 빈 문자열이지 
+  않아야(must) 합니다. 뿐만 아니라, <code>kind</code> 속성(attribute)들이 동일한 상태에 있고, 
+  <code>srclang</code> 속성(attribute)들이 누락되었거나 동일한 언어를 나타내는 값을 가지며, 
+  <code>label</code> 속성(attribute)들이 모두 누락되었거나 모두 같은 값을 가지는 같은 
+  <a lt="media element">미디어 요소(element)</a>의 두 <code>track</code> 자식 요소(element)가 
+  존재하지 않아야(must) 합니다.
 
   <div class="impl">
 
-  If the element has a <code>label</code> attribute whose value is not
-  the empty string, then the element's <dfn>track label</dfn> is the value of the attribute.
-  Otherwise, the element's <a>track label</a> is an empty string.
+  요소(element)가 값이 빈 문자열이 아닌 <code>label</code> 속성(attribute)을 가진다면, 
+  요소(element)의 <dfn lt="track label">트랙 레이블</dfn>은 속성(attribute)의 값입니다. 그렇지 
+  않으면, 요소의 <a lt="track label">트랙 레이블</a>은 빈 문자열 입니다.
 
   </div>
 
-  The <dfn element-attr for="track"><code>default</code></dfn> attribute is a <a>boolean
-  attribute</a>, which, if specified, indicates that the track is to be enabled if the user's
-  preferences do not indicate that another track would be more appropriate.
+  <dfn element-attr for="track"><code>default</code></dfn> 속성(attribute)은, 명시된다면 사용자의 
+  설정이 다른 트랙이 더 적절하다는 것을 나타내지 않는다면 트랙이 활성화 되는 것을 나타내는, 
+  <a lt="boolean attribute">불리언 속성(attribute)</a>입니다.
 
-  Each <a>media element</a> must have no more than one <{track}> element child
-  whose <code>kind</code> attribute is in the <a state for="track">Subtitles</a> or <a state for="track">Captions</a> state and whose <{track/default}> attribute is specified.
+  각 <a lt="media element">미디어 요소(element)</a>는 <code>kind</code> 속성(attribute)이 
+  <a state for="track">Subtitles</a>나 <a state for="track">Captions</a> 상태에 있고 
+  <{track/default}> 속성(attribute)이 명시된 자식 <{track}> 요소(element)를 하나를 초과하여 가지지 
+  않아야(must) 합니다.
 
-  Each <a>media element</a> must have no more than one <{track}> element child
-  whose <code>kind</code> attribute is in the <a state for="track">Descriptions</a> state and whose <{track/default}> attribute is specified.
+  각 <a lt="media element">미디어 요소(element)</a>는 <code>kind</code> 속성(attribute)이 
+  <a state for="track">Descriptions</a> 상태에 있고 <{track/default}> 속성(attribute)이 명시된 
+  자식 <{track}> 요소(element)를 하나를 초과하여 가지지 않아야(must) 합니다.
 
-  Each <a>media element</a> must have no more than one <{track}> element child
-  whose <code>kind</code> attribute is in the <a state for="track">Chapters</a> state and whose <{track/default}> attribute is specified.
+  각 <a lt="media element">미디어 요소(element)</a>는 <code>kind</code> 속성(attribute)이 
+  <a state for="track">Chapters</a> 상태에 있고 <{track/default}> 속성(attribute)이 명시된 자식
+  <{track}> 요소(element)를 하나를 초과하여 가지지 않아야(must) 합니다.
 
   <p class="note">
-    There is no limit on the number of <{track}> elements whose <code>kind</code> attribute is in the <a state for="track">Metadata</a> state and whose <{track/default}> attribute is specified.
+    <code>kind</code> 속성(attribute)이 <a state for="track">Metadata</a> 상태에 있고 
+    <{track/default}> 속성(attribute)이 명시된 <{track}> 요소(element)들의 수에는 제한이 없습니다.
   </p>
 
   <dl class="domintro">
 
     <dt><var>track</var> . <code>readyState</code></dt>
     <dd>
-    Returns the <a>text track readiness state</a>,
-    represented by a number from the following list:
+    다음 목록으로부터 번호로 나타나는 <a lt="text track readiness state">텍스트 트랙 준비 상태</a>를 
+    반환합니다:
     <dl>
       <dt><var>track</var> . <code>NONE</code> (0)</dt>
       <dd>
-      The <a state for="track" lt="not loaded">text track not loaded</a> state.
+      <a state for="track" lt="not loaded">텍스트 트랙이 로드되지 않은</a> 상태.
       </dd>
       <dt><var>track</var> . <code>LOADING</code> (1)</dt>
       <dd>
-      The <a state for="track" lt="loading">text track loading</a> state.
+      <a state for="track" lt="loading">텍스트 트랙 로딩 중</a> 상태.
       </dd>
       <dt><var>track</var> . <code>LOADED</code> (2)</dt>
       <dd>
-      The <a state for="track" lt="loaded">text track loaded</a> state.
+      The <a state for="track" lt="loaded">텍스트 트랙이 로드 된</a> 상태.
       </dd>
       <dt><var>track</var> . <code>ERROR</code> (3)</dt>
       <dd>
-      The <a state for="track" lt="failed">text track failed to load</a> state.
+      The <a state for="track" lt="failed">텍스트 트랙 로드 실패</a> 상태.
       </dd>
     </dl>
     </dd>
@@ -5960,7 +6016,8 @@ zero or more <{track}> elements, then
 
     <dd>
 
-    Returns the {{TextTrack}} object corresponding to the <a>text track</a> of the <{track}> element.
+    <{track}> 요소(element)의 <a lt="text track">텍스트 트랙</a>에 해당하는 {{TextTrack}} 객체를 
+    반환합니다.
 
     </dd>
 
@@ -5968,33 +6025,39 @@ zero or more <{track}> elements, then
 
   <div class="impl">
 
-  The <dfn attribute for="HTMLTrackElement"><code>readyState</code></dfn> attribute must return the
-  numeric value corresponding to the <a>text track readiness state</a> of the
-  <{track}> element's <a>text track</a>, as defined by the following list:
+  <dfn attribute for="HTMLTrackElement"><code>readyState</code></dfn> 속성(attribute)은 다음 목록에 
+  의해 정의된, <{track}> 요소(element)의 <a lt="text track">텍스트 트랙</a>의 
+  <a lt="text track readiness state">텍스트 트랙 준비 상태</a>에 해당하는 숫자 값을 반환해야(must) 
+  합니다:
 
   <dl>
     <dt><dfn const for="HTMLTrackElement"><code>NONE</code></dfn> (numeric value 0)</dt>
-    <dd>The <a state for="track">text track not loaded</a> state.</dd>
+    <dd><a state for="track" lt="not loaded">텍스트 트랙이 로드되지 않은</a> 상태.</dd>
     <dt><dfn const for="HTMLTrackElement"><code>LOADING</code></dfn> (numeric value 1)</dt>
-    <dd>The <a state for="track">text track loading</a> state.</dd>
+    <dd><a state for="track" lt="loading">텍스트 트랙 로딩 중</a> 상태.</dd>
     <dt><dfn const for="HTMLTrackElement"><code>LOADED</code></dfn> (numeric value 2)</dt>
-    <dd>The <a state for="track">text track loaded</a> state.</dd>
+    <dd><a state for="track" lt="loaded">텍스트 트랙이 로드 된</a> 상태.</dd>
     <dt><dfn const for="HTMLTrackElement"><code>ERROR</code></dfn> (numeric value 3)</dt>
-    <dd>The <a state for="track">text track failed to load</a> state.</dd>
+    <dd><a state for="track" lt="failed">텍스트 트랙 로드 실패</a> 상태.</dd>
   </dl>
 
-  The <dfn attribute for="HTMLTrackElement"><code>track</code></dfn> IDL attribute must, on getting,
-  return the <{track}> element's <a>text track</a>'s corresponding
-  {{TextTrack}} object.
+  <dfn attribute for="HTMLTrackElement"><code>track</code></dfn> IDL 속성(attribute)은, 가져올 때, 
+  <{track}> 요소(element)의 <a lt="text track">텍스트 트랙</a>의 해당하는 {{TextTrack}} 객체를 
+  반환해야(must) 합니다.
 
-  The <dfn attribute for="HTMLTrackElement"><code>src</code></dfn>, <dfn attribute for="HTMLTrackElement"><code>srclang</code></dfn>, <dfn attribute for="HTMLTrackElement"><code>label</code></dfn>, and <dfn attribute for="HTMLTrackElement"><code>default</code></dfn> IDL attributes must <a>reflect</a> the
-  respective content attributes of the same name. The <dfn attribute for="HTMLTrackElement"><code>kind</code></dfn> IDL attribute must <a>reflect</a> the content
-  attribute of the same name, <a>limited to only known values</a>.
+  <dfn attribute for="HTMLTrackElement"><code>src</code></dfn>, 
+  <dfn attribute for="HTMLTrackElement"><code>srclang</code></dfn>, 
+  <dfn attribute for="HTMLTrackElement"><code>label</code></dfn>, 
+  <dfn attribute for="HTMLTrackElement"><code>default</code></dfn> IDL 속성(attribute)들은 각각 
+  동일한 이름의 각 콘텐트 속성(attribute)들을 <a lt="reflect">반영</a>해야(must) 합니다. 
+  <dfn attribute for="HTMLTrackElement"><code>kind</code></dfn> 속성(attribute)은 
+  <a lt="limited to only known values">알려진 값들로만 제한 된</a> 동일한 이름의 콘텐트 
+  속성(attribute)을 <a lt="reflect">반영</a>해야(must) 합니다.
 
   </div>
 
   <div class="example">
-    This video has subtitles in several languages:
+    이 비디오는 몇 가지 언어로 자막들을 가집니다:
 
     <pre highlight="html">
 &lt;video src="brave.webm"&gt;
@@ -6005,16 +6068,16 @@ zero or more <{track}> elements, then
 &lt;/video&gt;
     </pre>
 
-    (The <{global/lang}> attributes on the last two describe the language of
-    the <code>label</code> attribute, not the language of the subtitles
-    themselves. The language of the subtitles is given by the <code>srclang</code> attribute.)
+    (마지막 두 개의 <{global/lang}> 속성(attribute)들은 자막(subtitle)들 자체의 언어가 아니라,
+    <code>label</code> 속성(attribute)의 언어를 기술합니다. 자막(subtitle)들의 언어는 
+    <code>srclang</code> 속성에 의해 주어집니다.)
 
   </div>
 
-<h4 id="the-media-elements">Media elements</h4>
+<h4 id="the-media-elements">미디어 요소(element)들</h4>
 
-  {{HTMLMediaElement}} objects (<{audio}> and <{video}>, in this specification) are simply known as
-  <dfn lt="media element|media elements">media elements</dfn>.
+  {{HTMLMediaElement}} 객체들은 (이 명세에서 <{audio}>와 <{video}>) 간단히
+  <dfn lt="media elements">미디어 요소(element)들</dfn>로 알려져 있습니다.
 
   <pre class="idl" data-highlight="webidl" dfn-for="CanPlayTypeResult">
     enum CanPlayTypeResult { "" /* empty string */, "maybe", "probably" };
@@ -6084,41 +6147,47 @@ zero or more <{track}> elements, then
     };
   </pre>
 
-  The <dfn>media element attributes</dfn>, <code>src</code>, <code>crossorigin</code>, <code>preload</code>, <code>autoplay</code>,
-  <code>loop</code>,
-  <code>muted</code>, and <{mediaelements/controls}>, apply to all <a>media elements</a>. They are defined in this section.
+  <dfn lt="media element attributes">미디어 요소 속성(attribute)들</dfn>, <code>src</code>, 
+  <code>crossorigin</code>, <code>preload</code>, <code>autoplay</code>, <code>loop</code>,
+  <code>muted</code>, <{mediaelements/controls}>은 모든 
+  <a lt="media elements">미디어 요소(element)들</a>에 적용됩니다. 그것들은 이 섹션에 
+  정의됩니다.
 
-  <a>Media elements</a> are used to present audio data, or video and
-  audio data, to the user. This is referred to as <dfn>media data</dfn> in this section, since this
-  section applies equally to <a>media elements</a> for audio or for
-  video.
+  <a lt="media elements">미디어 요소(element)들</a>은 사용자에게 오디오 데이터나 비디오와 오디오 
+  데이터를 보여주기 위해 사용됩니다. 이것은 이 섹션이 오디오나 비디오에 대한 
+  <a lt="media elements">미디어 요소(element)들</a>에 동일하게 적용하기 때문에, 이 섹션에서 
+  <dfn lt="media data">미디어 데이터</dfn>로 언급됩니다. 
 
-  The term <dfn lt="media resource|resource">media resource</dfn> is used to refer to the complete set of media data, e.g., the
-  complete video file, or complete audio file.
+  용어 <dfn lt="media resource|resource">미디어 리소스</dfn>는 미디어 데이터의 완전한 집합, 예를 
+  들어 완전한 비디오 파일이나 완전한 오디오 파일을 참조하는데 사용됩니다.
 
-  A <a>media resource</a> can have multiple audio and video tracks. For the purposes of a
-  <a>media element</a>, the video data of the <a>media resource</a> is only that of the
-  currently selected track (if any) as given by the element's <code>videoTracks</code> attribute when the <a>event loop</a> last
-  reached step 1, and the audio data of the <a>media resource</a> is the result of mixing all
-  the currently enabled tracks (if any) given by the element's <code>audioTracks</code> attribute when the <a>event loop</a> last
-  reached step 1.
+  <a lt="media resource">미디어 리소스</a>는 여러 개의 오디오와 비디오 트랙들을 가질 수 있습니다. 
+  <a lt="media element">미디어 요소(element)</a>의 목적에 대해, 
+  <a lt="media resource">미디어 리소스</a>의 비디오 데이터는 마지막으로 
+  <a lt="event loop">이벤트 루프</a>가 단계 1에 도달했을 때 요소(element)의 <code>videoTracks</code> 
+  속성(attribute)에 의해 현재 주어진 선택된 트랙의 (선택된 트랙이 있다면) 비디오 데이터일 뿐이고, 
+  <a lt="media resource">미디어 리소스</a>의 오디오 데이터는 마지막으로 
+  <a lt="event loop">이벤트 루프</a>가 단계 1에 도달했을 때 요소(element)의 <code>audioTracks</code> 
+  속성(attribute)에 의해 주어진 모든 현재 활성화 된 트랙들을 (활성화 된 트랙들이 있다면) 믹싱한 
+  결과입니다.
 
   <p class="note">
-    Both <code>audio</code> and <{video}> elements can be used for both audio
-  and video. The main difference between the two is simply that the <{audio}> element has
-  no playback area for visual content (such as video or captions), whereas the <code>video</code>
-  element does.
+    <code>audio</code>와 <{video}> 요소(element)들 모두 오디오와 비디오 모두에 대해 사용될 수 
+  있습니다. 둘 사이의 주요한 다른 점은 단지 <code>video</code> 요소(element)가 시각적 콘텐트에 대한 
+  (비디오나 자막(caption)들 같은) 재생 영역을 가지는 반면, <{audio}> 요소(element)는 가지지 않는다는 
+  것 뿐입니다.
   </p>
 
   <div class="impl">
 
-  Except where otherwise explicitly specified, the <a>task source</a> for all the tasks
-  <a>queued</a> in this section and its subsections is the <dfn>media
-  element event task source</dfn> of the <a>media element</a> in question.
+  달리 명시적으로 명시된 경우를 제외하고, 이 섹션과 그 섹션의 하위 섹션에서 
+  <a lt="queued">대기열에 넣어진</a> 모든 작업들에 대한 <a lt="task source">작업 소스</a>는 문제의 
+  <a lt="media element">미디어 요소(element)</a>의 
+  <dfn lt="media element event task source">미디어 요소 이벤트 작업 소스</dfn>입니다.
 
   </div>
 
-<h5 id="error-codes">Error codes</h5>
+<h5 id="error-codes">오류 코드들</h5>
 
   <dl class="domintro">
 
@@ -6126,10 +6195,9 @@ zero or more <{track}> elements, then
 
     <dd>
 
-    Returns a <code>MediaError</code> object representing the current error state of the
-    element.
+    요소(element)의 현재 오류 상태를 나타내는 <code>MediaError</code> 객체를 반환합니다.
 
-    Returns null if there is no error.
+    오류가 없다면 null을 반환합니다.
 
     </dd>
 
@@ -6137,11 +6205,11 @@ zero or more <{track}> elements, then
 
   <div class="impl">
 
-  All <a>media elements</a> have an associated error status, which
-  records the last error the element encountered since its <a>resource selection algorithm</a> was last invoked. The
-  <dfn attribute for="HTMLMediaElement"><code>error</code></dfn> attribute, on getting, must return the
-  <code>MediaError</code> object created for this last error, or null if there has not been an
-  error.
+  모든 <a lt="media elements">미디어 요소(element)들</a>은 그것의 
+  <a lt="resource selection algorithm">리소스 선택 알고리즘</a>이 마지막으로 호출 된 이후 
+  요소(element)가 만난 마지막 오류를 보여주는, 연관된 오류 상태를 가집니다. 가져올 때 
+  <dfn attribute for="HTMLMediaElement"><code>error</code></dfn> 속성(attribute)은 이 마지막 오류에 
+  대해 생성된 <code>MediaError</code> 객체를 반환하거나, 오류가 없었다면 null을 반환해야(must) 합니다.
 
   </div>
 
@@ -6161,7 +6229,7 @@ zero or more <{track}> elements, then
 
     <dd>
 
-    Returns the current error's error code, from the list below.
+    다음 목록으로부터 현재 오류의 오류 코드를 반환합니다.
 
     </dd>
 
@@ -6169,33 +6237,32 @@ zero or more <{track}> elements, then
 
   <div class="impl">
 
-  The <dfn attribute for="MediaError"><code>code</code></dfn> attribute of a
-  <code>MediaError</code> object must return the code for the error, which must be one of the
-  following:
+  <code>MediaError</code> 객체의 <dfn attribute for="MediaError"><code>code</code></dfn> 
+  속성(attribute)은 다음 중 하나이어야(must) 하는 오류에 대한 코드를 반환해야(must) 합니다:
 
   </div>
 
   <dl>
 
-    <dt><dfn const for="MediaError"><code>MEDIA_ERR_ABORTED</code></dfn> (numeric value 1)</dt>
+    <dt><dfn const for="MediaError"><code>MEDIA_ERR_ABORTED</code></dfn> (숫자 값 1)</dt>
 
-    <dd>The fetching process for the <a>media resource</a> was aborted by the user agent at the
-    user's request.</dd>
+    <dd><a lt="media resource">미디어 리소스</a>에 대해 가져오는(fetch) 프로세스가 사용자의 요청에 
+    유저 에이전트에 의해 중단되었을 경우.</dd>
 
-    <dt><dfn const for="MediaError"><code>MEDIA_ERR_NETWORK</code></dfn> (numeric value 2)</dt>
+    <dt><dfn const for="MediaError"><code>MEDIA_ERR_NETWORK</code></dfn> (숫자 값 2)</dt>
 
-    <dd>A network error of some description caused the user agent to stop fetching the <a>media
-    resource</a>, after the resource was established to be usable.</dd>
+    <dd>리소스가 사용 가능한 것으로 확정된 후, 일부 종류의 네트워크 오류가 유저 에이전트가 
+    <a lt="media resource">미디어 리소스</a>를 가져오는(fetch) 것을 중지시키는 것을 야기한 경우.</dd>
 
-    <dt><dfn const for="MediaError"><code>MEDIA_ERR_DECODE</code></dfn> (numeric value 3)</dt>
+    <dt><dfn const for="MediaError"><code>MEDIA_ERR_DECODE</code></dfn> (숫자 값 3)</dt>
 
-    <dd>An error of some description occurred while decoding the <a>media resource</a>, after
-    the resource was established to be usable.</dd>
+    <dd>리소스가 사용 가능한 것으로 확정된 후, <a lt="media resource">미디어 리소스</a>를 디코딩하는 
+    동안 일부 조율의 오류가 발생된 경우.</dd>
 
-    <dt><dfn const for="MediaError"><code>MEDIA_ERR_SRC_NOT_SUPPORTED</code></dfn> (numeric value 4)</dt>
+    <dt><dfn const for="MediaError"><code>MEDIA_ERR_SRC_NOT_SUPPORTED</code></dfn> (숫자 값 4)</dt>
 
-    <dd>The <a>media resource</a> indicated by the <code>src</code>
-    attribute or <a>assigned media provider object</a> was not suitable.</dd>
+    <dd><code>src</code> 속성(attribute)에 의해 나타난 <a lt="media resource">미디어 리소스</a>나 
+    <a lt="assigned media provider object">할당된 미디어 제공자 객체</a>가 적합하지 않은 경우.</dd>
 
   </dl>
 
