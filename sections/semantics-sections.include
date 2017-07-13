@@ -1461,6 +1461,31 @@
 
     위 문서들 모두 의미론적으로 동일하고 규칙을 준수하는 유저 에이전트들에서 동일한 개요(outline)를 
     생성할 것입니다.
+
+	<div class="translator-note">
+		위 예제는 잘못 되었습니다. 실제로 두 코드는 서로 다른 개요(outline)을 생성합니다. <br />
+		이 내용은 <a href="https://github.com/w3c/html/issues/956" target="_blank">W3C HTML Github Issue</a>를 
+		통해 확인 되었고, 수정된 내용이 HTML 5.2에 반영됩니다. <br />
+		전자의 코드와 동일한 개요(outline)을 가지는 것은 다음 코드가 됩니다.
+		<pre highlight="html">
+		&lt;body&gt;
+		  &lt;h1&gt;Apples&lt;/h1&gt;
+		  &lt;p&gt;Apples are fruit.&lt;/p&gt;
+		  &lt;section&gt;
+			&lt;h2&gt;Taste&lt;/h2&gt;
+			&lt;p&gt;They taste lovely.&lt;/p&gt;
+			&lt;section&gt;
+			  &lt;h3&gt;Sweet&lt;/h3&gt;
+			  &lt;p&gt;Red apples are sweeter than green ones.&lt;/p&gt;
+			&lt;/section&gt;
+			&lt;section&gt;
+			  &lt;h3&gt;Color&lt;/h3&gt;
+			  &lt;p&gt;Apples come in various colors.&lt;/p&gt;
+			&lt;/section&gt;
+		  &lt;/section&gt;
+		&lt;/body&gt;
+		</pre>
+	</div>
   </div>
 
 <h5 id="creating-an-outline">개요(outline) 생성</h5>
@@ -1643,7 +1668,7 @@
             요소(element)를 <var>current section</var>에 대한 제목(heading)으로 둡니다.
 
             그렇지 않고, 입장 되는 중인 요소(element)가 <var>current outline target</var>의 
-            <a lt="outline">개요(outline)</a>의 마지막 섹션의 제목(heading)과 동일하거나 상위 
+            <a lt="outline">개요(outline)</a>의 마지막 섹션의 제목(heading)과 동일 또는 상위의 
             <a lt="rank">등급</a>을 가지거나, <var>current outline target</var>의 
             <a lt="outline">개요(outline)</a>의 마지막 섹션의 제목(heading)이 암묵적 
             제목(heading)이라면, 새로운 <a lt="section">섹션</a>을 생성하고 

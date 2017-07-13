@@ -1010,9 +1010,9 @@
   </ul>
 
 
-<h6 id="kinds-of-content-sectioning-content">그룹화(sectioning) 콘텐트</h6>
+<h6 id="kinds-of-content-sectioning-content">섹션화(sectioning) 콘텐트</h6>
 
-  <dfn lt="sectioning content">그룹화(sectioning) 콘텐트</dfn>는 <a lt="headings">제목(heading)</a>과
+  <dfn lt="sectioning content">섹션화(sectioning) 콘텐트</dfn>는 <a lt="headings">제목(heading)</a>과
   <a element lt="footer">바닥글(footer)</a>들의 범위를 정의하는 콘텐트 입니다.
 
   <ul class="brief category-list">
